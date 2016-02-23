@@ -1,0 +1,23 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           '/:categories/:title/'
+gems:                [jekyll-paginate]
+
+# Setup
+title:               "Muffin Man\'s writtings"
+tagline:             'or the front end playground'
+description:         'Front end development, maybe occasional rants and music.'
+url:                 http://stanko.null-object.com
+baseurl:             ''
+paginate:            5
+paginate_path:       'page:num'
+
+# About/contact
+author:
+  name:              Stanko
+  url:               http://stanko.null-object.com
+  email:             stanko@null-object.com
+
+# Custom vars
+version:             1.0.0
