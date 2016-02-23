@@ -4,7 +4,7 @@ title: Hello World
 category: blog
 ---
 
-Everything start's with a <code>Hello World</code> so does this blog.
+Everything starts with a <code>Hello World</code> so does this blog.
 
 For the first time everything will be under heavy development, until I get it the way I want.
 
