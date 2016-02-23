@@ -21,10 +21,10 @@ We'll be glad to help.
 ------
 
 Beside programming, my passions are music, crafting (making stuff from jewelry to guitars) and games.
-Old DOS games are what got me in tech in the first place.
+Old DOS games are what got me in the tech in the first place.
 Unfortunelly due to lack of free time pretty much the only game I play these days is DotA.
 I'm also a terrible guitar player.
 
 ------
 
-As few people asked, nick Mufin Man comes from the [Frank Zappa's song](https://www.youtube.com/watch?v=WMwY49vTBk0) of the same name.
+As few people asked, nick Muffin Man comes from the [Frank Zappa's song](https://www.youtube.com/watch?v=WMwY49vTBk0) of the same name.
