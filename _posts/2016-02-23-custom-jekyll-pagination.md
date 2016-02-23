@@ -4,7 +4,7 @@ title: Custom Jekyll pagination
 category: [jekyll, liquid]
 ---
 
-Jekyl comes with simple pagination which has only `Newer` and `Older` links.
+Jekyll comes with simple pagination which has only `Newer` and `Older` links.
 I wanted a little bit more, now pagination shows at least five pages, with current in the middle.
 On the larger screens there are also first and last page links.
 `Newer` and `Older` links are, of course, still there.
