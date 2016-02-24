@@ -5,7 +5,7 @@ permalink:           '/:categories/:title/'
 gems:                [jekyll-paginate]
 
 # Setup
-title:               "Muffin Man\'s writtings"
+title:               "Muffin Man\'s writings"
 tagline:             'or the front end playground'
 description:         'Front end development, maybe occasional rants and music.'
 url:                 http://stanko.null-object.com
