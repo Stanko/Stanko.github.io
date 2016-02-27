@@ -4,9 +4,6 @@ import browserSync from 'browser-sync';
 import childProcess from 'child_process';
 import notifier from 'gulp-notify/node_modules/node-notifier';
 
-// import del from 'del';
-// import { stream as wiredep } from 'wiredep';
-
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 const stream = browserSync.stream;
@@ -33,7 +30,7 @@ gulp.task('styles', () => {
 		.pipe($.autoprefixer({ browsers: ['> 1%', 'last 2 versions', 'Firefox ESR'] }))
 		.pipe($.sourcemaps.write())
 		.pipe(gulp.dest('.tmp/public/css/'))
-		.pipe(reload({ stream: true }))
+		.pipe(stream())
 		.pipe(gulp.dest('public/css/'))
 		.pipe($.notify({
 			title: 'Jekyll',
@@ -53,7 +50,7 @@ gulp.task('scripts', () => {
 });
 
 gulp.task('jekyll', function (){
-    const jekyll = spawn('jekyll', ['serve', '--incremental'], { stdio: 'inherit' });
+	const jekyll = spawn('jekyll', ['serve'], { stdio: 'inherit' });
 
 	jekyll.on('exit', function(code) {
 		if (code !== 0) {
@@ -75,7 +72,9 @@ gulp.task('serve', ['jekyll', 'styles', 'scripts'], () => {
 		'_site/**/*.html',
 		'_site/public/img/**/*',
 		'_site/public/js/**/*'
-	]).on('change', reload);
+	]).on('change', function() {
+		reload({ once: true });
+	});
 
 	gulp.watch('_sass/**/*.scss', ['styles']);
 	gulp.watch('_js/**/*.js', ['scripts']);
