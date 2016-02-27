@@ -22,11 +22,11 @@
   <div class="pagination-wrapper">
     <div class="pagination">
       {% if paginator.previous_page %}
-        <a class="pagination-first" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+        <a class="pagination-step" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
           Newer
         </a>
       {% else %}
-        <span class="pagination-first">
+        <span class="pagination-step">
           Newer
         </span>
       {% endif %}
@@ -52,11 +52,11 @@
       {% endif %}
 
       {% if paginator.next_page %}
-        <a class="pagination-last" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+        <a class="pagination-step" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
           Older
         </a>
       {% else %}
-        <span class="pagination-last">
+        <span class="pagination-step">
           Older
         </span>
       {% endif %}

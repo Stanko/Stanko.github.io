@@ -17,6 +17,8 @@ Cube side is a regular `div`, and you can put any type of content in it.
   <img src="/public/img/projects/cube-3D-rotate-grid.png" alt="Demo - 3D Rotating cubes hover effect">
 </a>
 
+<!--more-->
+
 Works on every modern browser, but on IE it falls back to fade effect.
 Thing is that Internet Explorers do not support `transform-style: preserve-3d` property.
 More on [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-style).
