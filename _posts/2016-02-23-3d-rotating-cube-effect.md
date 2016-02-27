@@ -14,7 +14,7 @@ It is fully responsive, and on touch devices, direction depends of where you tap
 Cube side is a regular `div`, and you can put any type of content in it.
 
 <a href="http://stanko.github.io/cube-3D-rotate-grid/">
-  <img src="/public/projects/cube-3D-rotate-grid.png" alt="Demo - 3D Rotating cubes hover effect">
+  <img src="/public/img/projects/cube-3D-rotate-grid.png" alt="Demo - 3D Rotating cubes hover effect">
 </a>
 
 Works on every modern browser, but on IE it falls back to fade effect.

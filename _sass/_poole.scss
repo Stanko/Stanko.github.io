@@ -36,9 +36,7 @@
  */
 
 * {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
@@ -49,7 +47,7 @@ body {
 
 html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.5;
 }
 @media (min-width: 38em) {
@@ -59,26 +57,28 @@ html {
 }
 
 body {
-  color: #515151;
-  background-color: #fff;
+  color: $text-color;
+  background-color: $body-bg-color;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
 
 /* No `:visited` state is required by default (browsers will use `a`) */
 a {
-  color: #268bd2;
+  color: $link-color;
   text-decoration: none;
   position: relative;
   transition: all 0.3s;
 }
+
 a strong {
   color: inherit;
 }
+
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
 a:focus {
-  color: #065bb2;
+  color: $link-hover-color;
 }
 
 /* Headings */
@@ -89,17 +89,21 @@ h1, h2, h3, h4, h5, h6 {
   color: #313131;
   text-rendering: optimizeLegibility;
 }
+
 h1 {
   font-size: 2rem;
 }
+
 h2 {
   margin-top: 1rem;
   font-size: 1.5rem;
 }
+
 h3 {
   margin-top: 1.5rem;
   font-size: 1.25rem;
 }
+
 h4, h5, h6 {
   margin-top: 1rem;
   font-size: 1rem;
@@ -112,9 +116,8 @@ p {
 }
 
 strong {
-  color: #303030;
+  color: $text-bold-color;
 }
-
 
 /* Lists */
 ul, ol, dl {
@@ -125,6 +128,7 @@ ul, ol, dl {
 dt {
   font-weight: bold;
 }
+
 dd {
   margin-bottom: .5rem;
 }
@@ -135,7 +139,7 @@ hr {
   margin: 1.5rem 0;
   border: 0;
   border-top: 1px solid #eee;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid $white;
 }
 
 abbr {
@@ -144,6 +148,7 @@ abbr {
   color: #555;
   text-transform: uppercase;
 }
+
 abbr[title] {
   cursor: help;
   border-bottom: 1px dotted #e5e5e5;
@@ -154,6 +159,7 @@ code,
 pre {
   font-family: Menlo, Monaco, "Courier New", monospace;
 }
+
 code {
   padding: .25em .5em;
   font-size: 85%;
@@ -161,6 +167,7 @@ code {
   background-color: #f9f9f9;
   border-radius: 3px;
 }
+
 pre {
   display: block;
   margin-top: 0;
@@ -174,6 +181,7 @@ pre {
   word-wrap: break-word;
   background-color: #f9f9f9;
 }
+
 pre code {
   padding: 0;
   font-size: 100%;
@@ -186,6 +194,7 @@ pre code {
   margin-bottom: 1rem;
   border-radius: 4px;
 }
+
 .highlight pre {
   margin-bottom: 0;
 }
@@ -194,17 +203,21 @@ pre code {
 .gist .gist-file {
   font-family: Menlo, Monaco, "Courier New", monospace !important;
 }
+
 .gist .markdown-body {
   padding: 15px;
 }
+
 .gist pre {
   padding: 0;
   background-color: transparent;
 }
+
 .gist .gist-file .gist-data {
   font-size: .8rem !important;
   line-height: 1.4;
 }
+
 .gist code {
   padding: 0;
   color: inherit;
@@ -219,9 +232,11 @@ blockquote {
   color: #7a7a7a;
   border-left: .25rem solid #e5e5e5;
 }
+
 blockquote p:last-child {
   margin-bottom: 0;
 }
+
 @media (min-width: 30em) {
   blockquote {
     padding-right: 5rem;
@@ -356,9 +371,7 @@ tbody tr:nth-child(odd) th {
 
 /* Related posts */
 .related {
-  padding-top: 2rem;
   padding-bottom: 2rem;
-  border-top: 1px solid #eee;
 }
 .related-posts {
   padding-left: 0;

@@ -1,0 +1,84 @@
+/*
+ * Breakpoints
+ */
+
+// Small (default) breakpoint
+@mixin sm-only() {
+  @media (max-width: $breakpoint-md - 1) {
+    @content;
+  }
+}
+
+// Medium breakpoint
+@mixin md() {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin md-only() {
+  @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg - 1) {
+    @content;
+  }
+}
+
+@mixin md-and-lower() {
+  @media (max-width: $breakpoint-md - 1) {
+    @content;
+  }
+}
+
+// Large breakpoint
+@mixin lg() {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin lg-only() {
+  @media (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl - 1) {
+    @content;
+  }
+}
+
+@mixin lg-and-lower() {
+  @media (max-width: $breakpoint-lg - 1) {
+    @content;
+  }
+}
+
+// Extra large breakpoint
+@mixin xl() {
+  @media (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+@mixin xl-and-lower() {
+  @media (max-width: $breakpoint-xl - 1) {
+    @content;
+  }
+}
+
+/*
+ * General mixins
+ */
+
+// Ellipsis
+@mixin ellipsis($max-width: 100%) {
+  display: inline-block;
+  max-width: $max-width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*
+ * Print
+ */
+
+@mixin print() {
+  @media print {
+    @content;
+  }
+}

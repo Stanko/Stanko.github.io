@@ -12,4 +12,4 @@ On the larger screens there are also first and last page links.
 Check the [gist with the code](https://gist.github.com/Stanko/4e379a72715fc596c1cc).
 
 You can see it at the bottom of this website, or just check the screenshot below:
-<img src="/public/projects/jekyll-pagination.png" alt="Custom Jekyll pagination">
+<img src="/public/img/projects/jekyll-pagination.png" alt="Custom Jekyll pagination">

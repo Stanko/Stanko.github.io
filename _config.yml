@@ -1,23 +1,37 @@
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           '/:categories/:title/'
-gems:                [jekyll-paginate]
+permalink:            '/:title/'
+gems:                 [jekyll-paginate]
+exclude:              [
+                        'node_modules',
+                        'gulpfile.babel.js',
+                        'package.json',
+                        '_sass',
+                        '_js',
+                        '.sass-cache'
+                      ]
 
 # Setup
-title:               "Muffin Man\'s writings"
-tagline:             'or the front end playground'
-description:         'Front end development, maybe occasional rants and music.'
-url:                 http://stanko.null-object.com
-baseurl:             ''
-paginate:            5
-paginate_path:       'page:num'
+title:                "Muffin Man\'s writings"
+tagline:              'or the front end playground'
+description:          'Front end development, maybe occasional rants and music.'
+url:                  http://stanko.null-object.com
+baseurl:              ''
+paginate:             5
+paginate_path:        'page-:num'
+excerpt_separator:    <!--more-->
 
 # About/contact
 author:
-  name:              Stanko
-  url:               http://stanko.null-object.com
-  email:             stanko@null-object.com
+  name:               Stanko
+  url:                http://stanko.null-object.com
+  email:              stanko@null-object.com
+
+# Sass
+# sass:
+#   sass_dir:           _sass
+#   style:              compressed
 
 # Custom vars
-version:             1.0.0
+version:              1.0.0
