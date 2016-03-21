@@ -53,7 +53,7 @@ Check jsfiddle demo with green-ish scrollbars.
 This one I wrote years ago, and it is fully supporting IE8. It needs some love,
 as it should updated with I have learned since then.
 
-Using browser native scroll so it smooth as you can get.
+Using browser native scroll so it is smooth as you can get.
 Scrollbars are customizable via CSS.
 
 <a href="http://stanko.github.io/rocketScroll/">
@@ -72,7 +72,7 @@ Grab the code on [GitHub](https://github.com/Stanko/rocketScroll).
 * Problem - content will be shrinked for the width of the scrollbar on hover, and jump.
 
 We are going to exploit the fast that all of the browsers have sub 20px wide scrollbar.
-This demo is using two divs, outer one which will be scrolled, and content wrapped in inner one.
+This demo is using two divs, outer one which will be scrolled, and content wrapped in the inner one.
 Just put `overflow: hidden` on the outer div, and on mouse hover, switch to `overflow: scroll`
 Having inner div smaller for 20px, you will be able to create enough
 space for the scroll bar, and content won't jump around.
