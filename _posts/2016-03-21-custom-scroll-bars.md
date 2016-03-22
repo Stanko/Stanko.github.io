@@ -37,7 +37,7 @@ You can use pseudo selectors, these ones are used in the demo:
 }
 {% endhighlight %}
 
-Check jsfiddle demo with green-ish scrollbars.
+Check jsfiddle demo with green-ish scrollbars <i>webkit only</i>.
 
 <iframe
 	width="100%"
