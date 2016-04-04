@@ -2,7 +2,7 @@ import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import childProcess from 'child_process';
-import notifier from 'gulp-notify/node_modules/node-notifier';
+//import notifier from 'gulp-notify/node_modules/node-notifier';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -19,10 +19,10 @@ gulp.task('styles', () => {
 				precision: 10,
 				includePaths: ['.']
 			}).on('error', function(error) {
-				notifier.notify({
-					title: 'SASS error',
-					message: error.message
-				});
+				// notifier.notify({
+				// 	title: 'SASS error',
+				// 	message: error.message
+				// });
 				console.log('\n   ---- SASS error ----');
 				console.log(error.message);
 			})
@@ -84,6 +84,3 @@ gulp.task('serve', ['jekyll', 'styles', 'scripts'], () => {
 gulp.task('default', [], () => {
 	gulp.start('serve');
 });
-
-
-
