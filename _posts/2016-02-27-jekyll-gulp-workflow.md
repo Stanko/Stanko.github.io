@@ -83,7 +83,7 @@ exclude: [
 </pre>
 
 Run `npm install` then `gulp` when it is finished and open `http://localhost:9000` in your browser.
-Then write your posts and enjoy it much smoother workflow.
+Then write your posts and enjoy much smoother workflow.
 
 
 
