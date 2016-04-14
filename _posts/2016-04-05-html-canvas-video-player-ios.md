@@ -12,7 +12,7 @@ It uses HTML `video` and `canvas`. Script picks up the frame from the video and 
 For sound, there is `audio` element using video files (you can provide different audio file for it).
 
 <a href="http://stanko.github.io/html-canvas-video-player/">
-  <img src="/public/img/projects/canvas-video.jpg" alt="Demo - HTML canvas video player">
+  <img src="/public/img/projects/canvas-video.jpg" alt="HTML canvas video player - Demo">
 </a>
 
 Play, pause, jump to time and autoplay are all supported.
