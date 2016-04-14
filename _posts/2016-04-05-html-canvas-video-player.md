@@ -18,6 +18,6 @@ For sound, there is `audio` element using video files (you can provide different
 Play, pause, jump to time and autoplay are all supported.
 But please check the [documentation and demo](http://stanko.github.io/html-canvas-video-player/).
 
-You shouldn't use this on any device that supports HTML video natively.
+You shouldn't use this on any device that supports HTML video natively, but as a fallback.
 
 Grab the code on [GitHub](https://github.com/Stanko/html-canvas-video-player).
