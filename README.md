@@ -3,9 +3,3 @@
 Front end stuff, maybe occasional rants and music.
 
 [https://stanko.github.io](https://stanko.github.io)
-
------
-
-### TODO
-
-* Switch to SASS
