@@ -43,3 +43,12 @@ Long story short - I'm sticking with Atom this time.
 
 Thanks to everyone in the Atom team and community, for making awesome development tool,
 and keeping it open source.
+
+-----
+
+Edit: I even used Atom recently on live coding session on
+<a href="/null-object-tech-meetup-vol-2/">Null Object Tech Meetup</a>.
+
+<a href="/null-object-tech-meetup-vol-2/">
+  <img src="/public/img/meetup-vol-2/4.jpg" alt="Null Object tech meetup live coding">
+</a>
