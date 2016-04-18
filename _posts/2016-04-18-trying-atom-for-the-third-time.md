@@ -6,7 +6,7 @@ category: [ide]
 
 I'm a big fan of [Sublime Text](https://www.sublimetext.com/) editor, which I was using for years now.
 Minimal, fast, reliable. But there is one big problem with it.
-Only man is working on it's development and community really slowed down.
+Only one man is working on it's development and community really slowed down.
 JavaScript ecosystem is going forward at incredible speed, and I'm not sure if Sublime will be able to keep up.
 
 Even [bus factor](https://en.wikipedia.org/wiki/Bus_factor) comes to mind.
@@ -32,7 +32,7 @@ Linters, support for React, Angular, Babel, ES2015...
 UI is better, everything improved so much.
 
 Small disclaimer, I'm primary a front end developer, and Atom is awesome for it.
-People are using for everything else too, but I don't much experience with other languages.
+People are using it for everything else too, but I don't have much experience with other languages.
 
 Issue with large files is still here though. Opening 5MB+ log files is painful.
 This is something that I hope will be solved in the future, but it is not a deal breaker for me.
