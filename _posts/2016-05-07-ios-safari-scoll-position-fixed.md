@@ -22,4 +22,4 @@ You will have something like this:
 }
 {% endhighlight %}
 
-Enjoy ¯\_(ツ)_/¯
+Enjoy `¯\_(ツ)_/¯`
