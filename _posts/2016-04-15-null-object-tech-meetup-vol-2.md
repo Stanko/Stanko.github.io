@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Null Object Tech Meetup Vol 2
-category: [javascript, react]
+category: [javascript, react, talking]
 ---
 
 Two days ago, we held the second Tech Meetup.
