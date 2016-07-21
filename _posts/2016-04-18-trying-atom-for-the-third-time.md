@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Switching to Atom, this time for good
-category: [ide]
+category: [dev]
 ---
 
 I'm a big fan of [Sublime Text](https://www.sublimetext.com/) editor, which I was using for years now.

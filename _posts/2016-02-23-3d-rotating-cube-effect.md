@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 3D Rotating cubes hover effect
-category: [javascript, css]
+category: [javascript, css, opensource]
 ---
 
 Again, I've seen it somewhere on the internet and recreated it.

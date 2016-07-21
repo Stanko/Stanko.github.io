@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Custom Jekyll pagination
-category: [jekyll, liquid]
+tags: [jekyll, liquid]
+category: [jekyll]
 ---
 
 Jekyll comes with simple pagination which has only `Newer` and `Older` links.

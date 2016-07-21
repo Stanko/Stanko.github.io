@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Simple React slider with touch support
-category: [javascript, react]
+category: [javascript, react, opensource]
 ---
 
 I needed simple React slider component, as we are building our new website as a universal React application.

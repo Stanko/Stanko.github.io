@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Null Object Tech Meetup Vol 3 is coming up
-category: [javascript, talking]
+category: [javascript, speaking]
 ---
 
 We have another tech meetup coming up.

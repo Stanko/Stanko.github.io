@@ -2,15 +2,17 @@
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
 permalink:            '/:title/'
-gems:                 [jekyll-paginate]
-exclude:              [
-                        'node_modules',
-                        'gulpfile.babel.js',
-                        'package.json',
-                        '_sass',
-                        '_js',
-                        '.sass-cache'
-                      ]
+gems:
+ - jekyll-paginate
+ - jekyll-archives
+
+exclude:
+ - node_modules
+ - gulpfile.babel.js
+ - package.json
+ - _sass
+ - _js
+ - .sass-cache
 
 # Setup
 title:                "Muffin Man\'s writings"
@@ -28,10 +30,13 @@ author:
   url:                http://stanko.null-object.com
   email:              stanko@null-object.com
 
-# Sass
-# sass:
-#   sass_dir:           _sass
-#   style:              compressed
+# Archive
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    categories: '/category/:name/'
 
 # Custom vars
 version:              1.0.0

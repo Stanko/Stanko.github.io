@@ -1,7 +1,7 @@
 ---
 layout: post
 title: HTML canvas video player
-category: [javascript, html]
+category: [javascript, opensource]
 ---
 
 This is the one of my most popular repos. Once client asked for inline video that works on iPhone too.

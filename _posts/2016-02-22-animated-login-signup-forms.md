@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Animated login and signup forms
-category: [css, sass]
+tags: [css, sass]
+category: [css, opensource]
 ---
 
 Well I saw pretty nice mockup on [Dribbble](https://dribbble.com/shots/2311260-Day-1-Sign-Up-and-Login-Animated-Download-Template)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: What is the point of the website if it kills my laptop?
-category: [web, rants]
+category: [rants]
 ---
 
 People need to realize that is not enough to have a nice website with a ton of animations and effects.

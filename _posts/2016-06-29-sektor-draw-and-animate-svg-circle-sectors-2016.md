@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sector - draw and animate SVG sectors
-category: [javascript]
+category: [javascript, svg, opensource]
 ---
 
 For a current project I'm on, we needed both circular timer, and progress bar.

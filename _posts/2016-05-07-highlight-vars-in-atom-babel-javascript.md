@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Highlight variables in Atom, Babel template strings
-category: javascript
+category: dev
 ---
 
 Atom [Babel](https://babeljs.io/) plugin doesn't highlight variables
