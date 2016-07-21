@@ -5,12 +5,12 @@ category: [jekyll, gulp]
 ---
 
 As you probably know this blog is powered by [Jekyll](http://jekyllrb.com/).
-It is a really nice platform, but it lacks few thing I'm used to during development.
-First one is live reload on file changes, using SASS, autoprefixer and injecting CSS directly without full page reload.
+It is a really nice platform, but it lacks a few things I'm used to during development.
+First one is live reload on file changes (and injecting CSS), using SASS, autoprefixer, ES6...
 
 <!--more-->
 
-I tried to find boilerplate for this, but anything I found didn't match my needs.
+I tried to find a boilerplate, but everything I found didn't match my needs.
 Usually people would run gulp tasks for SASS and JavaScript files, and on change
 run `jekyll build`, which is insanely slow.
 They would use [BrowserSync](https://www.browsersync.io/) to serve `_site` folder.
@@ -84,6 +84,3 @@ exclude: [
 
 Run `npm install` then `gulp` when it is finished and open `http://localhost:9000` in your browser.
 Then write your posts and enjoy much smoother workflow.
-
-
-
