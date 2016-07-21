@@ -1,5 +1,5 @@
 ---
-layout: none
+layout: null
 permalink: .htaccess
 ---
 # Block Referrer Spam
@@ -16,8 +16,4 @@ RewriteEngine on
 ^https?://.*keywords-monitoring-success\.com.*           [NC,OR]
 ^https?://.*10619916.responsive-test\.net.*              [NC,OR]
 ^https?://.*ibnads\.xl\.co\.id.*                         [NC,OR]
-^https?://.*site-auditor\.online.*                       [NC,OR]
-^https?://.*monetizationking\.net.*                      [NC,OR]
-^https?://.*fix-website-errors\.com.*                    [NC,OR]
-^https?://.*free-video-tool\.com.*                       [NC,OR]
 RewriteRule ^(.*)$ –                                     [F,L]
