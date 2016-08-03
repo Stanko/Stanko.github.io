@@ -5,6 +5,7 @@ permalink:            '/:title/'
 gems:
  - jekyll-paginate
  - jekyll-archives
+ # - jekyll-related-posts # Installation fails
 
 exclude:
  - node_modules

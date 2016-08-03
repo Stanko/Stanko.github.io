@@ -40,5 +40,14 @@
       ga('create', 'UA-65023927-2', 'auto');
       ga('send', 'pageview');
     </script>
+
+    <script>
+      var posts = [
+        {% for post in site.posts %} {
+            url: '{{ site.baseurl }}{{ post.url }}',
+            title: '{{ post.title }}'
+        }, {% endfor %}
+      ];
+    </script>
   </body>
 </html>
