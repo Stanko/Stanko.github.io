@@ -14,6 +14,38 @@ layout: default
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date_to_string }}</span>
   {{ content }}
+
+  <div class="sharring-buttons">
+    <div>
+      Share on
+    </div>
+    <!-- Sharing button Facebook -->
+    <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank">
+      <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small">
+        <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+          {% include icon-facebook.html %}
+        </div>
+      </div>
+    </a>
+
+    <!-- Sharing button Twitter -->
+    <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text={{ page.title }}&amp;url={{ site.url }}{{ page.url }}" target="_blank">
+      <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
+        <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+          {% include icon-twitter.html %}
+        </div>
+      </div>
+    </a>
+
+    <!-- Sharing button Google+ -->
+    <a class="resp-sharing-button__link" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" target="_blank">
+      <div class="resp-sharing-button resp-sharing-button--google resp-sharing-button--small">
+        <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+          {% include icon-google-plus.html %}
+        </div>
+      </div>
+    </a>
+  </div>
 </div>
 
 {% if site.related_posts.size > 0 %}

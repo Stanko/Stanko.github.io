@@ -19,7 +19,7 @@ exclude:
 title:                "Muffin Man\'s writings"
 tagline:              'or the front end playground'
 description:          'Front end development, maybe occasional rants and music.'
-url:                  http://stanko.null-object.com
+url:                  http://stanko.github.io
 baseurl:              ''
 paginate:             5
 paginate_path:        'page-:num'
@@ -28,7 +28,7 @@ excerpt_separator:    <!--more-->
 # About/contact
 author:
   name:               Stanko
-  url:                http://stanko.null-object.com
+  url:                http://stanko.github.io
   email:              stanko@null-object.com
 
 # Archive
