@@ -19,45 +19,45 @@
     {% assign end = paginator.total_pages %}
   {% endif %}
 
-  <div class="pagination-wrapper">
-    <div class="pagination">
+  <div class="Pagination">
+    <div class="Pagination-inner">
       {% if paginator.previous_page %}
-        <a class="pagination-step" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
-          Newer
+        <a class="Pagination-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+          <span class="Pagination-arrow Pagination-arrow--left"></span>
         </a>
       {% else %}
-        <span class="pagination-step">
-          Newer
+        <span class="Pagination-link Pagination-link--inactive">
+          <span class="Pagination-arrow Pagination-arrow--left"></span>
         </span>
       {% endif %}
 
       {% if start > 1 %}
-        <a class="pagination-first" href="{{ site.baseurl }}/">1</a>
-        <span class="pagination-more">&middot;&middot;&middot;</span>
+        <a class="Pagination-link" href="{{ site.baseurl }}/">1</a>
+        <div class="Pagination-separator"></div>
       {% endif %}
 
       {% for page in (start..end) %}
         {% if page == paginator.page %}
-          <span class="active">{{ page }}</span>
+          <a class="Pagination-link Pagination-link--active" class="active">{{ page }}</a>
         {% elsif page == 1 %}
-          <a href="{{ site.baseurl }}/">{{ page }}</a>
+          <a class="Pagination-link" href="{{ site.baseurl }}/">{{ page }}</a>
         {% else %}
-          <a href="{{ site.baseurl }}/page-{{ page }}">{{ page }}</a>
+          <a class="Pagination-link" href="{{ site.baseurl }}/page-{{ page }}">{{ page }}</a>
         {% endif %}
       {% endfor %}
 
       {% if end < paginator.total_pages %}
-        <span class="pagination-more">&middot;&middot;&middot;</span>
-        <a class="pagination-last" href="{{ site.baseurl }}/page-{{ paginator.total_pages }}">{{ paginator.total_pages }}</a>
+        <div class="Pagination-separator"></div>
+        <a class="Pagination-link" href="{{ site.baseurl }}/page-{{ paginator.total_pages }}">{{ paginator.total_pages }}</a>
       {% endif %}
 
       {% if paginator.next_page %}
-        <a class="pagination-step" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
-          Older
+        <a class="Pagination-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+          <span class="Pagination-arrow Pagination-arrow--right"></span>
         </a>
       {% else %}
-        <span class="pagination-step">
-          Older
+        <span class="Pagination-link Pagination-link--inactive">
+          <span class="Pagination-arrow Pagination-arrow--right"></span>
         </span>
       {% endif %}
     </div>

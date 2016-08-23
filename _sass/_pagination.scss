@@ -1,0 +1,113 @@
+$pagination-color: #44474a;
+$pagination-hover-color: #34495E;
+$pagination-hover-bg: #cDd3d7;
+$pagination-active-color: #fff;
+$pagination-active-bg: #34495E;
+$pagination-separator-color: #bbb;
+$pagination-transition-time: 0.5s;
+
+.Pagination {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.Pagination-inner {
+  display: inline-flex;
+  height: 54px;
+  background: #f5f5f5;
+  align-items: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  font-size: 18px;
+}
+
+.Pagination-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 100%;
+  text-decoration: none;
+  color: $pagination-color;
+  transition: background $pagination-transition-time, color $pagination-transition-time;
+
+  &:hover {
+    color: $pagination-hover-color;
+    background: $pagination-hover-bg
+  }
+}
+
+.Pagination-link--inactive,
+.Pagination-link--inactive:hover {
+  color: $pagination-color;
+  background: transparent;
+  opacity: 0.3;
+}
+
+.Pagination-link--active,
+.Pagination-link--active:hover {
+  color: $pagination-active-color;
+  background: $pagination-active-bg;
+  font-weight: bold;
+}
+
+.Pagination-separator {
+  margin: 0 13px;
+  position: relative;
+}
+
+.Pagination-separator,
+.Pagination-separator::before,
+.Pagination-separator::after {
+  content: '';
+  width: 3px;
+  height: 3px;
+  background: $pagination-separator-color;
+  border-radius: 50%;
+  display: block;
+}
+
+.Pagination-separator::before {
+  position: absolute;
+  top: 0;
+  transform: translateX(-6px);
+}
+
+.Pagination-separator::after {
+  position: absolute;
+  top: 0;
+  transform: translateX(6px);
+}
+
+.Pagination-arrow {
+  width: 9px;
+}
+
+.Pagination-arrow::before,
+.Pagination-arrow::after {
+  height: 16px;
+  width: 2px;
+  background: $pagination-color;
+  display: block;
+  content: '';
+}
+
+.Pagination-arrow::before {
+  transform-origin: bottom left;
+  transform: rotateZ(25deg);
+}
+
+.Pagination-arrow::after {
+  transform: rotateZ(-25deg);
+  transform-origin: top left;
+}
+
+.Pagination-arrow--right {
+  transform: rotateZ(180deg);
+}
+
+.Pagination-link:hover {
+    .Pagination-arrow::before,
+    .Pagination-arrow::after {
+      background: $pagination-hover-color;
+    }
+}
