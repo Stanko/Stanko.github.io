@@ -23,11 +23,26 @@
       </div>
 
       <div class="container content">
+        <div class='Search'>
+          <input class='Search-input' placeholder="Search" />
+          <div class='Search-results'>
+          </div>
+        </div>
+
         {{ content }}
       </div>
     </div>
 
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      var posts = [
+        {% for post in site.posts %} {
+            url: '{{ site.baseurl }}{{ post.url }}',
+            title: '{{ post.title }}'
+        }, {% endfor %}
+      ];
+    </script>
 
     <script src="/public/js/app.js"></script>
 
@@ -39,15 +54,6 @@
 
       ga('create', 'UA-65023927-2', 'auto');
       ga('send', 'pageview');
-    </script>
-
-    <script>
-      var posts = [
-        {% for post in site.posts %} {
-            url: '{{ site.baseurl }}{{ post.url }}',
-            title: '{{ post.title }}'
-        }, {% endfor %}
-      ];
     </script>
   </body>
 </html>
