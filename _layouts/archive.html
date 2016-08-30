@@ -2,15 +2,17 @@
 layout: default
 ---
 
-<h1>Archive of posts with {{ page.type }} '{{ page.title }}'</h1>
+<div class="Archive">
+  <h1>Archive of posts with {{ page.type }} '{{ page.title }}'</h1>
 
-<hr />
+  <hr />
 
-{% for post in page.posts %}
-<div class="post">
-  <h2 class="post-title">
-    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-  </h2>
-  <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+  {% for post in page.posts %}
+    <div class="ArchivePost">
+      <h2 class="ArchivePost-title">
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h2>
+      <span class="ArchivePost-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+    </div>
+  {% endfor %}
 </div>
-{% endfor %}

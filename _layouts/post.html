@@ -2,8 +2,8 @@
 layout: default
 ---
 
-<div class="post">
-  <div class="">
+<div class="Post">
+  <div class="Post-categories">
     {% for category in page.categories %}
       <a href="/category/{{ category }}">{{ category }}</a>
     {% endfor %}
@@ -11,57 +11,47 @@ layout: default
 
   <p>This article will take {{ page.content | reading_time }} to read.</p>
 
-  <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }}</span>
+  <h1 class="Post-title">{{ page.title }}</h1>
+  <span class="Post-date">{{ page.date | date_to_string }}</span>
   {{ content }}
 
-  <div class="sharring-buttons">
+  <div class="SharringButtons">
     <div>
       Share on
     </div>
     <!-- Sharing button Facebook -->
-    <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank">
-      <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small">
-        <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
-          {% include icon-facebook.html %}
-        </div>
-      </div>
+    <a
+      class="SharringButtons SharringButtons--facebook"
+      href="https://facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank">
+      {% include icon-facebook.html %}
     </a>
-
     <!-- Sharing button Twitter -->
-    <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text={{ page.title }}&amp;url={{ site.url }}{{ page.url }}" target="_blank">
-      <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
-        <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
-          {% include icon-twitter.html %}
-        </div>
-      </div>
+    <a
+      class="SharringButtons SharringButtons--twitter"
+      href="https://twitter.com/intent/tweet/?text={{ page.title }}&amp;url={{ site.url }}{{ page.url }}" target="_blank">
+      {% include icon-twitter.html %}
     </a>
-
     <!-- Sharing button Google+ -->
-    <a class="resp-sharing-button__link" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" target="_blank">
-      <div class="resp-sharing-button resp-sharing-button--google resp-sharing-button--small">
-        <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
-          {% include icon-google-plus.html %}
-        </div>
-      </div>
+    <a
+      class="SharringButtons SharringButtons--googlePlus"
+      href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" target="_blank">
+      {% include icon-google-plus.html %}
     </a>
   </div>
 </div>
 
 {% if site.related_posts.size > 0 %}
-<div class="related">
+<div>
   <h2>Related Posts</h2>
-  <ul class="related-posts">
+  <div class="RelatedPosts">
     {% for post in site.related_posts limit:3 %}
-      <li>
-        <h3>
-          <a href="{{ site.baseurl }}{{ post.url }}">
-            {{ post.title }}
-            <small>{{ post.date | date_to_string }}</small>
-          </a>
-        </h3>
-      </li>
+      <div class="RelatedPosts-post">
+        <a href="{{ site.baseurl }}{{ post.url }}">
+          {{ post.title }}
+          <small>{{ post.date | date_to_string }}</small>
+        </a>
+      </div>
     {% endfor %}
-  </ul>
+  </div>
 </div>
 {% endif %}

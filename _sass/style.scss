@@ -1,9 +1,11 @@
-@import 'variables';
-@import 'mixins';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/normalize';
+@import 'base/synthax';
 
-@import 'poole';
-@import 'lanyon';
-@import 'main';
-@import 'synthax';
-@import 'sharing-buttons';
-@import 'pagination';
+@import 'global/main';
+@import 'global/grid';
+@import 'global/typography';
+
+@import 'posts/sharing-buttons';
+@import 'posts/pagination';

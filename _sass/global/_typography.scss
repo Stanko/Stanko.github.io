@@ -1,0 +1,7 @@
+body {
+  font-size: $font-size;
+
+  @include md {
+    font-size: $font-size-md;
+  }
+}
