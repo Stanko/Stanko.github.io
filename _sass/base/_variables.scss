@@ -3,6 +3,12 @@
 $black: #000;
 $white: #fff;
 
+$color1: #333;
+$color2: #666;
+$color3: #999;
+$color4: #ccc;
+$color5: #eee;
+
 // ------------ Breakpoints
 $breakpoint-md: 600px !default;
 $breakpoint-lg: 960px !default;
@@ -10,9 +16,9 @@ $breakpoint-xl: 1200px !default;
 
 // ------------ Grid
 $grid-col-count: 8;
-$grid-gutter: 20px;
-$container-width-lg: 750px;
-$container-width-xl: 850px;
+$grid-gutter: 2rem;
+$container-width-lg: 75rem;
+$container-width-xl: 85rem;
 
 // ------------ Z-Index
 $z-index-0: 0;
@@ -28,8 +34,12 @@ $z-index-9: 900;
 $z-index-10: 1000;
 
 // ------------ Typography
-$font-size: 16px;
-$font-size-md: 18px;
+$font-size: 1.6rem;
+$font-size-md: 1.8rem;
+
+$font-family-serif: 'Oswald', serif;
+
+
 
 // ------------ Pagination
 $pagination-color: #44474a;

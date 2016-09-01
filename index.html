@@ -2,9 +2,16 @@
 layout: default
 title: Home
 ---
+<div class="Header">
+  <h3 class="">
+    <a href="{{ site.baseurl }}/" title="Home">
+      {{ site.title }}
+    </a>
+    <small>{{ site.tagline }}</small>
+  </h3>
+</div>
 
-
-<div class="Posts">
+<div class="Posts Container">
   {% for post in paginator.posts %}
   <div class="Post">
     <h1 class="Post-title">

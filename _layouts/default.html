@@ -6,27 +6,12 @@
   <body>
     {% include menu.html %}
 
+    <div class="Content">
+      {{ content }}
+    </div>
+
     <div class="Container">
-      <h3 class="">
-        <a href="{{ site.baseurl }}/" title="Home">
-          {{ site.title }}
-        </a>
-        <small>{{ site.tagline }}</small>
-      </h3>
-
-      <div class="Search">
-        <input class="Search-input" placeholder="Search" />
-        <div class="Search-results">
-        </div>
-      </div>
-
-      <div class="Content">
-        {{ content }}
-      </div>
-
-      <div>
-        &copy; {{ site.time | date: '%Y' }}. All rights reserved.
-      </div>
+      &copy; {{ site.time | date: '%Y' }}. All rights reserved.
     </div>
 
     {% include scripts.html %}
