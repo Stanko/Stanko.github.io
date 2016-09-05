@@ -3,11 +3,16 @@
 $black: #000;
 $white: #fff;
 
-$color1: #333;
-$color2: #666;
-$color3: #999;
-$color4: #ccc;
-$color5: #eee;
+$red: #E9514D;
+$dark-blue: #2D3E4F;
+$blue: #4D7EdF;
+$grey: #F9F9F9;
+
+$grey1: #333;
+$grey2: #666;
+$grey3: #999;
+$grey4: #ccc;
+$grey5: #eee;
 
 // ------------ Breakpoints
 $breakpoint-md: 600px !default;
@@ -34,11 +39,14 @@ $z-index-9: 900;
 $z-index-10: 1000;
 
 // ------------ Typography
-$font-size: 1.6rem;
-$font-size-md: 1.8rem;
+$font-size: 1.8rem;
+$font-size-md: 2.2rem;
 
-$font-family-serif: 'Oswald', serif;
+$headers-font-family: 'Open Sans', sans-serif;
+$headers-font-weight: 300;
 
+$body-font-family: 'Lora', sans-serif;
+$body-font-weight: 400;
 
 
 // ------------ Pagination

@@ -2,10 +2,14 @@
 @import 'base/mixins';
 @import 'base/normalize';
 @import 'base/synthax';
+@import 'base/angled-edges';
 
 @import 'global/main';
 @import 'global/grid';
 @import 'global/typography';
 
+@import 'components/header';
+
+@import 'posts/post';
 @import 'posts/sharing-buttons';
 @import 'posts/pagination';

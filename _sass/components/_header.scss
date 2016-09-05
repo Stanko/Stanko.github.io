@@ -1,0 +1,10 @@
+.Header {
+  @include angled-edge('outside bottom', 'lower right', $grey, $width: 2800, $height: 600);
+  background: $grey;
+  border-top: 10px solid $red;
+  margin-bottom: 400px;
+
+  &::after {
+    z-index: -1;
+  }
+}

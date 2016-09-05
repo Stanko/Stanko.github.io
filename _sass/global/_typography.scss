@@ -1,4 +1,6 @@
 body {
+  font-family: $body-font-family;
+  font-weight: $body-font-weight;
   font-size: $font-size;
 
   @include md {
@@ -12,10 +14,19 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-family-serif;
-  font-weight: normal;
+  font-family: $headers-font-family;
+  font-weight: $headers-font-weight;
 }
 
 p {
 
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+}
+
+pre {
+  overflow-x: scroll;
 }

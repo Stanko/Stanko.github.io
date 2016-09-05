@@ -29,6 +29,7 @@
 .Grid {
     display: flex;
     margin: 0 auto;
+    padding: 0 $grid-gutter / 2;
     flex-wrap: wrap;
     box-sizing: border-box;
     flex-wrap: wrap;
@@ -58,7 +59,7 @@
 [class*='Col'] {
     width: 100%;
     flex-basis: 100%;
-    padding: 0 $grid-gutter;
+    padding: 0 $grid-gutter / 2;
     margin: 0;
     box-sizing: border-box;
 }

@@ -1,0 +1,22 @@
+.Post-title {
+
+}
+
+.Post-title a {
+  text-decoration: none;
+}
+
+div.highlighter-rouge {
+  position: relative;
+
+  &::after {
+    content: '';
+    background: $grey5;
+    z-index: -1;
+    top: 0;
+    left: -200%;
+    width: 500%;
+    height: 100%;
+    position: absolute;
+  }
+}
