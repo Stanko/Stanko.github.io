@@ -16,7 +16,7 @@ exclude:
  - .sass-cache
 
 # Setup
-title:                "Muffin Man\'s writings"
+title:                "Muffin Mans writings"
 tagline:              'or the front end playground'
 description:          'Front end development, maybe occasional rants and music.'
 url:                  http://stanko.github.io
@@ -41,3 +41,14 @@ jekyll-archives:
 
 # Custom vars
 version:              1.0.0
+
+# Staticman
+staticman:
+  allowedFields: ['name', 'email', 'message', 'slug']
+  branch: 'v2'
+  commitMessage: "New comment has been posted"
+  filename: "comment-{@slug}-{@timestamp}"
+  format: yml
+  moderation: true
+  path: "_data/comments"
+  requiredFields: ['name', 'email', 'message', 'slug']
