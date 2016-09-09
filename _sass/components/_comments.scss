@@ -1,0 +1,78 @@
+input,
+textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+button {
+
+}
+
+.CommentForm {
+  position: relative;
+}
+
+.CommentForm-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $white;
+  background: rgba($white, 0.8);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.CommentForm-input--lastName {
+  opacity: 0;
+  position: absolute;
+  margin-left: -10000px;
+}
+
+.CommentForm-errorMessages {
+  color: $red;
+}
+
+.CommentForm-sendFailed {
+  display: none;
+}
+
+.CommentForm-sendSucceeded {
+  display: none;
+}
+
+.CommentForm-loader {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 0 auto;
+}
+
+@keyframes comment-loader-bounce {
+  0%, 100% {
+    transform: scale(0.0);
+  } 50% {
+    transform: scale(1.0);
+  }
+}
+
+.CommentForm-loaderElement {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: $red;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: comment-loader-bounce 2.0s infinite ease-in-out;
+}
+
+.CommentForm-loaderElement--two {
+  animation-delay: -1.0s;
+}

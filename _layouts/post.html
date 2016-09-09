@@ -41,7 +41,7 @@ layout: default
 </div>
 
 {% if site.related_posts.size > 0 %}
-<div>
+<div class="Container">
   <h2>Related Posts</h2>
   <div class="RelatedPosts">
     {% for post in site.related_posts limit:3 %}
@@ -55,3 +55,5 @@ layout: default
   </div>
 </div>
 {% endif %}
+
+{% include comments.html %}

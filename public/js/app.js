@@ -1,5 +1,96 @@
 'use strict';
 
+var commentForm = document.querySelector('.CommentForm');
+var commentFormInputs = document.querySelectorAll('.CommentForm-input');
+var slugInput = document.querySelector('.CommentForm-input--slug');
+var optionsSlugInput = document.querySelector('.CommentForm-input--optionsSlug');
+var nameInput = document.querySelector('.CommentForm-input--name');
+var lastNameInput = document.querySelector('.CommentForm-input--lastName');
+var emailInput = document.querySelector('.CommentForm-input--email');
+var messageInput = document.querySelector('.CommentForm-input--message');
+var errorMessagesDiv = document.querySelector('.CommentForm-errorMessages');
+var sendFailedDiv = document.querySelector('.CommentForm-sendFailed');
+var sendSucceededDiv = document.querySelector('.CommentForm-sendSucceeded');
+var overlayDiv = document.querySelector('.CommentForm-overlay');
+
+function post(url, data, callback, errorCallback) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', url);
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  xhr.onload = function () {
+    if (xhr.status === 200) {
+      callback(xhr.responseText);
+    } else if (xhr.status !== 200) {
+      errorCallback(xhr.responseText);
+    }
+  };
+  xhr.send(encodeURI(data));
+}
+
+if (commentForm) {
+  commentForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    errorMessagesDiv.innerHTML = '';
+    sendFailedDiv.style.display = 'none';
+    sendSucceededDiv.style.display = 'none';
+
+    var slug = slugInput.value.trim();
+    var optionsSlug = optionsSlugInput.value.trim();
+    var name = nameInput.value.trim();
+    var lastName = lastNameInput.value.trim();
+    var email = emailInput.value.trim();
+    var message = messageInput.value.trim();
+
+    var error = false;
+    var fatalError = false;
+    var messages = [];
+
+    if (slug === '' || slug !== optionsSlug || lastName !== '') {
+      fatalError = true;
+    }
+
+    if (name.length < 2) {
+      error = true;
+      messages.push('Please enter name');
+    }
+
+    if (email.search(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/) === -1) {
+      error = true;
+      messages.push('Please enter valid email');
+    }
+
+    if (message.length < 2) {
+      error = true;
+      messages.push('Please enter message');
+    }
+
+    if (fatalError) {
+      return false;
+    }
+
+    if (error) {
+      errorMessagesDiv.innerHTML = messages.join('<br>');
+      return false;
+    }
+
+    var params = [];
+    commentFormInputs.forEach(function (input) {
+      params.push(input.name + '=' + input.value);
+    });
+
+    overlayDiv.style.display = 'block';
+
+    post(e.target.getAttribute('data-action'), params.join('&'), function (text) {
+      commentForm.reset();
+      sendSucceededDiv.style.display = 'block';
+      overlayDiv.style.display = 'none';
+    }, function (text) {
+      sendFailedDiv.style.display = 'block';
+      overlayDiv.style.display = 'none';
+    });
+  });
+}
+
 /*
  * Fuzzy
  * https://github.com/myork/fuzzy
