@@ -1,0 +1,85 @@
+{% assign comments = site.data.comments[page.slug] %} <!-- | sort %} -->
+
+<div class="Comment Container">
+  {% if comments != null %}
+    <h2>Comments ({{ comments.size }})</h2>
+    {% for commentData in comments %}
+      <div class="Comment">
+        {% assign comment = commentData[1] %}
+        <div class="Comment-author">
+          {{ comment.name }}
+        </div>
+        <div class="Comment-date">
+          {{ comment.date | date: "%d %b %Y, %I:%M %p" }}
+        </div>
+        <div class="Comment-message">
+          {{ comment.message | escape_once | newline_to_br }}
+        </div>
+      </div>
+    {% endfor %}
+  {% else %}
+    <h2>No comments, be the first to comment</h2>
+  {% endif %}
+</div>
+
+<form
+  data-action="https://api.staticman.net/v1/entry/Stanko/Stanko.github.io/v2"
+  class="CommentForm"
+  novalidate="novalidate">
+  <div class="CommentForm-overlay">
+    <div class="CommentForm-loader">
+      <div class="CommentForm-loaderElement"></div>
+      <div class="CommentForm-loaderElement CommentForm-loaderElement--two"></div>
+    </div>
+  </div>
+  <input
+    name="fields[slug]"
+    type="hidden"
+    value="{{ page.slug }}"
+    class="CommentForm-input CommentForm-input--slug">
+  <input
+    name="options[slug]"
+    type="hidden"
+    value="{{ page.slug }}"
+    class="CommentForm-input CommentForm-input--optionsSlug">
+
+  <div class="Grid">
+    <div class="Col--md-4">
+      <input
+        name="fields[name]"
+        type="text"
+        placeholder="Name"
+        class="CommentForm-input CommentForm-input--name">
+      <input
+        name="fields[last_name]"
+        type="text"
+        tabindex="-1"
+        placeholder="Last name"
+        class="CommentForm-input--lastName">
+    </div>
+    <div class="Col--md-4">
+      <input
+        name="fields[email]"
+        type="email"
+        placeholder="Email"
+        class="CommentForm-input CommentForm-input--email">
+    </div>
+  </div>
+  <div class="Container">
+    <textarea
+      name="fields[message]"
+      placeholder="Comment"
+      class="CommentForm-input CommentForm-input--message"></textarea>
+
+    <div class="CommentForm-errorMessages"></div>
+    <div class="CommentForm-sendFailed">
+      Sending failed, please try again.
+    </div>
+    <div class="CommentForm-sendSucceeded">
+      Thank you! Your comment is sent.
+      Please note that all of the comments go through moderation.
+    </div>
+
+    <button type="submit">Send</button>
+  </div>
+</form>
