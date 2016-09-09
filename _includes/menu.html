@@ -4,6 +4,17 @@
   </div>
 </div>
 
+<form method="POST" action="https://api.staticman.net/v1/entry/Stanko/Stanko.github.io/v2">
+  <!-- e.g. "2016-01-02-this-is-a-post" -->
+  <input name="fields[slug]" type="hidden" value="{{ page.slug }}">
+
+  <input name="fields[name]" type="text">
+  <input name="fields[email]" type="email">
+  <textarea name="fields[message]"></textarea>
+
+  <button type="submit">Go!</button>
+</form>
+
 <!-- Toggleable sidebar -->
 <div class="Menu Container">
   <nav class="Menu-nav">
