@@ -1,0 +1,13 @@
+slug: sass-random-and-circle-animation
+name: Stanko
+email: stanko@null-object.com
+message: >-
+  Something to have in mind, new random numbers will be generated on every SASS
+  compilation. But once generated, CSS will stay static, until the next
+  compilation.
+
+
+  Something to have in mind, new random numbers will be generated on every SASS
+  compilation. But once generated, CSS will stay static, until the next
+  compilation.
+date: '2016-09-10T09:46:12.579Z'
