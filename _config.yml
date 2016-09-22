@@ -12,11 +12,12 @@ exclude:
  - gulpfile.babel.js
  - package.json
  - _sass
+ - public/css # gulp injects CSS via browsersync
  - _js
  - .sass-cache
 
 # Setup
-title:                "Muffin Mans writings"
+title:                "Muffin Man\'s writings"
 tagline:              'or the front end playground'
 description:          'Front end development, maybe occasional rants and music.'
 url:                  http://stanko.github.io

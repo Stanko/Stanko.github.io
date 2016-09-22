@@ -1,0 +1,60 @@
+<div class="Header-line"></div>
+<div class="Header Header--page Search-toggle">
+  <div class="Rotation">
+    <div class="Rotation-item Rotation-item--one">
+      <img src="/public/img/poly-1.svg" />
+    </div>
+    <div class="Rotation-item Rotation-item--two">
+      <img src="/public/img/poly-2.svg" />
+    </div>
+    <div class="Rotation-item Rotation-item--three">
+      <img src="/public/img/poly-3.svg" />
+    </div>
+  </div>
+
+  <div class="Header-title">
+    <div class="Container">
+      <h1>{{ page.title }}</h1>
+      {% if page.date %}
+        <span>{{ page.date | date_to_string }}</span>
+      {% endif %}
+
+      <nav class="Menu-nav">
+        <a
+          class="Menu-navItem {% if page.url == '/' %}Menu-navItem--active{% endif %}"
+          href="{{ site.baseurl }}/">
+          Home
+        </a>
+
+        {% comment %}
+          The code below dynamically generates a sidebar nav of pages with
+          `layout: page` in the front-matter. See readme for usage.
+        {% endcomment %}
+
+        {% assign pages_list = site.pages | sort:"url" %}
+        {% for node in pages_list %}
+          {% if node.title != null %}
+            {% if node.layout == "page" %}
+              <a
+                class="Menu-navItem {% if page.url == node.url %}Menu-navItem--active{% endif %}"
+                href="{{ node.url }}">
+                {{ node.title }}
+              </a>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </nav>
+    </div>
+  </div>
+</div>
+
+<div class="AboutBlog Grid">
+  <div class="AboutBlog-content Col--md-5 Offset--md-3 Col--lg-4 Offset--lg-4">
+    <!-- <img src="/public/img/s.png" class="AboutBlog-logo" /> -->
+    <div class="Post-categories">
+      {% for category in page.categories %}
+        <a href="/category/{{ category }}">{{ category }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</div>

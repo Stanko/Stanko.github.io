@@ -1,0 +1,31 @@
+<div class="Header-line"></div>
+<div class="Header">
+  <div class="Rotation">
+    <div class="Rotation-item Rotation-item--one">
+      <img src="/public/img/poly-1.svg" />
+    </div>
+    <div class="Rotation-item Rotation-item--two">
+      <img src="/public/img/poly-2.svg" />
+    </div>
+    <div class="Rotation-item Rotation-item--three">
+      <img src="/public/img/poly-3.svg" />
+    </div>
+
+    <div class="LatestPost">
+      <span>Latest post</span>
+      <h1>{{ site.posts[0].title }}</h1>
+      <span>{{ site.posts[0].date | date_to_string }}</span>
+    </div>
+  </div>
+</div>
+
+<div class="AboutBlog Grid">
+  <div class="AboutBlog-content Col--md-5 Offset--md-3 Col--lg-4 Offset--lg-4">
+    <img src="/public/img/s.png" class="AboutBlog-logo" />
+    <h1 class="AboutBlog-title">{{ site.title }}</h1>
+    <h2 class="AboutBlog-subtitle">{{ site.tagline }}</h2>
+    <p class="AboutBlog-text">
+      {{ site.description }}
+    </p>
+  </div>
+</div>

@@ -3,16 +3,16 @@ layout: default
 ---
 
 <div class="Post Container">
-  <div class="Post-categories">
+  <!-- <div class="Post-categories">
     {% for category in page.categories %}
       <a href="/category/{{ category }}">{{ category }}</a>
     {% endfor %}
-  </div>
+  </div> -->
 
-  <p>This article will take {{ page.content | reading_time }} to read.</p>
+  <p class="Post-readTime">This article will take {{ page.content | reading_time }} to read.</p>
 
-  <h1 class="Post-title">{{ page.title }}</h1>
-  <span class="Post-date">{{ page.date | date_to_string }}</span>
+  <!-- <h1 class="Post-title">{{ page.title }}</h1> -->
+  <!-- <span class="Post-date">{{ page.date | date_to_string }}</span> -->
   {{ content }}
 
   <div class="SharringButtons">

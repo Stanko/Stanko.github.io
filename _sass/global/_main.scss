@@ -1,7 +1,12 @@
 html {
   font-size: 10px;
+
+  @include xl {
+    font-size: 14px;
+  }
 }
 
+body,
 .Content {
   width: 100%;
   overflow-x: hidden;

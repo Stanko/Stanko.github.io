@@ -1,0 +1,161 @@
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.Html--searchActive {
+  &,
+  body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .Search {
+  }
+
+  .Search-content {
+    transform: none;
+  }
+
+  .Search-overlay {
+    opacity: 1;
+  }
+}
+
+.Search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: $z-index-10;
+  color: $white;
+  // transform: translateY(-100%);
+  // opacity: 0;
+  display: none;
+
+  @include md {
+    padding: 5rem 0;
+  }
+}
+
+.Search-overlay {
+  background: rgba($black, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: $z-index-9;
+  transition: opacity $transition-time;
+  opacity: 0;
+}
+
+.Search-gradient {
+  background: linear-gradient(90deg, $red, $purple);
+  padding-bottom: $grid-gutter;
+}
+
+.Search-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: $grid-gutter;
+}
+
+.Search-title {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.Search-close {
+  color: $white;
+  background: none;
+  border: 0;
+  height: 6rem;
+  width: 6rem;
+  font-size: 3rem;
+}
+
+.Search-bottom {
+  -webkit-overflow-scrolling: touch;
+  height: calc(100% - 15rem);
+  overflow-y: auto;
+  padding: 2rem 0;
+}
+
+.Search-content {
+  position: relative;
+  z-index: $z-index-10;
+  padding: 0;
+  background: $red;
+  background: $white;
+  overflow: hidden;
+  transition:
+    opacity $transition-time-long,
+    transform $transition-time-long;
+  margin: 0 auto;
+  transform: translateY(-120%);
+  height: 100%;
+
+  @include md {
+    max-width: $container-width-md;
+    border-radius: 0.3rem;
+  }
+
+  @include lg {
+    max-width: $container-width-lg;
+  }
+}
+
+.Search-inputWrapper {
+  padding: 0 $grid-gutter;
+  background: linear-gradient(90deg, $red, $purple);
+}
+
+.Search-input {
+  appearance: none;
+  border-radius: 0;
+  border: 0;
+  background: transparent;
+  color: $white;
+  height: 7rem;
+  padding: 0;
+  border-bottom: 0.1rem solid rgba($white, 0.5);
+  font-size: 3rem;
+  margin: 0;
+}
+
+.Search-results {
+  a {
+    // font-weight: 600;
+    display: block;
+    color: rgba($black, 0.8);
+    padding: 1.2rem $grid-gutter;
+    // border-bottom: 0.1rem solid $greyD;
+
+    &:hover {
+      background: $grey;
+      color: $red;
+
+      strong {
+        color: $red;
+      }
+    }
+  }
+
+  strong {
+    font-weight: 600;
+    transition: color $transition-time;
+    color: $black;
+  }
+}
+
+.Search-noResults {
+  padding: 1rem $grid-gutter;
+  color: $black;
+}

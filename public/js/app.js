@@ -252,16 +252,37 @@ var options = {
   }
 };
 
+var search = document.querySelector('.Search');
 var searchInput = document.querySelector('.Search-input');
+var searchToggles = document.querySelectorAll('.Search-toggle');
 var searchResults = document.querySelector('.Search-results');
+var html = document.querySelector('html');
 
 var prevSearch = '';
 
-var MIN_CHARACTERS = 2;
+var MIN_CHARACTERS = 1;
 
 function renderResult(title, url) {
   return '<div><a href="' + url + '">' + title + '</a></div>';
 }
+
+searchToggles.forEach(function (element) {
+  element.addEventListener('click', function () {
+    if (search.style.display === 'none' || !search.style.display) {
+      search.style.display = 'block';
+      setTimeout(function () {
+        html.classList.toggle('Html--searchActive');
+        searchInput.focus();
+      }, 10);
+    } else {
+      html.classList.remove('Html--searchActive');
+
+      setTimeout(function () {
+        search.style.display = 'none';
+      }, 500);
+    }
+  });
+});
 
 searchInput.addEventListener('keyup', function () {
   var newSearch = searchInput.value.trim();
@@ -272,15 +293,21 @@ searchInput.addEventListener('keyup', function () {
 
   if (newSearch.length < MIN_CHARACTERS) {
     searchResults.innerHTML = '';
+    prevSearch = '';
     return;
   }
 
   var results = fuzzy.filter(newSearch, posts, options);
-  var html = results.map(function (result) {
-    return renderResult(result.string, result.original.url);
-  }).join('');
+
+  if (results.length) {
+    var _html = results.map(function (result) {
+      return renderResult(result.string, result.original.url);
+    }).join('');
+    searchResults.innerHTML = _html;
+  } else {
+    searchResults.innerHTML = '<div class="Search-noResults">No results</div>';
+  }
 
   prevSearch = newSearch;
-  searchResults.innerHTML = html;
 });
 //# sourceMappingURL=app.js.map

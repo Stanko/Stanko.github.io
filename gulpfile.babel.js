@@ -9,7 +9,7 @@ const reload = browserSync.reload;
 const stream = browserSync.stream;
 const spawn = childProcess.spawn;
 
-gulp.task('styles', () => {
+  gulp.task('styles', () => {
 	return gulp.src('_sass/*.scss')
 		.pipe($.plumber())
 		.pipe($.sourcemaps.init())
@@ -77,7 +77,7 @@ gulp.task('serve', ['jekyll', 'styles', 'scripts'], () => {
 		'_site/public/js/**/*'
 	]).on('change', function(e) {
     clearTimeout(reloadTimeout);
-    // console.log('-',  new Date().getTime() - start, '-' ,e.path.replace('/Users/stanko/Projects/stanko.github.io/_site/', ''))
+    console.log('-',  new Date().getTime() - start, '-' ,e.path.replace('/Users/stanko/Projects/stanko.github.io/_site/', ''))
 
     // As jekyll rebuilds a lot of HTML pages
     // I added a small timeout, not to trigger multiple page reloads

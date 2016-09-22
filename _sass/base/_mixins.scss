@@ -2,9 +2,28 @@
  * Breakpoints
  */
 
-// Small (default) breakpoint
-@mixin sm-only() {
+// Extra small (default) breakpoint
+@mixin xs-only() {
   @media (max-width: $breakpoint-md - 1) {
+    @content;
+  }
+}
+
+// Small
+@mixin sm() {
+  @media (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin sm-only() {
+  @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md - 1) {
+    @content;
+  }
+}
+
+@mixin sm-and-lower() {
+  @media (max-width: $breakpoint-sm - 1) {
     @content;
   }
 }

@@ -1,9 +1,3 @@
-<div class="Header">
-  <div class="Container">
-    Header
-  </div>
-</div>
-
 <!-- Toggleable sidebar -->
 <div class="Menu Container">
   <nav class="Menu-nav">
@@ -36,11 +30,5 @@
     {% for category in site.categories %}
       <a class="Menu-categoriesCategory" href="/category/{{ category | first }}">{{ category | first }}</a>
     {% endfor %}
-  </div>
-
-  <div class="Search">
-    <input class="Search-input" placeholder="Search" />
-    <div class="Search-results">
-    </div>
   </div>
 </div>

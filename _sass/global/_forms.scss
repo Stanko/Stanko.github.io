@@ -5,8 +5,14 @@ textarea {
   margin-bottom: 2rem;
 }
 
-button {
+button,
+input,
+textarea {
+  outline: 0;
+}
 
+button {
+  cursor: pointer;
 }
 
 .CommentForm {

@@ -7,8 +7,10 @@
 @import 'global/main';
 @import 'global/grid';
 @import 'global/typography';
+@import 'global/forms';
 
 @import 'components/header';
+@import 'components/search';
 @import 'components/comments';
 
 @import 'posts/post';
