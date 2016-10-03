@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  {% include head.html %}
+
+  <body class="Body--post">
+    {% include header.html %}
+
+    <div class="Content">
+      <div class="Post Container">
+        <div class="Post-top">
+          <div class="Post-readTime">This article will take {{ page.content | reading_time }} to read.</div>
+
+          <a href="#comments" class="Post-commentsLink">
+            {% assign comments = site.data.comments[page.slug] %}
+            {% if comments != null %}
+              Comments ({{ comments.size }})
+            {% else %}
+              No comments
+            {% endif %}
+          </a>
+        </div>
+
+        {{ content }}
+
+        <div class="Post-shareAndCategories">
+          <div class="SharringButtons">
+            <div>
+              Share on
+            </div>
+            <!-- Sharing button Facebook -->
+            <a
+              class="SharringButton SharringButton--facebook"
+              href="https://facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank">
+              {% include icon-facebook.html %}
+            </a>
+            <!-- Sharing button Twitter -->
+            <a
+              class="SharringButton SharringButton--twitter"
+              href="https://twitter.com/intent/tweet/?text={{ page.title }}&amp;url={{ site.url }}{{ page.url }}" target="_blank">
+              {% include icon-twitter.html %}
+            </a>
+            <!-- Sharing button Google+ -->
+            <a
+              class="SharringButton SharringButton--googlePlus"
+              href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" target="_blank">
+              {% include icon-google-plus.html %}
+            </a>
+          </div>
+
+          <div class="Post-categories">
+          <div>Categories</div>
+          {% for category in page.categories %}
+            <a href="/category/{{ category }}">{{ category }}</a>
+          {% endfor %}
+        </div>
+        </div>
+      </div>
+
+      <div class="PostBottom">
+        {% if site.related_posts.size > 0 %}
+        <div class="Container">
+          <div class="RelatedPosts">
+            <h2>Related Posts</h2>
+
+            {% for post in site.related_posts limit:3 %}
+              <div class="RelatedPosts-post">
+                <a href="{{ site.baseurl }}{{ post.url }}">
+                  <small>{{ post.date | date_to_string }}</small>
+                  {{ post.title }}
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        {% include comments.html %}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+    {% include menu.html %}
+    {% include scripts.html %}
+  </body>
+</html>

@@ -1,0 +1,79 @@
+// ------------ Colors
+
+$black: #232529;
+$white: #fff;
+
+$red: #E9514D;
+$dark: #232529;
+$blue: #4D7EdF;
+$grey: #F9F9F9;
+$grey: #F8F8F8;
+$purple: #8E44AD;
+
+$grey1: #111;
+$grey2: #222;
+$grey3: #333;
+$grey4: #444;
+$grey5: #555;
+$grey6: #666;
+$grey7: #777;
+$grey8: #888;
+$grey9: #999;
+$greyA: #AAA;
+$greyB: #BBB;
+$greyC: #CCC;
+$greyD: #DDD;
+$greyE: #EEE;
+
+// ------------ Breakpoints
+$breakpoint-sm: 400px !default;
+$breakpoint-md: 769px !default;
+$breakpoint-lg: 1025px !default;
+$breakpoint-xl: 2000px !default;
+
+// ------------ Grid
+$grid-col-count: 8;
+$grid-gutter: 2rem;
+$container-width-md: 75rem;
+$container-width-lg: 85rem;
+
+// ------------ Z-Index
+$z-index-0: 0;
+$z-index-1: 100;
+$z-index-2: 200;
+$z-index-3: 300;
+$z-index-4: 400;
+$z-index-5: 500;
+$z-index-6: 600;
+$z-index-7: 700;
+$z-index-8: 800;
+$z-index-9: 900;
+$z-index-10: 1000;
+
+// ------------ Typography
+$font-size: 1.8rem;
+$font-size-md: 2.2rem;
+
+$headers-font-family: 'Lora', sans-serif;
+$headers-font-weight: 300;
+
+$body-font-family: 'Open Sans', sans-serif;
+$body-font-weight: 400;
+
+// ------------ Transitions
+
+$transition-time: 0.25s;
+$transition-time-long: 0.5s;
+
+// ------------ Header
+$rotation-height: 30rem;
+$rotation-width-xs: 100rem;
+$rotation-width-sm: 130rem;
+$rotation-width-md: 160rem;
+
+// ------------ Pagination
+$pagination-color: $black;
+$pagination-hover-color: $red;
+$pagination-active-color: $white;
+$pagination-active-bg: $red;
+$pagination-separator-color: #bbb;

@@ -1,0 +1,33 @@
+---
+layout: home
+title: Home
+---
+
+<div class="Posts Container">
+  {% for post in paginator.posts %}
+  <div class="Post">
+    <img class="Post-bg" src="{{ site.baseurl }}/public/img/home/poly{{ forloop.index | modulo:3 }}.svg" />
+    <div class="Post-content">
+      <h1 class="Post-title">
+        <a href="{{ site.baseurl }}{{ post.url }}">
+          {{ post.title }}
+        </a>
+      </h1>
+
+      <div class="Post-date">
+        <div class="Post-dateIcon">
+          {% include icon-clock.html %}
+        </div>
+        {{ post.date | date_to_string }}
+      </div>
+      {{ post.excerpt }}
+
+      {% if post.excerpt != post.content %}
+          <a class="Post-readmore" href="{{ site.baseurl }}{{ post.url }}">Read more</a>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% include pagination.html %}

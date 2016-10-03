@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  {% include head.html %}
+
+  <body>
+    {% include archive-header.html %}
+
+    <div class="Content">
+      <div class="Container Archive">
+        <img class="Post-bg Post-bg--archive" data-src="{{ site.baseurl }}/public/img/home/polyID.svg" />
+
+        {% for post in page.posts %}
+          <div class="Post-content Post-content--archive">
+            <div class="Post-date">
+              <div class="Post-dateIcon">
+                {% include icon-clock.html %}
+              </div>
+              {{ post.date | date_to_string }}
+            </div>
+
+            <h1 class="Post-title Post-title--archive">
+              <a href="{{ site.baseurl }}{{ post.url }}">
+                {{ post.title }}
+              </a>
+            </h1>
+          </div>
+
+          <hr />
+        {% endfor %}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+    {% include menu.html %}
+    {% include scripts.html %}
+  </body>
+</html>

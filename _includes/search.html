@@ -1,0 +1,47 @@
+<div class="Menu">
+  <div class="Menu-content">
+    <div class="Menu-top">
+      <div class="Menu-inputWrapper">
+        <input class="Menu-input" placeholder="Search" type="search" />
+      </div>
+      <button class="Menu-close Menu-toggle"></button>
+    </div>
+
+    <div class="Menu-bottom">
+      <div class="Menu-menuWrapper">
+        <div class="Menu-menu Menu-menu--links">
+          <a
+            class="Menu-menuLink {% if page.url == '/' %}Menu-menuLink--active{% endif %}"
+            href="{{ site.baseurl }}/">
+            Home
+          </a>
+
+          {% comment %}
+            The code below dynamically generates a sidebar nav of pages with
+            `layout: page` in the front-matter. See readme for usage.
+          {% endcomment %}
+
+          {% assign pages_list = site.pages | sort:"url" %}
+          {% for node in pages_list %}
+            {% if node.title != null %}
+              {% if node.layout == "page" %}
+                <a
+                  class="Menu-menuLink {% if page.url == node.url %}Menu-menuLink--active{% endif %}"
+                  href="{{ node.url }}">
+                  {{ node.title }}
+                </a>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="Menu-menu Menu-menu--categories">
+          {% for category in site.categories | sort %}
+            <a class="Menu-menuCategory" href="/category/{{ category | first }}">{{ category | first }}</a>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="Menu-results">
+      </div>
+    </div>
+  </div>
+</div>

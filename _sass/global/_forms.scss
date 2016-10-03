@@ -1,0 +1,17 @@
+input,
+textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 2rem;
+  border: 0;
+}
+
+button,
+input,
+textarea {
+  outline: 0;
+}
+
+button {
+  cursor: pointer;
+}

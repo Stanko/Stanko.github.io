@@ -1,0 +1,36 @@
+html {
+  font-size: 10px;
+
+  @include xl {
+    font-size: 14px;
+  }
+}
+
+body,
+.Content {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  z-index: 5;
+}
+
+svg {
+  max-width: 100%;
+}
+
+.BlackLink {
+  color: $black;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+.Archive {
+  position: relative;
+  min-height: 50rem;
+}
+
+.Archive .Post-bg {
+  top: 0;
+}

@@ -1,0 +1,60 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:            '/:title/'
+gems:
+ - jekyll-paginate
+ - jekyll-archives
+ # - jekyll-related-posts # Installation fails
+
+exclude:
+ - node_modules
+ - gulpfile.babel.js
+ - package.json
+ - _sass
+ - public/css # gulp injects CSS via browsersync
+ - _js
+ - .sass-cache
+
+# Setup
+title:                "Muffin Man's writings"
+tagline:              'or the front end playground'
+description:          'Front end development, maybe occasional rants and music.'
+url:                  http://stanko.github.io
+baseurl:              ''
+paginate:             5
+paginate_path:        'page-:num'
+excerpt_separator:    <!--more-->
+
+# About/contact
+author:
+  name:               Stanko
+  url:                http://stanko.github.io
+  email:              stanko@null-object.com
+
+# Archive
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    categories: '/category/:name/'
+
+# Custom vars
+version:              1.0.0
+
+# Staticman
+staticman:
+  allowedFields: ['name', 'email', 'message', 'slug']
+  branch: master
+  commitMessage: "New comment has been posted"
+  filename: "{@timestamp}"
+  format: yml
+  moderation: true
+  path: "_data/comments/{options.slug}"
+  generatedFields:
+    date:
+      type: date
+  transforms:
+    email: 'md5'
+  requiredFields: ['name', 'email', 'message', 'slug']

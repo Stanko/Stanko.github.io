@@ -1,0 +1,122 @@
+.Pagination {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.Pagination-inner {
+  display: inline-flex;
+  height: 3.4rem;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.Pagination-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.4rem;
+  height: 100%;
+  text-decoration: none;
+  color: $pagination-color;
+  transition: color $transition-time;
+
+  &:hover {
+    color: $pagination-hover-color;
+  }
+
+  @include xs-only {
+    display: none;
+  }
+}
+
+.Pagination-link--arrow {
+  display: flex;
+}
+
+.Pagination-link--inactive,
+.Pagination-link--inactive:hover {
+  color: $pagination-color;
+  background: transparent;
+  opacity: 0.3;
+}
+
+.Pagination-link--active,
+.Pagination-link--active:hover {
+  border-radius: 50%;
+  color: $pagination-active-color;
+  background: $pagination-active-bg;
+  font-weight: bold;
+  margin: 0 0.3rem;
+
+  @include xs-only {
+    display: flex;
+    margin: 0 1rem;
+  }
+}
+
+.Pagination-separator {
+  margin: 0 1.3rem;
+  position: relative;
+}
+
+.Pagination-separator,
+.Pagination-separator::before,
+.Pagination-separator::after {
+  content: '';
+  width: .3rem;
+  height: .3rem;
+  background: $pagination-separator-color;
+  border-radius: 50%;
+  display: block;
+
+  @include xs-only {
+    display: none;
+  }
+}
+
+.Pagination-separator::before {
+  position: absolute;
+  top: 0;
+  transform: translateX(-6px);
+}
+
+.Pagination-separator::after {
+  position: absolute;
+  top: 0;
+  transform: translateX(6px);
+}
+
+.Pagination-arrow {
+  width: 1.2rem;
+}
+
+.Pagination-arrow::before,
+.Pagination-arrow::after {
+  height: 1.5rem;
+  width: .2rem;
+  background: $pagination-color;
+  transition: background $transition-time;
+  display: block;
+  content: '';
+}
+
+.Pagination-arrow::before {
+  transform-origin: bottom left;
+  transform: rotateZ(40deg);
+}
+
+.Pagination-arrow::after {
+  transform: rotateZ(-40deg);
+  transform-origin: top left;
+}
+
+.Pagination-arrow--right {
+  transform: rotateZ(180deg);
+}
+
+.Pagination-link:hover {
+    .Pagination-arrow::before,
+    .Pagination-arrow::after {
+      background: $pagination-hover-color;
+    }
+}

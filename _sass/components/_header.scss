@@ -1,0 +1,262 @@
+.Header {
+  @include angled-edge('inside bottom', 'upper left', $white, $width: 3000, $height: 300);
+  background: $grey;
+  padding: 5rem 0 20rem;
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
+  width: 100%;
+
+  @include sm {
+    padding: 8rem 0 23rem;
+  }
+
+  @include md {
+    padding: 11rem 0 26rem;
+  }
+}
+
+.Header--page {
+  padding: 0rem 0 11rem;
+
+  @include sm {
+    padding: 2rem 0 11rem;
+  }
+
+  @include md {
+    padding: 3rem 0 11rem;
+  }
+}
+
+.Header--page {
+  .Rotation-item {
+    // opacity: 0.7;
+    // filter: blur(5px);
+    // animation: none;
+  }
+
+  .Header--page .Rotation {
+    height: 20rem;
+  }
+
+  .Header-title {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    height: 25rem;
+    z-index: 10;
+
+    @include sm {
+      height: 30rem;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+  }
+}
+
+.Header-line {
+  height: 1rem;
+  background: linear-gradient(90deg, $red, $purple);
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate3d(0,0,0) rotateZ(0);
+  } 100% {
+    transform: translate3d(0,0,0) rotateZ(360deg);
+  }
+}
+
+.Header-menuButton {
+  border: 0;
+  background: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+  width: 6rem;
+  height: 6rem;
+  z-index: 100;
+
+  span {
+    background: darken($purple, 10);
+    height: 0.2rem;
+    width: 3.2rem;
+    display: block;
+    margin: 0.8rem auto;
+    border-radius: 0.2rem;
+    transition: background $transition-time;
+  }
+
+  &:hover span {
+    background: $dark;
+  }
+}
+
+
+.LatestPost {
+  max-width: 50rem;
+  position: relative;
+  padding: 0 $grid-gutter;
+
+  h1 {
+    margin: 1rem 0;
+
+    a {
+      color: $black;
+    }
+  }
+}
+
+.Rotation {
+  height: $rotation-height;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+  @include md {
+    left: -13rem;
+  }
+
+  @include lg {
+    left: -17.5rem;
+  }
+}
+
+.Rotation-item {
+  position: absolute;
+  top: ($rotation-width-xs - $rotation-height) / -2;
+  left: calc(#{ $rotation-width-xs / -2 } + 50%);
+  width: $rotation-width-xs;
+  height: $rotation-width-xs;
+
+  @include sm {
+    top: ($rotation-width-sm - $rotation-height) / -2;
+    left: calc(#{ $rotation-width-sm / -2 } + 50%);
+    width: $rotation-width-sm;
+    height: $rotation-width-sm;
+  }
+
+  @include md {
+    top: ($rotation-width-md - $rotation-height) / -2;
+    left: calc(#{ $rotation-width-md / -2 } + 50%);
+    width: $rotation-width-md;
+    height: $rotation-width-md;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.Rotation-item--one {
+  animation: rotate 200s infinite linear;
+
+  @include sm {
+    animation-duration: 400s;
+  }
+
+  @include md {
+    animation-duration: 600s;
+  }
+}
+
+.Rotation-item--two {
+  animation: rotate 250s infinite linear;
+}
+
+.Rotation-item--three {
+  animation: rotate 350s infinite linear;
+}
+
+.AboutBlog {
+  position: relative;
+  z-index: 10;
+  margin: -10rem auto 5rem;
+}
+
+.AboutBlog-content {
+  width: 50rem;
+  text-align: right;
+}
+
+.AboutBlog-logo {
+  position: absolute;
+  bottom: 100%;
+  right: $grid-gutter;
+  max-width: 10rem;
+
+  @include sm {
+    max-width: 12rem;
+  }
+
+  @include md {
+    max-width: 20rem;
+  }
+
+  @include lg {
+    max-width: 30rem;
+  }
+}
+
+.AboutBlog-logo--small {
+  width: 6rem;
+  padding-bottom: 2rem;
+
+  @include sm {
+    width: 8rem;
+  }
+
+  @include md {
+    width: 10rem;
+  }
+}
+
+.AboutBlog-title {
+  margin: 2rem 0 0;
+  font-size: 3rem;
+
+  @include sm {
+    font-size: 3.5rem;
+  }
+
+  @include lg {
+    font-size: 3.8rem;
+  }
+}
+
+.AboutBlog-subtitle {
+  margin: 0 0 1rem;
+  font-size: 2rem;
+  color: $greyB;
+
+  @include sm {
+    font-size: 2.2rem;
+  }
+
+  @include lg {
+    font-size: 2.4rem;
+  }
+}
+
+.AboutBlog--small {
+  .AboutBlog-title {
+    margin: 0;
+    font-size: 1.8rem;
+
+    @include sm {
+      font-size: 2rem;
+    }
+
+    @include lg {
+      font-size: 2.2rem;
+    }
+  }
+}

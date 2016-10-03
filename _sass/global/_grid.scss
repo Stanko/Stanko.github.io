@@ -1,0 +1,80 @@
+@mixin grid-generate-columns($grid-col-count, $postfix) {
+  @for $i from 0 through $grid-col-count {
+    .Col--#{$postfix}-#{$i} {
+      width: $i * (100% / $grid-col-count);
+      max-width: $i * (100% / $grid-col-count);
+      flex-basis: $i * (100% / $grid-col-count);
+    }
+
+    .Offset--#{$postfix}-#{$i} {
+      margin-left: $i * (100% / $grid-col-count);
+    }
+  }
+}
+
+.Container {
+  margin: 0 auto;
+  padding: 0 $grid-gutter;
+  width: 100%;
+
+  @include md {
+    max-width: $container-width-md;
+  }
+
+  @include lg {
+    max-width: $container-width-lg;
+  }
+}
+
+.Grid {
+  display: flex;
+  margin: 0 auto;
+  padding: 0 $grid-gutter / 2;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+
+  @include md {
+    max-width: $container-width-md;
+  }
+
+  @include lg {
+    max-width: $container-width-lg;
+  }
+}
+
+.Grid--centered {
+  justify-content: center;
+}
+
+.Grid--rightAligned {
+  justify-content: flex-end;
+}
+
+.Grid--justified {
+  justify-content: space-between;
+}
+
+
+[class*='Col'] {
+  width: 100%;
+  flex-basis: 100%;
+  padding: 0 $grid-gutter / 2;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+@include grid-generate-columns($grid-col-count, 'xs');
+
+@include sm {
+  @include grid-generate-columns($grid-col-count, 'sm');
+}
+
+@include md {
+  @include grid-generate-columns($grid-col-count, 'md');
+}
+
+@include lg {
+  @include grid-generate-columns($grid-col-count, 'lg');
+}
