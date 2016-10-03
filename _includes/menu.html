@@ -40,7 +40,7 @@
         <div class="Menu-menu Menu-menu--categories">
           {% assign categories = site.categories | sort %}
           {% for category in categories %}
-            <a class="Menu-menuCategory" href="/category/{{ category | first }}">{{ category | first }}</a>
+            <a class="Menu-menuCategory" href="/category/{{ category | first | downcase }}">{{ category | first }}</a>
           {% endfor %}
         </div>
       </div>

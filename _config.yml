@@ -2,17 +2,17 @@
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
 permalink:            '/:title/'
-gems:
- - jekyll-paginate
- - jekyll-archives
- # - jekyll-related-posts # Installation fails
+# gems:
+#  - jekyll-paginate
+#  - jekyll-archives
+#  - jekyll-related-posts # Installation fails
 
 exclude:
  - node_modules
  - gulpfile.babel.js
  - package.json
  - _sass
- - public/css # gulp injects CSS via browsersync
+# - public/css # gulp injects CSS via browsersync
  - _js
  - .sass-cache
 
@@ -33,12 +33,12 @@ author:
   email:              stanko@null-object.com
 
 # Archive
-jekyll-archives:
-  enabled:
-    - categories
-  layout: archive
-  permalinks:
-    categories: '/category/:name/'
+# jekyll-archives:
+#   enabled:
+#     - categories
+#   layout: archive
+#   permalinks:
+#     categories: '/category/:name/'
 
 # Custom vars
 version:              1.0.0
