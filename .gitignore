@@ -2,7 +2,7 @@
 _gh_pages
 _site
 .ruby-version
-.Gemfile.lock
+Gemfile.lock
 
 # Numerous always-ignore extensions
 *.diff
@@ -30,11 +30,9 @@ nbproject
 *.sublime-workspace
 .idea
 
-# Folders to ignore
-node_modules
-
 # gulp / node stuff
 node_modules
 .tmp
 .sass-cache/
 .jekyll-metadata
+vendor

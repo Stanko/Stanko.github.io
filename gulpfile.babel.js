@@ -28,7 +28,7 @@ const spawn = childProcess.spawn;
 			})
 		)
 		.pipe($.autoprefixer({ browsers: ['> 1%', 'last 2 versions', 'Firefox ESR'] }))
-		.pipe($.sourcemaps.write())
+		// .pipe($.sourcemaps.write())
 		.pipe(gulp.dest('.tmp/public/css/'))
 		.pipe(stream())
 		.pipe(gulp.dest('public/css/'))

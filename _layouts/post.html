@@ -51,7 +51,7 @@
           <div class="Post-categories">
           <div>Categories</div>
           {% for category in page.categories %}
-            <a href="/category/{{ category }}">{{ category }}</a>
+            <a href="/category/{{ category | downcase }}">{{ category }}</a>
           {% endfor %}
         </div>
         </div>

@@ -1,3 +1,12 @@
+# GitHub
+username: Stanko
+repo: Stanko.github.io
+branch: source
+
+# Jekyll source / destination
+source:               .
+destination:          _site
+
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
@@ -5,16 +14,20 @@ permalink:            '/:title/'
 gems:
  - jekyll-paginate
  - jekyll-archives
- # - jekyll-related-posts # Installation fails
+#  - jekyll-related-posts # Installation fails
 
 exclude:
  - node_modules
  - gulpfile.babel.js
  - package.json
  - _sass
- - public/css # gulp injects CSS via browsersync
+# - public/css # gulp injects CSS via browsersync
  - _js
  - .sass-cache
+ - Gemfile
+ - Gemfile.lock
+ - LICENSE.md
+ - vendor
 
 # Setup
 title:                "Muffin Man's writings"
@@ -46,7 +59,7 @@ version:              1.0.0
 # Staticman
 staticman:
   allowedFields: ['name', 'email', 'message', 'slug']
-  branch: master
+  branch: source
   commitMessage: "New comment has been posted"
   filename: "{@timestamp}"
   format: yml

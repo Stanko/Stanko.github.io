@@ -1,7 +1,5 @@
-source 'https://rubygems.org'
+source "http://production.cf.rubygems.org/"
 
-group :jekyll_plugins do
-  gem "jekyll-paginate"
-  gem "jekyll-archives"
-  # gem "jekyll-related-posts"
-end
+gem "rake", "~> 10.1.1"
+gem "jekyll-paginate"
+gem "jekyll-archives"

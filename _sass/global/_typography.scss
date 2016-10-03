@@ -68,15 +68,20 @@ code.highlighter-rouge {
   color: #335;
 }
 
-div.highlighter-rouge,
-figure.highlight {
+pre,
+div.highlighter-rouge pre,
+figure.highlight pre {
   position: relative;
   padding: 1.8rem 2rem;
   margin: 0;
   background: $dark;
   color: $white;
   border-radius: 0.2rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+
+  code {
+    font-size: 1.6rem;
+  }
 
   pre {
     position: relative;
