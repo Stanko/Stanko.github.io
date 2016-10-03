@@ -1,10 +1,13 @@
+source:               .
+destionation:         ./../test
+
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
 permalink:            '/:title/'
-# gems:
-#  - jekyll-paginate
-#  - jekyll-archives
+gems:
+ - jekyll-paginate
+ - jekyll-archives
 #  - jekyll-related-posts # Installation fails
 
 exclude:
@@ -15,6 +18,9 @@ exclude:
 # - public/css # gulp injects CSS via browsersync
  - _js
  - .sass-cache
+ - Gemfile
+ - Gemfile.lock
+ - LICENSE.md
 
 # Setup
 title:                "Muffin Man's writings"
@@ -33,12 +39,12 @@ author:
   email:              stanko@null-object.com
 
 # Archive
-# jekyll-archives:
-#   enabled:
-#     - categories
-#   layout: archive
-#   permalinks:
-#     categories: '/category/:name/'
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    categories: '/category/:name/'
 
 # Custom vars
 version:              1.0.0

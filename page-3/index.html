@@ -102,8 +102,8 @@
     <img class="Post-bg" src="/public/img/home/poly1.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
-        <a href="/animate-window-scroll-to/">
-          Plain JavaScript animated window scroll function
+        <a href="/ios-safari-scoll-position-fixed/">
+          Change to position fixed on iOS Safari while scrolling
         </a>
       </h1>
 
@@ -115,22 +115,27 @@
 </svg>
 
         </div>
-        28 Sep 2016
+        15 Jun 2016
       </div>
-      <p>Before modern frameworks, I always used jQuery’s <code class="highlighter-rouge">scrollTo</code> method.
-At some point, not every project included jQuery, so I wrote simple function
-to animate window scroll.</p>
+      <p>If you ever had to fix element on scroll, you probably had an issue on iOS Safari (and other mobile devices).
+Element will usually flicker, and disappear until scrolling has stopped completely.</p>
 
-<p>I have kept copying that function from project to project.
-Finally I took some time, cleaned it up and published it on the npm
-(this is the first npm package I published).</p>
+<p>Just force GPU acceleration by adding <code class="highlighter-rouge">transform: translate3d(0,0,0);</code> to your element.</p>
 
-<p>Demo and documentation is available <a href="https://stanko.github.io/animated-scroll-to/">here</a>.</p>
+<p>You will have something like this:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.Element-header</span> <span class="p">{</span>
+  <span class="nl">transform</span><span class="p">:</span> <span class="n">translate3d</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.Element-header--fixed</span> <span class="p">{</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">fixed</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Enjoy <code class="highlighter-rouge">¯\_(ツ)_/¯</code></p>
 
 
-
-      
-          <a class="Post-readmore" href="/animate-window-scroll-to/">Read more</a>
       
     </div>
   </div>
@@ -139,8 +144,8 @@ Finally I took some time, cleaned it up and published it on the npm
     <img class="Post-bg" src="/public/img/home/poly2.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
-        <a href="/font-size-and-tracking-points-to-pixels/">
-          Implementing PhotoShop font sizes and tracking in CSS, points to pixels conversion
+        <a href="/highlight-vars-in-atom-babel-javascript/">
+          Highlight variables in Atom, Babel template strings
         </a>
       </h1>
 
@@ -152,25 +157,26 @@ Finally I took some time, cleaned it up and published it on the npm
 </svg>
 
         </div>
-        08 Sep 2016
+        07 May 2016
       </div>
-      <p>We’ve all been there - trying to get right font sizes from PhotoShop to CSS.
-Designers usually work with points, which are used in the print, but not common on the web.
-They also use term <em>tracking</em> a lot, which is actually only a letter spacing with different units.</p>
+      <p>Atom <a href="https://babeljs.io/">Babel</a> plugin doesn’t highlight variables
+in ES6 (ES2015) template strings.</p>
 
-<p>You can recalculate everything by hand and try to keep track of it.
-But we can use the goodies of SCSS to make that process a bit easier.</p>
+<p>You’ll need to add this snippet to your Atom’s <code class="highlighter-rouge">style.less</code></p>
 
-<p>Point to pixel ratio is <code class="highlighter-rouge">1pt = 1.333333px</code>. We’ll create SASS function to do conversion for us.</p>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">atom-text-editor</span><span class="nd">::shadow</span> <span class="nc">.variable.js</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#F8F8F2</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
 
-<p>And PhotoShop tracking works relative to the font size.
-One point of tracking is 1/1000 of the font size.
-For this one we’ll create a mixin.</p>
+<p><img src="/public/img/template-string-vars.png" alt="ES6 template string with variable highlighted in Atom" class="margin-y-30" /></p>
+
+<p>In general, you can just inspect stuff in Atom, find out what classes
+element are using, and then style it via CSS (LESS).
+Just don’t forget to add <code class="highlighter-rouge">atom-text-editor::shadow</code> before your rules.</p>
+
+<p>If anyone is interested, I’m using <a href="https://atom.io/themes/monokai-seti">Monokai Seti</a> theme.</p>
 
 
-
-      
-          <a class="Post-readmore" href="/font-size-and-tracking-points-to-pixels/">Read more</a>
       
     </div>
   </div>
@@ -179,8 +185,8 @@ For this one we’ll create a mixin.</p>
     <img class="Post-bg" src="/public/img/home/poly0.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
-        <a href="/always-use-button-for-clickable-elements/">
-          Always use &lt;button&gt; for clickable elements
+        <a href="/trying-atom-for-the-third-time/">
+          Switching to Atom, this time for good
         </a>
       </h1>
 
@@ -192,18 +198,27 @@ For this one we’ll create a mixin.</p>
 </svg>
 
         </div>
-        02 Sep 2016
+        18 Apr 2016
       </div>
-      <p>Always try to use <code class="highlighter-rouge">&lt;button&gt;</code> when  <strong>element is clickable, but it is not a link</strong>.
-Avoid <code class="highlighter-rouge">&lt;a&gt;</code>, <code class="highlighter-rouge">&lt;span&gt;</code>, <code class="highlighter-rouge">&lt;div&gt;</code> and other elements.</p>
+      <p>I’m a big fan of <a href="https://www.sublimetext.com/">Sublime Text</a> editor, which I was using for years now.
+Minimal, fast, reliable. But there is one big problem with it.
+Only one man is working on it’s development and community really slowed down.
+JavaScript ecosystem is going forward at incredible speed, and I’m not sure if Sublime will be able to keep up.</p>
 
-<p>Note that <code class="highlighter-rouge">display: flex</code> works differently on buttons in different browsers,
-but we have easy fix for that.</p>
+<p>Even <a href="https://en.wikipedia.org/wiki/Bus_factor">bus factor</a> comes to mind.</p>
+
+<p>That’s why I tried couple of alternatives.
+When comes to bigger IDEs JetBrains is really good, but it is not as snappy as I would like.
+Logical move was to try GitHub’s <a href="https://atom.io">Atom</a> editor again.</p>
+
+<p><a href="https://atom.io/">
+  <img src="/public/img/atom.png" alt="Atom editor" class="margin-y-30" />
+</a></p>
 
 
 
       
-          <a class="Post-readmore" href="/always-use-button-for-clickable-elements/">Read more</a>
+          <a class="Post-readmore" href="/trying-atom-for-the-third-time/">Read more</a>
       
     </div>
   </div>
@@ -212,8 +227,8 @@ but we have easy fix for that.</p>
     <img class="Post-bg" src="/public/img/home/poly1.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
-        <a href="/sass-random-and-circle-animation/">
-          SASS random() and circle animation
+        <a href="/null-object-tech-meetup-vol-2/">
+          Null Object Tech Meetup Vol 2
         </a>
       </h1>
 
@@ -225,20 +240,29 @@ but we have easy fix for that.</p>
 </svg>
 
         </div>
-        30 Aug 2016
+        15 Apr 2016
       </div>
-      <p>I decided to move my CSS playground to the CodePen, and this is the first one I made.</p>
+      <p>Two days ago, we held the second Tech Meetup.
+There were two speakers including myself, and Nemanja Nićiforović, our CEO.
+Nemanja spoke <i>How to Freelance</i>, and I covered <i>Intro to React</i>.</p>
 
-<p>Idea came to me while I was riding on a bus, and I might use it on this blog,
-as a part of it’s redesign.</p>
+<p>Grab slides:</p>
 
-<p>This is CSS only animation (I used JS to create 50 elements though).
-And you can see the usage of SASS <code class="highlighter-rouge">random()</code> function.</p>
+<ul>
+  <li><a href="/public/pdf/Null Object Tech Meetup - How To Freelance.pdf">How To Freelance</a></li>
+  <li><a href="/public/pdf/Null Object Tech Meetup - Intro To React.pdf">Intro To React</a></li>
+</ul>
+
+<p>We are very thankful to our friends at
+<a href="https://www.facebook.com/zaokret/">Zaokret</a> where meetup took place.
+There were around 60 people and we hope even more people will come to the next one.
+Hopefully, we are not going to make a year long pause like we did between this and the last one.</p>
+
+<p><img src="/public/img/meetup-vol-2/1.jpg" alt="Null Object tech meetup audience" />
+<img src="/public/img/meetup-vol-2/2.jpg" alt="Stanko Tadic talking at tech meetup" />
+<img src="/public/img/meetup-vol-2/3.jpg" alt="Null Object tech meetup audience" /></p>
 
 
-
-      
-          <a class="Post-readmore" href="/sass-random-and-circle-animation/">Read more</a>
       
     </div>
   </div>
@@ -247,8 +271,8 @@ And you can see the usage of SASS <code class="highlighter-rouge">random()</code
     <img class="Post-bg" src="/public/img/home/poly2.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
-        <a href="/setting-up-webpack-babel-and-react-from-scratch-part-2/">
-          Setting up Webpack, Babel and React from scratch - Part 2
+        <a href="/html-canvas-video-player-ios/">
+          HTML canvas video player
         </a>
       </h1>
 
@@ -260,38 +284,27 @@ And you can see the usage of SASS <code class="highlighter-rouge">random()</code
 </svg>
 
         </div>
-        29 Aug 2016
+        05 Apr 2016
       </div>
-      <h2 id="part-two">Part two</h2>
+      <p>This is the one of my most popular repos. Once client asked for inline video that works on iPhone too.
+As Apple doesn’t allow that (all videos are full screen in native player, and autoplay is not supported),.
+There was no easy solution, so this player was born.</p>
 
-<p>Update: Part two is pretty much done. Part three will cover redux and production builds.</p>
+<p>It uses HTML <code class="highlighter-rouge">video</code> and <code class="highlighter-rouge">canvas</code>. Script picks up the frame from the video and draws it on the canvas.
+For sound, there is <code class="highlighter-rouge">audio</code> element using video files (you can provide different audio file for it).</p>
 
-<p>Other parts:</p>
+<p><a href="http://stanko.github.io/html-canvas-video-player/">
+  <img src="/public/img/projects/canvas-video.jpg" alt="HTML canvas video player - Demo" />
+</a></p>
 
-<ul>
-  <li><a href="/setting-up-webpack-babel-and-react-from-scratch">Part 1</a> - Webpack, Babel, React, Router, ESLint</li>
-  <li>Part 2 - SASS, More ES6 goodness (Static props, decorators, deconstruction…)</li>
-  <li>Part 3 - Redux, adding production config - <strong>WIP, Soon!</strong></li>
-</ul>
+<p>Play, pause, jump to time and autoplay are all supported.
+But please check the <a href="http://stanko.github.io/html-canvas-video-player/">documentation and demo</a>.</p>
 
-<h2 id="adding-sass">Adding SASS</h2>
+<p>You shouldn’t use this on any device that supports HTML video natively, but as a fallback.</p>
 
-<p>We will use SASS loader for webpack, so let’s install it together with node-sass compiler,
- css and style loaders</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>npm install --save-dev style-loader css-loader sass-loader node-sass
-</code></pre>
-</div>
-
-<p>Create <code class="highlighter-rouge">scss</code> folder in the <code class="highlighter-rouge">app</code> folder, and main <code class="highlighter-rouge">app.scss</code> file in it.
-This file will include all of the other scss files.</p>
-
-<p>Now we need to add a loader to webpack config file.</p>
+<p>Grab the code on <a href="https://github.com/Stanko/html-canvas-video-player">GitHub</a>.</p>
 
 
-
-      
-          <a class="Post-readmore" href="/setting-up-webpack-babel-and-react-from-scratch-part-2/">Read more</a>
       
     </div>
   </div>
@@ -312,16 +325,16 @@ This file will include all of the other scss files.</p>
   <div class="Pagination">
     <div class="Pagination-inner">
       
-        <span class="Pagination-link Pagination-link--arrow Pagination-link--inactive">
+        <a class="Pagination-link Pagination-link--arrow" href="/page-2">
           <span class="Pagination-arrow Pagination-arrow--left"></span>
-        </span>
+        </a>
       
 
       
 
       
         
-          <a class="Pagination-link Pagination-link--active" class="active">1</a>
+          <a class="Pagination-link" href="/">1</a>
         
       
         
@@ -329,7 +342,7 @@ This file will include all of the other scss files.</p>
         
       
         
-          <a class="Pagination-link" href="/page-3">3</a>
+          <a class="Pagination-link Pagination-link--active" class="active">3</a>
         
       
         
@@ -344,7 +357,7 @@ This file will include all of the other scss files.</p>
       
 
       
-        <a class="Pagination-link Pagination-link--arrow" href="/page-2">
+        <a class="Pagination-link Pagination-link--arrow" href="/page-4">
           <span class="Pagination-arrow Pagination-arrow--right"></span>
         </a>
       
@@ -380,7 +393,7 @@ This file will include all of the other scss files.</p>
       <div class="Menu-menuWrapper">
         <div class="Menu-menu Menu-menu--links">
           <a
-            class="Menu-menuLink Menu-menuLink--active"
+            class="Menu-menuLink "
             href="/">
             Home
           </a>

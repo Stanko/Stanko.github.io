@@ -102,8 +102,8 @@
     <img class="Post-bg" src="/public/img/home/poly1.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
-        <a href="/animate-window-scroll-to/">
-          Plain JavaScript animated window scroll function
+        <a href="/jekyll-gulp-workflow/">
+          Jekyll and Gulp workflow
         </a>
       </h1>
 
@@ -115,22 +115,16 @@
 </svg>
 
         </div>
-        28 Sep 2016
+        27 Feb 2016
       </div>
-      <p>Before modern frameworks, I always used jQuery’s <code class="highlighter-rouge">scrollTo</code> method.
-At some point, not every project included jQuery, so I wrote simple function
-to animate window scroll.</p>
-
-<p>I have kept copying that function from project to project.
-Finally I took some time, cleaned it up and published it on the npm
-(this is the first npm package I published).</p>
-
-<p>Demo and documentation is available <a href="https://stanko.github.io/animated-scroll-to/">here</a>.</p>
+      <p>As you probably know this blog is powered by <a href="http://jekyllrb.com/">Jekyll</a>.
+It is a really nice platform, but it lacks a few things I’m used to during development.
+First one is live reload on file changes (and injecting CSS), using SASS, autoprefixer, ES6…</p>
 
 
 
       
-          <a class="Post-readmore" href="/animate-window-scroll-to/">Read more</a>
+          <a class="Post-readmore" href="/jekyll-gulp-workflow/">Read more</a>
       
     </div>
   </div>
@@ -139,8 +133,8 @@ Finally I took some time, cleaned it up and published it on the npm
     <img class="Post-bg" src="/public/img/home/poly2.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
-        <a href="/font-size-and-tracking-points-to-pixels/">
-          Implementing PhotoShop font sizes and tracking in CSS, points to pixels conversion
+        <a href="/3d-rotating-cube-effect/">
+          3D Rotating cubes hover effect
         </a>
       </h1>
 
@@ -152,25 +146,25 @@ Finally I took some time, cleaned it up and published it on the npm
 </svg>
 
         </div>
-        08 Sep 2016
+        23 Feb 2016
       </div>
-      <p>We’ve all been there - trying to get right font sizes from PhotoShop to CSS.
-Designers usually work with points, which are used in the print, but not common on the web.
-They also use term <em>tracking</em> a lot, which is actually only a letter spacing with different units.</p>
+      <p>Again, I’ve seen it somewhere on the internet and recreated it.
+This one uses jQuery, although I plan to rewrite it to vanilla JavaScript.</p>
 
-<p>You can recalculate everything by hand and try to keep track of it.
-But we can use the goodies of SCSS to make that process a bit easier.</p>
+<p>It switches between two <i>sides</i> of the cube, every time you hover.
+Depending from which side cursor entered the cube, it will rotate in opposite direction.
+It is fully responsive, and on touch devices, direction depends of where you tap.</p>
 
-<p>Point to pixel ratio is <code class="highlighter-rouge">1pt = 1.333333px</code>. We’ll create SASS function to do conversion for us.</p>
+<p>Cube side is a regular <code class="highlighter-rouge">div</code>, and you can put any type of content in it.</p>
 
-<p>And PhotoShop tracking works relative to the font size.
-One point of tracking is 1/1000 of the font size.
-For this one we’ll create a mixin.</p>
+<p><a href="http://stanko.github.io/cube-3D-rotate-grid/">
+  <img src="/public/img/projects/cube-3D-rotate-grid.png" alt="Demo - 3D Rotating cubes hover effect" />
+</a></p>
 
 
 
       
-          <a class="Post-readmore" href="/font-size-and-tracking-points-to-pixels/">Read more</a>
+          <a class="Post-readmore" href="/3d-rotating-cube-effect/">Read more</a>
       
     </div>
   </div>
@@ -179,8 +173,8 @@ For this one we’ll create a mixin.</p>
     <img class="Post-bg" src="/public/img/home/poly0.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
-        <a href="/always-use-button-for-clickable-elements/">
-          Always use &lt;button&gt; for clickable elements
+        <a href="/custom-jekyll-pagination/">
+          Custom Jekyll pagination
         </a>
       </h1>
 
@@ -192,18 +186,19 @@ For this one we’ll create a mixin.</p>
 </svg>
 
         </div>
-        02 Sep 2016
+        22 Feb 2016
       </div>
-      <p>Always try to use <code class="highlighter-rouge">&lt;button&gt;</code> when  <strong>element is clickable, but it is not a link</strong>.
-Avoid <code class="highlighter-rouge">&lt;a&gt;</code>, <code class="highlighter-rouge">&lt;span&gt;</code>, <code class="highlighter-rouge">&lt;div&gt;</code> and other elements.</p>
+      <p>Jekyll comes with simple pagination which has only <code class="highlighter-rouge">Newer</code> and <code class="highlighter-rouge">Older</code> links.
+I wanted a little bit more, now pagination shows at least five pages, with current in the middle.
+On the larger screens there are also first and last page links.
+<code class="highlighter-rouge">Newer</code> and <code class="highlighter-rouge">Older</code> links are, of course, still there.</p>
 
-<p>Note that <code class="highlighter-rouge">display: flex</code> works differently on buttons in different browsers,
-but we have easy fix for that.</p>
+<p>Check the <a href="https://gist.github.com/Stanko/4e379a72715fc596c1cc">gist with the code</a>.</p>
+
+<p>You can see it at the bottom of this website, or just check the screenshot below:
+<img src="/public/img/projects/jekyll-pagination.png" alt="Custom Jekyll pagination" /></p>
 
 
-
-      
-          <a class="Post-readmore" href="/always-use-button-for-clickable-elements/">Read more</a>
       
     </div>
   </div>
@@ -212,8 +207,8 @@ but we have easy fix for that.</p>
     <img class="Post-bg" src="/public/img/home/poly1.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
-        <a href="/sass-random-and-circle-animation/">
-          SASS random() and circle animation
+        <a href="/animated-login-signup-forms/">
+          Animated login and signup forms
         </a>
       </h1>
 
@@ -225,20 +220,24 @@ but we have easy fix for that.</p>
 </svg>
 
         </div>
-        30 Aug 2016
+        22 Feb 2016
       </div>
-      <p>I decided to move my CSS playground to the CodePen, and this is the first one I made.</p>
+      <p>Well I saw pretty nice mockup on <a href="https://dribbble.com/shots/2311260-Day-1-Sign-Up-and-Login-Animated-Download-Template">Dribbble</a>
+and decided to make it for fun. It didn’t include mobile/responsive solution, so I came up with my own.</p>
 
-<p>Idea came to me while I was riding on a bus, and I might use it on this blog,
-as a part of it’s redesign.</p>
+<p><a href="http://stanko.github.io/animated-onboarding/">
+  <img src="/public/img/projects/animated-onboarding.png" alt="Demo - Animated login and signup forms" />
+</a></p>
 
-<p>This is CSS only animation (I used JS to create 50 elements though).
-And you can see the usage of SASS <code class="highlighter-rouge">random()</code> function.</p>
+<p>Check the <a href="http://stanko.github.io/animated-onboarding/">demo</a>.</p>
+
+<p>This is pure CSS solution - it uses <code class="highlighter-rouge">:target</code> selector for changing states.
+Find more about <code class="highlighter-rouge">:target</code> on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:target">MDN</a>.
+This is neat, as it also can be bookmarked on both states, and browser button work too.</p>
+
+<p>Grab the code on <a href="https://github.com/Stanko/animated-onboarding">GitHub</a>.</p>
 
 
-
-      
-          <a class="Post-readmore" href="/sass-random-and-circle-animation/">Read more</a>
       
     </div>
   </div>
@@ -247,8 +246,8 @@ And you can see the usage of SASS <code class="highlighter-rouge">random()</code
     <img class="Post-bg" src="/public/img/home/poly2.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
-        <a href="/setting-up-webpack-babel-and-react-from-scratch-part-2/">
-          Setting up Webpack, Babel and React from scratch - Part 2
+        <a href="/hello-world/">
+          Hello World
         </a>
       </h1>
 
@@ -260,38 +259,16 @@ And you can see the usage of SASS <code class="highlighter-rouge">random()</code
 </svg>
 
         </div>
-        29 Aug 2016
+        21 Feb 2016
       </div>
-      <h2 id="part-two">Part two</h2>
+      <p>Everything starts with a <code>Hello World</code> so does this blog.</p>
 
-<p>Update: Part two is pretty much done. Part three will cover redux and production builds.</p>
+<p>For the first time everything will be under heavy development, until I get it the way I want.</p>
 
-<p>Other parts:</p>
-
-<ul>
-  <li><a href="/setting-up-webpack-babel-and-react-from-scratch">Part 1</a> - Webpack, Babel, React, Router, ESLint</li>
-  <li>Part 2 - SASS, More ES6 goodness (Static props, decorators, deconstruction…)</li>
-  <li>Part 3 - Redux, adding production config - <strong>WIP, Soon!</strong></li>
-</ul>
-
-<h2 id="adding-sass">Adding SASS</h2>
-
-<p>We will use SASS loader for webpack, so let’s install it together with node-sass compiler,
- css and style loaders</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>npm install --save-dev style-loader css-loader sass-loader node-sass
-</code></pre>
-</div>
-
-<p>Create <code class="highlighter-rouge">scss</code> folder in the <code class="highlighter-rouge">app</code> folder, and main <code class="highlighter-rouge">app.scss</code> file in it.
-This file will include all of the other scss files.</p>
-
-<p>Now we need to add a loader to webpack config file.</p>
+<p>As I really enjoy making stuff, I decided to try to make small JavaScript or CSS (SASS) plugin/script every week.
+Those are going to be both big and small, proof of concepts and production ready stuff.</p>
 
 
-
-      
-          <a class="Post-readmore" href="/setting-up-webpack-babel-and-react-from-scratch-part-2/">Read more</a>
       
     </div>
   </div>
@@ -312,16 +289,16 @@ This file will include all of the other scss files.</p>
   <div class="Pagination">
     <div class="Pagination-inner">
       
-        <span class="Pagination-link Pagination-link--arrow Pagination-link--inactive">
+        <a class="Pagination-link Pagination-link--arrow" href="/page-4">
           <span class="Pagination-arrow Pagination-arrow--left"></span>
-        </span>
+        </a>
       
 
       
 
       
         
-          <a class="Pagination-link Pagination-link--active" class="active">1</a>
+          <a class="Pagination-link" href="/">1</a>
         
       
         
@@ -337,16 +314,16 @@ This file will include all of the other scss files.</p>
         
       
         
-          <a class="Pagination-link" href="/page-5">5</a>
+          <a class="Pagination-link Pagination-link--active" class="active">5</a>
         
       
 
       
 
       
-        <a class="Pagination-link Pagination-link--arrow" href="/page-2">
+        <span class="Pagination-link Pagination-link--arrow Pagination-link--inactive">
           <span class="Pagination-arrow Pagination-arrow--right"></span>
-        </a>
+        </span>
       
     </div>
   </div>
@@ -380,7 +357,7 @@ This file will include all of the other scss files.</p>
       <div class="Menu-menuWrapper">
         <div class="Menu-menu Menu-menu--links">
           <a
-            class="Menu-menuLink Menu-menuLink--active"
+            class="Menu-menuLink "
             href="/">
             Home
           </a>

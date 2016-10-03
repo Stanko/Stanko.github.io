@@ -1,28 +1,1494 @@
----
-layout: null
----
-
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>{{ site.title }}</title>
- <link href="{{ site.url }}{{ site.baseurl }}/atom.xml" rel="self"/>
- <link href="{{ site.url }}{{ site.baseurl }}/"/>
- <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>{{ site.url }}</id>
+ <title>Muffin Man's writings</title>
+ <link href="http://stanko.github.io/atom.xml" rel="self"/>
+ <link href="http://stanko.github.io/"/>
+ <updated>2016-10-03T18:48:03+02:00</updated>
+ <id>http://stanko.github.io</id>
  <author>
-   <name>{{ site.author.name }}</name>
-   <email>{{ site.author.email }}</email>
+   <name>Stanko</name>
+   <email>stanko@null-object.com</email>
  </author>
 
- {% for post in site.posts %}
+ 
  <entry>
-   <title>{{ post.title }}</title>
-   <link href="{{ site.url }}{{ post.url }}"/>
-   <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>{{ site.url }}{{ site.baseurl }}{{ post.id }}</id>
-   <content type="html">{{ post.content | xml_escape }}</content>
+   <title>Plain JavaScript animated window scroll function</title>
+   <link href="http://stanko.github.io/animate-window-scroll-to/"/>
+   <updated>2016-09-28T00:00:00+02:00</updated>
+   <id>http://stanko.github.io/animate-window-scroll-to</id>
+   <content type="html">&lt;p&gt;Before modern frameworks, I always used jQuery’s &lt;code class=&quot;highlighter-rouge&quot;&gt;scrollTo&lt;/code&gt; method.
+At some point, not every project included jQuery, so I wrote simple function
+to animate window scroll.&lt;/p&gt;
+
+&lt;p&gt;I have kept copying that function from project to project.
+Finally I took some time, cleaned it up and published it on the npm
+(this is the first npm package I published).&lt;/p&gt;
+
+&lt;p&gt;Demo and documentation is available &lt;a href=&quot;https://stanko.github.io/animated-scroll-to/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Find it on &lt;a href=&quot;https://github.com/Stanko/animated-scroll-to&quot;&gt;Github&lt;/a&gt;
+and &lt;a href=&quot;https://www.npmjs.com/package/animated-scroll-to&quot;&gt;npm&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;installation&quot;&gt;Installation&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install animated-scroll-to
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;usage&quot;&gt;Usage&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;animateScrollTo&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;animated-scroll-to&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// desiredOffset - page offset to scroll&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// options - object with options&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// default options&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// duration of the scroll per 1000px, default 500&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;speed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// minimum duration of the scroll&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;minDuration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;250&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// maximum duration of the scroll&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;maxDuration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// should animated scroll be canceled on user scroll/keypress&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// if set to &quot;false&quot; user input will be disabled until animated scroll is complete&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;cancelOnUserAction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;animateScrollTo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;desiredOffset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</content>
  </entry>
- {% endfor %}
+ 
+ <entry>
+   <title>Implementing PhotoShop font sizes and tracking in CSS, points to pixels conversion</title>
+   <link href="http://stanko.github.io/font-size-and-tracking-points-to-pixels/"/>
+   <updated>2016-09-08T00:00:00+02:00</updated>
+   <id>http://stanko.github.io/font-size-and-tracking-points-to-pixels</id>
+   <content type="html">&lt;p&gt;We’ve all been there - trying to get right font sizes from PhotoShop to CSS.
+Designers usually work with points, which are used in the print, but not common on the web.
+They also use term &lt;em&gt;tracking&lt;/em&gt; a lot, which is actually only a letter spacing with different units.&lt;/p&gt;
+
+&lt;p&gt;You can recalculate everything by hand and try to keep track of it.
+But we can use the goodies of SCSS to make that process a bit easier.&lt;/p&gt;
+
+&lt;p&gt;Point to pixel ratio is &lt;code class=&quot;highlighter-rouge&quot;&gt;1pt = 1.333333px&lt;/code&gt;. We’ll create SASS function to do conversion for us.&lt;/p&gt;
+
+&lt;p&gt;And PhotoShop tracking works relative to the font size.
+One point of tracking is 1/1000 of the font size.
+For this one we’ll create a mixin.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-scss&quot; data-lang=&quot;scss&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Converts pt to px
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;@function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;pt-to-px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$size-in-points&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;@return&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;round&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$size-in-points&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;.333333&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Adds letter spacing to match photoshop tracking
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;@mixin&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;tracking&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ps-tracking&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;letter-spacing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$ps-tracking&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1000&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;em&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Usage
+&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.Component&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;@include&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;tracking&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;pt-to-px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;line-height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;pt-to-px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This will generate following CSS:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.Component&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;letter-spacing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-.005em&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;15px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;line-height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;23px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Note that function and mixin can do pretty much the same job.
+But it makes more sense to use mixins when including complete styles,
+and functions to return values.
+So conversion makes sense to be a function,
+as we can use it for font size, line height or anything else.
+Conversion of tracking to letter spacing is including a specific style,
+so keep it in a mixin.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Always use &lt;button&gt; for clickable elements</title>
+   <link href="http://stanko.github.io/always-use-button-for-clickable-elements/"/>
+   <updated>2016-09-02T00:00:00+02:00</updated>
+   <id>http://stanko.github.io/always-use-button-for-clickable-elements</id>
+   <content type="html">&lt;p&gt;Always try to use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;button&amp;gt;&lt;/code&gt; when  &lt;strong&gt;element is clickable, but it is not a link&lt;/strong&gt;.
+Avoid &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;a&amp;gt;&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;span&amp;gt;&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;div&amp;gt;&lt;/code&gt; and other elements.&lt;/p&gt;
+
+&lt;p&gt;Note that &lt;code class=&quot;highlighter-rouge&quot;&gt;display: flex&lt;/code&gt; works differently on buttons in different browsers,
+but we have easy fix for that.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;why&quot;&gt;Why?&lt;/h2&gt;
+
+&lt;p&gt;You will get multiple benefits - user can “tab” to it,
+and then press enter to activate (it will trigger &lt;code class=&quot;highlighter-rouge&quot;&gt;click&lt;/code&gt; event).
+There is no need to &lt;code class=&quot;highlighter-rouge&quot;&gt;preventDefault&lt;/code&gt; like when you are using &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;a&amp;gt;&lt;/code&gt;.
+User can’t open it in the new tab/window, using right or middle click.
+Screen readers recognize it out of the box.&lt;/p&gt;
+
+&lt;p&gt;Long story short - it is way more accessible. And when you think about it,
+it is actually really logical thing to do. Buttons are made to be clickable :)&lt;/p&gt;
+
+&lt;h2 id=&quot;gotchas&quot;&gt;Gotchas&lt;/h2&gt;
+
+&lt;h3 id=&quot;buttons-in-forms&quot;&gt;Buttons in forms&lt;/h3&gt;
+
+&lt;p&gt;If you need your clickable button to be in a form, remember to put &lt;code class=&quot;highlighter-rouge&quot;&gt;type=&#39;button&#39;&lt;/code&gt; to it,
+as default button type is &lt;code class=&quot;highlighter-rouge&quot;&gt;submit&lt;/code&gt;, and it will submit your form on click.
+Again, you could use &lt;code class=&quot;highlighter-rouge&quot;&gt;preventDefault&lt;/code&gt;, but I think this is a way cleaner approach.&lt;/p&gt;
+
+&lt;h3 id=&quot;button-flex-maddnes&quot;&gt;Button flex maddnes&lt;/h3&gt;
+
+&lt;p&gt;For some reason &lt;code class=&quot;highlighter-rouge&quot;&gt;display: flex&lt;/code&gt; on buttons is behaving really different across browsers.
+It is crazy! If you don’t believe me, just check the examples below.&lt;/p&gt;
+
+&lt;p&gt;The easiest fix is to add another div in (to wrap button content), and apply &lt;code class=&quot;highlighter-rouge&quot;&gt;display: flex&lt;/code&gt; to it.
+From there on, you should be fine. I made a CodePen with an example.
+On the left side, you can see a button with flex applied directly to it,
+and on the right, a button with inner div and flex applied to it.&lt;/p&gt;
+
+&lt;p&gt;I overcame my laziness and made a bunch of cross browser screenshots.
+Original CodePen is included at the end.&lt;/p&gt;
+
+&lt;p&gt;At the moment, it seems only Chrome gets it right.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;chrome&quot;&gt;Chrome&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/button-flex/chrome.png&quot; alt=&quot;Display flex on buttons, Chrome&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;firefox&quot;&gt;Firefox&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/button-flex/firefox.png&quot; alt=&quot;Display flex on buttons, Firefox&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;safari-8&quot;&gt;Safari 8&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/button-flex/safari8.png&quot; alt=&quot;Display flex on buttons, Safari 8&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;safari-9&quot;&gt;Safari 9&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/button-flex/safari9.png&quot; alt=&quot;Display flex on buttons, Safari 9&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;ie10&quot;&gt;IE10&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/button-flex/ie10.png&quot; alt=&quot;Display flex on buttons, IE10&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;ie11&quot;&gt;IE11&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/button-flex/ie11.png&quot; alt=&quot;Display flex on buttons, IE11&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;codepen&quot;&gt;CodePen&lt;/h4&gt;
+
+&lt;iframe height=&quot;300px&quot; scrolling=&quot;no&quot; src=&quot;//codepen.io/stanko/embed/ALjvYj/?height=300&amp;amp;theme-id=light&amp;amp;default-tab=result&amp;amp;embed-version=2&quot; frameborder=&quot;no&quot; allowtransparency=&quot;true&quot; allowfullscreen=&quot;true&quot; style=&quot;width: 100%; margin-bottom: 1em; background: #f7f7f7&quot;&gt;
+See the Pen &lt;a href=&quot;http://codepen.io/stanko/pen/ALjvYj/&quot;&gt;Fix for button display:flex&lt;/a&gt; by Stanko (&lt;a href=&quot;http://codepen.io/stanko&quot;&gt;@stanko&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.
+&lt;/iframe&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>SASS random() and circle animation</title>
+   <link href="http://stanko.github.io/sass-random-and-circle-animation/"/>
+   <updated>2016-08-30T00:00:00+02:00</updated>
+   <id>http://stanko.github.io/sass-random-and-circle-animation</id>
+   <content type="html">&lt;p&gt;I decided to move my CSS playground to the CodePen, and this is the first one I made.&lt;/p&gt;
+
+&lt;p&gt;Idea came to me while I was riding on a bus, and I might use it on this blog,
+as a part of it’s redesign.&lt;/p&gt;
+
+&lt;p&gt;This is CSS only animation (I used JS to create 50 elements though).
+And you can see the usage of SASS &lt;code class=&quot;highlighter-rouge&quot;&gt;random()&lt;/code&gt; function.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;iframe height=&quot;400px&quot; scrolling=&quot;no&quot; src=&quot;//codepen.io/stanko/embed/VKkaJB/?height=400&amp;amp;theme-id=light&amp;amp;default-tab=result&amp;amp;embed-version=2&quot; frameborder=&quot;no&quot; allowtransparency=&quot;true&quot; allowfullscreen=&quot;true&quot; style=&quot;width: 100%; margin-bottom: 1em; background: #f7f7f7&quot;&gt;
+See the Pen &lt;a href=&quot;http://codepen.io/stanko/pen/VKkaJB/&quot;&gt;Circle Logo Animation&lt;/a&gt; by Stanko (&lt;a href=&quot;http://codepen.io/stanko&quot;&gt;@stanko&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.
+&lt;/iframe&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;random()&lt;/code&gt; will return random integer between 1 and &lt;code class=&quot;highlighter-rouge&quot;&gt;n&lt;/code&gt;, where &lt;code class=&quot;highlighter-rouge&quot;&gt;n&lt;/code&gt; is the number you pass to it.
+Default param is 100.&lt;/p&gt;
+
+&lt;p&gt;Note that random does not return 0.&lt;/p&gt;
+
+&lt;p&gt;To get different random ranges just add or subtract your base.&lt;/p&gt;
+
+&lt;p&gt;This will return number between 11 and 20.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$random-number: random(10) + 10;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Same thing with negative numbers, this one covers the range between -10 and 10.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$random-number: random(21) - 11;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Something to have in mind, new random numbers will be generated on every SASS compilation.
+But once generated, CSS will stay static, until the next compilation.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Setting up Webpack, Babel and React from scratch - Part 2</title>
+   <link href="http://stanko.github.io/setting-up-webpack-babel-and-react-from-scratch-part-2/"/>
+   <updated>2016-08-29T00:00:00+02:00</updated>
+   <id>http://stanko.github.io/setting-up-webpack-babel-and-react-from-scratch-part-2</id>
+   <content type="html">&lt;h2 id=&quot;part-two&quot;&gt;Part two&lt;/h2&gt;
+
+&lt;p&gt;Update: Part two is pretty much done. Part three will cover redux and production builds.&lt;/p&gt;
+
+&lt;p&gt;Other parts:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/setting-up-webpack-babel-and-react-from-scratch&quot;&gt;Part 1&lt;/a&gt; - Webpack, Babel, React, Router, ESLint&lt;/li&gt;
+  &lt;li&gt;Part 2 - SASS, More ES6 goodness (Static props, decorators, deconstruction…)&lt;/li&gt;
+  &lt;li&gt;Part 3 - Redux, adding production config - &lt;strong&gt;WIP, Soon!&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;adding-sass&quot;&gt;Adding SASS&lt;/h2&gt;
+
+&lt;p&gt;We will use SASS loader for webpack, so let’s install it together with node-sass compiler,
+ css and style loaders&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install --save-dev style-loader css-loader sass-loader node-sass
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;scss&lt;/code&gt; folder in the &lt;code class=&quot;highlighter-rouge&quot;&gt;app&lt;/code&gt; folder, and main &lt;code class=&quot;highlighter-rouge&quot;&gt;app.scss&lt;/code&gt; file in it.
+This file will include all of the other scss files.&lt;/p&gt;
+
+&lt;p&gt;Now we need to add a loader to webpack config file.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;...
+{
+  test: /\.scss$/,
+  loader: &#39;style!css!sass&#39;
+}
+...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This will handle importing SCSS files in our JavaScript code.
+So we need to import &lt;code class=&quot;highlighter-rouge&quot;&gt;app.scss&lt;/code&gt; manually in the JavaScript code.
+You’ll need to add only one line to your &lt;code class=&quot;highlighter-rouge&quot;&gt;app.js&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import &#39;../scss/app.scss&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This includes your styles by calling loaders we defined in the webpack config.&lt;/p&gt;
+
+&lt;p&gt;Restart your webpack, and voala, now we have styles and hot reloading for them.
+Try changing your styles to check it.&lt;/p&gt;
+
+&lt;h3 id=&quot;source-maps&quot;&gt;Source maps&lt;/h3&gt;
+
+&lt;p&gt;To enable source maps, we’ll pass the &lt;code class=&quot;highlighter-rouge&quot;&gt;sourceMap&lt;/code&gt; option to the sass and the css loaders.
+Enable devtool, and update the loader&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;...
+  devtool: &#39;inline-source-map&#39;, // or &#39;source-map&#39;
+
+  module: {
+    loaders: [
+      ...
+      {
+        test: /\.scss$/,
+        loader: &#39;style!css?sourceMap!sass?sourceMap&#39;,
+      }
+    ]
+  }
+...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If you want to read more, here’s link to the
+&lt;a href=&quot;https://github.com/jtangelder/sass-loader&quot;&gt;official documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;autoprefixer&quot;&gt;Autoprefixer&lt;/h3&gt;
+
+&lt;p&gt;Always use autoprefixer - I can’t stress this enough.&lt;/p&gt;
+
+&lt;p&gt;We’ll need postcss loader, precss and autoprefixer&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install --save-dev postcss-loader precss autoprefixer
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;At the top of our webpack config, require precss and autoprefixer&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const precss = require(&#39;precss&#39;);
+const autoprefixer = require(&#39;autoprefixer&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Update our sass loader config and and postcss config&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;...
+  module: {
+    loaders: [
+      ...
+      {
+        test: /\.scss$/,
+        loader: &#39;style!css?sourceMap!postcss!sass?sourceMap&#39;,
+      }
+    ]
+  },
+
+  postcss() {
+    return [autoprefixer, precss];
+  },
+...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Restart webpack, and you should have autoprefixing in place.
+Try adding &lt;code class=&quot;highlighter-rouge&quot;&gt;display: flex&lt;/code&gt; to one of the elements to check if autoprefixer added
+&lt;code class=&quot;highlighter-rouge&quot;&gt;-ms-display: flex&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;-webkit-display: flex&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Again here’s link to the &lt;a href=&quot;https://github.com/postcss/postcss-loader&quot;&gt;official documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;method-shorthand&quot;&gt;Method shorthand&lt;/h2&gt;
+
+&lt;p&gt;Note that&lt;/p&gt;
+
+&lt;pre&gt;
+{
+  ...
+  postcss() {
+    return [autoprefixer, precss];
+  }
+}
+&lt;/pre&gt;
+
+&lt;p&gt;is the same as&lt;/p&gt;
+
+&lt;pre&gt;
+{
+  ...
+  postcss: function () {
+    return [autoprefixer, precss];
+  }
+}
+&lt;/pre&gt;
+
+&lt;p&gt;but only using &lt;a href=&quot;http://eslint.org/docs/rules/object-shorthand&quot;&gt;method shorthand&lt;/a&gt;.
+ES6 rules!&lt;/p&gt;
+
+&lt;h2 id=&quot;more-es6-stuff&quot;&gt;More ES6 stuff&lt;/h2&gt;
+
+&lt;p&gt;To be able to use deconstruction (&lt;code class=&quot;highlighter-rouge&quot;&gt;...object&lt;/code&gt;), static class properties and decorators (&lt;code class=&quot;highlighter-rouge&quot;&gt;@connect&lt;/code&gt;) we need to add
+a couple of Babel plugins.&lt;/p&gt;
+
+&lt;p&gt;Install them using following command&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm i --save-dev babel-plugin-syntax-decorators babel-plugin-transform-class-properties babel-plugin-transform-decorators-legacy babel-preset-stage-0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Few links to read more about this plugins:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://babeljs.io/docs/plugins/syntax-decorators/&quot;&gt;Synthax only for decorators&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy&quot;&gt;Decorators plugin&lt;/a&gt;
+&lt;small&gt;
+- We are using a 3rd party plugin as “Decorators are disabled in Babel v6, pending a proposal update”.
+Read more on the first link.
+&lt;/small&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://babeljs.io/docs/plugins/transform-class-properties/&quot;&gt;Static properties&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://babeljs.io/docs/plugins/preset-stage-0/&quot;&gt;Stage 0 (plugin group)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now we need to add it to our Babel configuration. Open your &lt;code class=&quot;highlighter-rouge&quot;&gt;.babelrc&lt;/code&gt; file and add them.&lt;/p&gt;
+
+&lt;p&gt;Add these to the &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;plugins&quot;&lt;/code&gt; array&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;syntax-decorators&quot;
+&quot;transform-decorators-legacy&quot;
+&quot;transform-class-properties&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;stage-0&quot;&lt;/code&gt; to the &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;presets&quot;&lt;/code&gt; array&lt;/p&gt;
+
+&lt;p&gt;Your &lt;code class=&quot;highlighter-rouge&quot;&gt;.babelrc&lt;/code&gt; should be looking something like this&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;plugins&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;syntax-decorators&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;transform-decorators-legacy&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;transform-class-properties&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;presets&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;es2015&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;react&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;stage-0&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Setting up Webpack, Babel and React from scratch</title>
+   <link href="http://stanko.github.io/setting-up-webpack-babel-and-react-from-scratch/"/>
+   <updated>2016-08-23T00:00:00+02:00</updated>
+   <id>http://stanko.github.io/setting-up-webpack-babel-and-react-from-scratch</id>
+   <content type="html">&lt;h2 id=&quot;this-is-a-living-guide&quot;&gt;This is a living guide&lt;/h2&gt;
+
+&lt;p&gt;This is the first part of the guide that will be changed over time.
+For now it covers Webpack, Babel (for ES6) and React with React Router.&lt;/p&gt;
+
+&lt;p&gt;Next parts will contain more stuff - static properties, decorators, SASS,
+development and production configs, immutables… Also redux part should be updated really soon.&lt;/p&gt;
+
+&lt;p&gt;So stay tuned!&lt;/p&gt;
+
+&lt;p&gt;Other parts:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Part 1 - Webpack, Babel, React, Router, ESLint&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/setting-up-webpack-babel-and-react-from-scratch-part-2&quot;&gt;Part 2&lt;/a&gt; - SASS, more ES6 goodness (Static props, decorators, deconstruction…)&lt;/li&gt;
+  &lt;li&gt;Part 3 - Redux, adding production config - &lt;strong&gt;WIP, Soon!&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;before-we-start&quot;&gt;Before we start&lt;/h3&gt;
+
+&lt;p&gt;I’ll assume that you have a basic knowledge of the unix terminal,
+and that you have read what Webpack, Babel and React are.&lt;/p&gt;
+
+&lt;h2 id=&quot;webpack&quot;&gt;Webpack&lt;/h2&gt;
+
+&lt;p&gt;For a start, install &lt;code class=&quot;highlighter-rouge&quot;&gt;node&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;npm&lt;/code&gt; from &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;https://nodejs.org/en/&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Make a git repo (this is optional, but recommended),
+or create an empty folder. Navigate to it in the terminal.&lt;/p&gt;
+
+&lt;p&gt;Initialize npm (&lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt;) by running&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm init
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now we can start adding npm packages.
+Install babel core and it’s loader for webpack.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install --save-dev webpack webpack-dev-server
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Tip: you can use &lt;code class=&quot;highlighter-rouge&quot;&gt;npm i&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;app/js/app.js&lt;/code&gt; with a simple &lt;code class=&quot;highlighter-rouge&quot;&gt;console.log(&#39;hello world&#39;);&lt;/code&gt;.
+This will be the entry point for webpack.&lt;/p&gt;
+
+&lt;p&gt;Now we need to create a webpack config file &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack.config.js&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Tip: you can create files by using touch command - &lt;code class=&quot;highlighter-rouge&quot;&gt;touch FILENAME&lt;/code&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;__dirname&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/app&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+
+  &lt;span class=&quot;na&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;./js/app.js&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+
+  &lt;span class=&quot;na&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;app.js&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;__dirname&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/dist&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;It is important to understand what is going on so far.
+This tells webpack that our main application file (&lt;code class=&quot;highlighter-rouge&quot;&gt;app.js&lt;/code&gt;) is the entry point,
+and bundled application should be outputted to the &lt;code class=&quot;highlighter-rouge&quot;&gt;dist&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;__dirname&lt;/code&gt; is the name of the directory that the currently executing script resides in.&lt;/p&gt;
+
+&lt;p&gt;Now we can run&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;node ./node_modules/webpack/bin/webpack.js
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;It will generate &lt;code class=&quot;highlighter-rouge&quot;&gt;dist/app.js&lt;/code&gt;.
+(Tip: to be able to run &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack&lt;/code&gt; globally, you’ll need to install it using &lt;code class=&quot;highlighter-rouge&quot;&gt;npm i --global webpack&lt;/code&gt;. Then you can run it by using only &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack&lt;/code&gt;.)&lt;/p&gt;
+
+&lt;h2 id=&quot;babel&quot;&gt;Babel&lt;/h2&gt;
+
+&lt;p&gt;Noew can add Babel transpiler goodness.&lt;/p&gt;
+
+&lt;p&gt;Install babel core and it’s loader for webpack and presets for ES6 (aka ES2015) and React&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm i --save-dev babel-loader babel-core babel-preset-es2015 babel-preset-react
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;.babelrc&lt;/code&gt; and add presets&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;presets&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;es2015&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;react&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Add js/jsx loader to your webpack config, as well as extensions we want to resolve (More about this later).&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;...
+  resolve: {
+    extensions: [&#39;&#39;, &#39;.js&#39;, &#39;.jsx&#39;, &#39;.json&#39;]
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loaders: [&quot;babel-loader&quot;]
+      }
+    ]
+  }
+...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Webpack accepts the array of the loaders. Loader has a test for the filenames,
+in our case it matches all of the &lt;code class=&quot;highlighter-rouge&quot;&gt;.js&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;.jsx&lt;/code&gt; files.
+Then it applies babel loader to it. Basically this will transpile our
+fancy ES6 to ES5 which can be understood by browsers
+(some browsers can execute ES6 already, but most of them still can’t).&lt;/p&gt;
+
+&lt;p&gt;If you re-run our webpack command, nothing will change, yet.&lt;/p&gt;
+
+&lt;h2 id=&quot;react&quot;&gt;React&lt;/h2&gt;
+
+&lt;p&gt;Install react and react DOM&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm i react react-dom --save
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Your &lt;code class=&quot;highlighter-rouge&quot;&gt;app.js&lt;/code&gt; should look something like this. For this example we are just rendering main menu.
+Later we’ll replace that with react router component.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import React from &#39;react&#39;;
+import ReactDOM from &#39;react-dom&#39;;
+import Menu from &#39;./components/Global/Menu.jsx&#39;;
+
+ReactDOM.render(
+  &amp;lt;Menu /&amp;gt;,
+  document.getElementById(&#39;app&#39;)
+);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now we can start adding react components. Create &lt;code class=&quot;highlighter-rouge&quot;&gt;app/js/components/Global/Menu.jsx&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import React, { Component } from &#39;react&#39;;
+
+export default class Menu extends Component {
+  render() {
+    return (
+      &amp;lt;div className=&#39;Menu&#39;&amp;gt;
+        Main Menu
+      &amp;lt;/div&amp;gt;
+    );
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;index-page&quot;&gt;Index Page&lt;/h2&gt;
+
+&lt;p&gt;Create index page in the &lt;code class=&quot;highlighter-rouge&quot;&gt;app&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Your app name&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;app&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;app.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We’ll need file loader for it&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install file-loader --save-dev
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Update webpack config to add entry&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;...
+  entry: {
+    javascript: &quot;./js/app.js&quot;,
+    html: &quot;./index.html&quot;,
+  }
+...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;and add loader&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;...
+  {
+    test: /\.html$/,
+    loader: &quot;file?name=[name].[ext]&quot;,
+  }
+...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now when we run webpack again, we’ll get &lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;app.js&lt;/code&gt; in dist folder.&lt;/p&gt;
+
+&lt;h2 id=&quot;dev-server-and-hot-reload&quot;&gt;Dev server and hot reload&lt;/h2&gt;
+
+&lt;p&gt;Install webpack development server, and run it&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install --save-dev webpack webpack-dev-server
+node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;(Tip: Same as with webpack, you can install it globally &lt;code class=&quot;highlighter-rouge&quot;&gt;npm i --global webpack-dev-server&lt;/code&gt; and run it using &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack-dev-server&lt;/code&gt;.)&lt;/p&gt;
+
+&lt;p&gt;Now open &lt;code class=&quot;highlighter-rouge&quot;&gt;http://localhost:8080/&lt;/code&gt; in your browser of choice. You should see your app.
+Development server will watch for your changes and rerun the bundler.
+Still we need to manually refresh the browser.&lt;/p&gt;
+
+&lt;p&gt;So let’s add hot reloading.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install react-hot-loader --save-dev
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Update webpack js/jsx loader to use hot reloading&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;...
+  {
+    test: /\.jsx?$/,
+    exclude: /node_modules/,
+    loaders: [&quot;react-hot&quot;, &quot;babel-loader&quot;],
+  }
+...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now we need to add two more options when running dev server &lt;code class=&quot;highlighter-rouge&quot;&gt;--hot&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;--inline&lt;/code&gt;.
+We will also add &lt;code class=&quot;highlighter-rouge&quot;&gt;--history-api-fallback&lt;/code&gt; which will be useful when we add react router.
+This option tells server to fallback to &lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt; which will handle routing (as we are building single page app).&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Not only the hot reload watches the changes and updates the browser, but it injects the code and keeps the application state.
+Note that not all modules can be replaced.
+The code in &lt;code class=&quot;highlighter-rouge&quot;&gt;app/js/app.js&lt;/code&gt; cannot be reloaded and will cause a full page reload but changing the children components will trigger a hot module replacement.&lt;/p&gt;
+
+&lt;p&gt;To make things easier, we’ll add our script to the &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;...
+  &quot;scripts&quot;: {
+    &quot;dev&quot;: &quot;node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline --history-api-fallback&quot;
+  }
+...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now we can run only &lt;code class=&quot;highlighter-rouge&quot;&gt;npm run dev&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;eslint&quot;&gt;ESLint&lt;/h2&gt;
+
+&lt;p&gt;We are going to use AirBNB’s set of rules for linting, as their standards are really good.
+Also, creating eslint by hand would take a long time.&lt;/p&gt;
+
+&lt;p&gt;Pro tip: &lt;strong&gt;ALWAYS LINT&lt;/strong&gt;. No matter what people say - &lt;strong&gt;always use linters&lt;/strong&gt;.
+You will catch errors earlier, and enforce your (the best) standards.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb&quot;&gt;https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install --save-dev eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y eslint
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now we need to create &lt;code class=&quot;highlighter-rouge&quot;&gt;.eslintrc&lt;/code&gt; that only needs extends param,
+but if you want to customize it, add your rules to the &lt;code class=&quot;highlighter-rouge&quot;&gt;rules&lt;/code&gt; object.
+Personally I like single quotes more, and spaces in the react curly synthax.&lt;/p&gt;
+
+&lt;p&gt;You might have to restart your editor for changes to take effect.
+For beginners I would recommend &lt;a href=&quot;https://atom.io/&quot;&gt;Atom&lt;/a&gt; editor.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;extends&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;airbnb&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;rules&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;jsx-quotes&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;prefer-single&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;react/jsx-curly-spacing&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;always&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;react/prefer-stateless-function&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;react-router&quot;&gt;React Router&lt;/h2&gt;
+
+&lt;p&gt;Install it from the NPM&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install --save react-router
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;What we’ll do is pretty much the same thing from the official getting started guide.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/reactjs/react-router/blob/master/docs/Introduction.md&quot;&gt;https://github.com/reactjs/react-router/blob/master/docs/Introduction.md&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Your &lt;code class=&quot;highlighter-rouge&quot;&gt;app.js&lt;/code&gt; should look like this. You’ll have to create &lt;code class=&quot;highlighter-rouge&quot;&gt;App&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Home&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;About&lt;/code&gt; views.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import React from &#39;react&#39;;
+import ReactDOM from &#39;react-dom&#39;;
+
+import App from &#39;./views/App&#39;;
+import Home from &#39;./views/Home&#39;;
+import About from &#39;./views/About&#39;;
+
+import { Router, Route, IndexRoute, browserHistory } from &#39;react-router&#39;;
+
+ReactDOM.render(
+  &amp;lt;Router history={ browserHistory }&amp;gt;
+    &amp;lt;Route path=&#39;/&#39; component={ App }&amp;gt;
+      &amp;lt;IndexRoute component={ Home } /&amp;gt;
+      &amp;lt;Route path=&#39;about&#39; component={ About } /&amp;gt;
+    &amp;lt;/Route&amp;gt;
+  &amp;lt;/Router&amp;gt;,
+  document.getElementById(&#39;app&#39;)
+);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And your &lt;code class=&quot;highlighter-rouge&quot;&gt;views/App/index.jsx&lt;/code&gt; should like this. It is just a simple wrapper around your views.
+It has simple menu so we can test routing. &lt;code class=&quot;highlighter-rouge&quot;&gt;chilren&lt;/code&gt; prop is every child component that is passed to it.
+In our case, children will be route that is matched in our &lt;code class=&quot;highlighter-rouge&quot;&gt;app.js&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import React, { Component } from &#39;react&#39;;
+import { Link } from &#39;react-router&#39;;
+
+export default class App extends Component {
+  render() {
+    const { children } = this.props;
+
+    return (
+      &amp;lt;div className=&#39;App&#39;&amp;gt;
+        &amp;lt;Link to=&#39;/&#39;&amp;gt;Home&amp;lt;/Link&amp;gt;
+        &amp;lt;Link to=&#39;/about&#39;&amp;gt;About&amp;lt;/Link&amp;gt;
+
+        { children }
+      &amp;lt;/div&amp;gt;
+    );
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;redux&quot;&gt;Redux&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Note that this part will be updated soon with more details.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Install redux&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm i redux react-redux --save
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To learn what redux is, the best place to start are lessons taught by the redux’s creator himself, Dan Abramov.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://egghead.io/series/getting-started-with-redux&quot;&gt;https://egghead.io/series/getting-started-with-redux&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And to add it to your React app, for now follow official documentation (more info coming soon);&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://redux.js.org/docs/basics/UsageWithReact.html&quot;&gt;http://redux.js.org/docs/basics/UsageWithReact.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;nice-to-have&quot;&gt;Nice to have&lt;/h2&gt;
+
+&lt;p&gt;This is everything you need, following the best practices for react and javascipt development in general.
+Beside that there is couple of more things, that I usually add to my projects.
+Check it yourself, and add it if you thing these are useful to you.&lt;/p&gt;
+
+&lt;h5 id=&quot;absolute-path-resolving&quot;&gt;Absolute path resolving&lt;/h5&gt;
+
+&lt;p&gt;To be able to include your files with absolute paths you need to set root path.
+(Example: &lt;code class=&quot;highlighter-rouge&quot;&gt;components/views/App&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;../../views/App&lt;/code&gt;.)
+In your webpack config, under resolve add &lt;code class=&quot;highlighter-rouge&quot;&gt;root&lt;/code&gt; param. Note that you have add &lt;code class=&quot;highlighter-rouge&quot;&gt;path&lt;/code&gt; at the top of the file.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const path = require(&#39;path&#39;);
+
+...
+resolve: {
+  extensions: [&#39;&#39;, &#39;.js&#39;, &#39;.jsx&#39;, &#39;.json&#39;],
+  root: path.resolve(__dirname, &#39;./app/js&#39;),
+},
+...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Using this will probably still give you linting errors in the editor, so we need to add
+Install eslint import resolver package&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install --save-dev eslint-import-resolver-webpack
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And add settings to your &lt;code class=&quot;highlighter-rouge&quot;&gt;.eslintrc&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;...
+settings: {
+  &quot;import/resolver&quot;: &quot;webpack&quot;
+}
+...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>I washed my headphones</title>
+   <link href="http://stanko.github.io/i-washed-my-headphones/"/>
+   <updated>2016-08-03T00:00:00+02:00</updated>
+   <id>http://stanko.github.io/i-washed-my-headphones</id>
+   <content type="html">&lt;p&gt;Recently I lost my iPhone headphones.
+I didn’t care much, as they were almost 3 years old, and I had a brand new ones.
+But today, while getting ready for work, I found them in the pocket
+of the pants I washed about week ago.&lt;/p&gt;
+
+&lt;p&gt;I was sure they wouldn’t work, but guess what? They do!
+Probably the fact that they dried for days helped.&lt;/p&gt;
+
+&lt;p&gt;So I guees I have a spare pair of headphones now :)&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Null Object Tech Meetup Vol 3</title>
+   <link href="http://stanko.github.io/null-object-meetup-vol-3/"/>
+   <updated>2016-07-13T00:00:00+02:00</updated>
+   <id>http://stanko.github.io/null-object-meetup-vol-3</id>
+   <content type="html">&lt;p&gt;Another tech meetup is behind us, even more people came this time.
+As promised, we will keep them coming more often.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/meetup-vol-3/2.JPG&quot; alt=&quot;Stanko Tadic talking at tech meetup&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Miloš spoke first about learning in tech, and keeping up with it.
+My talk was about SPAs, and how hard they are.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;We hope that meetups like this will help to build and strengthen the community in Belgrade, and Serbia in general.
+At this point that is not something we can brag about.
+We are planning charity hackatons as well and I’ll keep you posted about them.&lt;/p&gt;
+
+&lt;p&gt;Grab the slides:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/public/pdf/Null Object Tech Meetup - Keeping up with the tech.pdf&quot;&gt;Keeping up with the text&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/public/pdf/Null Object Tech Meetup - SPAs are hard&quot;&gt;Single Page Applications are hard&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/meetup-vol-3/1.JPG&quot; alt=&quot;Milos Pavlicevic talking at tech meetup&quot; /&gt;
+&lt;img src=&quot;/public/img/meetup-vol-3/3.JPG&quot; alt=&quot;Null Object tech meetup audience&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For more check the
+&lt;a href=&quot;https://www.facebook.com/nullobject2013/photos/?tab=album&amp;amp;album_id=1072710352807339&quot;&gt;
+  Facebook album
+&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Sector - draw and animate SVG sectors</title>
+   <link href="http://stanko.github.io/sektor-draw-and-animate-svg-circle-sectors-2016/"/>
+   <updated>2016-06-29T00:00:00+02:00</updated>
+   <id>http://stanko.github.io/sektor-draw-and-animate-svg-circle-sectors-2016</id>
+   <content type="html">&lt;p&gt;For a current project I’m on, we needed both circular timer, and progress bar.
+Again, I wasn’t able to find small library to do that. But I found
+&lt;a href=&quot;http://stackoverflow.com/questions/21205652/how-to-draw-a-circle-sector-in-css/21206274#21206274&quot;&gt;awesome answer&lt;/a&gt;
+on Stack Overflow, decided SVG is way to go, and wrote &lt;a href=&quot;https://stanko.github.io/sektor/&quot;&gt;Sektor&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Sektor is a plain JavaScript library that draws circle sector (or an arc).
+Once it is drawn, you can change it’s angle and animate the change.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://stanko.github.io/sektor/&quot;&gt;
+  &lt;img alt=&quot;Sektor - draw and animate SVG circle&quot; src=&quot;https://stanko.github.io/sektor/img/sektor.png&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It works in every browser with SVG and &lt;code class=&quot;highlighter-rouge&quot;&gt;requestAnimationFrane&lt;/code&gt; support (IE10+ and modern browsers).
+Check &lt;a href=&quot;https://stanko.github.io/sektor/&quot;&gt;demo and docs&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I may use this for example how much better is to use &lt;code class=&quot;highlighter-rouge&quot;&gt;requestAnimationFrame&lt;/code&gt; than &lt;code class=&quot;highlighter-rouge&quot;&gt;setInterval&lt;/code&gt;.
+If you are bored, try it yourself, and you’ll see that animating using &lt;code class=&quot;highlighter-rouge&quot;&gt;requestAnimationFrame&lt;/code&gt; is way smoother.&lt;/p&gt;
+
+&lt;p&gt;React component is coming soon as well. Cheers!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Null Object Tech Meetup Vol 3 is coming up</title>
+   <link href="http://stanko.github.io/null-object-meetup-vol-3-coming-up/"/>
+   <updated>2016-06-28T00:00:00+02:00</updated>
+   <id>http://stanko.github.io/null-object-meetup-vol-3-coming-up</id>
+   <content type="html">&lt;p&gt;We have another tech meetup coming up.&lt;/p&gt;
+
+&lt;p&gt;My friend and colleague Miloš, will talk about how we all are &lt;i&gt;Keeping up with the tech&lt;/i&gt;.
+And my talk will be dedicated to &lt;i&gt;single page applications, and how actually hard they are&lt;/i&gt;.&lt;/p&gt;
+
+&lt;p&gt;This time it is on the river, at the &lt;a href=&quot;https://www.facebook.com/LemonChili011/&quot;&gt;Lemon Chili&lt;/a&gt;.
+Again, admission is free, but please register in advance. For more info check the
+&lt;a href=&quot;https://www.facebook.com/events/1747545772127795/&quot;&gt;
+  Facebook event
+&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.facebook.com/events/1747545772127795/&quot;&gt;
+  &lt;img style=&quot;max-width: 350px&quot; src=&quot;https://scontent.fbeg2-1.fna.fbcdn.net/t31.0-8/13495464_1059413477470360_980356363013377222_o.jpg&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Change to position fixed on iOS Safari while scrolling</title>
+   <link href="http://stanko.github.io/ios-safari-scoll-position-fixed/"/>
+   <updated>2016-06-15T00:00:00+02:00</updated>
+   <id>http://stanko.github.io/ios-safari-scoll-position-fixed</id>
+   <content type="html">&lt;p&gt;If you ever had to fix element on scroll, you probably had an issue on iOS Safari (and other mobile devices).
+Element will usually flicker, and disappear until scrolling has stopped completely.&lt;/p&gt;
+
+&lt;p&gt;Just force GPU acceleration by adding &lt;code class=&quot;highlighter-rouge&quot;&gt;transform: translate3d(0,0,0);&lt;/code&gt; to your element.&lt;/p&gt;
+
+&lt;p&gt;You will have something like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.Element-header&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;translate3d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.Element-header--fixed&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;fixed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Enjoy &lt;code class=&quot;highlighter-rouge&quot;&gt;¯\_(ツ)_/¯&lt;/code&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Highlight variables in Atom, Babel template strings</title>
+   <link href="http://stanko.github.io/highlight-vars-in-atom-babel-javascript/"/>
+   <updated>2016-05-07T00:00:00+02:00</updated>
+   <id>http://stanko.github.io/highlight-vars-in-atom-babel-javascript</id>
+   <content type="html">&lt;p&gt;Atom &lt;a href=&quot;https://babeljs.io/&quot;&gt;Babel&lt;/a&gt; plugin doesn’t highlight variables
+in ES6 (ES2015) template strings.&lt;/p&gt;
+
+&lt;p&gt;You’ll need to add this snippet to your Atom’s &lt;code class=&quot;highlighter-rouge&quot;&gt;style.less&lt;/code&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;atom-text-editor&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;::shadow&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.variable.js&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#F8F8F2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/template-string-vars.png&quot; alt=&quot;ES6 template string with variable highlighted in Atom&quot; class=&quot;margin-y-30&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In general, you can just inspect stuff in Atom, find out what classes
+element are using, and then style it via CSS (LESS).
+Just don’t forget to add &lt;code class=&quot;highlighter-rouge&quot;&gt;atom-text-editor::shadow&lt;/code&gt; before your rules.&lt;/p&gt;
+
+&lt;p&gt;If anyone is interested, I’m using &lt;a href=&quot;https://atom.io/themes/monokai-seti&quot;&gt;Monokai Seti&lt;/a&gt; theme.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Switching to Atom, this time for good</title>
+   <link href="http://stanko.github.io/trying-atom-for-the-third-time/"/>
+   <updated>2016-04-18T00:00:00+02:00</updated>
+   <id>http://stanko.github.io/trying-atom-for-the-third-time</id>
+   <content type="html">&lt;p&gt;I’m a big fan of &lt;a href=&quot;https://www.sublimetext.com/&quot;&gt;Sublime Text&lt;/a&gt; editor, which I was using for years now.
+Minimal, fast, reliable. But there is one big problem with it.
+Only one man is working on it’s development and community really slowed down.
+JavaScript ecosystem is going forward at incredible speed, and I’m not sure if Sublime will be able to keep up.&lt;/p&gt;
+
+&lt;p&gt;Even &lt;a href=&quot;https://en.wikipedia.org/wiki/Bus_factor&quot;&gt;bus factor&lt;/a&gt; comes to mind.&lt;/p&gt;
+
+&lt;p&gt;That’s why I tried couple of alternatives.
+When comes to bigger IDEs JetBrains is really good, but it is not as snappy as I would like.
+Logical move was to try GitHub’s &lt;a href=&quot;https://atom.io&quot;&gt;Atom&lt;/a&gt; editor again.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://atom.io/&quot;&gt;
+  &lt;img src=&quot;/public/img/atom.png&quot; alt=&quot;Atom editor&quot; class=&quot;margin-y-30&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Atom is basically a open source clone of Sublime Text, built on web technologies.
+I’ve tried it two times in the past, but both times I was going back to Sublime.
+It just wasn’t as polished and fast as Sublime is.
+Couple of weeks ago I gave it another chance.&lt;/p&gt;
+
+&lt;p&gt;This time it blew me away. It is so much faster than it was last time I tried it.
+Community released and updated so many great packages.
+Linters, support for React, Angular, Babel, ES2015…
+UI is better, everything improved so much.&lt;/p&gt;
+
+&lt;p&gt;Small disclaimer, I’m primary a front end developer, and Atom is awesome for it.
+People are using it for everything else too, but I don’t have much experience with other languages.&lt;/p&gt;
+
+&lt;p&gt;Issue with large files is still here though. Opening 5MB+ log files is painful.
+This is something that I hope will be solved in the future, but it is not a deal breaker for me.
+Also when you open a file, there is a brief flash of white text,
+before syntax highlighting kicks in, but I got used to it after couple of days.&lt;/p&gt;
+
+&lt;p&gt;Long story short - I’m sticking with Atom this time.&lt;/p&gt;
+
+&lt;p&gt;Thanks to everyone in the Atom team and community, for making awesome development tool,
+and keeping it open source.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Edit: I even used Atom recently on live coding session on
+&lt;a href=&quot;/null-object-tech-meetup-vol-2/&quot;&gt;Null Object Tech Meetup&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/null-object-tech-meetup-vol-2/&quot;&gt;
+  &lt;img src=&quot;/public/img/meetup-vol-2/4.jpg&quot; alt=&quot;Null Object tech meetup live coding&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Null Object Tech Meetup Vol 2</title>
+   <link href="http://stanko.github.io/null-object-tech-meetup-vol-2/"/>
+   <updated>2016-04-15T00:00:00+02:00</updated>
+   <id>http://stanko.github.io/null-object-tech-meetup-vol-2</id>
+   <content type="html">&lt;p&gt;Two days ago, we held the second Tech Meetup.
+There were two speakers including myself, and Nemanja Nićiforović, our CEO.
+Nemanja spoke &lt;i&gt;How to Freelance&lt;/i&gt;, and I covered &lt;i&gt;Intro to React&lt;/i&gt;.&lt;/p&gt;
+
+&lt;p&gt;Grab slides:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/public/pdf/Null Object Tech Meetup - How To Freelance.pdf&quot;&gt;How To Freelance&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/public/pdf/Null Object Tech Meetup - Intro To React.pdf&quot;&gt;Intro To React&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We are very thankful to our friends at
+&lt;a href=&quot;https://www.facebook.com/zaokret/&quot;&gt;Zaokret&lt;/a&gt; where meetup took place.
+There were around 60 people and we hope even more people will come to the next one.
+Hopefully, we are not going to make a year long pause like we did between this and the last one.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/meetup-vol-2/1.jpg&quot; alt=&quot;Null Object tech meetup audience&quot; /&gt;
+&lt;img src=&quot;/public/img/meetup-vol-2/2.jpg&quot; alt=&quot;Stanko Tadic talking at tech meetup&quot; /&gt;
+&lt;img src=&quot;/public/img/meetup-vol-2/3.jpg&quot; alt=&quot;Null Object tech meetup audience&quot; /&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>HTML canvas video player</title>
+   <link href="http://stanko.github.io/html-canvas-video-player-ios/"/>
+   <updated>2016-04-05T00:00:00+02:00</updated>
+   <id>http://stanko.github.io/html-canvas-video-player-ios</id>
+   <content type="html">&lt;p&gt;This is the one of my most popular repos. Once client asked for inline video that works on iPhone too.
+As Apple doesn’t allow that (all videos are full screen in native player, and autoplay is not supported),.
+There was no easy solution, so this player was born.&lt;/p&gt;
+
+&lt;p&gt;It uses HTML &lt;code class=&quot;highlighter-rouge&quot;&gt;video&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;canvas&lt;/code&gt;. Script picks up the frame from the video and draws it on the canvas.
+For sound, there is &lt;code class=&quot;highlighter-rouge&quot;&gt;audio&lt;/code&gt; element using video files (you can provide different audio file for it).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stanko.github.io/html-canvas-video-player/&quot;&gt;
+  &lt;img src=&quot;/public/img/projects/canvas-video.jpg&quot; alt=&quot;HTML canvas video player - Demo&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Play, pause, jump to time and autoplay are all supported.
+But please check the &lt;a href=&quot;http://stanko.github.io/html-canvas-video-player/&quot;&gt;documentation and demo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You shouldn’t use this on any device that supports HTML video natively, but as a fallback.&lt;/p&gt;
+
+&lt;p&gt;Grab the code on &lt;a href=&quot;https://github.com/Stanko/html-canvas-video-player&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>My favorite bash oneliner</title>
+   <link href="http://stanko.github.io/my-favorite-bash-oneliner/"/>
+   <updated>2016-04-04T00:00:00+02:00</updated>
+   <id>http://stanko.github.io/my-favorite-bash-oneliner</id>
+   <content type="html">&lt;p&gt;This simple bash command finds all of the files matching &lt;code class=&quot;highlighter-rouge&quot;&gt;*~&lt;/code&gt; recursively, executes &lt;code class=&quot;highlighter-rouge&quot;&gt;rm&lt;/code&gt; on them
+and prints out which files are affected.&lt;/p&gt;
+
+&lt;p&gt;You can replace file matching pattern, and command you want to execute.&lt;/p&gt;
+
+&lt;pre&gt;
+  find ./ -name &#39;*~&#39; -exec rm &#39;{}&#39; &#39;;&#39; -print
+&lt;/pre&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Custom scroll bars</title>
+   <link href="http://stanko.github.io/custom-scroll-bars/"/>
+   <updated>2016-03-21T00:00:00+01:00</updated>
+   <id>http://stanko.github.io/custom-scroll-bars</id>
+   <content type="html">&lt;p&gt;Generally when comes to replacing native UI components, I’m strongly against it.
+But, we’ve all been there, when the client insists on it.&lt;/p&gt;
+
+&lt;p&gt;You’ll see how to style it via CSS (webkit only),
+apply pure JavaScipt plugin with native scrolling or apply simple CSS hack.&lt;/p&gt;
+
+&lt;p&gt;Well, let’s go :)&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;css-solution-but-only-for-webkit&quot;&gt;CSS solution, but only for webkit&lt;/h3&gt;
+
+&lt;p&gt;Webkit scrollbars can be styles via CSS. This is great, but still not cross browser.
+CSS tricks has a &lt;a href=&quot;https://css-tricks.com/custom-scrollbars-in-webkit/&quot;&gt;great article&lt;/a&gt; on it.&lt;/p&gt;
+
+&lt;p&gt;You can use pseudo selectors, these ones are used in the demo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nd&quot;&gt;::-webkit-scrollbar&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#CCF6ED&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;border-radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;8px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;8px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;::-webkit-scrollbar-thumb&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#21BB9A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;border-radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check jsfiddle demo with green-ish scrollbars &lt;i&gt;webkit only&lt;/i&gt;.&lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;400&quot; src=&quot;//jsfiddle.net/on9uho92/embedded/result,css/&quot; allowfullscreen=&quot;allowfullscreen&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;custom-javascript-plugin-using-native-scroll&quot;&gt;Custom JavaScript plugin, using native scroll&lt;/h3&gt;
+
+&lt;p&gt;This one I wrote years ago, and it is fully supporting IE8. It needs some love,
+as it should updated with I have learned since then.&lt;/p&gt;
+
+&lt;p&gt;Using browser native scroll so it is smooth as you can get.
+Scrollbars are customizable via CSS.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stanko.github.io/rocketScroll/&quot;&gt;
+  &lt;img src=&quot;/public/img/projects/rocket-scroll.png&quot; alt=&quot;Demo - React slider with touch support&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Check the &lt;a href=&quot;http://stanko.github.io/rocketScroll/&quot;&gt;demo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Grab the code on &lt;a href=&quot;https://github.com/Stanko/rocketScroll&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;css-solution-all-browsers&quot;&gt;CSS solution, all browsers&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Idea - Show scrollbars only on mouse hover.&lt;/li&gt;
+  &lt;li&gt;Problem - content will be shrinked for the width of the scrollbar on hover, and jump.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We are going to exploit the fast that all of the browsers have sub 20px wide scrollbar.
+This demo is using two divs, outer one which will be scrolled, and content wrapped in the inner one.
+Just put &lt;code class=&quot;highlighter-rouge&quot;&gt;overflow: hidden&lt;/code&gt; on the outer div, and on mouse hover, switch to &lt;code class=&quot;highlighter-rouge&quot;&gt;overflow: scroll&lt;/code&gt;
+Having inner div smaller for 20px, you will be able to create enough
+space for the scroll bar, and content won’t jump around.&lt;/p&gt;
+
+&lt;p&gt;You’ll need to add modernizr, or some other way to detect touch devices.
+That’s why we are using &lt;code class=&quot;highlighter-rouge&quot;&gt;overflow-y: scroll&lt;/code&gt; by default.
+Scrolling on touch devices is already nice and smooth.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.scroll-y&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;300px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;300px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;overflow-y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;scroll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* not to mess up scroll on touch devices */&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.scroll-y-content&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;280px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* 20px less than parent width */&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;/* no-touchevents class is added by modernizr
+ * as we don&#39;t want to apply this on touch devices */&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.no-touchevents&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.scroll-y&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;overflow-y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;hidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.no-touchevents&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.scroll-y&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:hover&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;overflow-y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;scroll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check jsfiddle demo.&lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;400&quot; src=&quot;//jsfiddle.net/az220ayb/embedded/result,css,html/&quot; allowfullscreen=&quot;allowfullscreen&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Simple React slider with touch support</title>
+   <link href="http://stanko.github.io/simple-react-slider/"/>
+   <updated>2016-03-12T00:00:00+01:00</updated>
+   <id>http://stanko.github.io/simple-react-slider</id>
+   <content type="html">&lt;p&gt;I needed simple React slider component, as we are building our new website as a universal React application.
+But I did not find anything lightweight. There is a crazy trend in JavaScript world - add gazillion dependencies.&lt;/p&gt;
+
+&lt;p&gt;So again, I made something myself.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stanko.github.io/react-slider/&quot;&gt;
+  &lt;img src=&quot;/public/img/projects/react-slider.png&quot; alt=&quot;Demo - React slider with touch support&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Check the &lt;a href=&quot;http://stanko.github.io/react-slider/&quot;&gt;demo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It has &lt;b&gt;no dependencies&lt;/b&gt;, and about 200 lines of code.
+Very simple and extensible. Every modern browser is supported and IE10+.&lt;/p&gt;
+
+&lt;p&gt;IE9 should work (if you adapt the CSS), but I didn’t test it.&lt;/p&gt;
+
+&lt;p&gt;Grab the code on &lt;a href=&quot;https://github.com/Stanko/react-slider&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>What is the point of the website if it kills my laptop?</title>
+   <link href="http://stanko.github.io/what-is-the-point/"/>
+   <updated>2016-02-29T00:00:00+01:00</updated>
+   <id>http://stanko.github.io/what-is-the-point</id>
+   <content type="html">&lt;p&gt;People need to realize that is not enough to have a nice website with a ton of animations and effects.
+There is no point having such website if I can’t scroll it, while CPU and coolers go crazy.
+And I use latest MacBook with maxed hardware. Can’t imagine trying to use those websites on the old machine (or IE8-9).&lt;/p&gt;
+
+&lt;p&gt;Get your performance together.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Jekyll "Read more" link</title>
+   <link href="http://stanko.github.io/jekyll-read-more-link/"/>
+   <updated>2016-02-27T00:00:00+01:00</updated>
+   <id>http://stanko.github.io/jekyll-read-more-link</id>
+   <content type="html">&lt;p&gt;It is nice to use &lt;code class=&quot;highlighter-rouge&quot;&gt;instead of&lt;/code&gt;
+on your Jekyll home page, but then users can’t see if there is more to read until they open
+the whole post.&lt;/p&gt;
+
+&lt;p&gt;To add &lt;code class=&quot;highlighter-rouge&quot;&gt;Read more&lt;/code&gt; link, you can use this simple snippet.&lt;/p&gt;
+
+&lt;pre&gt;
+{&amp;percnt; if post.excerpt != post.content &amp;percnt;}
+    &amp;lt;a href=&amp;quot;&amp;lbrace;&amp;lbrace; site.baseurl }}&amp;lbrace;&amp;lbrace; post.url }}&amp;quot;&amp;gt;Read more&amp;lt;/a&amp;gt;
+{&amp;percnt; endif &amp;percnt;}
+&lt;/pre&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Jekyll and Gulp workflow</title>
+   <link href="http://stanko.github.io/jekyll-gulp-workflow/"/>
+   <updated>2016-02-27T00:00:00+01:00</updated>
+   <id>http://stanko.github.io/jekyll-gulp-workflow</id>
+   <content type="html">&lt;p&gt;As you probably know this blog is powered by &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;.
+It is a really nice platform, but it lacks a few things I’m used to during development.
+First one is live reload on file changes (and injecting CSS), using SASS, autoprefixer, ES6…&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;I tried to find a boilerplate, but everything I found didn’t match my needs.
+Usually people would run gulp tasks for SASS and JavaScript files, and on change
+run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll build&lt;/code&gt;, which is insanely slow.
+They would use &lt;a href=&quot;https://www.browsersync.io/&quot;&gt;BrowserSync&lt;/a&gt; to serve &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;So I did what programmers do - written my own. I quickly made usual gulp tasks:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;styles&lt;/code&gt; - to compile SASS and autoprefix it&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;scripts&lt;/code&gt; - to transpile ES6 goodness, and concatenate JavaScript files&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;serve&lt;/code&gt; - to start local server, watch for changes and auto reload&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;First thing I did is that I was running &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; in one terminal,
+and &lt;code class=&quot;highlighter-rouge&quot;&gt;gulp serve&lt;/code&gt; with BrowserSync in the other.
+This was working decently, but I wanted to run only one command, and let the tasks do everything for me.&lt;/p&gt;
+
+&lt;p&gt;That is where node child process comes in.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;childProcess&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;child_process&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;spawn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;childProcess&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;spawn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;jekyll&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;jekyll&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;spawn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;jekyll&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;serve&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;stdio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;inherit&#39;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This task * spawns a child process from gulp.
+Nice thing is that we can start it, and gulp will kill it on exit.
+Now we have up and running Jekyll server, and proxy it to BrowserSync.&lt;/p&gt;
+
+&lt;p&gt;But darn, injecting CSS files didn’t really work. Server was expeting CSS file
+to come from &lt;code class=&quot;highlighter-rouge&quot;&gt;/public/css/style.css&lt;/code&gt;, but &lt;code class=&quot;highlighter-rouge&quot;&gt;browserSync.stream&lt;/code&gt; in gulp pipe would
+inject it from the &lt;code class=&quot;highlighter-rouge&quot;&gt;_sass&lt;/code&gt; folder. I solved this by copying css file to the &lt;code class=&quot;highlighter-rouge&quot;&gt;.tmp/public/css&lt;/code&gt; and
+adding &lt;code class=&quot;highlighter-rouge&quot;&gt;.tmp&lt;/code&gt; to the &lt;code class=&quot;highlighter-rouge&quot;&gt;serveStatic&lt;/code&gt; option of the BrowserSync.&lt;/p&gt;
+
+&lt;p&gt;One thing I should mention, that I keep my SASS files in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_sass&lt;/code&gt; folder, and
+JavaScript in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_js&lt;/code&gt; one.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Gulp watches changes on SASS/JS, and compiles them into &lt;code class=&quot;highlighter-rouge&quot;&gt;public&lt;/code&gt; folder.&lt;/li&gt;
+  &lt;li&gt;Then &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; takes them and moves them to &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt;. Jekyll also takes care of &lt;code class=&quot;highlighter-rouge&quot;&gt;.md&lt;/code&gt; files.&lt;/li&gt;
+  &lt;li&gt;Gulp watches changes on &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; and reloads the browser if html/js is changed.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Complete code is available &lt;a href=&quot;https://github.com/Stanko/Stanko.github.io&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;
+* Actual taks is a bit more complicated, check the whole
+&lt;a href=&quot;https://github.com/Stanko/Stanko.github.io/blob/master/gulpfile.babel.js&quot;&gt;gulpfile&lt;/a&gt;.
+&lt;/small&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;tldr&quot;&gt;TL;DR&lt;/h3&gt;
+
+&lt;p&gt;To enable live reload, SASS and JS transpiling in your Jekyll development grab my
+&lt;a href=&quot;https://github.com/Stanko/Stanko.github.io/blob/master/gulpfile.babel.js&quot;&gt;gulpfile.babel.js&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/Stanko/Stanko.github.io/blob/master/package.json&quot;&gt;package.json&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Add this to your &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;
+exclude: [
+  &#39;node_modules&#39;,
+  &#39;gulpfile.babel.js&#39;,
+  &#39;package.json&#39;,
+  &#39;_sass&#39;,
+  &#39;_js&#39;,
+  &#39;.sass-cache&#39;
+]
+&lt;/pre&gt;
+
+&lt;p&gt;Run &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install&lt;/code&gt; then &lt;code class=&quot;highlighter-rouge&quot;&gt;gulp&lt;/code&gt; when it is finished and open &lt;code class=&quot;highlighter-rouge&quot;&gt;http://localhost:9000&lt;/code&gt; in your browser.
+Then write your posts and enjoy much smoother workflow.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>3D Rotating cubes hover effect</title>
+   <link href="http://stanko.github.io/3d-rotating-cube-effect/"/>
+   <updated>2016-02-23T00:00:00+01:00</updated>
+   <id>http://stanko.github.io/3d-rotating-cube-effect</id>
+   <content type="html">&lt;p&gt;Again, I’ve seen it somewhere on the internet and recreated it.
+This one uses jQuery, although I plan to rewrite it to vanilla JavaScript.&lt;/p&gt;
+
+&lt;p&gt;It switches between two &lt;i&gt;sides&lt;/i&gt; of the cube, every time you hover.
+Depending from which side cursor entered the cube, it will rotate in opposite direction.
+It is fully responsive, and on touch devices, direction depends of where you tap.&lt;/p&gt;
+
+&lt;p&gt;Cube side is a regular &lt;code class=&quot;highlighter-rouge&quot;&gt;div&lt;/code&gt;, and you can put any type of content in it.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stanko.github.io/cube-3D-rotate-grid/&quot;&gt;
+  &lt;img src=&quot;/public/img/projects/cube-3D-rotate-grid.png&quot; alt=&quot;Demo - 3D Rotating cubes hover effect&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Works on every modern browser, but on IE it falls back to fade effect.
+Thing is that Internet Explorers do not support &lt;code class=&quot;highlighter-rouge&quot;&gt;transform-style: preserve-3d&lt;/code&gt; property.
+More on &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/transform-style&quot;&gt;MDN&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Check the &lt;a href=&quot;http://stanko.github.io/cube-3D-rotate-grid/&quot;&gt;demo&lt;/a&gt;.
+Documentation is on the same page.&lt;/p&gt;
+
+&lt;p&gt;Grab the code on &lt;a href=&quot;https://github.com/Stanko/cube-3D-rotate-grid&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Warning: Every person I introduced to this played with it for ages :)&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Custom Jekyll pagination</title>
+   <link href="http://stanko.github.io/custom-jekyll-pagination/"/>
+   <updated>2016-02-22T00:00:00+01:00</updated>
+   <id>http://stanko.github.io/custom-jekyll-pagination</id>
+   <content type="html">&lt;p&gt;Jekyll comes with simple pagination which has only &lt;code class=&quot;highlighter-rouge&quot;&gt;Newer&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Older&lt;/code&gt; links.
+I wanted a little bit more, now pagination shows at least five pages, with current in the middle.
+On the larger screens there are also first and last page links.
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Newer&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Older&lt;/code&gt; links are, of course, still there.&lt;/p&gt;
+
+&lt;p&gt;Check the &lt;a href=&quot;https://gist.github.com/Stanko/4e379a72715fc596c1cc&quot;&gt;gist with the code&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can see it at the bottom of this website, or just check the screenshot below:
+&lt;img src=&quot;/public/img/projects/jekyll-pagination.png&quot; alt=&quot;Custom Jekyll pagination&quot; /&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Animated login and signup forms</title>
+   <link href="http://stanko.github.io/animated-login-signup-forms/"/>
+   <updated>2016-02-22T00:00:00+01:00</updated>
+   <id>http://stanko.github.io/animated-login-signup-forms</id>
+   <content type="html">&lt;p&gt;Well I saw pretty nice mockup on &lt;a href=&quot;https://dribbble.com/shots/2311260-Day-1-Sign-Up-and-Login-Animated-Download-Template&quot;&gt;Dribbble&lt;/a&gt;
+and decided to make it for fun. It didn’t include mobile/responsive solution, so I came up with my own.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stanko.github.io/animated-onboarding/&quot;&gt;
+  &lt;img src=&quot;/public/img/projects/animated-onboarding.png&quot; alt=&quot;Demo - Animated login and signup forms&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Check the &lt;a href=&quot;http://stanko.github.io/animated-onboarding/&quot;&gt;demo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is pure CSS solution - it uses &lt;code class=&quot;highlighter-rouge&quot;&gt;:target&lt;/code&gt; selector for changing states.
+Find more about &lt;code class=&quot;highlighter-rouge&quot;&gt;:target&lt;/code&gt; on &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/:target&quot;&gt;MDN&lt;/a&gt;.
+This is neat, as it also can be bookmarked on both states, and browser button work too.&lt;/p&gt;
+
+&lt;p&gt;Grab the code on &lt;a href=&quot;https://github.com/Stanko/animated-onboarding&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Hello World</title>
+   <link href="http://stanko.github.io/hello-world/"/>
+   <updated>2016-02-21T00:00:00+01:00</updated>
+   <id>http://stanko.github.io/hello-world</id>
+   <content type="html">&lt;p&gt;Everything starts with a &lt;code&gt;Hello World&lt;/code&gt; so does this blog.&lt;/p&gt;
+
+&lt;p&gt;For the first time everything will be under heavy development, until I get it the way I want.&lt;/p&gt;
+
+&lt;p&gt;As I really enjoy making stuff, I decided to try to make small JavaScript or CSS (SASS) plugin/script every week.
+Those are going to be both big and small, proof of concepts and production ready stuff.&lt;/p&gt;
+</content>
+ </entry>
+ 
 
 </feed>

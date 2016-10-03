@@ -102,8 +102,8 @@
     <img class="Post-bg" src="/public/img/home/poly1.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
-        <a href="/animate-window-scroll-to/">
-          Plain JavaScript animated window scroll function
+        <a href="/my-favorite-bash-oneliner/">
+          My favorite bash oneliner
         </a>
       </h1>
 
@@ -115,22 +115,18 @@
 </svg>
 
         </div>
-        28 Sep 2016
+        04 Apr 2016
       </div>
-      <p>Before modern frameworks, I always used jQuery’s <code class="highlighter-rouge">scrollTo</code> method.
-At some point, not every project included jQuery, so I wrote simple function
-to animate window scroll.</p>
+      <p>This simple bash command finds all of the files matching <code class="highlighter-rouge">*~</code> recursively, executes <code class="highlighter-rouge">rm</code> on them
+and prints out which files are affected.</p>
 
-<p>I have kept copying that function from project to project.
-Finally I took some time, cleaned it up and published it on the npm
-(this is the first npm package I published).</p>
+<p>You can replace file matching pattern, and command you want to execute.</p>
 
-<p>Demo and documentation is available <a href="https://stanko.github.io/animated-scroll-to/">here</a>.</p>
-
+<pre>
+  find ./ -name '*~' -exec rm '{}' ';' -print
+</pre>
 
 
-      
-          <a class="Post-readmore" href="/animate-window-scroll-to/">Read more</a>
       
     </div>
   </div>
@@ -139,8 +135,8 @@ Finally I took some time, cleaned it up and published it on the npm
     <img class="Post-bg" src="/public/img/home/poly2.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
-        <a href="/font-size-and-tracking-points-to-pixels/">
-          Implementing PhotoShop font sizes and tracking in CSS, points to pixels conversion
+        <a href="/custom-scroll-bars/">
+          Custom scroll bars
         </a>
       </h1>
 
@@ -152,25 +148,20 @@ Finally I took some time, cleaned it up and published it on the npm
 </svg>
 
         </div>
-        08 Sep 2016
+        21 Mar 2016
       </div>
-      <p>We’ve all been there - trying to get right font sizes from PhotoShop to CSS.
-Designers usually work with points, which are used in the print, but not common on the web.
-They also use term <em>tracking</em> a lot, which is actually only a letter spacing with different units.</p>
+      <p>Generally when comes to replacing native UI components, I’m strongly against it.
+But, we’ve all been there, when the client insists on it.</p>
 
-<p>You can recalculate everything by hand and try to keep track of it.
-But we can use the goodies of SCSS to make that process a bit easier.</p>
+<p>You’ll see how to style it via CSS (webkit only),
+apply pure JavaScipt plugin with native scrolling or apply simple CSS hack.</p>
 
-<p>Point to pixel ratio is <code class="highlighter-rouge">1pt = 1.333333px</code>. We’ll create SASS function to do conversion for us.</p>
-
-<p>And PhotoShop tracking works relative to the font size.
-One point of tracking is 1/1000 of the font size.
-For this one we’ll create a mixin.</p>
+<p>Well, let’s go :)</p>
 
 
 
       
-          <a class="Post-readmore" href="/font-size-and-tracking-points-to-pixels/">Read more</a>
+          <a class="Post-readmore" href="/custom-scroll-bars/">Read more</a>
       
     </div>
   </div>
@@ -179,8 +170,8 @@ For this one we’ll create a mixin.</p>
     <img class="Post-bg" src="/public/img/home/poly0.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
-        <a href="/always-use-button-for-clickable-elements/">
-          Always use &lt;button&gt; for clickable elements
+        <a href="/simple-react-slider/">
+          Simple React slider with touch support
         </a>
       </h1>
 
@@ -192,18 +183,27 @@ For this one we’ll create a mixin.</p>
 </svg>
 
         </div>
-        02 Sep 2016
+        12 Mar 2016
       </div>
-      <p>Always try to use <code class="highlighter-rouge">&lt;button&gt;</code> when  <strong>element is clickable, but it is not a link</strong>.
-Avoid <code class="highlighter-rouge">&lt;a&gt;</code>, <code class="highlighter-rouge">&lt;span&gt;</code>, <code class="highlighter-rouge">&lt;div&gt;</code> and other elements.</p>
+      <p>I needed simple React slider component, as we are building our new website as a universal React application.
+But I did not find anything lightweight. There is a crazy trend in JavaScript world - add gazillion dependencies.</p>
 
-<p>Note that <code class="highlighter-rouge">display: flex</code> works differently on buttons in different browsers,
-but we have easy fix for that.</p>
+<p>So again, I made something myself.</p>
+
+<p><a href="http://stanko.github.io/react-slider/">
+  <img src="/public/img/projects/react-slider.png" alt="Demo - React slider with touch support" />
+</a></p>
+
+<p>Check the <a href="http://stanko.github.io/react-slider/">demo</a>.</p>
+
+<p>It has <b>no dependencies</b>, and about 200 lines of code.
+Very simple and extensible. Every modern browser is supported and IE10+.</p>
+
+<p>IE9 should work (if you adapt the CSS), but I didn’t test it.</p>
+
+<p>Grab the code on <a href="https://github.com/Stanko/react-slider">GitHub</a>.</p>
 
 
-
-      
-          <a class="Post-readmore" href="/always-use-button-for-clickable-elements/">Read more</a>
       
     </div>
   </div>
@@ -212,8 +212,8 @@ but we have easy fix for that.</p>
     <img class="Post-bg" src="/public/img/home/poly1.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
-        <a href="/sass-random-and-circle-animation/">
-          SASS random() and circle animation
+        <a href="/what-is-the-point/">
+          What is the point of the website if it kills my laptop?
         </a>
       </h1>
 
@@ -225,20 +225,15 @@ but we have easy fix for that.</p>
 </svg>
 
         </div>
-        30 Aug 2016
+        29 Feb 2016
       </div>
-      <p>I decided to move my CSS playground to the CodePen, and this is the first one I made.</p>
+      <p>People need to realize that is not enough to have a nice website with a ton of animations and effects.
+There is no point having such website if I can’t scroll it, while CPU and coolers go crazy.
+And I use latest MacBook with maxed hardware. Can’t imagine trying to use those websites on the old machine (or IE8-9).</p>
 
-<p>Idea came to me while I was riding on a bus, and I might use it on this blog,
-as a part of it’s redesign.</p>
-
-<p>This is CSS only animation (I used JS to create 50 elements though).
-And you can see the usage of SASS <code class="highlighter-rouge">random()</code> function.</p>
+<p>Get your performance together.</p>
 
 
-
-      
-          <a class="Post-readmore" href="/sass-random-and-circle-animation/">Read more</a>
       
     </div>
   </div>
@@ -247,8 +242,8 @@ And you can see the usage of SASS <code class="highlighter-rouge">random()</code
     <img class="Post-bg" src="/public/img/home/poly2.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
-        <a href="/setting-up-webpack-babel-and-react-from-scratch-part-2/">
-          Setting up Webpack, Babel and React from scratch - Part 2
+        <a href="/jekyll-read-more-link/">
+          Jekyll "Read more" link
         </a>
       </h1>
 
@@ -260,38 +255,21 @@ And you can see the usage of SASS <code class="highlighter-rouge">random()</code
 </svg>
 
         </div>
-        29 Aug 2016
+        27 Feb 2016
       </div>
-      <h2 id="part-two">Part two</h2>
+      <p>It is nice to use <code class="highlighter-rouge">instead of</code>
+on your Jekyll home page, but then users can’t see if there is more to read until they open
+the whole post.</p>
 
-<p>Update: Part two is pretty much done. Part three will cover redux and production builds.</p>
+<p>To add <code class="highlighter-rouge">Read more</code> link, you can use this simple snippet.</p>
 
-<p>Other parts:</p>
-
-<ul>
-  <li><a href="/setting-up-webpack-babel-and-react-from-scratch">Part 1</a> - Webpack, Babel, React, Router, ESLint</li>
-  <li>Part 2 - SASS, More ES6 goodness (Static props, decorators, deconstruction…)</li>
-  <li>Part 3 - Redux, adding production config - <strong>WIP, Soon!</strong></li>
-</ul>
-
-<h2 id="adding-sass">Adding SASS</h2>
-
-<p>We will use SASS loader for webpack, so let’s install it together with node-sass compiler,
- css and style loaders</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>npm install --save-dev style-loader css-loader sass-loader node-sass
-</code></pre>
-</div>
-
-<p>Create <code class="highlighter-rouge">scss</code> folder in the <code class="highlighter-rouge">app</code> folder, and main <code class="highlighter-rouge">app.scss</code> file in it.
-This file will include all of the other scss files.</p>
-
-<p>Now we need to add a loader to webpack config file.</p>
+<pre>
+{&percnt; if post.excerpt != post.content &percnt;}
+    &lt;a href=&quot;&lbrace;&lbrace; site.baseurl }}&lbrace;&lbrace; post.url }}&quot;&gt;Read more&lt;/a&gt;
+{&percnt; endif &percnt;}
+</pre>
 
 
-
-      
-          <a class="Post-readmore" href="/setting-up-webpack-babel-and-react-from-scratch-part-2/">Read more</a>
       
     </div>
   </div>
@@ -312,16 +290,16 @@ This file will include all of the other scss files.</p>
   <div class="Pagination">
     <div class="Pagination-inner">
       
-        <span class="Pagination-link Pagination-link--arrow Pagination-link--inactive">
+        <a class="Pagination-link Pagination-link--arrow" href="/page-3">
           <span class="Pagination-arrow Pagination-arrow--left"></span>
-        </span>
+        </a>
       
 
       
 
       
         
-          <a class="Pagination-link Pagination-link--active" class="active">1</a>
+          <a class="Pagination-link" href="/">1</a>
         
       
         
@@ -333,7 +311,7 @@ This file will include all of the other scss files.</p>
         
       
         
-          <a class="Pagination-link" href="/page-4">4</a>
+          <a class="Pagination-link Pagination-link--active" class="active">4</a>
         
       
         
@@ -344,7 +322,7 @@ This file will include all of the other scss files.</p>
       
 
       
-        <a class="Pagination-link Pagination-link--arrow" href="/page-2">
+        <a class="Pagination-link Pagination-link--arrow" href="/page-5">
           <span class="Pagination-arrow Pagination-arrow--right"></span>
         </a>
       
@@ -380,7 +358,7 @@ This file will include all of the other scss files.</p>
       <div class="Menu-menuWrapper">
         <div class="Menu-menu Menu-menu--links">
           <a
-            class="Menu-menuLink Menu-menuLink--active"
+            class="Menu-menuLink "
             href="/">
             Home
           </a>
