@@ -4,13 +4,125 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2016-10-19T22:02:49+00:00</updated>
+ <updated>2016-10-20T15:18:05+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
    <email>stanko@null-object.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Blog redesign and new features</title>
+   <link href="http://stanko.github.io/new-design-and-features/"/>
+   <updated>2016-10-20T00:00:00+00:00</updated>
+   <id>http://stanko.github.io/new-design-and-features</id>
+   <content type="html">&lt;p&gt;As you probably noticed I redesigned my blog and added some new features.
+This is a list of the new stuff.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;New design&lt;/li&gt;
+  &lt;li&gt;Category pages&lt;/li&gt;
+  &lt;li&gt;Comments&lt;/li&gt;
+  &lt;li&gt;Search&lt;/li&gt;
+  &lt;li&gt;Reading time&lt;/li&gt;
+  &lt;li&gt;Share buttons&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;new-design&quot;&gt;New design&lt;/h3&gt;
+
+&lt;p&gt;My friend Nikola, from &lt;a href=&quot;http://mida.rs&quot;&gt;MIDA&lt;/a&gt; digital agency, helped me a lot with this one.
+I gave him a basic idea what I wanted, and he came up with this simple but beautiful design.
+It might go through some smaller changes in the future, but nothing major.
+Hope you like it.&lt;/p&gt;
+
+&lt;h3 id=&quot;category-pages&quot;&gt;Category pages&lt;/h3&gt;
+
+&lt;p&gt;These are accessible from the main menu, or by clicking on the category link at the end of the post.
+Obviosly, they list all of the posts for the selected category.
+Plugin I used is &lt;a href=&quot;https://github.com/jekyll/jekyll-archives&quot;&gt;jekyll-archives&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;comments&quot;&gt;Comments&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://staticman.net/&quot;&gt;Staticman&lt;/a&gt; brings user generated content to the static site generators.
+You can add their bot to your repo, and then hitting specific endpoint will
+generate a pull request (or push directly) with the data user entered.
+My comments are going through pull requests, which enables me to moderate them.&lt;/p&gt;
+
+&lt;h3 id=&quot;search&quot;&gt;Search&lt;/h3&gt;
+
+&lt;p&gt;Also accessible from the main menu. Search is done by JavaScript and it
+goes through JSON object with post titles.
+It uses fuzzy search algorithm, so it will find every title
+that has all of the letters you entered.
+Longer word matched will give higher priority to a result.
+(Try typing &lt;code class=&quot;highlighter-rouge&quot;&gt;SASS&lt;/code&gt; for example.)&lt;/p&gt;
+
+&lt;h3 id=&quot;reading-time&quot;&gt;Reading time&lt;/h3&gt;
+
+&lt;p&gt;At the top of each post, you’ll see estimated reading time.
+It is a very simple plugin I found somewhere on the internet and modified a bit.&lt;/p&gt;
+
+&lt;p&gt;Here it is:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Outputs the reading time&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Read this in &quot;about 4 minutes&quot;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Put into your _plugins dir in your Jekyll site&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Usage: Read this in about about 3  minutes&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;ReadingTimeFilter&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;reading_time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;words_per_minute&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;180&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;minutes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words_per_minute&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;floor&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;minutes_label&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;minutes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot; minute&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot; minutes&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;minutes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;about &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;minutes&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;minutes_label&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;less than 1 minute&quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;no&quot;&gt;Liquid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Template&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;register_filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;ReadingTimeFilter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;share-buttons&quot;&gt;Share buttons&lt;/h3&gt;
+
+&lt;p&gt;At the end of each post, there are three simple sharing buttons.
+For Facebook, Twitter and Google+. No API or third party scripts are loaded.&lt;/p&gt;
+
+&lt;h3 id=&quot;other-stuff-i-want-to-add&quot;&gt;Other stuff I want to add&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Real related posts - Jekyll by default as related posts actually shows latest posts.
+I’m still looking for a nice way to implement this.
+Probably I’ll just match posts by tags.&lt;/li&gt;
+  &lt;li&gt;Meta data (for sharing and SEO) - just need to add few meta tags to the head.&lt;/li&gt;
+  &lt;li&gt;JSX syntax highlighting - not sure how to make this one, still at the drawing board.&lt;/li&gt;
+  &lt;li&gt;Add icon for the &lt;a href=&quot;/atom.xml&quot;&gt;ATOM feed&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;custom-plugins-and-github-pages&quot;&gt;Custom plugins and GitHub pages&lt;/h3&gt;
+
+&lt;p&gt;When I first pushed new version of the blog, most of the new features were missing.
+I quickly learned that GitHub pages doesn’t allow custom plugins.
+It is a reasonable security feature.&lt;/p&gt;
+
+&lt;p&gt;I decided to get a hosting for the blog, and then use Jenkins to make a Jekyll builds.
+But colleague told me that this is easily doable using &lt;a href=&quot;https://travis-ci.org/&quot;&gt;Travis&lt;/a&gt;,
+without any outside hosting.
+There will be a new post about it, with detailed description how to set it up.&lt;/p&gt;
+
+&lt;p&gt;Basically I use the &lt;code class=&quot;highlighter-rouge&quot;&gt;source&lt;/code&gt; branch for the Jekyll website, and Travis is watching for the pushes on that branch.
+When push is detected, Travis builds static HTML and pushes it to the &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; branch.
+From there GitHub pages takes over and deploys it.&lt;/p&gt;
+
+&lt;h3 id=&quot;for-the-end&quot;&gt;For the end&lt;/h3&gt;
+
+&lt;p&gt;Hope you guys like the changes, if you are interested in anything specific, feel free to leave a comment.
+I’ll try to answer it, or even write a completely new post about it. Thanks!&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Plain JavaScript animated window scroll function</title>

@@ -11,7 +11,7 @@
 
   <title>
     
-      Simple React slider with touch support &middot; Muffin Man's writings
+      Blog redesign and new features &middot; Muffin Man's writings
     
   </title>
 
@@ -67,9 +67,9 @@
         <span></span>
         <span></span>
       </button>
-      <h1>Simple React slider with touch support</h1>
+      <h1>Blog redesign and new features</h1>
       
-        <span>12 Mar 2016</span>
+        <span>20 Oct 2016</span>
       
     </div>
   </div>
@@ -88,7 +88,7 @@
     <div class="Content">
       <div class="Post Container">
         <div class="Post-top">
-          <div class="Post-readTime">This article will take less than 1 minute to read.</div>
+          <div class="Post-readTime">This article will take about 3  minutes to read.</div>
 
           <a href="#comments" class="Post-commentsLink">
             
@@ -98,23 +98,110 @@
           </a>
         </div>
 
-        <p>I needed simple React slider component, as we are building our new website as a universal React application.
-But I did not find anything lightweight. There is a crazy trend in JavaScript world - add gazillion dependencies.</p>
+        <p>As you probably noticed I redesigned my blog and added some new features.
+This is a list of the new stuff.</p>
 
-<p>So again, I made something myself.</p>
+<ul>
+  <li>New design</li>
+  <li>Category pages</li>
+  <li>Comments</li>
+  <li>Search</li>
+  <li>Reading time</li>
+  <li>Share buttons</li>
+</ul>
 
-<p><a href="http://stanko.github.io/react-slider/">
-  <img src="/public/img/projects/react-slider.png" alt="Demo - React slider with touch support" />
-</a></p>
+<!--more-->
 
-<p>Check the <a href="http://stanko.github.io/react-slider/">demo</a>.</p>
+<h3 id="new-design">New design</h3>
 
-<p>It has <b>no dependencies</b>, and about 200 lines of code.
-Very simple and extensible. Every modern browser is supported and IE10+.</p>
+<p>My friend Nikola, from <a href="http://mida.rs">MIDA</a> digital agency, helped me a lot with this one.
+I gave him a basic idea what I wanted, and he came up with this simple but beautiful design.
+It might go through some smaller changes in the future, but nothing major.
+Hope you like it.</p>
 
-<p>IE9 should work (if you adapt the CSS), but I didn’t test it.</p>
+<h3 id="category-pages">Category pages</h3>
 
-<p>Grab the code on <a href="https://github.com/Stanko/react-slider">GitHub</a>.</p>
+<p>These are accessible from the main menu, or by clicking on the category link at the end of the post.
+Obviosly, they list all of the posts for the selected category.
+Plugin I used is <a href="https://github.com/jekyll/jekyll-archives">jekyll-archives</a>.</p>
+
+<h3 id="comments">Comments</h3>
+
+<p><a href="https://staticman.net/">Staticman</a> brings user generated content to the static site generators.
+You can add their bot to your repo, and then hitting specific endpoint will
+generate a pull request (or push directly) with the data user entered.
+My comments are going through pull requests, which enables me to moderate them.</p>
+
+<h3 id="search">Search</h3>
+
+<p>Also accessible from the main menu. Search is done by JavaScript and it
+goes through JSON object with post titles.
+It uses fuzzy search algorithm, so it will find every title
+that has all of the letters you entered.
+Longer word matched will give higher priority to a result.
+(Try typing <code class="highlighter-rouge">SASS</code> for example.)</p>
+
+<h3 id="reading-time">Reading time</h3>
+
+<p>At the top of each post, you’ll see estimated reading time.
+It is a very simple plugin I found somewhere on the internet and modified a bit.</p>
+
+<p>Here it is:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># Outputs the reading time</span>
+
+<span class="c1"># Read this in "about 4 minutes"</span>
+<span class="c1"># Put into your _plugins dir in your Jekyll site</span>
+<span class="c1"># Usage: Read this in about about 3  minutes</span>
+
+<span class="k">module</span> <span class="nn">ReadingTimeFilter</span>
+  <span class="k">def</span> <span class="nf">reading_time</span><span class="p">(</span> <span class="n">input</span> <span class="p">)</span>
+    <span class="n">words_per_minute</span> <span class="o">=</span> <span class="mi">180</span>
+
+    <span class="n">words</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="nf">split</span><span class="p">.</span><span class="nf">size</span><span class="p">;</span>
+    <span class="n">minutes</span> <span class="o">=</span> <span class="p">(</span> <span class="n">words</span> <span class="o">/</span> <span class="n">words_per_minute</span> <span class="p">).</span><span class="nf">floor</span>
+    <span class="n">minutes_label</span> <span class="o">=</span> <span class="n">minutes</span> <span class="o">===</span> <span class="mi">1</span> <span class="p">?</span> <span class="s2">" minute"</span> <span class="p">:</span> <span class="s2">" minutes"</span>
+    <span class="n">minutes</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">?</span> <span class="s2">"about </span><span class="si">#{</span><span class="n">minutes</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">minutes_label</span><span class="si">}</span><span class="s2">"</span> <span class="p">:</span> <span class="s2">"less than 1 minute"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="p">.</span><span class="nf">register_filter</span><span class="p">(</span><span class="no">ReadingTimeFilter</span><span class="p">)</span></code></pre></figure>
+
+<h3 id="share-buttons">Share buttons</h3>
+
+<p>At the end of each post, there are three simple sharing buttons.
+For Facebook, Twitter and Google+. No API or third party scripts are loaded.</p>
+
+<h3 id="other-stuff-i-want-to-add">Other stuff I want to add</h3>
+
+<ul>
+  <li>Real related posts - Jekyll by default as related posts actually shows latest posts.
+I’m still looking for a nice way to implement this.
+Probably I’ll just match posts by tags.</li>
+  <li>Meta data (for sharing and SEO) - just need to add few meta tags to the head.</li>
+  <li>JSX syntax highlighting - not sure how to make this one, still at the drawing board.</li>
+  <li>Add icon for the <a href="/atom.xml">ATOM feed</a></li>
+</ul>
+
+<h3 id="custom-plugins-and-github-pages">Custom plugins and GitHub pages</h3>
+
+<p>When I first pushed new version of the blog, most of the new features were missing.
+I quickly learned that GitHub pages doesn’t allow custom plugins.
+It is a reasonable security feature.</p>
+
+<p>I decided to get a hosting for the blog, and then use Jenkins to make a Jekyll builds.
+But colleague told me that this is easily doable using <a href="https://travis-ci.org/">Travis</a>,
+without any outside hosting.
+There will be a new post about it, with detailed description how to set it up.</p>
+
+<p>Basically I use the <code class="highlighter-rouge">source</code> branch for the Jekyll website, and Travis is watching for the pushes on that branch.
+When push is detected, Travis builds static HTML and pushes it to the <code class="highlighter-rouge">master</code> branch.
+From there GitHub pages takes over and deploys it.</p>
+
+<h3 id="for-the-end">For the end</h3>
+
+<p>Hope you guys like the changes, if you are interested in anything specific, feel free to leave a comment.
+I’ll try to answer it, or even write a completely new post about it. Thanks!</p>
 
 
         <div class="Post-shareAndCategories">
@@ -125,7 +212,7 @@ Very simple and extensible. Every modern browser is supported and IE10+.</p>
             <!-- Sharing button Facebook -->
             <a
               class="SharringButton SharringButton--facebook"
-              href="https://facebook.com/sharer/sharer.php?u=http://stanko.github.io/simple-react-slider/" target="_blank">
+              href="https://facebook.com/sharer/sharer.php?u=http://stanko.github.io/new-design-and-features/" target="_blank">
               <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
   <g>
     <path d="M18.768,7.465H14.5V5.56c0-0.896,0.594-1.105,1.012-1.105s2.988,0,2.988,0V0.513L14.171,0.5C10.244,0.5,9.5,3.438,9.5,5.32 v2.145h-3v4h3c0,5.212,0,12,0,12h5c0,0,0-6.85,0-12h3.851L18.768,7.465z"/>
@@ -136,7 +223,7 @@ Very simple and extensible. Every modern browser is supported and IE10+.</p>
             <!-- Sharing button Twitter -->
             <a
               class="SharringButton SharringButton--twitter"
-              href="https://twitter.com/intent/tweet/?text=Simple React slider with touch support&amp;url=http://stanko.github.io/simple-react-slider/" target="_blank">
+              href="https://twitter.com/intent/tweet/?text=Blog redesign and new features&amp;url=http://stanko.github.io/new-design-and-features/" target="_blank">
               <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
   <g>
     <path d="M23.444,4.834c-0.814,0.363-1.5,0.375-2.228,0.016c0.938-0.562,0.981-0.957,1.32-2.019c-0.878,0.521-1.851,0.9-2.886,1.104 C18.823,3.053,17.642,2.5,16.335,2.5c-2.51,0-4.544,2.036-4.544,4.544c0,0.356,0.04,0.703,0.117,1.036 C8.132,7.891,4.783,6.082,2.542,3.332C2.151,4.003,1.927,4.784,1.927,5.617c0,1.577,0.803,2.967,2.021,3.782 C3.203,9.375,2.503,9.171,1.891,8.831C1.89,8.85,1.89,8.868,1.89,8.888c0,2.202,1.566,4.038,3.646,4.456 c-0.666,0.181-1.368,0.209-2.053,0.079c0.579,1.804,2.257,3.118,4.245,3.155C5.783,18.102,3.372,18.737,1,18.459 C3.012,19.748,5.399,20.5,7.966,20.5c8.358,0,12.928-6.924,12.928-12.929c0-0.198-0.003-0.393-0.012-0.588 C21.769,6.343,22.835,5.746,23.444,4.834z"/>
@@ -147,7 +234,7 @@ Very simple and extensible. Every modern browser is supported and IE10+.</p>
             <!-- Sharing button Google+ -->
             <a
               class="SharringButton SharringButton--googlePlus"
-              href="https://plus.google.com/share?url=http://stanko.github.io/simple-react-slider/" target="_blank">
+              href="https://plus.google.com/share?url=http://stanko.github.io/new-design-and-features/" target="_blank">
               <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
   <g>
     <path d="M11.366,12.928c-0.729-0.516-1.393-1.273-1.404-1.505c0-0.425,0.038-0.627,0.988-1.368 c1.229-0.962,1.906-2.228,1.906-3.564c0-1.212-0.37-2.289-1.001-3.044h0.488c0.102,0,0.2-0.033,0.282-0.091l1.364-0.989 c0.169-0.121,0.24-0.338,0.176-0.536C14.102,1.635,13.918,1.5,13.709,1.5H7.608c-0.667,0-1.345,0.118-2.011,0.347 c-2.225,0.766-3.778,2.66-3.778,4.605c0,2.755,2.134,4.845,4.987,4.91c-0.056,0.22-0.084,0.434-0.084,0.645 c0,0.425,0.108,0.827,0.33,1.216c-0.026,0-0.051,0-0.079,0c-2.72,0-5.175,1.334-6.107,3.32C0.623,17.06,0.5,17.582,0.5,18.098 c0,0.501,0.129,0.984,0.382,1.438c0.585,1.046,1.843,1.861,3.544,2.289c0.877,0.223,1.82,0.335,2.8,0.335 c0.88,0,1.718-0.114,2.494-0.338c2.419-0.702,3.981-2.482,3.981-4.538C13.701,15.312,13.068,14.132,11.366,12.928z M3.66,17.443 c0-1.435,1.823-2.693,3.899-2.693h0.057c0.451,0.005,0.892,0.072,1.309,0.2c0.142,0.098,0.28,0.192,0.412,0.282 c0.962,0.656,1.597,1.088,1.774,1.783c0.041,0.175,0.063,0.35,0.063,0.519c0,1.787-1.333,2.693-3.961,2.693 C5.221,20.225,3.66,19.002,3.66,17.443z M5.551,3.89c0.324-0.371,0.75-0.566,1.227-0.566l0.055,0 c1.349,0.041,2.639,1.543,2.876,3.349c0.133,1.013-0.092,1.964-0.601,2.544C8.782,9.589,8.363,9.783,7.866,9.783H7.865H7.844 c-1.321-0.04-2.639-1.6-2.875-3.405C4.836,5.37,5.049,4.462,5.551,3.89z"/>
@@ -161,9 +248,9 @@ Very simple and extensible. Every modern browser is supported and IE10+.</p>
           <div class="Post-categories">
           <div>Categories</div>
           
-            <a href="/category/javascript">JavaScript</a>
+            <a href="/category/jekyll">Jekyll</a>
           
-            <a href="/category/react">React</a>
+            <a href="/category/blog">Blog</a>
           
         </div>
         </div>
@@ -177,13 +264,6 @@ Very simple and extensible. Every modern browser is supported and IE10+.</p>
 
             
               <div class="RelatedPosts-post">
-                <a href="/new-design-and-features/">
-                  <small>20 Oct 2016</small>
-                  Blog redesign and new features
-                </a>
-              </div>
-            
-              <div class="RelatedPosts-post">
                 <a href="/animate-window-scroll-to/">
                   <small>28 Sep 2016</small>
                   Plain JavaScript animated window scroll function
@@ -194,6 +274,13 @@ Very simple and extensible. Every modern browser is supported and IE10+.</p>
                 <a href="/font-size-and-tracking-points-to-pixels/">
                   <small>08 Sep 2016</small>
                   Implementing PhotoShop font sizes and tracking in CSS, points to pixels conversion
+                </a>
+              </div>
+            
+              <div class="RelatedPosts-post">
+                <a href="/always-use-button-for-clickable-elements/">
+                  <small>02 Sep 2016</small>
+                  Always use &lt;button&gt; for clickable elements
                 </a>
               </div>
             
@@ -224,12 +311,12 @@ Very simple and extensible. Every modern browser is supported and IE10+.</p>
     <input
       name="fields[slug]"
       type="hidden"
-      value="simple-react-slider"
+      value="new-design-and-features"
       class="CommentForm-input CommentForm-input--slug">
     <input
       name="options[slug]"
       type="hidden"
-      value="simple-react-slider"
+      value="new-design-and-features"
       class="CommentForm-input CommentForm-input--optionsSlug">
 
     <div class="Grid">
