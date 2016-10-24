@@ -4,13 +4,135 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2016-10-20T15:18:05+00:00</updated>
+ <updated>2016-10-24T15:42:50+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
    <email>stanko@null-object.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Setting up Travis, Jekyll and GitHub pages</title>
+   <link href="http://stanko.github.io/travis-jekyll-and-github-pages/"/>
+   <updated>2016-10-24T00:00:00+00:00</updated>
+   <id>http://stanko.github.io/travis-jekyll-and-github-pages</id>
+   <content type="html">&lt;p&gt;As I already mentioned, GitHub pages do not work with the Jekyll plugins.
+It is a security measure. So I researched it a bit, and colleague of mine
+proposed a simple solution - Travis CI.&lt;/p&gt;
+
+&lt;p&gt;There is a great repo with instructions how to set everything up -
+&lt;a href=&quot;https://github.com/mfenner/jekyll-travis&quot;&gt;jekyll-travis&lt;/a&gt;.
+But few steps are kinda confusing, and it took me 10 failed builds to make
+it work. So I’ll try to help you with those.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;I copied the steps from the original repo and updated steps where I got stuck.
+Be sure to check the original readme as well.&lt;/p&gt;
+
+&lt;h2 id=&quot;flow&quot;&gt;Flow&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;When you push to your GitHub repo, it triggers Travis&lt;/li&gt;
+  &lt;li&gt;Travis starts up a virtual machine and installs all required software (mostly Ruby gems)&lt;/li&gt;
+  &lt;li&gt;We use a custom rake task to tell travis how to build the Jekyll site and push the updated content back to Github&lt;/li&gt;
+  &lt;li&gt;Travis clones a different branch (either &lt;code class=&quot;highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;, depending on the kind of Github repo) that holds the static HTML pages&lt;/li&gt;
+  &lt;li&gt;Travis runs &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll build&lt;/code&gt; with the destination in the other branch&lt;/li&gt;
+  &lt;li&gt;Travis does a &lt;code class=&quot;highlighter-rouge&quot;&gt;git push&lt;/code&gt; of the other branch&lt;/li&gt;
+  &lt;li&gt;Github Pages starts serving the updates site&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;steps-to-make-it-work&quot;&gt;Steps to make it work&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Move your Jekyll source files to the &lt;code class=&quot;highlighter-rouge&quot;&gt;source&lt;/code&gt; branch (name it as you like).
+We’ll use &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; branch to host generated HTML website.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Make sure you have enabled your source repo in the Travis CI admin dashboard so that the webhook is triggered&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create a GitHub Personal Access Token from you &lt;a href=&quot;https://github.com/settings/tokens&quot;&gt;profile page&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If you haven’t already, create a &lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;, and add &lt;code class=&quot;highlighter-rouge&quot;&gt;rake&lt;/code&gt; gem to it.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;http://production.cf.rubygems.org/&quot;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;rake&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;~&amp;gt; 10.1.1&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;jekyll-paginate&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;jekyll-archives&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;small&gt;
+We have seen &lt;a href=&quot;http://blog.travis-ci.com/2013-05-20-network-timeouts-build-retries/&quot;&gt;intermittent timeouts&lt;/a&gt; fetching gems from Rubygems.org. &lt;code class=&quot;highlighter-rouge&quot;&gt;install: bundle install&lt;/code&gt; lets Travis CI automatically retry, and we are using &lt;code class=&quot;highlighter-rouge&quot;&gt;source &quot;http://production.cf.rubygems.org/&quot;&lt;/code&gt; in Gemfile to point to a different repository.
+&lt;/small&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Install the travis gem (&lt;code class=&quot;highlighter-rouge&quot;&gt;gem install travis&lt;/code&gt;) and create &lt;code class=&quot;highlighter-rouge&quot;&gt;.travis.yml&lt;/code&gt;.
+It will tell Travis what to install and how build our Jekyll site.
+Add following data to it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;language&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ruby&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;rvm&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;2.3.1&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;install&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;bundle install&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;bundle exec rake site:deploy --quiet&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;global&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;secure&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;YOUR_ENCRYPTED_INFO&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Replace the &lt;code class=&quot;highlighter-rouge&quot;&gt;YOUR_ENCRYPTED_INFO&lt;/code&gt; with the output of the following command:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;travis encrypt &lt;span class=&quot;s1&quot;&gt;'GIT_NAME=&quot;Your Username&quot; GIT_EMAIL=&quot;your@email.com&quot; GH_TOKEN=GITHUB_PERSONAL_TOKEN_YOU_CREATED'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Make sure you add &lt;code class=&quot;highlighter-rouge&quot;&gt;vendor&lt;/code&gt; to your .gitignore as Travis CI is vendoring the Ruby gems there. The &lt;code class=&quot;highlighter-rouge&quot;&gt;vendor&lt;/code&gt; folder should also be excluded in the Jekyll &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Add the following to your Jekyll &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file: &lt;code class=&quot;highlighter-rouge&quot;&gt;username&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;repo&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;branch&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# GitHub&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;             &lt;span class=&quot;s&quot;&gt;Stanko&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;repo&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;                 &lt;span class=&quot;s&quot;&gt;Stanko.github.io&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;branch&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;               &lt;span class=&quot;s&quot;&gt;source&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Jekyll source / destination&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;               &lt;span class=&quot;s&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;destination&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;          &lt;span class=&quot;s&quot;&gt;_site&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add the contents of &lt;code class=&quot;highlighter-rouge&quot;&gt;Rakefile&lt;/code&gt; to your Jekyll Rakefile (or replace it).
+The provided &lt;a href=&quot;https://github.com/Stanko/Stanko.github.io/blob/source/Rakefile&quot;&gt;Rakefile&lt;/a&gt;
+ has some additional commands, but the important one here is &lt;code class=&quot;highlighter-rouge&quot;&gt;rake site:deploy&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And you are done! That should be it, of course you need to create a Travis CI account.
+Travis is free for the open source projects. If you are using it for the commercial stuff,
+play fair and check their payed tiers.&lt;/p&gt;
+
+&lt;p&gt;Build for my blog takes about a minute.
+It depends of the software Travis installs on every build.&lt;/p&gt;
+
+&lt;p&gt;Now you can use custom plugins and asset pipeline with Jekyll. Cheers!&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Blog redesign and new features</title>
@@ -67,7 +189,7 @@ It is a very simple plugin I found somewhere on the internet and modified a bit.
 
 &lt;p&gt;Here it is:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Outputs the reading time&lt;/span&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Outputs the reading time&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;# Read this in &quot;about 4 minutes&quot;&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;# Put into your _plugins dir in your Jekyll site&lt;/span&gt;
@@ -84,7 +206,9 @@ It is a very simple plugin I found somewhere on the internet and modified a bit.
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 
-&lt;span class=&quot;no&quot;&gt;Liquid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Template&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;register_filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;ReadingTimeFilter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;no&quot;&gt;Liquid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Template&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;register_filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;ReadingTimeFilter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;share-buttons&quot;&gt;Share buttons&lt;/h3&gt;
 
@@ -111,7 +235,7 @@ It is a reasonable security feature.&lt;/p&gt;
 &lt;p&gt;I decided to get a hosting for the blog, and then use Jenkins to make a Jekyll builds.
 But colleague told me that this is easily doable using &lt;a href=&quot;https://travis-ci.org/&quot;&gt;Travis&lt;/a&gt;,
 without any outside hosting.
-There will be a new post about it, with detailed description how to set it up.&lt;/p&gt;
+There will be a &lt;a href=&quot;/travis-jekyll-and-github-pages/&quot;&gt;new post&lt;/a&gt; about it, with detailed description how to set it up.&lt;/p&gt;
 
 &lt;p&gt;Basically I use the &lt;code class=&quot;highlighter-rouge&quot;&gt;source&lt;/code&gt; branch for the Jekyll website, and Travis is watching for the pushes on that branch.
 When push is detected, Travis builds static HTML and pushes it to the &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; branch.

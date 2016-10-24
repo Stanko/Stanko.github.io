@@ -11,7 +11,7 @@
 
   <title>
     
-      Implementing PhotoShop font sizes and tracking in CSS, points to pixels conversion &middot; Muffin Man's writings
+      Setting up Travis, Jekyll and GitHub pages &middot; Muffin Man's writings
     
   </title>
 
@@ -67,9 +67,9 @@
         <span></span>
         <span></span>
       </button>
-      <h1>Implementing PhotoShop font sizes and tracking in CSS, points to pixels conversion</h1>
+      <h1>Setting up Travis, Jekyll and GitHub pages</h1>
       
-        <span>08 Sep 2016</span>
+        <span>24 Oct 2016</span>
       
     </div>
   </div>
@@ -88,7 +88,7 @@
     <div class="Content">
       <div class="Post Container">
         <div class="Post-top">
-          <div class="Post-readTime">This article will take about 1  minute to read.</div>
+          <div class="Post-readTime">This article will take about 3  minutes to read.</div>
 
           <a href="#comments" class="Post-commentsLink">
             
@@ -98,53 +98,120 @@
           </a>
         </div>
 
-        <p>We’ve all been there - trying to get right font sizes from PhotoShop to CSS.
-Designers usually work with points, which are used in the print, but not common on the web.
-They also use term <em>tracking</em> a lot, which is actually only a letter spacing with different units.</p>
+        <p>As I already mentioned, GitHub pages do not work with the Jekyll plugins.
+It is a security measure. So I researched it a bit, and colleague of mine
+proposed a simple solution - Travis CI.</p>
 
-<p>You can recalculate everything by hand and try to keep track of it.
-But we can use the goodies of SCSS to make that process a bit easier.</p>
-
-<p>Point to pixel ratio is <code class="highlighter-rouge">1pt = 1.333333px</code>. We’ll create SASS function to do conversion for us.</p>
-
-<p>And PhotoShop tracking works relative to the font size.
-One point of tracking is 1/1000 of the font size.
-For this one we’ll create a mixin.</p>
+<p>There is a great repo with instructions how to set everything up -
+<a href="https://github.com/mfenner/jekyll-travis">jekyll-travis</a>.
+But few steps are kinda confusing, and it took me 10 failed builds to make
+it work. So I’ll try to help you with those.</p>
 
 <!--more-->
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Converts pt to px
-</span><span class="k">@function</span> <span class="nf">pt-to-px</span><span class="p">(</span><span class="nv">$size-in-points</span><span class="p">){</span>
-    <span class="k">@return</span> <span class="si">#{</span> <span class="nf">round</span><span class="p">(</span><span class="nv">$size-in-points</span> <span class="o">/</span> <span class="m">1</span><span class="mi">.333333</span><span class="p">)</span> <span class="si">}</span><span class="nb">px</span><span class="p">;</span>
-<span class="p">}</span>
+<p>I copied the steps from the original repo and updated steps where I got stuck.
+Be sure to check the original readme as well.</p>
 
-<span class="c1">// Adds letter spacing to match photoshop tracking
-</span><span class="k">@mixin</span> <span class="nf">tracking</span><span class="p">(</span><span class="nv">$ps-tracking</span><span class="p">){</span>
-    <span class="nl">letter-spacing</span><span class="p">:</span> <span class="si">#{</span> <span class="nv">$ps-tracking</span> <span class="o">/</span> <span class="m">1000</span> <span class="si">}</span><span class="n">em</span><span class="p">;</span>
-<span class="p">}</span>
+<h2 id="flow">Flow</h2>
 
-<span class="c1">// Usage
-</span><span class="nc">.Component</span> <span class="p">{</span>
-    <span class="k">@include</span> <span class="nd">tracking</span><span class="p">(</span><span class="m">-5</span><span class="p">);</span>
-    <span class="nl">font-size</span><span class="p">:</span> <span class="nf">pt-to-px</span><span class="p">(</span><span class="m">20</span><span class="p">);</span>
-    <span class="nl">line-height</span><span class="p">:</span> <span class="nf">pt-to-px</span><span class="p">(</span><span class="m">30</span><span class="p">);</span>
-<span class="p">}</span></code></pre></figure>
+<ul>
+  <li>When you push to your GitHub repo, it triggers Travis</li>
+  <li>Travis starts up a virtual machine and installs all required software (mostly Ruby gems)</li>
+  <li>We use a custom rake task to tell travis how to build the Jekyll site and push the updated content back to Github</li>
+  <li>Travis clones a different branch (either <code class="highlighter-rouge">gh-pages</code> or <code class="highlighter-rouge">master</code>, depending on the kind of Github repo) that holds the static HTML pages</li>
+  <li>Travis runs <code class="highlighter-rouge">jekyll build</code> with the destination in the other branch</li>
+  <li>Travis does a <code class="highlighter-rouge">git push</code> of the other branch</li>
+  <li>Github Pages starts serving the updates site</li>
+</ul>
 
-<p>This will generate following CSS:</p>
+<h2 id="steps-to-make-it-work">Steps to make it work</h2>
 
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.Component</span> <span class="p">{</span>
-    <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">-.005em</span><span class="p">;</span>
-    <span class="nl">font-size</span><span class="p">:</span> <span class="m">15px</span><span class="p">;</span>
-    <span class="nl">line-height</span><span class="p">:</span> <span class="m">23px</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
+<ul>
+  <li>
+    <p>Move your Jekyll source files to the <code class="highlighter-rouge">source</code> branch (name it as you like).
+We’ll use <code class="highlighter-rouge">master</code> or <code class="highlighter-rouge">gh-pages</code> branch to host generated HTML website.</p>
+  </li>
+  <li>
+    <p>Make sure you have enabled your source repo in the Travis CI admin dashboard so that the webhook is triggered</p>
+  </li>
+  <li>
+    <p>Create a GitHub Personal Access Token from you <a href="https://github.com/settings/tokens">profile page</a>.</p>
+  </li>
+  <li>
+    <p>If you haven’t already, create a <code class="highlighter-rouge">Gemfile</code>, and add <code class="highlighter-rouge">rake</code> gem to it.</p>
+  </li>
+</ul>
 
-<p>Note that function and mixin can do pretty much the same job.
-But it makes more sense to use mixins when including complete styles,
-and functions to return values.
-So conversion makes sense to be a function,
-as we can use it for font size, line height or anything else.
-Conversion of tracking to letter spacing is including a specific style,
-so keep it in a mixin.</p>
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">source</span> <span class="s2">"http://production.cf.rubygems.org/"</span>
+
+<span class="n">gem</span> <span class="s2">"rake"</span><span class="p">,</span> <span class="s2">"~&gt; 10.1.1"</span>
+<span class="n">gem</span> <span class="s2">"jekyll-paginate"</span>
+<span class="n">gem</span> <span class="s2">"jekyll-archives"</span>
+</code></pre>
+</div>
+
+<p><small>
+We have seen <a href="http://blog.travis-ci.com/2013-05-20-network-timeouts-build-retries/">intermittent timeouts</a> fetching gems from Rubygems.org. <code class="highlighter-rouge">install: bundle install</code> lets Travis CI automatically retry, and we are using <code class="highlighter-rouge">source "http://production.cf.rubygems.org/"</code> in Gemfile to point to a different repository.
+</small></p>
+
+<ul>
+  <li>Install the travis gem (<code class="highlighter-rouge">gem install travis</code>) and create <code class="highlighter-rouge">.travis.yml</code>.
+It will tell Travis what to install and how build our Jekyll site.
+Add following data to it.</li>
+</ul>
+
+<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">language</span><span class="pi">:</span> <span class="s">ruby</span>
+<span class="s">rvm</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">2.3.1</span>
+<span class="s">install</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">bundle install</span>
+<span class="s">script</span><span class="pi">:</span> <span class="s">bundle exec rake site:deploy --quiet</span>
+<span class="s">env</span><span class="pi">:</span>
+  <span class="s">global</span><span class="pi">:</span>
+    <span class="s">secure</span><span class="pi">:</span> <span class="s">YOUR_ENCRYPTED_INFO</span>
+</code></pre>
+</div>
+
+<p>Replace the <code class="highlighter-rouge">YOUR_ENCRYPTED_INFO</code> with the output of the following command:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>travis encrypt <span class="s1">'GIT_NAME="Your Username" GIT_EMAIL="your@email.com" GH_TOKEN=GITHUB_PERSONAL_TOKEN_YOU_CREATED'</span>
+</code></pre>
+</div>
+
+<ul>
+  <li>
+    <p>Make sure you add <code class="highlighter-rouge">vendor</code> to your .gitignore as Travis CI is vendoring the Ruby gems there. The <code class="highlighter-rouge">vendor</code> folder should also be excluded in the Jekyll <code class="highlighter-rouge">_config.yml</code>.</p>
+  </li>
+  <li>
+    <p>Add the following to your Jekyll <code class="highlighter-rouge">_config.yml</code> file: <code class="highlighter-rouge">username</code>, <code class="highlighter-rouge">repo</code> and <code class="highlighter-rouge">branch</code>.</p>
+  </li>
+</ul>
+
+<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="c1"># GitHub</span>
+<span class="s">username</span><span class="pi">:</span>             <span class="s">Stanko</span>
+<span class="s">repo</span><span class="pi">:</span>                 <span class="s">Stanko.github.io</span>
+<span class="s">branch</span><span class="pi">:</span>               <span class="s">source</span>
+
+<span class="c1"># Jekyll source / destination</span>
+<span class="s">source</span><span class="pi">:</span>               <span class="s">.</span>
+<span class="s">destination</span><span class="pi">:</span>          <span class="s">_site</span>
+</code></pre>
+</div>
+
+<ul>
+  <li>Add the contents of <code class="highlighter-rouge">Rakefile</code> to your Jekyll Rakefile (or replace it).
+The provided <a href="https://github.com/Stanko/Stanko.github.io/blob/source/Rakefile">Rakefile</a>
+ has some additional commands, but the important one here is <code class="highlighter-rouge">rake site:deploy</code>.</li>
+</ul>
+
+<p>And you are done! That should be it, of course you need to create a Travis CI account.
+Travis is free for the open source projects. If you are using it for the commercial stuff,
+play fair and check their payed tiers.</p>
+
+<p>Build for my blog takes about a minute.
+It depends of the software Travis installs on every build.</p>
+
+<p>Now you can use custom plugins and asset pipeline with Jekyll. Cheers!</p>
 
 
         <div class="Post-shareAndCategories">
@@ -155,7 +222,7 @@ so keep it in a mixin.</p>
             <!-- Sharing button Facebook -->
             <a
               class="SharringButton SharringButton--facebook"
-              href="https://facebook.com/sharer/sharer.php?u=http://stanko.github.io/font-size-and-tracking-points-to-pixels/" target="_blank">
+              href="https://facebook.com/sharer/sharer.php?u=http://stanko.github.io/travis-jekyll-and-github-pages/" target="_blank">
               <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
   <g>
     <path d="M18.768,7.465H14.5V5.56c0-0.896,0.594-1.105,1.012-1.105s2.988,0,2.988,0V0.513L14.171,0.5C10.244,0.5,9.5,3.438,9.5,5.32 v2.145h-3v4h3c0,5.212,0,12,0,12h5c0,0,0-6.85,0-12h3.851L18.768,7.465z"/>
@@ -166,7 +233,7 @@ so keep it in a mixin.</p>
             <!-- Sharing button Twitter -->
             <a
               class="SharringButton SharringButton--twitter"
-              href="https://twitter.com/intent/tweet/?text=Implementing PhotoShop font sizes and tracking in CSS, points to pixels conversion&amp;url=http://stanko.github.io/font-size-and-tracking-points-to-pixels/" target="_blank">
+              href="https://twitter.com/intent/tweet/?text=Setting up Travis, Jekyll and GitHub pages&amp;url=http://stanko.github.io/travis-jekyll-and-github-pages/" target="_blank">
               <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
   <g>
     <path d="M23.444,4.834c-0.814,0.363-1.5,0.375-2.228,0.016c0.938-0.562,0.981-0.957,1.32-2.019c-0.878,0.521-1.851,0.9-2.886,1.104 C18.823,3.053,17.642,2.5,16.335,2.5c-2.51,0-4.544,2.036-4.544,4.544c0,0.356,0.04,0.703,0.117,1.036 C8.132,7.891,4.783,6.082,2.542,3.332C2.151,4.003,1.927,4.784,1.927,5.617c0,1.577,0.803,2.967,2.021,3.782 C3.203,9.375,2.503,9.171,1.891,8.831C1.89,8.85,1.89,8.868,1.89,8.888c0,2.202,1.566,4.038,3.646,4.456 c-0.666,0.181-1.368,0.209-2.053,0.079c0.579,1.804,2.257,3.118,4.245,3.155C5.783,18.102,3.372,18.737,1,18.459 C3.012,19.748,5.399,20.5,7.966,20.5c8.358,0,12.928-6.924,12.928-12.929c0-0.198-0.003-0.393-0.012-0.588 C21.769,6.343,22.835,5.746,23.444,4.834z"/>
@@ -177,7 +244,7 @@ so keep it in a mixin.</p>
             <!-- Sharing button Google+ -->
             <a
               class="SharringButton SharringButton--googlePlus"
-              href="https://plus.google.com/share?url=http://stanko.github.io/font-size-and-tracking-points-to-pixels/" target="_blank">
+              href="https://plus.google.com/share?url=http://stanko.github.io/travis-jekyll-and-github-pages/" target="_blank">
               <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
   <g>
     <path d="M11.366,12.928c-0.729-0.516-1.393-1.273-1.404-1.505c0-0.425,0.038-0.627,0.988-1.368 c1.229-0.962,1.906-2.228,1.906-3.564c0-1.212-0.37-2.289-1.001-3.044h0.488c0.102,0,0.2-0.033,0.282-0.091l1.364-0.989 c0.169-0.121,0.24-0.338,0.176-0.536C14.102,1.635,13.918,1.5,13.709,1.5H7.608c-0.667,0-1.345,0.118-2.011,0.347 c-2.225,0.766-3.778,2.66-3.778,4.605c0,2.755,2.134,4.845,4.987,4.91c-0.056,0.22-0.084,0.434-0.084,0.645 c0,0.425,0.108,0.827,0.33,1.216c-0.026,0-0.051,0-0.079,0c-2.72,0-5.175,1.334-6.107,3.32C0.623,17.06,0.5,17.582,0.5,18.098 c0,0.501,0.129,0.984,0.382,1.438c0.585,1.046,1.843,1.861,3.544,2.289c0.877,0.223,1.82,0.335,2.8,0.335 c0.88,0,1.718-0.114,2.494-0.338c2.419-0.702,3.981-2.482,3.981-4.538C13.701,15.312,13.068,14.132,11.366,12.928z M3.66,17.443 c0-1.435,1.823-2.693,3.899-2.693h0.057c0.451,0.005,0.892,0.072,1.309,0.2c0.142,0.098,0.28,0.192,0.412,0.282 c0.962,0.656,1.597,1.088,1.774,1.783c0.041,0.175,0.063,0.35,0.063,0.519c0,1.787-1.333,2.693-3.961,2.693 C5.221,20.225,3.66,19.002,3.66,17.443z M5.551,3.89c0.324-0.371,0.75-0.566,1.227-0.566l0.055,0 c1.349,0.041,2.639,1.543,2.876,3.349c0.133,1.013-0.092,1.964-0.601,2.544C8.782,9.589,8.363,9.783,7.866,9.783H7.865H7.844 c-1.321-0.04-2.639-1.6-2.875-3.405C4.836,5.37,5.049,4.462,5.551,3.89z"/>
@@ -191,9 +258,7 @@ so keep it in a mixin.</p>
           <div class="Post-categories">
           <div>Categories</div>
           
-            <a href="/category/css">CSS</a>
-          
-            <a href="/category/sass">SASS</a>
+            <a href="/category/jekyll">Jekyll</a>
           
         </div>
         </div>
@@ -207,13 +272,6 @@ so keep it in a mixin.</p>
 
             
               <div class="RelatedPosts-post">
-                <a href="/travis-jekyll-and-github-pages/">
-                  <small>24 Oct 2016</small>
-                  Setting up Travis, Jekyll and GitHub pages
-                </a>
-              </div>
-            
-              <div class="RelatedPosts-post">
                 <a href="/new-design-and-features/">
                   <small>20 Oct 2016</small>
                   Blog redesign and new features
@@ -224,6 +282,13 @@ so keep it in a mixin.</p>
                 <a href="/animate-window-scroll-to/">
                   <small>28 Sep 2016</small>
                   Plain JavaScript animated window scroll function
+                </a>
+              </div>
+            
+              <div class="RelatedPosts-post">
+                <a href="/font-size-and-tracking-points-to-pixels/">
+                  <small>08 Sep 2016</small>
+                  Implementing PhotoShop font sizes and tracking in CSS, points to pixels conversion
                 </a>
               </div>
             
@@ -254,12 +319,12 @@ so keep it in a mixin.</p>
     <input
       name="fields[slug]"
       type="hidden"
-      value="font-size-and-tracking-points-to-pixels"
+      value="travis-jekyll-and-github-pages"
       class="CommentForm-input CommentForm-input--slug">
     <input
       name="options[slug]"
       type="hidden"
-      value="font-size-and-tracking-points-to-pixels"
+      value="travis-jekyll-and-github-pages"
       class="CommentForm-input CommentForm-input--optionsSlug">
 
     <div class="Grid">
