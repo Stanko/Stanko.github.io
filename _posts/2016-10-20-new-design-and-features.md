@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blog redesign and new features
-category: [Jekyll, Blog]
+category: [Jekyll]
 ---
 
 As you probably noticed I redesigned my blog and added some new features.
@@ -53,7 +53,7 @@ It is a very simple plugin I found somewhere on the internet and modified a bit.
 
 Here it is:
 
-{% highlight ruby %}
+```ruby
 # Outputs the reading time
 
 # Read this in "about 4 minutes"
@@ -72,7 +72,7 @@ module ReadingTimeFilter
 end
 
 Liquid::Template.register_filter(ReadingTimeFilter)
-{% endhighlight %}
+```
 
 ### Share buttons
 
@@ -97,7 +97,7 @@ It is a reasonable security feature.
 I decided to get a hosting for the blog, and then use Jenkins to make a Jekyll builds.
 But colleague told me that this is easily doable using [Travis](https://travis-ci.org/),
 without any outside hosting.
-There will be a new post about it, with detailed description how to set it up.
+There will be a [new post](/travis-jekyll-and-github-pages/) about it, with detailed description how to set it up.
 
 Basically I use the `source` branch for the Jekyll website, and Travis is watching for the pushes on that branch.
 When push is detected, Travis builds static HTML and pushes it to the `master` branch.

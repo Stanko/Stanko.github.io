@@ -5,7 +5,7 @@ title: About
 
 Hello there.
 
-My name is Stanko and I'm the CTO of the [Null Object](http://null-object.com).
+My name is Stanko and I'm the principal developer at [Work & Co](https://work.co).
 
 I enjoy software development, especially the front end stuff.
 My focus is on the front end architecture and modern frameworks like Angular and React.
@@ -15,14 +15,11 @@ Hopefully there will be at least one post per week, but can't promise it.
 
 You can find me on [GitHub](https://github.com/Stanko) or [LinkedIn](https://linkedin.com/in/stankotadic).
 
-If you have a project you'd like to talk about, please contact us on our [website](http://null-object.com).
-We'll be glad to help.
-
 ------
 
 Beside programming, my passions are music, crafting (making stuff from jewelry to guitars) and games.
 Old DOS games are what got me in the tech in the first place.
-Unfortunelly due to lack of free time pretty much the only game I play these days is DotA.
+Unfortunately due to lack of free time pretty much the only game I play these days is Dota 2.
 I'm also a terrible guitar player.
 
 ------

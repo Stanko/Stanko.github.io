@@ -1,7 +1,7 @@
 # GitHub
-username: Stanko
-repo: Stanko.github.io
-branch: source
+username:             Stanko
+repo:                 Stanko.github.io
+branch:               source
 
 # Jekyll source / destination
 source:               .
