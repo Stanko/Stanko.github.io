@@ -74,11 +74,11 @@
         Latest post
       </span>
       <h1>
-        <a href="/travis-jekyll-and-github-pages/">
-          Setting up Travis, Jekyll and GitHub pages
+        <a href="/my-two-cents-on-the-new-macbook-pro/">
+          My two cents on the new MacBook Pro
         </a>
       </h1>
-      <span>24 Oct 2016</span>
+      <span>31 Oct 2016</span>
     </div>
   </div>
 </div>
@@ -100,6 +100,40 @@
   
   <div class="Post">
     <img class="Post-bg" src="/public/img/home/poly1.svg" />
+    <div class="Post-content">
+      <h1 class="Post-title">
+        <a href="/custom-jekyll-pagination/">
+          Custom Jekyll pagination
+        </a>
+      </h1>
+
+      <div class="Post-date">
+        <div class="Post-dateIcon">
+          <svg height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
+  <path d="M16 30c-3.74 0-7.255-1.456-9.9-4.1C1.78 21.577.753 15.024 3.548 9.594c.253-.49.855-.684 1.347-.432s.685.855.432 1.347C2.93 15.164 3.81 20.78 7.516 24.485 9.78 26.752 12.793 28 16 28c3.205 0 6.22-1.248 8.485-3.515S28 19.205 28 16c0-3.206-1.248-6.22-3.515-8.485S19.205 4 16 4c-3.206 0-6.22 1.25-8.485 3.515-.39.39-1.023.39-1.414 0s-.39-1.023 0-1.414C8.746 3.458 12.26 2 16 2s7.256 1.457 9.9 4.1C28.543 8.746 30 12.26 30 16s-1.456 7.255-4.1 9.9C23.255 28.543 19.74 30 16 30z"/>
+  <path d="M21 21c-.22 0-.44-.07-.625-.22l-5-4c-.237-.19-.375-.476-.375-.78V8c0-.552.448-1 1-1s1 .448 1 1v7.52l4.625 3.7c.43.345.5.974.156 1.405-.197.246-.487.375-.78.375z"/>
+</svg>
+
+        </div>
+        22 Feb 2016
+      </div>
+      <p>Jekyll comes with simple pagination which has only <code class="highlighter-rouge">Newer</code> and <code class="highlighter-rouge">Older</code> links.
+I wanted a little bit more, now pagination shows at least five pages, with current in the middle.
+On the larger screens there are also first and last page links.
+<code class="highlighter-rouge">Newer</code> and <code class="highlighter-rouge">Older</code> links are, of course, still there.</p>
+
+<p>Check the <a href="https://gist.github.com/Stanko/4e379a72715fc596c1cc">gist with the code</a>.</p>
+
+<p>You can see it at the bottom of this website, or just check the screenshot below:
+<img src="/public/img/projects/jekyll-pagination.png" alt="Custom Jekyll pagination" /></p>
+
+
+      
+    </div>
+  </div>
+  
+  <div class="Post">
+    <img class="Post-bg" src="/public/img/home/poly2.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/animated-login-signup-forms/">
@@ -138,7 +172,7 @@ This is neat, as it also can be bookmarked on both states, and browser button wo
   </div>
   
   <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly2.svg" />
+    <img class="Post-bg" src="/public/img/home/poly0.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/hello-world/">
@@ -399,6 +433,9 @@ Those are going to be both big and small, proof of concepts and production ready
     <script>
   var posts = [
      {
+        url: '/my-two-cents-on-the-new-macbook-pro/',
+        title: 'My two cents on the new MacBook Pro'
+    },  {
         url: '/travis-jekyll-and-github-pages/',
         title: 'Setting up Travis, Jekyll and GitHub pages'
     },  {

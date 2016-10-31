@@ -11,7 +11,7 @@
 
   <title>
     
-      Implementing PhotoShop font sizes and tracking in CSS, points to pixels conversion &middot; Muffin Man's writings
+      My two cents on the new MacBook Pro &middot; Muffin Man's writings
     
   </title>
 
@@ -67,9 +67,9 @@
         <span></span>
         <span></span>
       </button>
-      <h1>Implementing PhotoShop font sizes and tracking in CSS, points to pixels conversion</h1>
+      <h1>My two cents on the new MacBook Pro</h1>
       
-        <span>08 Sep 2016</span>
+        <span>31 Oct 2016</span>
       
     </div>
   </div>
@@ -88,7 +88,7 @@
     <div class="Content">
       <div class="Post Container">
         <div class="Post-top">
-          <div class="Post-readTime">This article will take about 1  minute to read.</div>
+          <div class="Post-readTime">This article will take about 2  minutes to read.</div>
 
           <a href="#comments" class="Post-commentsLink">
             
@@ -98,53 +98,57 @@
           </a>
         </div>
 
-        <p>We’ve all been there - trying to get right font sizes from PhotoShop to CSS.
-Designers usually work with points, which are used in the print, but not common on the web.
-They also use term <em>tracking</em> a lot, which is actually only a letter spacing with different units.</p>
+        <p>After the recent Apple keynote, it seems that community is not happy with the new MacBook Pro.
+Well, I’m not either.</p>
 
-<p>You can recalculate everything by hand and try to keep track of it.
-But we can use the goodies of SCSS to make that process a bit easier.</p>
+<p>As for iPhone/iPad, those are toys, I could use pretty much any other modern smartphone/tablet.
+But MBP is my working horse, and I was always saying that
+it doesn’t matter how much it costs, I would always get it.</p>
 
-<p>Point to pixel ratio is <code class="highlighter-rouge">1pt = 1.333333px</code>. We’ll create SASS function to do conversion for us.</p>
-
-<p>And PhotoShop tracking works relative to the font size.
-One point of tracking is 1/1000 of the font size.
-For this one we’ll create a mixin.</p>
+<p>Things have changed…</p>
 
 <!--more-->
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Converts pt to px
-</span><span class="k">@function</span> <span class="nf">pt-to-px</span><span class="p">(</span><span class="nv">$size-in-points</span><span class="p">){</span>
-    <span class="k">@return</span> <span class="si">#{</span> <span class="nf">round</span><span class="p">(</span><span class="nv">$size-in-points</span> <span class="o">/</span> <span class="m">1</span><span class="mi">.333333</span><span class="p">)</span> <span class="si">}</span><span class="nb">px</span><span class="p">;</span>
-<span class="p">}</span>
+<h3 id="macbook-pro-is-now-a-consumer-machine">MacBook Pro is now a consumer machine</h3>
 
-<span class="c1">// Adds letter spacing to match photoshop tracking
-</span><span class="k">@mixin</span> <span class="nf">tracking</span><span class="p">(</span><span class="nv">$ps-tracking</span><span class="p">){</span>
-    <span class="nl">letter-spacing</span><span class="p">:</span> <span class="si">#{</span> <span class="nv">$ps-tracking</span> <span class="o">/</span> <span class="m">1000</span> <span class="si">}</span><span class="n">em</span><span class="p">;</span>
-<span class="p">}</span>
+<p>New MacBook Pro really lacks the <strong>pro</strong> part.</p>
 
-<span class="c1">// Usage
-</span><span class="nc">.Component</span> <span class="p">{</span>
-    <span class="k">@include</span> <span class="nd">tracking</span><span class="p">(</span><span class="m">-5</span><span class="p">);</span>
-    <span class="nl">font-size</span><span class="p">:</span> <span class="nf">pt-to-px</span><span class="p">(</span><span class="m">20</span><span class="p">);</span>
-    <span class="nl">line-height</span><span class="p">:</span> <span class="nf">pt-to-px</span><span class="p">(</span><span class="m">30</span><span class="p">);</span>
-<span class="p">}</span></code></pre></figure>
+<p>I do understand that companies revolve around profit,
+and it seems that we (developers/geeks) are not Apple’s target audience anymore.
+It is hard to say if we ever were. I’m not mad, just disappointed.
+There is so many people out there with the same problem,
+and I really hope that someone from Apple will try to tackle our issues.</p>
 
-<p>This will generate following CSS:</p>
+<p>MacBooks are getting more and more expensive every year, with kinda outdated hardware
+and shiny stuff I don’t need. Also removing the option to upgrade anything really sucks.
+3k machine with max 16gigs of RAM?!
+Touchbar is a gimmick - I don’t give a shit about emoji touch screen on my keyboard.
+I want physical keys that I don’t have to look at when I type.</p>
 
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.Component</span> <span class="p">{</span>
-    <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">-.005em</span><span class="p">;</span>
-    <span class="nl">font-size</span><span class="p">:</span> <span class="m">15px</span><span class="p">;</span>
-    <span class="nl">line-height</span><span class="p">:</span> <span class="m">23px</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
+<p><img src="/public/img/touchbar.png" alt="Emojis? Really?" /></p>
 
-<p>Note that function and mixin can do pretty much the same job.
-But it makes more sense to use mixins when including complete styles,
-and functions to return values.
-So conversion makes sense to be a function,
-as we can use it for font size, line height or anything else.
-Conversion of tracking to letter spacing is including a specific style,
-so keep it in a mixin.</p>
+<p>Making things thinner and lighter is nice, but don’t sacrifice power or keyboard for it.
+Same goes for iPhone, if they just made it 2-3mm thicker,
+and use all of that space for the bigger battery.
+But it ain’t gonna happen.</p>
+
+<p>I’m writing this on 2015 MBP which has pretty much the same hardware like
+my old (upgraded) 2010 MBP - i7, 16gigs, SSD.
+Apple lost it’s leadership position when it comes to the professional hardware.</p>
+
+<p>First time in a long time, I’m thinking about alternatives.
+Not that I’m going to throw away my laptop and get a new one,
+but I feel like a need a plan if they continue this way.</p>
+
+<p>Razor laptops seem really sweet, but then I need to choose between Linux or Windows.
+I consider myself being a UNIX guy, so Linux is clearly a way to go,
+but as I’m working in a digital agency Sketch and Adobe are a must.
+Maybe run them in a virtual machine? We’ll see where it goes.</p>
+
+<p>To be honest, I will continue to use this MacBook I own.
+As I would really like to stay on the OSX - polished UNIX system.
+But, I hate that they are pushing this down our throats -
+we made this, you’ll buy it, as there is no alternative.</p>
 
 
         <div class="Post-shareAndCategories">
@@ -155,7 +159,7 @@ so keep it in a mixin.</p>
             <!-- Sharing button Facebook -->
             <a
               class="SharringButton SharringButton--facebook"
-              href="https://facebook.com/sharer/sharer.php?u=http://stanko.github.io/font-size-and-tracking-points-to-pixels/" target="_blank">
+              href="https://facebook.com/sharer/sharer.php?u=http://stanko.github.io/my-two-cents-on-the-new-macbook-pro/" target="_blank">
               <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
   <g>
     <path d="M18.768,7.465H14.5V5.56c0-0.896,0.594-1.105,1.012-1.105s2.988,0,2.988,0V0.513L14.171,0.5C10.244,0.5,9.5,3.438,9.5,5.32 v2.145h-3v4h3c0,5.212,0,12,0,12h5c0,0,0-6.85,0-12h3.851L18.768,7.465z"/>
@@ -166,7 +170,7 @@ so keep it in a mixin.</p>
             <!-- Sharing button Twitter -->
             <a
               class="SharringButton SharringButton--twitter"
-              href="https://twitter.com/intent/tweet/?text=Implementing PhotoShop font sizes and tracking in CSS, points to pixels conversion&amp;url=http://stanko.github.io/font-size-and-tracking-points-to-pixels/" target="_blank">
+              href="https://twitter.com/intent/tweet/?text=My two cents on the new MacBook Pro&amp;url=http://stanko.github.io/my-two-cents-on-the-new-macbook-pro/" target="_blank">
               <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
   <g>
     <path d="M23.444,4.834c-0.814,0.363-1.5,0.375-2.228,0.016c0.938-0.562,0.981-0.957,1.32-2.019c-0.878,0.521-1.851,0.9-2.886,1.104 C18.823,3.053,17.642,2.5,16.335,2.5c-2.51,0-4.544,2.036-4.544,4.544c0,0.356,0.04,0.703,0.117,1.036 C8.132,7.891,4.783,6.082,2.542,3.332C2.151,4.003,1.927,4.784,1.927,5.617c0,1.577,0.803,2.967,2.021,3.782 C3.203,9.375,2.503,9.171,1.891,8.831C1.89,8.85,1.89,8.868,1.89,8.888c0,2.202,1.566,4.038,3.646,4.456 c-0.666,0.181-1.368,0.209-2.053,0.079c0.579,1.804,2.257,3.118,4.245,3.155C5.783,18.102,3.372,18.737,1,18.459 C3.012,19.748,5.399,20.5,7.966,20.5c8.358,0,12.928-6.924,12.928-12.929c0-0.198-0.003-0.393-0.012-0.588 C21.769,6.343,22.835,5.746,23.444,4.834z"/>
@@ -177,7 +181,7 @@ so keep it in a mixin.</p>
             <!-- Sharing button Google+ -->
             <a
               class="SharringButton SharringButton--googlePlus"
-              href="https://plus.google.com/share?url=http://stanko.github.io/font-size-and-tracking-points-to-pixels/" target="_blank">
+              href="https://plus.google.com/share?url=http://stanko.github.io/my-two-cents-on-the-new-macbook-pro/" target="_blank">
               <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
   <g>
     <path d="M11.366,12.928c-0.729-0.516-1.393-1.273-1.404-1.505c0-0.425,0.038-0.627,0.988-1.368 c1.229-0.962,1.906-2.228,1.906-3.564c0-1.212-0.37-2.289-1.001-3.044h0.488c0.102,0,0.2-0.033,0.282-0.091l1.364-0.989 c0.169-0.121,0.24-0.338,0.176-0.536C14.102,1.635,13.918,1.5,13.709,1.5H7.608c-0.667,0-1.345,0.118-2.011,0.347 c-2.225,0.766-3.778,2.66-3.778,4.605c0,2.755,2.134,4.845,4.987,4.91c-0.056,0.22-0.084,0.434-0.084,0.645 c0,0.425,0.108,0.827,0.33,1.216c-0.026,0-0.051,0-0.079,0c-2.72,0-5.175,1.334-6.107,3.32C0.623,17.06,0.5,17.582,0.5,18.098 c0,0.501,0.129,0.984,0.382,1.438c0.585,1.046,1.843,1.861,3.544,2.289c0.877,0.223,1.82,0.335,2.8,0.335 c0.88,0,1.718-0.114,2.494-0.338c2.419-0.702,3.981-2.482,3.981-4.538C13.701,15.312,13.068,14.132,11.366,12.928z M3.66,17.443 c0-1.435,1.823-2.693,3.899-2.693h0.057c0.451,0.005,0.892,0.072,1.309,0.2c0.142,0.098,0.28,0.192,0.412,0.282 c0.962,0.656,1.597,1.088,1.774,1.783c0.041,0.175,0.063,0.35,0.063,0.519c0,1.787-1.333,2.693-3.961,2.693 C5.221,20.225,3.66,19.002,3.66,17.443z M5.551,3.89c0.324-0.371,0.75-0.566,1.227-0.566l0.055,0 c1.349,0.041,2.639,1.543,2.876,3.349c0.133,1.013-0.092,1.964-0.601,2.544C8.782,9.589,8.363,9.783,7.866,9.783H7.865H7.844 c-1.321-0.04-2.639-1.6-2.875-3.405C4.836,5.37,5.049,4.462,5.551,3.89z"/>
@@ -191,9 +195,7 @@ so keep it in a mixin.</p>
           <div class="Post-categories">
           <div>Categories</div>
           
-            <a href="/category/css">CSS</a>
-          
-            <a href="/category/sass">SASS</a>
+            <a href="/category/rants">Rants</a>
           
         </div>
         </div>
@@ -207,13 +209,6 @@ so keep it in a mixin.</p>
 
             
               <div class="RelatedPosts-post">
-                <a href="/my-two-cents-on-the-new-macbook-pro/">
-                  <small>31 Oct 2016</small>
-                  My two cents on the new MacBook Pro
-                </a>
-              </div>
-            
-              <div class="RelatedPosts-post">
                 <a href="/travis-jekyll-and-github-pages/">
                   <small>24 Oct 2016</small>
                   Setting up Travis, Jekyll and GitHub pages
@@ -224,6 +219,13 @@ so keep it in a mixin.</p>
                 <a href="/new-design-and-features/">
                   <small>20 Oct 2016</small>
                   Blog redesign and new features
+                </a>
+              </div>
+            
+              <div class="RelatedPosts-post">
+                <a href="/animate-window-scroll-to/">
+                  <small>28 Sep 2016</small>
+                  Plain JavaScript animated window scroll function
                 </a>
               </div>
             
@@ -254,12 +256,12 @@ so keep it in a mixin.</p>
     <input
       name="fields[slug]"
       type="hidden"
-      value="font-size-and-tracking-points-to-pixels"
+      value="my-two-cents-on-the-new-macbook-pro"
       class="CommentForm-input CommentForm-input--slug">
     <input
       name="options[slug]"
       type="hidden"
-      value="font-size-and-tracking-points-to-pixels"
+      value="my-two-cents-on-the-new-macbook-pro"
       class="CommentForm-input CommentForm-input--optionsSlug">
 
     <div class="Grid">
