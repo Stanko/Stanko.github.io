@@ -4,13 +4,29 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2016-10-31T23:01:46+00:00</updated>
+ <updated>2016-11-07T12:43:01+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
    <email>stanko@null-object.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Another web development awesome list</title>
+   <link href="http://stanko.github.io/another-web-development-awesome-list/"/>
+   <updated>2016-11-07T00:00:00+00:00</updated>
+   <id>http://stanko.github.io/another-web-development-awesome-list</id>
+   <content type="html">&lt;p&gt;People are making &lt;em&gt;awesome&lt;/em&gt; lists on the Git these days.&lt;/p&gt;
+
+&lt;p&gt;I’m spamming our company’s slack dev channel, and someone suggested to put all of those links in one place.
+So I created one awesome list as well.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Stanko/awesome-web-development&quot;&gt;Awesome web development&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Feel free to contribute!&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>My two cents on the new MacBook Pro</title>
