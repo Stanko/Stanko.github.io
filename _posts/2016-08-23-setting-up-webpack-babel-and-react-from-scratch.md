@@ -18,7 +18,7 @@ Other parts:
 
 * Part 1 - Webpack, Babel, React, Router, ESLint
 * [Part 2](/setting-up-webpack-babel-and-react-from-scratch-part-2) - SASS, more ES6 goodness (Static props, decorators, deconstruction...)
-* Part 3 - Redux, adding production config - **WIP, Soon!**
+* [Part 3](/setting-up-webpack-babel-and-react-from-scratch-part-3) - Where to go from here
 
 ### Before we start
 

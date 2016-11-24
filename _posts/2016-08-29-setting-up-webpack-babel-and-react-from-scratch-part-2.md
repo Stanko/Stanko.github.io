@@ -12,7 +12,7 @@ Other parts:
 
 * [Part 1](/setting-up-webpack-babel-and-react-from-scratch) - Webpack, Babel, React, Router, ESLint
 * Part 2 - SASS, More ES6 goodness (Static props, decorators, deconstruction...)
-* Part 3 - Redux, adding production config - **WIP, Soon!**
+* [Part 3](/setting-up-webpack-babel-and-react-from-scratch-part-3) - Where to go from here
 
 ## Adding SASS
 
