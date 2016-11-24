@@ -4,13 +4,126 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2016-11-16T18:51:35+00:00</updated>
+ <updated>2016-11-24T15:47:46+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
    <email>stanko@null-object.com</email>
  </author>
 
+ 
+ <entry>
+   <title>React and Redux, Webpack 2 boilerplate</title>
+   <link href="http://stanko.github.io/webpack-2-react-redux/"/>
+   <updated>2016-11-24T00:00:00+00:00</updated>
+   <id>http://stanko.github.io/webpack-2-react-redux</id>
+   <content type="html">&lt;p&gt;Currently, I’m working on a relatively small pet project.
+While setting it up, I decided to extract a webpack boilerplate from it.&lt;/p&gt;
+
+&lt;p&gt;As whole JS community is moving really fast, I found very hard to
+set everything up using Webpack 1.x. One package would ask to update the other,
+that would break the third one, then that one… and so on.&lt;/p&gt;
+
+&lt;p&gt;Luckily, I was able to set everything up using Webpack 2.
+It is still in beta, but I had no problems so far.&lt;/p&gt;
+
+&lt;p&gt;You can find the &lt;a href=&quot;https://github.com/Stanko/react-redux-webpack2-boilerplate&quot;&gt;boilerplate on GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;implemented-features&quot;&gt;Implemented Features&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;React&lt;/li&gt;
+  &lt;li&gt;React router&lt;/li&gt;
+  &lt;li&gt;Redux&lt;/li&gt;
+  &lt;li&gt;Redux Thunk&lt;/li&gt;
+  &lt;li&gt;Immutable reducer data&lt;/li&gt;
+  &lt;li&gt;Webpack 2 (development and production config)&lt;/li&gt;
+  &lt;li&gt;Hot Module Replacement&lt;/li&gt;
+  &lt;li&gt;Babel - static props, decorators&lt;/li&gt;
+  &lt;li&gt;SASS with autoprefixing&lt;/li&gt;
+  &lt;li&gt;Webpack dashboard&lt;/li&gt;
+  &lt;li&gt;Linting&lt;/li&gt;
+  &lt;li&gt;Included &lt;code class=&quot;highlighter-rouge&quot;&gt;es6-promise&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;isomorphic-fetch&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;File imports relative to the app root&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;planned-features&quot;&gt;Planned features&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Redux Dev Tools&lt;/li&gt;
+  &lt;li&gt;Generating icon font from SVGs&lt;/li&gt;
+  &lt;li&gt;Preview production build&lt;/li&gt;
+  &lt;li&gt;Git hooks - lint before commit (or push)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;future-features&quot;&gt;Future features&lt;/h3&gt;
+&lt;p&gt;Universal may be added at some point.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Universal rendering&lt;/li&gt;
+  &lt;li&gt;Server async data&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;about&quot;&gt;About&lt;/h2&gt;
+
+&lt;p&gt;This boilerplate is a complete, but minimal React application.
+It includes reducers (redux), actions (sync and async), routing, SASS…
+My goal was to be ready immediately after cloning the repo (and running &lt;code class=&quot;highlighter-rouge&quot;&gt;npm i&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;My plan is to reuse this as much as possible.&lt;/p&gt;
+
+&lt;p&gt;It will updated so make sure you follow the &lt;a href=&quot;https://github.com/Stanko/react-redux-webpack2-boilerplate&quot;&gt;documentation on GitHub&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Setting up Webpack, Babel and React from scratch - Part 3</title>
+   <link href="http://stanko.github.io/setting-up-webpack-babel-and-react-from-scratch-part-3/"/>
+   <updated>2016-11-24T00:00:00+00:00</updated>
+   <id>http://stanko.github.io/setting-up-webpack-babel-and-react-from-scratch-part-3</id>
+   <content type="html">&lt;h2 id=&quot;part-three---also-the-last-part&quot;&gt;Part three - also the last part&lt;/h2&gt;
+
+&lt;p&gt;Other parts:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/setting-up-webpack-babel-and-react-from-scratch&quot;&gt;Part 1&lt;/a&gt; - Webpack, Babel, React, Router, ESLint&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/setting-up-webpack-babel-and-react-from-scratch-part-2&quot;&gt;Part 2&lt;/a&gt; - SASS, more ES6 goodness (Static props, decorators, deconstruction…)&lt;/li&gt;
+  &lt;li&gt;Part 3 - Where to go from here&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;where-to-go-from-here&quot;&gt;Where to go from here&lt;/h2&gt;
+
+&lt;p&gt;I really wanted to continue this series, but unfortunately whole JavaScript / Node community
+is moving so fast, that I found really hard to keep these tutorials up to date.
+Webpack 2 and React Hot Loader 3 are on the horizon.
+Some package versions break the other ones. Usual JavaScript business :)&lt;/p&gt;
+
+&lt;p&gt;So I’ll leave you with a link or two below.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;create-react-app&quot;&gt;Create React App&lt;/h3&gt;
+
+&lt;p&gt;Facebook released &lt;a href=&quot;https://github.com/facebookincubator/create-react-app&quot;&gt;Create React App&lt;/a&gt;.
+That is a CLI tool for creating React apps with zero configuration.
+It is still missing some features, like universal rendering, decorators, SASS (or LESS), hot reload…
+But it is a really solid start, and backed up by the React team.&lt;/p&gt;
+
+&lt;h3 id=&quot;my-webpack-2-boilerplate&quot;&gt;My Webpack 2 boilerplate&lt;/h3&gt;
+
+&lt;p&gt;Also, I just published &lt;a href=&quot;https://github.com/Stanko/react-redux-webpack2-boilerplate&quot;&gt;Webpack 2 boilerplate&lt;/a&gt; on GitHub. It has a lot of nice features, check &lt;a href=&quot;/webpack-2-react-redux&quot;&gt;post about it&lt;/a&gt; on this blog.&lt;/p&gt;
+
+&lt;h2 id=&quot;thanks&quot;&gt;Thanks&lt;/h2&gt;
+
+&lt;p&gt;Hope you found this series useful.
+Don’t worry, blog will still be updated, but this series is over for now.&lt;/p&gt;
+
+&lt;p&gt;And before using boilerplates, try making it yourself,
+so you understand the flow and the tooling behind it.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Another web development awesome list</title>
@@ -570,7 +683,7 @@ But once generated, CSS will stay static, until the next compilation.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;/setting-up-webpack-babel-and-react-from-scratch&quot;&gt;Part 1&lt;/a&gt; - Webpack, Babel, React, Router, ESLint&lt;/li&gt;
   &lt;li&gt;Part 2 - SASS, More ES6 goodness (Static props, decorators, deconstruction…)&lt;/li&gt;
-  &lt;li&gt;Part 3 - Redux, adding production config - &lt;strong&gt;WIP, Soon!&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/setting-up-webpack-babel-and-react-from-scratch-part-3&quot;&gt;Part 3&lt;/a&gt; - Where to go from here&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;adding-sass&quot;&gt;Adding SASS&lt;/h2&gt;
@@ -780,7 +893,7 @@ development and production configs, immutables… Also redux part should be upda
 &lt;ul&gt;
   &lt;li&gt;Part 1 - Webpack, Babel, React, Router, ESLint&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;/setting-up-webpack-babel-and-react-from-scratch-part-2&quot;&gt;Part 2&lt;/a&gt; - SASS, more ES6 goodness (Static props, decorators, deconstruction…)&lt;/li&gt;
-  &lt;li&gt;Part 3 - Redux, adding production config - &lt;strong&gt;WIP, Soon!&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/setting-up-webpack-babel-and-react-from-scratch-part-3&quot;&gt;Part 3&lt;/a&gt; - Where to go from here&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;before-we-start&quot;&gt;Before we start&lt;/h3&gt;
