@@ -79,7 +79,6 @@ height='300px'
 scrolling='no'
 src='//codepen.io/stanko/embed/ALjvYj/?height=300&theme-id=light&default-tab=result&embed-version=2' frameborder='no'
 allowtransparency='true'
-allowfullscreen='true'
-style='width: 100%; margin-bottom: 1em; background: #f7f7f7'>
+allowfullscreen='true'>
 See the Pen <a href='http://codepen.io/stanko/pen/ALjvYj/'>Fix for button display:flex</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
