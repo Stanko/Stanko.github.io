@@ -4,13 +4,32 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2016-12-21T12:03:47+00:00</updated>
+ <updated>2016-12-28T23:58:27+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
    <email>stanko@null-object.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Counting sheep</title>
+   <link href="http://stanko.github.io/counting-sheep/"/>
+   <updated>2016-12-28T00:00:00+00:00</updated>
+   <id>http://stanko.github.io/counting-sheep</id>
+   <content type="html">&lt;p&gt;Just something to cheer you up for the holidays :)
+I got this idea while I was sick in bed, and had nothing smarter to do.
+Pure CSS, no JavaScript at all. Hope you like it, I may add some more details.&lt;/p&gt;
+
+&lt;iframe height=&quot;400px&quot; scrolling=&quot;no&quot; src=&quot;//codepen.io/stanko/embed/BQgZda/?height=400&amp;amp;theme-id=light&amp;amp;default-tab=result&quot; frameborder=&quot;no&quot; allowtransparency=&quot;true&quot; allowfullscreen=&quot;true&quot;&gt;
+See the Pen &lt;a href=&quot;http://codepen.io/stanko/pen/BQgZda/&quot;&gt;Counting sheep&lt;/a&gt; by Stanko (&lt;a href=&quot;http://codepen.io/stanko&quot;&gt;@stanko&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.
+&lt;/iframe&gt;
+
+&lt;p&gt;Check the code on &lt;a href=&quot;http://codepen.io/stanko/pen/BQgZda/&quot;&gt;codepen&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Happy new year!&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Looking forward to the 2017</title>
@@ -705,7 +724,7 @@ Original CodePen is included at the end.&lt;/p&gt;
 
 &lt;h4 id=&quot;codepen&quot;&gt;CodePen&lt;/h4&gt;
 
-&lt;iframe height=&quot;300px&quot; scrolling=&quot;no&quot; src=&quot;//codepen.io/stanko/embed/ALjvYj/?height=300&amp;amp;theme-id=light&amp;amp;default-tab=result&amp;amp;embed-version=2&quot; frameborder=&quot;no&quot; allowtransparency=&quot;true&quot; allowfullscreen=&quot;true&quot; style=&quot;width: 100%; margin-bottom: 1em; background: #f7f7f7&quot;&gt;
+&lt;iframe height=&quot;300px&quot; scrolling=&quot;no&quot; src=&quot;//codepen.io/stanko/embed/ALjvYj/?height=300&amp;amp;theme-id=light&amp;amp;default-tab=result&amp;amp;embed-version=2&quot; frameborder=&quot;no&quot; allowtransparency=&quot;true&quot; allowfullscreen=&quot;true&quot;&gt;
 See the Pen &lt;a href=&quot;http://codepen.io/stanko/pen/ALjvYj/&quot;&gt;Fix for button display:flex&lt;/a&gt; by Stanko (&lt;a href=&quot;http://codepen.io/stanko&quot;&gt;@stanko&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.
 &lt;/iframe&gt;
 </content>
