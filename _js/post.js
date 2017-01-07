@@ -18,7 +18,7 @@ function getElementOffset(element) {
 
 commentsLink && commentsLink.addEventListener('click', function(e) {
   e.preventDefault();
-  animateScrollTo(getElementOffset(comments).top);
+  animateScrollTo(getElementOffset(comments).top, { maxDuration: 1000 });
 });
 
 
