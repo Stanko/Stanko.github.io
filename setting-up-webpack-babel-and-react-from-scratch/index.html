@@ -96,12 +96,12 @@
     <div class="Content">
       <div class="Post Container">
         <div class="Post-top">
-          <div class="Post-readTime">This article will take about 9  minutes to read.</div>
+          <div class="Post-readTime">This article will take about 11  minutes to read.</div>
 
           <a href="#comments" class="Post-commentsLink">
             
             
-              Comments (3)
+              Comments (4)
             
           </a>
         </div>
@@ -196,7 +196,7 @@ and bundled application should be outputted to the <code class="highlighter-roug
 </code></pre>
 </div>
 
-<p>Create <code class="highlighter-rouge">.babelrc</code> and add presets</p>
+<p>Create <code class="highlighter-rouge">.babelrc</code> in the project root folder and add presets</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"presets"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -528,6 +528,80 @@ settings: {
 </code></pre>
 </div>
 
+<h2 id="update">Update</h2>
+
+<p>As promised in comments, here you can find complete <code class="highlighter-rouge">webpack.config.js</code> and <code class="highlighter-rouge">package.json</code>.</p>
+
+<p>To make it even easier, I created a git repository to go along with this blog post.
+You can find it on <a href="https://github.com/Stanko/react-tutorial">GitHub</a>.</p>
+
+<h4 id="webpackconfigjs">webpack.config.js</h4>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'path'</span><span class="p">);</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">context</span><span class="p">:</span> <span class="nx">__dirname</span> <span class="o">+</span> <span class="s2">"/app"</span><span class="p">,</span>
+
+  <span class="na">entry</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">javascript</span><span class="p">:</span> <span class="s2">"./js/app.js"</span><span class="p">,</span>
+    <span class="na">html</span><span class="p">:</span> <span class="s2">"./index.html"</span><span class="p">,</span>
+  <span class="p">},</span>
+
+  <span class="na">output</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">filename</span><span class="p">:</span> <span class="s2">"app.js"</span><span class="p">,</span>
+    <span class="na">path</span><span class="p">:</span> <span class="nx">__dirname</span> <span class="o">+</span> <span class="s2">"/dist"</span><span class="p">,</span>
+  <span class="p">},</span>
+
+  <span class="na">resolve</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">extensions</span><span class="p">:</span> <span class="p">[</span><span class="s1">''</span><span class="p">,</span> <span class="s1">'.js'</span><span class="p">,</span> <span class="s1">'.jsx'</span><span class="p">,</span> <span class="s1">'.json'</span><span class="p">],</span>
+    <span class="na">root</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">'./app/js'</span><span class="p">),</span>
+  <span class="p">},</span>
+
+  <span class="na">module</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">loaders</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">jsx</span><span class="se">?</span><span class="sr">$/</span><span class="p">,</span>
+        <span class="na">exclude</span><span class="p">:</span> <span class="sr">/node_modules/</span><span class="p">,</span>
+        <span class="na">loaders</span><span class="p">:</span> <span class="p">[</span><span class="s2">"react-hot"</span><span class="p">,</span> <span class="s2">"babel-loader"</span><span class="p">],</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">html$/</span><span class="p">,</span>
+        <span class="na">loader</span><span class="p">:</span> <span class="s2">"file?name=[name].[ext]"</span><span class="p">,</span>
+      <span class="p">},</span>
+    <span class="p">],</span>
+  <span class="p">},</span>
+<span class="p">}</span></code></pre></figure>
+
+<h4 id="packagejson">package.json</h4>
+
+<p>This is minimal version of the file. Yours will probably have more stuff like <code class="highlighter-rouge">author</code>, <code class="highlighter-rouge">license</code>…</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
+  <span class="s2">"scripts"</span><span class="err">:</span> <span class="p">{</span>
+    <span class="s2">"dev"</span><span class="err">:</span> <span class="s2">"node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline --history-api-fallback"</span>
+  <span class="p">},</span>
+  <span class="s2">"devDependencies"</span><span class="err">:</span> <span class="p">{</span>
+    <span class="s2">"babel-core"</span><span class="err">:</span> <span class="s2">"^6.21.0"</span><span class="p">,</span>
+    <span class="s2">"babel-loader"</span><span class="err">:</span> <span class="s2">"^6.2.10"</span><span class="p">,</span>
+    <span class="s2">"babel-preset-es2015"</span><span class="err">:</span> <span class="s2">"^6.18.0"</span><span class="p">,</span>
+    <span class="s2">"babel-preset-react"</span><span class="err">:</span> <span class="s2">"^6.16.0"</span><span class="p">,</span>
+    <span class="s2">"eslint"</span><span class="err">:</span> <span class="s2">"^3.13.1"</span><span class="p">,</span>
+    <span class="s2">"eslint-config-airbnb"</span><span class="err">:</span> <span class="s2">"^14.0.0"</span><span class="p">,</span>
+    <span class="s2">"eslint-plugin-import"</span><span class="err">:</span> <span class="s2">"^2.2.0"</span><span class="p">,</span>
+    <span class="s2">"eslint-plugin-jsx-a11y"</span><span class="err">:</span> <span class="s2">"^3.0.2"</span><span class="p">,</span>
+    <span class="s2">"eslint-plugin-react"</span><span class="err">:</span> <span class="s2">"^6.9.0"</span><span class="p">,</span>
+    <span class="s2">"file-loader"</span><span class="err">:</span> <span class="s2">"^0.9.0"</span><span class="p">,</span>
+    <span class="s2">"react-hot-loader"</span><span class="err">:</span> <span class="s2">"^1.3.1"</span><span class="p">,</span>
+    <span class="s2">"webpack"</span><span class="err">:</span> <span class="s2">"^1.14.0"</span><span class="p">,</span>
+    <span class="s2">"webpack-dev-server"</span><span class="err">:</span> <span class="s2">"^1.16.2"</span>
+  <span class="p">},</span>
+  <span class="s2">"dependencies"</span><span class="err">:</span> <span class="p">{</span>
+    <span class="s2">"react"</span><span class="err">:</span> <span class="s2">"^15.4.2"</span><span class="p">,</span>
+    <span class="s2">"react-dom"</span><span class="err">:</span> <span class="s2">"^15.4.2"</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+
 
         <div class="Post-shareAndCategories">
           <div class="SharringButtons">
@@ -618,7 +692,7 @@ settings: {
 
   <div class="Container">
     
-      <h2 class="Comments-title">Comments (3)</h2>
+      <h2 class="Comments-title">Comments (4)</h2>
       <div class="Comments">
         
           <div class="Comment">
@@ -662,7 +736,7 @@ made it hard to figure out where I should be adding things. Spent more time trou
               
               <p>Thanks Jack!</p><p>
 </p><p>
-You are right, it is a bit hard to follow, would it help to add complete webpack config at the end? As it seems to me that repeating it every time there is a change, would make it even harder to follow.</p>
+You are right, it is a bit hard to follow, would it help to add complete &quot;webpack.config.js&quot; at the end? As it seems to me that repeating it every time there is a change, would make it even harder to follow.</p>
             </div>
           </div>
         
@@ -684,6 +758,31 @@ You are right, it is a bit hard to follow, would it help to add complete webpack
               <p>Hey Stanko!</p><p>
 </p><p>
 Thanks for an excellent tutorial. Any chance you could add the complete config file at the end of your post as you suggested? And perhaps the package.json file as well? And does the .babelrc file go in the root directory? A lot of questions :)</p>
+            </div>
+          </div>
+        
+          <div class="Comment">
+            
+            <div class="Comment-data">
+              <img class="Comment-avatar" src="https://www.gravatar.com/avatar/13a28fac985c11eb7f40169be7da32f4?d=mm&r=g" />
+              <div class="Comment-dataRight">
+                <div class="Comment-name">
+                  Stanko
+                </div>
+                <div class="Comment-date">
+                  10 Jan 2017, 03:34 PM
+                </div>
+              </div>
+            </div>
+            <div class="Comment-message">
+              
+              <p>Hey Darrel, thanks for the feedback.</p><p>
+</p><p>
+Yes, &quot;.babelrc&quot; file goes to the project root folder (I updated the post as well).</p><p>
+</p><p>
+Now at the end of the post you can find complete &quot;webpack.config.js&quot; and &quot;package.json&quot; files. Besides that, I created a repository with working example to go along with the tutorial.</p><p>
+</p><p>
+Hope you&#39;ll find it useful.</p>
             </div>
           </div>
         
