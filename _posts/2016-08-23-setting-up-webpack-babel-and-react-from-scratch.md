@@ -87,7 +87,7 @@ Install babel core and it's loader for webpack and presets for ES6 (aka ES2015) 
 
     npm i --save-dev babel-loader babel-core babel-preset-es2015 babel-preset-react
 
-Create `.babelrc` and add presets
+Create `.babelrc` in the project root folder and add presets
 
 ```
 {
@@ -399,3 +399,80 @@ settings: {
 }
 ...
 ```
+
+## Update
+
+As promised in comments, here you can find complete `webpack.config.js` and `package.json`.
+
+To make it even easier, I created a git repository to go along with this blog post.
+You can find it on [GitHub](https://github.com/Stanko/react-tutorial).
+
+#### webpack.config.js
+
+{% highlight javascript %}
+const path = require('path');
+
+module.exports = {
+  context: __dirname + "/app",
+
+  entry: {
+    javascript: "./js/app.js",
+    html: "./index.html",
+  },
+
+  output: {
+    filename: "app.js",
+    path: __dirname + "/dist",
+  },
+
+  resolve: {
+    extensions: ['', '.js', '.jsx', '.json'],
+    root: path.resolve(__dirname, './app/js'),
+  },
+
+  module: {
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loaders: ["react-hot", "babel-loader"],
+      },
+      {
+        test: /\.html$/,
+        loader: "file?name=[name].[ext]",
+      },
+    ],
+  },
+}
+{% endhighlight %}
+
+#### package.json
+
+This is minimal version of the file. Yours will probably have more stuff like `author`, `license`...
+
+{% highlight javascript %}
+{
+  "scripts": {
+    "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline --history-api-fallback"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "eslint": "^3.13.1",
+    "eslint-config-airbnb": "^14.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.9.0",
+    "file-loader": "^0.9.0",
+    "react-hot-loader": "^1.3.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
+{% endhighlight %}
