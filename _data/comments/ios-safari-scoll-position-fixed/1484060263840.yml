@@ -1,0 +1,10 @@
+_id: 23bad1a0-d745-11e6-9d0d-491faa75843b
+slug: ios-safari-scoll-position-fixed
+name: Matt Robitaille
+email: 01dff2f229af3d88d683d1e67b0dc140
+message: >-
+  This was helpful for me – however, I found that if I had a fixed position on
+  an element but was styling the element within it, I had to apply the
+  translate3d to the nested element in order for the element to not
+  flicker/disappear. This may be helpful to some others.
+date: '2017-01-10T14:57:43.834Z'
