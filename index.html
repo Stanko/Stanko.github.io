@@ -14,12 +14,23 @@ title: Home
         </a>
       </h1>
 
-      <div class="Post-date">
-        <div class="Post-dateIcon">
-          {% include icon-clock.html %}
+      <div class="Post-data">
+        <div class="Post-date">
+          <div class="Post-dateIcon">
+            {% include icon-clock.html %}
+          </div>
+          {{ post.date | date_to_string }}
         </div>
-        {{ post.date | date_to_string }}
+
+        {% assign comments = site.data.comments[post.slug] %}
+        {% if comments != null %}
+          <a href="{{ site.baseurl }}{{ post.url }}#comments">
+            {{ comments.size }}
+            {% if comments != 1 %}Comments{% else %}Comment{% endif %}
+          </a>
+        {% endif %}
       </div>
+
       {{ post.excerpt }}
 
       {% if post.excerpt != post.content %}

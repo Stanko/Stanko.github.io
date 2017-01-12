@@ -111,6 +111,13 @@
       color: $black;
     }
   }
+
+  svg {
+    @include xl {
+      width: 34px;
+      height: 24px;
+    }
+  }
 }
 
 .Rotation {
