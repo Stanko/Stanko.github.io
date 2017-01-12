@@ -4,13 +4,47 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-01-12T15:27:22+00:00</updated>
+ <updated>2017-01-12T15:54:05+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
    <email>stanko@null-object.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Winter Tech Meetup Vol 5</title>
+   <link href="http://stanko.github.io/winter-tech-meetup-vol-5/"/>
+   <updated>2017-01-12T00:00:00+00:00</updated>
+   <id>http://stanko.github.io/winter-tech-meetup-vol-5</id>
+   <content type="html">&lt;p&gt;We prepared another tech meetup, this time with four presentations.
+There will be a break after the second one.
+This should be the biggest one so far, with two guest speakers.&lt;/p&gt;
+
+&lt;p&gt;It will happen on February the 4th, at Belgrade Youth Centre.
+Hope to see you there!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.facebook.com/events/171047483377472/&quot;&gt;
+  &lt;img style=&quot;max-width: 350px; width: 100%&quot; src=&quot;/public/img/winter-meetup-vol-5/poster.jpg&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Presentations:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Five senses in a business performance - Nikola Pantović&lt;/li&gt;
+  &lt;li&gt;Go fast with Web Workers - Ivan Nikitović&lt;/li&gt;
+  &lt;li&gt;Become more professional developer - Saša Ranisavljević&lt;/li&gt;
+  &lt;li&gt;State of a modern JavaScript development - Stanko Tadić (myself)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Visit &lt;a href=&quot;https://www.facebook.com/events/171047483377472/&quot;&gt;Facebook event&lt;/a&gt;
+or &lt;a href=&quot;https://www.meetup.com/Tech-Meetup-Vol-5/&quot;&gt;meetup.com page&lt;/a&gt;.
+And apply
+&lt;a href=&quot;https://docs.google.com/forms/d/e/1FAIpQLSc_HFx5M6rhQYqmXkV5V1dPhkw0-M8L4R-1L7LoN6p2zgfnOA/viewform&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This post will be updated with the slides and couple of photos once the meetup happens.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Counting sheep</title>
@@ -64,7 +98,7 @@ Don’t worry, I’ll talk about the good parts too.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Five senses in a business performance - Nikola Pantović&lt;/li&gt;
   &lt;li&gt;Go fast with Web Workers - Ivan Nikitović&lt;/li&gt;
-  &lt;li&gt;How to be a better programmer - Sasa Ranisavljević&lt;/li&gt;
+  &lt;li&gt;Become more professional developer - Saša Ranisavljević&lt;/li&gt;
   &lt;li&gt;State of a modern JavaScript development - Stanko Tadić (myself)&lt;/li&gt;
 &lt;/ul&gt;
 
