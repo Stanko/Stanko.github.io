@@ -23,3 +23,13 @@ You will have something like this:
 {% endhighlight %}
 
 Enjoy `¯\_(ツ)_/¯`
+
+### Update, if the element inside fixed one flickers
+
+In the comments Matt made a great tip, so I'm adding it here as well:
+
+If you are styling the element within fixed element,
+you need to apply the `translate3d` hack to the nested element
+in order for it to not flicker/disappear.
+
+Thanks Matt!
