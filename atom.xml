@@ -4,7 +4,7 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-01-10T15:37:50+00:00</updated>
+ <updated>2017-01-12T14:59:23+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
@@ -1604,6 +1604,16 @@ Element will usually flicker, and disappear until scrolling has stopped complete
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Enjoy &lt;code class=&quot;highlighter-rouge&quot;&gt;¯\_(ツ)_/¯&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;update-if-the-element-inside-fixed-one-flickers&quot;&gt;Update, if the element inside fixed one flickers&lt;/h3&gt;
+
+&lt;p&gt;In the comments Matt made a great tip, so I’m adding it here as well:&lt;/p&gt;
+
+&lt;p&gt;If you are styling the element within fixed element,
+you need to apply the &lt;code class=&quot;highlighter-rouge&quot;&gt;translate3d&lt;/code&gt; hack to the nested element
+in order for it to not flicker/disappear.&lt;/p&gt;
+
+&lt;p&gt;Thanks Matt!&lt;/p&gt;
 </content>
  </entry>
  
