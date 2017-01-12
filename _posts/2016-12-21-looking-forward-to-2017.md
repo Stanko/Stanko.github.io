@@ -31,7 +31,7 @@ All of the presentations include:
 
 * Five senses in a business performance - Nikola Pantović
 * Go fast with Web Workers - Ivan Nikitović
-* How to be a better programmer - Sasa Ranisavljević
+* Become more professional developer - Saša Ranisavljević
 * State of a modern JavaScript development - Stanko Tadić (myself)
 
 It will probably happen on the first Saturday in February of 2017,
