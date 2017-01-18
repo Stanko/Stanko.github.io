@@ -4,13 +4,114 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-01-12T15:54:05+00:00</updated>
+ <updated>2017-01-18T14:48:16+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
    <email>stanko@null-object.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Deploying React (Router) app to the subfolder on server</title>
+   <link href="http://stanko.github.io/react-router-subfolder-on-server/"/>
+   <updated>2017-01-18T00:00:00+00:00</updated>
+   <id>http://stanko.github.io/react-router-subfolder-on-server</id>
+   <content type="html">&lt;p&gt;If you ever had to deploy React Router app to the subfolder on the server, you know what the problem is.
+Dev server will always launch app on the server root.
+And routes will get messed up once you upload it to the server.
+Here are two solutions I use in these cases.&lt;/p&gt;
+
+&lt;h2 id=&quot;easy-way-just-use-hashhistory&quot;&gt;Easy way, just use &lt;code class=&quot;highlighter-rouge&quot;&gt;hashHistory&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;The easiest way to achieve this is to use &lt;code class=&quot;highlighter-rouge&quot;&gt;hashHistory&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;browserHistory&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import { Router hashHistory } from 'react-router';
+
+&amp;lt;Router history={ hashHistory }&amp;gt;
+  ...
+&amp;lt;/Router&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This is the best approach if your subfolder name changes
+(for example, if folder name is a build version).
+But you’ll have &lt;code class=&quot;highlighter-rouge&quot;&gt;/#/&lt;/code&gt; included in the every URL.
+If this bothers you, check the second solution.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Example of the routes&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;http://yourserver.com/path/to/subfolder/&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;http://yourserver.com/path/to/subfolder/#/about&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;http://yourserver.com/path/to/subfolder/#/search&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;hard-way-setting-base-path-by-hand&quot;&gt;Hard way, setting base path by hand&lt;/h2&gt;
+
+&lt;p&gt;If you want to keep browser history implementation, you’ll need to change few things.
+First, we need to update our routes to include full absolute path to the subfolder.&lt;/p&gt;
+
+&lt;p&gt;I define my routes something like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;publicPath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/path/to/subfolder/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kr&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;routeCodes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;HOME&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;publicPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;SEARCH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;publicPath&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;ABOUT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;publicPath&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;about&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Once uplodaded to the server any route but root one will return 404 error.
+For example, in you try to open &lt;code class=&quot;highlighter-rouge&quot;&gt;http://yourserver.com/path/to/subfolder/about&lt;/code&gt;,
+server will look for file (or folder) named &lt;code class=&quot;highlighter-rouge&quot;&gt;about&lt;/code&gt; in the app subfolder.
+As it doesn’t exist, it will just fail.&lt;/p&gt;
+
+&lt;p&gt;You’ll need to add simple &lt;code class=&quot;highlighter-rouge&quot;&gt;.htaccess&lt;/code&gt; file,
+in order to tell the server to fallback to our &lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt; file.
+This is the same configuration we would use if the application was on the server root,
+just with a different absolute path to our index file.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;RewriteEngine On
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+RewriteRule ^ - [L]
+
+# Fallback all other routes to index.html
+RewriteRule ^ /path/to/subfolder/index.html [L]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now our example routes will look like this&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;http://yourserver.com/path/to/subfolder/&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;http://yourserver.com/path/to/subfolder/about&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;http://yourserver.com/path/to/subfolder/search&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;notice-about-webpacks-output---publicpath-configuration&quot;&gt;Notice about webpack’s &lt;code class=&quot;highlighter-rouge&quot;&gt;output -&amp;gt; publicPath&lt;/code&gt; configuration&lt;/h3&gt;
+
+&lt;p&gt;If you are using &lt;code class=&quot;highlighter-rouge&quot;&gt;publicPath&lt;/code&gt; in webpack’s &lt;code class=&quot;highlighter-rouge&quot;&gt;output&lt;/code&gt; object,
+make sure you either remove it or update to match your server build path.
+Removing it  is easier, as it will create relative links,
+which should work with your new configuration.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;publicPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Remove, or update it&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'./build'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'app-[hash].js'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I’m also interested if anyone has different/better ideas, cheers!&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Winter Tech Meetup Vol 5</title>
