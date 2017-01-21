@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sector - draw and animate SVG sectors
+title: Sektor - draw and animate SVG sectors
 category: [JavaScript]
 ---
 

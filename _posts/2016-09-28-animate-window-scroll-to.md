@@ -12,7 +12,7 @@ I have kept copying that function from project to project.
 Finally I took some time, cleaned it up and published it on the npm
 (this is the first npm package I published).
 
-Demo and documentation is available [here](https://stanko.github.io/animated-scroll-to/).
+Demo and documentation are available [here](https://stanko.github.io/animated-scroll-to/).
 
 <!--more-->
 
