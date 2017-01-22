@@ -1,32 +1,39 @@
 .Footer {
+  @include angled-edge('inside top', 'lower right', $white, $width: 3000, $height: 300);
   height: 40rem;
-  padding: 25rem 0 0;
   color: $white;
   position: relative;
   overflow: hidden;
   font-size: 1.6rem;
 
-  @include md {
-    padding-top: 27rem;
+  &::before {
+    z-index: 11;
   }
 
   .Container {
     position: relative;
+    margin-top: 26rem;
     z-index: 11;
+
+    @include md {
+      margin-top: 27rem;
+    }
   }
 }
 
 .Body--post .Footer {
-  margin-top: -30rem;
+  @include angled-edge('inside top', 'lower right', $black, $width: 3000, $height: 300);
+
+  &::before {
+    z-index: 11;
+  }
 }
 
 .Footer-background {
   background: linear-gradient(90deg, $red, $purple);
-  transform: skewY(-6.12deg);
   position: relative;
   z-index: 10;
   position: absolute;
-  height: 40rem;
+  height: 100%;
   width: 100%;
-  top: 150px; // must stay in px
 }

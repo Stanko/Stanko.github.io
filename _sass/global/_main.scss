@@ -14,6 +14,11 @@ body,
   z-index: 5;
 }
 
+body {
+  max-width: 3000px;
+  margin: 0 auto;
+}
+
 svg {
   max-width: 100%;
 }

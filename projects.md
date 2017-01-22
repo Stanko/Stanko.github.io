@@ -4,7 +4,7 @@ title: Projects
 ---
 
 These are selected open source projects I did. Most of these are JavaScript or CSS libraries.
-Beside that I contribute to a few bigger open source projects, and fool around on
+Beside that, I contribute to a few bigger open source projects, and fool around on
 [CodePen](http://codepen.io/stanko/).
 
 Few of these need some love, as maintaining a lot of small projects takes quite a bit of time.

@@ -241,7 +241,7 @@
 .PostBottom {
   @include angled-edge('inside top', 'lower right', $white, $width: 3000, $height: 300);
   background: $dark;
-  padding: 30rem 0 30rem;
+  padding: 30rem 0 0;
   color: $white;
 }
 

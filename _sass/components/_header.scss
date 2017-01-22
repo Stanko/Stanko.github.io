@@ -29,11 +29,11 @@
 }
 
 .Header--page {
-  .Rotation-item {
+  // .Rotation-item {
     // opacity: 0.7;
     // filter: blur(5px);
     // animation: none;
-  }
+  // }
 
   .Header--page .Rotation {
     height: 20rem;
@@ -187,10 +187,24 @@
   position: relative;
   z-index: 10;
   margin: -10rem auto 5rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.AboutBlog-homeLink {
+  margin-right: auto;
+  font-size: 1.6rem;
+
+  @include sm {
+    font-size: 1.8rem;
+  }
+
+  @include lg {
+    font-size: 1.8rem;
+  }
 }
 
 .AboutBlog-content {
-  width: 50rem;
   text-align: right;
 }
 
