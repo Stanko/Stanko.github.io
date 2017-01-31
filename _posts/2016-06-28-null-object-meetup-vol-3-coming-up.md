@@ -18,5 +18,5 @@ Again, admission is free, but please register in advance. For more info check th
 <a href="https://www.facebook.com/events/1747545772127795/">
   <img
     style="max-width: 350px; width: 100%"
-    src="https://scontent.fbeg2-1.fna.fbcdn.net/t31.0-8/13495464_1059413477470360_980356363013377222_o.jpg">
+    src="/public/img/meetup-vol-3/poster.jpeg">
 </a>
