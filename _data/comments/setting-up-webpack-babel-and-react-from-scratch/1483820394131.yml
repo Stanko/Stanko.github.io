@@ -7,6 +7,6 @@ message: >-
 
 
   You are right, it is a bit hard to follow, would it help to add complete
-  "webpack.config.js" at the end? As it seems to me that repeating it every time
+  <code>webpack.config.js</code> at the end? As it seems to me that repeating it every time
   there is a change, would make it even harder to follow.
 date: '2017-01-07T20:19:54.129Z'

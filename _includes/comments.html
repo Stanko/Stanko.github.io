@@ -20,7 +20,11 @@
               </div>
             </div>
             <div class="Comment-message">
-              {% assign paragraphs = comment.message | strip_html | escape_once | newline_to_br | split: '<br />' %}
+              {% if comment.email == "13a28fac985c11eb7f40169be7da32f4" %}
+                {% assign paragraphs = comment.message | newline_to_br | split: '<br />' %}
+              {% else %}
+                {% assign paragraphs = comment.message | strip_html | escape_once | newline_to_br | split: '<br />' %}
+              {% endif %}
               {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
             </div>
           </div>

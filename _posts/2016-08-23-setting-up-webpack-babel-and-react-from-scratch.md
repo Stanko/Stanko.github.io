@@ -467,6 +467,7 @@ This is minimal version of the file. Yours will probably have more stuff like `a
     "eslint-plugin-react": "^6.9.0",
     "file-loader": "^0.9.0",
     "react-hot-loader": "^1.3.1",
+    "react-router": "^3.0.2",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
   },

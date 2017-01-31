@@ -177,3 +177,19 @@ button {
   margin: 1.5rem 0 0;
   color: $greyD;
 }
+
+.Comment-message a {
+  color: lighten($red, 10);
+  transition: all $transition-time;
+
+  &:hover {
+    color: $red;
+  }
+}
+
+.Comment-message code {
+  background: $grey3;
+  padding: 0.2rem 0.7rem;
+  margin: 0 0.2rem;
+  border-radius: 0.3rem;
+}
