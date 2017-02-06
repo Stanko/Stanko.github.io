@@ -26,7 +26,6 @@ exclude:
  - .sass-cache
  - Gemfile
  - Gemfile.lock
- - LICENSE.md
  - vendor
 
 # Setup
