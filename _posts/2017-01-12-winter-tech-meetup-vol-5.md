@@ -17,16 +17,23 @@ Hope to see you there!
     src="/public/img/winter-meetup-vol-5/poster.jpg">
 </a>
 
-Presentations:
-
-* Five senses in a business performance - Nikola Pantović
-* Go fast with Web Workers - Ivan Nikitović
-* Become more professional developer - Saša Ranisavljević
-* State of a modern JavaScript development - Stanko Tadić (myself)
-
 Visit [Facebook event](https://www.facebook.com/events/171047483377472/)
 or [meetup.com page](https://www.meetup.com/Tech-Meetup-Vol-5/).
 And apply
 [here](https://docs.google.com/forms/d/e/1FAIpQLSc_HFx5M6rhQYqmXkV5V1dPhkw0-M8L4R-1L7LoN6p2zgfnOA/viewform).
 
-This post will be updated with the slides and couple of photos once the meetup happens.
+Thanks to everyone who participated!
+
+### Slides
+
+* <a href="/public/pdf/Nikola Pantovic - Pet cula u poslovnom nastupu.pdf">Five senses in a business performance</a> - Nikola Pantović
+* <a href="/public/pdf/Ivan Nikitovic - Go fast with web workers.pdf">Go fast with Web Workers</a> - Ivan Nikitović
+* <a href="/public/pdf/Sasa Ranisavljevic - How to become more professional developer.pdf">Become more professional developer</a> - Saša Ranisavljević
+* <a href="/public/pdf/Stanko Tadic - State of modern JS development.pdf">State of a modern JavaScript development</a> - Stanko Tadić (myself)
+
+### Photos
+
+<img src="/public/img/winter-meetup-vol-5/1.jpg" alt="Nikola Pantović">
+<img src="/public/img/winter-meetup-vol-5/2.jpg" alt="Tech meetup audience">
+<img src="/public/img/winter-meetup-vol-5/3.jpg" alt="Stanko Tadić talking about JavaScript">
+<img src="/public/img/winter-meetup-vol-5/4.jpg" alt="Saša Ranisavljević">
