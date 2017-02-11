@@ -1,0 +1,24 @@
+_id: 19ae1fe0-f05f-11e6-bb0f-4f53c1bcc2e4
+slug: ios-safari-scoll-position-fixed
+name: Jared
+email: e4cc00c0495c2b8b92ee9f70374a013f
+message: >-
+  Unfortunately, I'm not getting this to help with the flickering. Here's what I
+  have:
+
+
+  <body>
+      <div class="app">
+        <div class="app-menu">Fixed header</div>
+        <div class="app-content">
+          <div class="card">Content...</div>
+          <button class="fixed-button">This is flickering a TON</button>
+        </div>
+      </div>
+    </body>
+
+  I applied the hack to the button element to try to top it from flickering. No
+  luck. Any ideas?
+date: '2017-02-11T13:36:32.876Z'
+layout: verslag
+excerpt_separator: <!--more-->
