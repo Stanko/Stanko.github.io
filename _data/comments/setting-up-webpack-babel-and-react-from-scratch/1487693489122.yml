@@ -5,10 +5,10 @@ email: 13a28fac985c11eb7f40169be7da32f4
 message: >-
   Hi leila,
 
-  `file-loader` is used to process html entry point. If we haven't added it,
-  webpack wouldn't know how to handle html files. 
+  <code>file-loader</code> is used to process html entry point. If we haven't added it,
+  webpack wouldn't know how to handle html files.
 
 
-  In a same way we added `babel` loader to handle `.js` and `.jsx` files.
+  In a same way we added <code>babel</code> loader to handle <code>.js</code> and <code>.jsx</code> files.
 date: '2017-02-21T16:11:29.120Z'
 timestamp: 1487693489
