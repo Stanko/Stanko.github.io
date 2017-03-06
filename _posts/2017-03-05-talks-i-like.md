@@ -14,7 +14,7 @@ Please comment with the talks you think are worth watching.
 
 ### Wat <br><small>Gary Bernhardt, 2012</small>
 
-The talk I shared too many times. Gary talks about weird stuff in the Ruby and JavaScript.
+The talk I shared too many times. Gary talks about weird stuff in Ruby and JavaScript.
 It is witty and educational at the same time. I guarantee it will make you laugh.
 Only four minutes long, give it a try.
 
