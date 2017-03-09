@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Jekyll and Gulp workflow
-category: [Jekyll, Gulp]
+category: [Jekyll]
 ---
 
 As you probably know this blog is powered by [Jekyll](http://jekyllrb.com/).
