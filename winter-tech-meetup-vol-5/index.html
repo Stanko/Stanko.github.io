@@ -83,8 +83,9 @@
   </div>
 </div>
 
-<div class="AboutBlog AboutBlog--small Grid">
-  <div class="AboutBlog-content Col--md-5 Offset--md-3 Col--lg-4 Offset--lg-4">
+<div class="AboutBlog AboutBlog--small Container">
+  <a href="/" class="AboutBlog-homeLink">Home</a>
+  <div class="AboutBlog-content">
     <a href="/" title="Home page" class="BlackLink">
       <img src="/public/img/s-small.png" class="AboutBlog-logo AboutBlog-logo--small" />
       <h1 class="AboutBlog-title">Muffin Man's writings</h1>
@@ -117,21 +118,28 @@ Hope to see you there!</p>
   <img style="max-width: 350px; width: 100%" src="/public/img/winter-meetup-vol-5/poster.jpg" />
 </a></p>
 
-<p>Presentations:</p>
-
-<ul>
-  <li>Five senses in a business performance - Nikola Pantović</li>
-  <li>Go fast with Web Workers - Ivan Nikitović</li>
-  <li>Become more professional developer - Saša Ranisavljević</li>
-  <li>State of a modern JavaScript development - Stanko Tadić (myself)</li>
-</ul>
-
 <p>Visit <a href="https://www.facebook.com/events/171047483377472/">Facebook event</a>
 or <a href="https://www.meetup.com/Tech-Meetup-Vol-5/">meetup.com page</a>.
 And apply
 <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_HFx5M6rhQYqmXkV5V1dPhkw0-M8L4R-1L7LoN6p2zgfnOA/viewform">here</a>.</p>
 
-<p>This post will be updated with the slides and couple of photos once the meetup happens.</p>
+<p>Thanks to everyone who participated!</p>
+
+<h3 id="slides">Slides</h3>
+
+<ul>
+  <li><a href="/public/pdf/Nikola Pantovic - Pet cula u poslovnom nastupu.pdf">Five senses in a business performance</a> - Nikola Pantović</li>
+  <li><a href="/public/pdf/Ivan Nikitovic - Go fast with web workers.pdf">Go fast with Web Workers</a> - Ivan Nikitović</li>
+  <li><a href="/public/pdf/Sasa Ranisavljevic - How to become more professional developer.pdf">Become more professional developer</a> - Saša Ranisavljević</li>
+  <li><a href="/public/pdf/Stanko Tadic - State of modern JS development.pdf">State of a modern JavaScript development</a> - Stanko Tadić (myself)</li>
+</ul>
+
+<h3 id="photos">Photos</h3>
+
+<p><img src="/public/img/winter-meetup-vol-5/1.jpg" alt="Nikola Pantović" />
+<img src="/public/img/winter-meetup-vol-5/2.jpg" alt="Tech meetup audience" />
+<img src="/public/img/winter-meetup-vol-5/3.jpg" alt="Stanko Tadić talking about JavaScript" />
+<img src="/public/img/winter-meetup-vol-5/4.jpg" alt="Saša Ranisavljević" /></p>
 
 
         <div class="Post-shareAndCategories">
@@ -194,23 +202,23 @@ And apply
 
             
               <div class="RelatedPosts-post">
-                <a href="/react-router-subfolder-on-server/">
-                  <small>18 Jan 2017</small>
-                  Deploying React (Router) app to the subfolder on server
+                <a href="/being-a-tech-lead/">
+                  <small>09 Mar 2017</small>
+                  Being a tech lead, the thing I miss the most
                 </a>
               </div>
             
               <div class="RelatedPosts-post">
-                <a href="/counting-sheep/">
-                  <small>28 Dec 2016</small>
-                  Counting sheep
+                <a href="/react-animate-height-slide-up-down/">
+                  <small>06 Mar 2017</small>
+                  React animate height (slide up/down) component
                 </a>
               </div>
             
               <div class="RelatedPosts-post">
-                <a href="/looking-forward-to-2017/">
-                  <small>21 Dec 2016</small>
-                  Looking forward to the 2017
+                <a href="/talks-i-like/">
+                  <small>05 Mar 2017</small>
+                  Couple of talks I really liked
                 </a>
               </div>
             
@@ -422,7 +430,21 @@ And apply
               
             
           
-
+            
+              
+                <a
+                  class="Menu-menuLink "
+                  href="/projects/">
+                  Projects
+                </a>
+              
+            
+          
+          <a
+            class="Menu-menuLink"
+            href="/atom.xml">
+            RSS Feed
+          </a>
           <a
             class="Menu-menuLink"
             href="https://github.com/Stanko">
@@ -437,8 +459,6 @@ And apply
             <a class="Menu-menuCategory" href="/category/css">CSS</a>
           
             <a class="Menu-menuCategory" href="/category/development">Development</a>
-          
-            <a class="Menu-menuCategory" href="/category/gulp">Gulp</a>
           
             <a class="Menu-menuCategory" href="/category/html">HTML</a>
           
@@ -458,7 +478,9 @@ And apply
           
         </div>
       </div>
+      <div class="Menu-menuWrapper">
       <div class="Menu-results">
+      </div>
       </div>
     </div>
   </div>
@@ -467,6 +489,18 @@ And apply
     <script>
   var posts = [
      {
+        url: '/being-a-tech-lead/',
+        title: 'Being a tech lead, the thing I miss the most'
+    },  {
+        url: '/react-animate-height-slide-up-down/',
+        title: 'React animate height (slide up/down) component'
+    },  {
+        url: '/talks-i-like/',
+        title: 'Couple of talks I really liked'
+    },  {
+        url: '/mobile-chrome-vh-units-fix/',
+        title: 'Mobile Chrome vh units fix'
+    },  {
         url: '/react-router-subfolder-on-server/',
         title: 'Deploying React (Router) app to the subfolder on server'
     },  {
@@ -522,7 +556,7 @@ And apply
         title: 'Null Object Tech Meetup Vol 3'
     },  {
         url: '/sektor-draw-and-animate-svg-circle-sectors-2016/',
-        title: 'Sector - draw and animate SVG sectors'
+        title: 'Sektor - draw and animate SVG sectors'
     },  {
         url: '/null-object-meetup-vol-3-coming-up/',
         title: 'Null Object Tech Meetup Vol 3 is coming up'

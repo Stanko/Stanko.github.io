@@ -83,8 +83,9 @@
   </div>
 </div>
 
-<div class="AboutBlog AboutBlog--small Grid">
-  <div class="AboutBlog-content Col--md-5 Offset--md-3 Col--lg-4 Offset--lg-4">
+<div class="AboutBlog AboutBlog--small Container">
+  <a href="/" class="AboutBlog-homeLink">Home</a>
+  <div class="AboutBlog-content">
     <a href="/" title="Home page" class="BlackLink">
       <img src="/public/img/s-small.png" class="AboutBlog-logo AboutBlog-logo--small" />
       <h1 class="AboutBlog-title">Muffin Man's writings</h1>
@@ -264,23 +265,23 @@ Scrolling on touch devices is already nice and smooth.</p>
 
             
               <div class="RelatedPosts-post">
-                <a href="/react-router-subfolder-on-server/">
-                  <small>18 Jan 2017</small>
-                  Deploying React (Router) app to the subfolder on server
+                <a href="/being-a-tech-lead/">
+                  <small>09 Mar 2017</small>
+                  Being a tech lead, the thing I miss the most
                 </a>
               </div>
             
               <div class="RelatedPosts-post">
-                <a href="/winter-tech-meetup-vol-5/">
-                  <small>12 Jan 2017</small>
-                  Winter Tech Meetup Vol 5
+                <a href="/react-animate-height-slide-up-down/">
+                  <small>06 Mar 2017</small>
+                  React animate height (slide up/down) component
                 </a>
               </div>
             
               <div class="RelatedPosts-post">
-                <a href="/counting-sheep/">
-                  <small>28 Dec 2016</small>
-                  Counting sheep
+                <a href="/talks-i-like/">
+                  <small>05 Mar 2017</small>
+                  Couple of talks I really liked
                 </a>
               </div>
             
@@ -515,7 +516,21 @@ Scrolling on touch devices is already nice and smooth.</p>
               
             
           
-
+            
+              
+                <a
+                  class="Menu-menuLink "
+                  href="/projects/">
+                  Projects
+                </a>
+              
+            
+          
+          <a
+            class="Menu-menuLink"
+            href="/atom.xml">
+            RSS Feed
+          </a>
           <a
             class="Menu-menuLink"
             href="https://github.com/Stanko">
@@ -530,8 +545,6 @@ Scrolling on touch devices is already nice and smooth.</p>
             <a class="Menu-menuCategory" href="/category/css">CSS</a>
           
             <a class="Menu-menuCategory" href="/category/development">Development</a>
-          
-            <a class="Menu-menuCategory" href="/category/gulp">Gulp</a>
           
             <a class="Menu-menuCategory" href="/category/html">HTML</a>
           
@@ -551,7 +564,9 @@ Scrolling on touch devices is already nice and smooth.</p>
           
         </div>
       </div>
+      <div class="Menu-menuWrapper">
       <div class="Menu-results">
+      </div>
       </div>
     </div>
   </div>
@@ -560,6 +575,18 @@ Scrolling on touch devices is already nice and smooth.</p>
     <script>
   var posts = [
      {
+        url: '/being-a-tech-lead/',
+        title: 'Being a tech lead, the thing I miss the most'
+    },  {
+        url: '/react-animate-height-slide-up-down/',
+        title: 'React animate height (slide up/down) component'
+    },  {
+        url: '/talks-i-like/',
+        title: 'Couple of talks I really liked'
+    },  {
+        url: '/mobile-chrome-vh-units-fix/',
+        title: 'Mobile Chrome vh units fix'
+    },  {
         url: '/react-router-subfolder-on-server/',
         title: 'Deploying React (Router) app to the subfolder on server'
     },  {
@@ -615,7 +642,7 @@ Scrolling on touch devices is already nice and smooth.</p>
         title: 'Null Object Tech Meetup Vol 3'
     },  {
         url: '/sektor-draw-and-animate-svg-circle-sectors-2016/',
-        title: 'Sector - draw and animate SVG sectors'
+        title: 'Sektor - draw and animate SVG sectors'
     },  {
         url: '/null-object-meetup-vol-3-coming-up/',
         title: 'Null Object Tech Meetup Vol 3 is coming up'

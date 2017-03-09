@@ -4,13 +4,329 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-01-18T14:48:16+00:00</updated>
+ <updated>2017-03-09T10:33:40+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
    <email>stanko@null-object.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Being a tech lead, the thing I miss the most</title>
+   <link href="http://stanko.github.io/being-a-tech-lead/"/>
+   <updated>2017-03-09T00:00:00+00:00</updated>
+   <id>http://stanko.github.io/being-a-tech-lead</id>
+   <content type="html">&lt;p&gt;I started leading teams relatively early in my career.
+Mentoring and leading younger developers is something I tremendously enjoy.
+But there is one thing I really miss about being a “regular” developer.&lt;/p&gt;
+
+&lt;p&gt;And that is - being able to put my headphones, play some rock ‘n’ roll,
+and code for a couple of hours without any distractions.&lt;/p&gt;
+
+&lt;p&gt;Something that is almost impossible today. I’m not complaining,
+but the truth is that I really miss it.
+Luckily, I can fulfill my geek needs working on pet projects.&lt;/p&gt;
+
+&lt;p&gt;Cheers!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>React animate height (slide up/down) component</title>
+   <link href="http://stanko.github.io/react-animate-height-slide-up-down/"/>
+   <updated>2017-03-06T00:00:00+00:00</updated>
+   <id>http://stanko.github.io/react-animate-height-slide-up-down</id>
+   <content type="html">&lt;p&gt;Most JavaScript developers used jQuery’s &lt;code class=&quot;highlighter-rouge&quot;&gt;.slideUp()&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;.slideDown()&lt;/code&gt; methods,
+and got used to them. As component based frameworks usually do not include such functionality,
+the first logic choice is to turn to CSS. But alas, CSS transitions do not work with &lt;code class=&quot;highlighter-rouge&quot;&gt;height: auto&lt;/code&gt;.
+(Transitions can do a tween only between two numeric values.)&lt;/p&gt;
+
+&lt;p&gt;As we use this a lot in our company, I tried to find React component that does it.
+Found a couple, didn’t like them, as most of them rely on a tone of dependencies.
+Again, I decided to write my own - small, fast and with no dependencies.&lt;/p&gt;
+
+&lt;h2 id=&quot;demo&quot;&gt;Demo&lt;/h2&gt;
+
+&lt;p&gt;You can see it live &lt;a href=&quot;https://stanko.github.io/react-animate-height/&quot;&gt;here&lt;/a&gt;.
+Same page has the documentation and links to the npm and GitHub.&lt;/p&gt;
+
+&lt;p&gt;Component can animate from (and to) &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt; (collapsed), &lt;code class=&quot;highlighter-rouge&quot;&gt;auto&lt;/code&gt; (expanded),
+and to any specific value in pixels.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;Install it from npm&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install --save react-animate-height
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;import it in your React project,
+and wrap the content you want to animate in it.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import AnimateHeight from 'react-animate-height';
+
+&amp;lt;AnimateHeight
+  duration={ 500 }
+  height={ 'auto' }&amp;gt;
+  &amp;lt;h1&amp;gt;Your content goes here&amp;lt;/h1&amp;gt;
+  &amp;lt;p&amp;gt;Put as many React or HTML components here.&amp;lt;/p&amp;gt;
+&amp;lt;/AnimateHeight&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;For more detailed documentation and all props explained,
+check the &lt;a href=&quot;https://github.com/Stanko/react-animate-height&quot;&gt;GitHub repo&lt;/a&gt;,&lt;/p&gt;
+
+&lt;h2 id=&quot;how-it-works&quot;&gt;How it works&lt;/h2&gt;
+
+&lt;p&gt;Component is using CSS transitions, but with a small trick to make it work.
+We mentioned that transitions only work between two numeric values.
+We’ll replace &lt;code class=&quot;highlighter-rouge&quot;&gt;auto&lt;/code&gt; with numeric value just before transition happens.&lt;/p&gt;
+
+&lt;p&gt;There are three possible cases:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Specific height to the other specific height&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;This is the easiest one. Element will have &lt;code class=&quot;highlighter-rouge&quot;&gt;overflow: hidden&lt;/code&gt; and translate from
+one height value to the other. Piece of cake.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Specific height (0 included) to auto&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;This one is a bit more interesting. As we can’t transition to &lt;code class=&quot;highlighter-rouge&quot;&gt;auto&lt;/code&gt;,
+component will take the content height, apply it to the element, and transition will happen.
+But important thing is that after the transition is complete,
+component will reset &lt;code class=&quot;highlighter-rouge&quot;&gt;height&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;auto&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;overflow&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;visible&lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;This is important if you add more content to the component, it will natively grow.
+As well for the potential absolute elements that you want to go outside of the container.
+Note that when specific height is applied element will always have &lt;code class=&quot;highlighter-rouge&quot;&gt;overflow: hidden&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Auto to specific height (0 included)&lt;/strong&gt;
+Similar to the previous case but reversed. Component will grab the expanded height and
+apply it to the element. Then with a timeout of 0, apply specific height.
+(Check &lt;a href=&quot;/talks-i-like/#what-the-heck-is-the-event-loop-anyway-brsmallphilip-roberts-2014small&quot;&gt;this&lt;/a&gt; if you are confused about the timeout of 0.) Again, transition will work as it goes between two numeric values.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;I guess everyone took slide up/down for granted, but in the end there is a little
+logic that needs to be put in to make it work properly.
+On the other hand some people are solving it by pilling up the 3rd party code.
+Please, when you are open sourcing a library, keep it small and simple!&lt;/p&gt;
+
+&lt;p&gt;Hope you’ll use it!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Couple of talks I really liked</title>
+   <link href="http://stanko.github.io/talks-i-like/"/>
+   <updated>2017-03-05T00:00:00+00:00</updated>
+   <id>http://stanko.github.io/talks-i-like</id>
+   <content type="html">&lt;p&gt;In this post you can find seven talks I really liked in no particular order, most of them development related. I’ll explain why I liked them, and why I should recommend watching every single one of them.&lt;/p&gt;
+
+&lt;p&gt;Every talks is embedded, but link to a website or youtube is included as well.&lt;/p&gt;
+
+&lt;p&gt;Please comment with the talks you think are worth watching.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;wat-gary-bernhardt-2012&quot;&gt;Wat &lt;br /&gt;&lt;small&gt;Gary Bernhardt, 2012&lt;/small&gt;&lt;/h3&gt;
+
+&lt;p&gt;The talk I shared too many times. Gary talks about weird stuff in Ruby and JavaScript.
+It is witty and educational at the same time. I guarantee it will make you laugh.
+Only four minutes long, give it a try.&lt;/p&gt;
+
+&lt;video poster=&quot;/public/img/wat.png&quot; preload=&quot;none&quot; controls=&quot;&quot;&gt;
+&lt;source src=&quot;/public/videos/wat.mov&quot; /&gt;
+&lt;/video&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.destroyallsoftware.com/talks/wat&quot;&gt;Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;live-react-hot-reloading-with-time-travel-dan-abramov-2015&quot;&gt;Live React: Hot Reloading with Time Travel &lt;br /&gt;&lt;small&gt;Dan Abramov, 2015&lt;/small&gt;&lt;/h3&gt;
+
+&lt;p&gt;We all know Dan Abramov and what he has done for the React/JS community.
+This is his talk before he became famous and started working for Facebook.
+It is about hot reloading in React, which he made mainstream.&lt;/p&gt;
+
+&lt;p&gt;It is best described with a YouTube comment: “All that was missing was the mic drop at the end.﻿”&lt;/p&gt;
+
+&lt;div class=&quot;AspectRatioVideo&quot;&gt;
+&lt;iframe src=&quot;https://www.youtube.com/embed/xsSnOQynTHs?rel=0?ecver=2&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=xsSnOQynTHs&quot;&gt;Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;what-the-heck-is-the-event-loop-anyway-philip-roberts-2014&quot;&gt;What the heck is the event loop anyway? &lt;br /&gt;&lt;small&gt;Philip Roberts, 2014&lt;/small&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Every&lt;/em&gt; JavaScript developer should watch this. Philip explained what event loop is, how it works, in a simple language and beautiful examples.&lt;/p&gt;
+
+&lt;div class=&quot;AspectRatioVideo&quot;&gt;
+&lt;iframe src=&quot;https://www.youtube.com/embed/8aGhZQkoFbQ?rel=0?ecver=2&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=8aGhZQkoFbQ&quot;&gt;Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;the-early-days-of-id-softwarejohn-romero-2016&quot;&gt;The Early Days of id Software&lt;br /&gt;&lt;small&gt;John Romero, 2016&lt;/small&gt;&lt;/h3&gt;
+
+&lt;p&gt;Wow! This reminded me why I started programming, and how I ended up where I am today.
+I started with the only one thing in mind - to write games.&lt;/p&gt;
+
+&lt;p&gt;Historical talk about couple of kids who wanted to do exactly that.
+How they started, what they principles were. For those who don’t know id Software is behind
+Doom, Quake, Commander Keen, Wolfenstein, and many more games.
+Don’t get scared because it is almost one hour long, talk itself if about thirty minutes.&lt;/p&gt;
+
+&lt;p&gt;It got me thinking about writing games again,
+and hopefully I will have a blog post about that soon.&lt;/p&gt;
+
+&lt;div class=&quot;AspectRatioVideo&quot;&gt;
+&lt;iframe src=&quot;https://www.youtube.com/embed/E2MIpi8pIvY?rel=0?ecver=2&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=E2MIpi8pIvY&quot;&gt;Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;adjusting-the-dials-in-the-circuits-of-the-human-brain-with-deep-by-brain-stimulation-dr-andres-lozan-2016&quot;&gt;Adjusting the Dials in the Circuits of the Human Brain with Deep by Brain Stimulation&lt;br /&gt; &lt;small&gt;Dr Andres Lozan, 2016&lt;/small&gt;&lt;/h3&gt;
+
+&lt;p&gt;I watched this one live and the ng-conf 2016, and it blew me away.
+It has nothing to do with a development, but medicine.
+How doctors are able to adjust brain functions by applying electricity to a certain parts.&lt;/p&gt;
+
+&lt;p&gt;It still sounds like a science fiction to me.&lt;/p&gt;
+
+&lt;div class=&quot;AspectRatioVideo&quot;&gt;
+&lt;iframe src=&quot;https://www.youtube.com/embed/IEMLGrKJeK0?rel=0?ecver=2&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=IEMLGrKJeK0&quot;&gt;Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;heres-what-happens-when-an-18-year-old-buys-a-mainframe-connor-krukosky-2016&quot;&gt;Here’s What Happens When an 18 Year Old Buys a Mainframe &lt;br /&gt;&lt;small&gt;Connor Krukosky, 2016&lt;/small&gt;&lt;/h3&gt;
+
+&lt;p&gt;Title is self-explanatory - young enthusiast got his hands on an old mainframe.&lt;/p&gt;
+
+&lt;div class=&quot;AspectRatioVideo&quot;&gt;
+&lt;iframe src=&quot;https://www.youtube.com/embed/45X4VP8CGtk?rel=0?ecver=2&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=45X4VP8CGtk&quot;&gt;Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;do-schools-kill-creativitysir-ken-robinson-2007&quot;&gt;Do schools kill creativity?&lt;br /&gt;&lt;small&gt;Sir Ken Robinson, 2007&lt;/small&gt;&lt;/h3&gt;
+
+&lt;p&gt;Last, but not the least. This is the most watched TED talk on YouTube.
+Sir Ken Robinson needs no introduction, and he talks about the school system,
+and how it may be killing kid’s creativity.&lt;/p&gt;
+
+&lt;div class=&quot;AspectRatioVideo&quot;&gt;
+&lt;iframe src=&quot;https://www.youtube.com/embed/iG9CE55wbtY?rel=0?ecver=2&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=iG9CE55wbtY&quot;&gt;Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Hope you found any of these interesting to watch, and that you learned something new.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Mobile Chrome vh units fix</title>
+   <link href="http://stanko.github.io/mobile-chrome-vh-units-fix/"/>
+   <updated>2017-01-21T00:00:00+00:00</updated>
+   <id>http://stanko.github.io/mobile-chrome-vh-units-fix</id>
+   <content type="html">&lt;p&gt;If you ever used &lt;code class=&quot;highlighter-rouge&quot;&gt;vh&lt;/code&gt; units and tested your work on mobile Chrome (iOS and Android),
+you probably were annoyed by page jumping when you scroll.&lt;/p&gt;
+
+&lt;p&gt;As you probably know &lt;code class=&quot;highlighter-rouge&quot;&gt;vh&lt;/code&gt; units are based on the window height.
+When you scroll, Chrome’s address bar disappears and chrome actually changes window height.
+Also triggers window resize event.
+So when it does happen it changes the value of &lt;code class=&quot;highlighter-rouge&quot;&gt;vh&lt;/code&gt; unit, making your elements resize,
+and page jump. On Android, keyboard toggle will do the same.&lt;/p&gt;
+
+&lt;p&gt;Well I made a plain JavaScript library to solve this problem.&lt;/p&gt;
+
+&lt;p&gt;Demo and documentation are available &lt;a href=&quot;https://stanko.github.io/mobile-chrome-vh-fix/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;how-does-it-work&quot;&gt;How does it work?&lt;/h2&gt;
+
+&lt;p&gt;On load, it will get the element and set them fixed height in pixels,
+using this formula:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;window height / 100 * given vh value
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Library listens for the window &lt;code class=&quot;highlighter-rouge&quot;&gt;resize&lt;/code&gt; event, and only if both dimensions are changed
+(which on mobile means orientation has changed*)
+it will recalculate and apply fixed height based on new window height.&lt;/p&gt;
+
+&lt;p&gt;Library will only do this if it detects Chrome on Android or iOS.&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;* Android Chrome has a bug, when keyboard pops up, it triggers orientation change.&lt;/small&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;It accepts one parameter, which is an array of objects.
+Every object should have CSS selector and height in &lt;code class=&quot;highlighter-rouge&quot;&gt;vh&lt;/code&gt; units.
+All elements that match given selector will be fixed.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;selector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'.Bears'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Mandatory, CSS selector&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;vh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;150&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// Mandatory, height in vh units&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;selector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'.Foxes'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;vh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;selector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'.Horses'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;vh&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;vhFix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;VHChromeFix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;react-component-is-wip&quot;&gt;React Component is WIP&lt;/h2&gt;
+
+&lt;p&gt;I have a React component already done in a another project,
+but I need to extract it, and pack it up as a separate &lt;code class=&quot;highlighter-rouge&quot;&gt;npm&lt;/code&gt; package for easier usage.&lt;/p&gt;
+
+&lt;p&gt;Grab the code on &lt;a href=&quot;https://github.com/Stanko/mobile-chrome-vh-fix&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Deploying React (Router) app to the subfolder on server</title>
@@ -129,21 +445,28 @@ Hope to see you there!&lt;/p&gt;
   &lt;img style=&quot;max-width: 350px; width: 100%&quot; src=&quot;/public/img/winter-meetup-vol-5/poster.jpg&quot; /&gt;
 &lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Presentations:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Five senses in a business performance - Nikola Pantović&lt;/li&gt;
-  &lt;li&gt;Go fast with Web Workers - Ivan Nikitović&lt;/li&gt;
-  &lt;li&gt;Become more professional developer - Saša Ranisavljević&lt;/li&gt;
-  &lt;li&gt;State of a modern JavaScript development - Stanko Tadić (myself)&lt;/li&gt;
-&lt;/ul&gt;
-
 &lt;p&gt;Visit &lt;a href=&quot;https://www.facebook.com/events/171047483377472/&quot;&gt;Facebook event&lt;/a&gt;
 or &lt;a href=&quot;https://www.meetup.com/Tech-Meetup-Vol-5/&quot;&gt;meetup.com page&lt;/a&gt;.
 And apply
 &lt;a href=&quot;https://docs.google.com/forms/d/e/1FAIpQLSc_HFx5M6rhQYqmXkV5V1dPhkw0-M8L4R-1L7LoN6p2zgfnOA/viewform&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;This post will be updated with the slides and couple of photos once the meetup happens.&lt;/p&gt;
+&lt;p&gt;Thanks to everyone who participated!&lt;/p&gt;
+
+&lt;h3 id=&quot;slides&quot;&gt;Slides&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/public/pdf/Nikola Pantovic - Pet cula u poslovnom nastupu.pdf&quot;&gt;Five senses in a business performance&lt;/a&gt; - Nikola Pantović&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/public/pdf/Ivan Nikitovic - Go fast with web workers.pdf&quot;&gt;Go fast with Web Workers&lt;/a&gt; - Ivan Nikitović&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/public/pdf/Sasa Ranisavljevic - How to become more professional developer.pdf&quot;&gt;Become more professional developer&lt;/a&gt; - Saša Ranisavljević&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/public/pdf/Stanko Tadic - State of modern JS development.pdf&quot;&gt;State of a modern JavaScript development&lt;/a&gt; - Stanko Tadić (myself)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;photos&quot;&gt;Photos&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/winter-meetup-vol-5/1.jpg&quot; alt=&quot;Nikola Pantović&quot; /&gt;
+&lt;img src=&quot;/public/img/winter-meetup-vol-5/2.jpg&quot; alt=&quot;Tech meetup audience&quot; /&gt;
+&lt;img src=&quot;/public/img/winter-meetup-vol-5/3.jpg&quot; alt=&quot;Stanko Tadić talking about JavaScript&quot; /&gt;
+&lt;img src=&quot;/public/img/winter-meetup-vol-5/4.jpg&quot; alt=&quot;Saša Ranisavljević&quot; /&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -688,7 +1011,7 @@ to animate window scroll.&lt;/p&gt;
 Finally I took some time, cleaned it up and published it on the npm
 (this is the first npm package I published).&lt;/p&gt;
 
-&lt;p&gt;Demo and documentation is available &lt;a href=&quot;https://stanko.github.io/animated-scroll-to/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Demo and documentation are available &lt;a href=&quot;https://stanko.github.io/animated-scroll-to/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -1603,6 +1926,7 @@ You can find it on &lt;a href=&quot;https://github.com/Stanko/react-tutorial&quo
     &lt;span class=&quot;s2&quot;&gt;&quot;eslint-plugin-react&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;^6.9.0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;s2&quot;&gt;&quot;file-loader&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;^0.9.0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;s2&quot;&gt;&quot;react-hot-loader&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;^1.3.1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;react-router&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;^3.0.2&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;s2&quot;&gt;&quot;webpack&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;^1.14.0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;s2&quot;&gt;&quot;webpack-dev-server&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;^1.16.2&quot;&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
@@ -1669,7 +1993,7 @@ We are planning charity hackatons as well and I’ll keep you posted about them.
  </entry>
  
  <entry>
-   <title>Sector - draw and animate SVG sectors</title>
+   <title>Sektor - draw and animate SVG sectors</title>
    <link href="http://stanko.github.io/sektor-draw-and-animate-svg-circle-sectors-2016/"/>
    <updated>2016-06-29T00:00:00+00:00</updated>
    <id>http://stanko.github.io/sektor-draw-and-animate-svg-circle-sectors-2016</id>
@@ -1712,7 +2036,7 @@ Again, admission is free, but please register in advance. For more info check th
 &lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.facebook.com/events/1747545772127795/&quot;&gt;
-  &lt;img style=&quot;max-width: 350px; width: 100%&quot; src=&quot;https://scontent.fbeg2-1.fna.fbcdn.net/t31.0-8/13495464_1059413477470360_980356363013377222_o.jpg&quot; /&gt;
+  &lt;img style=&quot;max-width: 350px; width: 100%&quot; src=&quot;/public/img/meetup-vol-3/poster.jpeg&quot; /&gt;
 &lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
