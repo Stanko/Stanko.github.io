@@ -33,11 +33,20 @@ Simple plain JavaScript class for playing videos on canvas. IE9+ and modern brow
 [Demo](http://stanko.github.io/html-canvas-video-player/) |
 [Blog post](/html-canvas-video-player-ios/)
 
+### React animate height
+Lightweight, no dependency React component for animating height using CSS transitions. Slide up/down the element, and to any specific height.
+
+[GitHub](https://github.com/Stanko/react-animate-height) |
+[Demo](https://stanko.github.io/react-animate-height/) |
+[npm](https://www.npmjs.com/package/react-animate-height) |
+[Blog post](/react-animate-height-slide-up-down/)
+
 ### Animated scroll-to
 Simple, plain JavaScript scrollTo function.
 
 [GitHub](https://github.com/Stanko/animated-scroll-to) |
 [Demo](https://stanko.github.io/animated-scroll-to/) |
+[npm](https://www.npmjs.com/package/animated-scroll-to) |
 [Blog post](/animate-window-scroll-to/)
 
 ### Sektor
