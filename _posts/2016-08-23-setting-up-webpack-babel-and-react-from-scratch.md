@@ -4,6 +4,11 @@ title: Setting up Webpack, Babel and React from scratch
 category: [JavaScript, React]
 ---
 
+## Update, March 2017
+
+Webpack 2 is out, so this post is slowly becoming outdated.
+For webpack 2 - react boilerplate please check [this post](/webpack-2-react-redux/).
+
 ## This is a living guide
 
 This is the first part of the guide that will be changed over time.
