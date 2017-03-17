@@ -22,7 +22,7 @@ For this one we'll create a mixin.
 {% highlight scss %}
 // Converts pt to px
 @function pt-to-px($size-in-points){
-    @return #{ round($size-in-points / 1.333333) }px;
+    @return #{ round($size-in-points * 1.333333) }px;
 }
 
 // Adds letter spacing to match photoshop tracking
