@@ -124,7 +124,7 @@ For this one we’ll create a mixin.</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Converts pt to px
 </span><span class="k">@function</span> <span class="nf">pt-to-px</span><span class="p">(</span><span class="nv">$size-in-points</span><span class="p">){</span>
-    <span class="k">@return</span> <span class="si">#{</span> <span class="nf">round</span><span class="p">(</span><span class="nv">$size-in-points</span> <span class="o">/</span> <span class="m">1</span><span class="mi">.333333</span><span class="p">)</span> <span class="si">}</span><span class="nb">px</span><span class="p">;</span>
+    <span class="k">@return</span> <span class="si">#{</span> <span class="nf">round</span><span class="p">(</span><span class="nv">$size-in-points</span> <span class="o">*</span> <span class="m">1</span><span class="mi">.333333</span><span class="p">)</span> <span class="si">}</span><span class="nb">px</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="c1">// Adds letter spacing to match photoshop tracking
