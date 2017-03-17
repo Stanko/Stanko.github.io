@@ -189,6 +189,10 @@
   margin: -10rem auto 5rem;
   display: flex;
   align-items: flex-end;
+
+  @include xl {
+    margin-top: -6rem;
+  }
 }
 
 .AboutBlog-homeLink {
