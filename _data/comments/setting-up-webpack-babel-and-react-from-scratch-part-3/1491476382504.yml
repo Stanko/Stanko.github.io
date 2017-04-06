@@ -1,0 +1,14 @@
+_id: 22ef9240-1ab8-11e7-9d22-9b434ef38faa
+slug: setting-up-webpack-babel-and-react-from-scratch-part-3
+name: Stanko
+email: 13a28fac985c11eb7f40169be7da32f4
+message: >-
+  Hello Devlin,
+
+  Initial plan was to include redux as well, but webpack 1.0 is deprecated, so I
+  never finished the series. Please check the links in the text above to find
+  the links for the official react create app and my webpack 2.0 boilerplate.
+
+
+  Cheers!
+date: '2017-04-06T10:59:42.503Z'
