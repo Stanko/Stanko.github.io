@@ -4,13 +4,36 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-04-06T11:11:14+00:00</updated>
+ <updated>2017-04-25T16:24:51+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
    <email>stanko@null-object.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Nicer git log</title>
+   <link href="http://stanko.github.io/nicer-git-log/"/>
+   <updated>2017-04-25T00:00:00+00:00</updated>
+   <id>http://stanko.github.io/nicer-git-log</id>
+   <content type="html">&lt;p&gt;Just a short one. I want to share a simple command to display nicer &lt;code class=&quot;highlighter-rouge&quot;&gt;git log&lt;/code&gt; in the terminal. &lt;code class=&quot;highlighter-rouge&quot;&gt;git log&lt;/code&gt; has &lt;code class=&quot;highlighter-rouge&quot;&gt;--pretty=format&lt;/code&gt; option built-in, we are just going to pass formatting to it.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&amp;lt;%an&amp;gt;%Creset'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And it looks like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/nicer-git-log.png&quot; alt=&quot;Nicer git log&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then add it to your &lt;code class=&quot;highlighter-rouge&quot;&gt;.bash_profile&lt;/code&gt; as an alias (I’m using &lt;code class=&quot;highlighter-rouge&quot;&gt;glog&lt;/code&gt;) and that’s it.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;alias glog=&quot;git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&amp;lt;%an&amp;gt;%Creset'&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Being a tech lead, the thing I miss the most</title>
