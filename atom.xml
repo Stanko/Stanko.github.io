@@ -4,13 +4,55 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-05-05T12:44:02+00:00</updated>
+ <updated>2017-05-09T06:40:04+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
    <email>stanko@null-object.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Work&Co Tech Meetup Vol 6</title>
+   <link href="http://stanko.github.io/work-co-tech-meetup-vol-6/"/>
+   <updated>2017-05-09T00:00:00+00:00</updated>
+   <id>http://stanko.github.io/work-co-tech-meetup-vol-6</id>
+   <content type="html">&lt;p&gt;Another tech meetup coming up. This time we have three great talks about engineering and project planning. We also have a special guest - &lt;strong&gt;IT girls team&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;The IT Girls team will share their advances in promoting the professional development of women in technology in Serbia.&lt;/p&gt;
+
+&lt;p&gt;This one will be held on Tuesday, May 16th at &lt;a href=&quot;https://www.google.com/maps/place/Impact+Hub+Belgrade/@44.8157208,20.460881,17z/data=!3m1!4b1!4m5!3m4!1s0x475a7ab185427a37:0x2344b5ab238871dc!8m2!3d44.815717!4d20.463075&quot;&gt;Impact Hub Belgrade&lt;/a&gt;.
+See you there!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.meetup.com/Tech-Meetup-Vol-6/events/239775158/&quot;&gt;
+  &lt;img style=&quot;max-width: 600px; width: 100%&quot; src=&quot;/public/img/meetup-vol-6/poster.jpg&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Check the details and sign up at &lt;a href=&quot;https://www.meetup.com/Tech-Meetup-Vol-6/events/239775158/&quot;&gt;meetup.com page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;talks&quot;&gt;Talks&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Docker IRL, &lt;strong&gt;Miloš Pavlićević&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Find out how to incorporate Docker into your deployment/delivery process, with images! (pun intended)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Javascript Unit Testing, &lt;strong&gt;Sarah Mogin&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Learn the value of testing your Javascript applications and the tools and techniques for effective testing. We’ll focus on how to test React components, selectors, reducers, and sagas using the Jest and Enzyme libraries. &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Plan Smart, &lt;strong&gt;Nemanja Nićiforović&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Technical approaches to designing application architecture - a couple of tricks to avoid unnecessary headaches down the road!&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Post will updated with photos and slides.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Nicer git log</title>
@@ -161,6 +203,8 @@ Please, when you are open sourcing a library, keep it small and simple!&lt;/p&gt
 
 &lt;p&gt;Please comment with the talks you think are worth watching.&lt;/p&gt;
 
+&lt;!--more--&gt;
+
 &lt;hr /&gt;
 
 &lt;h3 id=&quot;wat-gary-bernhardt-2012&quot;&gt;Wat &lt;br /&gt;&lt;small&gt;Gary Bernhardt, 2012&lt;/small&gt;&lt;/h3&gt;
@@ -174,8 +218,6 @@ Only four minutes long, give it a try.&lt;/p&gt;
 &lt;/video&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.destroyallsoftware.com/talks/wat&quot;&gt;Link&lt;/a&gt;&lt;/p&gt;
-
-&lt;!--more--&gt;
 
 &lt;hr /&gt;
 

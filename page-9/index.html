@@ -12,18 +12,18 @@
 
   
 
-  <title>Switching to Atom, this time for good &middot; Muffin Man's writings</title>
+  <title>Muffin Man's writings &middot; or the front end playground</title>
 
   <link rel="stylesheet" href="/public/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700|Open+Sans:300,600,800&subset=latin-ext" rel="stylesheet">
 
   <meta property="og:site_name" content="Muffin Man's writings">
-  <meta property="og:title" content="Switching to Atom, this time for good &middot; Muffin Man's writings">
-  <meta property="og:description" content="I’m a big fan of Sublime Text editor, which I was using for years now. Minimal, fast, reliable. But there is one big problem with it. Only one man is...">
+  <meta property="og:title" content="Muffin Man's writings &middot; or the front end playground">
+  <meta property="og:description" content="Front end development, maybe occasional rants and music.">
   <meta property="og:image" content="http://stanko.github.io/public/favicon/favicon-96x96.png">
-  <meta property="og:url" content="http://stanko.github.io/trying-atom-for-the-third-time/">
-  <meta name="twitter:title" content="Switching to Atom, this time for good &middot; Muffin Man's writings">
-  <meta name="twitter:description" content="I’m a big fan of Sublime Text editor, which I was using for years now. Minimal, fast, reliable. But there is one big problem with it. Only one man is...">
+  <meta property="og:url" content="http://stanko.github.io/page-9/">
+  <meta name="twitter:title" content="Muffin Man's writings &middot; or the front end playground">
+  <meta name="twitter:description" content="Front end development, maybe occasional rants and music.">
   <meta name="twitter:image" content="http://stanko.github.io/public/favicon/favicon-96x96.png">
 
   <!-- Icons -->
@@ -53,9 +53,15 @@
 </head>
 
 
-  <body class="Body--post">
+  <body>
     <div class="Header-line"></div>
-<div class="Header Header--page">
+<div class="Header">
+  <button class="Header-menuButton Menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
   <div class="Rotation">
     <div class="Rotation-item Rotation-item--one">
       <img src="/public/img/poly-1.svg" />
@@ -66,253 +72,137 @@
     <div class="Rotation-item Rotation-item--three">
       <img src="/public/img/poly-3.svg" />
     </div>
-  </div>
 
-  <div class="Header-title">
-    <div class="Container">
-      <button class="Header-menuButton Menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <h1>Switching to Atom, this time for good</h1>
-      
-        <span>18 Apr 2016</span>
-      
+    <div class="LatestPost">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="15.2" viewBox="0 0 21 15.2">
+  <path fill="#EA5048" d="M20.91.254c-.08-.1-.196-.163-.32-.172-4.763-.33-7.97.562-9.532 2.647-1.49 1.985-.987 4.393-.755 5.204C9.53 9.122 9.02 10.252 8.69 11.25c-.334-.92-.87-1.608-1.467-2.125.002-.59-.12-2.006-1.245-3.032C4.796 5.013 2.905 4.72.358 5.22c-.125.024-.233.1-.296.21-.064.11-.08.24-.04.362.9 2.76 2.147 4.37 3.708 4.783.275.073.543.104.8.104 1.005 0 1.83-.477 2.248-.772.908.854 1.37 2.016 1.37 3.47 0 .033.003.065.01.097-.095.66-.122 1.235-.12 1.71h.89c-.004-.637.05-1.485.27-2.48.252-1.12.75-2.553 1.728-4.104.502.214 1.536.572 2.778.572.793 0 1.672-.146 2.555-.568 2.335-1.12 3.93-3.81 4.733-7.997.023-.124-.008-.253-.084-.353zM3.673 8.5c.01.002 1.132.11 2.252.77.036.022.07.046.104.067-.46.278-1.23.604-2.073.382C2.807 9.413 1.8 8.13 1.03 6c1.993-.315 3.453-.067 4.344.74.573.52.807 1.194.9 1.722-1.265-.716-2.494-.842-2.52-.844-.243-.022-.46.158-.48.4s.157.46.4.482zm12.21-.7c-1.798.866-3.644.355-4.45.048.705-.98 1.607-1.997 2.766-3 .184-.16.205-.44.045-.625-.162-.185-.44-.205-.627-.045-1.064.923-1.924 1.858-2.62 2.772-.148-.95-.166-2.443.768-3.69C13.084 1.503 15.86.72 20.022.936 19.25 4.54 17.858 6.85 15.882 7.8z"/>
+</svg>
+
+        Latest post
+      </span>
+      <h1>
+        <a href="/work-co-tech-meetup-vol-6/">
+          Work&Co Tech Meetup Vol 6
+        </a>
+      </h1>
+      <span>09 May 2017</span>
     </div>
   </div>
 </div>
 
-<div class="AboutBlog AboutBlog--small Container">
-  <a href="/" class="AboutBlog-homeLink">Home</a>
-  <div class="AboutBlog-content">
-    <a href="/" title="Home page" class="BlackLink">
-      <img src="/public/img/s-small.png" class="AboutBlog-logo AboutBlog-logo--small" />
-      <h1 class="AboutBlog-title">Muffin Man's writings</h1>
-    </a>
+<div class="AboutBlog Grid">
+  <div class="AboutBlog-content Col--md-5 Offset--md-3 Col--lg-4 Offset--lg-4">
+    <img src="/public/img/s.png" class="AboutBlog-logo Menu-toggle" />
+    <h1 class="AboutBlog-title">Muffin Man's writings</h1>
+    <h2 class="AboutBlog-subtitle">or the front end playground</h2>
+    <p class="AboutBlog-text">
+      Front end development, maybe occasional rants and music.
+    </p>
   </div>
 </div>
 
 
     <div class="Content">
-      <div class="Post Container">
-        <div class="Post-top">
-          <div class="Post-readTime">This article will take about 1  minute to read.</div>
+      <div class="Posts Container">
+  
+  <div class="Post">
+    <img class="Post-bg" src="/public/img/home/poly1.svg" />
+    <div class="Post-content">
+      <h1 class="Post-title">
+        <a href="/hello-world/">
+          Hello World
+        </a>
+      </h1>
 
-          <a href="#comments" class="Post-commentsLink">
-            
-            
-              No comments
-            
-          </a>
-        </div>
-
-        <p>I’m a big fan of <a href="https://www.sublimetext.com/">Sublime Text</a> editor, which I was using for years now.
-Minimal, fast, reliable. But there is one big problem with it.
-Only one man is working on it’s development and community really slowed down.
-JavaScript ecosystem is going forward at incredible speed, and I’m not sure if Sublime will be able to keep up.</p>
-
-<p>Even <a href="https://en.wikipedia.org/wiki/Bus_factor">bus factor</a> comes to mind.</p>
-
-<p>That’s why I tried couple of alternatives.
-When comes to bigger IDEs JetBrains is really good, but it is not as snappy as I would like.
-Logical move was to try GitHub’s <a href="https://atom.io">Atom</a> editor again.</p>
-
-<p><a href="https://atom.io/">
-  <img src="/public/img/atom.png" alt="Atom editor" class="margin-y-30" />
-</a></p>
-
-<!--more-->
-
-<p>Atom is basically a open source clone of Sublime Text, built on web technologies.
-I’ve tried it two times in the past, but both times I was going back to Sublime.
-It just wasn’t as polished and fast as Sublime is.
-Couple of weeks ago I gave it another chance.</p>
-
-<p>This time it blew me away. It is so much faster than it was last time I tried it.
-Community released and updated so many great packages.
-Linters, support for React, Angular, Babel, ES2015…
-UI is better, everything improved so much.</p>
-
-<p>Small disclaimer, I’m primary a front end developer, and Atom is awesome for it.
-People are using it for everything else too, but I don’t have much experience with other languages.</p>
-
-<p>Issue with large files is still here though. Opening 5MB+ log files is painful.
-This is something that I hope will be solved in the future, but it is not a deal breaker for me.
-Also when you open a file, there is a brief flash of white text,
-before syntax highlighting kicks in, but I got used to it after couple of days.</p>
-
-<p>Long story short - I’m sticking with Atom this time.</p>
-
-<p>Thanks to everyone in the Atom team and community, for making awesome development tool,
-and keeping it open source.</p>
-
-<hr />
-
-<p>Edit: I even used Atom recently on live coding session on
-<a href="/null-object-tech-meetup-vol-2/">Null Object Tech Meetup</a>.</p>
-
-<p><a href="/null-object-tech-meetup-vol-2/">
-  <img src="/public/img/meetup-vol-2/4.jpg" alt="Null Object tech meetup live coding" />
-</a></p>
-
-
-        <div class="Post-shareAndCategories">
-          <div class="SharringButtons">
-            <div>
-              Share on
-            </div>
-            <!-- Sharing button Facebook -->
-            <a
-              class="SharringButton SharringButton--facebook"
-              href="https://facebook.com/sharer/sharer.php?u=http://stanko.github.io/trying-atom-for-the-third-time/" target="_blank">
-              <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-  <g>
-    <path d="M18.768,7.465H14.5V5.56c0-0.896,0.594-1.105,1.012-1.105s2.988,0,2.988,0V0.513L14.171,0.5C10.244,0.5,9.5,3.438,9.5,5.32 v2.145h-3v4h3c0,5.212,0,12,0,12h5c0,0,0-6.85,0-12h3.851L18.768,7.465z"/>
-  </g>
+      <div class="Post-data">
+        <div class="Post-date">
+          <div class="Post-dateIcon">
+            <svg height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
+  <path d="M16 30c-3.74 0-7.255-1.456-9.9-4.1C1.78 21.577.753 15.024 3.548 9.594c.253-.49.855-.684 1.347-.432s.685.855.432 1.347C2.93 15.164 3.81 20.78 7.516 24.485 9.78 26.752 12.793 28 16 28c3.205 0 6.22-1.248 8.485-3.515S28 19.205 28 16c0-3.206-1.248-6.22-3.515-8.485S19.205 4 16 4c-3.206 0-6.22 1.25-8.485 3.515-.39.39-1.023.39-1.414 0s-.39-1.023 0-1.414C8.746 3.458 12.26 2 16 2s7.256 1.457 9.9 4.1C28.543 8.746 30 12.26 30 16s-1.456 7.255-4.1 9.9C23.255 28.543 19.74 30 16 30z"/>
+  <path d="M21 21c-.22 0-.44-.07-.625-.22l-5-4c-.237-.19-.375-.476-.375-.78V8c0-.552.448-1 1-1s1 .448 1 1v7.52l4.625 3.7c.43.345.5.974.156 1.405-.197.246-.487.375-.78.375z"/>
 </svg>
 
-            </a>
-            <!-- Sharing button Twitter -->
-            <a
-              class="SharringButton SharringButton--twitter"
-              href="https://twitter.com/intent/tweet/?text=Switching to Atom, this time for good&amp;url=http://stanko.github.io/trying-atom-for-the-third-time/" target="_blank">
-              <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-  <g>
-    <path d="M23.444,4.834c-0.814,0.363-1.5,0.375-2.228,0.016c0.938-0.562,0.981-0.957,1.32-2.019c-0.878,0.521-1.851,0.9-2.886,1.104 C18.823,3.053,17.642,2.5,16.335,2.5c-2.51,0-4.544,2.036-4.544,4.544c0,0.356,0.04,0.703,0.117,1.036 C8.132,7.891,4.783,6.082,2.542,3.332C2.151,4.003,1.927,4.784,1.927,5.617c0,1.577,0.803,2.967,2.021,3.782 C3.203,9.375,2.503,9.171,1.891,8.831C1.89,8.85,1.89,8.868,1.89,8.888c0,2.202,1.566,4.038,3.646,4.456 c-0.666,0.181-1.368,0.209-2.053,0.079c0.579,1.804,2.257,3.118,4.245,3.155C5.783,18.102,3.372,18.737,1,18.459 C3.012,19.748,5.399,20.5,7.966,20.5c8.358,0,12.928-6.924,12.928-12.929c0-0.198-0.003-0.393-0.012-0.588 C21.769,6.343,22.835,5.746,23.444,4.834z"/>
-  </g>
-</svg>
-
-            </a>
-            <!-- Sharing button Google+ -->
-            <a
-              class="SharringButton SharringButton--googlePlus"
-              href="https://plus.google.com/share?url=http://stanko.github.io/trying-atom-for-the-third-time/" target="_blank">
-              <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-  <g>
-    <path d="M11.366,12.928c-0.729-0.516-1.393-1.273-1.404-1.505c0-0.425,0.038-0.627,0.988-1.368 c1.229-0.962,1.906-2.228,1.906-3.564c0-1.212-0.37-2.289-1.001-3.044h0.488c0.102,0,0.2-0.033,0.282-0.091l1.364-0.989 c0.169-0.121,0.24-0.338,0.176-0.536C14.102,1.635,13.918,1.5,13.709,1.5H7.608c-0.667,0-1.345,0.118-2.011,0.347 c-2.225,0.766-3.778,2.66-3.778,4.605c0,2.755,2.134,4.845,4.987,4.91c-0.056,0.22-0.084,0.434-0.084,0.645 c0,0.425,0.108,0.827,0.33,1.216c-0.026,0-0.051,0-0.079,0c-2.72,0-5.175,1.334-6.107,3.32C0.623,17.06,0.5,17.582,0.5,18.098 c0,0.501,0.129,0.984,0.382,1.438c0.585,1.046,1.843,1.861,3.544,2.289c0.877,0.223,1.82,0.335,2.8,0.335 c0.88,0,1.718-0.114,2.494-0.338c2.419-0.702,3.981-2.482,3.981-4.538C13.701,15.312,13.068,14.132,11.366,12.928z M3.66,17.443 c0-1.435,1.823-2.693,3.899-2.693h0.057c0.451,0.005,0.892,0.072,1.309,0.2c0.142,0.098,0.28,0.192,0.412,0.282 c0.962,0.656,1.597,1.088,1.774,1.783c0.041,0.175,0.063,0.35,0.063,0.519c0,1.787-1.333,2.693-3.961,2.693 C5.221,20.225,3.66,19.002,3.66,17.443z M5.551,3.89c0.324-0.371,0.75-0.566,1.227-0.566l0.055,0 c1.349,0.041,2.639,1.543,2.876,3.349c0.133,1.013-0.092,1.964-0.601,2.544C8.782,9.589,8.363,9.783,7.866,9.783H7.865H7.844 c-1.321-0.04-2.639-1.6-2.875-3.405C4.836,5.37,5.049,4.462,5.551,3.89z"/>
-    <polygon points="23.5,9.5 20.5,9.5 20.5,6.5 18.5,6.5 18.5,9.5 15.5,9.5 15.5,11.5 18.5,11.5 18.5,14.5 20.5,14.5 20.5,11.5  23.5,11.5 	"/>
-  </g>
-</svg>
-
-            </a>
           </div>
+          21 Feb 2016
+        </div>
 
-          <div class="Post-categories">
-          <div>Categories</div>
-          
-            <a href="/category/development">Development</a>
-          
-        </div>
-        </div>
+        
+        
       </div>
 
-      <div class="PostBottom">
-        
-        <div class="Container">
-          <div class="RelatedPosts">
-            <h2>Latest Posts</h2>
+      <p>Everything starts with a <code>Hello World</code> so does this blog.</p>
 
-            
-              <div class="RelatedPosts-post">
-                <a href="/work-co-tech-meetup-vol-6/">
-                  <small>09 May 2017</small>
-                  Work&Co Tech Meetup Vol 6
-                </a>
-              </div>
-            
-              <div class="RelatedPosts-post">
-                <a href="/nicer-git-log/">
-                  <small>25 Apr 2017</small>
-                  Nicer git log
-                </a>
-              </div>
-            
-              <div class="RelatedPosts-post">
-                <a href="/being-a-tech-lead/">
-                  <small>09 Mar 2017</small>
-                  Being a tech lead, the thing I miss the most
-                </a>
-              </div>
-            
-          </div>
-        </div>
-        
+<p>For the first time everything will be under heavy development, until I get it the way I want.</p>
 
-        <div class="Comments-wrapper" id="comments">
-   <!-- | sort %} -->
+<p>As I really enjoy making stuff, I decided to try to make small JavaScript or CSS (SASS) plugin/script every week.
+Those are going to be both big and small, proof of concepts and production ready stuff.</p>
 
-  <div class="Container">
-    
-      <h2 class="Comments-title">No comments, be the first to comment</h2>
-    
+
+      
+    </div>
   </div>
-
-  <form
-    data-action="https://api.staticman.net/v1/entry/Stanko/Stanko.github.io/source"
-    class="CommentForm"
-    novalidate="novalidate">
-    <div class="CommentForm-overlay">
-      <div class="CommentForm-loader">
-        <div class="CommentForm-loaderElement"></div>
-        <div class="CommentForm-loaderElement CommentForm-loaderElement--two"></div>
-      </div>
-    </div>
-
-    <input
-      name="fields[slug]"
-      type="hidden"
-      value="trying-atom-for-the-third-time"
-      class="CommentForm-input CommentForm-input--slug">
-    <input
-      name="options[slug]"
-      type="hidden"
-      value="trying-atom-for-the-third-time"
-      class="CommentForm-input CommentForm-input--optionsSlug">
-
-    <div class="Grid">
-      <div class="Col--md-4">
-        <input
-          name="fields[name]"
-          type="text"
-          placeholder="Name"
-          class="CommentForm-input CommentForm-input--name">
-        <input
-          name="fields[last_name]"
-          type="text"
-          tabindex="-1"
-          placeholder="Last name"
-          class="CommentForm-input--lastName">
-      </div>
-      <div class="Col--md-4">
-        <input
-          name="fields[email]"
-          type="email"
-          placeholder="Email"
-          class="CommentForm-input CommentForm-input--email">
-      </div>
-    </div>
-    <div class="Container">
-      <textarea
-        name="fields[message]"
-        placeholder="Comment"
-        class="CommentForm-input CommentForm-input--message"></textarea>
-
-      <div class="CommentForm-errorMessages"></div>
-      <div class="CommentForm-sendFailed">
-        Sending failed, please try again.
-      </div>
-      <div class="CommentForm-sendSucceeded">
-        Thank you! Your comment is sent.
-        Please note that all of the comments go through moderation.
-      </div>
-
-      <button class="CommentForm-sendButton" type="submit">Send</button>
-    </div>
-  </form>
+  
 </div>
 
-      </div>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  <div class="Pagination">
+    <div class="Pagination-inner">
+      
+        <a class="Pagination-link Pagination-link--arrow" href="/page-8">
+          <span class="Pagination-arrow Pagination-arrow--left"></span>
+        </a>
+      
+
+      
+        <a class="Pagination-link" href="/">1</a>
+        <div class="Pagination-separator"></div>
+      
+
+      
+        
+          <a class="Pagination-link" href="/page-5">5</a>
+        
+      
+        
+          <a class="Pagination-link" href="/page-6">6</a>
+        
+      
+        
+          <a class="Pagination-link" href="/page-7">7</a>
+        
+      
+        
+          <a class="Pagination-link" href="/page-8">8</a>
+        
+      
+        
+          <a class="Pagination-link Pagination-link--active" class="active">9</a>
+        
+      
+
+      
+
+      
+        <span class="Pagination-link Pagination-link--arrow Pagination-link--inactive">
+          <span class="Pagination-arrow Pagination-arrow--right"></span>
+        </span>
+      
+    </div>
+  </div>
+
+
+
     </div>
 
     <div class="Footer">
