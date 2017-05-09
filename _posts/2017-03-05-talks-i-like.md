@@ -10,6 +10,8 @@ Every talks is embedded, but link to a website or youtube is included as well.
 
 Please comment with the talks you think are worth watching.
 
+<!--more-->
+
 ---
 
 ### Wat <br><small>Gary Bernhardt, 2012</small>
@@ -23,8 +25,6 @@ Only four minutes long, give it a try.
 </video>
 
 [Link](https://www.destroyallsoftware.com/talks/wat)
-
-<!--more-->
 
 ---
 
