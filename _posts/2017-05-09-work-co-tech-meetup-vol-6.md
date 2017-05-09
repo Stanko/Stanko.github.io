@@ -1,0 +1,36 @@
+---
+layout: post
+title: Work&Co Tech Meetup Vol 6
+category: [JavaScript, Speaking]
+---
+
+Another tech meetup coming up. This time we have three great talks about engineering and project planning. We also have a special guest - **IT girls team**.
+
+The IT Girls team will share their advances in promoting the professional development of women in technology in Serbia.
+
+This one will be held on Tuesday, May 16th at [Impact Hub Belgrade](https://www.google.com/maps/place/Impact+Hub+Belgrade/@44.8157208,20.460881,17z/data=!3m1!4b1!4m5!3m4!1s0x475a7ab185427a37:0x2344b5ab238871dc!8m2!3d44.815717!4d20.463075).
+See you there!
+
+<a href="https://www.meetup.com/Tech-Meetup-Vol-6/events/239775158/">
+  <img
+    style="max-width: 600px; width: 100%"
+    src="/public/img/meetup-vol-6/poster.jpg">
+</a>
+
+Check the details and sign up at [meetup.com page](https://www.meetup.com/Tech-Meetup-Vol-6/events/239775158/).
+
+### Talks
+
+* Docker IRL, **Miloš Pavlićević**
+
+  Find out how to incorporate Docker into your deployment/delivery process, with images! (pun intended)
+
+* Javascript Unit Testing, **Sarah Mogin**
+
+  Learn the value of testing your Javascript applications and the tools and techniques for effective testing. We’ll focus on how to test React components, selectors, reducers, and sagas using the Jest and Enzyme libraries. 
+
+* Plan Smart, **Nemanja Nićiforović**
+
+  Technical approaches to designing application architecture - a couple of tricks to avoid unnecessary headaches down the road!
+
+Post will updated with photos and slides.
