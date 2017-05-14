@@ -13,8 +13,9 @@ See you there!
 
 <a href="https://www.meetup.com/Tech-Meetup-Vol-6/events/239775158/">
   <img
-    style="max-width: 600px; width: 100%"
-    src="/public/img/meetup-vol-6/poster.jpg">
+    class="Image Image--large"
+    src="/public/img/meetup-vol-6/poster.jpg"
+    alt="Work&Co Meetup Tech Meetup Vol 6">
 </a>
 
 Check the details and sign up at [meetup.com page](https://www.meetup.com/Tech-Meetup-Vol-6/events/239775158/).

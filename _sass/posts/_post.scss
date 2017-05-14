@@ -44,6 +44,23 @@
   max-width: 100%;
 }
 
+.Post .Image {
+  display: block;
+  width: 100%;
+}
+
+.Post .Image--small {
+  max-width: 350px;
+}
+
+.Post .Image--medium {
+  max-width: 450px;
+}
+
+.Post .Image--large {
+  max-width: 600px;
+}
+
 .Post-content {
   position: relative;
   z-index: 1;

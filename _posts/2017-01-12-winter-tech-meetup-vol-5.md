@@ -13,7 +13,7 @@ Hope to see you there!
 
 <a href="https://www.facebook.com/events/171047483377472/">
   <img
-    style="max-width: 350px; width: 100%"
+    class="Image Image--small"
     src="/public/img/winter-meetup-vol-5/poster.jpg">
 </a>
 

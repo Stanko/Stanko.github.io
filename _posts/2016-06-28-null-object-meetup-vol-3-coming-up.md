@@ -17,6 +17,6 @@ Again, admission is free, but please register in advance. For more info check th
 
 <a href="https://www.facebook.com/events/1747545772127795/">
   <img
-    style="max-width: 350px; width: 100%"
+    class="Image Image--small"
     src="/public/img/meetup-vol-3/poster.jpeg">
 </a>
