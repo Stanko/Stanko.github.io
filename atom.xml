@@ -4,13 +4,32 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-05-09T09:59:05+00:00</updated>
+ <updated>2017-05-14T08:28:08+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
    <email>stanko.tadic@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Time Pills tracks, stems, presets, loops and midi</title>
+   <link href="http://stanko.github.io/time-pills-tracks-stems/"/>
+   <updated>2017-05-14T00:00:00+00:00</updated>
+   <id>http://stanko.github.io/time-pills-tracks-stems</id>
+   <content type="html">&lt;p&gt;Friends of mine from the band &lt;a href=&quot;https://soundcloud.com/timepills&quot;&gt;Time Pills&lt;/a&gt; opensourced bunch of their tracks. You can find them on &lt;a href=&quot;https://github.com/nndmlsvc/time-pills&quot;&gt;GitHub&lt;/a&gt;. They are looking forward to creative people remixing their them and sharing it with the world. So go nuts!&lt;/p&gt;
+
+&lt;p&gt;Repo contains all of the tracks, stems, presets, loops and even midi files.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://soundcloud.com/timepills&quot;&gt;
+  &lt;img class=&quot;Image Image--small&quot; src=&quot;/public/img/timepills.jpg&quot; alt=&quot;Time Pills SoundCloud profile&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Be sure to check them on &lt;a href=&quot;https://soundcloud.com/timepills&quot;&gt;SoundCloud&lt;/a&gt; as well.&lt;/p&gt;
+
+&lt;p&gt;Enjoy!&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Work&Co Tech Meetup Vol 6</title>
@@ -25,7 +44,7 @@
 See you there!&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.meetup.com/Tech-Meetup-Vol-6/events/239775158/&quot;&gt;
-  &lt;img style=&quot;max-width: 600px; width: 100%&quot; src=&quot;/public/img/meetup-vol-6/poster.jpg&quot; /&gt;
+  &lt;img class=&quot;Image Image--large&quot; src=&quot;/public/img/meetup-vol-6/poster.jpg&quot; alt=&quot;Work&amp;amp;Co Meetup Tech Meetup Vol 6&quot; /&gt;
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Check the details and sign up at &lt;a href=&quot;https://www.meetup.com/Tech-Meetup-Vol-6/events/239775158/&quot;&gt;meetup.com page&lt;/a&gt;.&lt;/p&gt;
@@ -507,7 +526,7 @@ This should be the biggest one so far, with two guest speakers.&lt;/p&gt;
 Hope to see you there!&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.facebook.com/events/171047483377472/&quot;&gt;
-  &lt;img style=&quot;max-width: 350px; width: 100%&quot; src=&quot;/public/img/winter-meetup-vol-5/poster.jpg&quot; /&gt;
+  &lt;img class=&quot;Image Image--small&quot; src=&quot;/public/img/winter-meetup-vol-5/poster.jpg&quot; /&gt;
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Visit &lt;a href=&quot;https://www.facebook.com/events/171047483377472/&quot;&gt;Facebook event&lt;/a&gt;
@@ -2106,7 +2125,7 @@ Again, admission is free, but please register in advance. For more info check th
 &lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.facebook.com/events/1747545772127795/&quot;&gt;
-  &lt;img style=&quot;max-width: 350px; width: 100%&quot; src=&quot;/public/img/meetup-vol-3/poster.jpeg&quot; /&gt;
+  &lt;img class=&quot;Image Image--small&quot; src=&quot;/public/img/meetup-vol-3/poster.jpeg&quot; /&gt;
 &lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
