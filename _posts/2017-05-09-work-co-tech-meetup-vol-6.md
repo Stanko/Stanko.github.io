@@ -26,12 +26,19 @@ Check the details and sign up at [meetup.com page](https://www.meetup.com/Tech-M
 
   Find out how to incorporate Docker into your deployment/delivery process, with images! (pun intended)
 
+  [Slides](/public/pdf/Milos - Docker-IRL.pdf)
+
 * Javascript Unit Testing, **Sarah Mogin**
 
   Learn the value of testing your Javascript applications and the tools and techniques for effective testing. We’ll focus on how to test React components, selectors, reducers, and sagas using the Jest and Enzyme libraries. 
 
-* Plan Smart, **Nemanja Nićiforović**
+  [Slides](/public/pdf/Sarah - UnitTesting.pdf)
 
-  Technical approaches to designing application architecture - a couple of tricks to avoid unnecessary headaches down the road!
+* Introduction to React Native, **Zeh Fernando**
 
-Post will updated with photos and slides.
+  We had last minute change, and replaced Nemanja's talk (Plan Smart) with Zeh's great introduction to React Native.
+
+  [Slides](/public/pdf/Zeh - Introduction to React Native.pdf)
+
+
+Post will updated with photos ~~and slides~~.
