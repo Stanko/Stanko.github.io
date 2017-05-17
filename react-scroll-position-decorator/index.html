@@ -156,13 +156,13 @@ It is fairly simple way of injecting scroll position to react components. This w
 
   <span class="nx">handleInterval</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// Interval is only used to throttle animation frame</span>
+    <span class="nx">cancelAnimationFrame</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">requestID</span><span class="p">);</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">requestID</span> <span class="o">=</span> <span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">handleRequestAnimationFrame</span><span class="p">);</span>
   <span class="p">}</span>
 
   <span class="nx">handleRequestAnimationFrame</span><span class="p">()</span> <span class="p">{</span>
     <span class="kr">const</span> <span class="p">{</span> <span class="nx">scrollPosition</span> <span class="p">}</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">;</span>
     <span class="kr">const</span> <span class="nx">newScrollPosition</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">getWindowScrollTop</span><span class="p">();</span>
-    <span class="nx">cancelAnimationFrame</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">requestID</span><span class="p">);</span>
 
     <span class="c1">// Update the state only when scroll position is changed</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">newScrollPosition</span> <span class="o">!==</span> <span class="nx">scrollPosition</span><span class="p">)</span> <span class="p">{</span>
