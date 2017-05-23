@@ -126,11 +126,10 @@ It is fairly simple way of injecting scroll position to react components. This w
 
     <span class="c1">// Initial scroll position</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
-      <span class="na">scrollPosition</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">getWindowScrollTop</span><span class="p">()</span>
+      <span class="na">scrollPosition</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">getWindowScrollTop</span><span class="p">(),</span>
     <span class="p">};</span>
 
     <span class="c1">// Bind handlers</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">scrollTo</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">scrollTo</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">handleInterval</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">handleInterval</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">handleRequestAnimationFrame</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">handleRequestAnimationFrame</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
   <span class="p">}</span>
@@ -167,7 +166,7 @@ It is fairly simple way of injecting scroll position to react components. This w
     <span class="c1">// Update the state only when scroll position is changed</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">newScrollPosition</span> <span class="o">!==</span> <span class="nx">scrollPosition</span><span class="p">)</span> <span class="p">{</span>
       <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span>
-        <span class="na">scrollPosition</span><span class="p">:</span> <span class="nx">newScrollPosition</span>
+        <span class="na">scrollPosition</span><span class="p">:</span> <span class="nx">newScrollPosition</span><span class="p">,</span>
       <span class="p">});</span>
     <span class="p">}</span>
   <span class="p">}</span>
@@ -178,7 +177,8 @@ It is fairly simple way of injecting scroll position to react components. This w
     <span class="k">return</span> <span class="p">(</span>
       <span class="o">&lt;</span><span class="nx">ComposedComponent</span>
         <span class="p">{</span> <span class="p">...</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span> <span class="p">}</span>
-        <span class="nx">scrollPosition</span><span class="o">=</span><span class="p">{</span> <span class="nx">scrollPosition</span> <span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+        <span class="nx">scrollPosition</span><span class="o">=</span><span class="p">{</span> <span class="nx">scrollPosition</span> <span class="p">}</span>
+      <span class="sr">/</span><span class="err">&gt;
 </span>    <span class="p">);</span>
   <span class="p">}</span>
 <span class="p">};</span>
