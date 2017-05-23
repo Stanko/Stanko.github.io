@@ -24,11 +24,10 @@ export const withScroll = ComposedComponent => class ScrollDecorator extends Com
 
     // Initial scroll position
     this.state = {
-      scrollPosition: this.getWindowScrollTop()
+      scrollPosition: this.getWindowScrollTop(),
     };
 
     // Bind handlers
-    this.scrollTo = this.scrollTo.bind(this);
     this.handleInterval = this.handleInterval.bind(this);
     this.handleRequestAnimationFrame = this.handleRequestAnimationFrame.bind(this);
   }
@@ -65,7 +64,7 @@ export const withScroll = ComposedComponent => class ScrollDecorator extends Com
     // Update the state only when scroll position is changed
     if (newScrollPosition !== scrollPosition) {
       this.setState({
-        scrollPosition: newScrollPosition
+        scrollPosition: newScrollPosition,
       });
     }
   }
@@ -76,7 +75,8 @@ export const withScroll = ComposedComponent => class ScrollDecorator extends Com
     return (
       <ComposedComponent
         { ...this.props }
-        scrollPosition={ scrollPosition } />
+        scrollPosition={ scrollPosition }
+      />
     );
   }
 };
