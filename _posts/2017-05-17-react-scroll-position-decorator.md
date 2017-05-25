@@ -18,7 +18,7 @@ So here it is:
 ```javascript
 import React, { Component } from 'react';
 
-export const withScroll = ComposedComponent => class ScrollDecorator extends Component {
+const withScroll = ComposedComponent => class ScrollDecorator extends Component {
   constructor() {
     super();
 
@@ -80,6 +80,8 @@ export const withScroll = ComposedComponent => class ScrollDecorator extends Com
     );
   }
 };
+
+export default withScroll;
 ```
 
 ### Usage
@@ -90,7 +92,7 @@ This will inject `scrollPosition` to it's props.
 
 ```javascript
 import React, { Component } from 'react';
-import { withScroll } from './scroll-decorator';
+import withScroll from './scroll-decorator';
 
 @withScroll
 class CoolComponent extends Component {
