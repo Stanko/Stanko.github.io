@@ -120,7 +120,7 @@ It is fairly simple way of injecting scroll position to react components. This w
 
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'react'</span><span class="p">;</span>
 
-<span class="kr">export</span> <span class="kr">const</span> <span class="nx">withScroll</span> <span class="o">=</span> <span class="nx">ComposedComponent</span> <span class="o">=&gt;</span> <span class="kr">class</span> <span class="nx">ScrollDecorator</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+<span class="kr">const</span> <span class="nx">withScroll</span> <span class="o">=</span> <span class="nx">ComposedComponent</span> <span class="o">=&gt;</span> <span class="kr">class</span> <span class="nx">ScrollDecorator</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
   <span class="nx">constructor</span><span class="p">()</span> <span class="p">{</span>
     <span class="kr">super</span><span class="p">();</span>
 
@@ -182,6 +182,8 @@ It is fairly simple way of injecting scroll position to react components. This w
 </span>    <span class="p">);</span>
   <span class="p">}</span>
 <span class="p">};</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">withScroll</span><span class="p">;</span>
 </code></pre>
 </div>
 
@@ -192,7 +194,7 @@ It is fairly simple way of injecting scroll position to react components. This w
 <p>This will inject <code class="highlighter-rouge">scrollPosition</code> to it’s props.</p>
 
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'react'</span><span class="p">;</span>
-<span class="kr">import</span> <span class="p">{</span> <span class="nx">withScroll</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'./scroll-decorator'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">withScroll</span> <span class="nx">from</span> <span class="s1">'./scroll-decorator'</span><span class="p">;</span>
 
 <span class="err">@</span><span class="nx">withScroll</span>
 <span class="kr">class</span> <span class="nx">CoolComponent</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
@@ -272,6 +274,13 @@ It is fairly simple way of injecting scroll position to react components. This w
 
             
               <div class="RelatedPosts-post">
+                <a href="/introducing-marvin/">
+                  <small>25 May 2017</small>
+                  Introducing Marvin
+                </a>
+              </div>
+            
+              <div class="RelatedPosts-post">
                 <a href="/time-pills-tracks-stems/">
                   <small>14 May 2017</small>
                   Time Pills tracks, stems, presets, loops and midi
@@ -282,13 +291,6 @@ It is fairly simple way of injecting scroll position to react components. This w
                 <a href="/work-co-tech-meetup-vol-6/">
                   <small>09 May 2017</small>
                   Work&Co Tech Meetup Vol 6
-                </a>
-              </div>
-            
-              <div class="RelatedPosts-post">
-                <a href="/nicer-git-log/">
-                  <small>25 Apr 2017</small>
-                  Nicer git log
                 </a>
               </div>
             
@@ -569,6 +571,9 @@ It is fairly simple way of injecting scroll position to react components. This w
     <script>
   var posts = [
      {
+        url: '/introducing-marvin/',
+        title: 'Introducing Marvin'
+    },  {
         url: '/react-scroll-position-decorator/',
         title: 'React scroll decorator'
     },  {
