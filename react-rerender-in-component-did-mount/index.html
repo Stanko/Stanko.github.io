@@ -12,18 +12,18 @@
 
   
 
-  <title>Blog redesign and new features &middot; Muffin Man's writings</title>
+  <title>Rerender React component by calling 'setState' in 'componentDidMount' &middot; Muffin Man's writings</title>
 
   <link rel="stylesheet" href="/public/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700|Open+Sans:300,600,800&subset=latin-ext" rel="stylesheet">
 
   <meta property="og:site_name" content="Muffin Man's writings">
-  <meta property="og:title" content="Blog redesign and new features &middot; Muffin Man's writings">
-  <meta property="og:description" content="As you probably noticed I redesigned my blog and added some new features. This is a list of the new stuff. New design Category pages Comments Search Reading time Share...">
+  <meta property="og:title" content="Rerender React component by calling 'setState' in 'componentDidMount' &middot; Muffin Man's writings">
+  <meta property="og:description" content="On the front end we do a lot of animations. Most of the simple animations I do by using CSS transitions. Either I will change class or inline style of...">
   <meta property="og:image" content="http://stanko.github.io/public/favicon/favicon-96x96.png">
-  <meta property="og:url" content="http://stanko.github.io/new-design-and-features/">
-  <meta name="twitter:title" content="Blog redesign and new features &middot; Muffin Man's writings">
-  <meta name="twitter:description" content="As you probably noticed I redesigned my blog and added some new features. This is a list of the new stuff. New design Category pages Comments Search Reading time Share...">
+  <meta property="og:url" content="http://stanko.github.io/react-rerender-in-component-did-mount/">
+  <meta name="twitter:title" content="Rerender React component by calling 'setState' in 'componentDidMount' &middot; Muffin Man's writings">
+  <meta name="twitter:description" content="On the front end we do a lot of animations. Most of the simple animations I do by using CSS transitions. Either I will change class or inline style of...">
   <meta name="twitter:image" content="http://stanko.github.io/public/favicon/favicon-96x96.png">
 
   <!-- Icons -->
@@ -75,9 +75,9 @@
         <span></span>
         <span></span>
       </button>
-      <h1>Blog redesign and new features</h1>
+      <h1>Rerender React component by calling 'setState' in 'componentDidMount'</h1>
       
-        <span>20 Oct 2016</span>
+        <span>23 Jun 2017</span>
       
     </div>
   </div>
@@ -97,7 +97,7 @@
     <div class="Content">
       <div class="Post Container">
         <div class="Post-top">
-          <div class="Post-readTime">This article will take about 3  minutes to read.</div>
+          <div class="Post-readTime">This article will take about 6  minutes to read.</div>
 
           <a href="#comments" class="Post-commentsLink">
             
@@ -107,112 +107,190 @@
           </a>
         </div>
 
-        <p>As you probably noticed I redesigned my blog and added some new features.
-This is a list of the new stuff.</p>
+        <p>On the front end we do a lot of animations. Most of the simple animations I do by using CSS transitions.
+Either I will change class or inline style of the element, and define transitions in CSS file.</p>
 
-<ul>
-  <li>New design</li>
-  <li>Category pages</li>
-  <li>Comments</li>
-  <li>Search</li>
-  <li>Reading time</li>
-  <li>Share buttons</li>
-</ul>
+<p>Easiest way to do this in React is to render initial state, and then when renders, change the state to apply class or style to animate. The easiest way to do it in React is to change state in <code class="highlighter-rouge">componentDidMount</code>.
+Setting state in <code class="highlighter-rouge">componentDidMount</code> is considered to be anti-pattern, as it forces rerender and can lead to property/layout thrashing. But in our case, that is exactly what we want to do.</p>
 
-<!--more-->
+<p>When we do that, we hit the wall - only second state is rendered and there is no transition between two states. It happens because of browsers optimization - <strong>browsers are not rerendering stuff that changed in the same animation frame.</strong> But they merge the changes and render the end result.</p>
 
-<h3 id="new-design">New design</h3>
+<p>The problem I just described is not React exclusive problem, but browser related.
+Same will happen if we try something like this:</p>
 
-<p>My friend Nikola, from <a href="http://mida.rs">MIDA</a> digital agency, helped me a lot with this one.
-I gave him a basic idea what I wanted, and he came up with this simple but beautiful design.
-It might go through some smaller changes in the future, but nothing major.
-Hope you like it.</p>
-
-<h3 id="category-pages">Category pages</h3>
-
-<p>These are accessible from the main menu, or by clicking on the category link at the end of the post.
-Obviosly, they list all of the posts for the selected category.
-Plugin I used is <a href="https://github.com/jekyll/jekyll-archives">jekyll-archives</a>.</p>
-
-<h3 id="comments">Comments</h3>
-
-<p><a href="https://staticman.net/">Staticman</a> brings user generated content to the static site generators.
-You can add their bot to your repo, and then hitting specific endpoint will
-generate a pull request (or push directly) with the data user entered.
-My comments are going through pull requests, which enables me to moderate them.</p>
-
-<h3 id="search">Search</h3>
-
-<p>Also accessible from the main menu. Search is done by JavaScript and it
-goes through JSON object with post titles.
-It uses fuzzy search algorithm, so it will find every title
-that has all of the letters you entered.
-Longer word matched will give higher priority to a result.
-(Try typing <code class="highlighter-rouge">SASS</code> for example.)</p>
-
-<h3 id="reading-time">Reading time</h3>
-
-<p>At the top of each post, you’ll see estimated reading time.
-It is a very simple plugin I found somewhere on the internet and modified a bit.</p>
-
-<p>Here it is:</p>
-
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="c1"># Outputs the reading time</span>
-
-<span class="c1"># Read this in "about 4 minutes"</span>
-<span class="c1"># Put into your _plugins dir in your Jekyll site</span>
-<span class="c1"># Usage: Read this in about about 3  minutes</span>
-
-<span class="k">module</span> <span class="nn">ReadingTimeFilter</span>
-  <span class="k">def</span> <span class="nf">reading_time</span><span class="p">(</span> <span class="n">input</span> <span class="p">)</span>
-    <span class="n">words_per_minute</span> <span class="o">=</span> <span class="mi">180</span>
-
-    <span class="n">words</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="nf">split</span><span class="p">.</span><span class="nf">size</span><span class="p">;</span>
-    <span class="n">minutes</span> <span class="o">=</span> <span class="p">(</span> <span class="n">words</span> <span class="o">/</span> <span class="n">words_per_minute</span> <span class="p">).</span><span class="nf">floor</span>
-    <span class="n">minutes_label</span> <span class="o">=</span> <span class="n">minutes</span> <span class="o">===</span> <span class="mi">1</span> <span class="p">?</span> <span class="s2">" minute"</span> <span class="p">:</span> <span class="s2">" minutes"</span>
-    <span class="n">minutes</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">?</span> <span class="s2">"about </span><span class="si">#{</span><span class="n">minutes</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">minutes_label</span><span class="si">}</span><span class="s2">"</span> <span class="p">:</span> <span class="s2">"less than 1 minute"</span>
-  <span class="k">end</span>
-<span class="k">end</span>
-
-<span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="p">.</span><span class="nf">register_filter</span><span class="p">(</span><span class="no">ReadingTimeFilter</span><span class="p">)</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'.AnimateMe'</span><span class="p">);</span>
+<span class="nx">element</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="s1">'50px'</span><span class="p">;</span>
+<span class="nx">element</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="s1">'250px'</span><span class="p">;</span>
 </code></pre>
 </div>
 
-<h3 id="share-buttons">Share buttons</h3>
+<p>So let’s start with example of the problem.</p>
 
-<p>At the end of each post, there are three simple sharing buttons.
-For Facebook, Twitter and Google+. No API or third party scripts are loaded.</p>
+<!--more-->
 
-<h3 id="other-stuff-i-want-to-add">Other stuff I want to add</h3>
+<h2 id="animate-component-by-changing-state-in-componentdidmount-doesnt-work">Animate component by changing state in <code class="highlighter-rouge">componentDidMount</code> doesn’t work</h2>
 
-<ul>
-  <li>Real related posts - Jekyll by default as related posts actually shows latest posts.
-I’m still looking for a nice way to implement this.
-Probably I’ll just match posts by tags.</li>
-  <li>Meta data (for sharing and SEO) - just need to add few meta tags to the head.</li>
-  <li>JSX syntax highlighting - not sure how to make this one, still at the drawing board.</li>
-  <li>Add icon for the <a href="/atom.xml">ATOM feed</a></li>
-</ul>
+<p>The scenario I described above. Element height depends on <code class="highlighter-rouge">this.state.animation</code> property.
+It is initially set to <code class="highlighter-rouge">false</code> and element height should be 50px.
+In <code class="highlighter-rouge">componentDidMount</code> we’ll change state and <code class="highlighter-rouge">this.props.animation</code> value to <code class="highlighter-rouge">true</code>
+and element height should be 250px. As we added transition, it should animate.</p>
 
-<h3 id="custom-plugins-and-github-pages">Custom plugins and GitHub pages</h3>
+<p>But it doesn’t as all of this happens really fast, and browser decide to merge changes
+and render only the end result. This way our element immediately gets height of 250px.</p>
 
-<p>When I first pushed new version of the blog, most of the new features were missing.
-I quickly learned that GitHub pages doesn’t allow custom plugins.
-It is a reasonable security feature.</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'react'</span><span class="p">;</span>
 
-<p>I decided to get a hosting for the blog, and then use Jenkins to make a Jekyll builds.
-But colleague told me that this is easily doable using <a href="https://travis-ci.org/">Travis</a>,
-without any outside hosting.
-There will be a <a href="/travis-jekyll-and-github-pages/">new post</a> about it, with detailed description how to set it up.</p>
+<span class="kr">export</span> <span class="k">default</span> <span class="kr">class</span> <span class="nx">AnimateMe</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
 
-<p>Basically I use the <code class="highlighter-rouge">source</code> branch for the Jekyll website, and Travis is watching for the pushes on that branch.
-When push is detected, Travis builds static HTML and pushes it to the <code class="highlighter-rouge">master</code> branch.
-From there GitHub pages takes over and deploys it.</p>
+    <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="na">animate</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="p">};</span>
+  <span class="p">}</span>
 
-<h3 id="for-the-end">For the end</h3>
+  <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span> <span class="na">animate</span><span class="p">:</span> <span class="kc">true</span> <span class="p">});</span>
+  <span class="p">}</span>
 
-<p>Hope you guys like the changes, if you are interested in anything specific, feel free to leave a comment.
-I’ll try to answer it, or even write a completely new post about it. Thanks!</p>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span>
+        <span class="nx">style</span><span class="o">=</span><span class="p">{</span> <span class="p">{</span>
+          <span class="na">background</span><span class="p">:</span> <span class="s1">'#eee'</span><span class="p">,</span>
+          <span class="na">border</span><span class="p">:</span> <span class="s1">'1px solid black'</span><span class="p">,</span>
+          <span class="na">height</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">animate</span> <span class="p">?</span> <span class="mi">250</span> <span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+          <span class="na">margin</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+          <span class="na">padding</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+          <span class="na">transition</span><span class="p">:</span> <span class="s1">'all 2s'</span><span class="p">,</span>
+        <span class="p">}</span> <span class="p">}</span>
+      <span class="o">&gt;</span>
+        <span class="nx">Animate</span> <span class="nx">my</span> <span class="nx">height</span>
+      <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<iframe height="400px" scrolling="no" src="//codepen.io/stanko/embed/preview/XgaNyq/?height=400&amp;theme-id=light&amp;default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+See the Pen <a href="http://codepen.io/stanko/pen/XgaNyq/">Counting sheep</a> by Stanko (<a href="http://codepen.io/stanko">@stanko</a>) on <a href="http://codepen.io">CodePen</a>.
+</iframe>
+
+<h2 id="solution-add-a-short-timeout">Solution, add a short timeout</h2>
+
+<p>I’ve run multiple times into this problem, but I was lazy to dig deeper and find the real reason why it is happening. My solution was to add a timeout, first I tried immediate timeout (<code class="highlighter-rouge">setTimeout(fn, 0)</code>), but alas, it didn’t work in some browsers (as it happened too fast again and browser did their optimizations). Then I increased it to the magical value 50 (<code class="highlighter-rouge">setTimeout(fn, 50)</code>), and it worked in every browser.</p>
+
+<p>Now I get the reason why it works. Because 50ms is larger than animation frame (which is around 16ms to achieve 60fps).</p>
+
+<p><small>(I’ll show you just the part of the code that is changed)</small></p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="p">...</span>
+  <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Added timeout</span>
+    <span class="kr">const</span> <span class="nx">ANIMATION_TIMEOUT</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span> <span class="na">animate</span><span class="p">:</span> <span class="kc">true</span> <span class="p">});</span>
+    <span class="p">},</span> <span class="nx">ANIMATION_TIMEOUT</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">...</span>
+</code></pre>
+</div>
+
+<iframe height="400px" scrolling="no" src="//codepen.io/stanko/embed/preview/WOERrE/?height=400&amp;theme-id=light&amp;default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+See the Pen <a href="http://codepen.io/stanko/pen/WOERrE/">Counting sheep</a> by Stanko (<a href="http://codepen.io/stanko">@stanko</a>) on <a href="http://codepen.io">CodePen</a>.
+</iframe>
+
+<p>So this is cross browser solution, but I always cringe a little when I’m forced to use timeouts like this. And I have been talking about animation frames a lot, so why don’t we try that next?</p>
+
+<h2 id="using-requestanimationframe-insted-on-timeout">Using <code class="highlighter-rouge">requestAnimationFrame</code> insted on timeout</h2>
+
+<p>We’ll just replace timeout with <code class="highlighter-rouge">requestAnimationFrame</code> and it should work.
+But not in Firefox :( to make things worse, sometimes it does, and sometimes doesn’t.
+My guess that sometimes it gets squeezed in to the same animation frame.</p>
+
+<p><small>(Again just the part of the code that is changed)</small></p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="p">...</span>
+  <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Added requestAnimationFrame</span>
+    <span class="nx">requestAnimationFrame</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span> <span class="na">animate</span><span class="p">:</span> <span class="kc">true</span> <span class="p">});</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">...</span>
+</code></pre>
+</div>
+
+<iframe height="400px" scrolling="no" src="//codepen.io/stanko/embed/preview/JJyEoz/?height=400&amp;theme-id=light&amp;default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+See the Pen <a href="http://codepen.io/stanko/pen/JJyEoz/">Counting sheep</a> by Stanko (<a href="http://codepen.io/stanko">@stanko</a>) on <a href="http://codepen.io">CodePen</a>.
+</iframe>
+
+<p>So now we need to make sure our two states belong to different animation frames each.</p>
+
+<h2 id="nested-requestanimationframe-to-the-rescue">Nested <code class="highlighter-rouge">requestAnimationFrame</code> to the rescue</h2>
+
+<p>Idea is to separate renders of two states to different animation frames.
+As we are not going to wrap React’s <code class="highlighter-rouge">render</code> method into animation frame,
+we need to nest them instead in <code class="highlighter-rouge">componentDidMount</code>.</p>
+
+<p>This way we guarantee first render won’t be merged together with the second one.
+Problem we had in Firefox is now gone.</p>
+
+<p>This looks hacky, but I think it is a legit solution. Instead of trying to get a <em>magic</em>
+value for timeout, just use native methods that browsers provide.</p>
+
+<p><small>(Again just the part of the code that is changed)</small></p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="p">...</span>
+  <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Added two nested requestAnimationFrames</span>
+    <span class="nx">requestAnimationFrame</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="c1">// Firefox will sometimes merge changes that happened here</span>
+      <span class="nx">requestAnimationFrame</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span> <span class="na">animate</span><span class="p">:</span> <span class="kc">true</span> <span class="p">});</span>
+      <span class="p">});</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">...</span>
+</code></pre>
+</div>
+
+<iframe height="400px" scrolling="no" src="//codepen.io/stanko/embed/preview/JJyEXq/?height=400&amp;theme-id=light&amp;default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+See the Pen <a href="http://codepen.io/stanko/pen/JJyEXq/">Counting sheep</a> by Stanko (<a href="http://codepen.io/stanko">@stanko</a>) on <a href="http://codepen.io">CodePen</a>.
+</iframe>
+
+<h2 id="finally-put-it-in-a-helper">Finally, put it in a helper</h2>
+
+<p>To make things a bit cleaner, I extract this to a helper function and then use whenever I need it.
+This can be used in our React examples but also with any other framework or vanilla JavaScript.</p>
+
+<p>If you support browsers without <code class="highlighter-rouge">requestAnimationFrame</code> be sure to polyfill it. Paul Irish has a great one  <a href="https://www.paulirish.com/2011/requestanimationframe-for-smart-animating/">here</a>.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// Start animation helper using nested requestAnimationFrames</span>
+<span class="kd">function</span> <span class="nx">startAnimation</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">requestAnimationFrame</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">requestAnimationFrame</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">callback</span><span class="p">();</span>
+    <span class="p">});</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p><small>(Our <code class="highlighter-rouge">componentDidMount</code> code using helper)</small></p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="p">...</span>
+  <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// You'll need to import startAnimation at the top of the file</span>
+    <span class="nx">startAnimation</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span> <span class="na">animate</span><span class="p">:</span> <span class="kc">true</span> <span class="p">});</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">...</span>
+</code></pre>
+</div>
+
+<h2 id="at-the-end">At the end</h2>
+
+<p>Hope you learned something, and I’m interested to hear if somebody is using different approach to solve this problem. Cheers!</p>
 
 
         <div class="Post-shareAndCategories">
@@ -223,7 +301,7 @@ I’ll try to answer it, or even write a completely new post about it. Thanks!</
             <!-- Sharing button Facebook -->
             <a
               class="SharringButton SharringButton--facebook"
-              href="https://facebook.com/sharer/sharer.php?u=http://stanko.github.io/new-design-and-features/" target="_blank">
+              href="https://facebook.com/sharer/sharer.php?u=http://stanko.github.io/react-rerender-in-component-did-mount/" target="_blank">
               <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
   <g>
     <path d="M18.768,7.465H14.5V5.56c0-0.896,0.594-1.105,1.012-1.105s2.988,0,2.988,0V0.513L14.171,0.5C10.244,0.5,9.5,3.438,9.5,5.32 v2.145h-3v4h3c0,5.212,0,12,0,12h5c0,0,0-6.85,0-12h3.851L18.768,7.465z"/>
@@ -234,7 +312,7 @@ I’ll try to answer it, or even write a completely new post about it. Thanks!</
             <!-- Sharing button Twitter -->
             <a
               class="SharringButton SharringButton--twitter"
-              href="https://twitter.com/intent/tweet/?text=Blog redesign and new features&amp;url=http://stanko.github.io/new-design-and-features/" target="_blank">
+              href="https://twitter.com/intent/tweet/?text=Rerender React component by calling 'setState' in 'componentDidMount'&amp;url=http://stanko.github.io/react-rerender-in-component-did-mount/" target="_blank">
               <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
   <g>
     <path d="M23.444,4.834c-0.814,0.363-1.5,0.375-2.228,0.016c0.938-0.562,0.981-0.957,1.32-2.019c-0.878,0.521-1.851,0.9-2.886,1.104 C18.823,3.053,17.642,2.5,16.335,2.5c-2.51,0-4.544,2.036-4.544,4.544c0,0.356,0.04,0.703,0.117,1.036 C8.132,7.891,4.783,6.082,2.542,3.332C2.151,4.003,1.927,4.784,1.927,5.617c0,1.577,0.803,2.967,2.021,3.782 C3.203,9.375,2.503,9.171,1.891,8.831C1.89,8.85,1.89,8.868,1.89,8.888c0,2.202,1.566,4.038,3.646,4.456 c-0.666,0.181-1.368,0.209-2.053,0.079c0.579,1.804,2.257,3.118,4.245,3.155C5.783,18.102,3.372,18.737,1,18.459 C3.012,19.748,5.399,20.5,7.966,20.5c8.358,0,12.928-6.924,12.928-12.929c0-0.198-0.003-0.393-0.012-0.588 C21.769,6.343,22.835,5.746,23.444,4.834z"/>
@@ -245,7 +323,7 @@ I’ll try to answer it, or even write a completely new post about it. Thanks!</
             <!-- Sharing button Google+ -->
             <a
               class="SharringButton SharringButton--googlePlus"
-              href="https://plus.google.com/share?url=http://stanko.github.io/new-design-and-features/" target="_blank">
+              href="https://plus.google.com/share?url=http://stanko.github.io/react-rerender-in-component-did-mount/" target="_blank">
               <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
   <g>
     <path d="M11.366,12.928c-0.729-0.516-1.393-1.273-1.404-1.505c0-0.425,0.038-0.627,0.988-1.368 c1.229-0.962,1.906-2.228,1.906-3.564c0-1.212-0.37-2.289-1.001-3.044h0.488c0.102,0,0.2-0.033,0.282-0.091l1.364-0.989 c0.169-0.121,0.24-0.338,0.176-0.536C14.102,1.635,13.918,1.5,13.709,1.5H7.608c-0.667,0-1.345,0.118-2.011,0.347 c-2.225,0.766-3.778,2.66-3.778,4.605c0,2.755,2.134,4.845,4.987,4.91c-0.056,0.22-0.084,0.434-0.084,0.645 c0,0.425,0.108,0.827,0.33,1.216c-0.026,0-0.051,0-0.079,0c-2.72,0-5.175,1.334-6.107,3.32C0.623,17.06,0.5,17.582,0.5,18.098 c0,0.501,0.129,0.984,0.382,1.438c0.585,1.046,1.843,1.861,3.544,2.289c0.877,0.223,1.82,0.335,2.8,0.335 c0.88,0,1.718-0.114,2.494-0.338c2.419-0.702,3.981-2.482,3.981-4.538C13.701,15.312,13.068,14.132,11.366,12.928z M3.66,17.443 c0-1.435,1.823-2.693,3.899-2.693h0.057c0.451,0.005,0.892,0.072,1.309,0.2c0.142,0.098,0.28,0.192,0.412,0.282 c0.962,0.656,1.597,1.088,1.774,1.783c0.041,0.175,0.063,0.35,0.063,0.519c0,1.787-1.333,2.693-3.961,2.693 C5.221,20.225,3.66,19.002,3.66,17.443z M5.551,3.89c0.324-0.371,0.75-0.566,1.227-0.566l0.055,0 c1.349,0.041,2.639,1.543,2.876,3.349c0.133,1.013-0.092,1.964-0.601,2.544C8.782,9.589,8.363,9.783,7.866,9.783H7.865H7.844 c-1.321-0.04-2.639-1.6-2.875-3.405C4.836,5.37,5.049,4.462,5.551,3.89z"/>
@@ -259,7 +337,9 @@ I’ll try to answer it, or even write a completely new post about it. Thanks!</
           <div class="Post-categories">
           <div>Categories</div>
           
-            <a href="/category/jekyll">Jekyll</a>
+            <a href="/category/javascript">JavaScript</a>
+          
+            <a href="/category/react">React</a>
           
         </div>
         </div>
@@ -273,13 +353,6 @@ I’ll try to answer it, or even write a completely new post about it. Thanks!</
 
             
               <div class="RelatedPosts-post">
-                <a href="/react-rerender-in-component-did-mount/">
-                  <small>23 Jun 2017</small>
-                  Rerender React component by calling 'setState' in 'componentDidMount'
-                </a>
-              </div>
-            
-              <div class="RelatedPosts-post">
                 <a href="/introducing-marvin/">
                   <small>25 May 2017</small>
                   Introducing Marvin
@@ -290,6 +363,13 @@ I’ll try to answer it, or even write a completely new post about it. Thanks!</
                 <a href="/react-scroll-position-decorator/">
                   <small>17 May 2017</small>
                   React scroll decorator
+                </a>
+              </div>
+            
+              <div class="RelatedPosts-post">
+                <a href="/time-pills-tracks-stems/">
+                  <small>14 May 2017</small>
+                  Time Pills tracks, stems, presets, loops and midi
                 </a>
               </div>
             
@@ -320,12 +400,12 @@ I’ll try to answer it, or even write a completely new post about it. Thanks!</
     <input
       name="fields[slug]"
       type="hidden"
-      value="new-design-and-features"
+      value="react-rerender-in-component-did-mount"
       class="CommentForm-input CommentForm-input--slug">
     <input
       name="options[slug]"
       type="hidden"
-      value="new-design-and-features"
+      value="react-rerender-in-component-did-mount"
       class="CommentForm-input CommentForm-input--optionsSlug">
 
     <div class="Grid">
