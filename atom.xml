@@ -4,7 +4,7 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-06-23T11:09:14+00:00</updated>
+ <updated>2017-06-23T14:21:20+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
@@ -395,7 +395,22 @@ See you there!&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Post will updated with photos &lt;del&gt;and slides&lt;/del&gt;.&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;h3 id=&quot;photos&quot;&gt;Photos&lt;/h3&gt;
+
+&lt;p&gt;&lt;img class=&quot;Image&quot; src=&quot;/public/img/meetup-vol-6/audience.jpg&quot; alt=&quot;Meetup audience&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;DualImage&quot;&gt;
+  &lt;div&gt;
+    &lt;img class=&quot;Image&quot; src=&quot;/public/img/meetup-vol-6/sarah.jpg&quot; alt=&quot;Sarah speaking about JavaScript testing&quot; /&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;img class=&quot;Image&quot; src=&quot;/public/img/meetup-vol-6/milos.jpg&quot; alt=&quot;Milos AKA Docker overlord&quot; /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img class=&quot;Image&quot; src=&quot;/public/img/meetup-vol-6/zeh.jpg&quot; alt=&quot;React Native introducion by Zeh&quot; /&gt;&lt;/p&gt;
 </content>
  </entry>
  
