@@ -4,7 +4,7 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-06-23T11:03:40+00:00</updated>
+ <updated>2017-06-23T11:09:14+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
@@ -13,7 +13,7 @@
 
  
  <entry>
-   <title>Rerender React component by calling 'setState' in 'componentDidMount'</title>
+   <title>Animate React component by calling 'setState' in 'componentDidMount'</title>
    <link href="http://stanko.github.io/react-rerender-in-component-did-mount/"/>
    <updated>2017-06-23T00:00:00+00:00</updated>
    <id>http://stanko.github.io/react-rerender-in-component-did-mount</id>
