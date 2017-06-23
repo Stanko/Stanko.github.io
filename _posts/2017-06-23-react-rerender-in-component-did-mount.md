@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Rerender React component by calling 'setState' in 'componentDidMount'
+title: Animate React component by calling 'setState' in 'componentDidMount'
 category: [JavaScript, React]
 ---
 

@@ -2,7 +2,7 @@
   var posts = [
     {% for post in site.posts %} {
         url: '{{ site.baseurl }}{{ post.url }}',
-        title: '{{ post.title }}'
+        title: '{{ post.title | escape }}'
     }, {% endfor %}
   ];
 </script>
