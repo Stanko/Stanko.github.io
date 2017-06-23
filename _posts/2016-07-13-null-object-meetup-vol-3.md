@@ -20,7 +20,7 @@ We are planning charity hackatons as well and I'll keep you posted about them.
 
 Grab the slides:
 
-* <a href="/public/pdf/Null Object Tech Meetup - Keeping up with the tech.pdf">Keeping up with the text</a>
+* <a href="/public/pdf/Null Object Tech Meetup - Keeping up with the tech.pdf">Keeping up with the tech</a>
 * <a href="/public/pdf/Null Object Tech Meetup - SPAs are hard">Single Page Applications are hard</a>
 
 <img src="/public/img/meetup-vol-3/1.JPG" alt="Milos Pavlicevic talking at tech meetup">

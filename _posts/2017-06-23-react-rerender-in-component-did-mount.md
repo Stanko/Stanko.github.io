@@ -4,15 +4,15 @@ title: Animate React component by calling 'setState' in 'componentDidMount'
 category: [JavaScript, React]
 ---
 
-On the front end we do a lot of animations. Most of the simple animations I do by using CSS transitions.
+On the front end, we do a lot of animations. Most of the simple animations I create by using CSS transitions.
 Either I will change class or inline style of the element, and define transitions in CSS file.
 
-Easiest way to do this in React is to render initial state, and then when renders, change the state to apply class or style to animate. The easiest way to do it in React is to change state in `componentDidMount`.
+Easiest way to do this in React is to render initial state, and then when it renders, change the state to apply class or style to animate. The easiest way to do it in React is to change state in `componentDidMount`.
 Setting state in `componentDidMount` is considered to be anti-pattern, as it forces rerender and can lead to property/layout thrashing. But in our case, that is exactly what we want to do.
 
-When we do that, we hit the wall - only second state is rendered and there is no transition between two states. It happens because of browsers optimization - **browsers are not rerendering stuff that changed in the same animation frame.** But they merge the changes and render the end result.
+When we do that, we hit the wall - only second state is rendered and there is no transition between two states. It happens because of browsers optimization - **browsers are not rerendering stuff that changed in the same animation frame.** But they merge changes and render the end result.
 
-The problem I just described is not React exclusive problem, but browser related.
+The problem I just described is not React exclusive, but browser related.
 Same will happen if we try something like this:
 
 ```javascript
@@ -29,10 +29,10 @@ So let's start with example of the problem.
 
 The scenario I described above. Element height depends on `this.state.animation` property.
 It is initially set to `false` and element height should be 50px.
-In `componentDidMount` we'll change state and `this.props.animation` value to `true`
+In `componentDidMount` we'll change the value of `this.props.animation` to `true`
 and element height should be 250px. As we added transition, it should animate.
 
-But it doesn't as all of this happens really fast, and browser decide to merge changes
+But it doesn't as all of this happens really fast, and browser decides to merge changes
 and render only the end result. This way our element immediately gets height of 250px.
 
 ```javascript
