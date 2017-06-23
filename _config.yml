@@ -11,7 +11,7 @@ destination:          _site
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
 permalink:            '/:title/'
-gems:
+plugins:
  - jekyll-paginate
  - jekyll-archives
 #  - jekyll-related-posts # Installation fails
