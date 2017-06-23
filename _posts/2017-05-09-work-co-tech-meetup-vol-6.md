@@ -40,5 +40,31 @@ Check the details and sign up at [meetup.com page](https://www.meetup.com/Tech-M
 
   [Slides](/public/pdf/Zeh - Introduction to React Native.pdf)
 
+<!-- more -->
 
-Post will updated with photos ~~and slides~~.
+### Photos
+
+<img
+  class="Image"
+  src="/public/img/meetup-vol-6/audience.jpg"
+  alt="Meetup audience">
+
+<div class="DualImage">
+  <div>
+    <img
+      class="Image"
+      src="/public/img/meetup-vol-6/sarah.jpg"
+      alt="Sarah speaking about JavaScript testing">
+  </div>
+  <div>
+    <img
+      class="Image"
+      src="/public/img/meetup-vol-6/milos.jpg"
+      alt="Milos AKA Docker overlord">
+  </div>
+</div>
+
+<img
+  class="Image"
+  src="/public/img/meetup-vol-6/zeh.jpg"
+  alt="React Native introducion by Zeh">

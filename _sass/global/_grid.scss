@@ -41,6 +41,11 @@
   @include lg {
     max-width: $container-width-lg;
   }
+
+  .Grid &,
+  .Container & {
+    margin: 0 -$grid-gutter;
+  }
 }
 
 .Grid--centered {

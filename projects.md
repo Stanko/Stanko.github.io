@@ -12,11 +12,11 @@ So feel free to open a pull request :)
 
 -----
 
-### React and Redux, Webpack 2 Boilerplate
-Boilerplate I extracted from a small real world project.
-It includes complete, minimal react app.
+### Marvin
+React and Redux, Webpack 2 boilerplate I extracted from a small real world project.
+It includes complete, minimal react app. Became Work&Co's internal project
 
-[GitHub](https://github.com/Stanko/react-redux-webpack2-boilerplate) |
+[GitHub](https://github.com/workco/marvin) |
 [Blog post](/webpack-2-react-redux/)
 
 ### SkyBlue
