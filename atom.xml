@@ -4,7 +4,7 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-06-23T14:21:20+00:00</updated>
+ <updated>2017-06-24T08:04:12+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
@@ -17,15 +17,15 @@
    <link href="http://stanko.github.io/react-rerender-in-component-did-mount/"/>
    <updated>2017-06-23T00:00:00+00:00</updated>
    <id>http://stanko.github.io/react-rerender-in-component-did-mount</id>
-   <content type="html">&lt;p&gt;On the front end we do a lot of animations. Most of the simple animations I do by using CSS transitions.
+   <content type="html">&lt;p&gt;On the front end, we do a lot of animations. Most of the simple animations I create by using CSS transitions.
 Either I will change class or inline style of the element, and define transitions in CSS file.&lt;/p&gt;
 
-&lt;p&gt;Easiest way to do this in React is to render initial state, and then when renders, change the state to apply class or style to animate. The easiest way to do it in React is to change state in &lt;code class=&quot;highlighter-rouge&quot;&gt;componentDidMount&lt;/code&gt;.
+&lt;p&gt;Easiest way to do this in React is to render initial state, and then when it renders, change the state to apply class or style to animate. The easiest way to do it in React is to change state in &lt;code class=&quot;highlighter-rouge&quot;&gt;componentDidMount&lt;/code&gt;.
 Setting state in &lt;code class=&quot;highlighter-rouge&quot;&gt;componentDidMount&lt;/code&gt; is considered to be anti-pattern, as it forces rerender and can lead to property/layout thrashing. But in our case, that is exactly what we want to do.&lt;/p&gt;
 
-&lt;p&gt;When we do that, we hit the wall - only second state is rendered and there is no transition between two states. It happens because of browsers optimization - &lt;strong&gt;browsers are not rerendering stuff that changed in the same animation frame.&lt;/strong&gt; But they merge the changes and render the end result.&lt;/p&gt;
+&lt;p&gt;When we do that, we hit the wall - only second state is rendered and there is no transition between two states. It happens because of browsers optimization - &lt;strong&gt;browsers are not rerendering stuff that changed in the same animation frame.&lt;/strong&gt; But they merge changes and render the end result.&lt;/p&gt;
 
-&lt;p&gt;The problem I just described is not React exclusive problem, but browser related.
+&lt;p&gt;The problem I just described is not React exclusive, but browser related.
 Same will happen if we try something like this:&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'.AnimateMe'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -42,10 +42,10 @@ Same will happen if we try something like this:&lt;/p&gt;
 
 &lt;p&gt;The scenario I described above. Element height depends on &lt;code class=&quot;highlighter-rouge&quot;&gt;this.state.animation&lt;/code&gt; property.
 It is initially set to &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt; and element height should be 50px.
-In &lt;code class=&quot;highlighter-rouge&quot;&gt;componentDidMount&lt;/code&gt; we’ll change state and &lt;code class=&quot;highlighter-rouge&quot;&gt;this.props.animation&lt;/code&gt; value to &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;
+In &lt;code class=&quot;highlighter-rouge&quot;&gt;componentDidMount&lt;/code&gt; we’ll change the value of &lt;code class=&quot;highlighter-rouge&quot;&gt;this.props.animation&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;
 and element height should be 250px. As we added transition, it should animate.&lt;/p&gt;
 
-&lt;p&gt;But it doesn’t as all of this happens really fast, and browser decide to merge changes
+&lt;p&gt;But it doesn’t as all of this happens really fast, and browser decides to merge changes
 and render only the end result. This way our element immediately gets height of 250px.&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'react'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -2408,7 +2408,7 @@ We are planning charity hackatons as well and I’ll keep you posted about them.
 &lt;p&gt;Grab the slides:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/public/pdf/Null Object Tech Meetup - Keeping up with the tech.pdf&quot;&gt;Keeping up with the text&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/public/pdf/Null Object Tech Meetup - Keeping up with the tech.pdf&quot;&gt;Keeping up with the tech&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;/public/pdf/Null Object Tech Meetup - SPAs are hard&quot;&gt;Single Page Applications are hard&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 

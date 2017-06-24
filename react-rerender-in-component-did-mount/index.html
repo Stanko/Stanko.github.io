@@ -19,11 +19,11 @@
 
   <meta property="og:site_name" content="Muffin Man's writings">
   <meta property="og:title" content="Animate React component by calling 'setState' in 'componentDidMount' &middot; Muffin Man's writings">
-  <meta property="og:description" content="On the front end we do a lot of animations. Most of the simple animations I do by using CSS transitions. Either I will change class or inline style of...">
+  <meta property="og:description" content="On the front end, we do a lot of animations. Most of the simple animations I create by using CSS transitions. Either I will change class or inline style of...">
   <meta property="og:image" content="http://stanko.github.io/public/favicon/favicon-96x96.png">
   <meta property="og:url" content="http://stanko.github.io/react-rerender-in-component-did-mount/">
   <meta name="twitter:title" content="Animate React component by calling 'setState' in 'componentDidMount' &middot; Muffin Man's writings">
-  <meta name="twitter:description" content="On the front end we do a lot of animations. Most of the simple animations I do by using CSS transitions. Either I will change class or inline style of...">
+  <meta name="twitter:description" content="On the front end, we do a lot of animations. Most of the simple animations I create by using CSS transitions. Either I will change class or inline style of...">
   <meta name="twitter:image" content="http://stanko.github.io/public/favicon/favicon-96x96.png">
 
   <!-- Icons -->
@@ -107,15 +107,15 @@
           </a>
         </div>
 
-        <p>On the front end we do a lot of animations. Most of the simple animations I do by using CSS transitions.
+        <p>On the front end, we do a lot of animations. Most of the simple animations I create by using CSS transitions.
 Either I will change class or inline style of the element, and define transitions in CSS file.</p>
 
-<p>Easiest way to do this in React is to render initial state, and then when renders, change the state to apply class or style to animate. The easiest way to do it in React is to change state in <code class="highlighter-rouge">componentDidMount</code>.
+<p>Easiest way to do this in React is to render initial state, and then when it renders, change the state to apply class or style to animate. The easiest way to do it in React is to change state in <code class="highlighter-rouge">componentDidMount</code>.
 Setting state in <code class="highlighter-rouge">componentDidMount</code> is considered to be anti-pattern, as it forces rerender and can lead to property/layout thrashing. But in our case, that is exactly what we want to do.</p>
 
-<p>When we do that, we hit the wall - only second state is rendered and there is no transition between two states. It happens because of browsers optimization - <strong>browsers are not rerendering stuff that changed in the same animation frame.</strong> But they merge the changes and render the end result.</p>
+<p>When we do that, we hit the wall - only second state is rendered and there is no transition between two states. It happens because of browsers optimization - <strong>browsers are not rerendering stuff that changed in the same animation frame.</strong> But they merge changes and render the end result.</p>
 
-<p>The problem I just described is not React exclusive problem, but browser related.
+<p>The problem I just described is not React exclusive, but browser related.
 Same will happen if we try something like this:</p>
 
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'.AnimateMe'</span><span class="p">);</span>
@@ -132,10 +132,10 @@ Same will happen if we try something like this:</p>
 
 <p>The scenario I described above. Element height depends on <code class="highlighter-rouge">this.state.animation</code> property.
 It is initially set to <code class="highlighter-rouge">false</code> and element height should be 50px.
-In <code class="highlighter-rouge">componentDidMount</code> we’ll change state and <code class="highlighter-rouge">this.props.animation</code> value to <code class="highlighter-rouge">true</code>
+In <code class="highlighter-rouge">componentDidMount</code> we’ll change the value of <code class="highlighter-rouge">this.props.animation</code> to <code class="highlighter-rouge">true</code>
 and element height should be 250px. As we added transition, it should animate.</p>
 
-<p>But it doesn’t as all of this happens really fast, and browser decide to merge changes
+<p>But it doesn’t as all of this happens really fast, and browser decides to merge changes
 and render only the end result. This way our element immediately gets height of 250px.</p>
 
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'react'</span><span class="p">;</span>
