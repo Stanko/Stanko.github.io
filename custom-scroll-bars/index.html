@@ -126,7 +126,7 @@ CSS tricks has a <a href="https://css-tricks.com/custom-scrollbars-in-webkit/">g
 
 <p>You can use pseudo selectors, these ones are used in the demo:</p>
 
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nd">::-webkit-scrollbar</span> <span class="p">{</span>
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nd">::-webkit-scrollbar</span> <span class="p">{</span>
   <span class="nl">background</span><span class="p">:</span> <span class="m">#CCF6ED</span><span class="p">;</span>
   <span class="nl">border-radius</span><span class="p">:</span> <span class="m">4px</span><span class="p">;</span>
   <span class="nl">height</span><span class="p">:</span> <span class="m">8px</span><span class="p">;</span>
@@ -136,7 +136,9 @@ CSS tricks has a <a href="https://css-tricks.com/custom-scrollbars-in-webkit/">g
 <span class="nd">::-webkit-scrollbar-thumb</span> <span class="p">{</span>
   <span class="nl">background</span><span class="p">:</span> <span class="m">#21BB9A</span><span class="p">;</span>
   <span class="nl">border-radius</span><span class="p">:</span> <span class="m">4px</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
+<span class="p">}</span>
+</code></pre>
+</div>
 
 <p>Check jsfiddle demo with green-ish scrollbars <i>webkit only</i>.</p>
 
@@ -179,7 +181,7 @@ space for the scroll bar, and content won’t jump around.</p>
 That’s why we are using <code class="highlighter-rouge">overflow-y: scroll</code> by default.
 Scrolling on touch devices is already nice and smooth.</p>
 
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.scroll-y</span> <span class="p">{</span>
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.scroll-y</span> <span class="p">{</span>
   <span class="nl">width</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
   <span class="nl">height</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
   <span class="nl">overflow-y</span><span class="p">:</span> <span class="nb">scroll</span><span class="p">;</span> <span class="c">/* not to mess up scroll on touch devices */</span>
@@ -198,7 +200,9 @@ Scrolling on touch devices is already nice and smooth.</p>
 
 <span class="nc">.no-touchevents</span> <span class="nc">.scroll-y</span><span class="nd">:hover</span> <span class="p">{</span>
     <span class="nl">overflow-y</span><span class="p">:</span> <span class="nb">scroll</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
+<span class="p">}</span>
+</code></pre>
+</div>
 
 <p>Check jsfiddle demo.</p>
 

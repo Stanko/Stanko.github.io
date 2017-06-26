@@ -166,7 +166,7 @@ This will be the entry point for webpack.</p>
 
 <p>Tip: you can create files by using touch command - <code class="highlighter-rouge">touch FILENAME</code></p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
   <span class="na">context</span><span class="p">:</span> <span class="nx">__dirname</span> <span class="o">+</span> <span class="s2">"/app"</span><span class="p">,</span>
 
   <span class="na">entry</span><span class="p">:</span> <span class="s2">"./js/app.js"</span><span class="p">,</span>
@@ -175,7 +175,9 @@ This will be the entry point for webpack.</p>
     <span class="na">filename</span><span class="p">:</span> <span class="s2">"app.js"</span><span class="p">,</span>
     <span class="na">path</span><span class="p">:</span> <span class="nx">__dirname</span> <span class="o">+</span> <span class="s2">"/dist"</span><span class="p">,</span>
   <span class="p">}</span>
-<span class="p">};</span></code></pre></figure>
+<span class="p">};</span>
+</code></pre>
+</div>
 
 <p>It is important to understand what is going on so far.
 This tells webpack that our main application file (<code class="highlighter-rouge">app.js</code>) is the entry point,
@@ -543,7 +545,7 @@ You can find it on <a href="https://github.com/Stanko/react-tutorial">GitHub</a>
 
 <h4 id="webpackconfigjs">webpack.config.js</h4>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'path'</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'path'</span><span class="p">);</span>
 
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
   <span class="na">context</span><span class="p">:</span> <span class="nx">__dirname</span> <span class="o">+</span> <span class="s2">"/app"</span><span class="p">,</span>
@@ -576,38 +578,41 @@ You can find it on <a href="https://github.com/Stanko/react-tutorial">GitHub</a>
       <span class="p">},</span>
     <span class="p">],</span>
   <span class="p">},</span>
-<span class="p">}</span></code></pre></figure>
+<span class="p">}</span>
+</code></pre>
+</div>
 
 <h4 id="packagejson">package.json</h4>
 
 <p>This is minimal version of the file. Yours will probably have more stuff like <code class="highlighter-rouge">author</code>, <code class="highlighter-rouge">license</code>…</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
-  <span class="s2">"scripts"</span><span class="err">:</span> <span class="p">{</span>
-    <span class="s2">"dev"</span><span class="err">:</span> <span class="s2">"node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline --history-api-fallback"</span>
-  <span class="p">},</span>
-  <span class="s2">"devDependencies"</span><span class="err">:</span> <span class="p">{</span>
-    <span class="s2">"babel-core"</span><span class="err">:</span> <span class="s2">"^6.21.0"</span><span class="p">,</span>
-    <span class="s2">"babel-loader"</span><span class="err">:</span> <span class="s2">"^6.2.10"</span><span class="p">,</span>
-    <span class="s2">"babel-preset-es2015"</span><span class="err">:</span> <span class="s2">"^6.18.0"</span><span class="p">,</span>
-    <span class="s2">"babel-preset-react"</span><span class="err">:</span> <span class="s2">"^6.16.0"</span><span class="p">,</span>
-    <span class="s2">"eslint"</span><span class="err">:</span> <span class="s2">"^3.13.1"</span><span class="p">,</span>
-    <span class="s2">"eslint-config-airbnb"</span><span class="err">:</span> <span class="s2">"^14.0.0"</span><span class="p">,</span>
-    <span class="s2">"eslint-plugin-import"</span><span class="err">:</span> <span class="s2">"^2.2.0"</span><span class="p">,</span>
-    <span class="s2">"eslint-plugin-jsx-a11y"</span><span class="err">:</span> <span class="s2">"^3.0.2"</span><span class="p">,</span>
-    <span class="s2">"eslint-plugin-react"</span><span class="err">:</span> <span class="s2">"^6.9.0"</span><span class="p">,</span>
-    <span class="s2">"file-loader"</span><span class="err">:</span> <span class="s2">"^0.9.0"</span><span class="p">,</span>
-    <span class="s2">"react-hot-loader"</span><span class="err">:</span> <span class="s2">"^1.3.1"</span><span class="p">,</span>
-    <span class="s2">"react-router"</span><span class="err">:</span> <span class="s2">"^3.0.2"</span><span class="p">,</span>
-    <span class="s2">"webpack"</span><span class="err">:</span> <span class="s2">"^1.14.0"</span><span class="p">,</span>
-    <span class="s2">"webpack-dev-server"</span><span class="err">:</span> <span class="s2">"^1.16.2"</span>
-  <span class="p">},</span>
-  <span class="s2">"dependencies"</span><span class="err">:</span> <span class="p">{</span>
-    <span class="s2">"react"</span><span class="err">:</span> <span class="s2">"^15.4.2"</span><span class="p">,</span>
-    <span class="s2">"react-dom"</span><span class="err">:</span> <span class="s2">"^15.4.2"</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre></figure>
-
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"dev"</span><span class="p">:</span><span class="w"> </span><span class="s2">"node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline --history-api-fallback"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"babel-core"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^6.21.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"babel-loader"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^6.2.10"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"babel-preset-es2015"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^6.18.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"babel-preset-react"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^6.16.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"eslint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^3.13.1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"eslint-config-airbnb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^14.0.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"eslint-plugin-import"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^2.2.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"eslint-plugin-jsx-a11y"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^3.0.2"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"eslint-plugin-react"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^6.9.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"file-loader"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^0.9.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"react-hot-loader"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.3.1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"react-router"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^3.0.2"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"webpack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.14.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"webpack-dev-server"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.16.2"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"react"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^15.4.2"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"react-dom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^15.4.2"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
 
 
         <div class="Post-shareAndCategories">
