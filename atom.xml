@@ -4,13 +4,46 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-06-26T09:21:04+00:00</updated>
+ <updated>2017-06-26T10:01:42+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
    <email>stanko.tadic@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>waifu2x super resolution image resizer</title>
+   <link href="http://stanko.github.io/super-resolution-image-resizer/"/>
+   <updated>2017-06-26T00:00:00+00:00</updated>
+   <id>http://stanko.github.io/super-resolution-image-resizer</id>
+   <content type="html">&lt;p&gt;I use &lt;a href=&quot;/public/img/image-resize/odin-2x.png&quot;&gt;the same wallpaper&lt;/a&gt;&lt;sup&gt;1&lt;/sup&gt; (warning, 6mb file) for a long time now.
+Not sure who is the author (if anyone knows the original author, please let me know in the comments).
+But with high resolution displays, wallpaper started to look blurry and noisy, so I stopped using it.&lt;/p&gt;
+
+&lt;p&gt;But recently, my girlfriend reminded me of &lt;a href=&quot;http://waifu2x.udp.jp/&quot;&gt;this great website&lt;/a&gt; which super-scales images using magic. Ok, not magic, but it uses “Deep Convolutional Neural Networks”, which is pretty much the same thing. Results are amazing, try it yourself.&lt;/p&gt;
+
+&lt;p&gt;The best thing, website is free to use and project is opensource. Code is available on &lt;a href=&quot;https://github.com/nagadomi/waifu2x&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It supports max scaling of 2x, so if you need more you’ll need to process image multiple times. Or you can dig in the code and add option for arbitrary scaling.&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;&lt;sup&gt;1&lt;/sup&gt; This is the resized image using waifu2x.&lt;/small&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;example&quot;&gt;Example&lt;/h3&gt;
+
+&lt;p&gt;Original, 250x250px jpeg &lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;Image&quot; style=&quot;max-width: 500px; width: 100%;&quot; src=&quot;/public/img/image-resize/rickmorty-250x250.jpg&quot; alt=&quot;Original 250x250px image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Result, 500x500px png&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;Image&quot; style=&quot;max-width: 500px; width: 100%;&quot; src=&quot;/public/img/image-resize/rickmorty-500x500.png&quot; alt=&quot;Resized 2x 500x500px image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you ask me, results are really impressive, kudos to nagadomi!&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;&lt;sup&gt;2&lt;/sup&gt; Image is from my favorite animated show &lt;a href=&quot;https://en.wikipedia.org/wiki/Rick_and_Morty&quot;&gt;Rick and Morty&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Animate React component by calling 'setState' in 'componentDidMount'</title>

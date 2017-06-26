@@ -82,11 +82,11 @@
         Latest post
       </span>
       <h1>
-        <a href="/react-rerender-in-component-did-mount/">
-          Animate React component by calling 'setState' in 'componentDidMount'
+        <a href="/super-resolution-image-resizer/">
+          waifu2x super resolution image resizer
         </a>
       </h1>
-      <span>23 Jun 2017</span>
+      <span>26 Jun 2017</span>
     </div>
   </div>
 </div>
@@ -108,6 +108,70 @@
   
   <div class="Post">
     <img class="Post-bg" src="/public/img/home/poly1.svg" />
+    <div class="Post-content">
+      <h1 class="Post-title">
+        <a href="/setting-up-webpack-babel-and-react-from-scratch-part-2/">
+          Setting up Webpack, Babel and React from scratch - Part 2
+        </a>
+      </h1>
+
+      <div class="Post-data">
+        <div class="Post-date">
+          <div class="Post-dateIcon">
+            <svg height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
+  <path d="M16 30c-3.74 0-7.255-1.456-9.9-4.1C1.78 21.577.753 15.024 3.548 9.594c.253-.49.855-.684 1.347-.432s.685.855.432 1.347C2.93 15.164 3.81 20.78 7.516 24.485 9.78 26.752 12.793 28 16 28c3.205 0 6.22-1.248 8.485-3.515S28 19.205 28 16c0-3.206-1.248-6.22-3.515-8.485S19.205 4 16 4c-3.206 0-6.22 1.25-8.485 3.515-.39.39-1.023.39-1.414 0s-.39-1.023 0-1.414C8.746 3.458 12.26 2 16 2s7.256 1.457 9.9 4.1C28.543 8.746 30 12.26 30 16s-1.456 7.255-4.1 9.9C23.255 28.543 19.74 30 16 30z"/>
+  <path d="M21 21c-.22 0-.44-.07-.625-.22l-5-4c-.237-.19-.375-.476-.375-.78V8c0-.552.448-1 1-1s1 .448 1 1v7.52l4.625 3.7c.43.345.5.974.156 1.405-.197.246-.487.375-.78.375z"/>
+</svg>
+
+          </div>
+          29 Aug 2016
+        </div>
+
+        
+        
+          <a href="/setting-up-webpack-babel-and-react-from-scratch-part-2/#comments">
+            2
+            Comments
+          </a>
+        
+      </div>
+
+      <h2 id="part-two">Part two</h2>
+
+<p>Update: Part two is pretty much done. Part three will cover redux and production builds.</p>
+
+<p>Other parts:</p>
+
+<ul>
+  <li><a href="/setting-up-webpack-babel-and-react-from-scratch">Part 1</a> - Webpack, Babel, React, Router, ESLint</li>
+  <li>Part 2 - SASS, More ES6 goodness (Static props, decorators, deconstruction…)</li>
+  <li><a href="/setting-up-webpack-babel-and-react-from-scratch-part-3">Part 3</a> - Where to go from here</li>
+</ul>
+
+<h2 id="adding-sass">Adding SASS</h2>
+
+<p>We will use SASS loader for webpack, so let’s install it together with node-sass compiler,
+ css and style loaders</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm install --save-dev style-loader css-loader sass-loader node-sass
+</code></pre>
+</div>
+
+<p>Create <code class="highlighter-rouge">scss</code> folder in the <code class="highlighter-rouge">app</code> folder, and main <code class="highlighter-rouge">app.scss</code> file in it.
+This file will include all of the other scss files.</p>
+
+<p>Now we need to add a loader to webpack config file.</p>
+
+
+
+      
+          <a class="Post-readmore" href="/setting-up-webpack-babel-and-react-from-scratch-part-2/">Read more</a>
+      
+    </div>
+  </div>
+  
+  <div class="Post">
+    <img class="Post-bg" src="/public/img/home/poly2.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/setting-up-webpack-babel-and-react-from-scratch/">
@@ -177,7 +241,7 @@ and that you have read what Webpack, Babel and React are.</p>
   </div>
   
   <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly2.svg" />
+    <img class="Post-bg" src="/public/img/home/poly0.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/i-washed-my-headphones/">
@@ -217,7 +281,7 @@ Probably the fact that they dried for days helped.</p>
   </div>
   
   <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly0.svg" />
+    <img class="Post-bg" src="/public/img/home/poly1.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/null-object-meetup-vol-3/">
@@ -258,7 +322,7 @@ My talk was about SPAs, and how hard they are.</p>
   </div>
   
   <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly1.svg" />
+    <img class="Post-bg" src="/public/img/home/poly2.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/sektor-draw-and-animate-svg-circle-sectors-2016/">
@@ -301,51 +365,6 @@ Check <a href="https://stanko.github.io/sektor/">demo and docs</a>.</p>
 If you are bored, try it yourself, and you’ll see that animating using <code class="highlighter-rouge">requestAnimationFrame</code> is way smoother.</p>
 
 <p>React component is coming soon as well. Cheers!</p>
-
-
-      
-    </div>
-  </div>
-  
-  <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly2.svg" />
-    <div class="Post-content">
-      <h1 class="Post-title">
-        <a href="/null-object-meetup-vol-3-coming-up/">
-          Null Object Tech Meetup Vol 3 is coming up
-        </a>
-      </h1>
-
-      <div class="Post-data">
-        <div class="Post-date">
-          <div class="Post-dateIcon">
-            <svg height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
-  <path d="M16 30c-3.74 0-7.255-1.456-9.9-4.1C1.78 21.577.753 15.024 3.548 9.594c.253-.49.855-.684 1.347-.432s.685.855.432 1.347C2.93 15.164 3.81 20.78 7.516 24.485 9.78 26.752 12.793 28 16 28c3.205 0 6.22-1.248 8.485-3.515S28 19.205 28 16c0-3.206-1.248-6.22-3.515-8.485S19.205 4 16 4c-3.206 0-6.22 1.25-8.485 3.515-.39.39-1.023.39-1.414 0s-.39-1.023 0-1.414C8.746 3.458 12.26 2 16 2s7.256 1.457 9.9 4.1C28.543 8.746 30 12.26 30 16s-1.456 7.255-4.1 9.9C23.255 28.543 19.74 30 16 30z"/>
-  <path d="M21 21c-.22 0-.44-.07-.625-.22l-5-4c-.237-.19-.375-.476-.375-.78V8c0-.552.448-1 1-1s1 .448 1 1v7.52l4.625 3.7c.43.345.5.974.156 1.405-.197.246-.487.375-.78.375z"/>
-</svg>
-
-          </div>
-          28 Jun 2016
-        </div>
-
-        
-        
-      </div>
-
-      <p>We have another tech meetup coming up.</p>
-
-<p>My friend and colleague Miloš, will talk about how we all are <i>Keeping up with the tech</i>.
-And my talk will be dedicated to <i>single page applications, and how actually hard they are</i>.</p>
-
-<p>This time it is on the river, at the <a href="https://www.facebook.com/LemonChili011/">Lemon Chili</a>.
-Again, admission is free, but please register in advance. For more info check the
-<a href="https://www.facebook.com/events/1747545772127795/">
-  Facebook event
-</a>.</p>
-
-<p><a href="https://www.facebook.com/events/1747545772127795/">
-  <img class="Image Image--small" src="/public/img/meetup-vol-3/poster.jpeg" />
-</a></p>
 
 
       
@@ -402,7 +421,7 @@ Again, admission is free, but please register in advance. For more info check th
 
       
         <div class="Pagination-separator"></div>
-        <a class="Pagination-link" href="/page-9">9</a>
+        <a class="Pagination-link" href="/page-10">10</a>
       
 
       
@@ -555,6 +574,10 @@ Again, admission is free, but please register in advance. For more info check th
           
             
               
+            
+          
+            
+              
                 <a
                   class="Menu-menuLink "
                   href="/projects/">
@@ -614,6 +637,9 @@ Again, admission is free, but please register in advance. For more info check th
     <script>
   var posts = [
      {
+        url: '/super-resolution-image-resizer/',
+        title: 'waifu2x super resolution image resizer'
+    },  {
         url: '/react-rerender-in-component-did-mount/',
         title: 'Animate React component by calling &#39;setState&#39; in &#39;componentDidMount&#39;'
     },  {
