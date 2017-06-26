@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Work&Co Tech Meetup Vol 6
+title: Work&amp;Co Tech Meetup Vol 6
 category: [JavaScript, Speaking]
 ---
 
