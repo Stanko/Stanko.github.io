@@ -19,7 +19,7 @@ For this one we'll create a mixin.
 
 <!--more-->
 
-{% highlight scss %}
+```css
 // Converts pt to px
 @function pt-to-px($size-in-points){
     @return #{ round($size-in-points * 1.333333) }px;
@@ -36,18 +36,17 @@ For this one we'll create a mixin.
     font-size: pt-to-px(20);
     line-height: pt-to-px(30);
 }
-
-{% endhighlight %}
+```
 
 This will generate following CSS:
 
-{% highlight css %}
+```css
 .Component {
     letter-spacing: -.005em;
     font-size: 15px;
     line-height: 23px;
 }
-{% endhighlight %}
+```
 
 Note that function and mixin can do pretty much the same job.
 But it makes more sense to use mixins when including complete styles,

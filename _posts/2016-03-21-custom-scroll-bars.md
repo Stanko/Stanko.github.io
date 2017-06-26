@@ -23,7 +23,7 @@ CSS tricks has a [great article](https://css-tricks.com/custom-scrollbars-in-web
 
 You can use pseudo selectors, these ones are used in the demo:
 
-{% highlight css %}
+```css
 ::-webkit-scrollbar {
   background: #CCF6ED;
   border-radius: 4px;
@@ -35,7 +35,7 @@ You can use pseudo selectors, these ones are used in the demo:
   background: #21BB9A;
   border-radius: 4px;
 }
-{% endhighlight %}
+```
 
 Check jsfiddle demo with green-ish scrollbars <i>webkit only</i>.
 
@@ -81,7 +81,7 @@ You'll need to add modernizr, or some other way to detect touch devices.
 That's why we are using `overflow-y: scroll` by default.
 Scrolling on touch devices is already nice and smooth.
 
-{% highlight css %}
+```css
 .scroll-y {
   width: 300px;
   height: 300px;
@@ -102,7 +102,7 @@ Scrolling on touch devices is already nice and smooth.
 .no-touchevents .scroll-y:hover {
     overflow-y: scroll;
 }
-{% endhighlight %}
+```
 
 Check jsfiddle demo.
 

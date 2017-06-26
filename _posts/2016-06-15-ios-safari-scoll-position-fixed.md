@@ -11,7 +11,7 @@ Just force GPU acceleration by adding `transform: translate3d(0,0,0);` to your e
 
 You will have something like this:
 
-{% highlight css %}
+```css
 .Element-header {
   transform: translate3d(0,0,0);
 }
@@ -20,7 +20,7 @@ You will have something like this:
   top: 0;
   position: fixed;
 }
-{% endhighlight %}
+```
 
 Enjoy `¯\_(ツ)_/¯`
 

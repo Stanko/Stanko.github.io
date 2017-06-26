@@ -58,7 +58,7 @@ Now we need to create a webpack config file `webpack.config.js`.
 
 Tip: you can create files by using touch command - `touch FILENAME`
 
-{% highlight javascript %}
+```javascript
 module.exports = {
   context: __dirname + "/app",
 
@@ -69,7 +69,7 @@ module.exports = {
     path: __dirname + "/dist",
   }
 };
-{% endhighlight %}
+```
 
 It is important to understand what is going on so far.
 This tells webpack that our main application file (`app.js`) is the entry point,
@@ -414,7 +414,7 @@ You can find it on [GitHub](https://github.com/Stanko/react-tutorial).
 
 #### webpack.config.js
 
-{% highlight javascript %}
+```javascript
 const path = require('path');
 
 module.exports = {
@@ -449,13 +449,13 @@ module.exports = {
     ],
   },
 }
-{% endhighlight %}
+```
 
 #### package.json
 
 This is minimal version of the file. Yours will probably have more stuff like `author`, `license`...
 
-{% highlight javascript %}
+```json
 {
   "scripts": {
     "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline --history-api-fallback"
@@ -481,4 +481,4 @@ This is minimal version of the file. Yours will probably have more stuff like `a
     "react-dom": "^15.4.2"
   }
 }
-{% endhighlight %}
+```

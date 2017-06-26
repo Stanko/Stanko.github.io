@@ -9,11 +9,11 @@ in ES6 (ES2015) template strings.
 
 You'll need to add this snippet to your Atom's `style.less`
 
-{% highlight css %}
+```css
 atom-text-editor::shadow .variable.js {
   color: #F8F8F2;
 }
-{% endhighlight %}
+```
 
 <img src="/public/img/template-string-vars.png" alt="ES6 template string with variable highlighted in Atom" class="margin-y-30">
 

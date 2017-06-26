@@ -27,7 +27,7 @@ This was working decently, but I wanted to run only one command, and let the tas
 
 That is where node child process comes in.
 
-{% highlight javascript %}
+```javascript
 import childProcess from 'child_process';
 
 const spawn = childProcess.spawn;
@@ -37,7 +37,7 @@ gulp.task('jekyll', function (){
     stdio: 'inherit'
   });
 });
-{% endhighlight %}
+```
 
 This task * spawns a child process from gulp.
 Nice thing is that we can start it, and gulp will kill it on exit.

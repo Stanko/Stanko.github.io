@@ -12,7 +12,7 @@ I have kept copying that function from project to project.
 Finally I took some time, cleaned it up and published it on the npm
 (this is the first npm package I published).
 
-Demo and documentation are available [here](https://stanko.github.io/animated-scroll-to/).
+Check the [demo](https://stanko.github.io/animated-scroll-to/) and read documentation of [Github](https://github.com/Stanko/animated-scroll-to).
 
 <!--more-->
 
@@ -27,7 +27,7 @@ npm install animated-scroll-to
 
 ### Usage
 
-{% highlight javascript %}
+```javascript
 import animateScrollTo from 'animated-scroll-to';
 
 // desiredOffset - page offset to scroll
@@ -42,12 +42,19 @@ const options = {
   minDuration: 250,
 
   // maximum duration of the scroll
-  maxDuration: 3000,
+  maxDuration: 1500,
+
+  // DOM element to scroll, default window
+  // Pass a reference to a DOM object
+  // Example: document.querySelector('#element-to-scroll'),
+  element: window,
 
   // should animated scroll be canceled on user scroll/keypress
   // if set to "false" user input will be disabled until animated scroll is complete
   cancelOnUserAction: true
 };
 
+const desiredOffset = 1000;
+
 animateScrollTo(desiredOffset, options);
-{% endhighlight %}
+```
