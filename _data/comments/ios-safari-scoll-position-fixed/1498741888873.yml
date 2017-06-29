@@ -3,13 +3,13 @@ slug: ios-safari-scoll-position-fixed
 name: Stanko
 email: 13a28fac985c11eb7f40169be7da32f4
 message: >-
-  Hello Michael, 
+  Hello Michael,
 
   Not sure what you are asking, but my guess is - should you apply
   <code>translate3d</code> to children of the element with <code>position:
-  fixed</code>? It depends of the usecase, like Matt suggested, in some cases
-  you should apply when children elements are flickering.
-
+  fixed</code>? It depends of the usecase, like Matt suggested,
+  if children elements are flickering you should apply <code>translate3d</code>
+  on them.
 
   Hope that answers your question, cheers!
 date: '2017-06-29T13:11:28.872Z'
