@@ -4,13 +4,108 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-07-24T16:19:34+00:00</updated>
+ <updated>2017-07-25T09:45:15+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
    <email>stanko.tadic@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Plx - React parallax component</title>
+   <link href="http://stanko.github.io/plx-react-parallax-component/"/>
+   <updated>2017-07-24T00:00:00+00:00</updated>
+   <id>http://stanko.github.io/plx-react-parallax-component</id>
+   <content type="html">&lt;p&gt;I’m becoming predictable. Again, I haven’t found component I like, so I wrote my own.&lt;/p&gt;
+
+&lt;p&gt;This time, I’ve build React component for parallax (on scroll) effects.
+Check the &lt;a href=&quot;https://stanko.github.io/react-plx/&quot;&gt;live demo&lt;/a&gt;. It is called &lt;code class=&quot;highlighter-rouge&quot;&gt;Plx&lt;/code&gt;, it is open source and available on &lt;a href=&quot;https://github.com/Stanko/react-plx&quot;&gt;GitHub&lt;/a&gt; and &lt;a href=&quot;https://www.npmjs.com/package/react-plx&quot;&gt;npm&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-it-does&quot;&gt;What it does&lt;/h2&gt;
+
+&lt;p&gt;So far in my career, I’ve built so many parallax components. Parallax is actually wrong term here&lt;sup&gt;1&lt;/sup&gt;, but it got accepted by development community.&lt;/p&gt;
+
+&lt;p&gt;Designers love them and users are fascinated by fancy effects. Simply explained as you scroll the page down something is changed relative to the scroll position. For example, as you scroll down clock arms are rotating. Just check the &lt;a href=&quot;https://stanko.github.io/react-plx/&quot;&gt;demo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;There is a lot of solutions out there, but IMHO they are usually bloated or not performant or complicated to use. And as I’m using React a lot, I decided to collect what I have learned about implementing on scroll effects in React and create standalone component. Most of the code in this component I pulled out of my existing projects and glued them together.&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;
+&lt;sup&gt;1&lt;/sup&gt; the effect whereby the position or direction of an object appears to differ when viewed from different positions, e.g. through the viewfinder and the lens of a camera.
+&lt;/small&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;performance&quot;&gt;Performance&lt;/h2&gt;
+
+&lt;p&gt;Plx is really performant, thanks to a few optimizations.&lt;/p&gt;
+
+&lt;p&gt;First and the most important one is that it is not binded to window scroll event.
+It is using simple scroll manager, which checks if scroll has changed every 16ms (to get smooth 60fps).
+When scroll changes it broadcasts custom event.
+All of the Plx components are listening to this event and share the same scroll manager (it is singleton).
+Singleton is created with the first component, and destroyed when last one unmounts.&lt;/p&gt;
+
+&lt;p&gt;Another optimization is that elements are not animated when not in viewport.
+Actually, they are not animated if they are more than 50px outside of viewport.
+So component “gets ready” 50px before it enters the viewport.
+You can force animating element even outside of viewport by setting &lt;code class=&quot;highlighter-rouge&quot;&gt;animateWhenNotInViewport&lt;/code&gt; prop to &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Beside that, every update is done in &lt;code class=&quot;highlighter-rouge&quot;&gt;requestAnimationFrame&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Still you need to avoid common “don’t dos” when making a parallax page:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Avoid &lt;code class=&quot;highlighter-rouge&quot;&gt;background-size: cover&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Don’t animate massive images or dramatically resize them&lt;/li&gt;
+  &lt;li&gt;Avoid animating 100 things at once&lt;/li&gt;
+  &lt;li&gt;Only use properties that are cheap for browsers to animate - opacity and transform (scale, rotate, skew, scale)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Read this &lt;a href=&quot;https://medium.com/@dhg/parallax-done-right-82ced812e61c&quot;&gt;great article&lt;/a&gt; to find out more (that is where I got my initial inspiration).&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;supported-effects--properties&quot;&gt;Supported effects / properties&lt;/h2&gt;
+
+&lt;p&gt;Plx supports every CSS property that has numeric value (&lt;code class=&quot;highlighter-rouge&quot;&gt;opacity&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;height&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;padding&lt;/code&gt;…&lt;sup&gt;2&lt;/sup&gt;). I wrote a formula (this sounds way more sciency than it is) which calculates property value depending on the scroll position and given input values.&lt;/p&gt;
+
+&lt;p&gt;It also supports &lt;code class=&quot;highlighter-rouge&quot;&gt;transform&lt;/code&gt;, and you can pass multiple transform functions (&lt;code class=&quot;highlighter-rouge&quot;&gt;translateX&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;rotate&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;skewZ&lt;/code&gt;…).
+You can even animate colors on scroll (background, text and border colors are supported)! Colors are broken down to their R/G/B/A values, and then same formula is applied to each one of them.&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;
+&lt;sup&gt;2&lt;/sup&gt; The most performant properties to animate are &lt;code class=&quot;highlighter-rouge&quot;&gt;opactity&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;transform&lt;/code&gt;. So stick to those two to keep your parallax effects performant. Of course you can animate something else here and there, but be careful and test it throughly.
+&lt;/small&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;at-the-end&quot;&gt;At the end&lt;/h2&gt;
+
+&lt;p&gt;What are you waiting?! Get it from npm and start using it :)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ npm install --save react-plx
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Documentation is available on &lt;a href=&quot;https://github.com/Stanko/react-plx&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'react'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Plx&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'react-plx'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Example&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Plx&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'MyAwesomeParallax'&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;parallaxData&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// your parallax effects, see documentation&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;cm&quot;&gt;/* Your content */&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/Plx&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Feel free to contribute, cheers!&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>waifu2x super resolution image resizer</title>
@@ -428,7 +523,7 @@ See you there!&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;!-- more --&gt;
+&lt;!--more--&gt;
 
 &lt;h3 id=&quot;photos&quot;&gt;Photos&lt;/h3&gt;
 

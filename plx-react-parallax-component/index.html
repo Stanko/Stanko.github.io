@@ -12,18 +12,18 @@
 
   
 
-  <title>3D Rotating cubes hover effect &middot; Muffin Man's writings</title>
+  <title>Plx - React parallax component &middot; Muffin Man's writings</title>
 
   <link rel="stylesheet" href="/public/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700|Open+Sans:300,600,800&subset=latin-ext" rel="stylesheet">
 
   <meta property="og:site_name" content="Muffin Man's writings">
-  <meta property="og:title" content="3D Rotating cubes hover effect &middot; Muffin Man's writings">
-  <meta property="og:description" content="Again, I’ve seen it somewhere on the internet and recreated it. This one uses jQuery, although I plan to rewrite it to vanilla JavaScript. It switches between two sides of...">
+  <meta property="og:title" content="Plx - React parallax component &middot; Muffin Man's writings">
+  <meta property="og:description" content="I’m becoming predictable. Again, I haven’t found component I like, so I wrote my own. This time, I’ve build React component for parallax (on scroll) effects. Check the live demo....">
   <meta property="og:image" content="http://stanko.github.io/public/favicon/favicon-96x96.png">
-  <meta property="og:url" content="http://stanko.github.io/3d-rotating-cube-effect/">
-  <meta name="twitter:title" content="3D Rotating cubes hover effect &middot; Muffin Man's writings">
-  <meta name="twitter:description" content="Again, I’ve seen it somewhere on the internet and recreated it. This one uses jQuery, although I plan to rewrite it to vanilla JavaScript. It switches between two sides of...">
+  <meta property="og:url" content="http://stanko.github.io/plx-react-parallax-component/">
+  <meta name="twitter:title" content="Plx - React parallax component &middot; Muffin Man's writings">
+  <meta name="twitter:description" content="I’m becoming predictable. Again, I haven’t found component I like, so I wrote my own. This time, I’ve build React component for parallax (on scroll) effects. Check the live demo....">
   <meta name="twitter:image" content="http://stanko.github.io/public/favicon/favicon-96x96.png">
 
   <!-- Icons -->
@@ -75,9 +75,9 @@
         <span></span>
         <span></span>
       </button>
-      <h1>3D Rotating cubes hover effect</h1>
+      <h1>Plx - React parallax component</h1>
       
-        <span>23 Feb 2016</span>
+        <span>24 Jul 2017</span>
       
     </div>
   </div>
@@ -97,7 +97,7 @@
     <div class="Content">
       <div class="Post Container">
         <div class="Post-top">
-          <div class="Post-readTime">This article will take less than 1 minute to read.</div>
+          <div class="Post-readTime">This article will take about 3  minutes to read.</div>
 
           <a href="#comments" class="Post-commentsLink">
             
@@ -107,31 +107,93 @@
           </a>
         </div>
 
-        <p>Again, I’ve seen it somewhere on the internet and recreated it.
-This one uses jQuery, although I plan to rewrite it to vanilla JavaScript.</p>
+        <p>I’m becoming predictable. Again, I haven’t found component I like, so I wrote my own.</p>
 
-<p>It switches between two <i>sides</i> of the cube, every time you hover.
-Depending from which side cursor entered the cube, it will rotate in opposite direction.
-It is fully responsive, and on touch devices, direction depends of where you tap.</p>
+<p>This time, I’ve build React component for parallax (on scroll) effects.
+Check the <a href="https://stanko.github.io/react-plx/">live demo</a>. It is called <code class="highlighter-rouge">Plx</code>, it is open source and available on <a href="https://github.com/Stanko/react-plx">GitHub</a> and <a href="https://www.npmjs.com/package/react-plx">npm</a>.</p>
 
-<p>Cube side is a regular <code class="highlighter-rouge">div</code>, and you can put any type of content in it.</p>
+<h2 id="what-it-does">What it does</h2>
 
-<p><a href="http://stanko.github.io/cube-3D-rotate-grid/">
-  <img src="/public/img/projects/cube-3D-rotate-grid.png" alt="Demo - 3D Rotating cubes hover effect" />
-</a></p>
+<p>So far in my career, I’ve built so many parallax components. Parallax is actually wrong term here<sup>1</sup>, but it got accepted by development community.</p>
+
+<p>Designers love them and users are fascinated by fancy effects. Simply explained as you scroll the page down something is changed relative to the scroll position. For example, as you scroll down clock arms are rotating. Just check the <a href="https://stanko.github.io/react-plx/">demo</a>.</p>
+
+<p>There is a lot of solutions out there, but IMHO they are usually bloated or not performant or complicated to use. And as I’m using React a lot, I decided to collect what I have learned about implementing on scroll effects in React and create standalone component. Most of the code in this component I pulled out of my existing projects and glued them together.</p>
+
+<p><small>
+<sup>1</sup> the effect whereby the position or direction of an object appears to differ when viewed from different positions, e.g. through the viewfinder and the lens of a camera.
+</small></p>
+
+<h2 id="performance">Performance</h2>
+
+<p>Plx is really performant, thanks to a few optimizations.</p>
+
+<p>First and the most important one is that it is not binded to window scroll event.
+It is using simple scroll manager, which checks if scroll has changed every 16ms (to get smooth 60fps).
+When scroll changes it broadcasts custom event.
+All of the Plx components are listening to this event and share the same scroll manager (it is singleton).
+Singleton is created with the first component, and destroyed when last one unmounts.</p>
+
+<p>Another optimization is that elements are not animated when not in viewport.
+Actually, they are not animated if they are more than 50px outside of viewport.
+So component “gets ready” 50px before it enters the viewport.
+You can force animating element even outside of viewport by setting <code class="highlighter-rouge">animateWhenNotInViewport</code> prop to <code class="highlighter-rouge">true</code>.</p>
+
+<p>Beside that, every update is done in <code class="highlighter-rouge">requestAnimationFrame</code>.</p>
+
+<p>Still you need to avoid common “don’t dos” when making a parallax page:</p>
+
+<ul>
+  <li>Avoid <code class="highlighter-rouge">background-size: cover</code></li>
+  <li>Don’t animate massive images or dramatically resize them</li>
+  <li>Avoid animating 100 things at once</li>
+  <li>Only use properties that are cheap for browsers to animate - opacity and transform (scale, rotate, skew, scale)</li>
+</ul>
+
+<p>Read this <a href="https://medium.com/@dhg/parallax-done-right-82ced812e61c">great article</a> to find out more (that is where I got my initial inspiration).</p>
 
 <!--more-->
 
-<p>Works on every modern browser, but on IE it falls back to fade effect.
-Thing is that Internet Explorers do not support <code class="highlighter-rouge">transform-style: preserve-3d</code> property.
-More on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-style">MDN</a>.</p>
+<h2 id="supported-effects--properties">Supported effects / properties</h2>
 
-<p>Check the <a href="http://stanko.github.io/cube-3D-rotate-grid/">demo</a>.
-Documentation is on the same page.</p>
+<p>Plx supports every CSS property that has numeric value (<code class="highlighter-rouge">opacity</code>, <code class="highlighter-rouge">height</code>, <code class="highlighter-rouge">padding</code>…<sup>2</sup>). I wrote a formula (this sounds way more sciency than it is) which calculates property value depending on the scroll position and given input values.</p>
 
-<p>Grab the code on <a href="https://github.com/Stanko/cube-3D-rotate-grid">GitHub</a>.</p>
+<p>It also supports <code class="highlighter-rouge">transform</code>, and you can pass multiple transform functions (<code class="highlighter-rouge">translateX</code>, <code class="highlighter-rouge">rotate</code>, <code class="highlighter-rouge">skewZ</code>…).
+You can even animate colors on scroll (background, text and border colors are supported)! Colors are broken down to their R/G/B/A values, and then same formula is applied to each one of them.</p>
 
-<p>Warning: Every person I introduced to this played with it for ages :)</p>
+<p><small>
+<sup>2</sup> The most performant properties to animate are <code class="highlighter-rouge">opactity</code> and <code class="highlighter-rouge">transform</code>. So stick to those two to keep your parallax effects performant. Of course you can animate something else here and there, but be careful and test it throughly.
+</small></p>
+
+<h2 id="at-the-end">At the end</h2>
+
+<p>What are you waiting?! Get it from npm and start using it :)</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ npm install --save react-plx
+</code></pre>
+</div>
+
+<p>Documentation is available on <a href="https://github.com/Stanko/react-plx">GitHub</a>.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'react'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">Plx</span> <span class="nx">from</span> <span class="s1">'react-plx'</span><span class="p">;</span>
+
+<span class="kr">class</span> <span class="nx">Example</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">Plx</span>
+        <span class="nx">className</span><span class="o">=</span><span class="s1">'MyAwesomeParallax'</span>
+        <span class="nx">parallaxData</span><span class="o">=</span><span class="p">{</span> <span class="p">...</span> <span class="p">}</span> <span class="c1">// your parallax effects, see documentation</span>
+      <span class="o">&gt;</span>
+        <span class="cm">/* Your content */</span>
+      <span class="o">&lt;</span><span class="sr">/Plx</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Feel free to contribute, cheers!</p>
 
 
         <div class="Post-shareAndCategories">
@@ -142,7 +204,7 @@ Documentation is on the same page.</p>
             <!-- Sharing button Facebook -->
             <a
               class="SharringButton SharringButton--facebook"
-              href="https://facebook.com/sharer/sharer.php?u=http://stanko.github.io/3d-rotating-cube-effect/" target="_blank">
+              href="https://facebook.com/sharer/sharer.php?u=http://stanko.github.io/plx-react-parallax-component/" target="_blank">
               <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
   <g>
     <path d="M18.768,7.465H14.5V5.56c0-0.896,0.594-1.105,1.012-1.105s2.988,0,2.988,0V0.513L14.171,0.5C10.244,0.5,9.5,3.438,9.5,5.32 v2.145h-3v4h3c0,5.212,0,12,0,12h5c0,0,0-6.85,0-12h3.851L18.768,7.465z"/>
@@ -153,7 +215,7 @@ Documentation is on the same page.</p>
             <!-- Sharing button Twitter -->
             <a
               class="SharringButton SharringButton--twitter"
-              href="https://twitter.com/intent/tweet/?text=3D Rotating cubes hover effect&amp;url=http://stanko.github.io/3d-rotating-cube-effect/" target="_blank">
+              href="https://twitter.com/intent/tweet/?text=Plx - React parallax component&amp;url=http://stanko.github.io/plx-react-parallax-component/" target="_blank">
               <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
   <g>
     <path d="M23.444,4.834c-0.814,0.363-1.5,0.375-2.228,0.016c0.938-0.562,0.981-0.957,1.32-2.019c-0.878,0.521-1.851,0.9-2.886,1.104 C18.823,3.053,17.642,2.5,16.335,2.5c-2.51,0-4.544,2.036-4.544,4.544c0,0.356,0.04,0.703,0.117,1.036 C8.132,7.891,4.783,6.082,2.542,3.332C2.151,4.003,1.927,4.784,1.927,5.617c0,1.577,0.803,2.967,2.021,3.782 C3.203,9.375,2.503,9.171,1.891,8.831C1.89,8.85,1.89,8.868,1.89,8.888c0,2.202,1.566,4.038,3.646,4.456 c-0.666,0.181-1.368,0.209-2.053,0.079c0.579,1.804,2.257,3.118,4.245,3.155C5.783,18.102,3.372,18.737,1,18.459 C3.012,19.748,5.399,20.5,7.966,20.5c8.358,0,12.928-6.924,12.928-12.929c0-0.198-0.003-0.393-0.012-0.588 C21.769,6.343,22.835,5.746,23.444,4.834z"/>
@@ -164,7 +226,7 @@ Documentation is on the same page.</p>
             <!-- Sharing button Google+ -->
             <a
               class="SharringButton SharringButton--googlePlus"
-              href="https://plus.google.com/share?url=http://stanko.github.io/3d-rotating-cube-effect/" target="_blank">
+              href="https://plus.google.com/share?url=http://stanko.github.io/plx-react-parallax-component/" target="_blank">
               <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
   <g>
     <path d="M11.366,12.928c-0.729-0.516-1.393-1.273-1.404-1.505c0-0.425,0.038-0.627,0.988-1.368 c1.229-0.962,1.906-2.228,1.906-3.564c0-1.212-0.37-2.289-1.001-3.044h0.488c0.102,0,0.2-0.033,0.282-0.091l1.364-0.989 c0.169-0.121,0.24-0.338,0.176-0.536C14.102,1.635,13.918,1.5,13.709,1.5H7.608c-0.667,0-1.345,0.118-2.011,0.347 c-2.225,0.766-3.778,2.66-3.778,4.605c0,2.755,2.134,4.845,4.987,4.91c-0.056,0.22-0.084,0.434-0.084,0.645 c0,0.425,0.108,0.827,0.33,1.216c-0.026,0-0.051,0-0.079,0c-2.72,0-5.175,1.334-6.107,3.32C0.623,17.06,0.5,17.582,0.5,18.098 c0,0.501,0.129,0.984,0.382,1.438c0.585,1.046,1.843,1.861,3.544,2.289c0.877,0.223,1.82,0.335,2.8,0.335 c0.88,0,1.718-0.114,2.494-0.338c2.419-0.702,3.981-2.482,3.981-4.538C13.701,15.312,13.068,14.132,11.366,12.928z M3.66,17.443 c0-1.435,1.823-2.693,3.899-2.693h0.057c0.451,0.005,0.892,0.072,1.309,0.2c0.142,0.098,0.28,0.192,0.412,0.282 c0.962,0.656,1.597,1.088,1.774,1.783c0.041,0.175,0.063,0.35,0.063,0.519c0,1.787-1.333,2.693-3.961,2.693 C5.221,20.225,3.66,19.002,3.66,17.443z M5.551,3.89c0.324-0.371,0.75-0.566,1.227-0.566l0.055,0 c1.349,0.041,2.639,1.543,2.876,3.349c0.133,1.013-0.092,1.964-0.601,2.544C8.782,9.589,8.363,9.783,7.866,9.783H7.865H7.844 c-1.321-0.04-2.639-1.6-2.875-3.405C4.836,5.37,5.049,4.462,5.551,3.89z"/>
@@ -178,11 +240,9 @@ Documentation is on the same page.</p>
           <div class="Post-categories">
           <div>Categories</div>
           
+            <a href="/category/react">React</a>
+          
             <a href="/category/javascript">JavaScript</a>
-          
-            <a href="/category/css">CSS</a>
-          
-            <a href="/category/sass">SASS</a>
           
         </div>
         </div>
@@ -196,13 +256,6 @@ Documentation is on the same page.</p>
 
             
               <div class="RelatedPosts-post">
-                <a href="/plx-react-parallax-component/">
-                  <small>24 Jul 2017</small>
-                  Plx - React parallax component
-                </a>
-              </div>
-            
-              <div class="RelatedPosts-post">
                 <a href="/super-resolution-image-resizer/">
                   <small>26 Jun 2017</small>
                   waifu2x super resolution image resizer
@@ -213,6 +266,13 @@ Documentation is on the same page.</p>
                 <a href="/react-rerender-in-component-did-mount/">
                   <small>23 Jun 2017</small>
                   Animate React component by calling 'setState' in 'componentDidMount'
+                </a>
+              </div>
+            
+              <div class="RelatedPosts-post">
+                <a href="/introducing-marvin/">
+                  <small>25 May 2017</small>
+                  Introducing Marvin
                 </a>
               </div>
             
@@ -243,12 +303,12 @@ Documentation is on the same page.</p>
     <input
       name="fields[slug]"
       type="hidden"
-      value="3d-rotating-cube-effect"
+      value="plx-react-parallax-component"
       class="CommentForm-input CommentForm-input--slug">
     <input
       name="options[slug]"
       type="hidden"
-      value="3d-rotating-cube-effect"
+      value="plx-react-parallax-component"
       class="CommentForm-input CommentForm-input--optionsSlug">
 
     <div class="Grid">
