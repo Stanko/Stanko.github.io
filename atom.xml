@@ -4,7 +4,7 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-07-25T09:45:15+00:00</updated>
+ <updated>2017-07-25T09:51:21+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
@@ -28,7 +28,7 @@ Check the &lt;a href=&quot;https://stanko.github.io/react-plx/&quot;&gt;live dem
 
 &lt;p&gt;Designers love them and users are fascinated by fancy effects. Simply explained as you scroll the page down something is changed relative to the scroll position. For example, as you scroll down clock arms are rotating. Just check the &lt;a href=&quot;https://stanko.github.io/react-plx/&quot;&gt;demo&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;There is a lot of solutions out there, but IMHO they are usually bloated or not performant or complicated to use. And as I’m using React a lot, I decided to collect what I have learned about implementing on scroll effects in React and create standalone component. Most of the code in this component I pulled out of my existing projects and glued them together.&lt;/p&gt;
+&lt;p&gt;There is a lot of solutions out there, but IMHO they are usually bloated or not performant or complicated to use. And as I’m using React a lot, I decided to collect what I have learned about implementing on scroll effects in React and create standalone component. Most of the code in this component is pulled out from my existing projects and glued together.&lt;/p&gt;
 
 &lt;p&gt;&lt;small&gt;
 &lt;sup&gt;1&lt;/sup&gt; the effect whereby the position or direction of an object appears to differ when viewed from different positions, e.g. through the viewfinder and the lens of a camera.
@@ -38,7 +38,7 @@ Check the &lt;a href=&quot;https://stanko.github.io/react-plx/&quot;&gt;live dem
 
 &lt;p&gt;Plx is really performant, thanks to a few optimizations.&lt;/p&gt;
 
-&lt;p&gt;First and the most important one is that it is not binded to window scroll event.
+&lt;p&gt;First and the most important one - it is not listening to window scroll event.
 It is using simple scroll manager, which checks if scroll has changed every 16ms (to get smooth 60fps).
 When scroll changes it broadcasts custom event.
 All of the Plx components are listening to this event and share the same scroll manager (it is singleton).
