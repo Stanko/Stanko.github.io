@@ -148,34 +148,6 @@ Check the <a href="https://stanko.github.io/react-plx/">live demo</a>. It is cal
 <sup>1</sup> the effect whereby the position or direction of an object appears to differ when viewed from different positions, e.g. through the viewfinder and the lens of a camera.
 </small></p>
 
-<h2 id="performance">Performance</h2>
-
-<p>Plx is really performant, thanks to a few optimizations.</p>
-
-<p>First and the most important one - it is not listening to window scroll event.
-It is using simple scroll manager, which checks if scroll has changed every 16ms (to get smooth 60fps).
-When scroll changes it broadcasts custom event.
-All of the Plx components are listening to this event and share the same scroll manager (it is singleton).
-Singleton is created with the first component, and destroyed when last one unmounts.</p>
-
-<p>Another optimization is that elements are not animated when not in viewport.
-Actually, they are not animated if they are more than 50px outside of viewport.
-So component “gets ready” 50px before it enters the viewport.
-You can force animating element even outside of viewport by setting <code class="highlighter-rouge">animateWhenNotInViewport</code> prop to <code class="highlighter-rouge">true</code>.</p>
-
-<p>Beside that, every update is done in <code class="highlighter-rouge">requestAnimationFrame</code>.</p>
-
-<p>Still you need to avoid common “don’t dos” when making a parallax page:</p>
-
-<ul>
-  <li>Avoid <code class="highlighter-rouge">background-size: cover</code></li>
-  <li>Don’t animate massive images or dramatically resize them</li>
-  <li>Avoid animating 100 things at once</li>
-  <li>Only use properties that are cheap for browsers to animate - opacity and transform (scale, rotate, skew, scale)</li>
-</ul>
-
-<p>Read this <a href="https://medium.com/@dhg/parallax-done-right-82ced812e61c">great article</a> to find out more (that is where I got my initial inspiration).</p>
-
 
 
       

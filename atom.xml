@@ -4,7 +4,7 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-07-25T09:51:21+00:00</updated>
+ <updated>2017-07-25T09:56:54+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
@@ -34,6 +34,8 @@ Check the &lt;a href=&quot;https://stanko.github.io/react-plx/&quot;&gt;live dem
 &lt;sup&gt;1&lt;/sup&gt; the effect whereby the position or direction of an object appears to differ when viewed from different positions, e.g. through the viewfinder and the lens of a camera.
 &lt;/small&gt;&lt;/p&gt;
 
+&lt;!--more--&gt;
+
 &lt;h2 id=&quot;performance&quot;&gt;Performance&lt;/h2&gt;
 
 &lt;p&gt;Plx is really performant, thanks to a few optimizations.&lt;/p&gt;
@@ -61,8 +63,6 @@ You can force animating element even outside of viewport by setting &lt;code cla
 &lt;/ul&gt;
 
 &lt;p&gt;Read this &lt;a href=&quot;https://medium.com/@dhg/parallax-done-right-82ced812e61c&quot;&gt;great article&lt;/a&gt; to find out more (that is where I got my initial inspiration).&lt;/p&gt;
-
-&lt;!--more--&gt;
 
 &lt;h2 id=&quot;supported-effects--properties&quot;&gt;Supported effects / properties&lt;/h2&gt;
 
