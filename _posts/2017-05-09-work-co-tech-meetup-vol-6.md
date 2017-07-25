@@ -40,7 +40,7 @@ Check the details and sign up at [meetup.com page](https://www.meetup.com/Tech-M
 
   [Slides](/public/pdf/Zeh - Introduction to React Native.pdf)
 
-<!-- more -->
+<!--more-->
 
 ### Photos
 
