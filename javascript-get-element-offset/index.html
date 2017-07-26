@@ -12,18 +12,18 @@
 
   
 
-  <title>Setting up Webpack, Babel and React from scratch - Part 2 &middot; Muffin Man's writings</title>
+  <title>Get element offset in JavaScript &middot; Muffin Man's writings</title>
 
   <link rel="stylesheet" href="/public/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700|Open+Sans:300,600,800&subset=latin-ext" rel="stylesheet">
 
   <meta property="og:site_name" content="Muffin Man's writings">
-  <meta property="og:title" content="Setting up Webpack, Babel and React from scratch - Part 2 &middot; Muffin Man's writings">
-  <meta property="og:description" content="Part two Update: Part two is pretty much done. Part three will cover redux and production builds. Other parts: Part 1 - Webpack, Babel, React, Router, ESLint Part 2 -...">
+  <meta property="og:title" content="Get element offset in JavaScript &middot; Muffin Man's writings">
+  <meta property="og:description" content="When we left jQuery behind and embraced modern JavaScript frameworks, we thought we would never touch DOM directly again. Well that is not entirely true. There are a lot of...">
   <meta property="og:image" content="http://stanko.github.io/public/favicon/favicon-96x96.png">
-  <meta property="og:url" content="http://stanko.github.io/setting-up-webpack-babel-and-react-from-scratch-part-2/">
-  <meta name="twitter:title" content="Setting up Webpack, Babel and React from scratch - Part 2 &middot; Muffin Man's writings">
-  <meta name="twitter:description" content="Part two Update: Part two is pretty much done. Part three will cover redux and production builds. Other parts: Part 1 - Webpack, Babel, React, Router, ESLint Part 2 -...">
+  <meta property="og:url" content="http://stanko.github.io/javascript-get-element-offset/">
+  <meta name="twitter:title" content="Get element offset in JavaScript &middot; Muffin Man's writings">
+  <meta name="twitter:description" content="When we left jQuery behind and embraced modern JavaScript frameworks, we thought we would never touch DOM directly again. Well that is not entirely true. There are a lot of...">
   <meta name="twitter:image" content="http://stanko.github.io/public/favicon/favicon-96x96.png">
 
   <!-- Icons -->
@@ -75,9 +75,9 @@
         <span></span>
         <span></span>
       </button>
-      <h1>Setting up Webpack, Babel and React from scratch - Part 2</h1>
+      <h1>Get element offset in JavaScript</h1>
       
-        <span>29 Aug 2016</span>
+        <span>26 Jul 2017</span>
       
     </div>
   </div>
@@ -97,212 +97,93 @@
     <div class="Content">
       <div class="Post Container">
         <div class="Post-top">
-          <div class="Post-readTime">This article will take about 3  minutes to read.</div>
+          <div class="Post-readTime">This article will take about 2  minutes to read.</div>
 
           <a href="#comments" class="Post-commentsLink">
             
             
-              2 Comments
+              No comments
             
           </a>
         </div>
 
-        <h2 id="part-two">Part two</h2>
+        <p>When we left jQuery behind and embraced modern JavaScript frameworks,
+we thought we would never touch DOM directly again.
+Well that is not entirely true.
+There are a lot of cases when you need to get some DOM element size.
+For element’s dimensions <code class="highlighter-rouge">.offsetWidth</code> and <code class="highlighter-rouge">.offsetHeight</code> are great way to do it.</p>
 
-<p>Update: Part two is pretty much done. Part three will cover redux and production builds.</p>
-
-<p>Other parts:</p>
-
-<ul>
-  <li><a href="/setting-up-webpack-babel-and-react-from-scratch">Part 1</a> - Webpack, Babel, React, Router, ESLint</li>
-  <li>Part 2 - SASS, More ES6 goodness (Static props, decorators, deconstruction…)</li>
-  <li><a href="/setting-up-webpack-babel-and-react-from-scratch-part-3">Part 3</a> - Where to go from here</li>
-</ul>
-
-<h2 id="adding-sass">Adding SASS</h2>
-
-<p>We will use SASS loader for webpack, so let’s install it together with node-sass compiler,
- css and style loaders</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>npm install --save-dev style-loader css-loader sass-loader node-sass
-</code></pre>
-</div>
-
-<p>Create <code class="highlighter-rouge">scss</code> folder in the <code class="highlighter-rouge">app</code> folder, and main <code class="highlighter-rouge">app.scss</code> file in it.
-This file will include all of the other scss files.</p>
-
-<p>Now we need to add a loader to webpack config file.</p>
+<p>But one of the other common tasks is getting element’s offset, top and left.
+I’ll show you two ways to get those.</p>
 
 <!--more-->
 
-<div class="highlighter-rouge"><pre class="highlight"><code>...
-{
-  test: /\.scss$/,
-  loader: 'style!css!sass'
-}
-...
+<h2 id="using-offsettop--offsetleft">Using <code class="highlighter-rouge">offsetTop</code> / <code class="highlighter-rouge">offsetLeft</code></h2>
+
+<p>This one is old school, and there is nothing wrong with it.
+Even today, this method lives in my <code class="highlighter-rouge">helpers.js</code>.
+It is looping to the root of the DOM tree and performance obsessed people may having problem with it.
+But so far I never had performance issue with it, and I’m talking about production level projects.</p>
+
+<p>One important thing to note - it is not taking CSS transforms into calculations.
+Everything is calculated from element’s original position.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">getElementOffset</span><span class="p">(</span><span class="nx">el</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">top</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">left</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">element</span> <span class="o">=</span> <span class="nx">el</span><span class="p">;</span>
+
+  <span class="c1">// Loop through the DOM tree</span>
+  <span class="c1">// and add it's parent's offset to get page offset</span>
+  <span class="k">do</span> <span class="p">{</span>
+    <span class="nx">top</span> <span class="o">+=</span> <span class="nx">element</span><span class="p">.</span><span class="nx">offsetTop</span> <span class="o">||</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="nx">left</span> <span class="o">+=</span> <span class="nx">element</span><span class="p">.</span><span class="nx">offsetLeft</span> <span class="o">||</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="nx">element</span> <span class="o">=</span> <span class="nx">element</span><span class="p">.</span><span class="nx">offsetParent</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nx">element</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="nx">top</span><span class="p">,</span>
+    <span class="nx">left</span><span class="p">,</span>
+  <span class="p">};</span>
+<span class="p">}</span>
 </code></pre>
 </div>
 
-<p>This will handle importing SCSS files in our JavaScript code.
-So we need to import <code class="highlighter-rouge">app.scss</code> manually in the JavaScript code.
-You’ll need to add only one line to your <code class="highlighter-rouge">app.js</code>.</p>
+<h2 id="using-getboundingclientrect">Using <code class="highlighter-rouge">getBoundingClientRect</code></h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>import '../scss/app.scss';
+<p>Another way is using <code class="highlighter-rouge">getBoundingClientRect</code> which is cool because it
+takes CSS transforms into calculations and it is natively supported.
+No need to loop through the element’s parents.
+But it’s <code class="highlighter-rouge">top</code> and <code class="highlighter-rouge">left</code> properties are distances from the viewport, not from the document.
+Because of this, you need to add document scroll to it.</p>
+
+<p>Just note one thing, there is a <a href="https://openradar.appspot.com/radar?id=6668472289329152">known bug</a>
+with iOS and <code class="highlighter-rouge">getBoundingClientRect</code> in combination with <code class="highlighter-rouge">position: fixed</code><sup>1</sup>.
+Sometimes it is returning wrong values.
+So when you have fixed elements, you probably want to fallback to the method above</p>
+
+<p><small>
+  <sup>1</sup> I found about this bug few days ago when I was working on <a href="https://github.com/Stanko/react-plx">react-plx</a>.
+</small></p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">getElementOffset</span><span class="p">(</span><span class="nx">el</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">rect</span> <span class="o">=</span> <span class="nx">el</span><span class="p">.</span><span class="nx">getBoundingClientRect</span><span class="p">();</span>
+
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="na">top</span><span class="p">:</span> <span class="nx">rect</span><span class="p">.</span><span class="nx">top</span> <span class="o">+</span> <span class="nb">window</span><span class="p">.</span><span class="nx">pageYOffset</span><span class="p">,</span>
+    <span class="na">left</span><span class="p">:</span> <span class="nx">rect</span><span class="p">.</span><span class="nx">left</span> <span class="o">+</span> <span class="nb">window</span><span class="p">.</span><span class="nx">pageXOffset</span><span class="p">,</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+
+<span class="c1">// If you want to support IE8 and lower</span>
+<span class="c1">// Use</span>
+<span class="c1">//</span>
+<span class="c1">// top: rect.top + (window.pageYOffset || document.documentElement.scrollTop),</span>
+<span class="c1">// left: rect.left + (window.pageXOffset || document.documentElement.scrollLeft),</span>
 </code></pre>
 </div>
 
-<p>This includes your styles by calling loaders we defined in the webpack config.</p>
-
-<p>Restart your webpack, and voala, now we have styles and hot reloading for them.
-Try changing your styles to check it.</p>
-
-<h3 id="source-maps">Source maps</h3>
-
-<p>To enable source maps, we’ll pass the <code class="highlighter-rouge">sourceMap</code> option to the sass and the css loaders.
-Enable devtool, and update the loader</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>...
-  devtool: 'inline-source-map', // or 'source-map'
-
-  module: {
-    loaders: [
-      ...
-      {
-        test: /\.scss$/,
-        loader: 'style!css?sourceMap!sass?sourceMap',
-      }
-    ]
-  }
-...
-</code></pre>
-</div>
-
-<p>If you want to read more, here’s link to the
-<a href="https://github.com/jtangelder/sass-loader">official documentation</a></p>
-
-<h3 id="autoprefixer">Autoprefixer</h3>
-
-<p>Always use autoprefixer - I can’t stress this enough.</p>
-
-<p>We’ll need postcss loader, precss and autoprefixer</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>npm install --save-dev postcss-loader precss autoprefixer
-</code></pre>
-</div>
-
-<p>At the top of our webpack config, require precss and autoprefixer</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>const precss = require('precss');
-const autoprefixer = require('autoprefixer');
-</code></pre>
-</div>
-
-<p>Update our sass loader config and and postcss config</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>...
-  module: {
-    loaders: [
-      ...
-      {
-        test: /\.scss$/,
-        loader: 'style!css?sourceMap!postcss!sass?sourceMap',
-      }
-    ]
-  },
-
-  postcss() {
-    return [autoprefixer, precss];
-  },
-...
-</code></pre>
-</div>
-
-<p>Restart webpack, and you should have autoprefixing in place.
-Try adding <code class="highlighter-rouge">display: flex</code> to one of the elements to check if autoprefixer added
-<code class="highlighter-rouge">-ms-display: flex</code> and <code class="highlighter-rouge">-webkit-display: flex</code>.</p>
-
-<p>Again here’s link to the <a href="https://github.com/postcss/postcss-loader">official documentation</a></p>
-
-<h2 id="method-shorthand">Method shorthand</h2>
-
-<p>Note that</p>
-
-<pre>
-{
-  ...
-  postcss() {
-    return [autoprefixer, precss];
-  }
-}
-</pre>
-
-<p>is the same as</p>
-
-<pre>
-{
-  ...
-  postcss: function () {
-    return [autoprefixer, precss];
-  }
-}
-</pre>
-
-<p>but only using <a href="http://eslint.org/docs/rules/object-shorthand">method shorthand</a>.
-ES6 rules!</p>
-
-<h2 id="more-es6-stuff">More ES6 stuff</h2>
-
-<p>To be able to use deconstruction (<code class="highlighter-rouge">...object</code>), static class properties and decorators (<code class="highlighter-rouge">@connect</code>) we need to add
-a couple of Babel plugins.</p>
-
-<p>Install them using following command</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>npm i --save-dev babel-plugin-syntax-decorators babel-plugin-transform-class-properties babel-plugin-transform-decorators-legacy babel-preset-stage-0
-</code></pre>
-</div>
-
-<p>Few links to read more about this plugins:</p>
-
-<ul>
-  <li><a href="https://babeljs.io/docs/plugins/syntax-decorators/">Synthax only for decorators</a></li>
-  <li><a href="https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy">Decorators plugin</a>
-<small>
-- We are using a 3rd party plugin as “Decorators are disabled in Babel v6, pending a proposal update”.
-Read more on the first link.
-</small></li>
-  <li><a href="https://babeljs.io/docs/plugins/transform-class-properties/">Static properties</a></li>
-  <li><a href="https://babeljs.io/docs/plugins/preset-stage-0/">Stage 0 (plugin group)</a></li>
-</ul>
-
-<p>Now we need to add it to our Babel configuration. Open your <code class="highlighter-rouge">.babelrc</code> file and add them.</p>
-
-<p>Add these to the <code class="highlighter-rouge">"plugins"</code> array</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>"syntax-decorators"
-"transform-decorators-legacy"
-"transform-class-properties"
-</code></pre>
-</div>
-
-<p>And <code class="highlighter-rouge">"stage-0"</code> to the <code class="highlighter-rouge">"presets"</code> array</p>
-
-<p>Your <code class="highlighter-rouge">.babelrc</code> should be looking something like this</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"plugins"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="s2">"syntax-decorators"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"transform-decorators-legacy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"transform-class-properties"</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="nt">"presets"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="s2">"es2015"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"react"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"stage-0"</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
+<p>We are all using fancy frameworks, and sometimes we forget basic JavaScript stuff.</p>
 
 
         <div class="Post-shareAndCategories">
@@ -313,7 +194,7 @@ Read more on the first link.
             <!-- Sharing button Facebook -->
             <a
               class="SharringButton SharringButton--facebook"
-              href="https://facebook.com/sharer/sharer.php?u=http://stanko.github.io/setting-up-webpack-babel-and-react-from-scratch-part-2/" target="_blank">
+              href="https://facebook.com/sharer/sharer.php?u=http://stanko.github.io/javascript-get-element-offset/" target="_blank">
               <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
   <g>
     <path d="M18.768,7.465H14.5V5.56c0-0.896,0.594-1.105,1.012-1.105s2.988,0,2.988,0V0.513L14.171,0.5C10.244,0.5,9.5,3.438,9.5,5.32 v2.145h-3v4h3c0,5.212,0,12,0,12h5c0,0,0-6.85,0-12h3.851L18.768,7.465z"/>
@@ -324,7 +205,7 @@ Read more on the first link.
             <!-- Sharing button Twitter -->
             <a
               class="SharringButton SharringButton--twitter"
-              href="https://twitter.com/intent/tweet/?text=Setting up Webpack, Babel and React from scratch - Part 2&amp;url=http://stanko.github.io/setting-up-webpack-babel-and-react-from-scratch-part-2/" target="_blank">
+              href="https://twitter.com/intent/tweet/?text=Get element offset in JavaScript&amp;url=http://stanko.github.io/javascript-get-element-offset/" target="_blank">
               <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
   <g>
     <path d="M23.444,4.834c-0.814,0.363-1.5,0.375-2.228,0.016c0.938-0.562,0.981-0.957,1.32-2.019c-0.878,0.521-1.851,0.9-2.886,1.104 C18.823,3.053,17.642,2.5,16.335,2.5c-2.51,0-4.544,2.036-4.544,4.544c0,0.356,0.04,0.703,0.117,1.036 C8.132,7.891,4.783,6.082,2.542,3.332C2.151,4.003,1.927,4.784,1.927,5.617c0,1.577,0.803,2.967,2.021,3.782 C3.203,9.375,2.503,9.171,1.891,8.831C1.89,8.85,1.89,8.868,1.89,8.888c0,2.202,1.566,4.038,3.646,4.456 c-0.666,0.181-1.368,0.209-2.053,0.079c0.579,1.804,2.257,3.118,4.245,3.155C5.783,18.102,3.372,18.737,1,18.459 C3.012,19.748,5.399,20.5,7.966,20.5c8.358,0,12.928-6.924,12.928-12.929c0-0.198-0.003-0.393-0.012-0.588 C21.769,6.343,22.835,5.746,23.444,4.834z"/>
@@ -335,7 +216,7 @@ Read more on the first link.
             <!-- Sharing button Google+ -->
             <a
               class="SharringButton SharringButton--googlePlus"
-              href="https://plus.google.com/share?url=http://stanko.github.io/setting-up-webpack-babel-and-react-from-scratch-part-2/" target="_blank">
+              href="https://plus.google.com/share?url=http://stanko.github.io/javascript-get-element-offset/" target="_blank">
               <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
   <g>
     <path d="M11.366,12.928c-0.729-0.516-1.393-1.273-1.404-1.505c0-0.425,0.038-0.627,0.988-1.368 c1.229-0.962,1.906-2.228,1.906-3.564c0-1.212-0.37-2.289-1.001-3.044h0.488c0.102,0,0.2-0.033,0.282-0.091l1.364-0.989 c0.169-0.121,0.24-0.338,0.176-0.536C14.102,1.635,13.918,1.5,13.709,1.5H7.608c-0.667,0-1.345,0.118-2.011,0.347 c-2.225,0.766-3.778,2.66-3.778,4.605c0,2.755,2.134,4.845,4.987,4.91c-0.056,0.22-0.084,0.434-0.084,0.645 c0,0.425,0.108,0.827,0.33,1.216c-0.026,0-0.051,0-0.079,0c-2.72,0-5.175,1.334-6.107,3.32C0.623,17.06,0.5,17.582,0.5,18.098 c0,0.501,0.129,0.984,0.382,1.438c0.585,1.046,1.843,1.861,3.544,2.289c0.877,0.223,1.82,0.335,2.8,0.335 c0.88,0,1.718-0.114,2.494-0.338c2.419-0.702,3.981-2.482,3.981-4.538C13.701,15.312,13.068,14.132,11.366,12.928z M3.66,17.443 c0-1.435,1.823-2.693,3.899-2.693h0.057c0.451,0.005,0.892,0.072,1.309,0.2c0.142,0.098,0.28,0.192,0.412,0.282 c0.962,0.656,1.597,1.088,1.774,1.783c0.041,0.175,0.063,0.35,0.063,0.519c0,1.787-1.333,2.693-3.961,2.693 C5.221,20.225,3.66,19.002,3.66,17.443z M5.551,3.89c0.324-0.371,0.75-0.566,1.227-0.566l0.055,0 c1.349,0.041,2.639,1.543,2.876,3.349c0.133,1.013-0.092,1.964-0.601,2.544C8.782,9.589,8.363,9.783,7.866,9.783H7.865H7.844 c-1.321-0.04-2.639-1.6-2.875-3.405C4.836,5.37,5.049,4.462,5.551,3.89z"/>
@@ -351,8 +232,6 @@ Read more on the first link.
           
             <a href="/category/javascript">JavaScript</a>
           
-            <a href="/category/react">React</a>
-          
         </div>
         </div>
       </div>
@@ -363,13 +242,6 @@ Read more on the first link.
           <div class="RelatedPosts">
             <h2>Latest Posts</h2>
 
-            
-              <div class="RelatedPosts-post">
-                <a href="/javascript-get-element-offset/">
-                  <small>26 Jul 2017</small>
-                  Get element offset in JavaScript
-                </a>
-              </div>
             
               <div class="RelatedPosts-post">
                 <a href="/plx-react-parallax-component/">
@@ -385,6 +257,13 @@ Read more on the first link.
                 </a>
               </div>
             
+              <div class="RelatedPosts-post">
+                <a href="/react-rerender-in-component-did-mount/">
+                  <small>23 Jun 2017</small>
+                  Animate React component by calling 'setState' in 'componentDidMount'
+                </a>
+              </div>
+            
           </div>
         </div>
         
@@ -394,50 +273,7 @@ Read more on the first link.
 
   <div class="Container">
     
-      <h2 class="Comments-title">Comments (2)</h2>
-      <div class="Comments">
-        
-          <div class="Comment">
-            
-            <div class="Comment-data">
-              <img class="Comment-avatar" src="https://www.gravatar.com/avatar/a3734531861bf14507eb21c6bb88cbc3?d=mm&r=g" />
-              <div class="Comment-dataRight">
-                <div class="Comment-name">
-                  Vladislav
-                </div>
-                <div class="Comment-date">
-                  27 Jan 2017, 03:11 PM
-                </div>
-              </div>
-            </div>
-            <div class="Comment-message">
-              
-              <p>Really cool posts, however as you said in 3-rd post that js world is moving too fast, your posts really helped me out! Because I did not worked before with react stack and it was hard to jump right to webpack2, for instance, which is now released as there are not too much examples yet, and a lot of boilerplates looked like total overkill for learning project, so thank you a lot!</p>
-            </div>
-          </div>
-        
-          <div class="Comment">
-            
-            <div class="Comment-data">
-              <img class="Comment-avatar" src="https://www.gravatar.com/avatar/13a28fac985c11eb7f40169be7da32f4?d=mm&r=g" />
-              <div class="Comment-dataRight">
-                <div class="Comment-name">
-                  Stanko
-                </div>
-                <div class="Comment-date">
-                  06 Apr 2017, 11:09 AM
-                </div>
-              </div>
-            </div>
-            <div class="Comment-message">
-              
-              <p>Hello Vladislav,</p><p>
-Yeah, javascript development sure can be a bumpy road. I'm really glad it helped you!</p>
-            </div>
-          </div>
-        
-      </div>
-      <h3>Leave a comment</h3>
+      <h2 class="Comments-title">No comments, be the first to comment</h2>
     
   </div>
 
@@ -455,12 +291,12 @@ Yeah, javascript development sure can be a bumpy road. I'm really glad it helped
     <input
       name="fields[slug]"
       type="hidden"
-      value="setting-up-webpack-babel-and-react-from-scratch-part-2"
+      value="javascript-get-element-offset"
       class="CommentForm-input CommentForm-input--slug">
     <input
       name="options[slug]"
       type="hidden"
-      value="setting-up-webpack-babel-and-react-from-scratch-part-2"
+      value="javascript-get-element-offset"
       class="CommentForm-input CommentForm-input--optionsSlug">
 
     <div class="Grid">

@@ -4,13 +4,98 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-07-25T09:56:54+00:00</updated>
+ <updated>2017-07-26T21:22:42+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
    <email>stanko.tadic@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Get element offset in JavaScript</title>
+   <link href="http://stanko.github.io/javascript-get-element-offset/"/>
+   <updated>2017-07-26T00:00:00+00:00</updated>
+   <id>http://stanko.github.io/javascript-get-element-offset</id>
+   <content type="html">&lt;p&gt;When we left jQuery behind and embraced modern JavaScript frameworks,
+we thought we would never touch DOM directly again.
+Well that is not entirely true.
+There are a lot of cases when you need to get some DOM element size.
+For element’s dimensions &lt;code class=&quot;highlighter-rouge&quot;&gt;.offsetWidth&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;.offsetHeight&lt;/code&gt; are great way to do it.&lt;/p&gt;
+
+&lt;p&gt;But one of the other common tasks is getting element’s offset, top and left.
+I’ll show you two ways to get those.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;using-offsettop--offsetleft&quot;&gt;Using &lt;code class=&quot;highlighter-rouge&quot;&gt;offsetTop&lt;/code&gt; / &lt;code class=&quot;highlighter-rouge&quot;&gt;offsetLeft&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;This one is old school, and there is nothing wrong with it.
+Even today, this method lives in my &lt;code class=&quot;highlighter-rouge&quot;&gt;helpers.js&lt;/code&gt;.
+It is looping to the root of the DOM tree and performance obsessed people may having problem with it.
+But so far I never had performance issue with it, and I’m talking about production level projects.&lt;/p&gt;
+
+&lt;p&gt;One important thing to note - it is not taking CSS transforms into calculations.
+Everything is calculated from element’s original position.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getElementOffset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;top&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// Loop through the DOM tree&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// and add it's parent's offset to get page offset&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;top&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;offsetTop&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;offsetLeft&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;offsetParent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;using-getboundingclientrect&quot;&gt;Using &lt;code class=&quot;highlighter-rouge&quot;&gt;getBoundingClientRect&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Another way is using &lt;code class=&quot;highlighter-rouge&quot;&gt;getBoundingClientRect&lt;/code&gt; which is cool because it
+takes CSS transforms into calculations and it is natively supported.
+No need to loop through the element’s parents.
+But it’s &lt;code class=&quot;highlighter-rouge&quot;&gt;top&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;left&lt;/code&gt; properties are distances from the viewport, not from the document.
+Because of this, you need to add document scroll to it.&lt;/p&gt;
+
+&lt;p&gt;Just note one thing, there is a &lt;a href=&quot;https://openradar.appspot.com/radar?id=6668472289329152&quot;&gt;known bug&lt;/a&gt;
+with iOS and &lt;code class=&quot;highlighter-rouge&quot;&gt;getBoundingClientRect&lt;/code&gt; in combination with &lt;code class=&quot;highlighter-rouge&quot;&gt;position: fixed&lt;/code&gt;&lt;sup&gt;1&lt;/sup&gt;.
+Sometimes it is returning wrong values.
+So when you have fixed elements, you probably want to fallback to the method above&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;
+  &lt;sup&gt;1&lt;/sup&gt; I found about this bug few days ago when I was working on &lt;a href=&quot;https://github.com/Stanko/react-plx&quot;&gt;react-plx&lt;/a&gt;.
+&lt;/small&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getElementOffset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rect&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getBoundingClientRect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;top&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pageYOffset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pageXOffset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// If you want to support IE8 and lower&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Use&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// top: rect.top + (window.pageYOffset || document.documentElement.scrollTop),&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// left: rect.left + (window.pageXOffset || document.documentElement.scrollLeft),&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We are all using fancy frameworks, and sometimes we forget basic JavaScript stuff.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Plx - React parallax component</title>
