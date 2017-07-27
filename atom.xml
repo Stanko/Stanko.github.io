@@ -4,7 +4,7 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-07-26T21:22:42+00:00</updated>
+ <updated>2017-07-27T08:34:54+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
@@ -92,8 +92,6 @@ So when you have fixed elements, you probably want to fallback to the method abo
 &lt;span class=&quot;c1&quot;&gt;// left: rect.left + (window.pageXOffset || document.documentElement.scrollLeft),&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-
-&lt;p&gt;We are all using fancy frameworks, and sometimes we forget basic JavaScript stuff.&lt;/p&gt;
 </content>
  </entry>
  
