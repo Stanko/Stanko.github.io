@@ -13,7 +13,9 @@ But I also tremendously enjoy small projects, and playing with random technologi
 That is where this blog comes from.
 Hopefully there will be at least one post per week, but can't promise it.
 
+I fool around on [CodePen](http://codepen.io/stanko/) and maintain couple of [npm](https://www.npmjs.com/~stanko) packages.
 You can find me on [GitHub](https://github.com/Stanko) or [LinkedIn](https://linkedin.com/in/stankotadic).
+
 
 ------
 
