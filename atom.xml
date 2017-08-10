@@ -4,7 +4,7 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-08-09T12:57:53+00:00</updated>
+ <updated>2017-08-10T09:02:01+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
@@ -26,7 +26,7 @@ That means it still doesn’t work but it won’t throw an error and break your 
 
 &lt;p&gt;This is the version for &lt;code class=&quot;highlighter-rouge&quot;&gt;localStorage&lt;/code&gt;, just replace it with &lt;code class=&quot;highlighter-rouge&quot;&gt;sessionStorage&lt;/code&gt; if you need it.&lt;/p&gt;
 
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;LS_TEST_KEY&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'givewith-ls-test'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;LS_TEST_KEY&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'ls-test'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;isLocalStorageSupported&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;typeof&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;localStorage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'object'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;// Try to&lt;/span&gt;
