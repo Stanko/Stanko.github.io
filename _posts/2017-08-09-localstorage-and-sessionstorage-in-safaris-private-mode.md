@@ -14,7 +14,7 @@ That means it still doesn't work but it won't throw an error and break your appl
 This is the version for `localStorage`, just replace it with `sessionStorage` if you need it.
 
 ```js
-const LS_TEST_KEY = 'givewith-ls-test';
+const LS_TEST_KEY = 'ls-test';
 let isLocalStorageSupported = typeof localStorage === 'object';
 
 // Try to
