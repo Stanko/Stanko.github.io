@@ -6,9 +6,9 @@ message: >-
   Thanks guys!
 
 
-  @David, I have working React component, and plan to release it on the npm. But
+  @David, I have working React component and I plan to release it on the npm. But
   it depends on some other decorators and I'm thinking of the best way to
-  separate before publishing. 
+  separate them before publishing.
 
 
   Cheers!
