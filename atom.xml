@@ -4,13 +4,44 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-08-31T16:16:17+00:00</updated>
+ <updated>2017-09-02T10:22:24+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
    <email>stanko.tadic@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>How to update npm using nvm</title>
+   <link href="http://stanko.github.io/nvm-updating-npm/"/>
+   <updated>2017-09-02T00:00:00+00:00</updated>
+   <id>http://stanko.github.io/nvm-updating-npm</id>
+   <content type="html">&lt;p&gt;If you are JavaScript developer and not using &lt;a href=&quot;https://github.com/creationix/nvm&quot;&gt;nvm&lt;/a&gt; you might want to look at it.
+Node Version Manager is easy way to install, manage and work with multiple node versions.&lt;/p&gt;
+
+&lt;p&gt;And I recently got npm update notification, that looks like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/npm-update.png&quot; alt=&quot;npm update notification&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;This is image from the internet.&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;nvm doesn’t let you update only npm, but just a node+npm version. But these is really easy way to do so:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# navigate to nvm's node lib folder&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# (replace v8.4.0 with your version)&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.nvm/versions/node/v8.4.0/lib/
+
+&lt;span class=&quot;c&quot;&gt;# update npm right there&lt;/span&gt;
+npm install npm
+
+&lt;span class=&quot;c&quot;&gt;# reopen your terminal&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;That’s it. Great thing is that npm can update itself.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>localStorage and sessionStorage in Safari's private mode</title>
