@@ -26,11 +26,11 @@ const spawn = childProcess.spawn;
 		// .pipe($.sourcemaps.write())
 		.pipe(gulp.dest('.tmp/public/css/'))
 		.pipe(stream())
-		.pipe(gulp.dest('public/css/'))
-		.pipe($.notify({
-			title: 'Jekyll',
-			message: 'CSS generated'
-		}));
+		.pipe(gulp.dest('public/css/'));
+		// .pipe($.notify({
+		// 	title: 'Jekyll',
+		// 	message: 'CSS generated'
+		// }));
 });
 
 gulp.task('scripts', () => {
@@ -49,7 +49,7 @@ gulp.task('jekyll', function (){
 
 	jekyll.on('exit', function(code) {
 		if (code !== 0) {
-			$.notify(`ERROR: Jekyll process exited with code: ${code}`);
+			console.log(`ERROR: Jekyll process exited with code: ${code}`);
 		}
 	});
 });
