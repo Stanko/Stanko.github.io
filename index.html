@@ -82,8 +82,8 @@
         Latest post
       </span>
       <h1>
-        <a href="/nvm-updating-npm/">
-          How to update npm using nvm
+        <a href="/react-image-filter/">
+          React Image Filter
         </a>
       </h1>
       <span>02 Sep 2017</span>
@@ -108,6 +108,56 @@
   
   <div class="Post">
     <img class="Post-bg" src="/public/img/home/poly1.svg" />
+    <div class="Post-content">
+      <h1 class="Post-title">
+        <a href="/react-image-filter/">
+          React Image Filter
+        </a>
+      </h1>
+
+      <div class="Post-data">
+        <div class="Post-date">
+          <div class="Post-dateIcon">
+            <svg height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
+  <path d="M16 30c-3.74 0-7.255-1.456-9.9-4.1C1.78 21.577.753 15.024 3.548 9.594c.253-.49.855-.684 1.347-.432s.685.855.432 1.347C2.93 15.164 3.81 20.78 7.516 24.485 9.78 26.752 12.793 28 16 28c3.205 0 6.22-1.248 8.485-3.515S28 19.205 28 16c0-3.206-1.248-6.22-3.515-8.485S19.205 4 16 4c-3.206 0-6.22 1.25-8.485 3.515-.39.39-1.023.39-1.414 0s-.39-1.023 0-1.414C8.746 3.458 12.26 2 16 2s7.256 1.457 9.9 4.1C28.543 8.746 30 12.26 30 16s-1.456 7.255-4.1 9.9C23.255 28.543 19.74 30 16 30z"/>
+  <path d="M21 21c-.22 0-.44-.07-.625-.22l-5-4c-.237-.19-.375-.476-.375-.78V8c0-.552.448-1 1-1s1 .448 1 1v7.52l4.625 3.7c.43.345.5.974.156 1.405-.197.246-.487.375-.78.375z"/>
+</svg>
+
+          </div>
+          02 Sep 2017
+        </div>
+
+        
+        
+      </div>
+
+      <p>On the project I’m currently working on, client’s logo is displayed in two versions,
+black on the white background and vice versa.
+To make their life easier, so they don’t have to upload two assets, I suggested SVG.
+Alas they can’t use SVGs (kinda long story), so I just applied CSS <code class="highlighter-rouge">filter: invert(1);</code>, but…</p>
+
+<p>…you guessed it - it doesn’t work in IE and Edge :(</p>
+
+<p>So I started reading about <a href="https://developer.mozilla.org/en/docs/Web/SVG/Element/filter">SVG filters</a>
+and found a way to invert a image. But it got me interested,
+so I kept going and made a React component for all sorts of color filters.</p>
+
+<p>Play with the <a href="https://stanko.github.io/react-image-filter/">interactive demo</a>.</p>
+
+<p>Documenation available on <a href="https://github.com/Stanko/react-image-filter">GitHub</a> and <a href="https://www.npmjs.com/package/react-image-filter">npm</a>.</p>
+
+<p><a href="https://stanko.github.io/react-image-filter/"><img src="/public/img/image-filter-1.jpg" alt="Demo" /></a></p>
+
+
+
+      
+          <a class="Post-readmore" href="/react-image-filter/">Read more</a>
+      
+    </div>
+  </div>
+  
+  <div class="Post">
+    <img class="Post-bg" src="/public/img/home/poly2.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/nvm-updating-npm/">
@@ -161,7 +211,7 @@ npm install npm
   </div>
   
   <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly2.svg" />
+    <img class="Post-bg" src="/public/img/home/poly0.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/localstorage-and-sessionstorage-in-safaris-private-mode/">
@@ -246,7 +296,7 @@ That means it still doesn’t work but it won’t throw an error and break your 
   </div>
   
   <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly0.svg" />
+    <img class="Post-bg" src="/public/img/home/poly1.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/javascript-get-element-offset/">
@@ -288,7 +338,7 @@ I’ll show you two ways to get those.</p>
   </div>
   
   <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly1.svg" />
+    <img class="Post-bg" src="/public/img/home/poly2.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/plx-react-parallax-component/">
@@ -333,62 +383,6 @@ Check the <a href="https://stanko.github.io/react-plx/">live demo</a>. It is cal
 
       
           <a class="Post-readmore" href="/plx-react-parallax-component/">Read more</a>
-      
-    </div>
-  </div>
-  
-  <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly2.svg" />
-    <div class="Post-content">
-      <h1 class="Post-title">
-        <a href="/super-resolution-image-resizer/">
-          waifu2x super resolution image resizer
-        </a>
-      </h1>
-
-      <div class="Post-data">
-        <div class="Post-date">
-          <div class="Post-dateIcon">
-            <svg height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
-  <path d="M16 30c-3.74 0-7.255-1.456-9.9-4.1C1.78 21.577.753 15.024 3.548 9.594c.253-.49.855-.684 1.347-.432s.685.855.432 1.347C2.93 15.164 3.81 20.78 7.516 24.485 9.78 26.752 12.793 28 16 28c3.205 0 6.22-1.248 8.485-3.515S28 19.205 28 16c0-3.206-1.248-6.22-3.515-8.485S19.205 4 16 4c-3.206 0-6.22 1.25-8.485 3.515-.39.39-1.023.39-1.414 0s-.39-1.023 0-1.414C8.746 3.458 12.26 2 16 2s7.256 1.457 9.9 4.1C28.543 8.746 30 12.26 30 16s-1.456 7.255-4.1 9.9C23.255 28.543 19.74 30 16 30z"/>
-  <path d="M21 21c-.22 0-.44-.07-.625-.22l-5-4c-.237-.19-.375-.476-.375-.78V8c0-.552.448-1 1-1s1 .448 1 1v7.52l4.625 3.7c.43.345.5.974.156 1.405-.197.246-.487.375-.78.375z"/>
-</svg>
-
-          </div>
-          26 Jun 2017
-        </div>
-
-        
-        
-      </div>
-
-      <p>I use <a href="/public/img/image-resize/odin-2x.png">the same wallpaper</a><sup>1</sup> (warning, 6mb file) for a long time now.
-Not sure who is the author (if anyone knows the original author, please let me know in the comments).
-But with high resolution displays, wallpaper started to look blurry and noisy, so I stopped using it.</p>
-
-<p>But recently, my girlfriend reminded me of <a href="http://waifu2x.udp.jp/">this great website</a> which super-scales images using magic. Ok, not magic, but it uses “Deep Convolutional Neural Networks”, which is pretty much the same thing. Results are amazing, try it yourself.</p>
-
-<p>The best thing, website is free to use and project is opensource. Code is available on <a href="https://github.com/nagadomi/waifu2x">GitHub</a>.</p>
-
-<p>It supports max scaling of 2x, so if you need more you’ll need to process image multiple times. Or you can dig in the code and add option for arbitrary scaling.</p>
-
-<p><small><sup>1</sup> This is the resized image using waifu2x.</small></p>
-
-<h3 id="example">Example</h3>
-
-<p>Original, 250x250px jpeg <sup>2</sup></p>
-
-<p><img class="Image" style="max-width: 500px; width: 100%;" src="/public/img/image-resize/rickmorty-250x250.jpg" alt="Original 250x250px image" /></p>
-
-<p>Result, 500x500px png</p>
-
-<p><img class="Image" style="max-width: 500px; width: 100%;" src="/public/img/image-resize/rickmorty-500x500.png" alt="Resized 2x 500x500px image" /></p>
-
-<p>If you ask me, results are really impressive, kudos to nagadomi!</p>
-
-<p><small><sup>2</sup> Image is from my favorite animated show <a href="https://en.wikipedia.org/wiki/Rick_and_Morty">Rick and Morty</a></small></p>
-
-
       
     </div>
   </div>
@@ -440,7 +434,7 @@ But with high resolution displays, wallpaper started to look blurry and noisy, s
 
       
         <div class="Pagination-separator"></div>
-        <a class="Pagination-link" href="/page-10">10</a>
+        <a class="Pagination-link" href="/page-11">11</a>
       
 
       
@@ -595,6 +589,10 @@ But with high resolution displays, wallpaper started to look blurry and noisy, s
               
             
           
+            
+              
+            
+          
           <a
             class="Menu-menuLink"
             href="/atom.xml">
@@ -646,6 +644,9 @@ But with high resolution displays, wallpaper started to look blurry and noisy, s
     <script>
   var posts = [
      {
+        url: '/react-image-filter/',
+        title: 'React Image Filter'
+    },  {
         url: '/nvm-updating-npm/',
         title: 'How to update npm using nvm'
     },  {

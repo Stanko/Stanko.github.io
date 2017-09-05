@@ -12,18 +12,18 @@
 
   
 
-  <title>waifu2x super resolution image resizer &middot; Muffin Man's writings</title>
+  <title>React Image Filter &middot; Muffin Man's writings</title>
 
   <link rel="stylesheet" href="/public/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700|Open+Sans:300,600,800&subset=latin-ext" rel="stylesheet">
 
   <meta property="og:site_name" content="Muffin Man's writings">
-  <meta property="og:title" content="waifu2x super resolution image resizer &middot; Muffin Man's writings">
-  <meta property="og:description" content="I use the same wallpaper1 (warning, 6mb file) for a long time now. Not sure who is the author (if anyone knows the original author, please let me know in...">
+  <meta property="og:title" content="React Image Filter &middot; Muffin Man's writings">
+  <meta property="og:description" content="On the project I’m currently working on, client’s logo is displayed in two versions, black on the white background and vice versa. To make their life easier, so they don’t...">
   <meta property="og:image" content="http://stanko.github.io/public/favicon/favicon-96x96.png">
-  <meta property="og:url" content="http://stanko.github.io/super-resolution-image-resizer/">
-  <meta name="twitter:title" content="waifu2x super resolution image resizer &middot; Muffin Man's writings">
-  <meta name="twitter:description" content="I use the same wallpaper1 (warning, 6mb file) for a long time now. Not sure who is the author (if anyone knows the original author, please let me know in...">
+  <meta property="og:url" content="http://stanko.github.io/react-image-filter/">
+  <meta name="twitter:title" content="React Image Filter &middot; Muffin Man's writings">
+  <meta name="twitter:description" content="On the project I’m currently working on, client’s logo is displayed in two versions, black on the white background and vice versa. To make their life easier, so they don’t...">
   <meta name="twitter:image" content="http://stanko.github.io/public/favicon/favicon-96x96.png">
 
   <!-- Icons -->
@@ -75,9 +75,9 @@
         <span></span>
         <span></span>
       </button>
-      <h1>waifu2x super resolution image resizer</h1>
+      <h1>React Image Filter</h1>
       
-        <span>26 Jun 2017</span>
+        <span>02 Sep 2017</span>
       
     </div>
   </div>
@@ -97,7 +97,7 @@
     <div class="Content">
       <div class="Post Container">
         <div class="Post-top">
-          <div class="Post-readTime">This article will take about 1  minute to read.</div>
+          <div class="Post-readTime">This article will take about 2  minutes to read.</div>
 
           <a href="#comments" class="Post-commentsLink">
             
@@ -107,31 +107,61 @@
           </a>
         </div>
 
-        <p>I use <a href="/public/img/image-resize/odin-2x.png">the same wallpaper</a><sup>1</sup> (warning, 6mb file) for a long time now.
-Not sure who is the author (if anyone knows the original author, please let me know in the comments).
-But with high resolution displays, wallpaper started to look blurry and noisy, so I stopped using it.</p>
+        <p>On the project I’m currently working on, client’s logo is displayed in two versions,
+black on the white background and vice versa.
+To make their life easier, so they don’t have to upload two assets, I suggested SVG.
+Alas they can’t use SVGs (kinda long story), so I just applied CSS <code class="highlighter-rouge">filter: invert(1);</code>, but…</p>
 
-<p>But recently, my girlfriend reminded me of <a href="http://waifu2x.udp.jp/">this great website</a> which super-scales images using magic. Ok, not magic, but it uses “Deep Convolutional Neural Networks”, which is pretty much the same thing. Results are amazing, try it yourself.</p>
+<p>…you guessed it - it doesn’t work in IE and Edge :(</p>
 
-<p>The best thing, website is free to use and project is opensource. Code is available on <a href="https://github.com/nagadomi/waifu2x">GitHub</a>.</p>
+<p>So I started reading about <a href="https://developer.mozilla.org/en/docs/Web/SVG/Element/filter">SVG filters</a>
+and found a way to invert a image. But it got me interested,
+so I kept going and made a React component for all sorts of color filters.</p>
 
-<p>It supports max scaling of 2x, so if you need more you’ll need to process image multiple times. Or you can dig in the code and add option for arbitrary scaling.</p>
+<p>Play with the <a href="https://stanko.github.io/react-image-filter/">interactive demo</a>.</p>
 
-<p><small><sup>1</sup> This is the resized image using waifu2x.</small></p>
+<p>Documenation available on <a href="https://github.com/Stanko/react-image-filter">GitHub</a> and <a href="https://www.npmjs.com/package/react-image-filter">npm</a>.</p>
 
-<h3 id="example">Example</h3>
+<p><a href="https://stanko.github.io/react-image-filter/"><img src="/public/img/image-filter-1.jpg" alt="Demo" /></a></p>
 
-<p>Original, 250x250px jpeg <sup>2</sup></p>
+<!--more-->
 
-<p><img class="Image" style="max-width: 500px; width: 100%;" src="/public/img/image-resize/rickmorty-250x250.jpg" alt="Original 250x250px image" /></p>
+<p>SVG filters include <code class="highlighter-rouge">feColorMatrix</code> which is a matrix for color transformation.
+Changing the matrix value you can achieve all of the CSS filters.</p>
 
-<p>Result, 500x500px png</p>
+<p>It accepts 5x4 matrix. Two examples:</p>
 
-<p><img class="Image" style="max-width: 500px; width: 100%;" src="/public/img/image-resize/rickmorty-500x500.png" alt="Resized 2x 500x500px image" /></p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// Base matrix (no filter)</span>
+<span class="mi">1</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>
+<span class="mi">0</span>  <span class="mi">1</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>
+<span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">1</span>  <span class="mi">0</span>  <span class="mi">0</span>
+<span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">1</span>  <span class="mi">0</span>
 
-<p>If you ask me, results are really impressive, kudos to nagadomi!</p>
+<span class="c1">// Invert colors matrix</span>
+<span class="o">-</span><span class="mi">1</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">1</span>
+ <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">1</span>
+ <span class="mi">0</span>  <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span>  <span class="mi">0</span>  <span class="mi">1</span>
+ <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">1</span>  <span class="mi">0</span>
+</code></pre>
+</div>
 
-<p><small><sup>2</sup> Image is from my favorite animated show <a href="https://en.wikipedia.org/wiki/Rick_and_Morty">Rick and Morty</a></small></p>
+<p>I wasn’t lazy so I made interactive way of changing values in matrix.
+Every value has it’s own range slider. This way you can see the changes right away.</p>
+
+<p><img src="/public/img/image-filter-controls.png" alt="Controls" /></p>
+
+<p>Soon I encountered another problem.
+As applying SVG filters in CSS also doesn’t work in IE and Edge, I used SVG <code class="highlighter-rouge">&lt;image /&gt;</code> tag.
+But SVG wouldn’t scale to the image size.</p>
+
+<p>Then it hit me, I can solve it by using a simple hack. Component is rendering a wrapper div with SVG inside.
+So I added a <code class="highlighter-rouge">&lt;img /&gt;</code> using the same image and div resizes to fit the image.
+Here comes the hack - I’ve hidden the image using <code class="highlighter-rouge">visibility: hidden</code> and made SVG absolute and 100% width/height.
+This way SVG always keeps image aspect ratio.</p>
+
+<p>SVGs are awesome :)</p>
+
+<p><a href="https://stanko.github.io/react-image-filter/"><img src="/public/img/image-filter-2.jpg" alt="Demo" /></a></p>
 
 
         <div class="Post-shareAndCategories">
@@ -142,7 +172,7 @@ But with high resolution displays, wallpaper started to look blurry and noisy, s
             <!-- Sharing button Facebook -->
             <a
               class="SharringButton SharringButton--facebook"
-              href="https://facebook.com/sharer/sharer.php?u=http://stanko.github.io/super-resolution-image-resizer/" target="_blank">
+              href="https://facebook.com/sharer/sharer.php?u=http://stanko.github.io/react-image-filter/" target="_blank">
               <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
   <g>
     <path d="M18.768,7.465H14.5V5.56c0-0.896,0.594-1.105,1.012-1.105s2.988,0,2.988,0V0.513L14.171,0.5C10.244,0.5,9.5,3.438,9.5,5.32 v2.145h-3v4h3c0,5.212,0,12,0,12h5c0,0,0-6.85,0-12h3.851L18.768,7.465z"/>
@@ -153,7 +183,7 @@ But with high resolution displays, wallpaper started to look blurry and noisy, s
             <!-- Sharing button Twitter -->
             <a
               class="SharringButton SharringButton--twitter"
-              href="https://twitter.com/intent/tweet/?text=waifu2x super resolution image resizer&amp;url=http://stanko.github.io/super-resolution-image-resizer/" target="_blank">
+              href="https://twitter.com/intent/tweet/?text=React Image Filter&amp;url=http://stanko.github.io/react-image-filter/" target="_blank">
               <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
   <g>
     <path d="M23.444,4.834c-0.814,0.363-1.5,0.375-2.228,0.016c0.938-0.562,0.981-0.957,1.32-2.019c-0.878,0.521-1.851,0.9-2.886,1.104 C18.823,3.053,17.642,2.5,16.335,2.5c-2.51,0-4.544,2.036-4.544,4.544c0,0.356,0.04,0.703,0.117,1.036 C8.132,7.891,4.783,6.082,2.542,3.332C2.151,4.003,1.927,4.784,1.927,5.617c0,1.577,0.803,2.967,2.021,3.782 C3.203,9.375,2.503,9.171,1.891,8.831C1.89,8.85,1.89,8.868,1.89,8.888c0,2.202,1.566,4.038,3.646,4.456 c-0.666,0.181-1.368,0.209-2.053,0.079c0.579,1.804,2.257,3.118,4.245,3.155C5.783,18.102,3.372,18.737,1,18.459 C3.012,19.748,5.399,20.5,7.966,20.5c8.358,0,12.928-6.924,12.928-12.929c0-0.198-0.003-0.393-0.012-0.588 C21.769,6.343,22.835,5.746,23.444,4.834z"/>
@@ -164,7 +194,7 @@ But with high resolution displays, wallpaper started to look blurry and noisy, s
             <!-- Sharing button Google+ -->
             <a
               class="SharringButton SharringButton--googlePlus"
-              href="https://plus.google.com/share?url=http://stanko.github.io/super-resolution-image-resizer/" target="_blank">
+              href="https://plus.google.com/share?url=http://stanko.github.io/react-image-filter/" target="_blank">
               <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
   <g>
     <path d="M11.366,12.928c-0.729-0.516-1.393-1.273-1.404-1.505c0-0.425,0.038-0.627,0.988-1.368 c1.229-0.962,1.906-2.228,1.906-3.564c0-1.212-0.37-2.289-1.001-3.044h0.488c0.102,0,0.2-0.033,0.282-0.091l1.364-0.989 c0.169-0.121,0.24-0.338,0.176-0.536C14.102,1.635,13.918,1.5,13.709,1.5H7.608c-0.667,0-1.345,0.118-2.011,0.347 c-2.225,0.766-3.778,2.66-3.778,4.605c0,2.755,2.134,4.845,4.987,4.91c-0.056,0.22-0.084,0.434-0.084,0.645 c0,0.425,0.108,0.827,0.33,1.216c-0.026,0-0.051,0-0.079,0c-2.72,0-5.175,1.334-6.107,3.32C0.623,17.06,0.5,17.582,0.5,18.098 c0,0.501,0.129,0.984,0.382,1.438c0.585,1.046,1.843,1.861,3.544,2.289c0.877,0.223,1.82,0.335,2.8,0.335 c0.88,0,1.718-0.114,2.494-0.338c2.419-0.702,3.981-2.482,3.981-4.538C13.701,15.312,13.068,14.132,11.366,12.928z M3.66,17.443 c0-1.435,1.823-2.693,3.899-2.693h0.057c0.451,0.005,0.892,0.072,1.309,0.2c0.142,0.098,0.28,0.192,0.412,0.282 c0.962,0.656,1.597,1.088,1.774,1.783c0.041,0.175,0.063,0.35,0.063,0.519c0,1.787-1.333,2.693-3.961,2.693 C5.221,20.225,3.66,19.002,3.66,17.443z M5.551,3.89c0.324-0.371,0.75-0.566,1.227-0.566l0.055,0 c1.349,0.041,2.639,1.543,2.876,3.349c0.133,1.013-0.092,1.964-0.601,2.544C8.782,9.589,8.363,9.783,7.866,9.783H7.865H7.844 c-1.321-0.04-2.639-1.6-2.875-3.405C4.836,5.37,5.049,4.462,5.551,3.89z"/>
@@ -178,7 +208,9 @@ But with high resolution displays, wallpaper started to look blurry and noisy, s
           <div class="Post-categories">
           <div>Categories</div>
           
-            <a href="/category/random">Random</a>
+            <a href="/category/react">React</a>
+          
+            <a href="/category/javascript">JavaScript</a>
           
         </div>
         </div>
@@ -192,13 +224,6 @@ But with high resolution displays, wallpaper started to look blurry and noisy, s
 
             
               <div class="RelatedPosts-post">
-                <a href="/react-image-filter/">
-                  <small>02 Sep 2017</small>
-                  React Image Filter
-                </a>
-              </div>
-            
-              <div class="RelatedPosts-post">
                 <a href="/nvm-updating-npm/">
                   <small>02 Sep 2017</small>
                   How to update npm using nvm
@@ -209,6 +234,13 @@ But with high resolution displays, wallpaper started to look blurry and noisy, s
                 <a href="/localstorage-and-sessionstorage-in-safaris-private-mode/">
                   <small>09 Aug 2017</small>
                   localStorage and sessionStorage in Safari's private mode
+                </a>
+              </div>
+            
+              <div class="RelatedPosts-post">
+                <a href="/javascript-get-element-offset/">
+                  <small>26 Jul 2017</small>
+                  Get element offset in JavaScript
                 </a>
               </div>
             
@@ -239,12 +271,12 @@ But with high resolution displays, wallpaper started to look blurry and noisy, s
     <input
       name="fields[slug]"
       type="hidden"
-      value="super-resolution-image-resizer"
+      value="react-image-filter"
       class="CommentForm-input CommentForm-input--slug">
     <input
       name="options[slug]"
       type="hidden"
-      value="super-resolution-image-resizer"
+      value="react-image-filter"
       class="CommentForm-input CommentForm-input--optionsSlug">
 
     <div class="Grid">

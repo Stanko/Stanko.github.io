@@ -4,13 +4,76 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-09-05T09:40:43+00:00</updated>
+ <updated>2017-09-05T13:00:39+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
    <email>stanko.tadic@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>React Image Filter</title>
+   <link href="http://stanko.github.io/react-image-filter/"/>
+   <updated>2017-09-02T00:00:00+00:00</updated>
+   <id>http://stanko.github.io/react-image-filter</id>
+   <content type="html">&lt;p&gt;On the project I’m currently working on, client’s logo is displayed in two versions,
+black on the white background and vice versa.
+To make their life easier, so they don’t have to upload two assets, I suggested SVG.
+Alas they can’t use SVGs (kinda long story), so I just applied CSS &lt;code class=&quot;highlighter-rouge&quot;&gt;filter: invert(1);&lt;/code&gt;, but…&lt;/p&gt;
+
+&lt;p&gt;…you guessed it - it doesn’t work in IE and Edge :(&lt;/p&gt;
+
+&lt;p&gt;So I started reading about &lt;a href=&quot;https://developer.mozilla.org/en/docs/Web/SVG/Element/filter&quot;&gt;SVG filters&lt;/a&gt;
+and found a way to invert a image. But it got me interested,
+so I kept going and made a React component for all sorts of color filters.&lt;/p&gt;
+
+&lt;p&gt;Play with the &lt;a href=&quot;https://stanko.github.io/react-image-filter/&quot;&gt;interactive demo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Documenation available on &lt;a href=&quot;https://github.com/Stanko/react-image-filter&quot;&gt;GitHub&lt;/a&gt; and &lt;a href=&quot;https://www.npmjs.com/package/react-image-filter&quot;&gt;npm&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://stanko.github.io/react-image-filter/&quot;&gt;&lt;img src=&quot;/public/img/image-filter-1.jpg&quot; alt=&quot;Demo&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;SVG filters include &lt;code class=&quot;highlighter-rouge&quot;&gt;feColorMatrix&lt;/code&gt; which is a matrix for color transformation.
+Changing the matrix value you can achieve all of the CSS filters.&lt;/p&gt;
+
+&lt;p&gt;It accepts 5x4 matrix. Two examples:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Base matrix (no filter)&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Invert colors matrix&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+ &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+ &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+ &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I wasn’t lazy so I made interactive way of changing values in matrix.
+Every value has it’s own range slider. This way you can see the changes right away.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/image-filter-controls.png&quot; alt=&quot;Controls&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Soon I encountered another problem.
+As applying SVG filters in CSS also doesn’t work in IE and Edge, I used SVG &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;image /&amp;gt;&lt;/code&gt; tag.
+But SVG wouldn’t scale to the image size.&lt;/p&gt;
+
+&lt;p&gt;Then it hit me, I can solve it by using a simple hack. Component is rendering a wrapper div with SVG inside.
+So I added a &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;img /&amp;gt;&lt;/code&gt; using the same image and div resizes to fit the image.
+Here comes the hack - I’ve hidden the image using &lt;code class=&quot;highlighter-rouge&quot;&gt;visibility: hidden&lt;/code&gt; and made SVG absolute and 100% width/height.
+This way SVG always keeps image aspect ratio.&lt;/p&gt;
+
+&lt;p&gt;SVGs are awesome :)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://stanko.github.io/react-image-filter/&quot;&gt;&lt;img src=&quot;/public/img/image-filter-2.jpg&quot; alt=&quot;Demo&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>How to update npm using nvm</title>
