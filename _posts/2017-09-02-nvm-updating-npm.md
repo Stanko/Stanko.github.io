@@ -13,7 +13,7 @@ And I recently got npm update notification, that looks like this:
 
 <small>This is image from the internet.</small>
 
-nvm doesn't let you update only npm, but just a node+npm version. But these is really easy way to do so:
+nvm doesn't let you update only npm, but just a node+npm version. But there is a really easy way to do it:
 
 ```bash
 # navigate to nvm's node lib folder
@@ -26,4 +26,4 @@ npm install npm
 # reopen your terminal
 ```
 
-That's it. Great thing is that npm can update itself.
+That's it. Great thing is that npm can update itself. And this works for any other global npm package.
