@@ -4,7 +4,7 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-09-05T06:08:34+00:00</updated>
+ <updated>2017-09-05T09:40:43+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
@@ -26,7 +26,7 @@ Node Version Manager is easy way to install, manage and work with multiple node 
 
 &lt;p&gt;&lt;small&gt;This is image from the internet.&lt;/small&gt;&lt;/p&gt;
 
-&lt;p&gt;nvm doesn’t let you update only npm, but just a node+npm version. But these is really easy way to do so:&lt;/p&gt;
+&lt;p&gt;nvm doesn’t let you update only npm, but just a node+npm version. But there is a really easy way to do it:&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# navigate to nvm's node lib folder&lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;# (replace v8.4.0 with your version)&lt;/span&gt;
@@ -39,7 +39,7 @@ npm install npm
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;That’s it. Great thing is that npm can update itself.&lt;/p&gt;
+&lt;p&gt;That’s it. Great thing is that npm can update itself. And this works for any other global npm package.&lt;/p&gt;
 </content>
  </entry>
  
