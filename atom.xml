@@ -4,7 +4,7 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-09-05T13:00:39+00:00</updated>
+ <updated>2017-09-06T18:48:38+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>React Image Filter</title>
-   <link href="http://stanko.github.io/react-image-filter/"/>
+   <link href="http://stanko.github.io/react-image-filter-component/"/>
    <updated>2017-09-02T00:00:00+00:00</updated>
-   <id>http://stanko.github.io/react-image-filter</id>
+   <id>http://stanko.github.io/react-image-filter-component</id>
    <content type="html">&lt;p&gt;On the project I’m currently working on, client’s logo is displayed in two versions,
 black on the white background and vice versa.
 To make their life easier, so they don’t have to upload two assets, I suggested SVG.
