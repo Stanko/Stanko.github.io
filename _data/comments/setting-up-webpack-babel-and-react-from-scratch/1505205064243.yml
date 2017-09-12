@@ -3,11 +3,20 @@ slug: setting-up-webpack-babel-and-react-from-scratch
 name: Tony Bai
 email: 26caa4a5c3d545a082a1f5ad91d4778c
 message: >-
+  <pre>
   resolve: {
-      extensions: ['', '.js', '.jsx', '.json']
-    }, this part of code will caused an issue when you configure scripts in package.json like "scripts": {
-      "start": "webpack-dev-server --hot"
-    }.
+    extensions: ['', '.js', '.jsx', '.json']
+  },
+  </pre>
+
+  this part of code will caused an issue when you configure scripts in package.json like
+
+  <pre>
+  "scripts": {
+    "start": "webpack-dev-server --hot"
+  }.
+  </pre>
+
   When I try to run 'npm start' command, Invalid configuration object issue
   returned due to the configuration.resolve.extensions[0] should not be empty.
 
