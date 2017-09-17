@@ -97,7 +97,7 @@
     <div class="Content">
       <div class="Post Container">
         <div class="Post-top">
-          <div class="Post-readTime">This article will take about 6  minutes to read.</div>
+          <div class="Post-readTime">This article will take about 7  minutes to read.</div>
 
           <a href="#comments" class="Post-commentsLink">
             
@@ -174,7 +174,7 @@ and render only the end result. This way our element immediately gets height of 
 </div>
 
 <iframe height="400px" scrolling="no" src="//codepen.io/stanko/embed/preview/XgaNyq/?height=400&amp;theme-id=light&amp;default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-See the Pen <a href="http://codepen.io/stanko/pen/XgaNyq/">Counting sheep</a> by Stanko (<a href="http://codepen.io/stanko">@stanko</a>) on <a href="http://codepen.io">CodePen</a>.
+See the Pen <a href="http://codepen.io/stanko/pen/XgaNyq/">Rerender React component in componentDidMount - Step 1</a> by Stanko (<a href="http://codepen.io/stanko">@stanko</a>) on <a href="http://codepen.io">CodePen</a>.
 </iframe>
 
 <h2 id="solution-add-a-short-timeout">Solution, add a short timeout</h2>
@@ -198,7 +198,7 @@ See the Pen <a href="http://codepen.io/stanko/pen/XgaNyq/">Counting sheep</a> by
 </div>
 
 <iframe height="400px" scrolling="no" src="//codepen.io/stanko/embed/preview/WOERrE/?height=400&amp;theme-id=light&amp;default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-See the Pen <a href="http://codepen.io/stanko/pen/WOERrE/">Counting sheep</a> by Stanko (<a href="http://codepen.io/stanko">@stanko</a>) on <a href="http://codepen.io">CodePen</a>.
+See the Pen <a href="http://codepen.io/stanko/pen/WOERrE/">Rerender React component in componentDidMount - Step 2</a> by Stanko (<a href="http://codepen.io/stanko">@stanko</a>) on <a href="http://codepen.io">CodePen</a>.
 </iframe>
 
 <p>So this is cross browser solution, but I always cringe a little when I’m forced to use timeouts like this. And I have been talking about animation frames a lot, so why don’t we try that next?</p>
@@ -222,7 +222,7 @@ My guess that sometimes it gets squeezed in to the same animation frame.</p>
 </div>
 
 <iframe height="400px" scrolling="no" src="//codepen.io/stanko/embed/preview/JJyEoz/?height=400&amp;theme-id=light&amp;default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-See the Pen <a href="http://codepen.io/stanko/pen/JJyEoz/">Counting sheep</a> by Stanko (<a href="http://codepen.io/stanko">@stanko</a>) on <a href="http://codepen.io">CodePen</a>.
+See the Pen <a href="http://codepen.io/stanko/pen/JJyEoz/">Rerender React component in componentDidMount - Step 3</a> by Stanko (<a href="http://codepen.io/stanko">@stanko</a>) on <a href="http://codepen.io">CodePen</a>.
 </iframe>
 
 <p>So now we need to make sure our two states belong to different animation frames each.</p>
@@ -255,7 +255,7 @@ value for timeout, just use native methods that browsers provide.</p>
 </div>
 
 <iframe height="400px" scrolling="no" src="//codepen.io/stanko/embed/preview/JJyEXq/?height=400&amp;theme-id=light&amp;default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-See the Pen <a href="http://codepen.io/stanko/pen/JJyEXq/">Counting sheep</a> by Stanko (<a href="http://codepen.io/stanko">@stanko</a>) on <a href="http://codepen.io">CodePen</a>.
+See the Pen <a href="http://codepen.io/stanko/pen/JJyEXq/">Rerender React component in componentDidMount - Step 4</a> by Stanko (<a href="http://codepen.io/stanko">@stanko</a>) on <a href="http://codepen.io">CodePen</a>.
 </iframe>
 
 <h2 id="finally-put-it-in-a-helper">Finally, put it in a helper</h2>
