@@ -76,7 +76,7 @@ scrolling='no'
 src='//codepen.io/stanko/embed/preview/XgaNyq/?height=400&theme-id=light&default-tab=result' frameborder='no'
 allowtransparency='true'
 allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/XgaNyq/'>Counting sheep</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+See the Pen <a href='http://codepen.io/stanko/pen/XgaNyq/'>Rerender React component in componentDidMount - Step 1</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
 ## Solution, add a short timeout
@@ -105,7 +105,7 @@ scrolling='no'
 src='//codepen.io/stanko/embed/preview/WOERrE/?height=400&theme-id=light&default-tab=result' frameborder='no'
 allowtransparency='true'
 allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/WOERrE/'>Counting sheep</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+See the Pen <a href='http://codepen.io/stanko/pen/WOERrE/'>Rerender React component in componentDidMount - Step 2</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
 So this is cross browser solution, but I always cringe a little when I'm forced to use timeouts like this. And I have been talking about animation frames a lot, so why don't we try that next?
@@ -134,7 +134,7 @@ scrolling='no'
 src='//codepen.io/stanko/embed/preview/JJyEoz/?height=400&theme-id=light&default-tab=result' frameborder='no'
 allowtransparency='true'
 allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/JJyEoz/'>Counting sheep</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+See the Pen <a href='http://codepen.io/stanko/pen/JJyEoz/'>Rerender React component in componentDidMount - Step 3</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
 So now we need to make sure our two states belong to different animation frames each.
@@ -173,7 +173,7 @@ scrolling='no'
 src='//codepen.io/stanko/embed/preview/JJyEXq/?height=400&theme-id=light&default-tab=result' frameborder='no'
 allowtransparency='true'
 allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/JJyEXq/'>Counting sheep</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+See the Pen <a href='http://codepen.io/stanko/pen/JJyEXq/'>Rerender React component in componentDidMount - Step 4</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
 
