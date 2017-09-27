@@ -151,13 +151,12 @@ We’ll use <code class="highlighter-rouge">master</code> or <code class="highli
   </li>
 </ul>
 
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">source</span> <span class="s2">"http://production.cf.rubygems.org/"</span>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">source</span> <span class="s2">"http://production.cf.rubygems.org/"</span>
 
 <span class="n">gem</span> <span class="s2">"rake"</span><span class="p">,</span> <span class="s2">"~&gt; 10.1.1"</span>
 <span class="n">gem</span> <span class="s2">"jekyll-paginate"</span>
 <span class="n">gem</span> <span class="s2">"jekyll-archives"</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><small>
 We have seen <a href="http://blog.travis-ci.com/2013-05-20-network-timeouts-build-retries/">intermittent timeouts</a> fetching gems from Rubygems.org. <code class="highlighter-rouge">install: bundle install</code> lets Travis CI automatically retry, and we are using <code class="highlighter-rouge">source "http://production.cf.rubygems.org/"</code> in Gemfile to point to a different repository.
@@ -169,23 +168,21 @@ It will tell Travis what to install and how build our Jekyll site.
 Add following data to it.</li>
 </ul>
 
-<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">language</span><span class="pi">:</span> <span class="s">ruby</span>
-<span class="s">rvm</span><span class="pi">:</span>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">language</span><span class="pi">:</span> <span class="s">ruby</span>
+<span class="na">rvm</span><span class="pi">:</span>
 <span class="pi">-</span> <span class="s">2.3.1</span>
-<span class="s">install</span><span class="pi">:</span>
+<span class="na">install</span><span class="pi">:</span>
 <span class="pi">-</span> <span class="s">bundle install</span>
-<span class="s">script</span><span class="pi">:</span> <span class="s">bundle exec rake site:deploy --quiet</span>
-<span class="s">env</span><span class="pi">:</span>
-  <span class="s">global</span><span class="pi">:</span>
-    <span class="s">secure</span><span class="pi">:</span> <span class="s">YOUR_ENCRYPTED_INFO</span>
-</code></pre>
-</div>
+<span class="na">script</span><span class="pi">:</span> <span class="s">bundle exec rake site:deploy --quiet</span>
+<span class="na">env</span><span class="pi">:</span>
+  <span class="na">global</span><span class="pi">:</span>
+    <span class="na">secure</span><span class="pi">:</span> <span class="s">YOUR_ENCRYPTED_INFO</span>
+</code></pre></div></div>
 
 <p>Replace the <code class="highlighter-rouge">YOUR_ENCRYPTED_INFO</code> with the output of the following command:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>travis encrypt <span class="s1">'GIT_NAME="Your Username" GIT_EMAIL="your@email.com" GH_TOKEN=GITHUB_PERSONAL_TOKEN_YOU_CREATED'</span>
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>travis encrypt <span class="s1">'GIT_NAME="Your Username" GIT_EMAIL="your@email.com" GH_TOKEN=GITHUB_PERSONAL_TOKEN_YOU_CREATED'</span>
+</code></pre></div></div>
 
 <ul>
   <li>
@@ -196,16 +193,15 @@ Add following data to it.</li>
   </li>
 </ul>
 
-<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="c1"># GitHub</span>
-<span class="s">username</span><span class="pi">:</span>             <span class="s">Stanko</span>
-<span class="s">repo</span><span class="pi">:</span>                 <span class="s">Stanko.github.io</span>
-<span class="s">branch</span><span class="pi">:</span>               <span class="s">source</span>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># GitHub</span>
+<span class="na">username</span><span class="pi">:</span>             <span class="s">Stanko</span>
+<span class="na">repo</span><span class="pi">:</span>                 <span class="s">Stanko.github.io</span>
+<span class="na">branch</span><span class="pi">:</span>               <span class="s">source</span>
 
 <span class="c1"># Jekyll source / destination</span>
-<span class="s">source</span><span class="pi">:</span>               <span class="s">.</span>
-<span class="s">destination</span><span class="pi">:</span>          <span class="s">_site</span>
-</code></pre>
-</div>
+<span class="na">source</span><span class="pi">:</span>               <span class="s">.</span>
+<span class="na">destination</span><span class="pi">:</span>          <span class="s">_site</span>
+</code></pre></div></div>
 
 <ul>
   <li>Add the contents of <code class="highlighter-rouge">Rakefile</code> to your Jekyll Rakefile (or replace it).
@@ -281,6 +277,13 @@ It depends of the software Travis installs on every build.</p>
 
             
               <div class="RelatedPosts-post">
+                <a href="/trillion-ideas/">
+                  <small>17 Sep 2017</small>
+                  Trillion ideas
+                </a>
+              </div>
+            
+              <div class="RelatedPosts-post">
                 <a href="/react-image-filter-component/">
                   <small>02 Sep 2017</small>
                   React Image Filter
@@ -291,13 +294,6 @@ It depends of the software Travis installs on every build.</p>
                 <a href="/nvm-updating-npm/">
                   <small>02 Sep 2017</small>
                   How to update npm using nvm
-                </a>
-              </div>
-            
-              <div class="RelatedPosts-post">
-                <a href="/localstorage-and-sessionstorage-in-safaris-private-mode/">
-                  <small>09 Aug 2017</small>
-                  localStorage and sessionStorage in Safari's private mode
                 </a>
               </div>
             
@@ -576,6 +572,9 @@ It depends of the software Travis installs on every build.</p>
     <script>
   var posts = [
      {
+        url: '/trillion-ideas/',
+        title: 'Trillion ideas'
+    },  {
         url: '/react-image-filter-component/',
         title: 'React Image Filter'
     },  {

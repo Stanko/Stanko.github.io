@@ -122,7 +122,7 @@ For this one we’ll create a mixin.</p>
 
 <!--more-->
 
-<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="o">//</span> <span class="nt">Converts</span> <span class="nt">pt</span> <span class="nt">to</span> <span class="nt">px</span>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">//</span> <span class="nt">Converts</span> <span class="nt">pt</span> <span class="nt">to</span> <span class="nt">px</span>
 <span class="k">@function</span> <span class="n">pt-to-px</span><span class="p">(</span><span class="err">$</span><span class="n">size-in-points</span><span class="p">){</span>
     <span class="k">@return</span> <span class="err">#</span><span class="p">{</span> <span class="nt">round</span><span class="o">(</span><span class="err">$</span><span class="nt">size-in-points</span> <span class="o">*</span> <span class="nt">1</span><span class="nc">.333333</span><span class="o">)</span> <span class="p">}</span><span class="nt">px</span><span class="o">;</span>
 <span class="p">}</span>
@@ -138,18 +138,16 @@ For this one we’ll create a mixin.</p>
     <span class="nl">font-size</span><span class="p">:</span> <span class="n">pt-to-px</span><span class="p">(</span><span class="m">20</span><span class="p">);</span>
     <span class="nl">line-height</span><span class="p">:</span> <span class="n">pt-to-px</span><span class="p">(</span><span class="m">30</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>This will generate following CSS:</p>
 
-<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.Component</span> <span class="p">{</span>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.Component</span> <span class="p">{</span>
     <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">-.005em</span><span class="p">;</span>
     <span class="nl">font-size</span><span class="p">:</span> <span class="m">15px</span><span class="p">;</span>
     <span class="nl">line-height</span><span class="p">:</span> <span class="m">23px</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Note that function and mixin can do pretty much the same job.
 But it makes more sense to use mixins when including complete styles,
@@ -220,6 +218,13 @@ so keep it in a mixin.</p>
 
             
               <div class="RelatedPosts-post">
+                <a href="/trillion-ideas/">
+                  <small>17 Sep 2017</small>
+                  Trillion ideas
+                </a>
+              </div>
+            
+              <div class="RelatedPosts-post">
                 <a href="/react-image-filter-component/">
                   <small>02 Sep 2017</small>
                   React Image Filter
@@ -230,13 +235,6 @@ so keep it in a mixin.</p>
                 <a href="/nvm-updating-npm/">
                   <small>02 Sep 2017</small>
                   How to update npm using nvm
-                </a>
-              </div>
-            
-              <div class="RelatedPosts-post">
-                <a href="/localstorage-and-sessionstorage-in-safaris-private-mode/">
-                  <small>09 Aug 2017</small>
-                  localStorage and sessionStorage in Safari's private mode
                 </a>
               </div>
             
@@ -515,6 +513,9 @@ so keep it in a mixin.</p>
     <script>
   var posts = [
      {
+        url: '/trillion-ideas/',
+        title: 'Trillion ideas'
+    },  {
         url: '/react-image-filter-component/',
         title: 'React Image Filter'
     },  {

@@ -132,17 +132,16 @@ This was working decently, but I wanted to run only one command, and let the tas
 
 <p>That is where node child process comes in.</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span class="nx">childProcess</span> <span class="nx">from</span> <span class="s1">'child_process'</span><span class="p">;</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">childProcess</span> <span class="k">from</span> <span class="s1">'child_process'</span><span class="p">;</span>
 
-<span class="kr">const</span> <span class="nx">spawn</span> <span class="o">=</span> <span class="nx">childProcess</span><span class="p">.</span><span class="nx">spawn</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">spawn</span> <span class="o">=</span> <span class="nx">childProcess</span><span class="p">.</span><span class="nx">spawn</span><span class="p">;</span>
 
 <span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'jekyll'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(){</span>
-  <span class="kr">const</span> <span class="nx">jekyll</span> <span class="o">=</span> <span class="nx">spawn</span><span class="p">(</span><span class="s1">'jekyll'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'serve'</span><span class="p">],</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">jekyll</span> <span class="o">=</span> <span class="nx">spawn</span><span class="p">(</span><span class="s1">'jekyll'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'serve'</span><span class="p">],</span> <span class="p">{</span>
     <span class="na">stdio</span><span class="p">:</span> <span class="s1">'inherit'</span>
   <span class="p">});</span>
 <span class="p">});</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>This task * spawns a child process from gulp.
 Nice thing is that we can start it, and gulp will kill it on exit.
@@ -253,6 +252,13 @@ Then write your posts and enjoy much smoother workflow.</p>
 
             
               <div class="RelatedPosts-post">
+                <a href="/trillion-ideas/">
+                  <small>17 Sep 2017</small>
+                  Trillion ideas
+                </a>
+              </div>
+            
+              <div class="RelatedPosts-post">
                 <a href="/react-image-filter-component/">
                   <small>02 Sep 2017</small>
                   React Image Filter
@@ -263,13 +269,6 @@ Then write your posts and enjoy much smoother workflow.</p>
                 <a href="/nvm-updating-npm/">
                   <small>02 Sep 2017</small>
                   How to update npm using nvm
-                </a>
-              </div>
-            
-              <div class="RelatedPosts-post">
-                <a href="/localstorage-and-sessionstorage-in-safaris-private-mode/">
-                  <small>09 Aug 2017</small>
-                  localStorage and sessionStorage in Safari's private mode
                 </a>
               </div>
             
@@ -548,6 +547,9 @@ Then write your posts and enjoy much smoother workflow.</p>
     <script>
   var posts = [
      {
+        url: '/trillion-ideas/',
+        title: 'Trillion ideas'
+    },  {
         url: '/react-image-filter-component/',
         title: 'React Image Filter'
     },  {

@@ -124,9 +124,8 @@
 <p>We will use SASS loader for webpack, so let’s install it together with node-sass compiler,
  css and style loaders</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>npm install --save-dev style-loader css-loader sass-loader node-sass
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install --save-dev style-loader css-loader sass-loader node-sass
+</code></pre></div></div>
 
 <p>Create <code class="highlighter-rouge">scss</code> folder in the <code class="highlighter-rouge">app</code> folder, and main <code class="highlighter-rouge">app.scss</code> file in it.
 This file will include all of the other scss files.</p>
@@ -135,22 +134,20 @@ This file will include all of the other scss files.</p>
 
 <!--more-->
 
-<div class="highlighter-rouge"><pre class="highlight"><code>...
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
 {
   test: /\.scss$/,
   loader: 'style!css!sass'
 }
 ...
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>This will handle importing SCSS files in our JavaScript code.
 So we need to import <code class="highlighter-rouge">app.scss</code> manually in the JavaScript code.
 You’ll need to add only one line to your <code class="highlighter-rouge">app.js</code>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>import '../scss/app.scss';
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import '../scss/app.scss';
+</code></pre></div></div>
 
 <p>This includes your styles by calling loaders we defined in the webpack config.</p>
 
@@ -162,7 +159,7 @@ Try changing your styles to check it.</p>
 <p>To enable source maps, we’ll pass the <code class="highlighter-rouge">sourceMap</code> option to the sass and the css loaders.
 Enable devtool, and update the loader</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>...
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
   devtool: 'inline-source-map', // or 'source-map'
 
   module: {
@@ -175,8 +172,7 @@ Enable devtool, and update the loader</p>
     ]
   }
 ...
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>If you want to read more, here’s link to the
 <a href="https://github.com/jtangelder/sass-loader">official documentation</a></p>
@@ -187,20 +183,18 @@ Enable devtool, and update the loader</p>
 
 <p>We’ll need postcss loader, precss and autoprefixer</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>npm install --save-dev postcss-loader precss autoprefixer
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install --save-dev postcss-loader precss autoprefixer
+</code></pre></div></div>
 
 <p>At the top of our webpack config, require precss and autoprefixer</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>const precss = require('precss');
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const precss = require('precss');
 const autoprefixer = require('autoprefixer');
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Update our sass loader config and and postcss config</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>...
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
   module: {
     loaders: [
       ...
@@ -215,8 +209,7 @@ const autoprefixer = require('autoprefixer');
     return [autoprefixer, precss];
   },
 ...
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Restart webpack, and you should have autoprefixing in place.
 Try adding <code class="highlighter-rouge">display: flex</code> to one of the elements to check if autoprefixer added
@@ -258,9 +251,8 @@ a couple of Babel plugins.</p>
 
 <p>Install them using following command</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>npm i --save-dev babel-plugin-syntax-decorators babel-plugin-transform-class-properties babel-plugin-transform-decorators-legacy babel-preset-stage-0
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm i --save-dev babel-plugin-syntax-decorators babel-plugin-transform-class-properties babel-plugin-transform-decorators-legacy babel-preset-stage-0
+</code></pre></div></div>
 
 <p>Few links to read more about this plugins:</p>
 
@@ -279,30 +271,28 @@ Read more on the first link.
 
 <p>Add these to the <code class="highlighter-rouge">"plugins"</code> array</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"syntax-decorators"
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"syntax-decorators"
 "transform-decorators-legacy"
 "transform-class-properties"
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>And <code class="highlighter-rouge">"stage-0"</code> to the <code class="highlighter-rouge">"presets"</code> array</p>
 
 <p>Your <code class="highlighter-rouge">.babelrc</code> should be looking something like this</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"plugins"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="s2">"syntax-decorators"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"transform-decorators-legacy"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"transform-class-properties"</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="nt">"presets"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="s2">"es2015"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"react"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"stage-0"</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "plugins": [
+    "syntax-decorators",
+    "transform-decorators-legacy",
+    "transform-class-properties"
+  ],
+  "presets": [
+    "es2015",
+    "react",
+    "stage-0"
+  ]
+}
+</code></pre></div></div>
 
 
         <div class="Post-shareAndCategories">
@@ -365,6 +355,13 @@ Read more on the first link.
 
             
               <div class="RelatedPosts-post">
+                <a href="/trillion-ideas/">
+                  <small>17 Sep 2017</small>
+                  Trillion ideas
+                </a>
+              </div>
+            
+              <div class="RelatedPosts-post">
                 <a href="/react-image-filter-component/">
                   <small>02 Sep 2017</small>
                   React Image Filter
@@ -375,13 +372,6 @@ Read more on the first link.
                 <a href="/nvm-updating-npm/">
                   <small>02 Sep 2017</small>
                   How to update npm using nvm
-                </a>
-              </div>
-            
-              <div class="RelatedPosts-post">
-                <a href="/localstorage-and-sessionstorage-in-safaris-private-mode/">
-                  <small>09 Aug 2017</small>
-                  localStorage and sessionStorage in Safari's private mode
                 </a>
               </div>
             
@@ -703,6 +693,9 @@ Yeah, javascript development sure can be a bumpy road. I'm really glad it helped
     <script>
   var posts = [
      {
+        url: '/trillion-ideas/',
+        title: 'Trillion ideas'
+    },  {
         url: '/react-image-filter-component/',
         title: 'React Image Filter'
     },  {

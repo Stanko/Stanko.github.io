@@ -146,16 +146,14 @@ or create an empty folder. Navigate to it in the terminal.</p>
 
 <p>Initialize npm (<code class="highlighter-rouge">package.json</code>) by running</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>npm init
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm init
+</code></pre></div></div>
 
 <p>Now we can start adding npm packages.
 Install babel core and it’s loader for webpack.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>npm install --save-dev webpack webpack-dev-server
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install --save-dev webpack webpack-dev-server
+</code></pre></div></div>
 
 <p>Tip: you can use <code class="highlighter-rouge">npm i</code> instead of <code class="highlighter-rouge">npm install</code>.</p>
 
@@ -166,7 +164,7 @@ This will be the entry point for webpack.</p>
 
 <p>Tip: you can create files by using touch command - <code class="highlighter-rouge">touch FILENAME</code></p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
   <span class="na">context</span><span class="p">:</span> <span class="nx">__dirname</span> <span class="o">+</span> <span class="s2">"/app"</span><span class="p">,</span>
 
   <span class="na">entry</span><span class="p">:</span> <span class="s2">"./js/app.js"</span><span class="p">,</span>
@@ -176,8 +174,7 @@ This will be the entry point for webpack.</p>
     <span class="na">path</span><span class="p">:</span> <span class="nx">__dirname</span> <span class="o">+</span> <span class="s2">"/dist"</span><span class="p">,</span>
   <span class="p">}</span>
 <span class="p">};</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>It is important to understand what is going on so far.
 This tells webpack that our main application file (<code class="highlighter-rouge">app.js</code>) is the entry point,
@@ -187,9 +184,8 @@ and bundled application should be outputted to the <code class="highlighter-roug
 
 <p>Now we can run</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>node ./node_modules/webpack/bin/webpack.js
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>node ./node_modules/webpack/bin/webpack.js
+</code></pre></div></div>
 
 <p>It will generate <code class="highlighter-rouge">dist/app.js</code>.
 (Tip: to be able to run <code class="highlighter-rouge">webpack</code> globally, you’ll need to install it using <code class="highlighter-rouge">npm i --global webpack</code>. Then you can run it by using only <code class="highlighter-rouge">webpack</code>.)</p>
@@ -200,24 +196,22 @@ and bundled application should be outputted to the <code class="highlighter-roug
 
 <p>Install babel core and it’s loader for webpack and presets for ES6 (aka ES2015) and React</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>npm i --save-dev babel-loader babel-core babel-preset-es2015 babel-preset-react
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm i --save-dev babel-loader babel-core babel-preset-es2015 babel-preset-react
+</code></pre></div></div>
 
 <p>Create <code class="highlighter-rouge">.babelrc</code> in the project root folder and add presets</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"presets"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="s2">"es2015"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"react"</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "presets": [
+    "es2015",
+    "react"
+  ]
+}
+</code></pre></div></div>
 
 <p>Add js/jsx loader to your webpack config, as well as extensions we want to resolve (More about this later).</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>...
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
   resolve: {
     extensions: ['', '.js', '.jsx', '.json']
   },
@@ -231,8 +225,7 @@ and bundled application should be outputted to the <code class="highlighter-roug
     ]
   }
 ...
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Webpack accepts the array of the loaders. Loader has a test for the filenames,
 in our case it matches all of the <code class="highlighter-rouge">.js</code> and <code class="highlighter-rouge">.jsx</code> files.
@@ -246,14 +239,13 @@ fancy ES6 to ES5 which can be understood by browsers
 
 <p>Install react and react DOM</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>npm i react react-dom --save
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm i react react-dom --save
+</code></pre></div></div>
 
 <p>Your <code class="highlighter-rouge">app.js</code> should look something like this. For this example we are just rendering main menu.
 Later we’ll replace that with react router component.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>import React from 'react';
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import React from 'react';
 import ReactDOM from 'react-dom';
 import Menu from './components/Global/Menu.jsx';
 
@@ -261,12 +253,11 @@ ReactDOM.render(
   &lt;Menu /&gt;,
   document.getElementById('app')
 );
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Now we can start adding react components. Create <code class="highlighter-rouge">app/js/components/Global/Menu.jsx</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>import React, { Component } from 'react';
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import React, { Component } from 'react';
 
 export default class Menu extends Component {
   render() {
@@ -277,14 +268,13 @@ export default class Menu extends Component {
     );
   }
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="index-page">Index Page</h2>
 
 <p>Create index page in the <code class="highlighter-rouge">app</code> folder.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html&gt;</span>
 <span class="nt">&lt;head&gt;</span>
   <span class="nt">&lt;title&gt;</span>Your app name<span class="nt">&lt;/title&gt;</span>
@@ -295,36 +285,32 @@ export default class Menu extends Component {
   <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"app.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>We’ll need file loader for it</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>npm install file-loader --save-dev
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install file-loader --save-dev
+</code></pre></div></div>
 
 <p>Update webpack config to add entry</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>...
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
   entry: {
     javascript: "./js/app.js",
     html: "./index.html",
   }
 ...
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>and add loader</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>...
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
   {
     test: /\.html$/,
     loader: "file?name=[name].[ext]",
   }
 ...
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Now when we run webpack again, we’ll get <code class="highlighter-rouge">index.html</code> and <code class="highlighter-rouge">app.js</code> in dist folder.</p>
 
@@ -332,10 +318,9 @@ export default class Menu extends Component {
 
 <p>Install webpack development server, and run it</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>npm install --save-dev webpack webpack-dev-server
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install --save-dev webpack webpack-dev-server
 node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>(Tip: Same as with webpack, you can install it globally <code class="highlighter-rouge">npm i --global webpack-dev-server</code> and run it using <code class="highlighter-rouge">webpack-dev-server</code>.)</p>
 
@@ -345,29 +330,26 @@ Still we need to manually refresh the browser.</p>
 
 <p>So let’s add hot reloading.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>npm install react-hot-loader --save-dev
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install react-hot-loader --save-dev
+</code></pre></div></div>
 
 <p>Update webpack js/jsx loader to use hot reloading</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>...
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
   {
     test: /\.jsx?$/,
     exclude: /node_modules/,
     loaders: ["react-hot", "babel-loader"],
   }
 ...
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Now we need to add two more options when running dev server <code class="highlighter-rouge">--hot</code> and <code class="highlighter-rouge">--inline</code>.
 We will also add <code class="highlighter-rouge">--history-api-fallback</code> which will be useful when we add react router.
 This option tells server to fallback to <code class="highlighter-rouge">index.html</code> which will handle routing (as we are building single page app).</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline
+</code></pre></div></div>
 
 <p>Not only the hot reload watches the changes and updates the browser, but it injects the code and keeps the application state.
 Note that not all modules can be replaced.
@@ -375,13 +357,12 @@ The code in <code class="highlighter-rouge">app/js/app.js</code> cannot be reloa
 
 <p>To make things easier, we’ll add our script to the <code class="highlighter-rouge">package.json</code> file.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>...
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
   "scripts": {
     "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline --history-api-fallback"
   }
 ...
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Now we can run only <code class="highlighter-rouge">npm run dev</code></p>
 
@@ -395,9 +376,8 @@ You will catch errors earlier, and enforce your (the best) standards.</p>
 
 <p><a href="https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb">https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb</a></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>npm install --save-dev eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y eslint
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install --save-dev eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y eslint
+</code></pre></div></div>
 
 <p>Now we need to create <code class="highlighter-rouge">.eslintrc</code> that only needs extends param,
 but if you want to customize it, add your rules to the <code class="highlighter-rouge">rules</code> object.
@@ -406,24 +386,22 @@ Personally I like single quotes more, and spaces in the react curly synthax.</p>
 <p>You might have to restart your editor for changes to take effect.
 For beginners I would recommend <a href="https://atom.io/">Atom</a> editor.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"extends"</span><span class="p">:</span><span class="w"> </span><span class="s2">"airbnb"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"jsx-quotes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s2">"prefer-single"</span><span class="p">],</span><span class="w">
-    </span><span class="nt">"react/jsx-curly-spacing"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s2">"always"</span><span class="p">],</span><span class="w">
-    </span><span class="nt">"react/prefer-stateless-function"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "extends": "airbnb",
+  "rules": {
+    "jsx-quotes": [2, "prefer-single"],
+    "react/jsx-curly-spacing": [2, "always"],
+    "react/prefer-stateless-function": [0]
+  }
+}
+</code></pre></div></div>
 
 <h2 id="react-router">React Router</h2>
 
 <p>Install it from the NPM</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>npm install --save react-router
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install --save react-router
+</code></pre></div></div>
 
 <p>What we’ll do is pretty much the same thing from the official getting started guide.</p>
 
@@ -431,7 +409,7 @@ For beginners I would recommend <a href="https://atom.io/">Atom</a> editor.</p>
 
 <p>Your <code class="highlighter-rouge">app.js</code> should look like this. You’ll have to create <code class="highlighter-rouge">App</code>, <code class="highlighter-rouge">Home</code> and <code class="highlighter-rouge">About</code> views.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>import React from 'react';
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './views/App';
@@ -449,14 +427,13 @@ ReactDOM.render(
   &lt;/Router&gt;,
   document.getElementById('app')
 );
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>And your <code class="highlighter-rouge">views/App/index.jsx</code> should like this. It is just a simple wrapper around your views.
 It has simple menu so we can test routing. <code class="highlighter-rouge">chilren</code> prop is every child component that is passed to it.
 In our case, children will be route that is matched in our <code class="highlighter-rouge">app.js</code>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>import React, { Component } from 'react';
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import React, { Component } from 'react';
 import { Link } from 'react-router';
 
 export default class App extends Component {
@@ -473,8 +450,7 @@ export default class App extends Component {
     );
   }
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="redux">Redux</h2>
 
@@ -484,9 +460,8 @@ export default class App extends Component {
 
 <p>Install redux</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>npm i redux react-redux --save
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm i redux react-redux --save
+</code></pre></div></div>
 
 <p>To learn what redux is, the best place to start are lessons taught by the redux’s creator himself, Dan Abramov.</p>
 
@@ -508,7 +483,7 @@ Check it yourself, and add it if you thing these are useful to you.</p>
 (Example: <code class="highlighter-rouge">components/views/App</code> instead of <code class="highlighter-rouge">../../views/App</code>.)
 In your webpack config, under resolve add <code class="highlighter-rouge">root</code> param. Note that you have add <code class="highlighter-rouge">path</code> at the top of the file.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>const path = require('path');
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const path = require('path');
 
 ...
 resolve: {
@@ -516,25 +491,22 @@ resolve: {
   root: path.resolve(__dirname, './app/js'),
 },
 ...
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Using this will probably still give you linting errors in the editor, so we need to add
 Install eslint import resolver package</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>npm install --save-dev eslint-import-resolver-webpack
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install --save-dev eslint-import-resolver-webpack
+</code></pre></div></div>
 
 <p>And add settings to your <code class="highlighter-rouge">.eslintrc</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>...
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
 settings: {
   "import/resolver": "webpack"
 }
 ...
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="update">Update</h2>
 
@@ -545,7 +517,7 @@ You can find it on <a href="https://github.com/Stanko/react-tutorial">GitHub</a>
 
 <h4 id="webpackconfigjs">webpack.config.js</h4>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'path'</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'path'</span><span class="p">);</span>
 
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
   <span class="na">context</span><span class="p">:</span> <span class="nx">__dirname</span> <span class="o">+</span> <span class="s2">"/app"</span><span class="p">,</span>
@@ -579,40 +551,38 @@ You can find it on <a href="https://github.com/Stanko/react-tutorial">GitHub</a>
     <span class="p">],</span>
   <span class="p">},</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h4 id="packagejson">package.json</h4>
 
 <p>This is minimal version of the file. Yours will probably have more stuff like <code class="highlighter-rouge">author</code>, <code class="highlighter-rouge">license</code>…</p>
 
-<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"dev"</span><span class="p">:</span><span class="w"> </span><span class="s2">"node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline --history-api-fallback"</span><span class="w">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"dev"</span><span class="p">:</span><span class="w"> </span><span class="s2">"node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline --history-api-fallback"</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"babel-core"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^6.21.0"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"babel-loader"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^6.2.10"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"babel-preset-es2015"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^6.18.0"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"babel-preset-react"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^6.16.0"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"eslint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^3.13.1"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"eslint-config-airbnb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^14.0.0"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"eslint-plugin-import"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^2.2.0"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"eslint-plugin-jsx-a11y"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^3.0.2"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"eslint-plugin-react"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^6.9.0"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"file-loader"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^0.9.0"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"react-hot-loader"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.3.1"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"react-router"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^3.0.2"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"webpack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.14.0"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"webpack-dev-server"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.16.2"</span><span class="w">
+  </span><span class="s2">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"babel-core"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^6.21.0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"babel-loader"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^6.2.10"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"babel-preset-es2015"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^6.18.0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"babel-preset-react"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^6.16.0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"eslint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^3.13.1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"eslint-config-airbnb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^14.0.0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"eslint-plugin-import"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^2.2.0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"eslint-plugin-jsx-a11y"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^3.0.2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"eslint-plugin-react"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^6.9.0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"file-loader"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^0.9.0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"react-hot-loader"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.3.1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"react-router"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^3.0.2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"webpack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.14.0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"webpack-dev-server"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.16.2"</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"react"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^15.4.2"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"react-dom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^15.4.2"</span><span class="w">
+  </span><span class="s2">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"react"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^15.4.2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"react-dom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^15.4.2"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
+</span></code></pre></div></div>
 
 
         <div class="Post-shareAndCategories">
@@ -675,6 +645,13 @@ You can find it on <a href="https://github.com/Stanko/react-tutorial">GitHub</a>
 
             
               <div class="RelatedPosts-post">
+                <a href="/trillion-ideas/">
+                  <small>17 Sep 2017</small>
+                  Trillion ideas
+                </a>
+              </div>
+            
+              <div class="RelatedPosts-post">
                 <a href="/react-image-filter-component/">
                   <small>02 Sep 2017</small>
                   React Image Filter
@@ -685,13 +662,6 @@ You can find it on <a href="https://github.com/Stanko/react-tutorial">GitHub</a>
                 <a href="/nvm-updating-npm/">
                   <small>02 Sep 2017</small>
                   How to update npm using nvm
-                </a>
-              </div>
-            
-              <div class="RelatedPosts-post">
-                <a href="/localstorage-and-sessionstorage-in-safaris-private-mode/">
-                  <small>09 Aug 2017</small>
-                  localStorage and sessionStorage in Safari's private mode
                 </a>
               </div>
             
@@ -1494,6 +1464,9 @@ Glad it helped, cheers!</p>
     <script>
   var posts = [
      {
+        url: '/trillion-ideas/',
+        title: 'Trillion ideas'
+    },  {
         url: '/react-image-filter-component/',
         title: 'React Image Filter'
     },  {

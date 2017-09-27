@@ -118,11 +118,10 @@ Setting state in <code class="highlighter-rouge">componentDidMount</code> is con
 <p>The problem I just described is not React exclusive, but browser related.
 Same will happen if we try something like this:</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'.AnimateMe'</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'.AnimateMe'</span><span class="p">);</span>
 <span class="nx">element</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="s1">'50px'</span><span class="p">;</span>
 <span class="nx">element</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="s1">'250px'</span><span class="p">;</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>So let’s start with example of the problem.</p>
 
@@ -138,11 +137,11 @@ and element height should be 250px. As we added transition, it should animate.</
 <p>But it doesn’t as all of this happens really fast, and browser decides to merge changes
 and render only the end result. This way our element immediately gets height of 250px.</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'react'</span><span class="p">;</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'react'</span><span class="p">;</span>
 
-<span class="kr">export</span> <span class="k">default</span> <span class="kr">class</span> <span class="nx">AnimateMe</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
-  <span class="nx">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kr">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
+<span class="k">export</span> <span class="k">default</span> <span class="kd">class</span> <span class="nx">AnimateMe</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
 
     <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
       <span class="na">animate</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
@@ -170,8 +169,7 @@ and render only the end result. This way our element immediately gets height of 
 </span>    <span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <iframe height="400px" scrolling="no" src="//codepen.io/stanko/embed/preview/XgaNyq/?height=400&amp;theme-id=light&amp;default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
 See the Pen <a href="http://codepen.io/stanko/pen/XgaNyq/">Rerender React component in componentDidMount - Step 1</a> by Stanko (<a href="http://codepen.io/stanko">@stanko</a>) on <a href="http://codepen.io">CodePen</a>.
@@ -184,18 +182,17 @@ See the Pen <a href="http://codepen.io/stanko/pen/XgaNyq/">Rerender React compon
 <p>Now I get the reason why it works. Because 50ms is larger than animation frame (which is around 16ms to achieve 60fps).</p>
 
 <p><small>(I’ll show you just the part of the code that is changed)</small></p>
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="p">...</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
   <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// Added timeout</span>
-    <span class="kr">const</span> <span class="nx">ANIMATION_TIMEOUT</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+    <span class="kd">const</span> <span class="nx">ANIMATION_TIMEOUT</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
 
     <span class="k">this</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
       <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span> <span class="na">animate</span><span class="p">:</span> <span class="kc">true</span> <span class="p">});</span>
     <span class="p">},</span> <span class="nx">ANIMATION_TIMEOUT</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">...</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <iframe height="400px" scrolling="no" src="//codepen.io/stanko/embed/preview/WOERrE/?height=400&amp;theme-id=light&amp;default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
 See the Pen <a href="http://codepen.io/stanko/pen/WOERrE/">Rerender React component in componentDidMount - Step 2</a> by Stanko (<a href="http://codepen.io/stanko">@stanko</a>) on <a href="http://codepen.io">CodePen</a>.
@@ -210,7 +207,7 @@ But not in Firefox :( to make things worse, sometimes it does, and sometimes doe
 My guess that sometimes it gets squeezed in to the same animation frame.</p>
 
 <p><small>(Again just the part of the code that is changed)</small></p>
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="p">...</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
   <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// Added requestAnimationFrame</span>
     <span class="nx">requestAnimationFrame</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -218,8 +215,7 @@ My guess that sometimes it gets squeezed in to the same animation frame.</p>
     <span class="p">});</span>
   <span class="p">}</span>
 <span class="p">...</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <iframe height="400px" scrolling="no" src="//codepen.io/stanko/embed/preview/JJyEoz/?height=400&amp;theme-id=light&amp;default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
 See the Pen <a href="http://codepen.io/stanko/pen/JJyEoz/">Rerender React component in componentDidMount - Step 3</a> by Stanko (<a href="http://codepen.io/stanko">@stanko</a>) on <a href="http://codepen.io">CodePen</a>.
@@ -240,7 +236,7 @@ Problem we had in Firefox is now gone.</p>
 value for timeout, just use native methods that browsers provide.</p>
 
 <p><small>(Again just the part of the code that is changed)</small></p>
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="p">...</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
   <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// Added two nested requestAnimationFrames</span>
     <span class="nx">requestAnimationFrame</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -251,8 +247,7 @@ value for timeout, just use native methods that browsers provide.</p>
     <span class="p">});</span>
   <span class="p">}</span>
 <span class="p">...</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <iframe height="400px" scrolling="no" src="//codepen.io/stanko/embed/preview/JJyEXq/?height=400&amp;theme-id=light&amp;default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
 See the Pen <a href="http://codepen.io/stanko/pen/JJyEXq/">Rerender React component in componentDidMount - Step 4</a> by Stanko (<a href="http://codepen.io/stanko">@stanko</a>) on <a href="http://codepen.io">CodePen</a>.
@@ -265,7 +260,7 @@ This can be used in our React examples but also with any other framework or vani
 
 <p>If you support browsers without <code class="highlighter-rouge">requestAnimationFrame</code> be sure to polyfill it. Paul Irish has a great one  <a href="https://www.paulirish.com/2011/requestanimationframe-for-smart-animating/">here</a>.</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// Start animation helper using nested requestAnimationFrames</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Start animation helper using nested requestAnimationFrames</span>
 <span class="kd">function</span> <span class="nx">startAnimation</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">requestAnimationFrame</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">requestAnimationFrame</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -273,11 +268,10 @@ This can be used in our React examples but also with any other framework or vani
     <span class="p">});</span>
   <span class="p">});</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><small>(Our <code class="highlighter-rouge">componentDidMount</code> code using helper)</small></p>
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="p">...</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
   <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// You'll need to import startAnimation at the top of the file</span>
     <span class="nx">startAnimation</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -285,8 +279,7 @@ This can be used in our React examples but also with any other framework or vani
     <span class="p">});</span>
   <span class="p">}</span>
 <span class="p">...</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="at-the-end">At the end</h2>
 
@@ -353,6 +346,13 @@ This can be used in our React examples but also with any other framework or vani
 
             
               <div class="RelatedPosts-post">
+                <a href="/trillion-ideas/">
+                  <small>17 Sep 2017</small>
+                  Trillion ideas
+                </a>
+              </div>
+            
+              <div class="RelatedPosts-post">
                 <a href="/react-image-filter-component/">
                   <small>02 Sep 2017</small>
                   React Image Filter
@@ -363,13 +363,6 @@ This can be used in our React examples but also with any other framework or vani
                 <a href="/nvm-updating-npm/">
                   <small>02 Sep 2017</small>
                   How to update npm using nvm
-                </a>
-              </div>
-            
-              <div class="RelatedPosts-post">
-                <a href="/localstorage-and-sessionstorage-in-safaris-private-mode/">
-                  <small>09 Aug 2017</small>
-                  localStorage and sessionStorage in Safari's private mode
                 </a>
               </div>
             
@@ -717,6 +710,9 @@ Cheers!</p>
     <script>
   var posts = [
      {
+        url: '/trillion-ideas/',
+        title: 'Trillion ideas'
+    },  {
         url: '/react-image-filter-component/',
         title: 'React Image Filter'
     },  {

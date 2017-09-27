@@ -109,9 +109,8 @@
 
         <p>Just a short one. I want to share a simple command to display nicer <code class="highlighter-rouge">git log</code> in the terminal. <code class="highlighter-rouge">git log</code> has <code class="highlighter-rouge">--pretty=format</code> option built-in, we are just going to pass formatting to it.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset'
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset'
+</code></pre></div></div>
 
 <p>And it looks like this:</p>
 
@@ -119,9 +118,8 @@
 
 <p>Then add it to your <code class="highlighter-rouge">.bash_profile</code> as an alias (I’m using <code class="highlighter-rouge">glog</code>) and that’s it.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset'"
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset'"
+</code></pre></div></div>
 
 
         <div class="Post-shareAndCategories">
@@ -184,6 +182,13 @@
 
             
               <div class="RelatedPosts-post">
+                <a href="/trillion-ideas/">
+                  <small>17 Sep 2017</small>
+                  Trillion ideas
+                </a>
+              </div>
+            
+              <div class="RelatedPosts-post">
                 <a href="/react-image-filter-component/">
                   <small>02 Sep 2017</small>
                   React Image Filter
@@ -194,13 +199,6 @@
                 <a href="/nvm-updating-npm/">
                   <small>02 Sep 2017</small>
                   How to update npm using nvm
-                </a>
-              </div>
-            
-              <div class="RelatedPosts-post">
-                <a href="/localstorage-and-sessionstorage-in-safaris-private-mode/">
-                  <small>09 Aug 2017</small>
-                  localStorage and sessionStorage in Safari's private mode
                 </a>
               </div>
             
@@ -479,6 +477,9 @@
     <script>
   var posts = [
      {
+        url: '/trillion-ideas/',
+        title: 'Trillion ideas'
+    },  {
         url: '/react-image-filter-component/',
         title: 'React Image Filter'
     },  {

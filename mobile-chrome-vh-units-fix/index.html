@@ -127,9 +127,8 @@ and page jump. On Android, keyboard toggle will do the same.</p>
 <p>On load, it will get the element and set them fixed height in pixels,
 using this formula:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>window height / 100 * given vh value
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>window height / 100 * given vh value
+</code></pre></div></div>
 
 <p>Library listens for the window <code class="highlighter-rouge">resize</code> event, and only if both dimensions are changed
 (which on mobile means orientation has changed*)
@@ -145,7 +144,7 @@ it will recalculate and apply fixed height based on new window height.</p>
 Every object should have CSS selector and height in <code class="highlighter-rouge">vh</code> units.
 All elements that match given selector will be fixed.</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">[</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">[</span>
   <span class="p">{</span>
     <span class="na">selector</span><span class="p">:</span> <span class="s1">'.Bears'</span><span class="p">,</span> <span class="c1">// Mandatory, CSS selector</span>
     <span class="na">vh</span><span class="p">:</span> <span class="mi">150</span><span class="p">,</span>  <span class="c1">// Mandatory, height in vh units</span>
@@ -161,8 +160,7 @@ All elements that match given selector will be fixed.</p>
 <span class="p">];</span>
 
 <span class="kd">var</span> <span class="nx">vhFix</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">VHChromeFix</span><span class="p">(</span><span class="nx">options</span><span class="p">);</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="react-component-is-wip">React Component is WIP</h2>
 
@@ -232,6 +230,13 @@ but I need to extract it, and pack it up as a separate <code class="highlighter-
 
             
               <div class="RelatedPosts-post">
+                <a href="/trillion-ideas/">
+                  <small>17 Sep 2017</small>
+                  Trillion ideas
+                </a>
+              </div>
+            
+              <div class="RelatedPosts-post">
                 <a href="/react-image-filter-component/">
                   <small>02 Sep 2017</small>
                   React Image Filter
@@ -242,13 +247,6 @@ but I need to extract it, and pack it up as a separate <code class="highlighter-
                 <a href="/nvm-updating-npm/">
                   <small>02 Sep 2017</small>
                   How to update npm using nvm
-                </a>
-              </div>
-            
-              <div class="RelatedPosts-post">
-                <a href="/localstorage-and-sessionstorage-in-safaris-private-mode/">
-                  <small>09 Aug 2017</small>
-                  localStorage and sessionStorage in Safari's private mode
                 </a>
               </div>
             
@@ -658,6 +656,9 @@ Cheers!</p>
     <script>
   var posts = [
      {
+        url: '/trillion-ideas/',
+        title: 'Trillion ideas'
+    },  {
         url: '/react-image-filter-component/',
         title: 'React Image Filter'
     },  {

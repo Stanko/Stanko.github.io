@@ -116,13 +116,12 @@ Here are two solutions I use in these cases.</p>
 
 <p>The easiest way to achieve this is to use <code class="highlighter-rouge">hashHistory</code> instead of <code class="highlighter-rouge">browserHistory</code>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>import { Router hashHistory } from 'react-router';
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { Router hashHistory } from 'react-router';
 
 &lt;Router history={ hashHistory }&gt;
   ...
 &lt;/Router&gt;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>This is the best approach if your subfolder name changes
 (for example, if folder name is a build version).
@@ -146,15 +145,14 @@ First, we need to update our routes to include full absolute path to the subfold
 
 <p>I define my routes something like this:</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">publicPath</span> <span class="o">=</span> <span class="s1">'/path/to/subfolder/'</span><span class="p">;</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">publicPath</span> <span class="o">=</span> <span class="s1">'/path/to/subfolder/'</span><span class="p">;</span>
 
-<span class="kr">export</span> <span class="kr">const</span> <span class="nx">routeCodes</span> <span class="o">=</span> <span class="p">{</span>
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">routeCodes</span> <span class="o">=</span> <span class="p">{</span>
   <span class="na">HOME</span><span class="p">:</span> <span class="nx">publicPath</span><span class="p">,</span>
-  <span class="na">SEARCH</span><span class="p">:</span> <span class="err">`</span><span class="nx">$</span><span class="p">{</span> <span class="nx">publicPath</span> <span class="p">}</span><span class="nx">search</span><span class="err">`</span><span class="p">,</span>
-  <span class="na">ABOUT</span><span class="p">:</span> <span class="err">`</span><span class="nx">$</span><span class="p">{</span> <span class="nx">publicPath</span> <span class="p">}</span><span class="nx">about</span><span class="err">`</span><span class="p">,</span>
+  <span class="na">SEARCH</span><span class="p">:</span> <span class="s2">`</span><span class="p">${</span> <span class="nx">publicPath</span> <span class="p">}</span><span class="s2">search`</span><span class="p">,</span>
+  <span class="na">ABOUT</span><span class="p">:</span> <span class="s2">`</span><span class="p">${</span> <span class="nx">publicPath</span> <span class="p">}</span><span class="s2">about`</span><span class="p">,</span>
 <span class="p">};</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Once uplodaded to the server any route but root one will return 404 error.
 For example, in you try to open <code class="highlighter-rouge">http://yourserver.com/path/to/subfolder/about</code>,
@@ -166,15 +164,14 @@ in order to tell the server to fallback to our <code class="highlighter-rouge">i
 This is the same configuration we would use if the application was on the server root,
 just with a different absolute path to our index file.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>RewriteEngine On
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>RewriteEngine On
 RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
 RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
 RewriteRule ^ - [L]
 
 # Fallback all other routes to index.html
 RewriteRule ^ /path/to/subfolder/index.html [L]
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Now our example routes will look like this</p>
 
@@ -191,13 +188,12 @@ make sure you either remove it or update to match your server build path.
 Removing it  is easier, as it will create relative links,
 which should work with your new configuration.</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">output</span><span class="err">:</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">output</span><span class="p">:</span> <span class="p">{</span>
   <span class="nl">publicPath</span><span class="p">:</span> <span class="s1">'/'</span><span class="p">,</span> <span class="c1">// Remove, or update it</span>
-  <span class="nx">path</span><span class="err">:</span> <span class="s1">'./build'</span><span class="p">,</span>
-  <span class="nx">filename</span><span class="err">:</span> <span class="s1">'app-[hash].js'</span><span class="p">,</span>
+  <span class="nx">path</span><span class="p">:</span> <span class="s1">'./build'</span><span class="p">,</span>
+  <span class="nx">filename</span><span class="p">:</span> <span class="s1">'app-[hash].js'</span><span class="p">,</span>
 <span class="p">},</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>I’m also interested if anyone has different/better ideas, cheers!</p>
 
@@ -262,6 +258,13 @@ which should work with your new configuration.</p>
 
             
               <div class="RelatedPosts-post">
+                <a href="/trillion-ideas/">
+                  <small>17 Sep 2017</small>
+                  Trillion ideas
+                </a>
+              </div>
+            
+              <div class="RelatedPosts-post">
                 <a href="/react-image-filter-component/">
                   <small>02 Sep 2017</small>
                   React Image Filter
@@ -272,13 +275,6 @@ which should work with your new configuration.</p>
                 <a href="/nvm-updating-npm/">
                   <small>02 Sep 2017</small>
                   How to update npm using nvm
-                </a>
-              </div>
-            
-              <div class="RelatedPosts-post">
-                <a href="/localstorage-and-sessionstorage-in-safaris-private-mode/">
-                  <small>09 Aug 2017</small>
-                  localStorage and sessionStorage in Safari's private mode
                 </a>
               </div>
             
@@ -557,6 +553,9 @@ which should work with your new configuration.</p>
     <script>
   var posts = [
      {
+        url: '/trillion-ideas/',
+        title: 'Trillion ideas'
+    },  {
         url: '/react-image-filter-component/',
         title: 'React Image Filter'
     },  {
