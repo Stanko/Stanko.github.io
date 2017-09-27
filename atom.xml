@@ -4,7 +4,7 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-09-27T22:25:35+00:00</updated>
+ <updated>2017-09-27T22:27:53+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
@@ -86,7 +86,7 @@ are also easy to setup.&lt;/p&gt;
 They ended up being not really practical at the end, but I learned a tone playing with random things.
 Fun times, but now I would go vanilla.&lt;/p&gt;
 
-&lt;p&gt;I wrote a couple of posts about Jekyll and you find under &lt;a href=&quot;/category/jekyll/&quot;&gt;Jekyll category&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I wrote a couple of posts about Jekyll already and you can find them under &lt;a href=&quot;/category/jekyll/&quot;&gt;Jekyll category&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;live-reload&quot;&gt;Live reload&lt;/h3&gt;
 
