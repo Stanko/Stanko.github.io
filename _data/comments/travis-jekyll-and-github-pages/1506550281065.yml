@@ -5,10 +5,12 @@ email: 13a28fac985c11eb7f40169be7da32f4
 message: >-
   Hello Lars,
 
-  I'll take a look, but can't guarantee anything :) 
+  I'll take a look, but I can't promise anything :) 
 
-  Meanwhile I have a cheese advide - you could clone repo of my blog, and
+  Meanwhile I have a cheese advice - you could clone my blog's repo, and
   replace the posts and theme.
+  
+  Btw how are you doing atm, by building locally and pushing everything to <code>gh-pages</code>?
 
   Cheers!
 date: '2017-09-27T22:11:21.057Z'
