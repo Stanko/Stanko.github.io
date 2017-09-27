@@ -10,7 +10,7 @@ message: >-
   Meanwhile I have a cheesy advice - you could clone my blog's repo, and
   replace the posts and theme.
   
-  Btw how are you doing atm, by building locally and pushing everything to <code>gh-pages</code>?
+  Btw how are you doing it at the moment, are you building it locally and pushing everything to <code>gh-pages</code> by hand?
 
   Cheers!
 date: '2017-09-27T22:11:21.057Z'
