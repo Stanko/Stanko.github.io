@@ -21,11 +21,10 @@ Be sure to check the original readme as well.
 ## Flow
 
 * When you push to your GitHub repo, it triggers Travis
-* Travis starts up a virtual machine and installs all required software (mostly Ruby gems)
-* We use a custom rake task to tell Travis how to build our Jekyll site and push the updated content back to Github
+* Travis starts up a virtual machine and installs all required software (mostly Ruby gems). We use a custom rake task to tell Travis how to build our Jekyll site and push the updated content back to Github
 * Travis clones a source branch (usually `master` or `source`, in my case `source`)
 * Travis runs `jekyll build` on the source branch
-* Travis does a `git push` to the branch holding build static site (usually `gh-pages` or `master`, in my case `master`)
+* Travis does a `git push` to the branch holding static site files (usually `gh-pages` or `master`, in my case `master`)
 * Github Pages starts serving the updated site
 
 ## Steps to make it work
