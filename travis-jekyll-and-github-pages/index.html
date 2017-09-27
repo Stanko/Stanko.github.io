@@ -125,11 +125,10 @@ Be sure to check the original readme as well.</p>
 
 <ul>
   <li>When you push to your GitHub repo, it triggers Travis</li>
-  <li>Travis starts up a virtual machine and installs all required software (mostly Ruby gems)</li>
-  <li>We use a custom rake task to tell Travis how to build our Jekyll site and push the updated content back to Github</li>
+  <li>Travis starts up a virtual machine and installs all required software (mostly Ruby gems). We use a custom rake task to tell Travis how to build our Jekyll site and push the updated content back to Github</li>
   <li>Travis clones a source branch (usually <code class="highlighter-rouge">master</code> or <code class="highlighter-rouge">source</code>, in my case <code class="highlighter-rouge">source</code>)</li>
   <li>Travis runs <code class="highlighter-rouge">jekyll build</code> on the source branch</li>
-  <li>Travis does a <code class="highlighter-rouge">git push</code> to the branch holding build static site (usually <code class="highlighter-rouge">gh-pages</code> or <code class="highlighter-rouge">master</code>, in my case <code class="highlighter-rouge">master</code>)</li>
+  <li>Travis does a <code class="highlighter-rouge">git push</code> to the branch holding static site files (usually <code class="highlighter-rouge">gh-pages</code> or <code class="highlighter-rouge">master</code>, in my case <code class="highlighter-rouge">master</code>)</li>
   <li>Github Pages starts serving the updated site</li>
 </ul>
 

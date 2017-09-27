@@ -4,7 +4,7 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-09-27T22:22:35+00:00</updated>
+ <updated>2017-09-27T22:25:35+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
@@ -1705,11 +1705,10 @@ Be sure to check the original readme as well.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;When you push to your GitHub repo, it triggers Travis&lt;/li&gt;
-  &lt;li&gt;Travis starts up a virtual machine and installs all required software (mostly Ruby gems)&lt;/li&gt;
-  &lt;li&gt;We use a custom rake task to tell Travis how to build our Jekyll site and push the updated content back to Github&lt;/li&gt;
+  &lt;li&gt;Travis starts up a virtual machine and installs all required software (mostly Ruby gems). We use a custom rake task to tell Travis how to build our Jekyll site and push the updated content back to Github&lt;/li&gt;
   &lt;li&gt;Travis clones a source branch (usually &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;source&lt;/code&gt;, in my case &lt;code class=&quot;highlighter-rouge&quot;&gt;source&lt;/code&gt;)&lt;/li&gt;
   &lt;li&gt;Travis runs &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll build&lt;/code&gt; on the source branch&lt;/li&gt;
-  &lt;li&gt;Travis does a &lt;code class=&quot;highlighter-rouge&quot;&gt;git push&lt;/code&gt; to the branch holding build static site (usually &lt;code class=&quot;highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;, in my case &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Travis does a &lt;code class=&quot;highlighter-rouge&quot;&gt;git push&lt;/code&gt; to the branch holding static site files (usually &lt;code class=&quot;highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;, in my case &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;)&lt;/li&gt;
   &lt;li&gt;Github Pages starts serving the updated site&lt;/li&gt;
 &lt;/ul&gt;
 
