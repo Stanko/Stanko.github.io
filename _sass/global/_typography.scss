@@ -127,3 +127,15 @@ iframe {
     margin-top: 0;
   }
 }
+
+blockquote {
+  border-left: 0.4rem solid $greyD;
+  margin: 1.5rem 0;
+  padding: 2rem 2.5rem;
+  background: $grey;
+  color: $grey5;
+
+  p {
+    margin: 0;
+  }
+}
