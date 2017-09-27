@@ -62,7 +62,7 @@ This part is for fun and direct result of my experiments.
 They ended up being not really practical at the end, but I learned a tone playing with random things.
 Fun times, but now I would go vanilla.
 
-I wrote a couple of posts about Jekyll and you find under [Jekyll category](/category/jekyll/).
+I wrote a couple of posts about Jekyll already and you can find them under [Jekyll category](/category/jekyll/).
 
 ### Live reload
 
