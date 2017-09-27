@@ -1,7 +1,7 @@
 ---
 layout: post
 title: My blog setup
-category: [Random]
+category: [Jekyll, Random]
 ---
 
 Few days ago I got a following message on LinkedIn.
