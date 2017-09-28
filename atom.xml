@@ -4,7 +4,7 @@
  <title>Muffin Man's writings</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-09-28T11:55:30+00:00</updated>
+ <updated>2017-09-28T21:34:25+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
@@ -37,56 +37,56 @@
 &lt;h2 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h2&gt;
 
 &lt;p&gt;I’m not using a dynamic CMS but a static site generator called &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;.
-Static site generators take different than usual approach to making websites.&lt;/p&gt;
+Static site generators take different approach to making websites.&lt;/p&gt;
 
-&lt;p&gt;Instead of having a database and pulling data from it and dynamically building your pages,
-static site generators generate all the pages of the website once when there’s actually changes to the site.
-That means there is no moving parts. Just plain HTML files.
-And this approach is more secure, makes caching much easier and boosts performance.&lt;/p&gt;
+&lt;p&gt;Instead of having a database, pulling data from it and dynamically building your pages,
+static site generators generate all the pages only when there are changes to the site.
+No moving parts, just plain HTML files.
+This approach is more secure, makes caching much easier and boosts performance.&lt;/p&gt;
 
 &lt;p&gt;Smashing Magazine has a
 &lt;a href=&quot;https://www.smashingmagazine.com/2015/11/modern-static-website-generators-next-big-thing/&quot;&gt;post&lt;/a&gt;
 on why static sites are awesome.&lt;/p&gt;
 
-&lt;p&gt;Static sites are not limited to blogs, bigger sites are also easy to build once you get a hold of it.
-There are agencies that are doing it for client work.&lt;/p&gt;
+&lt;p&gt;Static sites are not limited to blogs. Bigger websites are also easy to build, once you get a hold of it.
+There are agencies that are even doing it for client work.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
 &lt;p&gt;It comes at the price that once it’s built you need to deploy it somewhere.
-And you don’t have fancy CMS interface, but good ol’ markdown files.&lt;/p&gt;
+And you don’t have fancy CMS interface, only good ol’ markdown files.&lt;/p&gt;
 
-&lt;p&gt;Build and deployment part is easy, just let &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub&lt;/a&gt; pages&lt;sup&gt;1&lt;/sup&gt; do that for you.&lt;/p&gt;
+&lt;p&gt;Build and deployment part is easy, just let &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub pages&lt;/a&gt;&lt;sup&gt;1&lt;/sup&gt; do that for you.&lt;/p&gt;
 
 &lt;p&gt;Handling a git repo with a bunch of markdown files should be fairly straight forward
 for any developer or tech savvy person. If you feel this is a big burden,
 then static site generators might not be for you.&lt;/p&gt;
 
-&lt;p&gt;&lt;small&gt;&lt;sup&gt;1&lt;/sup&gt; There is &lt;a href=&quot;https://www.netlify.com/&quot;&gt;Netlify&lt;/a&gt; as well, which I never used it myself, but I’ve heard good things about it.&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;&lt;sup&gt;1&lt;/sup&gt; There is &lt;a href=&quot;https://www.netlify.com/&quot;&gt;Netlify&lt;/a&gt; as well, which I never used myself, but I’ve heard good things about it.&lt;/small&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;how-to-start-your-own&quot;&gt;How to start your own&lt;/h2&gt;
 
 &lt;p&gt;I keep this blog on GitHub pages (obviously) and I would recommend you to do the same.&lt;/p&gt;
 
-&lt;p&gt;If you want to start from scratch start with &lt;a href=&quot;http://jekyllrb.com/docs/quickstart/&quot;&gt;official quickstart guide&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you want to start from scratch, start with &lt;a href=&quot;http://jekyllrb.com/docs/quickstart/&quot;&gt;official quickstart guide&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Or you can start the same way I did - from the great &lt;a href=&quot;http://lanyon.getpoole.com/&quot;&gt;Lanyon theme&lt;/a&gt;.
-Just fork it’s repository and rename it to &lt;code class=&quot;highlighter-rouge&quot;&gt;[your github username].gitub.io&lt;/code&gt;
-and GitHub will automatically build and publish it on the same URL.
-Build and publish will happen every time you push a change to your blog repository.&lt;/p&gt;
+Just fork it’s repository and rename it to &lt;code class=&quot;highlighter-rouge&quot;&gt;[your github username].gitub.io&lt;/code&gt;.
+GitHub will automatically build and publish it on the same URL.
+Build and publish will happen every time you push a change to your blog’s repository.&lt;/p&gt;
 
 &lt;p&gt;That’s it!&lt;/p&gt;
 
-&lt;p&gt;You have you own blog. &lt;a href=&quot;https://help.github.com/articles/adding-or-removing-a-custom-domain-for-your-github-pages-site/&quot;&gt;Custom domain names&lt;/a&gt;
+&lt;p&gt;Now you have your own blog. &lt;a href=&quot;https://help.github.com/articles/adding-or-removing-a-custom-domain-for-your-github-pages-site/&quot;&gt;Custom domain names&lt;/a&gt;
 are also easy to setup.&lt;/p&gt;
 
 &lt;h2 id=&quot;my-current-setup-aka-complicating-your-life&quot;&gt;My current setup (aka Complicating your life)&lt;/h2&gt;
 
-&lt;p&gt;This part is for fun and direct result of my experiments.
-They ended up being not really practical at the end, but I learned a tone playing with random things.
+&lt;p&gt;This part is for fun only and direct result of my experiments.
+They ended up not so practical, but I learned a tone playing with random things.
 Fun times, but now I would go vanilla.&lt;/p&gt;
 
-&lt;p&gt;I wrote a couple of posts about Jekyll already and you can find them under &lt;a href=&quot;/category/jekyll/&quot;&gt;Jekyll category&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I wrote a couple of posts about using Jekyll already, and you can find them under &lt;a href=&quot;/category/jekyll/&quot;&gt;Jekyll category&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;live-reload&quot;&gt;Live reload&lt;/h3&gt;
 
@@ -95,41 +95,41 @@ You can read about it in &lt;a href=&quot;/jekyll-gulp-workflow/&quot;&gt;this p
 
 &lt;h3 id=&quot;custom-plugins-and-travis-ci&quot;&gt;Custom plugins and Travis CI&lt;/h3&gt;
 
-&lt;p&gt;Then I added a couple of custom plugins. But as a security measure GitHub has a &lt;a href=&quot;https://pages.github.com/versions/&quot;&gt;limited set of Jekyll plugins&lt;/a&gt; you can use.&lt;/p&gt;
+&lt;p&gt;Then I added a couple of custom plugins. But as a security measure, GitHub has a &lt;a href=&quot;https://pages.github.com/versions/&quot;&gt;limited set of Jekyll plugins&lt;/a&gt; you can use.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;GitHub Pages is powered by Jekyll. However, all Pages sites are generated using the –safe option to disable custom plugins for security reasons. Unfortunately, this means your plugins won’t work if you’re deploying to GitHub Pages.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;To be able to use custom plugins I created a bit more complicated setup using Travis CI.
+&lt;p&gt;To be able to use custom plugins, I created a bit more complicated setup using Travis CI.
 Again there is a &lt;a href=&quot;/travis-jekyll-and-github-pages/&quot;&gt;blog post&lt;/a&gt; about that as well.&lt;/p&gt;
 
-&lt;p&gt;What I actually do - Keep my Jekyll files on the &lt;code class=&quot;highlighter-rouge&quot;&gt;source&lt;/code&gt; branch and when I push to it, it triggers a build on Travis, which then pushes it back to the &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; branch. Then GitHub just displays built version.&lt;/p&gt;
+&lt;p&gt;What I actually do? I keep my Jekyll files on the &lt;code class=&quot;highlighter-rouge&quot;&gt;source&lt;/code&gt; branch and when I push to it, that triggers a build on Travis, which then pushes generated site back to the &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; branch. Once it is done, GitHub publishes it.&lt;/p&gt;
 
 &lt;p&gt;Once you set it up, it is pretty invisible, but I’ll probably bail on it once I rewrite my local setup (switch from gulp to webpack).&lt;/p&gt;
 
 &lt;h3 id=&quot;source-code&quot;&gt;Source code&lt;/h3&gt;
 
 &lt;p&gt;Complete source code of my blog is available &lt;a href=&quot;https://github.com/Stanko/Stanko.github.io/tree/source&quot;&gt;here&lt;/a&gt;.
-But again, I recommend you going the easy way, without custom plugins and Travis setup.&lt;/p&gt;
+But again, I recommend you to take the easy way, without custom plugins and Travis setup.&lt;/p&gt;
 
 &lt;h2 id=&quot;comments-or-any-other-dynamic-content&quot;&gt;Comments (or any other dynamic content)&lt;/h2&gt;
 
-&lt;p&gt;You guessed it! Sites generated by static site generator are static :)
+&lt;p&gt;You guessed it! Sites generated by static site generators are static :)
 So there is no user generated content.&lt;/p&gt;
 
-&lt;p&gt;But as comments are important part of the blog I researched how to add the to my blog.
+&lt;p&gt;But as comments are important part of the blog I researched how to add them.
 Most people recommended Disqus, but I didn’t really want to add a bunch of 3rd party code.
-And to make things worse it seems they are &lt;a href=&quot;https://notes.ayushsharma.in/2017/09/im-killing-disqus-comments-on-my-blog-heres-why&quot;&gt;tracking their users&lt;/a&gt;).&lt;/p&gt;
+And to make things worse, it seems they are &lt;a href=&quot;https://notes.ayushsharma.in/2017/09/im-killing-disqus-comments-on-my-blog-heres-why&quot;&gt;tracking their users&lt;/a&gt;).&lt;/p&gt;
 
-&lt;p&gt;Luckily there is (Staticman)[https://staticman.net/].
-It is open source project which enables user-generated content to added on static sites.
-You need set it up, and then post data to their API.
+&lt;p&gt;Luckily there is &lt;a href=&quot;https://staticman.net/&quot;&gt;Staticman&lt;/a&gt;.
+It is an open source project which enables user-generated content to be added on static site.
+You need to set it up, and then post data to their API.
 Staticman will then create a pull request to your site’s repository.
 Once you merge it, GitHub will regenerate your site and user-generated content will be available.&lt;/p&gt;
 
-&lt;p&gt;You can select if pull request are going to be automatically merged,
-or do you want to moderate them and merge on your own (I use the latter).&lt;/p&gt;
+&lt;p&gt;Pull requests are moderated by default and you need to merge them yourself.
+Or you can enable auto-merging. I use moderation myself.&lt;/p&gt;
 
 &lt;p&gt;Staticman also supports reCaptcha and Aksimet for spam protection.&lt;/p&gt;
 
@@ -137,7 +137,7 @@ or do you want to moderate them and merge on your own (I use the latter).&lt;/p&
 
 &lt;h2 id=&quot;other-static-site-generators&quot;&gt;Other static site generators&lt;/h2&gt;
 
-&lt;p&gt;If you want to explore more static site generator check &lt;a href=&quot;https://www.netlify.com/blog/2017/05/25/top-ten-static-site-generators-of-2017/&quot;&gt;this post&lt;/a&gt;,
+&lt;p&gt;If you want to explore more static site generators check &lt;a href=&quot;https://www.netlify.com/blog/2017/05/25/top-ten-static-site-generators-of-2017/&quot;&gt;this post&lt;/a&gt;,
 which lists the most popular ones in 2017.&lt;/p&gt;
 
 &lt;p&gt;Two that drew my attention are:&lt;/p&gt;
@@ -161,7 +161,8 @@ I almost switched to Hugo, but I decided not to, as benefits are minimal compare
 &lt;h2 id=&quot;happy-blogging-&quot;&gt;Happy blogging! :)&lt;/h2&gt;
 
 &lt;p&gt;Kudos to Sébastien who inspired me to write this post.
-Hopefully this post will get at least someone to start blogging. Trust me, it is not that hard.
+Hopefully it will get at least one person to start blogging.
+Trust me, it is not that hard.
 If you do, please share your blog in the comments.&lt;/p&gt;
 </content>
  </entry>
