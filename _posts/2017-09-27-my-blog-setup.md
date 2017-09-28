@@ -13,56 +13,56 @@ So here it is, post about my blog setup.
 ## Jekyll
 
 I'm not using a dynamic CMS but a static site generator called [Jekyll](http://jekyllrb.com/).
-Static site generators take different than usual approach to making websites.
+Static site generators take different approach to making websites.
 
-Instead of having a database and pulling data from it and dynamically building your pages,
-static site generators generate all the pages of the website once when there's actually changes to the site.
-That means there is no moving parts. Just plain HTML files.
-And this approach is more secure, makes caching much easier and boosts performance.
+Instead of having a database, pulling data from it and dynamically building your pages,
+static site generators generate all the pages only when there are changes to the site.
+No moving parts, just plain HTML files.
+This approach is more secure, makes caching much easier and boosts performance.
 
 Smashing Magazine has a
 [post](https://www.smashingmagazine.com/2015/11/modern-static-website-generators-next-big-thing/)
 on why static sites are awesome.
 
-Static sites are not limited to blogs, bigger sites are also easy to build once you get a hold of it.
-There are agencies that are doing it for client work.
+Static sites are not limited to blogs. Bigger websites are also easy to build, once you get a hold of it.
+There are agencies that are even doing it for client work.
 
 <!--more-->
 
 It comes at the price that once it's built you need to deploy it somewhere.
-And you don't have fancy CMS interface, but good ol' markdown files.
+And you don't have fancy CMS interface, only good ol' markdown files.
 
-Build and deployment part is easy, just let [GitHub](https://pages.github.com/) pages<sup>1</sup> do that for you.
+Build and deployment part is easy, just let [GitHub pages](https://pages.github.com/)<sup>1</sup> do that for you.
 
 Handling a git repo with a bunch of markdown files should be fairly straight forward
 for any developer or tech savvy person. If you feel this is a big burden,
 then static site generators might not be for you.
 
-<small><sup>1</sup> There is [Netlify](https://www.netlify.com/) as well, which I never used it myself, but I've heard good things about it.</small>
+<small><sup>1</sup> There is [Netlify](https://www.netlify.com/) as well, which I never used myself, but I've heard good things about it.</small>
 
 ## How to start your own
 
 I keep this blog on GitHub pages (obviously) and I would recommend you to do the same.
 
-If you want to start from scratch start with [official quickstart guide](http://jekyllrb.com/docs/quickstart/).
+If you want to start from scratch, start with [official quickstart guide](http://jekyllrb.com/docs/quickstart/).
 
 Or you can start the same way I did - from the great [Lanyon theme](http://lanyon.getpoole.com/).
-Just fork it's repository and rename it to `[your github username].gitub.io`
-and GitHub will automatically build and publish it on the same URL.
-Build and publish will happen every time you push a change to your blog repository.
+Just fork it's repository and rename it to `[your github username].gitub.io`.
+GitHub will automatically build and publish it on the same URL.
+Build and publish will happen every time you push a change to your blog's repository.
 
 That's it!
 
-You have you own blog. [Custom domain names](https://help.github.com/articles/adding-or-removing-a-custom-domain-for-your-github-pages-site/)
+Now you have your own blog. [Custom domain names](https://help.github.com/articles/adding-or-removing-a-custom-domain-for-your-github-pages-site/)
 are also easy to setup.
 
 ## My current setup (aka Complicating your life)
 
-This part is for fun and direct result of my experiments.
-They ended up being not really practical at the end, but I learned a tone playing with random things.
+This part is for fun only and direct result of my experiments.
+They ended up not so practical, but I learned a tone playing with random things.
 Fun times, but now I would go vanilla.
 
-I wrote a couple of posts about Jekyll already and you can find them under [Jekyll category](/category/jekyll/).
+I wrote a couple of posts about using Jekyll already, and you can find them under [Jekyll category](/category/jekyll/).
 
 ### Live reload
 
@@ -71,40 +71,40 @@ You can read about it in [this post](/jekyll-gulp-workflow/) but I plan to rewri
 
 ### Custom plugins and Travis CI
 
-Then I added a couple of custom plugins. But as a security measure GitHub has a [limited set of Jekyll plugins](https://pages.github.com/versions/) you can use.
+Then I added a couple of custom plugins. But as a security measure, GitHub has a [limited set of Jekyll plugins](https://pages.github.com/versions/) you can use.
 
 > GitHub Pages is powered by Jekyll. However, all Pages sites are generated using the --safe option to disable custom plugins for security reasons. Unfortunately, this means your plugins won’t work if you’re deploying to GitHub Pages.
 
-To be able to use custom plugins I created a bit more complicated setup using Travis CI.
+To be able to use custom plugins, I created a bit more complicated setup using Travis CI.
 Again there is a [blog post](/travis-jekyll-and-github-pages/) about that as well.
 
-What I actually do - Keep my Jekyll files on the `source` branch and when I push to it, it triggers a build on Travis, which then pushes it back to the `master` branch. Then GitHub just displays built version.
+What I actually do? I keep my Jekyll files on the `source` branch and when I push to it, that triggers a build on Travis, which then pushes generated site back to the `master` branch. Once it is done, GitHub publishes it.
 
 Once you set it up, it is pretty invisible, but I'll probably bail on it once I rewrite my local setup (switch from gulp to webpack).
 
 ### Source code
 
 Complete source code of my blog is available [here](https://github.com/Stanko/Stanko.github.io/tree/source).
-But again, I recommend you going the easy way, without custom plugins and Travis setup.
+But again, I recommend you to take the easy way, without custom plugins and Travis setup.
 
 
 ## Comments (or any other dynamic content)
 
-You guessed it! Sites generated by static site generator are static :)
+You guessed it! Sites generated by static site generators are static :)
 So there is no user generated content.
 
-But as comments are important part of the blog I researched how to add the to my blog.
+But as comments are important part of the blog I researched how to add them.
 Most people recommended Disqus, but I didn't really want to add a bunch of 3rd party code.
-And to make things worse it seems they are [tracking their users](https://notes.ayushsharma.in/2017/09/im-killing-disqus-comments-on-my-blog-heres-why)).
+And to make things worse, it seems they are [tracking their users](https://notes.ayushsharma.in/2017/09/im-killing-disqus-comments-on-my-blog-heres-why)).
 
-Luckily there is (Staticman)[https://staticman.net/].
-It is open source project which enables user-generated content to added on static sites.
-You need set it up, and then post data to their API.
+Luckily there is [Staticman](https://staticman.net/).
+It is an open source project which enables user-generated content to be added on static site.
+You need to set it up, and then post data to their API.
 Staticman will then create a pull request to your site's repository.
 Once you merge it, GitHub will regenerate your site and user-generated content will be available.
 
-You can select if pull request are going to be automatically merged,
-or do you want to moderate them and merge on your own (I use the latter).
+Pull requests are moderated by default and you need to merge them yourself.
+Or you can enable auto-merging. I use moderation myself.
 
 Staticman also supports reCaptcha and Aksimet for spam protection.
 
@@ -112,7 +112,7 @@ Check their [demo](https://staticman.net/demo) and [getting started guide](https
 
 ## Other static site generators
 
-If you want to explore more static site generator check [this post](https://www.netlify.com/blog/2017/05/25/top-ten-static-site-generators-of-2017/),
+If you want to explore more static site generators check [this post](https://www.netlify.com/blog/2017/05/25/top-ten-static-site-generators-of-2017/),
 which lists the most popular ones in 2017.
 
 Two that drew my attention are:
@@ -132,5 +132,6 @@ Two that drew my attention are:
 ## Happy blogging! :)
 
 Kudos to Sébastien who inspired me to write this post.
-Hopefully this post will get at least someone to start blogging. Trust me, it is not that hard.
+Hopefully it will get at least one person to start blogging.
+Trust me, it is not that hard.
 If you do, please share your blog in the comments.
