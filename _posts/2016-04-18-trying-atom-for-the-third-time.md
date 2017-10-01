@@ -31,7 +31,7 @@ Community released and updated so many great packages.
 Linters, support for React, Angular, Babel, ES2015...
 UI is better, everything improved so much.
 
-Small disclaimer, I'm primary a front end developer, and Atom is awesome for it.
+Small disclaimer, I'm a frontend developer, and Atom is awesome for it.
 People are using it for everything else too, but I don't have much experience with other languages.
 
 Issue with large files is still here though. Opening 5MB+ log files is painful.

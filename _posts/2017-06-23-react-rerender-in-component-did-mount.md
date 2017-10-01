@@ -4,7 +4,7 @@ title: Animate React component by calling 'setState' in 'componentDidMount'
 category: [JavaScript, React]
 ---
 
-On the front end, we do a lot of animations. Most of the simple animations I create by using CSS transitions.
+On the frontend, we do a lot of animations. Most of the simple animations I create by using CSS transitions.
 Either I will change class or inline style of the element, and define transitions in CSS file.
 
 Easiest way to do this in React is to render initial state, and then when it renders, change the state to apply class or style to animate. The easiest way to do it in React is to change state in `componentDidMount`.

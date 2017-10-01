@@ -1,6 +1,6 @@
 # My personal blog
 
-Front end stuff, maybe occasional rants and music.
+Frontend development & rants.
 
 [https://stanko.github.io](https://stanko.github.io)
 
