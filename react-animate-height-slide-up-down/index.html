@@ -12,41 +12,30 @@
 
   
 
-  <title>React animate height (slide up/down) component &middot; Muffin Man's writings</title>
+  <title>React animate height (slide up/down) component &middot; Muffin Man</title>
 
   <link rel="stylesheet" href="/public/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700|Open+Sans:300,600,800&subset=latin-ext" rel="stylesheet">
 
-  <meta property="og:site_name" content="Muffin Man's writings">
-  <meta property="og:title" content="React animate height (slide up/down) component &middot; Muffin Man's writings">
+  <meta property="og:site_name" content="Muffin Man">
+  <meta property="og:title" content="React animate height (slide up/down) component &middot; Muffin Man">
   <meta property="og:description" content="Most JavaScript developers used jQuery’s .slideUp() and .slideDown() methods, and got used to them. As component based frameworks usually do not include such functionality, the first logic choice is to...">
   <meta property="og:image" content="http://stanko.github.io/public/favicon/favicon-96x96.png">
   <meta property="og:url" content="http://stanko.github.io/react-animate-height-slide-up-down/">
-  <meta name="twitter:title" content="React animate height (slide up/down) component &middot; Muffin Man's writings">
+  <meta name="twitter:title" content="React animate height (slide up/down) component &middot; Muffin Man">
   <meta name="twitter:description" content="Most JavaScript developers used jQuery’s .slideUp() and .slideDown() methods, and got used to them. As component based frameworks usually do not include such functionality, the first logic choice is to...">
   <meta name="twitter:image" content="http://stanko.github.io/public/favicon/favicon-96x96.png">
 
   <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/public/favicon/apple-touch-icon-57x57.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/public/favicon/apple-touch-icon-114x114.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/public/favicon/apple-touch-icon-72x72.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/favicon/apple-touch-icon-144x144.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/public/favicon/apple-touch-icon-60x60.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/public/favicon/apple-touch-icon-120x120.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/public/favicon/apple-touch-icon-76x76.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/public/favicon/apple-touch-icon-152x152.png" />
-  <link rel="icon" type="image/png" href="/public/favicon/favicon-196x196.png" sizes="196x196" />
-  <link rel="icon" type="image/png" href="/public/favicon/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/png" href="/public/favicon/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="/public/favicon/favicon-16x16.png" sizes="16x16" />
-  <link rel="icon" type="image/png" href="/public/favicon/favicon-128.png" sizes="128x128" />
-  <meta name="application-name" content="Muffin Man's writings"/>
-  <meta name="msapplication-TileColor" content="#FFFFFF" />
-  <meta name="msapplication-TileImage" content="/public/favicon/mstile-144x144.png" />
-  <meta name="msapplication-square70x70logo" content="/public/favicon/mstile-70x70.png" />
-  <meta name="msapplication-square150x150logo" content="/public/favicon/mstile-150x150.png" />
-  <meta name="msapplication-wide310x150logo" content="/public/favicon/mstile-310x150.png" />
-  <meta name="msapplication-square310x310logo" content="/public/favicon/mstile-310x310.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/public/favicon/apple-touch-icon.png?v=v3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon/favicon-32x32.png?v=v3">
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon/favicon-16x16.png?v=v3">
+  <link rel="manifest" href="/public/favicon/manifest.json?v=v3">
+  <link rel="mask-icon" href="/public/favicon/safari-pinned-tab.svg?v=v3" color="#e04856">
+  <link rel="shortcut icon" href="/public/favicon/favicon.ico?v=v3">
+  <meta name="msapplication-config" content="/public/favicon/browserconfig.xml?v=v3">
+  <meta name="theme-color" content="#ffffff">
+
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
@@ -56,15 +45,17 @@
   <body class="Body--post">
     <div class="Header-line"></div>
 <div class="Header Header--page">
-  <div class="Rotation">
-    <div class="Rotation-item Rotation-item--one">
-      <img src="/public/img/poly-1.svg" />
-    </div>
-    <div class="Rotation-item Rotation-item--two">
-      <img src="/public/img/poly-2.svg" />
-    </div>
-    <div class="Rotation-item Rotation-item--three">
-      <img src="/public/img/poly-3.svg" />
+  <div class="RotationWrapper">
+    <div class="Rotation">
+      <div class="Rotation-item Rotation-item--one">
+        <img src="/public/img/poly-1.svg" />
+      </div>
+      <div class="Rotation-item Rotation-item--two">
+        <img src="/public/img/poly-2.svg" />
+      </div>
+      <div class="Rotation-item Rotation-item--three">
+        <img src="/public/img/poly-3.svg" />
+      </div>
     </div>
   </div>
 
@@ -87,8 +78,10 @@
   <a href="/" class="AboutBlog-homeLink">Home</a>
   <div class="AboutBlog-content">
     <a href="/" title="Home page" class="BlackLink">
-      <img src="/public/img/s-small.png" class="AboutBlog-logo AboutBlog-logo--small" />
-      <h1 class="AboutBlog-title">Muffin Man's writings</h1>
+      <h1 class="AboutBlog-subtitle"><div class="c1">Frontend</div><div class="c2">development</div><div class="c1">& Rants</div></h1>
+      <h2 class="AboutBlog-title">
+        <span class="AboutBlog-small">By</span> Muffin Man
+      </h2>
     </a>
   </div>
 </div>
@@ -254,6 +247,13 @@ Please, when you are open sourcing a library, keep it small and simple!</p>
 
             
               <div class="RelatedPosts-post">
+                <a href="/minor-design-refresh/">
+                  <small>01 Oct 2017</small>
+                  Minor design refresh
+                </a>
+              </div>
+            
+              <div class="RelatedPosts-post">
                 <a href="/trillion-ideas/">
                   <small>27 Sep 2017</small>
                   I have a trillion ideas.
@@ -264,13 +264,6 @@ Please, when you are open sourcing a library, keep it small and simple!</p>
                 <a href="/my-blog-setup/">
                   <small>27 Sep 2017</small>
                   My blog setup
-                </a>
-              </div>
-            
-              <div class="RelatedPosts-post">
-                <a href="/react-image-filter-component/">
-                  <small>02 Sep 2017</small>
-                  React Image Filter
                 </a>
               </div>
             
@@ -549,6 +542,9 @@ Please, when you are open sourcing a library, keep it small and simple!</p>
     <script>
   var posts = [
      {
+        url: '/minor-design-refresh/',
+        title: 'Minor design refresh'
+    },  {
         url: '/trillion-ideas/',
         title: 'I have a trillion ideas.'
     },  {

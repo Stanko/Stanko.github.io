@@ -1,16 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Muffin Man's writings</title>
+ <title>Muffin Man</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-09-28T21:34:25+00:00</updated>
+ <updated>2017-10-01T18:23:23+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
    <email>stanko.tadic@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Minor design refresh</title>
+   <link href="http://stanko.github.io/minor-design-refresh/"/>
+   <updated>2017-10-01T00:00:00+00:00</updated>
+   <id>http://stanko.github.io/minor-design-refresh</id>
+   <content type="html">&lt;p&gt;I kinda got bored by the current design.
+Rotating SVGs in the header ate too much CPU power (oh &lt;a href=&quot;/what-is-the-point/&quot;&gt;the irony&lt;/a&gt;).
+So I decided to change a thing or two.&lt;/p&gt;
+
+&lt;p&gt;Firstly I got rid of the rotation and blended vector with the background.
+Then logo got replaced and I added this &lt;a href=&quot;https://www.readvisions.com/marvin#get-the-font&quot;&gt;marvelous font&lt;/a&gt;.
+Header is a bit smaller now and footer blends more with the page.
+Code snippets are now using a light theme, which should be easier on the eye.&lt;/p&gt;
+
+&lt;p&gt;This is just a minor refresh until I do a full redesign (one of the &lt;a href=&quot;/trillion-ideas/&quot;&gt;trillion ideas&lt;/a&gt;).&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>I have a trillion ideas.</title>
