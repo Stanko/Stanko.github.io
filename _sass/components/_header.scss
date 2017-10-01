@@ -216,11 +216,12 @@
 // }
 
 .AboutBlog {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  margin: -12rem auto 5rem;
   position: relative;
   z-index: 10;
-  margin: -12rem auto 5rem;
-  display: flex;
-  align-items: flex-end;
 
   @include xl {
     margin-top: -6rem;
@@ -229,9 +230,8 @@
 
 .AboutBlog-homeLink {
   @include marvin;
-  margin-right: auto;
-  font-size: 1.6rem;
   color: $greyC;
+  font-size: 1.6rem;
 
   &:hover {
     color: $grey7;
