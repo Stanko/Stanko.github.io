@@ -75,8 +75,8 @@ button {
 
 .CommentForm-sendButton {
   align-items: center;
+  border: 1px solid $red;
   border-radius: 2.3rem;
-  border: 0.2rem solid $red;
   background: none;
   color: $red;
   display: inline-flex;
@@ -84,13 +84,10 @@ button {
   height: 4.6rem;
   margin: 0;
   padding: 0 2.5rem;
-  transition:
-    color $transition-time,
-    background $transition-time;
+  transition: color $transition-time, background $transition-time;
 
   @include md {
     border-radius: 2.5rem;
-    font-size: 2rem;
     height: 5rem;
     padding: 0 3rem;
   }
