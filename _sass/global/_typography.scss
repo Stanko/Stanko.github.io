@@ -18,11 +18,11 @@
 
 body {
   font-family: $body-font-family;
-  font-weight: $body-font-weight;
   font-size: $font-size;
+  font-weight: $body-font-weight;
 
-  @include md {
-    font-size: $font-size-md;
+  @include sm {
+    font-size: $font-size-sm;
   }
 }
 

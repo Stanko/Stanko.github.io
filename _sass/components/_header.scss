@@ -14,6 +14,10 @@
   @include md {
     padding: 6rem 0 20rem;
   }
+
+  &::after {
+    pointer-events: none;
+  }
 }
 
 .Header--page {
@@ -30,10 +34,16 @@
 
 .Header--page {
   .RotationWrapper {
-    position: absolute;
-    width: 100%;
     left: 0;
+    position: absolute;
     top: 0;
+    width: 100%;
+  }
+
+  .Rotation {
+    @include sm {
+      left: -15rem;
+    }
   }
 
   .Header--page .Rotation {
@@ -41,23 +51,30 @@
   }
 
   .Header-title {
-    // position: absolute;
-    width: 100%;
-    // top: 0;
-    // left: 0;
-    display: flex;
     align-items: center;
-    // height: 20rem;
+    display: flex;
     padding: 6rem 0 9rem;
     z-index: 10;
 
     @include sm {
-      padding: 8rem 0 11rem;
+      padding: 8rem 0 11rem 3rem;
+    }
+
+    @include md {
+      padding-left: 0;
     }
 
     h1 {
-      margin: 0;
+      margin: 0 0 0.5rem;
     }
+  }
+}
+
+.Header-titleContent {
+  max-width: 50rem;
+
+  @include lg {
+    max-width: 60rem;
   }
 }
 
@@ -75,24 +92,24 @@
 // }
 
 .Header-menuButton {
-  border: 0;
   background: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0;
-  width: 6rem;
+  border: 0;
   height: 6rem;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 6rem;
   z-index: 100;
 
   span {
     background: darken($purple, 10);
-    height: 0.2rem;
-    width: 3.2rem;
-    display: block;
-    margin: 0.8rem auto;
     border-radius: 0.2rem;
+    display: block;
+    height: 0.2rem;
+    margin: 0.8rem auto;
     transition: background $transition-time;
+    width: 3.2rem;
   }
 
   &:hover span {
@@ -103,8 +120,8 @@
 
 .LatestPost {
   max-width: 50rem;
-  position: relative;
   padding: 0 $grid-gutter;
+  position: relative;
 
   span {
     font-size: 0.8em;
@@ -120,8 +137,8 @@
 
   svg {
     @include xl {
-      width: 34px;
       height: 24px;
+      width: 34px;
     }
   }
 }
@@ -129,6 +146,10 @@
 .Header-date {
   color: $greyA;
   font-size: 0.8em;
+}
+
+.RotationWrapper {
+  pointer-events: none;
 }
 
 .Rotation {
@@ -154,7 +175,6 @@
   left: calc(#{ $rotation-width-xs / -2 } + 50%);
   width: $rotation-width-xs;
   height: $rotation-width-xs;
-  opacity: 0.1;
 
   @include sm {
     top: ($rotation-width-sm - $rotation-height) / -2;
