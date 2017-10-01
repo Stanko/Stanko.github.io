@@ -4,7 +4,7 @@
  <title>Muffin Man</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-10-01T20:09:02+00:00</updated>
+ <updated>2017-10-01T20:13:40+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
@@ -550,7 +550,7 @@ But with high resolution displays, wallpaper started to look blurry and noisy, s
    <link href="http://stanko.github.io/react-rerender-in-component-did-mount/"/>
    <updated>2017-06-23T00:00:00+00:00</updated>
    <id>http://stanko.github.io/react-rerender-in-component-did-mount</id>
-   <content type="html">&lt;p&gt;On the front end, we do a lot of animations. Most of the simple animations I create by using CSS transitions.
+   <content type="html">&lt;p&gt;On the frontend, we do a lot of animations. Most of the simple animations I create by using CSS transitions.
 Either I will change class or inline style of the element, and define transitions in CSS file.&lt;/p&gt;
 
 &lt;p&gt;Easiest way to do this in React is to render initial state, and then when it renders, change the state to apply class or style to animate. The easiest way to do it in React is to change state in &lt;code class=&quot;highlighter-rouge&quot;&gt;componentDidMount&lt;/code&gt;.
@@ -3043,7 +3043,7 @@ Community released and updated so many great packages.
 Linters, support for React, Angular, Babel, ES2015…
 UI is better, everything improved so much.&lt;/p&gt;
 
-&lt;p&gt;Small disclaimer, I’m primary a front end developer, and Atom is awesome for it.
+&lt;p&gt;Small disclaimer, I’m a frontend developer, and Atom is awesome for it.
 People are using it for everything else too, but I don’t have much experience with other languages.&lt;/p&gt;
 
 &lt;p&gt;Issue with large files is still here though. Opening 5MB+ log files is painful.
