@@ -13,9 +13,7 @@
         {% for post in page.posts %}
           <div class="Post-content Post-content--archive">
             <div class="Post-date">
-              <div class="Post-dateIcon">
-                {% include icon-clock.html %}
-              </div>
+              <div class="Post-dateIcon"></div>
               {{ post.date | date_to_string }}
             </div>
 

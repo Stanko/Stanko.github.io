@@ -6,7 +6,7 @@
 .Posts .Post {
   margin-bottom: 6rem;
   padding-bottom: 6rem;
-  border-bottom: 0.1rem solid $greyE;
+  border-bottom: 1px solid $greyE;
 
   @include md {
     margin-bottom: 7.5rem;
@@ -27,15 +27,47 @@
 }
 
 .Post-dateIcon {
-  fill: $red;
   display: inline-block;
-  margin-top: 0.2rem;
+  fill: $red;
   margin-right: 0.5em;
+  margin-top: 0.2rem;
 
   svg {
     display: block;
     height: 1.5em;
     width: 1.5em;
+
+
+    display: none;
+  }
+
+  width: 2rem;
+  height: 2rem;
+  border: 0.1rem solid $red;
+  border-radius: 50%;
+  position: relative;
+
+  &::before,
+  &::after {
+    display: block;
+    position: absolute;
+    border-left: 0.1rem solid $red;
+    bottom: 1rem;
+    left: 1rem;
+    margin: 0 0 -0.2rem -0.1rem;
+    content: '';
+    left: 1rem;
+    transform-origin: bottom center;
+  }
+
+  &::before {
+    height: 0.7rem;
+    transform: translateZ(0) rotate(50deg);
+  }
+
+  &::after {
+    height: 0.5rem;
+    transform: translateZ(0) rotate(-50deg);
   }
 }
 
@@ -107,7 +139,9 @@
 
   &::after {
     content: '';
-    border-bottom: 0.2rem solid $red;
+    // border-bottom: 0.2rem solid $red;
+    // border-bottom: 1px solid rgba($red, 0.5);
+    border-bottom: 1px solid $red;
     width: 60%;
     position: absolute;
     left: -40%;
@@ -144,13 +178,14 @@
 
 .Post-readmore {
   align-items: center;
+  border: 1px solid $red;
   border-radius: 2.3rem;
-  border: 0.2rem solid $red;
   display: inline-flex;
   font-size: 1.8rem;
   height: 4.6rem;
   margin-top: 2rem;
   padding: 0 2.5rem;
+  transition: border $transition-time, color $transition-time, background $transition-time;
 
   @include md {
     border-radius: 2.5rem;
@@ -160,17 +195,18 @@
   }
 
   &:hover {
-    background: $red;
+    background: $black;
+    border-color: $black;
     color: $white;
   }
 }
 
 .Post-top {
-  font-size: 1.6rem;
   display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
   justify-content: space-between;
   margin-bottom: 4rem;
-  flex-direction: column;
 
   @include md {
     flex-direction: row;

@@ -62,17 +62,17 @@
 }
 
 .Header-line {
-  height: 1rem;
   background: linear-gradient(90deg, $red, $purple);
+  height: 1rem;
 }
 
-@keyframes rotate {
-  0% {
-    transform: translate3d(0,0,0) rotateZ(0);
-  } 100% {
-    transform: translate3d(0,0,0) rotateZ(360deg);
-  }
-}
+// @keyframes rotate {
+//   0% {
+//     transform: translate3d(0,0,0) rotateZ(0);
+//   } 100% {
+//     transform: translate3d(0,0,0) rotateZ(360deg);
+//   }
+// }
 
 .Header-menuButton {
   border: 0;
@@ -106,8 +106,12 @@
   position: relative;
   padding: 0 $grid-gutter;
 
+  span {
+    font-size: 0.8em;
+  }
+
   h1 {
-    margin: 1rem 0;
+    margin: 1rem 0 0;
 
     a {
       color: $black;
@@ -120,6 +124,11 @@
       height: 24px;
     }
   }
+}
+
+.Header-date {
+  color: $greyA;
+  font-size: 0.8em;
 }
 
 .Rotation {

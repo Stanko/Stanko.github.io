@@ -72,7 +72,7 @@ $ npm install --save react-plx
 
 Documentation is available on [GitHub](https://github.com/Stanko/react-plx).
 
-```javascript
+```js
 import React, { Component } from 'react';
 import Plx from 'react-plx';
 

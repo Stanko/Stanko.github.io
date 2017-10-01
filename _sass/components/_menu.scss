@@ -127,7 +127,7 @@
   appearance: none;
   background: transparent;
   border: 0;
-  border-bottom: 0.1rem solid $grey4;
+  border-bottom: 1px solid $grey4;
   border-radius: 0;
   color: $white;
   font-size: 2.5rem;
@@ -137,7 +137,7 @@
   transition: border $transition-time;
 
   &:focus {
-    border-bottom: 0.1rem solid $grey7;
+    border-bottom: 1px solid $grey7;
   }
 
   @include md {
