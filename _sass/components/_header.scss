@@ -1,18 +1,18 @@
 .Header {
   @include angled-edge('inside bottom', 'upper left', $white, $width: 3000, $height: 300);
   background: $grey;
-  padding: 5rem 0 20rem;
+  padding: 2rem 0 16rem;
   overflow: hidden;
   z-index: 0;
   position: relative;
   width: 100%;
 
   @include sm {
-    padding: 8rem 0 23rem;
+    padding: 4rem 0 18rem;
   }
 
   @include md {
-    padding: 11rem 0 26rem;
+    padding: 6rem 0 20rem;
   }
 }
 
@@ -29,32 +29,34 @@
 }
 
 .Header--page {
-  // .Rotation-item {
-    // opacity: 0.7;
-    // filter: blur(5px);
-    // animation: none;
-  // }
+  .RotationWrapper {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
 
   .Header--page .Rotation {
     height: 20rem;
   }
 
   .Header-title {
-    position: absolute;
+    // position: absolute;
     width: 100%;
-    top: 0;
-    left: 0;
+    // top: 0;
+    // left: 0;
     display: flex;
     align-items: center;
-    height: 25rem;
+    // height: 20rem;
+    padding: 6rem 0 9rem;
     z-index: 10;
 
     @include sm {
-      height: 30rem;
+      padding: 8rem 0 11rem;
     }
 
     h1 {
-      margin-top: 0;
+      margin: 0;
     }
   }
 }
@@ -143,6 +145,7 @@
   left: calc(#{ $rotation-width-xs / -2 } + 50%);
   width: $rotation-width-xs;
   height: $rotation-width-xs;
+  opacity: 0.1;
 
   @include sm {
     top: ($rotation-width-sm - $rotation-height) / -2;
@@ -163,30 +166,30 @@
   }
 }
 
-.Rotation-item--one {
-  animation: rotate 200s infinite linear;
-
-  @include sm {
-    animation-duration: 400s;
-  }
-
-  @include md {
-    animation-duration: 600s;
-  }
-}
-
-.Rotation-item--two {
-  animation: rotate 250s infinite linear;
-}
-
-.Rotation-item--three {
-  animation: rotate 350s infinite linear;
-}
+// .Rotation-item--one {
+//   animation: rotate 200s infinite linear;
+//
+//   @include sm {
+//     animation-duration: 400s;
+//   }
+//
+//   @include md {
+//     animation-duration: 600s;
+//   }
+// }
+//
+// .Rotation-item--two {
+//   animation: rotate 250s infinite linear;
+// }
+//
+// .Rotation-item--three {
+//   animation: rotate 350s infinite linear;
+// }
 
 .AboutBlog {
   position: relative;
   z-index: 10;
-  margin: -10rem auto 5rem;
+  margin: -12rem auto 5rem;
   display: flex;
   align-items: flex-end;
 
@@ -196,8 +199,14 @@
 }
 
 .AboutBlog-homeLink {
+  @include marvin;
   margin-right: auto;
   font-size: 1.6rem;
+  color: $greyC;
+
+  &:hover {
+    color: $grey7;
+  }
 
   @include sm {
     font-size: 1.8rem;
@@ -245,22 +254,31 @@
 }
 
 .AboutBlog-title {
-  margin: 2rem 0 0;
-  font-size: 3rem;
+  margin: 0;
+  font-size: 4rem;
 
   @include sm {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
   }
 
   @include lg {
-    font-size: 3.8rem;
+    font-size: 4.8rem;
   }
 }
 
+.AboutBlog-small {
+  font-size: 0.5em;
+}
+
 .AboutBlog-subtitle {
-  margin: 0 0 1rem;
+  @include marvin;
+  color: $greyC;
   font-size: 2rem;
-  color: $greyB;
+  margin: 0;
+
+  .c2 {
+    color: #db4d5c;
+  }
 
   @include sm {
     font-size: 2.2rem;
@@ -273,7 +291,18 @@
 
 .AboutBlog--small {
   .AboutBlog-title {
-    margin: 0;
+    font-size: 2.5rem;
+
+    @include sm {
+      font-size: 2.8rem;
+    }
+
+    @include lg {
+      font-size: 3.2rem;
+    }
+  }
+
+  .AboutBlog-subtitle {
     font-size: 1.8rem;
 
     @include sm {

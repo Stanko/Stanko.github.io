@@ -29,9 +29,9 @@ exclude:
  - vendor
 
 # Setup
-title:                "Muffin Man's writings"
-tagline:              'or the front end playground'
-description:          'Front end development, maybe occasional rants and music.'
+title:                "Muffin Man"
+tagline:              'Frontend development & rants'
+description:          '<div class="c1">Frontend</div><div class="c2">development</div><div class="c1">& Rants</div>'
 url:                  http://stanko.github.io
 baseurl:              ''
 paginate:             5

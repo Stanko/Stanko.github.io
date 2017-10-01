@@ -1,3 +1,21 @@
+@font-face {
+  font-family: 'MarvinVisions';
+  src:
+    url('../fonts/MarvinVisions-Bold.eot');
+  src:
+    url('../fonts/MarvinVisions-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MarvinVisions-Bold.woff2') format('woff2'),
+    url('../fonts/MarvinVisions-Bold.woff') format('woff');
+  font-weight: bold;
+}
+
+@mixin marvin {
+  font-family: MarvinVisions, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  line-height: 0.9em;
+  letter-spacing: 0.05em;
+}
+
 body {
   font-family: $body-font-family;
   font-weight: $body-font-weight;
@@ -54,7 +72,7 @@ a {
 
 pre,
 code {
-  font-family: "Monaco", "Consolas", "Menlo", monospace;
+  font-family: "Menlo", "Consolas", monospace;
 }
 
 pre {
@@ -67,11 +85,13 @@ code {
 }
 
 code.highlighter-rouge {
-  background: #f1f1f1;
-  padding: 0.2rem 0.7rem;
-  margin: 0;
+  background: $grey;
   border-radius: 0.3rem;
-  color: #335;
+  color: #444548;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  padding: 0.2rem 0.7rem;
 }
 
 pre,
@@ -80,9 +100,12 @@ figure.highlight pre {
   position: relative;
   padding: 1.8rem 2rem;
   margin: 0;
-  background: $dark;
-  color: $white;
-  border-radius: 0.2rem;
+  // background: $dark;
+  // color: $white;
+  color: $dark;
+  background: $grey;
+  border: 1px solid $greyE;
+  border-radius: 0.4rem;
   font-size: 1.6rem;
 
   code {

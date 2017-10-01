@@ -1,7 +1,8 @@
 .Footer {
   @include angled-edge('inside top', 'lower right', $white, $width: 3000, $height: 300);
   height: 40rem;
-  color: $white;
+  // color: $white;
+  color: $greyA;
   position: relative;
   overflow: hidden;
   font-size: 1.6rem;
@@ -22,15 +23,32 @@
 }
 
 .Body--post .Footer {
-  @include angled-edge('inside top', 'lower right', $black, $width: 3000, $height: 300);
+  // @include angled-edge('inside top', 'lower right', $black, $width: 3000, $height: 300);
+  height: auto;
+
+  .Footer-background {
+    background: $black;
+  }
+
+  .Container {
+    margin-top: 0;
+    padding-bottom: 10rem;
+    padding-top: 10rem;
+
+    @include md {
+      margin-top: 0;
+    }
+  }
 
   &::before {
-    z-index: 11;
+    // z-index: 11;
+    display: none;
   }
 }
 
 .Footer-background {
-  background: linear-gradient(90deg, $red, $purple);
+  // background: linear-gradient(90deg, $red, $purple);
+  background: $grey;
   position: relative;
   z-index: 10;
   position: absolute;

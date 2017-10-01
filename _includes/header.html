@@ -1,14 +1,16 @@
 <div class="Header-line"></div>
 <div class="Header Header--page">
-  <div class="Rotation">
-    <div class="Rotation-item Rotation-item--one">
-      <img src="/public/img/poly-1.svg" />
-    </div>
-    <div class="Rotation-item Rotation-item--two">
-      <img src="/public/img/poly-2.svg" />
-    </div>
-    <div class="Rotation-item Rotation-item--three">
-      <img src="/public/img/poly-3.svg" />
+  <div class="RotationWrapper">
+    <div class="Rotation">
+      <div class="Rotation-item Rotation-item--one">
+        <img src="/public/img/poly-1.svg" />
+      </div>
+      <div class="Rotation-item Rotation-item--two">
+        <img src="/public/img/poly-2.svg" />
+      </div>
+      <div class="Rotation-item Rotation-item--three">
+        <img src="/public/img/poly-3.svg" />
+      </div>
     </div>
   </div>
 
@@ -31,8 +33,10 @@
   <a href="/" class="AboutBlog-homeLink">Home</a>
   <div class="AboutBlog-content">
     <a href="/" title="Home page" class="BlackLink">
-      <img src="/public/img/s-small.png" class="AboutBlog-logo AboutBlog-logo--small" />
-      <h1 class="AboutBlog-title">{{ site.title }}</h1>
+      <h1 class="AboutBlog-subtitle">{{ site.description }}</h1>
+      <h2 class="AboutBlog-title">
+        <span class="AboutBlog-small">By</span> {{ site.title }}
+      </h2>
     </a>
   </div>
 </div>

@@ -6,7 +6,7 @@ $white: #fff;
 $red: #E9514D;
 $dark: #232529;
 $blue: #4D7EdF;
-$grey: #F8F8F8;
+$grey: #f9fafb;
 $purple: #8E44AD;
 $light-red: lighten(#E9514D, 10);
 
@@ -19,11 +19,11 @@ $grey6: #666;
 $grey7: #777;
 $grey8: #888;
 $grey9: #999;
-$greyA: #AAA;
-$greyB: #BBB;
-$greyC: #CCC;
-$greyD: #DDD;
-$greyE: #EEE;
+$greyA: #aaa;
+$greyB: #b4b5b6;
+$greyC: #c4c5c6;
+$greyD: #ddd;
+$greyE: #eee;
 
 // ------------ Breakpoints
 $breakpoint-sm: 400px !default;
@@ -66,7 +66,7 @@ $transition-time: 0.25s;
 $transition-time-long: 0.5s;
 
 // ------------ Header
-$rotation-height: 30rem;
+$rotation-height: 20rem;
 $rotation-width-xs: 100rem;
 $rotation-width-sm: 130rem;
 $rotation-width-md: 160rem;
