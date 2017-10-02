@@ -4,7 +4,7 @@
  <title>Muffin Man</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-10-02T13:07:07+00:00</updated>
+ <updated>2017-10-02T13:32:01+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
@@ -22,8 +22,9 @@ Rotating SVGs in the header ate too much CPU power (oh &lt;a href=&quot;/what-is
 So I decided to change a thing or two.&lt;/p&gt;
 
 &lt;p&gt;First thing was to get rid of the rotation.
-Then logo got replaced and I added this &lt;a href=&quot;https://www.readvisions.com/marvin#get-the-font&quot;&gt;marvelous font&lt;/a&gt;.
+Then logo got replaced and I added this &lt;a href=&quot;https://www.readvisions.com/marvin&quot;&gt;marvelous font&lt;/a&gt;.
 Header is a bit smaller now and footer blends more with the page.
+Typography did undergo some small changes, and both buttons and borders are not lighter as well.
 Code snippets are now using a light theme, which should be easier on the eye.&lt;/p&gt;
 
 &lt;p&gt;This is just a minor refresh until I do a full redesign (one of the &lt;a href=&quot;/trillion-ideas/&quot;&gt;trillion ideas&lt;/a&gt;).&lt;/p&gt;
