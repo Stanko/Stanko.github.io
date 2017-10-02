@@ -29,45 +29,13 @@
 .Post-dateIcon {
   display: inline-block;
   fill: $red;
-  margin-right: 0.5em;
+  margin-right: 0.7rem;
   margin-top: 0.2rem;
 
   svg {
     display: block;
-    height: 1.5em;
-    width: 1.5em;
-
-
-    display: none;
-  }
-
-  width: 2rem;
-  height: 2rem;
-  border: 0.1rem solid $red;
-  border-radius: 50%;
-  position: relative;
-
-  &::before,
-  &::after {
-    display: block;
-    position: absolute;
-    border-left: 0.1rem solid $red;
-    bottom: 1rem;
-    left: 1rem;
-    margin: 0 0 -0.2rem -0.1rem;
-    content: '';
-    left: 1rem;
-    transform-origin: bottom center;
-  }
-
-  &::before {
-    height: 0.7rem;
-    transform: translateZ(0) rotate(50deg);
-  }
-
-  &::after {
-    height: 0.5rem;
-    transform: translateZ(0) rotate(-50deg);
+    height: 1.8rem;
+    width: 1.8rem;
   }
 }
 
@@ -191,6 +159,10 @@
     border-radius: 2.5rem;
     height: 5rem;
     padding: 0 3rem;
+  }
+
+  @include xl {
+    font-size: 1.6rem;
   }
 
   &:hover {

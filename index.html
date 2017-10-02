@@ -16,7 +16,9 @@ title: Home
 
       <div class="Post-data">
         <div class="Post-date">
-          <div class="Post-dateIcon"></div>
+          <div class="Post-dateIcon">
+            {% include icon-clock.html %}
+          </div>
           {{ post.date | date_to_string }}
         </div>
 
