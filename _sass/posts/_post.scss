@@ -308,3 +308,32 @@
     display: block;
   }
 }
+
+
+// Expandable
+.Expandable-toggleWrapper + div,
+.Expandable-toggleWrapper + p {
+  display: none;
+  margin-top: 1.5rem;
+}
+
+.Expandable-toggle {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  color: $red;
+  padding: 0;
+  font-size: 0.8em;
+}
+
+.Expandable-toggleHideText {
+  display: none;
+}
+
+.Expandable-toggle--open .Expandable-toggleHideText {
+  display: inline;
+}
+
+.Expandable-toggle--open .Expandable-toggleShowText {
+  display: none;
+}

@@ -1,6 +1,7 @@
 const commentsLink = document.querySelector('.Post-commentsLink');
 const comments = document.querySelector('#comments');
 const postBgArchive = document.querySelector('.Post-bg--archive');
+const expandToggles = document.querySelectorAll('.Expandable-toggle');
 
 function getElementOffset(element) {
     let top = 0, left = 0;
@@ -27,3 +28,18 @@ if (postBgArchive) {
   const src = postBgArchive.getAttribute('data-src').replace('ID', id);
   postBgArchive.setAttribute('src', src);
 }
+
+expandToggles.forEach(expandToggle => {
+  expandToggle.addEventListener('click', (e) => {
+    const button = e.currentTarget;
+    const expendableStyle = button.parentElement.nextElementSibling.style;
+
+    if (expendableStyle.display === 'none' || expendableStyle.display === '') {
+      button.classList.add('Expandable-toggle--open');
+      expendableStyle.display = 'block';
+    } else {
+      button.classList.remove('Expandable-toggle--open');
+      expendableStyle.display = 'none';
+    }
+  });
+});

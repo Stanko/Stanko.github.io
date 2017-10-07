@@ -19,7 +19,7 @@ You can find me on [GitHub](https://github.com/Stanko) or [LinkedIn](https://lin
 
 ------
 
-Beside programming, my passions are music, crafting (making stuff from jewelry to guitars) and games.
+Beside programming, my passions are music, crafts (making everything from jewelry to guitars) and games.
 Old DOS games are what got me in the tech in the first place.
 Unfortunately due to lack of free time I don't play many games these days.
 I'm also a terrible guitar player.

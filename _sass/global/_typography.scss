@@ -26,6 +26,25 @@ body {
   }
 }
 
+small {
+  font-size: $font-size * 0.8;
+
+  @include sm {
+    font-size: $font-size-sm * 0.8;
+  }
+}
+
+.Footnote {
+  display: block;
+  font-size: $font-size * 0.8;
+  line-height: $font-size * 0.9;
+
+  @include sm {
+    font-size: $font-size-sm * 0.8;
+    line-height: $font-size-sm * 0.9;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -100,13 +119,12 @@ figure.highlight pre {
   position: relative;
   padding: 1.8rem 2rem;
   margin: 0;
-  // background: $dark;
-  // color: $white;
   color: $dark;
   background: $grey;
   border: 1px solid $greyE;
   border-radius: 0.4rem;
   font-size: 1.6rem;
+  line-height: 1.35em;
 
   code {
     font-size: 1.6rem;

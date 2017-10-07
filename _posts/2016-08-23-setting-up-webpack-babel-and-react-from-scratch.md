@@ -4,6 +4,12 @@ title: Setting up Webpack, Babel and React from scratch
 category: [JavaScript, React]
 ---
 
+## Update, October 2017
+
+I just released updated tutorial [right here](/webpack-babel-react-revisited/).
+So feel free to skip this one, and read a new one.
+It uses updated tools, and hopefully it will grow into a new series of webpack/react posts.
+
 ## Update, March 2017
 
 Webpack 2 is out, so this post is slowly becoming outdated.
