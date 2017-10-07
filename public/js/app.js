@@ -384,7 +384,9 @@ if (postBgArchive) {
   postBgArchive.setAttribute('src', src);
 }
 
-expandToggles.forEach(function (expandToggle) {
+for (var i = 0; i < expandToggles.length; ++i) {
+  var expandToggle = expandToggles[i];
+
   expandToggle.addEventListener('click', function (e) {
     var button = e.currentTarget;
     var expendableStyle = button.parentElement.nextElementSibling.style;
@@ -397,7 +399,7 @@ expandToggles.forEach(function (expandToggle) {
       expendableStyle.display = 'none';
     }
   });
-});
+}
 
 var options = {
   extract: function extract(el) {
@@ -421,8 +423,8 @@ function renderResult(title, url) {
   return '<div><a href="' + url + '">' + title + '</a></div>';
 }
 
-for (var i = 0; i < menuToggles.length; i++) {
-  var element = menuToggles[i];
+for (var _i = 0; _i < menuToggles.length; _i++) {
+  var element = menuToggles[_i];
   element.addEventListener('click', function () {
     clearTimeout(timeout);
 
