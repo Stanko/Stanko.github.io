@@ -1,44 +1,45 @@
 <div class="Header-line"></div>
 <div class="Header Header--page">
-  <button class="Header-menuButton Menu-toggle">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+  <div class="RotationWrapper">
+    <div class="Rotation">
+      <div class="Rotation-item Rotation-item--one">
+        <img src="/public/img/poly-1.svg" />
+      </div>
+      <div class="Rotation-item Rotation-item--two">
+        <img src="/public/img/poly-2.svg" />
+      </div>
+      <div class="Rotation-item Rotation-item--three">
+        <img src="/public/img/poly-3.svg" />
+      </div>
+    </div>
+  </div>
 
-  <div class="Rotation">
-    <div class="Rotation-item Rotation-item--one">
-      <img src="/public/img/poly-1.svg" />
-    </div>
-    <div class="Rotation-item Rotation-item--two">
-      <img src="/public/img/poly-2.svg" />
-    </div>
-    <div class="Rotation-item Rotation-item--three">
-      <img src="/public/img/poly-3.svg" />
-    </div>
-
-    <div class="LatestPost">
-      <span>
-        Archive of the {{ page.type }}
-      </span>
-      <h1>
-        <a href="{{ site.baseurl }}{{ site.posts[0].url }}">
-          {{ page.title }}
-        </a>
-      </h1>
+  <div class="Header-title">
+    <div class="Container">
+      <button class="Header-menuButton Menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="Header-titleContent">
+        <h1>Category: {{ page.title }}</h1>
+        {% if page.date %}
+          <div class="Header-date">{{ page.date | date_to_string }}</div>
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>
 
-<div class="AboutBlog Grid">
-  <div class="AboutBlog-content Col--md-5 Offset--md-3 Col--lg-4 Offset--lg-4">
-    <a href="/" title="Home page">
-      <img src="/public/img/s-small.png" class="AboutBlog-logo AboutBlog-logo--small" />
+
+<div class="AboutBlog AboutBlog--small Container">
+  <a href="/" class="AboutBlog-homeLink">Home</a>
+  <div class="AboutBlog-content">
+    <a href="/" title="Home page" class="BlackLink">
+      <h1 class="AboutBlog-subtitle">{{ site.description }}</h1>
+      <h2 class="AboutBlog-title">
+        <span class="AboutBlog-small">By</span> {{ site.title }}
+      </h2>
     </a>
-    <h1 class="AboutBlog-title">{{ site.title }}</h1>
-    <h2 class="AboutBlog-subtitle">{{ site.tagline }}</h2>
-    <p class="AboutBlog-text">
-      {{ site.description }}
-    </p>
   </div>
 </div>
