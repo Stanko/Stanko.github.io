@@ -71,11 +71,11 @@
         Latest post
       </span>
       <h1>
-        <a href="/minor-design-refresh/">
-          Minor design refresh
+        <a href="/webpack-babel-react-revisited/">
+          Setting up Webpack, Babel and React from scratch, revisited
         </a>
       </h1>
-      <div class="Header-date">01 Oct 2017</div>
+      <div class="Header-date">07 Oct 2017</div>
     </div>
   </div>
 </div>
@@ -95,6 +95,74 @@
   
   <div class="Post">
     <img class="Post-bg" src="/public/img/home/poly1.svg" />
+    <div class="Post-content">
+      <h1 class="Post-title">
+        <a href="/webpack-babel-react-revisited/">
+          Setting up Webpack, Babel and React from scratch, revisited
+        </a>
+      </h1>
+
+      <div class="Post-data">
+        <div class="Post-date">
+          <div class="Post-dateIcon">
+            <svg width="2rem" height="2rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+    <g id="Artboard" stroke="#E9514D">
+      <path d="M13.9671692,1.36546107 C12.7598819,0.809853195 11.416126,0.5 10,0.5 C4.75329488,0.5 0.5,4.75329488 0.5,10 C0.5,15.2467051 4.75329488,19.5 10,19.5 L10,19.5 C15.2467051,19.5 19.5,15.2467051 19.5,10 C19.5,7.38242968 18.4413585,5.01211832 16.7288727,3.29386296" id="Oval"></path>
+      <g id="Group" transform="translate(5.000000, 5.000000)">
+        <path d="M9.86260859,0.964621398 L5,6" id="Line"></path>
+        <path d="M0.80664716,3.27680482 L5,6" id="Line"></path>
+      </g>
+    </g>
+  </g>
+</svg>
+
+          </div>
+          07 Oct 2017
+        </div>
+
+        
+        
+      </div>
+
+      <p>Last summer I wrote <a href="/setting-up-webpack-babel-and-react-from-scratch/">this post</a>
+which quickly became my most popular one to day.
+With webpack 2 and 3 it got outdated, so I decided to write a new one.</p>
+
+<h2 id="before-we-start">Before we start</h2>
+
+<p>I’ll assume you have a basic knowledge of unix terminal, npm and JavaScript.
+You did some React, but now you want to level up and learn how setup React projects from scratch.</p>
+
+<p>This is detailed step-by-step guide, as I’ll try to explain the whole process.
+If you just want code to play with, check <a href="https://github.com/Stanko/webpack-babel-react-revisited">this repository</a> I created for this tutorial.</p>
+
+<p>Every time I talk about changing a source file, I’ll paste complete file’s content beneath it.
+You can look for <code class="highlighter-rouge">ADDED IN THIS STEP</code> comments which point out specific things that changed.</p>
+
+<p>Please note that this tutorial is written on macOS using node 8.5.0,
+but it should work on Linux and Windows without any major issues.
+If you find something that is not working,
+please provide a correction in the <a href="#comments">comments</a>.</p>
+
+<h2 id="what-are-we-trying-to-build">What are we trying to build?</h2>
+
+<p>Simple development setup for React applications using Webpack and Babel.
+But my main goal is for people to better understand these tools and how to use them.</p>
+
+<p>Setup that we are going to create is minimal, but it follows the best practices
+and gives you a solid ground to start from.</p>
+
+
+
+      
+          <a class="Post-readmore" href="/webpack-babel-react-revisited/">Read more</a>
+      
+    </div>
+  </div>
+  
+  <div class="Post">
+    <img class="Post-bg" src="/public/img/home/poly2.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/minor-design-refresh/">
@@ -143,7 +211,7 @@ Code snippets are now using a light theme, which should be easier on the eye.</p
   </div>
   
   <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly2.svg" />
+    <img class="Post-bg" src="/public/img/home/poly0.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/trillion-ideas/">
@@ -182,7 +250,7 @@ Code snippets are now using a light theme, which should be easier on the eye.</p
   </div>
   
   <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly0.svg" />
+    <img class="Post-bg" src="/public/img/home/poly1.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/my-blog-setup/">
@@ -247,7 +315,7 @@ There are agencies that are even doing it for client work.</p>
   </div>
   
   <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly1.svg" />
+    <img class="Post-bg" src="/public/img/home/poly2.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/react-image-filter-component/">
@@ -299,66 +367,6 @@ so I kept going and made a React component for all sorts of color filters.</p>
 
       
           <a class="Post-readmore" href="/react-image-filter-component/">Read more</a>
-      
-    </div>
-  </div>
-  
-  <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly2.svg" />
-    <div class="Post-content">
-      <h1 class="Post-title">
-        <a href="/nvm-updating-npm/">
-          How to update npm using nvm
-        </a>
-      </h1>
-
-      <div class="Post-data">
-        <div class="Post-date">
-          <div class="Post-dateIcon">
-            <svg width="2rem" height="2rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-    <g id="Artboard" stroke="#E9514D">
-      <path d="M13.9671692,1.36546107 C12.7598819,0.809853195 11.416126,0.5 10,0.5 C4.75329488,0.5 0.5,4.75329488 0.5,10 C0.5,15.2467051 4.75329488,19.5 10,19.5 L10,19.5 C15.2467051,19.5 19.5,15.2467051 19.5,10 C19.5,7.38242968 18.4413585,5.01211832 16.7288727,3.29386296" id="Oval"></path>
-      <g id="Group" transform="translate(5.000000, 5.000000)">
-        <path d="M9.86260859,0.964621398 L5,6" id="Line"></path>
-        <path d="M0.80664716,3.27680482 L5,6" id="Line"></path>
-      </g>
-    </g>
-  </g>
-</svg>
-
-          </div>
-          02 Sep 2017
-        </div>
-
-        
-        
-      </div>
-
-      <p>If you are JavaScript developer and not using <a href="https://github.com/creationix/nvm">nvm</a> you might want to look at it.
-Node Version Manager is easy way to install, manage and work with multiple node versions.</p>
-
-<p>And I recently got npm update notification, that looks like this:</p>
-
-<p><img src="/public/img/npm-update.png" alt="npm update notification" /></p>
-
-<p><small>This is image from the internet.</small></p>
-
-<p>nvm doesn’t let you update only npm, but just a node+npm version. But there is a really easy way to do it:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># navigate to nvm's node lib folder</span>
-<span class="c"># (replace v8.4.0 with your version)</span>
-<span class="nb">cd</span> ~/.nvm/versions/node/v8.4.0/lib/
-
-<span class="c"># update npm right there</span>
-npm install npm
-
-<span class="c"># reopen your terminal</span>
-</code></pre></div></div>
-
-<p>That’s it. Great thing is that npm can update itself. And this works for any other global npm package.</p>
-
-
       
     </div>
   </div>
@@ -620,6 +628,9 @@ npm install npm
     <script>
   var posts = [
      {
+        url: '/webpack-babel-react-revisited/',
+        title: 'Setting up Webpack, Babel and React from scratch, revisited'
+    },  {
         url: '/minor-design-refresh/',
         title: 'Minor design refresh'
     },  {

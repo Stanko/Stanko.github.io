@@ -71,11 +71,11 @@
         Latest post
       </span>
       <h1>
-        <a href="/minor-design-refresh/">
-          Minor design refresh
+        <a href="/webpack-babel-react-revisited/">
+          Setting up Webpack, Babel and React from scratch, revisited
         </a>
       </h1>
-      <div class="Header-date">01 Oct 2017</div>
+      <div class="Header-date">07 Oct 2017</div>
     </div>
   </div>
 </div>
@@ -95,6 +95,69 @@
   
   <div class="Post">
     <img class="Post-bg" src="/public/img/home/poly1.svg" />
+    <div class="Post-content">
+      <h1 class="Post-title">
+        <a href="/react-rerender-in-component-did-mount/">
+          Animate React component by calling 'setState' in 'componentDidMount'
+        </a>
+      </h1>
+
+      <div class="Post-data">
+        <div class="Post-date">
+          <div class="Post-dateIcon">
+            <svg width="2rem" height="2rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+    <g id="Artboard" stroke="#E9514D">
+      <path d="M13.9671692,1.36546107 C12.7598819,0.809853195 11.416126,0.5 10,0.5 C4.75329488,0.5 0.5,4.75329488 0.5,10 C0.5,15.2467051 4.75329488,19.5 10,19.5 L10,19.5 C15.2467051,19.5 19.5,15.2467051 19.5,10 C19.5,7.38242968 18.4413585,5.01211832 16.7288727,3.29386296" id="Oval"></path>
+      <g id="Group" transform="translate(5.000000, 5.000000)">
+        <path d="M9.86260859,0.964621398 L5,6" id="Line"></path>
+        <path d="M0.80664716,3.27680482 L5,6" id="Line"></path>
+      </g>
+    </g>
+  </g>
+</svg>
+
+          </div>
+          23 Jun 2017
+        </div>
+
+        
+        
+          <a href="/react-rerender-in-component-did-mount/#comments">
+            5
+            Comments
+          </a>
+        
+      </div>
+
+      <p>On the frontend, we do a lot of animations. Most of the simple animations I create by using CSS transitions.
+Either I will change class or inline style of the element, and define transitions in CSS file.</p>
+
+<p>Easiest way to do this in React is to render initial state, and then when it renders, change the state to apply class or style to animate. The easiest way to do it in React is to change state in <code class="highlighter-rouge">componentDidMount</code>.
+Setting state in <code class="highlighter-rouge">componentDidMount</code> is considered to be anti-pattern, as it forces rerender and can lead to property/layout thrashing. But in our case, that is exactly what we want to do.</p>
+
+<p>When we do that, we hit the wall - only second state is rendered and there is no transition between two states. It happens because of browsers optimization - <strong>browsers are not rerendering stuff that changed in the same animation frame.</strong> But they merge changes and render the end result.</p>
+
+<p>The problem I just described is not React exclusive, but browser related.
+Same will happen if we try something like this:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'.AnimateMe'</span><span class="p">);</span>
+<span class="nx">element</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="s1">'50px'</span><span class="p">;</span>
+<span class="nx">element</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="s1">'250px'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>So let’s start with example of the problem.</p>
+
+
+
+      
+          <a class="Post-readmore" href="/react-rerender-in-component-did-mount/">Read more</a>
+      
+    </div>
+  </div>
+  
+  <div class="Post">
+    <img class="Post-bg" src="/public/img/home/poly2.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/introducing-marvin/">
@@ -139,7 +202,7 @@
   </div>
   
   <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly2.svg" />
+    <img class="Post-bg" src="/public/img/home/poly0.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/react-scroll-position-decorator/">
@@ -189,7 +252,7 @@ It is fairly simple way of injecting scroll position to react components. This w
   </div>
   
   <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly0.svg" />
+    <img class="Post-bg" src="/public/img/home/poly1.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/time-pills-tracks-stems/">
@@ -238,7 +301,7 @@ It is fairly simple way of injecting scroll position to react components. This w
   </div>
   
   <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly1.svg" />
+    <img class="Post-bg" src="/public/img/home/poly2.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/work-co-tech-meetup-vol-6/">
@@ -312,57 +375,6 @@ See you there!</p>
 
       
           <a class="Post-readmore" href="/work-co-tech-meetup-vol-6/">Read more</a>
-      
-    </div>
-  </div>
-  
-  <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly2.svg" />
-    <div class="Post-content">
-      <h1 class="Post-title">
-        <a href="/nicer-git-log/">
-          Nicer git log
-        </a>
-      </h1>
-
-      <div class="Post-data">
-        <div class="Post-date">
-          <div class="Post-dateIcon">
-            <svg width="2rem" height="2rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-    <g id="Artboard" stroke="#E9514D">
-      <path d="M13.9671692,1.36546107 C12.7598819,0.809853195 11.416126,0.5 10,0.5 C4.75329488,0.5 0.5,4.75329488 0.5,10 C0.5,15.2467051 4.75329488,19.5 10,19.5 L10,19.5 C15.2467051,19.5 19.5,15.2467051 19.5,10 C19.5,7.38242968 18.4413585,5.01211832 16.7288727,3.29386296" id="Oval"></path>
-      <g id="Group" transform="translate(5.000000, 5.000000)">
-        <path d="M9.86260859,0.964621398 L5,6" id="Line"></path>
-        <path d="M0.80664716,3.27680482 L5,6" id="Line"></path>
-      </g>
-    </g>
-  </g>
-</svg>
-
-          </div>
-          25 Apr 2017
-        </div>
-
-        
-        
-      </div>
-
-      <p>Just a short one. I want to share a simple command to display nicer <code class="highlighter-rouge">git log</code> in the terminal. <code class="highlighter-rouge">git log</code> has <code class="highlighter-rouge">--pretty=format</code> option built-in, we are just going to pass formatting to it.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset'
-</code></pre></div></div>
-
-<p>And it looks like this:</p>
-
-<p><img src="/public/img/nicer-git-log.png" alt="Nicer git log" /></p>
-
-<p>Then add it to your <code class="highlighter-rouge">.bash_profile</code> as an alias (I’m using <code class="highlighter-rouge">glog</code>) and that’s it.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset'"
-</code></pre></div></div>
-
-
       
     </div>
   </div>
@@ -624,6 +636,9 @@ See you there!</p>
     <script>
   var posts = [
      {
+        url: '/webpack-babel-react-revisited/',
+        title: 'Setting up Webpack, Babel and React from scratch, revisited'
+    },  {
         url: '/minor-design-refresh/',
         title: 'Minor design refresh'
     },  {

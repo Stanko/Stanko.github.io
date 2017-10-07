@@ -356,6 +356,7 @@ if (commentForm) {
 var commentsLink = document.querySelector('.Post-commentsLink');
 var comments = document.querySelector('#comments');
 var postBgArchive = document.querySelector('.Post-bg--archive');
+var expandToggles = document.querySelectorAll('.Expandable-toggle');
 
 function getElementOffset(element) {
   var top = 0,
@@ -382,6 +383,21 @@ if (postBgArchive) {
   var src = postBgArchive.getAttribute('data-src').replace('ID', id);
   postBgArchive.setAttribute('src', src);
 }
+
+expandToggles.forEach(function (expandToggle) {
+  expandToggle.addEventListener('click', function (e) {
+    var button = e.currentTarget;
+    var expendableStyle = button.parentElement.nextElementSibling.style;
+
+    if (expendableStyle.display === 'none' || expendableStyle.display === '') {
+      button.classList.add('Expandable-toggle--open');
+      expendableStyle.display = 'block';
+    } else {
+      button.classList.remove('Expandable-toggle--open');
+      expendableStyle.display = 'none';
+    }
+  });
+});
 
 var options = {
   extract: function extract(el) {

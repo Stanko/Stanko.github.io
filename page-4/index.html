@@ -71,11 +71,11 @@
         Latest post
       </span>
       <h1>
-        <a href="/minor-design-refresh/">
-          Minor design refresh
+        <a href="/webpack-babel-react-revisited/">
+          Setting up Webpack, Babel and React from scratch, revisited
         </a>
       </h1>
-      <div class="Header-date">01 Oct 2017</div>
+      <div class="Header-date">07 Oct 2017</div>
     </div>
   </div>
 </div>
@@ -95,6 +95,57 @@
   
   <div class="Post">
     <img class="Post-bg" src="/public/img/home/poly1.svg" />
+    <div class="Post-content">
+      <h1 class="Post-title">
+        <a href="/nicer-git-log/">
+          Nicer git log
+        </a>
+      </h1>
+
+      <div class="Post-data">
+        <div class="Post-date">
+          <div class="Post-dateIcon">
+            <svg width="2rem" height="2rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+    <g id="Artboard" stroke="#E9514D">
+      <path d="M13.9671692,1.36546107 C12.7598819,0.809853195 11.416126,0.5 10,0.5 C4.75329488,0.5 0.5,4.75329488 0.5,10 C0.5,15.2467051 4.75329488,19.5 10,19.5 L10,19.5 C15.2467051,19.5 19.5,15.2467051 19.5,10 C19.5,7.38242968 18.4413585,5.01211832 16.7288727,3.29386296" id="Oval"></path>
+      <g id="Group" transform="translate(5.000000, 5.000000)">
+        <path d="M9.86260859,0.964621398 L5,6" id="Line"></path>
+        <path d="M0.80664716,3.27680482 L5,6" id="Line"></path>
+      </g>
+    </g>
+  </g>
+</svg>
+
+          </div>
+          25 Apr 2017
+        </div>
+
+        
+        
+      </div>
+
+      <p>Just a short one. I want to share a simple command to display nicer <code class="highlighter-rouge">git log</code> in the terminal. <code class="highlighter-rouge">git log</code> has <code class="highlighter-rouge">--pretty=format</code> option built-in, we are just going to pass formatting to it.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset'
+</code></pre></div></div>
+
+<p>And it looks like this:</p>
+
+<p><img src="/public/img/nicer-git-log.png" alt="Nicer git log" /></p>
+
+<p>Then add it to your <code class="highlighter-rouge">.bash_profile</code> as an alias (I’m using <code class="highlighter-rouge">glog</code>) and that’s it.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset'"
+</code></pre></div></div>
+
+
+      
+    </div>
+  </div>
+  
+  <div class="Post">
+    <img class="Post-bg" src="/public/img/home/poly2.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/being-a-tech-lead/">
@@ -144,7 +195,7 @@ Luckily, I can fulfill my geek needs working on pet projects.</p>
   </div>
   
   <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly2.svg" />
+    <img class="Post-bg" src="/public/img/home/poly0.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/react-animate-height-slide-up-down/">
@@ -201,7 +252,7 @@ and to any specific value in pixels.</p>
   </div>
   
   <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly0.svg" />
+    <img class="Post-bg" src="/public/img/home/poly1.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/talks-i-like/">
@@ -247,7 +298,7 @@ and to any specific value in pixels.</p>
   </div>
   
   <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly1.svg" />
+    <img class="Post-bg" src="/public/img/home/poly2.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/mobile-chrome-vh-units-fix/">
@@ -300,67 +351,6 @@ and page jump. On Android, keyboard toggle will do the same.</p>
 
       
           <a class="Post-readmore" href="/mobile-chrome-vh-units-fix/">Read more</a>
-      
-    </div>
-  </div>
-  
-  <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly2.svg" />
-    <div class="Post-content">
-      <h1 class="Post-title">
-        <a href="/react-router-subfolder-on-server/">
-          Deploying React (Router) app to the subfolder on server
-        </a>
-      </h1>
-
-      <div class="Post-data">
-        <div class="Post-date">
-          <div class="Post-dateIcon">
-            <svg width="2rem" height="2rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-    <g id="Artboard" stroke="#E9514D">
-      <path d="M13.9671692,1.36546107 C12.7598819,0.809853195 11.416126,0.5 10,0.5 C4.75329488,0.5 0.5,4.75329488 0.5,10 C0.5,15.2467051 4.75329488,19.5 10,19.5 L10,19.5 C15.2467051,19.5 19.5,15.2467051 19.5,10 C19.5,7.38242968 18.4413585,5.01211832 16.7288727,3.29386296" id="Oval"></path>
-      <g id="Group" transform="translate(5.000000, 5.000000)">
-        <path d="M9.86260859,0.964621398 L5,6" id="Line"></path>
-        <path d="M0.80664716,3.27680482 L5,6" id="Line"></path>
-      </g>
-    </g>
-  </g>
-</svg>
-
-          </div>
-          18 Jan 2017
-        </div>
-
-        
-        
-      </div>
-
-      <p>If you ever had to deploy React Router app to the subfolder on the server, you know what the problem is.
-Dev server will always launch app on the server root.
-And routes will get messed up once you upload it to the server.
-Here are two solutions I use in these cases.</p>
-
-<h2 id="easy-way-just-use-hashhistory">Easy way, just use <code class="highlighter-rouge">hashHistory</code></h2>
-
-<p>The easiest way to achieve this is to use <code class="highlighter-rouge">hashHistory</code> instead of <code class="highlighter-rouge">browserHistory</code>.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { Router hashHistory } from 'react-router';
-
-&lt;Router history={ hashHistory }&gt;
-  ...
-&lt;/Router&gt;
-</code></pre></div></div>
-
-<p>This is the best approach if your subfolder name changes
-(for example, if folder name is a build version).
-But you’ll have <code class="highlighter-rouge">/#/</code> included in the every URL.
-If this bothers you, check the second solution.</p>
-
-
-
-      
-          <a class="Post-readmore" href="/react-router-subfolder-on-server/">Read more</a>
       
     </div>
   </div>
@@ -625,6 +615,9 @@ If this bothers you, check the second solution.</p>
     <script>
   var posts = [
      {
+        url: '/webpack-babel-react-revisited/',
+        title: 'Setting up Webpack, Babel and React from scratch, revisited'
+    },  {
         url: '/minor-design-refresh/',
         title: 'Minor design refresh'
     },  {

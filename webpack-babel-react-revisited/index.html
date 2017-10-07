@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+
+  
+
+  <title>Setting up Webpack, Babel and React from scratch, revisited &middot; Muffin Man</title>
+
+  <link rel="stylesheet" href="/public/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700|Open+Sans:300,600,800&subset=latin-ext" rel="stylesheet">
+
+  <meta property="og:site_name" content="Muffin Man">
+  <meta property="og:title" content="Setting up Webpack, Babel and React from scratch, revisited &middot; Muffin Man">
+  <meta property="og:description" content="Last summer I wrote this post which quickly became my most popular one to day. With webpack 2 and 3 it got outdated, so I decided to write a new...">
+  <meta property="og:image" content="http://stanko.github.io/public/favicon/apple-touch-icon.png">
+  <meta property="og:url" content="http://stanko.github.io/webpack-babel-react-revisited/">
+  <meta name="twitter:title" content="Setting up Webpack, Babel and React from scratch, revisited &middot; Muffin Man">
+  <meta name="twitter:description" content="Last summer I wrote this post which quickly became my most popular one to day. With webpack 2 and 3 it got outdated, so I decided to write a new...">
+  <meta name="twitter:image" content="http://stanko.github.io/public/favicon/apple-touch-icon.png">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/public/favicon/apple-touch-icon.png?v=v3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon/favicon-32x32.png?v=v3">
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon/favicon-16x16.png?v=v3">
+  <link rel="manifest" href="/public/favicon/manifest.json?v=v3">
+  <link rel="mask-icon" href="/public/favicon/safari-pinned-tab.svg?v=v3" color="#e04856">
+  <link rel="shortcut icon" href="/public/favicon/favicon.ico?v=v3">
+  <meta name="msapplication-config" content="/public/favicon/browserconfig.xml?v=v3">
+  <meta name="theme-color" content="#ffffff">
+
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body class="Body--post">
+    <div class="Header-line"></div>
+<div class="Header Header--page">
+  <div class="RotationWrapper">
+    <div class="Rotation">
+      <div class="Rotation-item Rotation-item--one">
+        <img src="/public/img/poly-1.svg" />
+      </div>
+      <div class="Rotation-item Rotation-item--two">
+        <img src="/public/img/poly-2.svg" />
+      </div>
+      <div class="Rotation-item Rotation-item--three">
+        <img src="/public/img/poly-3.svg" />
+      </div>
+    </div>
+  </div>
+
+  <div class="Header-title">
+    <div class="Container">
+      <button class="Header-menuButton Menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="Header-titleContent">
+        <h1>Setting up Webpack, Babel and React from scratch, revisited</h1>
+        
+          <div class="Header-date">07 Oct 2017</div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="AboutBlog AboutBlog--small Container">
+  <a href="/" class="AboutBlog-homeLink">Home</a>
+  <div class="AboutBlog-content">
+    <a href="/" title="Home page" class="BlackLink">
+      <h1 class="AboutBlog-subtitle"><div class="c1">Frontend</div><div class="c2">development</div><div class="c1">& Rants</div></h1>
+      <h2 class="AboutBlog-title">
+        <span class="AboutBlog-small">By</span> Muffin Man
+      </h2>
+    </a>
+  </div>
+</div>
+
+
+    <div class="Content">
+      <div class="Post Container">
+        <div class="Post-top">
+          <div class="Post-readTime">This article will take about 25  minutes to read.</div>
+
+          <a href="#comments" class="Post-commentsLink">
+            
+            
+              No comments
+            
+          </a>
+        </div>
+
+        <p>Last summer I wrote <a href="/setting-up-webpack-babel-and-react-from-scratch/">this post</a>
+which quickly became my most popular one to day.
+With webpack 2 and 3 it got outdated, so I decided to write a new one.</p>
+
+<h2 id="before-we-start">Before we start</h2>
+
+<p>I’ll assume you have a basic knowledge of unix terminal, npm and JavaScript.
+You did some React, but now you want to level up and learn how setup React projects from scratch.</p>
+
+<p>This is detailed step-by-step guide, as I’ll try to explain the whole process.
+If you just want code to play with, check <a href="https://github.com/Stanko/webpack-babel-react-revisited">this repository</a> I created for this tutorial.</p>
+
+<p>Every time I talk about changing a source file, I’ll paste complete file’s content beneath it.
+You can look for <code class="highlighter-rouge">ADDED IN THIS STEP</code> comments which point out specific things that changed.</p>
+
+<p>Please note that this tutorial is written on macOS using node 8.5.0,
+but it should work on Linux and Windows without any major issues.
+If you find something that is not working,
+please provide a correction in the <a href="#comments">comments</a>.</p>
+
+<h2 id="what-are-we-trying-to-build">What are we trying to build?</h2>
+
+<p>Simple development setup for React applications using Webpack and Babel.
+But my main goal is for people to better understand these tools and how to use them.</p>
+
+<p>Setup that we are going to create is minimal, but it follows the best practices
+and gives you a solid ground to start from.</p>
+
+<!--more-->
+
+<h3 id="who-am-i-and-why-should-you-listen-to-me">Who am I and why should you listen to me?</h3>
+
+<p>Well, I’m principle developer at <a href="https://work.co">Work&amp;Co</a>.
+I have a lot of experience on production level React projects,
+for clients like Twitter, Mastercard, Aeromexico, Hampton Creek…
+<a href="https://github.com/workco/marvin">Marvin boilerplate</a><sup>1</sup> is my creation as well,
+and what I’m trying to teach you is directly based on my experience on these projects.</p>
+
+<p><small class="Footnote">
+<sup>1</sup> We have big plans for Marvin in the near future.
+</small></p>
+
+<h1 id="init">Init</h1>
+
+<p>Create a new folder, and <code class="highlighter-rouge">package.json</code> file in it, with the following content:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack-babel-react-revisited"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Of course you can replace “webpack-babel-react-revisited” with your project name.</p>
+
+<div class="Expandable-toggleWrapper">
+  <button class="Expandable-toggle">
+    <span class="Expandable-toggleShowText">Show</span>
+    <span class="Expandable-toggleHideText">Hide</span>
+    file structure after this step
+  </button>
+</div>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- package.json
+</code></pre></div></div>
+
+<h1 id="webpack">Webpack</h1>
+
+<p>We’ll start with installing webpack for module bundling.
+It will transpile and bundle our JavaScript files, compile SASS or PostCSS,
+optimize images… and a bunch of other nifty things.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install <span class="nt">--save-dev</span> webpack
+</code></pre></div></div>
+
+<p>Then we need some modules.
+We’ll keep our source files in <code class="highlighter-rouge">src</code> folder, so we need to create it.
+Then create <code class="highlighter-rouge">js</code> folder in the <code class="highlighter-rouge">src</code> folder you just created, and <code class="highlighter-rouge">app.js</code> file in it.</p>
+
+<p>Add a simple <code class="highlighter-rouge">console.log('Hello world!');</code> to <code class="highlighter-rouge">app.js</code>;</p>
+
+<p>Now we can run webpack from the terminal for the first time:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./node_modules/webpack/bin/webpack.js ./src/js/app.js <span class="nt">--output-filename</span> ./dist/app.bundle.js
+</code></pre></div></div>
+
+<p>If you open generated <code class="highlighter-rouge">app.bundle.js</code> you’ll see webpack’s module handling code at the top,
+and at the end you’ll find our modest <code class="highlighter-rouge">console.log</code>.
+Webpack’s code does all the work with modules</p>
+<ul>
+  <li>connecting them together while keeping them in separate scopes.
+At this point we not leveraging that (yet).</li>
+</ul>
+
+<p>This command runs webpack using our <code class="highlighter-rouge">app.js</code> as entry and outputs the result to the <code class="highlighter-rouge">dist</code> folder.
+As it already looks complicated we’ll start moving webpack configuration to a file.</p>
+
+<p>Let’s create <code class="highlighter-rouge">webpack.config.js</code> in our project’s root.
+We need to add config we just used - only entry and output paths. <sup>2</sup></p>
+
+<p><small class="Footnote">
+<sup>2</sup>
+Plus <code class="highlighter-rouge">paths</code> contstant. I like to keep paths in the constant object, as it makes things easier to read.
+</small></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// We are using node's native package 'path'</span>
+<span class="c1">// https://nodejs.org/api/path.html</span>
+<span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'path'</span><span class="p">);</span>
+
+<span class="c1">// Constant with our paths</span>
+<span class="kd">const</span> <span class="nx">paths</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">DIST</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">'dist'</span><span class="p">),</span>
+  <span class="na">JS</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">'src/js'</span><span class="p">),</span>
+<span class="p">};</span>
+
+<span class="c1">// Webpack configuration</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">entry</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">JS</span><span class="p">,</span> <span class="s1">'app.js'</span><span class="p">),</span>
+  <span class="na">output</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">path</span><span class="p">:</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">DIST</span><span class="p">,</span>
+    <span class="na">filename</span><span class="p">:</span> <span class="s1">'app.bundle.js'</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>You’ll see that we added our <code class="highlighter-rouge">app.js</code> as entry and for the output
+we selected <code class="highlighter-rouge">dist</code> folder and <code class="highlighter-rouge">app.bundle.js</code> as the filename.</p>
+
+<p>Now we can run webpack without inline configuration.
+By default webpack looks for <code class="highlighter-rouge">webpack.config.js</code> and reads config from it.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./node_modules/webpack/bin/webpack.js
+</code></pre></div></div>
+
+<p>This command has the exact same result as the first one.
+Now let’s try to make it even nicer.</p>
+
+<p>Open <code class="highlighter-rouge">package.json</code> which at this point should look like this:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack-babel-react-revisited"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"webpack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^3.6.0"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>We’ll add <code class="highlighter-rouge">script</code> section.
+In this sections, let’s add <code class="highlighter-rouge">build</code> task with only one command - <code class="highlighter-rouge">webpack</code>.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack-babel-react-revisited"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"webpack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^3.6.0"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Now we can run it using:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm run build
+</code></pre></div></div>
+
+<p>Npm tasks allow us not to type full path to the package binary every time.
+It searches for locally installed packages in the project’s <code class="highlighter-rouge">node_modules</code> folder.</p>
+
+<p>Again, it has the same result like the previous command,
+but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
+
+<p>Now we have our simple <code class="highlighter-rouge">build</code> process, so we can proceed with development setup.</p>
+
+<div class="Expandable-toggleWrapper">
+  <button class="Expandable-toggle">
+    <span class="Expandable-toggleShowText">Show</span>
+    <span class="Expandable-toggleHideText">Hide</span>
+    file structure after this step
+  </button>
+</div>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dist <span class="c"># created by webpack when we run "npm run build"</span>
+node_modules <span class="c"># created by npm</span>
+src
+  js
+    - app.js
+- package-lock.json <span class="c"># created by npm (for node v8 and higher)</span>
+- package.json
+- webpack.config.js
+</code></pre></div></div>
+
+<h2 id="webpack-dev-server">Webpack dev server</h2>
+
+<p>To be able to open our application in a browser, we’ll need a server.
+Webpack already provides us with a <a href="https://webpack.js.org/configuration/dev-server/">dev server</a>.
+It will server our files during development (obviosly),
+but also enable us to use hot module reload (not covered by this post).</p>
+
+<p>Let’s install it:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install <span class="nt">--save-dev</span> webpack-dev-server
+</code></pre></div></div>
+<p>Let’s update <code class="highlighter-rouge">package.json</code> right away to make it easier to run dev server.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack-babel-react-revisited"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"webpack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^3.6.0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"webpack-dev-server"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^2.9.1"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"dev"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack-dev-server"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>We added only one line: <code class="highlighter-rouge">"dev": "webpack-dev-server",</code>.</p>
+
+<p>Now if you run</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm run dev
+</code></pre></div></div>
+
+<p>it will fire up our development server, and it is going to be available at <a href="http://localhost:8080">http://localhost:8080</a>.
+Now it will just list our project’s files.</p>
+
+<p>So let’s create a simple <code class="highlighter-rouge">index.html</code> in the <code class="highlighter-rouge">src</code> folder</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;title&gt;</span>Webpack Babel React revisited<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>and update <code class="highlighter-rouge">webpack.config.js</code> to use <code class="highlighter-rouge">src</code> as a content base.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// We are using node's native package 'path'</span>
+<span class="c1">// https://nodejs.org/api/path.html</span>
+<span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'path'</span><span class="p">);</span>
+
+<span class="c1">// Constant with our paths</span>
+<span class="kd">const</span> <span class="nx">paths</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">DIST</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">'dist'</span><span class="p">),</span>
+  <span class="na">SRC</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">'src'</span><span class="p">),</span> <span class="c1">// source folder path -&gt; ADDED IN THIS STEP</span>
+  <span class="na">JS</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">'src/js'</span><span class="p">),</span>
+<span class="p">};</span>
+
+<span class="c1">// Webpack configuration</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">entry</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">JS</span><span class="p">,</span> <span class="s1">'app.js'</span><span class="p">),</span>
+  <span class="na">output</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">path</span><span class="p">:</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">DIST</span><span class="p">,</span>
+    <span class="na">filename</span><span class="p">:</span> <span class="s1">'app.bundle.js'</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="c1">// Dev server configuration -&gt; ADDED IN THIS STEP</span>
+  <span class="c1">// Now it uses our "src" folder as a starting point</span>
+  <span class="na">devServer</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">contentBase</span><span class="p">:</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">SRC</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>Every time you change webpack config you need to restart webpack (or webpack dev server).</p>
+
+<p>Restart <code class="highlighter-rouge">npm run dev</code> and visit <a href="http://localhost:8080">http://localhost:8080</a>, it will just show a blank page.
+No signs of our JavaScript.
+To automatically inject <code class="highlighter-rouge">&lt;script&gt;</code> tags with our bundled application we’ll use
+<a href="https://github.com/jantimon/html-webpack-plugin">html-webpack-plugin</a>.</p>
+
+<h4 id="html-webpack-plugin">HTML Webpack Plugin</h4>
+
+<p>This plugin simplifies creation of HTML files to serve your webpack bundles.
+Let’s install it:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install <span class="nt">--save-dev</span> html-webpack-plugin
+</code></pre></div></div>
+
+<p>Once installed we need to activate it in <code class="highlighter-rouge">webpack.config.js</code>.
+Require it and add it to the <code class="highlighter-rouge">plugins</code> section of the config:</p>
+
+<p><small class="Footnote">
+  We don’t need <code class="highlighter-rouge">contentBase: paths.SRC</code> anymore as it will be handled by html plugin.
+  So we’ll remove whole <code class="highlighter-rouge">devServer</code> configuration object for now.
+</small></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// We are using node's native package 'path'</span>
+<span class="c1">// https://nodejs.org/api/path.html</span>
+<span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'path'</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">HtmlWebpackPlugin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'html-webpack-plugin'</span><span class="p">);</span> <span class="c1">// Import our plugin -&gt; ADDED IN THIS STEP</span>
+
+<span class="c1">// Constant with our paths</span>
+<span class="kd">const</span> <span class="nx">paths</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">DIST</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">'dist'</span><span class="p">),</span>
+  <span class="na">SRC</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">'src'</span><span class="p">),</span>
+  <span class="na">JS</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">'src/js'</span><span class="p">),</span>
+<span class="p">};</span>
+
+<span class="c1">// Webpack configuration</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">entry</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">JS</span><span class="p">,</span> <span class="s1">'app.js'</span><span class="p">),</span>
+  <span class="na">output</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">path</span><span class="p">:</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">DIST</span><span class="p">,</span>
+    <span class="na">filename</span><span class="p">:</span> <span class="s1">'app.bundle.js'</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="c1">// Tell webpack to use html plugin -&gt; ADDED IN THIS STEP</span>
+  <span class="c1">// index.html is used as a template in which it'll inject bundled app.</span>
+  <span class="na">plugins</span><span class="p">:</span> <span class="p">[</span>
+    <span class="k">new</span> <span class="nx">HtmlWebpackPlugin</span><span class="p">({</span>
+      <span class="na">template</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">SRC</span><span class="p">,</span> <span class="s1">'index.html'</span><span class="p">),</span>
+    <span class="p">}),</span>
+  <span class="p">],</span>
+  <span class="c1">// Dev server configuration -&gt; REMOVED IN THIS STEP</span>
+  <span class="c1">// devServer: {</span>
+  <span class="c1">//   contentBase: paths.SRC,</span>
+  <span class="c1">// },</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>When we restart <code class="highlighter-rouge">dev</code> task, we’ll be able to see <code class="highlighter-rouge">Hello world!</code> in the console.
+Now we are talking! We can start adding some modern JavaScript.</p>
+
+<div class="Expandable-toggleWrapper">
+  <button class="Expandable-toggle">
+    <span class="Expandable-toggleShowText">Show</span>
+    <span class="Expandable-toggleHideText">Hide</span>
+    file structure after this step
+  </button>
+</div>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dist <span class="c"># created by webpack when we run "npm run build"</span>
+node_modules <span class="c"># created by npm</span>
+src
+  js
+    - app.js
+  - index.html
+- package-lock.json <span class="c"># created by npm (for node v8 and higher)</span>
+- package.json
+- webpack.config.js
+</code></pre></div></div>
+
+<h2 id="babel">Babel</h2>
+
+<p>To be able to use ES2015 and beyond we’ll need to provide a transpiler.
+Our choice is <a href="https://babeljs.io/">Babel</a>.
+Babel takes modern JavaScript and transpiles it - converts it to the old version
+of JavaScript that can be executed in the browsers that don’t support modern JavaScript standards.</p>
+
+<p>We need this for two reasons (and you probably know both already):</p>
+
+<ul>
+  <li>React and JSX heavily rely on modern JavaScript features</li>
+  <li>You <strong>should</strong> use modern JavaScript - it makes things easier and helps you write better code</li>
+</ul>
+
+<p>Let’s continue by installing four packages:</p>
+
+<ul>
+  <li>Babel core package</li>
+  <li>Babel webpack loader</li>
+  <li>Babel env preset <sup>3</sup></li>
+  <li>Babel React preset</li>
+</ul>
+
+<p><small class="Footnote">
+<sup>3</sup> <code class="highlighter-rouge">babel-preset-env</code> is successor of <code class="highlighter-rouge">babel-preset-es2015</code>
+and it has couple of big advantages which may be covered in another post.
+You can read more about using it in
+<a href="https://philipwalton.com/articles/deploying-es2015-code-in-production-today/">this post</a>
+</small></p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install <span class="nt">--save-dev</span> babel-core babel-loader babel-preset-env babel-preset-react
+</code></pre></div></div>
+
+<p>Babel also has default config file which is <code class="highlighter-rouge">.babelrc</code>, so let’s create it in our project’s root:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "presets": ["env", "react"]
+}
+</code></pre></div></div>
+
+<p>This will tell Babel to use two presets we just installed.</p>
+
+<p>Now we need to update <code class="highlighter-rouge">webpack.config.js</code> to use Babel loader for <code class="highlighter-rouge">.js</code> and <code class="highlighter-rouge">.jsx</code> files.
+We also added some sugar, so you can import those files without specifying file extension.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// We are using node's native package 'path'</span>
+<span class="c1">// https://nodejs.org/api/path.html</span>
+<span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'path'</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">HtmlWebpackPlugin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'html-webpack-plugin'</span><span class="p">);</span>
+
+<span class="c1">// Constant with our paths</span>
+<span class="kd">const</span> <span class="nx">paths</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">DIST</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">'dist'</span><span class="p">),</span>
+  <span class="na">SRC</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">'src'</span><span class="p">),</span>
+  <span class="na">JS</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">'src/js'</span><span class="p">),</span>
+<span class="p">};</span>
+
+<span class="c1">// Webpack configuration</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">entry</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">JS</span><span class="p">,</span> <span class="s1">'app.js'</span><span class="p">),</span>
+  <span class="na">output</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">path</span><span class="p">:</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">DIST</span><span class="p">,</span>
+    <span class="na">filename</span><span class="p">:</span> <span class="s1">'app.bundle.js'</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="c1">// Tell webpack to use html plugin</span>
+  <span class="na">plugins</span><span class="p">:</span> <span class="p">[</span>
+    <span class="k">new</span> <span class="nx">HtmlWebpackPlugin</span><span class="p">({</span>
+      <span class="na">template</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">SRC</span><span class="p">,</span> <span class="s1">'index.html'</span><span class="p">),</span>
+    <span class="p">}),</span>
+  <span class="p">],</span>
+  <span class="c1">// Loaders configuration -&gt; ADDED IN THIS STEP</span>
+  <span class="c1">// We are telling webpack to use "babel-loader" for .js and .jsx files</span>
+  <span class="na">module</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">rules</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.(</span><span class="sr">js|jsx</span><span class="se">)</span><span class="sr">$/</span><span class="p">,</span>
+        <span class="na">exclude</span><span class="p">:</span> <span class="sr">/node_modules/</span><span class="p">,</span>
+        <span class="na">use</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s1">'babel-loader'</span><span class="p">,</span>
+        <span class="p">],</span>
+      <span class="p">},</span>
+    <span class="p">],</span>
+  <span class="p">},</span>
+  <span class="c1">// Enable importing JS files without specifying their's extenstion -&gt; ADDED IN THIS STEP</span>
+  <span class="c1">//</span>
+  <span class="c1">// So we can write:</span>
+  <span class="c1">// import MyComponent from './my-component';</span>
+  <span class="c1">//</span>
+  <span class="c1">// Instead of:</span>
+  <span class="c1">// import MyComponent from './my-component.jsx';</span>
+  <span class="na">resolve</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">extensions</span><span class="p">:</span> <span class="p">[</span><span class="s1">'.js'</span><span class="p">,</span> <span class="s1">'.jsx'</span><span class="p">],</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>Restart <code class="highlighter-rouge">npm run dev</code> once again. Nothing really changed, but our JavaScript is now transpiled,
+and if you used any of the modern JavaScript features, those would be transpiled to ES5 synthax.</p>
+
+<p>Finally let’s add React.</p>
+
+<div class="Expandable-toggleWrapper">
+  <button class="Expandable-toggle">
+    <span class="Expandable-toggleShowText">Show</span>
+    <span class="Expandable-toggleHideText">Hide</span>
+    file structure after this step
+  </button>
+</div>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dist <span class="c"># created by webpack when we run "npm run build"</span>
+node_modules <span class="c"># created by npm</span>
+src
+  js
+    - app.js
+  - index.html
+- .babelrc
+- package-lock.json <span class="c"># created by npm (for node v8 and higher)</span>
+- package.json
+- webpack.config.js
+</code></pre></div></div>
+
+<h2 id="react">React</h2>
+
+<p>This is probably the main reason you are reading this,
+so I’ll assume you are already familiar with <a href="https://reactjs.org/">React</a>.</p>
+
+<p>Install it (this time as a regular dependency):</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install <span class="nt">--save</span> react react-dom
+</code></pre></div></div>
+
+<p>Let’s add div with id <code class="highlighter-rouge">app</code> to <code class="highlighter-rouge">index.html</code>, in which we’ll render our React app.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;title&gt;</span>Webpack Babel React revisited<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>Finally replace <code class="highlighter-rouge">console.log</code> in our <code class="highlighter-rouge">app.js</code> with a real React component.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'react'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">render</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'react-dom'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">class</span> <span class="nx">Hello</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+        <span class="nx">Hello</span> <span class="k">from</span> <span class="nx">react</span>
+      <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">Hello</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'app'</span><span class="p">));</span>
+</code></pre></div></div>
+
+<p>Restart dev server one more time, and voala, we have our React app running!</p>
+
+<h2 id="this-is-minimal-working-setup">This is minimal working setup</h2>
+
+<p>At this point, you have bare bones setup for making React apps using Webpack and Babel.
+You can start exploring on your own, add more stuff and modify it to fit your needs.
+However in this post I’ll cover two more things - CSS and assets loaders.</p>
+
+<h1 id="css">CSS</h1>
+
+<p>Every web application needs CSS. So let’s add a way of getting CSS into ours.
+Create <code class="highlighter-rouge">src/css</code> folder and a simple <code class="highlighter-rouge">style.css</code> in it.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="m">#f9fafb</span><span class="p">;</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="n">Helvetica</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>To add this CSS file to the app, we’ll use
+<a href="https://github.com/webpack-contrib/css-loader">css-loader</a>.</p>
+
+<p>CSS loader needs to write loaded CSS code to either <code class="highlighter-rouge">style</code> tag in the head
+or external stylesheet file.
+If you want to write it to the <code class="highlighter-rouge">style</code> tag you should use
+<a href="https://github.com/webpack-contrib/style-loader">style-loader</a>.</p>
+
+<p>But for now, we’ll extract it to the external file by using
+<a href="https://github.com/webpack-contrib/extract-text-webpack-plugin">extract-text-webpack-plugin</a>.
+HTML webpack plugin, that we already set, will add css file to <code class="highlighter-rouge">index.html</code> for us.</p>
+
+<p>Again, start by installing packages:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install <span class="nt">--save-dev</span> css-loader extract-text-webpack-plugin
+</code></pre></div></div>
+
+<p>We’ll need to do two more things:</p>
+
+<ul>
+  <li>import our CSS in <code class="highlighter-rouge">app.js</code>:</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'react'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">render</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'react-dom'</span><span class="p">;</span>
+
+<span class="k">import</span> <span class="s1">'../css/style.css'</span><span class="p">;</span> <span class="c1">// Import CSS -&gt; ADDED IN THIS STEP</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">class</span> <span class="nx">Hello</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+        <span class="nx">Hello</span> <span class="k">from</span> <span class="nx">react</span>
+      <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">Hello</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'app'</span><span class="p">));</span>
+</code></pre></div></div>
+
+<ul>
+  <li>and update webpack config to use <code class="highlighter-rouge">css-loader</code> for CSS files:</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// We are using node's native package 'path'</span>
+<span class="c1">// https://nodejs.org/api/path.html</span>
+<span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'path'</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">HtmlWebpackPlugin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'html-webpack-plugin'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">ExtractTextPlugin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'extract-text-webpack-plugin'</span><span class="p">);</span> <span class="c1">//  -&gt; ADDED IN THIS STEP</span>
+
+<span class="c1">// Constant with our paths</span>
+<span class="kd">const</span> <span class="nx">paths</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">DIST</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">'dist'</span><span class="p">),</span>
+  <span class="na">SRC</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">'src'</span><span class="p">),</span>
+  <span class="na">JS</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">'src/js'</span><span class="p">),</span>
+<span class="p">};</span>
+
+<span class="c1">// Webpack configuration</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">entry</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">JS</span><span class="p">,</span> <span class="s1">'app.js'</span><span class="p">),</span>
+  <span class="na">output</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">path</span><span class="p">:</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">DIST</span><span class="p">,</span>
+    <span class="na">filename</span><span class="p">:</span> <span class="s1">'app.bundle.js'</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="c1">// Tell webpack to use html plugin</span>
+  <span class="na">plugins</span><span class="p">:</span> <span class="p">[</span>
+    <span class="k">new</span> <span class="nx">HtmlWebpackPlugin</span><span class="p">({</span>
+      <span class="na">template</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">SRC</span><span class="p">,</span> <span class="s1">'index.html'</span><span class="p">),</span>
+    <span class="p">}),</span>
+    <span class="k">new</span> <span class="nx">ExtractTextPlugin</span><span class="p">(</span><span class="s1">'style.bundle.css'</span><span class="p">),</span> <span class="c1">// CSS will be extracted to this bundle file -&gt; ADDED IN THIS STEP</span>
+  <span class="p">],</span>
+  <span class="c1">// Loaders configuration</span>
+  <span class="c1">// We are telling webpack to use "babel-loader" for .js and .jsx files</span>
+  <span class="na">module</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">rules</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.(</span><span class="sr">js|jsx</span><span class="se">)</span><span class="sr">$/</span><span class="p">,</span>
+        <span class="na">exclude</span><span class="p">:</span> <span class="sr">/node_modules/</span><span class="p">,</span>
+        <span class="na">use</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s1">'babel-loader'</span><span class="p">,</span>
+        <span class="p">],</span>
+      <span class="p">},</span>
+      <span class="c1">// CSS loader to CSS files -&gt; ADDED IN THIS STEP</span>
+      <span class="c1">// Files will get handled by css loader and then passed to the extract text plugin</span>
+      <span class="c1">// which will write it to the file we defined above</span>
+      <span class="p">{</span>
+        <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">css$/</span><span class="p">,</span>
+        <span class="na">loader</span><span class="p">:</span> <span class="nx">ExtractTextPlugin</span><span class="p">.</span><span class="nx">extract</span><span class="p">({</span>
+          <span class="na">use</span><span class="p">:</span> <span class="s1">'css-loader'</span><span class="p">,</span>
+        <span class="p">}),</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+  <span class="p">},</span>
+  <span class="c1">// Enable importing JS files without specifying their's extenstion</span>
+  <span class="c1">//</span>
+  <span class="c1">// So we can write:</span>
+  <span class="c1">// import MyComponent from './my-component';</span>
+  <span class="c1">//</span>
+  <span class="c1">// Instead of:</span>
+  <span class="c1">// import MyComponent from './my-component.jsx';</span>
+  <span class="na">resolve</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">extensions</span><span class="p">:</span> <span class="p">[</span><span class="s1">'.js'</span><span class="p">,</span> <span class="s1">'.jsx'</span><span class="p">],</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>This might seem very complicated to get one CSS file to the page,
+but it is very useful when you have multiple stylesheet files
+and pre-processing (or post-processing).</p>
+
+<p>Restart <code class="highlighter-rouge">npm run dev</code>, and you’ll see that five lines of our beautiful CSS are applied on the page.</p>
+
+<p>And if we run <code class="highlighter-rouge">npm run build</code> you’ll see <code class="highlighter-rouge">style.bundle.css</code><sup>4</sup> created in the <code class="highlighter-rouge">dist</code> folder,
+next to js and html files.</p>
+
+<p><small class="Footnote">
+<sup>4</sup> I use <code class="highlighter-rouge">.bundle</code> postfix so you can easier differentiate webpack bundles from the source files.
+</small></p>
+
+<div class="Expandable-toggleWrapper">
+  <button class="Expandable-toggle">
+    <span class="Expandable-toggleShowText">Show</span>
+    <span class="Expandable-toggleHideText">Hide</span>
+    file structure after this step
+  </button>
+</div>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dist <span class="c"># created by webpack when we run "npm run build"</span>
+node_modules <span class="c"># created by npm</span>
+src
+  css
+    - style.css
+  js
+    - app.js
+  - index.html
+- .babelrc
+- package-lock.json <span class="c"># created by npm (for node v8 and higher)</span>
+- package.json
+- webpack.config.js
+</code></pre></div></div>
+
+<h1 id="assets">Assets</h1>
+
+<p>For the end, we’ll add <a href="https://github.com/webpack-contrib/file-loader">file-loader</a>.
+As it’s name suggests it handles files - images, SVGs, fonts, videos or anything else you need.</p>
+
+<p>Let’s create <code class="highlighter-rouge">/src/assets/</code> folder and add
+<a href="https://raw.githubusercontent.com/Stanko/webpack-babel-react-revisited/master/src/assets/keen.png">Commander Keen</a><sup>5</sup> image in it.</p>
+
+<p><small class="Footnote">
+<sup>5</sup> I still love <a href="https://en.m.wikipedia.org/wiki/Commander_Keen">Commander Keen</a> games.
+</small></p>
+
+<p>Follow the same flow as with CSS files</p>
+
+<ul>
+  <li>install loader</li>
+</ul>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install <span class="nt">--save-dev</span> file-loader
+</code></pre></div></div>
+
+<ul>
+  <li>import image in <code class="highlighter-rouge">app.js</code> and render it</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'react'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">render</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'react-dom'</span><span class="p">;</span>
+
+<span class="k">import</span> <span class="s1">'../css/style.css'</span><span class="p">;</span>
+
+<span class="k">import</span> <span class="nx">keenImage</span> <span class="k">from</span> <span class="s1">'../assets/keen.png'</span><span class="p">;</span> <span class="c1">// Importing image -&gt; ADDED IN THIS STEP</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">class</span> <span class="nx">Hello</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+        <span class="nx">Hello</span> <span class="k">from</span> <span class="nx">react</span>
+
+        <span class="p">{</span><span class="cm">/* ADDED IN THIS STEP */</span><span class="p">}</span>
+        <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="p">{</span> <span class="nx">keenImage</span> <span class="p">}</span> <span class="nx">alt</span><span class="o">=</span><span class="s1">'Commander Keen'</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">Hello</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'app'</span><span class="p">));</span>
+</code></pre></div></div>
+
+<ul>
+  <li>update webpack config to handle image assets</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// We are using node's native package 'path'</span>
+<span class="c1">// https://nodejs.org/api/path.html</span>
+<span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'path'</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">HtmlWebpackPlugin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'html-webpack-plugin'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">ExtractTextPlugin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'extract-text-webpack-plugin'</span><span class="p">);</span> <span class="c1">//  -&gt; ADDED IN THIS STEP</span>
+
+<span class="c1">// Constant with our paths</span>
+<span class="kd">const</span> <span class="nx">paths</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">DIST</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">'dist'</span><span class="p">),</span>
+  <span class="na">SRC</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">'src'</span><span class="p">),</span>
+  <span class="na">JS</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">'src/js'</span><span class="p">),</span>
+<span class="p">};</span>
+
+<span class="c1">// Webpack configuration</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">entry</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">JS</span><span class="p">,</span> <span class="s1">'app.js'</span><span class="p">),</span>
+  <span class="na">output</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">path</span><span class="p">:</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">DIST</span><span class="p">,</span>
+    <span class="na">filename</span><span class="p">:</span> <span class="s1">'app.bundle.js'</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="c1">// Tell webpack to use html plugin</span>
+  <span class="na">plugins</span><span class="p">:</span> <span class="p">[</span>
+    <span class="k">new</span> <span class="nx">HtmlWebpackPlugin</span><span class="p">({</span>
+      <span class="na">template</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">SRC</span><span class="p">,</span> <span class="s1">'index.html'</span><span class="p">),</span>
+    <span class="p">}),</span>
+    <span class="k">new</span> <span class="nx">ExtractTextPlugin</span><span class="p">(</span><span class="s1">'style.bundle.css'</span><span class="p">),</span> <span class="c1">// CSS will be extracted to this bundle file -&gt; ADDED IN THIS STEP</span>
+  <span class="p">],</span>
+  <span class="c1">// Loaders configuration</span>
+  <span class="c1">// We are telling webpack to use "babel-loader" for .js and .jsx files</span>
+  <span class="na">module</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">rules</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.(</span><span class="sr">js|jsx</span><span class="se">)</span><span class="sr">$/</span><span class="p">,</span>
+        <span class="na">exclude</span><span class="p">:</span> <span class="sr">/node_modules/</span><span class="p">,</span>
+        <span class="na">use</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s1">'babel-loader'</span><span class="p">,</span>
+        <span class="p">],</span>
+      <span class="p">},</span>
+      <span class="c1">// CSS loader for CSS files</span>
+      <span class="c1">// Files will get handled by css loader and then passed to the extract text plugin</span>
+      <span class="c1">// which will write it to the file we defined above</span>
+      <span class="p">{</span>
+        <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">css$/</span><span class="p">,</span>
+        <span class="na">loader</span><span class="p">:</span> <span class="nx">ExtractTextPlugin</span><span class="p">.</span><span class="nx">extract</span><span class="p">({</span>
+          <span class="na">use</span><span class="p">:</span> <span class="s1">'css-loader'</span><span class="p">,</span>
+        <span class="p">}),</span>
+      <span class="p">},</span>
+      <span class="c1">// File loader for image assets -&gt; ADDED IN THIS STEP</span>
+      <span class="c1">// We'll add only image extensions, but you can things like svgs, fonts and videos</span>
+      <span class="p">{</span>
+        <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.(</span><span class="sr">png|jpg|gif</span><span class="se">)</span><span class="sr">$/</span><span class="p">,</span>
+        <span class="na">use</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s1">'file-loader'</span><span class="p">,</span>
+        <span class="p">],</span>
+      <span class="p">},</span>
+    <span class="p">],</span>
+  <span class="p">},</span>
+  <span class="c1">// Enable importing JS files without specifying their's extenstion</span>
+  <span class="c1">//</span>
+  <span class="c1">// So we can write:</span>
+  <span class="c1">// import MyComponent from './my-component';</span>
+  <span class="c1">//</span>
+  <span class="c1">// Instead of:</span>
+  <span class="c1">// import MyComponent from './my-component.jsx';</span>
+  <span class="na">resolve</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">extensions</span><span class="p">:</span> <span class="p">[</span><span class="s1">'.js'</span><span class="p">,</span> <span class="s1">'.jsx'</span><span class="p">],</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>Restart <code class="highlighter-rouge">npm run dev</code> and refresh the browser to see the image.
+<code class="highlighter-rouge">npm run build</code> will create image in the <code class="highlighter-rouge">dist</code> folder.</p>
+
+<div class="Expandable-toggleWrapper">
+  <button class="Expandable-toggle">
+    <span class="Expandable-toggleShowText">Show</span>
+    <span class="Expandable-toggleHideText">Hide</span>
+    file structure after this step
+  </button>
+</div>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dist <span class="c"># created by webpack when we run "npm run build"</span>
+node_modules <span class="c"># created by npm</span>
+src
+  assets
+    - keen.png
+  css
+    - style.css
+  js
+    - app.js
+  - index.html
+- .babelrc
+- package-lock.json <span class="c"># created by npm (for node v8 and higher)</span>
+- package.json
+- webpack.config.js
+</code></pre></div></div>
+
+<h2 id="that-was-quite-a-ride">That was quite a ride</h2>
+
+<p>And all that to create a very simple application, that should look something like this:</p>
+
+<p><a href="https://github.com/Stanko/webpack-babel-react-revisited"><img src="/public/img/running-dev-server.png" alt="Example app running in the browser" /></a></p>
+
+<p>Hopefully, you now understand webpack better and are able to create new apps from scratch.</p>
+
+<p>If you enjoyed this tutorial, please share it, and help me improving
+it by pointing out things that are not clear enough or could be written better.</p>
+
+<p>Complete code is available in <a href="https://github.com/Stanko/webpack-babel-react-revisited">this repository</a>.</p>
+
+<h2 id="but-i-want-more">But I want more!</h2>
+
+<p>Don’t worry, I will cover more in posts to come.
+But it might take a while, as creating a meaningful tutorial is really time consuming.
+So please, <a href="http://i.imgur.com/1d9dwpj.gif">bear with me</a>.</p>
+
+<p>This new tutorial series is closely related to <a href="https://github.com/workco/marvin">Marvin</a>’s future.
+So there will posts about development of Marvin and setting up React applications using React.</p>
+
+<p>React router, redux, hot module reload, thunks, sagas, SASS, PostCSS, universal rendering
+are some of the themes that I want to write about.</p>
+
+<p>Cheers!</p>
+
+
+        <div class="Post-shareAndCategories">
+          <div class="SharringButtons">
+            <div>
+              Share on
+            </div>
+            <!-- Sharing button Facebook -->
+            <a
+              class="SharringButton SharringButton--facebook"
+              href="https://facebook.com/sharer/sharer.php?u=http://stanko.github.io/webpack-babel-react-revisited/" target="_blank">
+              <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+  <g>
+    <path d="M18.768,7.465H14.5V5.56c0-0.896,0.594-1.105,1.012-1.105s2.988,0,2.988,0V0.513L14.171,0.5C10.244,0.5,9.5,3.438,9.5,5.32 v2.145h-3v4h3c0,5.212,0,12,0,12h5c0,0,0-6.85,0-12h3.851L18.768,7.465z"/>
+  </g>
+</svg>
+
+            </a>
+            <!-- Sharing button Twitter -->
+            <a
+              class="SharringButton SharringButton--twitter"
+              href="https://twitter.com/intent/tweet/?text=Setting up Webpack, Babel and React from scratch, revisited&amp;url=http://stanko.github.io/webpack-babel-react-revisited/" target="_blank">
+              <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+  <g>
+    <path d="M23.444,4.834c-0.814,0.363-1.5,0.375-2.228,0.016c0.938-0.562,0.981-0.957,1.32-2.019c-0.878,0.521-1.851,0.9-2.886,1.104 C18.823,3.053,17.642,2.5,16.335,2.5c-2.51,0-4.544,2.036-4.544,4.544c0,0.356,0.04,0.703,0.117,1.036 C8.132,7.891,4.783,6.082,2.542,3.332C2.151,4.003,1.927,4.784,1.927,5.617c0,1.577,0.803,2.967,2.021,3.782 C3.203,9.375,2.503,9.171,1.891,8.831C1.89,8.85,1.89,8.868,1.89,8.888c0,2.202,1.566,4.038,3.646,4.456 c-0.666,0.181-1.368,0.209-2.053,0.079c0.579,1.804,2.257,3.118,4.245,3.155C5.783,18.102,3.372,18.737,1,18.459 C3.012,19.748,5.399,20.5,7.966,20.5c8.358,0,12.928-6.924,12.928-12.929c0-0.198-0.003-0.393-0.012-0.588 C21.769,6.343,22.835,5.746,23.444,4.834z"/>
+  </g>
+</svg>
+
+            </a>
+            <!-- Sharing button Google+ -->
+            <a
+              class="SharringButton SharringButton--googlePlus"
+              href="https://plus.google.com/share?url=http://stanko.github.io/webpack-babel-react-revisited/" target="_blank">
+              <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+  <g>
+    <path d="M11.366,12.928c-0.729-0.516-1.393-1.273-1.404-1.505c0-0.425,0.038-0.627,0.988-1.368 c1.229-0.962,1.906-2.228,1.906-3.564c0-1.212-0.37-2.289-1.001-3.044h0.488c0.102,0,0.2-0.033,0.282-0.091l1.364-0.989 c0.169-0.121,0.24-0.338,0.176-0.536C14.102,1.635,13.918,1.5,13.709,1.5H7.608c-0.667,0-1.345,0.118-2.011,0.347 c-2.225,0.766-3.778,2.66-3.778,4.605c0,2.755,2.134,4.845,4.987,4.91c-0.056,0.22-0.084,0.434-0.084,0.645 c0,0.425,0.108,0.827,0.33,1.216c-0.026,0-0.051,0-0.079,0c-2.72,0-5.175,1.334-6.107,3.32C0.623,17.06,0.5,17.582,0.5,18.098 c0,0.501,0.129,0.984,0.382,1.438c0.585,1.046,1.843,1.861,3.544,2.289c0.877,0.223,1.82,0.335,2.8,0.335 c0.88,0,1.718-0.114,2.494-0.338c2.419-0.702,3.981-2.482,3.981-4.538C13.701,15.312,13.068,14.132,11.366,12.928z M3.66,17.443 c0-1.435,1.823-2.693,3.899-2.693h0.057c0.451,0.005,0.892,0.072,1.309,0.2c0.142,0.098,0.28,0.192,0.412,0.282 c0.962,0.656,1.597,1.088,1.774,1.783c0.041,0.175,0.063,0.35,0.063,0.519c0,1.787-1.333,2.693-3.961,2.693 C5.221,20.225,3.66,19.002,3.66,17.443z M5.551,3.89c0.324-0.371,0.75-0.566,1.227-0.566l0.055,0 c1.349,0.041,2.639,1.543,2.876,3.349c0.133,1.013-0.092,1.964-0.601,2.544C8.782,9.589,8.363,9.783,7.866,9.783H7.865H7.844 c-1.321-0.04-2.639-1.6-2.875-3.405C4.836,5.37,5.049,4.462,5.551,3.89z"/>
+    <polygon points="23.5,9.5 20.5,9.5 20.5,6.5 18.5,6.5 18.5,9.5 15.5,9.5 15.5,11.5 18.5,11.5 18.5,14.5 20.5,14.5 20.5,11.5  23.5,11.5 	"/>
+  </g>
+</svg>
+
+            </a>
+          </div>
+
+          <div class="Post-categories">
+          <div>Categories</div>
+          
+            <a href="/category/javascript">JavaScript</a>
+          
+            <a href="/category/react">React</a>
+          
+        </div>
+        </div>
+      </div>
+
+      <div class="PostBottom">
+        
+        <div class="Container">
+          <div class="RelatedPosts">
+            <h2>Latest Posts</h2>
+
+            
+              <div class="RelatedPosts-post">
+                <a href="/minor-design-refresh/">
+                  <small>01 Oct 2017</small>
+                  Minor design refresh
+                </a>
+              </div>
+            
+              <div class="RelatedPosts-post">
+                <a href="/trillion-ideas/">
+                  <small>27 Sep 2017</small>
+                  I have a trillion ideas.
+                </a>
+              </div>
+            
+              <div class="RelatedPosts-post">
+                <a href="/my-blog-setup/">
+                  <small>27 Sep 2017</small>
+                  My blog setup
+                </a>
+              </div>
+            
+          </div>
+        </div>
+        
+
+        <div class="Comments-wrapper" id="comments">
+   <!-- | sort %} -->
+
+  <div class="Container">
+    
+      <h2 class="Comments-title">No comments, be the first to comment</h2>
+    
+  </div>
+
+  <form
+    data-action="https://api.staticman.net/v1/entry/Stanko/Stanko.github.io/source"
+    class="CommentForm"
+    novalidate="novalidate">
+    <div class="CommentForm-overlay">
+      <div class="CommentForm-loader">
+        <div class="CommentForm-loaderElement"></div>
+        <div class="CommentForm-loaderElement CommentForm-loaderElement--two"></div>
+      </div>
+    </div>
+
+    <input
+      name="fields[slug]"
+      type="hidden"
+      value="webpack-babel-react-revisited"
+      class="CommentForm-input CommentForm-input--slug">
+    <input
+      name="options[slug]"
+      type="hidden"
+      value="webpack-babel-react-revisited"
+      class="CommentForm-input CommentForm-input--optionsSlug">
+
+    <div class="Grid">
+      <div class="Col--md-4">
+        <input
+          name="fields[name]"
+          type="text"
+          placeholder="Name"
+          class="CommentForm-input CommentForm-input--name">
+        <input
+          name="fields[last_name]"
+          type="text"
+          tabindex="-1"
+          placeholder="Last name"
+          class="CommentForm-input--lastName">
+      </div>
+      <div class="Col--md-4">
+        <input
+          name="fields[email]"
+          type="email"
+          placeholder="Email"
+          class="CommentForm-input CommentForm-input--email">
+      </div>
+    </div>
+    <div class="Container">
+      <textarea
+        name="fields[message]"
+        placeholder="Comment"
+        class="CommentForm-input CommentForm-input--message"></textarea>
+
+      <div class="CommentForm-errorMessages"></div>
+      <div class="CommentForm-sendFailed">
+        Sending failed, please try again.
+      </div>
+      <div class="CommentForm-sendSucceeded">
+        Thank you! Your comment is sent.
+        Please note that all of the comments go through moderation.
+      </div>
+
+      <button class="CommentForm-sendButton" type="submit">Send</button>
+    </div>
+  </form>
+</div>
+
+      </div>
+    </div>
+
+    <div class="Footer">
+  <div class="Footer-background"></div>
+  <div class="Container">
+    &copy; 2016-2017. All rights reserved.<br/>
+    Written with ♡ by Stanko Tadić. Made in Serbia.
+  </div>
+</div>
+
+
+    <div class="Menu">
+  <button class="Menu-close Menu-toggle">
+    <span></span>
+    <span></span>
+  </button>
+  <div class="Menu-content">
+    <div class="Menu-top">
+      <div class="Menu-inputWrapper">
+        <input class="Menu-input" placeholder="Search" type="search" />
+      </div>
+    </div>
+
+    <div class="Menu-bottom">
+      <div class="Menu-menuWrapper">
+        <div class="Menu-menu Menu-menu--links">
+          <a
+            class="Menu-menuLink "
+            href="/">
+            Home
+          </a>
+
+          
+
+          
+          
+            
+              
+            
+          
+            
+          
+            
+              
+            
+          
+            
+              
+                <a
+                  class="Menu-menuLink "
+                  href="/about/">
+                  About
+                </a>
+              
+            
+          
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+          <a
+            class="Menu-menuLink"
+            href="/atom.xml">
+            RSS Feed
+          </a>
+          <a
+            class="Menu-menuLink"
+            href="https://github.com/Stanko">
+            GitHub
+          </a>
+        </div>
+        <div class="Menu-menu Menu-menu--categories">
+          
+          
+            <a class="Menu-menuCategory" href="/category/bash">Bash</a>
+          
+            <a class="Menu-menuCategory" href="/category/css">CSS</a>
+          
+            <a class="Menu-menuCategory" href="/category/development">Development</a>
+          
+            <a class="Menu-menuCategory" href="/category/html">HTML</a>
+          
+            <a class="Menu-menuCategory" href="/category/javascript">JavaScript</a>
+          
+            <a class="Menu-menuCategory" href="/category/jekyll">Jekyll</a>
+          
+            <a class="Menu-menuCategory" href="/category/music">Music</a>
+          
+            <a class="Menu-menuCategory" href="/category/random">Random</a>
+          
+            <a class="Menu-menuCategory" href="/category/rants">Rants</a>
+          
+            <a class="Menu-menuCategory" href="/category/react">React</a>
+          
+            <a class="Menu-menuCategory" href="/category/sass">SASS</a>
+          
+            <a class="Menu-menuCategory" href="/category/speaking">Speaking</a>
+          
+        </div>
+      </div>
+      <div class="Menu-menuWrapper">
+      <div class="Menu-results">
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script>
+  var posts = [
+     {
+        url: '/webpack-babel-react-revisited/',
+        title: 'Setting up Webpack, Babel and React from scratch, revisited'
+    },  {
+        url: '/minor-design-refresh/',
+        title: 'Minor design refresh'
+    },  {
+        url: '/trillion-ideas/',
+        title: 'I have a trillion ideas.'
+    },  {
+        url: '/my-blog-setup/',
+        title: 'My blog setup'
+    },  {
+        url: '/react-image-filter-component/',
+        title: 'React Image Filter'
+    },  {
+        url: '/nvm-updating-npm/',
+        title: 'How to update npm using nvm'
+    },  {
+        url: '/localstorage-and-sessionstorage-in-safaris-private-mode/',
+        title: 'localStorage and sessionStorage in Safari&#39;s private mode'
+    },  {
+        url: '/javascript-get-element-offset/',
+        title: 'Get element offset in JavaScript'
+    },  {
+        url: '/plx-react-parallax-component/',
+        title: 'Plx - React parallax component'
+    },  {
+        url: '/super-resolution-image-resizer/',
+        title: 'waifu2x super resolution image resizer'
+    },  {
+        url: '/react-rerender-in-component-did-mount/',
+        title: 'Animate React component by calling &#39;setState&#39; in &#39;componentDidMount&#39;'
+    },  {
+        url: '/introducing-marvin/',
+        title: 'Introducing Marvin'
+    },  {
+        url: '/react-scroll-position-decorator/',
+        title: 'React scroll decorator'
+    },  {
+        url: '/time-pills-tracks-stems/',
+        title: 'Time Pills tracks, stems, presets, loops and midi'
+    },  {
+        url: '/work-co-tech-meetup-vol-6/',
+        title: 'Work&amp;amp;Co Tech Meetup Vol 6'
+    },  {
+        url: '/nicer-git-log/',
+        title: 'Nicer git log'
+    },  {
+        url: '/being-a-tech-lead/',
+        title: 'Being a tech lead, the thing I miss the most'
+    },  {
+        url: '/react-animate-height-slide-up-down/',
+        title: 'React animate height (slide up/down) component'
+    },  {
+        url: '/talks-i-like/',
+        title: 'Couple of talks I really liked'
+    },  {
+        url: '/mobile-chrome-vh-units-fix/',
+        title: 'Mobile Chrome vh units fix'
+    },  {
+        url: '/react-router-subfolder-on-server/',
+        title: 'Deploying React (Router) app to the subfolder on server'
+    },  {
+        url: '/winter-tech-meetup-vol-5/',
+        title: 'Winter Tech Meetup Vol 5'
+    },  {
+        url: '/counting-sheep/',
+        title: 'Counting sheep'
+    },  {
+        url: '/looking-forward-to-2017/',
+        title: 'Looking forward to the 2017'
+    },  {
+        url: '/webpack-2-react-redux/',
+        title: 'React and Redux, Webpack 2 boilerplate'
+    },  {
+        url: '/setting-up-webpack-babel-and-react-from-scratch-part-3/',
+        title: 'Setting up Webpack, Babel and React from scratch - Part 3'
+    },  {
+        url: '/another-web-development-awesome-list/',
+        title: 'Another web development awesome list'
+    },  {
+        url: '/my-two-cents-on-the-new-macbook-pro/',
+        title: 'My two cents on the new MacBook Pro'
+    },  {
+        url: '/travis-jekyll-and-github-pages/',
+        title: 'Setting up Travis, Jekyll and GitHub pages'
+    },  {
+        url: '/new-design-and-features/',
+        title: 'Blog redesign and new features'
+    },  {
+        url: '/animate-window-scroll-to/',
+        title: 'Plain JavaScript animated window scroll function'
+    },  {
+        url: '/font-size-and-tracking-points-to-pixels/',
+        title: 'Implementing PhotoShop font sizes and tracking in CSS, points to pixels conversion'
+    },  {
+        url: '/always-use-button-for-clickable-elements/',
+        title: 'Always use button for clickable elements'
+    },  {
+        url: '/sass-random-and-circle-animation/',
+        title: 'SASS random() and circle animation'
+    },  {
+        url: '/setting-up-webpack-babel-and-react-from-scratch-part-2/',
+        title: 'Setting up Webpack, Babel and React from scratch - Part 2'
+    },  {
+        url: '/setting-up-webpack-babel-and-react-from-scratch/',
+        title: 'Setting up Webpack, Babel and React from scratch'
+    },  {
+        url: '/i-washed-my-headphones/',
+        title: 'I washed my headphones'
+    },  {
+        url: '/null-object-meetup-vol-3/',
+        title: 'Null Object Tech Meetup Vol 3'
+    },  {
+        url: '/sektor-draw-and-animate-svg-circle-sectors-2016/',
+        title: 'Sektor - draw and animate SVG sectors'
+    },  {
+        url: '/null-object-meetup-vol-3-coming-up/',
+        title: 'Null Object Tech Meetup Vol 3 is coming up'
+    },  {
+        url: '/ios-safari-scoll-position-fixed/',
+        title: 'Change to position fixed on iOS Safari while scrolling'
+    },  {
+        url: '/highlight-vars-in-atom-babel-javascript/',
+        title: 'Highlight variables in Atom, Babel template strings'
+    },  {
+        url: '/trying-atom-for-the-third-time/',
+        title: 'Switching to Atom, this time for good'
+    },  {
+        url: '/null-object-tech-meetup-vol-2/',
+        title: 'Null Object Tech Meetup Vol 2'
+    },  {
+        url: '/html-canvas-video-player-ios/',
+        title: 'HTML canvas video player'
+    },  {
+        url: '/my-favorite-bash-oneliner/',
+        title: 'My favorite bash oneliner'
+    },  {
+        url: '/custom-scroll-bars/',
+        title: 'Custom scroll bars'
+    },  {
+        url: '/simple-react-slider/',
+        title: 'Simple React slider with touch support'
+    },  {
+        url: '/what-is-the-point/',
+        title: 'What is the point of the website if it kills my laptop?'
+    },  {
+        url: '/jekyll-read-more-link/',
+        title: 'Jekyll &quot;Read more&quot; link'
+    },  {
+        url: '/jekyll-gulp-workflow/',
+        title: 'Jekyll and Gulp workflow'
+    },  {
+        url: '/3d-rotating-cube-effect/',
+        title: '3D Rotating cubes hover effect'
+    },  {
+        url: '/custom-jekyll-pagination/',
+        title: 'Custom Jekyll pagination'
+    },  {
+        url: '/animated-login-signup-forms/',
+        title: 'Animated login and signup forms'
+    },  {
+        url: '/hello-world/',
+        title: 'Hello World'
+    }, 
+  ];
+</script>
+
+<script src="/public/js/app.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65023927-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  </body>
+</html>

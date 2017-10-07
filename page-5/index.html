@@ -71,11 +71,11 @@
         Latest post
       </span>
       <h1>
-        <a href="/minor-design-refresh/">
-          Minor design refresh
+        <a href="/webpack-babel-react-revisited/">
+          Setting up Webpack, Babel and React from scratch, revisited
         </a>
       </h1>
-      <div class="Header-date">01 Oct 2017</div>
+      <div class="Header-date">07 Oct 2017</div>
     </div>
   </div>
 </div>
@@ -95,6 +95,67 @@
   
   <div class="Post">
     <img class="Post-bg" src="/public/img/home/poly1.svg" />
+    <div class="Post-content">
+      <h1 class="Post-title">
+        <a href="/react-router-subfolder-on-server/">
+          Deploying React (Router) app to the subfolder on server
+        </a>
+      </h1>
+
+      <div class="Post-data">
+        <div class="Post-date">
+          <div class="Post-dateIcon">
+            <svg width="2rem" height="2rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+    <g id="Artboard" stroke="#E9514D">
+      <path d="M13.9671692,1.36546107 C12.7598819,0.809853195 11.416126,0.5 10,0.5 C4.75329488,0.5 0.5,4.75329488 0.5,10 C0.5,15.2467051 4.75329488,19.5 10,19.5 L10,19.5 C15.2467051,19.5 19.5,15.2467051 19.5,10 C19.5,7.38242968 18.4413585,5.01211832 16.7288727,3.29386296" id="Oval"></path>
+      <g id="Group" transform="translate(5.000000, 5.000000)">
+        <path d="M9.86260859,0.964621398 L5,6" id="Line"></path>
+        <path d="M0.80664716,3.27680482 L5,6" id="Line"></path>
+      </g>
+    </g>
+  </g>
+</svg>
+
+          </div>
+          18 Jan 2017
+        </div>
+
+        
+        
+      </div>
+
+      <p>If you ever had to deploy React Router app to the subfolder on the server, you know what the problem is.
+Dev server will always launch app on the server root.
+And routes will get messed up once you upload it to the server.
+Here are two solutions I use in these cases.</p>
+
+<h2 id="easy-way-just-use-hashhistory">Easy way, just use <code class="highlighter-rouge">hashHistory</code></h2>
+
+<p>The easiest way to achieve this is to use <code class="highlighter-rouge">hashHistory</code> instead of <code class="highlighter-rouge">browserHistory</code>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { Router hashHistory } from 'react-router';
+
+&lt;Router history={ hashHistory }&gt;
+  ...
+&lt;/Router&gt;
+</code></pre></div></div>
+
+<p>This is the best approach if your subfolder name changes
+(for example, if folder name is a build version).
+But you’ll have <code class="highlighter-rouge">/#/</code> included in the every URL.
+If this bothers you, check the second solution.</p>
+
+
+
+      
+          <a class="Post-readmore" href="/react-router-subfolder-on-server/">Read more</a>
+      
+    </div>
+  </div>
+  
+  <div class="Post">
+    <img class="Post-bg" src="/public/img/home/poly2.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/winter-tech-meetup-vol-5/">
@@ -165,7 +226,7 @@ And apply
   </div>
   
   <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly2.svg" />
+    <img class="Post-bg" src="/public/img/home/poly0.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/counting-sheep/">
@@ -214,7 +275,7 @@ See the Pen <a href="http://codepen.io/stanko/pen/BQgZda/">Counting sheep</a> by
   </div>
   
   <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly0.svg" />
+    <img class="Post-bg" src="/public/img/home/poly1.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/looking-forward-to-2017/">
@@ -268,7 +329,7 @@ here in the Belgrade office.</p>
   </div>
   
   <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly1.svg" />
+    <img class="Post-bg" src="/public/img/home/poly2.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/webpack-2-react-redux/">
@@ -315,70 +376,6 @@ It is still in beta, but I had no problems so far.</p>
 
       
           <a class="Post-readmore" href="/webpack-2-react-redux/">Read more</a>
-      
-    </div>
-  </div>
-  
-  <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly2.svg" />
-    <div class="Post-content">
-      <h1 class="Post-title">
-        <a href="/setting-up-webpack-babel-and-react-from-scratch-part-3/">
-          Setting up Webpack, Babel and React from scratch - Part 3
-        </a>
-      </h1>
-
-      <div class="Post-data">
-        <div class="Post-date">
-          <div class="Post-dateIcon">
-            <svg width="2rem" height="2rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-    <g id="Artboard" stroke="#E9514D">
-      <path d="M13.9671692,1.36546107 C12.7598819,0.809853195 11.416126,0.5 10,0.5 C4.75329488,0.5 0.5,4.75329488 0.5,10 C0.5,15.2467051 4.75329488,19.5 10,19.5 L10,19.5 C15.2467051,19.5 19.5,15.2467051 19.5,10 C19.5,7.38242968 18.4413585,5.01211832 16.7288727,3.29386296" id="Oval"></path>
-      <g id="Group" transform="translate(5.000000, 5.000000)">
-        <path d="M9.86260859,0.964621398 L5,6" id="Line"></path>
-        <path d="M0.80664716,3.27680482 L5,6" id="Line"></path>
-      </g>
-    </g>
-  </g>
-</svg>
-
-          </div>
-          24 Nov 2016
-        </div>
-
-        
-        
-          <a href="/setting-up-webpack-babel-and-react-from-scratch-part-3/#comments">
-            2
-            Comments
-          </a>
-        
-      </div>
-
-      <h2 id="part-three---also-the-last-part">Part three - also the last part</h2>
-
-<p>Other parts:</p>
-
-<ul>
-  <li><a href="/setting-up-webpack-babel-and-react-from-scratch">Part 1</a> - Webpack, Babel, React, Router, ESLint</li>
-  <li><a href="/setting-up-webpack-babel-and-react-from-scratch-part-2">Part 2</a> - SASS, more ES6 goodness (Static props, decorators, deconstruction…)</li>
-  <li>Part 3 - Where to go from here</li>
-</ul>
-
-<h2 id="where-to-go-from-here">Where to go from here</h2>
-
-<p>I really wanted to continue this series, but unfortunately whole JavaScript / Node community
-is moving so fast, that I found really hard to keep these tutorials up to date.
-Webpack 2 and React Hot Loader 3 are on the horizon.
-Some package versions break the other ones. Usual JavaScript business :)</p>
-
-<p>So I’ll leave you with a link or two below.</p>
-
-
-
-      
-          <a class="Post-readmore" href="/setting-up-webpack-babel-and-react-from-scratch-part-3/">Read more</a>
       
     </div>
   </div>
@@ -643,6 +640,9 @@ Some package versions break the other ones. Usual JavaScript business :)</p>
     <script>
   var posts = [
      {
+        url: '/webpack-babel-react-revisited/',
+        title: 'Setting up Webpack, Babel and React from scratch, revisited'
+    },  {
         url: '/minor-design-refresh/',
         title: 'Minor design refresh'
     },  {
