@@ -90,7 +90,7 @@ If you open generated `app.bundle.js` you'll see webpack's module handling code 
 and at the end you'll find our modest `console.log`.
 Webpack's code does all the work with modules
 - connecting them together while keeping them in separate scopes.
-At this point we not leveraging that (yet).
+At this point we are not leveraging that (yet).
 
 This command runs webpack using our `app.js` as entry and outputs the result to the `dist` folder.
 As it already looks complicated we'll start moving webpack configuration to a file.
