@@ -29,7 +29,9 @@ if (postBgArchive) {
   postBgArchive.setAttribute('src', src);
 }
 
-expandToggles.forEach(expandToggle => {
+for (let i = 0; i < expandToggles.length; ++i) {
+  const expandToggle = expandToggles[i];
+
   expandToggle.addEventListener('click', (e) => {
     const button = e.currentTarget;
     const expendableStyle = button.parentElement.nextElementSibling.style;
@@ -42,4 +44,4 @@ expandToggles.forEach(expandToggle => {
       expendableStyle.display = 'none';
     }
   });
-});
+}
