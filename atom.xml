@@ -4,7 +4,7 @@
  <title>Muffin Man</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-10-07T16:16:18+00:00</updated>
+ <updated>2017-10-07T17:50:08+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
@@ -106,7 +106,7 @@ and at the end you’ll find our modest &lt;code class=&quot;highlighter-rouge&q
 Webpack’s code does all the work with modules&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;connecting them together while keeping them in separate scopes.
-At this point we not leveraging that (yet).&lt;/li&gt;
+At this point we are not leveraging that (yet).&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;This command runs webpack using our &lt;code class=&quot;highlighter-rouge&quot;&gt;app.js&lt;/code&gt; as entry and outputs the result to the &lt;code class=&quot;highlighter-rouge&quot;&gt;dist&lt;/code&gt; folder.
