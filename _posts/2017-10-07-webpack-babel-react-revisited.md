@@ -36,7 +36,7 @@ and gives you a solid ground to start from.
 
 ### Who am I and why should you listen to me?
 
-Well, I'm principle developer at [Work&Co](https://work.co).
+Well, I'm a principle developer at [Work&Co](https://work.co).
 I have a lot of experience on production level React projects,
 for clients like Twitter, Mastercard, Aeromexico, Hampton Creek...
 [Marvin boilerplate](https://github.com/workco/marvin)<sup>1</sup> is my creation as well,
