@@ -97,7 +97,7 @@
           <a href="#comments" class="Post-commentsLink">
             
             
-              18 Comments
+              19 Comments
             
           </a>
         </div>
@@ -1048,7 +1048,7 @@ are some of the themes that I want to write about.</p>
 
   <div class="Container">
     
-      <h2 class="Comments-title">Comments (18)</h2>
+      <h2 class="Comments-title">Comments (19)</h2>
       <div class="Comments">
         
           <div class="Comment">
@@ -1414,6 +1414,37 @@ operable program or batch file.</p>
             <div class="Comment-message">
               
               <p>Thank you for the post, it&#39;s just what I needed. I&#39;m constantly battling with webpack configuration and those &quot;boilerplate&quot; got too much magic for me to understand which part doing what, hope to see another post just like this.</p>
+            </div>
+          </div>
+        
+          <div class="Comment">
+            
+            <div class="Comment-data">
+              <img class="Comment-avatar" src="https://www.gravatar.com/avatar/13a28fac985c11eb7f40169be7da32f4?d=mm&r=g" />
+              <div class="Comment-dataRight">
+                <div class="Comment-name">
+                  Stanko
+                </div>
+                <div class="Comment-date">
+                  14 Oct 2017, 11:12 PM
+                </div>
+              </div>
+            </div>
+            <div class="Comment-message">
+              
+              <p>Hey Mathew,</p><p>
+It seems you are running it on Windows, that is a Unix command that fails. Unfortunately, I don't have access to a Windows machine. Without one, it is hard for me to help you, but you can try this.</p><p>
+</p><p>
+Add your project's folder to Windows PATH by running:</p><p>
+<pre>set -x PATH ./node_modules/.bin $PATH</pre></p><p>
+</p><p>
+Then instead of whole <code>/node_modules/webpack/bin/webpack.js [arguments]</code> thing, you can just run <code>webpack [arguments]</code>. </p><p>
+</p><p>
+Note that if you close your cmd, you need to add it to the path again. But don't worry, you'll probably need this only once (tutorial switches to using <code>npm run</code> commands in the next step).</p><p>
+</p><p>
+If any of you Windows folks is familiar with this, please share more elegant solution, so I can update the post.</p><p>
+</p><p>
+Thanks guys!</p>
             </div>
           </div>
         
