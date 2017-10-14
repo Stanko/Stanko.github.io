@@ -12,11 +12,12 @@ message: >-
 
   Add your project's folder to Windows PATH by running:
 
-  <pre>set -x PATH ./node_modules/.bin $PATH</pre>
+
+  <code>set -x PATH ./node_modules/.bin $PATH</code>
 
 
   Then instead of whole <code>/node_modules/webpack/bin/webpack.js
-  [arguments]</code> thing, you can just run <code>webpack [arguments]</code>. 
+  [arguments]</code> thing, you can just run <code>webpack [arguments]</code>.
 
 
   Note that if you close your cmd, you need to add it to the path again. But
