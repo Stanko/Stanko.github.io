@@ -10,7 +10,7 @@ message: >-
   hard for me to help you, but you can try this.
 
 
-  Add your project's folder to Windows PATH by running:
+  From you your project's folder add <code>node_modules</code> to the Windows PATH by running:
 
 
   <code>set -x PATH ./node_modules/.bin $PATH</code>
@@ -20,7 +20,7 @@ message: >-
   [arguments]</code> thing, you can just run <code>webpack [arguments]</code>.
 
 
-  Note that if you close your cmd, you need to add it to the path again. But
+  Note that if you close your cmd, you'll need to add it to the path again. But
   don't worry, you'll probably need this only once (tutorial switches to using
   <code>npm run</code> commands in the next step).
 
