@@ -1,0 +1,34 @@
+_id: 9d8ab750-b185-11e7-b553-d17830342549
+slug: webpack-babel-react-revisited
+name: Stanko
+email: 13a28fac985c11eb7f40169be7da32f4
+message: >-
+  Hey Joseph,
+
+
+  Making a single application SEO friendly is not an easy task. 
+
+
+  The best solution is server side rendering (which I also plan to cover later
+  on). It means having the same React application execute on a server (in node
+  environment) when web request comes to it. Then it returns rendered HTML to a
+  client (and search engine crawlers).
+
+
+  Once loaded on the client side, same React app loads in the browser and takes
+  over. So the first render happens on the server and then it continues to work
+  as a regular single page app.
+
+
+  Other, simpler, but uglier solution is to make a simple crawler which will go
+  through your app and cache all of the responses. Then it would recognize
+  search engine robots and serve them these static pages rather then your app.
+
+
+  My advice would be to go with server side rendering, it is harder, but it is
+  cleaner solution. And you don't have to worry about invalidating the static
+  pages cache.
+
+
+  Thanks!
+date: '2017-10-15T08:48:29.345Z'
