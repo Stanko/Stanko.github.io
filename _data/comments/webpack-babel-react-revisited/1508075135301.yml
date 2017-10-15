@@ -1,0 +1,25 @@
+_id: 1e9824d0-b1af-11e7-b553-d17830342549
+slug: webpack-babel-react-revisited
+name: Gareth Elms
+email: 945120cdf5ebca0a0077bb113af72c1a
+message: >-
+  I'm concerned about the final bundle size.
+
+
+  When I use webpack -p my app.bundle.js file is 115KB. Is this the base bundle
+  size for any React app? 
+
+
+  I'm using v16.0 of React which has optimized the React and React Dom bundle
+  size :
+
+
+  https://reactjs.org/blog/2017/09/26/react-v16.0.html#reduced-file-size
+
+
+  Beyond using webpack -p, is my only option here gzip? Are there any other ways
+  to get a lower bundle size on a base React app?
+
+
+  Thanks
+date: '2017-10-15T13:45:35.299Z'
