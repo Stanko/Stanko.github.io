@@ -1435,13 +1435,13 @@ operable program or batch file.</p>
               <p>Hey Mathew,</p><p>
 It seems you are running it on Windows, that is a Unix command that fails. Unfortunately, I don't have access to a Windows machine. Without one, it is hard for me to help you, but you can try this.</p><p>
 </p><p>
-Add your project's folder to Windows PATH by running:</p><p>
+From you your project's folder add <code>node_modules</code> to the Windows PATH by running:</p><p>
 </p><p>
 <code>set -x PATH ./node_modules/.bin $PATH</code></p><p>
 </p><p>
 Then instead of whole <code>/node_modules/webpack/bin/webpack.js [arguments]</code> thing, you can just run <code>webpack [arguments]</code>.</p><p>
 </p><p>
-Note that if you close your cmd, you need to add it to the path again. But don't worry, you'll probably need this only once (tutorial switches to using <code>npm run</code> commands in the next step).</p><p>
+Note that if you close your cmd, you'll need to add it to the path again. But don't worry, you'll probably need this only once (tutorial switches to using <code>npm run</code> commands in the next step).</p><p>
 </p><p>
 If any of you Windows folks is familiar with this, please share more elegant solution, so I can update the post.</p><p>
 </p><p>
