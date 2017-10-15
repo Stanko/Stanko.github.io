@@ -727,7 +727,7 @@ render(<Hello />, document.getElementById('app'));
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin'); //  -> ADDED IN THIS STEP
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 // Constant with our paths
 const paths = {
