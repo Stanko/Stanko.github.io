@@ -4,7 +4,7 @@
  <title>Muffin Man</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-10-16T08:10:57+00:00</updated>
+ <updated>2017-10-16T09:37:09+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
@@ -953,7 +953,7 @@ then static site generators might not be for you.&lt;/p&gt;
 &lt;p&gt;If you want to start from scratch, start with &lt;a href=&quot;http://jekyllrb.com/docs/quickstart/&quot;&gt;official quickstart guide&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Or you can start the same way I did - from the great &lt;a href=&quot;http://lanyon.getpoole.com/&quot;&gt;Lanyon theme&lt;/a&gt;.
-Just fork it’s repository and rename it to &lt;code class=&quot;highlighter-rouge&quot;&gt;[your github username].gitub.io&lt;/code&gt;.
+Just fork it’s repository and rename it to &lt;code class=&quot;highlighter-rouge&quot;&gt;[your github username].github.io&lt;/code&gt;.
 GitHub will automatically build and publish it on the same URL.
 Build and publish will happen every time you push a change to your blog’s repository.&lt;/p&gt;
 
