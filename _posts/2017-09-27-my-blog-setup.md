@@ -47,7 +47,7 @@ I keep this blog on GitHub pages (obviously) and I would recommend you to do the
 If you want to start from scratch, start with [official quickstart guide](http://jekyllrb.com/docs/quickstart/).
 
 Or you can start the same way I did - from the great [Lanyon theme](http://lanyon.getpoole.com/).
-Just fork it's repository and rename it to `[your github username].gitub.io`.
+Just fork it's repository and rename it to `[your github username].github.io`.
 GitHub will automatically build and publish it on the same URL.
 Build and publish will happen every time you push a change to your blog's repository.
 
