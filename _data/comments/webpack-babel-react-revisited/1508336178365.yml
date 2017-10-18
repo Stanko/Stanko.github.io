@@ -1,0 +1,28 @@
+_id: e86192e0-b40e-11e7-bd17-5d42f2395bbf
+slug: webpack-babel-react-revisited
+name: James
+email: a26b0dfbfa4d159c509e6f739edf2c0d
+message: >-
+  @Anthony:
+
+
+  The basics of adding SASS are pretty easy. First `npm i -D node-sass
+  sass-loader`, and then update the CSS module loader rule to this:
+
+
+  ```
+
+  {
+      test: /\.scss$/,
+      loader: ExtractTextPlugin.extract({
+          // Loader chaining works from right to left
+          use: ['css-loader', 'sass-loader']
+      })
+  }
+
+  ```
+
+
+  Once you rename your style.css file to style.scss and update the `import`
+  reference in app.js, you should be good to go!
+date: '2017-10-18T14:16:18.363Z'
