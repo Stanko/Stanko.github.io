@@ -1,0 +1,23 @@
+_id: 5f466260-b50d-11e7-9670-3b6a9dc04145
+slug: webpack-babel-react-revisited
+name: Evgeniy Kutischev
+email: 97d960bf1baaf071062746a697ffbb12
+message: >-
+  BTW I had tough time trying to submit a comment. When I pressed "Send" button
+  it just silently failed without showing me any error message. I did some
+  debugging and figured out that when I choose to autocomplete "name" and
+  "email" fields of this form my Google Chrome also autocompletes "last_name"
+  field which is hidden. And according to validation rules:
+
+  if (lastName !== '') fatalError = true;
+
+
+  So I had manually erase value from "last_name" field to submit form.
+
+
+  I don't know if you consider it as an issue or it doesn't even worth of your
+  attention, but any way decided to tell you about it :)
+
+
+  Have a good day!
+date: '2017-10-19T20:37:49.980Z'
