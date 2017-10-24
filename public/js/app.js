@@ -110,7 +110,7 @@ var commentFormInputs = document.querySelectorAll('.CommentForm-input');
 var slugInput = document.querySelector('.CommentForm-input--slug');
 var optionsSlugInput = document.querySelector('.CommentForm-input--optionsSlug');
 var nameInput = document.querySelector('.CommentForm-input--name');
-var lastNameInput = document.querySelector('.CommentForm-input--lastName');
+var catchInput = document.querySelector('.CommentForm-input--catch');
 var emailInput = document.querySelector('.CommentForm-input--email');
 var messageInput = document.querySelector('.CommentForm-input--message');
 var errorMessagesDiv = document.querySelector('.CommentForm-errorMessages');
@@ -142,7 +142,7 @@ if (commentForm) {
     var slug = slugInput.value.trim();
     var optionsSlug = optionsSlugInput.value.trim();
     var name = nameInput.value.trim();
-    var lastName = lastNameInput.value.trim();
+    var catchValue = catchInput.value.trim();
     var email = emailInput.value.trim();
     var message = messageInput.value.trim();
 
@@ -150,7 +150,7 @@ if (commentForm) {
     var fatalError = false;
     var messages = [];
 
-    if (slug === '' || slug !== optionsSlug || lastName !== '') {
+    if (slug === '' || slug !== optionsSlug || catchValue !== '') {
       fatalError = true;
     }
 
