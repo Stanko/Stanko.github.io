@@ -71,11 +71,11 @@
         Latest post
       </span>
       <h1>
-        <a href="/webpack-babel-react-revisited/">
-          Setting up Webpack, Babel and React from scratch, revisited
+        <a href="/animate-between-two-react-components/">
+          Animate between two react components
         </a>
       </h1>
-      <div class="Header-date">07 Oct 2017</div>
+      <div class="Header-date">24 Oct 2017</div>
     </div>
   </div>
 </div>
@@ -95,6 +95,55 @@
   
   <div class="Post">
     <img class="Post-bg" src="/public/img/home/poly1.svg" />
+    <div class="Post-content">
+      <h1 class="Post-title">
+        <a href="/jekyll-read-more-link/">
+          Jekyll "Read more" link
+        </a>
+      </h1>
+
+      <div class="Post-data">
+        <div class="Post-date">
+          <div class="Post-dateIcon">
+            <svg width="2rem" height="2rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+    <g id="Artboard" stroke="#E9514D">
+      <path d="M13.9671692,1.36546107 C12.7598819,0.809853195 11.416126,0.5 10,0.5 C4.75329488,0.5 0.5,4.75329488 0.5,10 C0.5,15.2467051 4.75329488,19.5 10,19.5 L10,19.5 C15.2467051,19.5 19.5,15.2467051 19.5,10 C19.5,7.38242968 18.4413585,5.01211832 16.7288727,3.29386296" id="Oval"></path>
+      <g id="Group" transform="translate(5.000000, 5.000000)">
+        <path d="M9.86260859,0.964621398 L5,6" id="Line"></path>
+        <path d="M0.80664716,3.27680482 L5,6" id="Line"></path>
+      </g>
+    </g>
+  </g>
+</svg>
+
+          </div>
+          27 Feb 2016
+        </div>
+
+        
+        
+      </div>
+
+      <p>It is nice to use <code class="highlighter-rouge">instead of</code>
+on your Jekyll home page, but then users can’t see if there is more to read until they open
+the whole post.</p>
+
+<p>To add <code class="highlighter-rouge">Read more</code> link, you can use this simple snippet.</p>
+
+<pre>
+{&percnt; if post.excerpt != post.content &percnt;}
+    &lt;a href=&quot;&lbrace;&lbrace; site.baseurl }}&lbrace;&lbrace; post.url }}&quot;&gt;Read more&lt;/a&gt;
+{&percnt; endif &percnt;}
+</pre>
+
+
+      
+    </div>
+  </div>
+  
+  <div class="Post">
+    <img class="Post-bg" src="/public/img/home/poly2.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/jekyll-gulp-workflow/">
@@ -138,7 +187,7 @@ First one is live reload on file changes (and injecting CSS), using SASS, autopr
   </div>
   
   <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly2.svg" />
+    <img class="Post-bg" src="/public/img/home/poly0.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/3d-rotating-cube-effect/">
@@ -191,7 +240,7 @@ It is fully responsive, and on touch devices, direction depends of where you tap
   </div>
   
   <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly0.svg" />
+    <img class="Post-bg" src="/public/img/home/poly1.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/custom-jekyll-pagination/">
@@ -238,7 +287,7 @@ On the larger screens there are also first and last page links.
   </div>
   
   <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly1.svg" />
+    <img class="Post-bg" src="/public/img/home/poly2.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/animated-login-signup-forms/">
@@ -289,50 +338,6 @@ This is neat, as it also can be bookmarked on both states, and browser button wo
     </div>
   </div>
   
-  <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly2.svg" />
-    <div class="Post-content">
-      <h1 class="Post-title">
-        <a href="/hello-world/">
-          Hello World
-        </a>
-      </h1>
-
-      <div class="Post-data">
-        <div class="Post-date">
-          <div class="Post-dateIcon">
-            <svg width="2rem" height="2rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-    <g id="Artboard" stroke="#E9514D">
-      <path d="M13.9671692,1.36546107 C12.7598819,0.809853195 11.416126,0.5 10,0.5 C4.75329488,0.5 0.5,4.75329488 0.5,10 C0.5,15.2467051 4.75329488,19.5 10,19.5 L10,19.5 C15.2467051,19.5 19.5,15.2467051 19.5,10 C19.5,7.38242968 18.4413585,5.01211832 16.7288727,3.29386296" id="Oval"></path>
-      <g id="Group" transform="translate(5.000000, 5.000000)">
-        <path d="M9.86260859,0.964621398 L5,6" id="Line"></path>
-        <path d="M0.80664716,3.27680482 L5,6" id="Line"></path>
-      </g>
-    </g>
-  </g>
-</svg>
-
-          </div>
-          21 Feb 2016
-        </div>
-
-        
-        
-      </div>
-
-      <p>Everything starts with a <code>Hello World</code> so does this blog.</p>
-
-<p>For the first time everything will be under heavy development, until I get it the way I want.</p>
-
-<p>As I really enjoy making stuff, I decided to try to make small JavaScript or CSS (SASS) plugin/script every week.
-Those are going to be both big and small, proof of concepts and production ready stuff.</p>
-
-
-      
-    </div>
-  </div>
-  
 </div>
 
 
@@ -361,10 +366,6 @@ Those are going to be both big and small, proof of concepts and production ready
 
       
         
-          <a class="Pagination-link" href="/page-7">7</a>
-        
-      
-        
           <a class="Pagination-link" href="/page-8">8</a>
         
       
@@ -380,13 +381,17 @@ Those are going to be both big and small, proof of concepts and production ready
           <a class="Pagination-link Pagination-link--active" class="active">11</a>
         
       
-
+        
+          <a class="Pagination-link" href="/page-12">12</a>
+        
       
 
       
-        <span class="Pagination-link Pagination-link--arrow Pagination-link--inactive">
+
+      
+        <a class="Pagination-link Pagination-link--arrow" href="/page-12">
           <span class="Pagination-arrow Pagination-arrow--right"></span>
-        </span>
+        </a>
       
     </div>
   </div>
@@ -483,6 +488,9 @@ Those are going to be both big and small, proof of concepts and production ready
     <script>
   var posts = [
      {
+        url: '/animate-between-two-react-components/',
+        title: 'Animate between two react components'
+    },  {
         url: '/webpack-babel-react-revisited/',
         title: 'Setting up Webpack, Babel and React from scratch, revisited'
     },  {

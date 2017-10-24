@@ -71,11 +71,11 @@
         Latest post
       </span>
       <h1>
-        <a href="/webpack-babel-react-revisited/">
-          Setting up Webpack, Babel and React from scratch, revisited
+        <a href="/animate-between-two-react-components/">
+          Animate between two react components
         </a>
       </h1>
-      <div class="Header-date">07 Oct 2017</div>
+      <div class="Header-date">24 Oct 2017</div>
     </div>
   </div>
 </div>
@@ -95,6 +95,60 @@
   
   <div class="Post">
     <img class="Post-bg" src="/public/img/home/poly1.svg" />
+    <div class="Post-content">
+      <h1 class="Post-title">
+        <a href="/animate-between-two-react-components/">
+          Animate between two react components
+        </a>
+      </h1>
+
+      <div class="Post-data">
+        <div class="Post-date">
+          <div class="Post-dateIcon">
+            <svg width="2rem" height="2rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+    <g id="Artboard" stroke="#E9514D">
+      <path d="M13.9671692,1.36546107 C12.7598819,0.809853195 11.416126,0.5 10,0.5 C4.75329488,0.5 0.5,4.75329488 0.5,10 C0.5,15.2467051 4.75329488,19.5 10,19.5 L10,19.5 C15.2467051,19.5 19.5,15.2467051 19.5,10 C19.5,7.38242968 18.4413585,5.01211832 16.7288727,3.29386296" id="Oval"></path>
+      <g id="Group" transform="translate(5.000000, 5.000000)">
+        <path d="M9.86260859,0.964621398 L5,6" id="Line"></path>
+        <path d="M0.80664716,3.27680482 L5,6" id="Line"></path>
+      </g>
+    </g>
+  </g>
+</svg>
+
+          </div>
+          24 Oct 2017
+        </div>
+
+        
+        
+      </div>
+
+      <p>Just a quick proof of concept I made for transitioning between two react components.
+It animates height (of the parent) and fades components into each other.</p>
+
+<iframe height="600px" scrolling="no" src="//codepen.io/stanko/embed/preview/eGwNZd/?height=600&amp;theme-id=light&amp;default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+See the Pen <a href="http://codepen.io/stanko/pen/eGwNZd/">React transition between two components</a> by Stanko (<a href="http://codepen.io/stanko">@stanko</a>) on <a href="http://codepen.io">CodePen</a>.
+</iframe>
+
+<p>In <code class="highlighter-rouge">componentWillReceiveProps</code> it checks if <code class="highlighter-rouge">children</code> prop has changed.
+When that happens, it will save currently rendered children and the height of the wrapper.</p>
+
+<p>Then it will animate wrapper’s height to a new component’s height,
+fade out previous component and fade in the new one.
+Finally when animation is finished it will reset wrapper’s height to <code class="highlighter-rouge">auto</code>.</p>
+
+<p>I might release it as a standalone npm component, but it needs some polishing before I do so.
+If you make use out of it, please share in the comments.</p>
+
+
+      
+    </div>
+  </div>
+  
+  <div class="Post">
+    <img class="Post-bg" src="/public/img/home/poly2.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/webpack-babel-react-revisited/">
@@ -167,7 +221,7 @@ and gives you a solid ground to start from.</p>
   </div>
   
   <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly2.svg" />
+    <img class="Post-bg" src="/public/img/home/poly0.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/minor-design-refresh/">
@@ -216,7 +270,7 @@ Code snippets are now using a light theme, which should be easier on the eye.</p
   </div>
   
   <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly0.svg" />
+    <img class="Post-bg" src="/public/img/home/poly1.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/trillion-ideas/">
@@ -255,7 +309,7 @@ Code snippets are now using a light theme, which should be easier on the eye.</p
   </div>
   
   <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly1.svg" />
+    <img class="Post-bg" src="/public/img/home/poly2.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/my-blog-setup/">
@@ -319,63 +373,6 @@ There are agencies that are even doing it for client work.</p>
     </div>
   </div>
   
-  <div class="Post">
-    <img class="Post-bg" src="/public/img/home/poly2.svg" />
-    <div class="Post-content">
-      <h1 class="Post-title">
-        <a href="/react-image-filter-component/">
-          React Image Filter
-        </a>
-      </h1>
-
-      <div class="Post-data">
-        <div class="Post-date">
-          <div class="Post-dateIcon">
-            <svg width="2rem" height="2rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-    <g id="Artboard" stroke="#E9514D">
-      <path d="M13.9671692,1.36546107 C12.7598819,0.809853195 11.416126,0.5 10,0.5 C4.75329488,0.5 0.5,4.75329488 0.5,10 C0.5,15.2467051 4.75329488,19.5 10,19.5 L10,19.5 C15.2467051,19.5 19.5,15.2467051 19.5,10 C19.5,7.38242968 18.4413585,5.01211832 16.7288727,3.29386296" id="Oval"></path>
-      <g id="Group" transform="translate(5.000000, 5.000000)">
-        <path d="M9.86260859,0.964621398 L5,6" id="Line"></path>
-        <path d="M0.80664716,3.27680482 L5,6" id="Line"></path>
-      </g>
-    </g>
-  </g>
-</svg>
-
-          </div>
-          02 Sep 2017
-        </div>
-
-        
-        
-      </div>
-
-      <p>On the project I’m currently working on, client’s logo is displayed in two versions,
-black on the white background and vice versa.
-To make their life easier, so they don’t have to upload two assets, I suggested SVG.
-Alas they can’t use SVGs (kinda long story), so I just applied CSS <code class="highlighter-rouge">filter: invert(1);</code>, but…</p>
-
-<p>…you guessed it - it doesn’t work in IE and Edge :(</p>
-
-<p>So I started reading about <a href="https://developer.mozilla.org/en/docs/Web/SVG/Element/filter">SVG filters</a>
-and found a way to invert a image. But it got me interested,
-so I kept going and made a React component for all sorts of color filters.</p>
-
-<p>Play with the <a href="https://stanko.github.io/react-image-filter/">interactive demo</a>.</p>
-
-<p>Documenation available on <a href="https://github.com/Stanko/react-image-filter">GitHub</a> and <a href="https://www.npmjs.com/package/react-image-filter">npm</a>.</p>
-
-<p><a href="https://stanko.github.io/react-image-filter/"><img src="/public/img/image-filter-1.jpg" alt="Demo" /></a></p>
-
-
-
-      
-          <a class="Post-readmore" href="/react-image-filter-component/">Read more</a>
-      
-    </div>
-  </div>
-  
 </div>
 
 
@@ -423,7 +420,7 @@ so I kept going and made a React component for all sorts of color filters.</p>
 
       
         <div class="Pagination-separator"></div>
-        <a class="Pagination-link" href="/page-11">11</a>
+        <a class="Pagination-link" href="/page-12">12</a>
       
 
       
@@ -526,6 +523,9 @@ so I kept going and made a React component for all sorts of color filters.</p>
     <script>
   var posts = [
      {
+        url: '/animate-between-two-react-components/',
+        title: 'Animate between two react components'
+    },  {
         url: '/webpack-babel-react-revisited/',
         title: 'Setting up Webpack, Babel and React from scratch, revisited'
     },  {
