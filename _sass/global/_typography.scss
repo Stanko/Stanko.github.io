@@ -20,6 +20,9 @@ body {
   font-family: $body-font-family;
   font-size: $font-size;
   font-weight: $body-font-weight;
+  color: $grey4;
+  color: #333639;
+  line-height: 1.45em;
 
   @include sm {
     font-size: $font-size-sm;
@@ -54,11 +57,13 @@ h6 {
   font-family: $headers-font-family;
   font-weight: $headers-font-weight;
   margin: 1.5em 0 0.8em;
+  line-height: 1.2em;
+  color: $grey1;
 }
 
 b,
 strong {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 h1 {
@@ -100,17 +105,22 @@ pre {
 }
 
 code {
-  font-size: 0.85em;
+  font-size: 0.9em;
+  letter-spacing: -0.03rem;
 }
 
 code.highlighter-rouge {
   background: $grey;
-  border-radius: 0.3rem;
-  color: #444548;
+  border: 1px solid darken($grey, 2);
+  border-radius: 0.2rem;
+  color: #45a;
+  // display: inline-block;
   font-style: normal;
   font-weight: normal;
   margin: 0;
-  padding: 0.2rem 0.7rem;
+  line-height: 0.9em;
+  // padding: 0.2rem 0.6rem 0rem;
+  padding: 0.2rem 0.6rem;
 }
 
 pre,
@@ -121,7 +131,7 @@ figure.highlight pre {
   margin: 0;
   color: $dark;
   background: $grey;
-  border: 1px solid $greyE;
+  border: 1px solid darken($grey, 2);
   border-radius: 0.4rem;
   font-size: 1.6rem;
   line-height: 1.35em;

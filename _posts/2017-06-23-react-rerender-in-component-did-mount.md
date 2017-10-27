@@ -116,6 +116,11 @@ We'll just replace timeout with `requestAnimationFrame` and it should work.
 But not in Firefox :( to make things worse, sometimes it does, and sometimes doesn't.
 My guess that sometimes it gets squeezed in to the same animation frame.
 
+### Update, October 2017
+
+Hooray! Firefox fixed this one, in newer versions it works without two nested `requestAnimationFrame`.
+But you might want to stick with it for some time, to make sure all of your users upgraded their browsers.
+
 <small>(Again just the part of the code that is changed)</small>
 ```javascript
 ...

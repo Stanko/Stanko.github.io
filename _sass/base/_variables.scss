@@ -54,11 +54,13 @@ $z-index-10: 1000;
 $font-size: 1.8rem;
 $font-size-sm: 2.2rem;
 
-$headers-font-family: 'Lora', sans-serif;
-$headers-font-weight: 300;
+$headers-font-family: 'Merriweather', sans-serif;
+$headers-font-weight: 400;
+// $headers-font-family: 'Raleway', sans-serif;
+// $headers-font-weight: 800;
 
-$body-font-family: 'Open Sans', sans-serif;
-$body-font-weight: 400;
+$body-font-family: 'Merriweather', serif;
+$body-font-weight: 300;
 
 // ------------ Transitions
 
