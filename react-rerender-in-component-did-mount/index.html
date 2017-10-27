@@ -15,7 +15,7 @@
   <title>Animate React component by calling 'setState' in 'componentDidMount' &middot; Muffin Man</title>
 
   <link rel="stylesheet" href="/public/css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700|Open+Sans:300,600,800&subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:700|Merriweather:300,300i,400,400i&subset=latin-ext" rel="stylesheet">
 
   <meta property="og:site_name" content="Muffin Man">
   <meta property="og:title" content="Animate React component by calling 'setState' in 'componentDidMount' &middot; Muffin Man">
@@ -201,6 +201,11 @@ See the Pen <a href="http://codepen.io/stanko/pen/WOERrE/">Rerender React compon
 But not in Firefox :( to make things worse, sometimes it does, and sometimes doesn’t.
 My guess that sometimes it gets squeezed in to the same animation frame.</p>
 
+<h3 id="update-october-2017">Update, October 2017</h3>
+
+<p>Hooray! Firefox fixed this one, in newer versions it works without two nested <code class="highlighter-rouge">requestAnimationFrame</code>.
+But you might want to stick with it for some time, to make sure all of your users upgraded their browsers.</p>
+
 <p><small>(Again just the part of the code that is changed)</small></p>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
   <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
@@ -341,6 +346,13 @@ This can be used in our React examples but also with any other framework or vani
 
             
               <div class="RelatedPosts-post">
+                <a href="/design-articles/">
+                  <small>27 Oct 2017</small>
+                  Two design articles
+                </a>
+              </div>
+            
+              <div class="RelatedPosts-post">
                 <a href="/animate-between-two-react-components/">
                   <small>24 Oct 2017</small>
                   Animate between two react components
@@ -351,13 +363,6 @@ This can be used in our React examples but also with any other framework or vani
                 <a href="/webpack-babel-react-revisited/">
                   <small>07 Oct 2017</small>
                   Setting up Webpack, Babel and React from scratch, revisited
-                </a>
-              </div>
-            
-              <div class="RelatedPosts-post">
-                <a href="/minor-design-refresh/">
-                  <small>01 Oct 2017</small>
-                  Minor design refresh
                 </a>
               </div>
             
@@ -628,6 +633,9 @@ This can be used in our React examples but also with any other framework or vani
     <script>
   var posts = [
      {
+        url: '/design-articles/',
+        title: 'Two design articles'
+    },  {
         url: '/animate-between-two-react-components/',
         title: 'Animate between two react components'
     },  {

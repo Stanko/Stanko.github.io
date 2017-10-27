@@ -4,13 +4,43 @@
  <title>Muffin Man</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-10-25T07:09:24+00:00</updated>
+ <updated>2017-10-27T09:17:32+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
    <email>stanko.tadic@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Two design articles</title>
+   <link href="http://stanko.github.io/design-articles/"/>
+   <updated>2017-10-27T00:00:00+00:00</updated>
+   <id>http://stanko.github.io/design-articles</id>
+   <content type="html">&lt;p&gt;Just wanted to share two articles that helped me understand visual design better.
+I was already aware of the most of these things, but having someone explain it how and why was really helpful.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/@erikdkennedy/7-rules-for-creating-gorgeous-ui-part-1-559d4e805cda&quot;&gt;7 Rules for Creating Gorgeous UI&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.muz.li/optical-effects-9fca82b4cd9a&quot;&gt;Optical Effects in User Interfaces (for True Nerds)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;learn-more-about-design&quot;&gt;Learn more about design&lt;/h3&gt;
+
+&lt;p&gt;When asked how to learn more about design as a developer,
+design partner in my company recommended studying work of these two designers.
+I haven’t taken my time to do it, but it is on my todo list.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Massimo_Vignelli&quot;&gt;Massimo Vignelli&lt;/a&gt; - author of NYC subway map&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Paul_Rand&quot;&gt;Paul Rand&lt;/a&gt; - author of the IBM logo&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Frontend developers should have at least basic understanding of visual design.
+Because great products are symbiosis of both great design and great tech.
+Hopefully, these links will help you in that regard.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Animate between two react components</title>
@@ -20,7 +50,7 @@
    <content type="html">&lt;p&gt;Just a quick proof of concept I made for transitioning between two react components.
 It animates height (of the parent) and fades components into each other.&lt;/p&gt;
 
-&lt;iframe height=&quot;600px&quot; scrolling=&quot;no&quot; src=&quot;//codepen.io/stanko/embed/preview/eGwNZd/?height=600&amp;amp;theme-id=light&amp;amp;default-tab=result&quot; frameborder=&quot;no&quot; allowtransparency=&quot;true&quot; allowfullscreen=&quot;true&quot;&gt;
+&lt;iframe height=&quot;500px&quot; scrolling=&quot;no&quot; src=&quot;//codepen.io/stanko/embed/preview/eGwNZd/?height=500&amp;amp;theme-id=light&amp;amp;default-tab=result&quot; frameborder=&quot;no&quot; allowtransparency=&quot;true&quot; allowfullscreen=&quot;true&quot;&gt;
 See the Pen &lt;a href=&quot;http://codepen.io/stanko/pen/eGwNZd/&quot;&gt;React transition between two components&lt;/a&gt; by Stanko (&lt;a href=&quot;http://codepen.io/stanko&quot;&gt;@stanko&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.
 &lt;/iframe&gt;
 
@@ -1536,6 +1566,11 @@ See the Pen &lt;a href=&quot;http://codepen.io/stanko/pen/WOERrE/&quot;&gt;Reren
 &lt;p&gt;We’ll just replace timeout with &lt;code class=&quot;highlighter-rouge&quot;&gt;requestAnimationFrame&lt;/code&gt; and it should work.
 But not in Firefox :( to make things worse, sometimes it does, and sometimes doesn’t.
 My guess that sometimes it gets squeezed in to the same animation frame.&lt;/p&gt;
+
+&lt;h3 id=&quot;update-october-2017&quot;&gt;Update, October 2017&lt;/h3&gt;
+
+&lt;p&gt;Hooray! Firefox fixed this one, in newer versions it works without two nested &lt;code class=&quot;highlighter-rouge&quot;&gt;requestAnimationFrame&lt;/code&gt;.
+But you might want to stick with it for some time, to make sure all of your users upgraded their browsers.&lt;/p&gt;
 
 &lt;p&gt;&lt;small&gt;(Again just the part of the code that is changed)&lt;/small&gt;&lt;/p&gt;
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;

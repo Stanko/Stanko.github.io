@@ -15,7 +15,7 @@
   <title>Muffin Man &middot; Frontend development & rants</title>
 
   <link rel="stylesheet" href="/public/css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700|Open+Sans:300,600,800&subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:700|Merriweather:300,300i,400,400i&subset=latin-ext" rel="stylesheet">
 
   <meta property="og:site_name" content="Muffin Man">
   <meta property="og:title" content="Muffin Man &middot; Frontend development & rants">
@@ -71,11 +71,11 @@
         Latest post
       </span>
       <h1>
-        <a href="/animate-between-two-react-components/">
-          Animate between two react components
+        <a href="/design-articles/">
+          Two design articles
         </a>
       </h1>
-      <div class="Header-date">24 Oct 2017</div>
+      <div class="Header-date">27 Oct 2017</div>
     </div>
   </div>
 </div>
@@ -95,6 +95,58 @@
   
   <div class="Post">
     <img class="Post-bg" src="/public/img/home/poly1.svg" />
+    <div class="Post-content">
+      <h1 class="Post-title">
+        <a href="/animated-login-signup-forms/">
+          Animated login and signup forms
+        </a>
+      </h1>
+
+      <div class="Post-data">
+        <div class="Post-date">
+          <div class="Post-dateIcon">
+            <svg width="2rem" height="2rem" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+    <g id="Artboard" stroke="#E9514D">
+      <path d="M13.9671692,1.36546107 C12.7598819,0.809853195 11.416126,0.5 10,0.5 C4.75329488,0.5 0.5,4.75329488 0.5,10 C0.5,15.2467051 4.75329488,19.5 10,19.5 L10,19.5 C15.2467051,19.5 19.5,15.2467051 19.5,10 C19.5,7.38242968 18.4413585,5.01211832 16.7288727,3.29386296" id="Oval"></path>
+      <g id="Group" transform="translate(5.000000, 5.000000)">
+        <path d="M9.86260859,0.964621398 L5,6" id="Line"></path>
+        <path d="M0.80664716,3.27680482 L5,6" id="Line"></path>
+      </g>
+    </g>
+  </g>
+</svg>
+
+          </div>
+          22 Feb 2016
+        </div>
+
+        
+        
+      </div>
+
+      <p>Well I saw pretty nice mockup on <a href="https://dribbble.com/shots/2311260-Day-1-Sign-Up-and-Login-Animated-Download-Template">Dribbble</a>
+and decided to make it for fun. It didn’t include mobile/responsive solution, so I came up with my own.</p>
+
+<p><a href="http://stanko.github.io/animated-onboarding/">
+  <img src="/public/img/projects/animated-onboarding.png" alt="Demo - Animated login and signup forms" />
+</a></p>
+
+<p>Check the <a href="http://stanko.github.io/animated-onboarding/">demo</a>.</p>
+
+<p>This is pure CSS solution - it uses <code class="highlighter-rouge">:target</code> selector for changing states.
+Find more about <code class="highlighter-rouge">:target</code> on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:target">MDN</a>.
+This is neat, as it also can be bookmarked on both states, and browser button work too.</p>
+
+<p>Grab the code on <a href="https://github.com/Stanko/animated-onboarding">GitHub</a>.</p>
+
+
+      
+    </div>
+  </div>
+  
+  <div class="Post">
+    <img class="Post-bg" src="/public/img/home/poly2.svg" />
     <div class="Post-content">
       <h1 class="Post-title">
         <a href="/hello-world/">
@@ -287,6 +339,9 @@ Those are going to be both big and small, proof of concepts and production ready
     <script>
   var posts = [
      {
+        url: '/design-articles/',
+        title: 'Two design articles'
+    },  {
         url: '/animate-between-two-react-components/',
         title: 'Animate between two react components'
     },  {
