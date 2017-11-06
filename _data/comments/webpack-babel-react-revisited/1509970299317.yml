@@ -1,0 +1,23 @@
+_id: a4535fc0-c2eb-11e7-a068-4bb54bc96aa1
+slug: webpack-babel-react-revisited
+name: Stanko
+email: 13a28fac985c11eb7f40169be7da32f4
+message: >-
+  Again, thank you guys!
+
+
+  @Christian well Gulp is solving a little bit different problem, and it is just
+  additional layer on webpack setup. I think it is worth it to invest time to
+  learn webpack and switch to it.
+
+
+  @David good catch, thank you!
+
+
+  @Koyot depending on the ES2016 features you are after, some are supported in
+  the modern browsers, some are not. But still you need to transpile everything
+  for older browsers.
+
+
+  @Anurag I have no experience with MERN, which advantages it has over webpack?
+date: '2017-11-06T12:11:39.314Z'
