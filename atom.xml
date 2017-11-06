@@ -4,7 +4,7 @@
  <title>Muffin Man</title>
  <link href="http://stanko.github.io/atom.xml" rel="self"/>
  <link href="http://stanko.github.io/"/>
- <updated>2017-11-06T11:44:42+00:00</updated>
+ <updated>2017-11-06T12:03:39+00:00</updated>
  <id>http://stanko.github.io</id>
  <author>
    <name>Stanko</name>
@@ -828,7 +828,7 @@ As it’s name suggests it handles files - images, SVGs, fonts, videos or anythi
     &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HtmlWebpackPlugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
       &lt;span class=&quot;na&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;paths&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;SRC&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'index.html'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}),&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ExtractTextPlugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'style.bundle.css'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// CSS will be extracted to this bundle file -&amp;gt; ADDED IN THIS STEP&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ExtractTextPlugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'style.bundle.css'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// CSS will be extracted to this bundle file&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
   &lt;span class=&quot;c1&quot;&gt;// Loaders configuration&lt;/span&gt;
   &lt;span class=&quot;c1&quot;&gt;// We are telling webpack to use &quot;babel-loader&quot; for .js and .jsx files&lt;/span&gt;
