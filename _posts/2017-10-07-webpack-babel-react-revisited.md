@@ -748,7 +748,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(paths.SRC, 'index.html'),
     }),
-    new ExtractTextPlugin('style.bundle.css'), // CSS will be extracted to this bundle file -> ADDED IN THIS STEP
+    new ExtractTextPlugin('style.bundle.css'), // CSS will be extracted to this bundle file
   ],
   // Loaders configuration
   // We are telling webpack to use "babel-loader" for .js and .jsx files
