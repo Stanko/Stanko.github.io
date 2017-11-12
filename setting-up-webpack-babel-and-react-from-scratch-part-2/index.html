@@ -97,7 +97,7 @@
           <a href="#comments" class="Post-commentsLink">
             
             
-              2 Comments
+              4 Comments
             
           </a>
         </div>
@@ -379,7 +379,7 @@ Read more on the first link.
 
   <div class="Container">
     
-      <h2 class="Comments-title">Comments (2)</h2>
+      <h2 class="Comments-title">Comments (4)</h2>
       <div class="Comments">
         
           <div class="Comment">
@@ -417,6 +417,44 @@ Read more on the first link.
             <div class="Comment-message">
 
 <p>Hello Vladislav,</p><p>Yeah, javascript development sure can be a bumpy road. I'm really glad it helped you!</p>
+            </div>
+          </div>
+        
+          <div class="Comment">
+            
+            <div class="Comment-data">
+              <img class="Comment-avatar" src="https://www.gravatar.com/avatar/6197f1340654cf81272f6f3758176232?d=mm&r=g" />
+              <div class="Comment-dataRight">
+                <div class="Comment-name">
+                  Tommy C
+                </div>
+                <div class="Comment-date">
+                  12 Nov 2017, 07:58 PM
+                </div>
+              </div>
+            </div>
+            <div class="Comment-message">
+
+<p>Hello! These are wonderful tutorials; really digging them and learning a lot about the &#39;magic&#39; behind boilerplates. </p><p>As of 11/12/2017 using </p><p>{</p><p>  test: /\.scss$/,</p><p>  loader: &#39;style!css!sass&#39;</p><p>}</p><p>will result in the application failing to compile (at least it did for me anyway) and in order to fix it I had to add -loader to the &#39;loaders&#39;</p><p>ex:</p><p>{</p><p>  test: /\.scss$/,</p><p>  loader: &#39;style-loader!css-loader!sass-loader&#39;</p><p>}</p><p>Again, thanks for taking the time for these greate tutorials</p>
+            </div>
+          </div>
+        
+          <div class="Comment">
+            
+            <div class="Comment-data">
+              <img class="Comment-avatar" src="https://www.gravatar.com/avatar/6197f1340654cf81272f6f3758176232?d=mm&r=g" />
+              <div class="Comment-dataRight">
+                <div class="Comment-name">
+                  Tommy C
+                </div>
+                <div class="Comment-date">
+                  12 Nov 2017, 08:32 PM
+                </div>
+              </div>
+            </div>
+            <div class="Comment-message">
+
+<p>Yo! </p><p>I was having trouble with postcss and it was causing compilation errors (11/12/2017): after some stackoverflowing I was able to find a fix that worked for me:</p><p>requiring webpack at the top of my webpack.config.js</p><p>const webpack = require(&#39;webpack&#39;);</p><p>and then inside of the plugins: [] block, I put a new webpack.LoaderOptionsPlugin:</p><p>Ex:</p><p>plugins: [</p><p>		new HtmlWebpackPlugin({</p><p>		template: path.join(paths.SRC, &#39;index.html&#39;),</p><p>		}),</p><p>		new ExtractTextPlugin(&#39;style.bundle.css&#39;),</p><p>		new webpack.LoaderOptionsPlugin({</p><p>			options: {</p><p>				context: __dirname,</p><p>				postcss: [</p><p>					autoprefixer, precss</p><p>				]</p><p>			}</p><p>		})</p><p>	],</p>
             </div>
           </div>
         
