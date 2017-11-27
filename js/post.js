@@ -7,7 +7,7 @@ const sideNoteTriggers = document.querySelectorAll('.SideNote-trigger');
 
 commentsLink && commentsLink.addEventListener('click', function(e) {
   e.preventDefault();
-  animateScrollTo(document.querySelector('#comments'), { maxDuration: 1000 });
+  animateScrollTo(document.querySelector('#comments'), { maxDuration: 500 });
 });
 
 

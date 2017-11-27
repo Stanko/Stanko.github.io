@@ -5,7 +5,7 @@ const jumpToTop = document.querySelector('.Footer-jumpToTop');
 
 
 jumpToContent && jumpToContent.addEventListener('click', function(e) {
-  animateScrollTo(document.querySelector('.Header').offsetHeight);
+  animateScrollTo(document.querySelector('.Header').offsetHeight, { maxDuration: 500 });
 });
 
 jumpToTop && jumpToTop.addEventListener('click', function(e) {

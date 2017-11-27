@@ -544,7 +544,7 @@ var jumpToContent = document.querySelector('.Header-jumpToContent');
 var jumpToTop = document.querySelector('.Footer-jumpToTop');
 
 jumpToContent && jumpToContent.addEventListener('click', function (e) {
-  (0, _animatedScrollTo2.default)(document.querySelector('.Header').offsetHeight);
+  (0, _animatedScrollTo2.default)(document.querySelector('.Header').offsetHeight, { maxDuration: 500 });
 });
 
 jumpToTop && jumpToTop.addEventListener('click', function (e) {
@@ -1236,7 +1236,7 @@ var sideNoteTriggers = document.querySelectorAll('.SideNote-trigger');
 
 commentsLink && commentsLink.addEventListener('click', function (e) {
   e.preventDefault();
-  (0, _animatedScrollTo2.default)(document.querySelector('#comments'), { maxDuration: 1000 });
+  (0, _animatedScrollTo2.default)(document.querySelector('#comments'), { maxDuration: 500 });
 });
 
 if (postBgArchive) {
