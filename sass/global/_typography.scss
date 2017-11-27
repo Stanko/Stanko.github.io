@@ -80,18 +80,20 @@ p {
 a {
   color: $red;
   text-decoration: none;
+  transition: color $time;
 }
 
-// .Post p a {
-//   border-bottom: 1px solid transparent;
-//   position: relative;
-//   transition: border $time;
-//
-//   .no-touchevents  &:hover {
-//     // color: $white;
-//     border-bottom-color: $red;
-//   }
-// }
+.Post-text a,
+.RelatedPosts-post a,
+.Comment-message a {
+  border-bottom: 1px solid transparent;
+  position: relative;
+  transition: border $time;
+
+  .no-touchevents  &:hover {
+    border-bottom-color: $greyD;
+  }
+}
 
 pre,
 code {

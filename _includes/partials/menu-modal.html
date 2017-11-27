@@ -30,7 +30,7 @@
         ><div>{% for letter in letters %}<span>{{ letter }}</span>{% endfor %}</div></a>{% endif %}{% endfor %}
 
         {% assign letters = "RSS Feed" | split: '' %}
-        <a class="MenuModal-menuLink" href="/atom.xml" aria-label="RSS Feed"><div>{% for letter in letters %}<span>{{ letter }}</span>{% endfor %}</div></a>
+        <a class="MenuModal-menuLink" href="/atom.xml" aria-label="RSS Feed" target="_blank"><div>{% for letter in letters %}<span>{{ letter }}</span>{% endfor %}</div></a>
 
         {% assign letters = "GitHub" | split: '' %}
         <a class="MenuModal-menuLink" href="https://github.com/stanko" aria-label="GitHub"><div>{% for letter in letters %}<span>{{ letter }}</span>{% endfor %}</div></a>

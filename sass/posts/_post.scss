@@ -369,10 +369,16 @@
 .Expandable-toggle {
   background: none;
   border: 0;
+  border-bottom: 1px dotted transparent;
   border-radius: 0;
   color: $red;
-  padding: 0;
   font-size: 0.8em;
+  padding: 0;
+  transition: border $time;
+
+  .no-touchevents &:hover {
+    border-bottom-color: $greyD;
+  }
 }
 
 .Expandable-toggleHideText {
@@ -394,7 +400,7 @@
 }
 
 .SideNote-trigger {
-  border-bottom: 1px dotted #ccc;
+  border-bottom: 1px dotted $greyC;
   display: inline;
   line-height: 1;
 

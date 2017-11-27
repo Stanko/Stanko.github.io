@@ -39,7 +39,9 @@ title: Home
         {% endif %}
       </div>
 
-      {{ post.excerpt }}
+      <div class="Post-text">
+        {{ post.excerpt }}
+      </div>
 
       {% if post.excerpt != post.content %}
         <a class="Post-readmore" href="{{ site.baseurl }}{{ post.url }}">Read more</a>

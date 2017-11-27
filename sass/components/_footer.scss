@@ -64,6 +64,10 @@
 
 .Footer-rss {
   font-size: 1.3em;
+
+  .no-touchevents &:hover {
+    color: $white;
+  }
 }
 
 .Footer-text {

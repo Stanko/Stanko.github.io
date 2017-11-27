@@ -1,9 +1,11 @@
 <div class="Comments-wrapper" id="comments">
-  {% assign comments = site.data.comments[page.slug] %} <!-- | sort %} -->
+  {% assign comments = site.data.comments[page.slug] %}
 
   <div class="Container">
     <div class="ContainerInner">
       {% if comments != null %}
+        {% assign comments = site.data.comments[page.slug] | sort %}
+
         <h2 class="Comments-title">Comments ({{ comments.size }})</h2>
         <div class="Comments">
           {% for commentData in comments %}

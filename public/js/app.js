@@ -1386,7 +1386,6 @@ searchInput.addEventListener('keyup', function (e) {
 
       var _loop = function _loop(_i) {
         var resultLink = resultLinks[_i];
-        console.log(resultLink);
 
         resultLink.addEventListener('keydown', function (e) {
           var linkToFocus = null;
@@ -1409,7 +1408,7 @@ searchInput.addEventListener('keyup', function (e) {
       }
     })();
   } else {
-    searchResults.innerHTML = '<div class="Menu-noResults">No results</div>';
+    searchResults.innerHTML = '<div class="MenuModal-noResults"><div class="Container">No results</div></div>';
   }
 
   prevSearch = newSearch;

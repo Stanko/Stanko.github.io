@@ -1260,7 +1260,23 @@ p {
 
 a {
   color: #e03646;
-  text-decoration: none; }
+  text-decoration: none;
+  -webkit-transition: color 250ms;
+  -o-transition: color 250ms;
+  transition: color 250ms; }
+
+.Post-text a,
+.RelatedPosts-post a,
+.Comment-message a {
+  border-bottom: 1px solid transparent;
+  position: relative;
+  -webkit-transition: border 250ms;
+  -o-transition: border 250ms;
+  transition: border 250ms; }
+  .no-touchevents .Post-text a:hover, .no-touchevents
+  .RelatedPosts-post a:hover, .no-touchevents
+  .Comment-message a:hover {
+    border-bottom-color: #ddd; }
 
 pre,
 code {
@@ -1689,6 +1705,8 @@ button {
 
 .Footer-rss {
   font-size: 1.3em; }
+  .no-touchevents .Footer-rss:hover {
+    color: #fff; }
 
 @media (min-width: 600px) {
   .Footer-break {
@@ -2049,7 +2067,8 @@ button {
 
 .MenuModal-noResults {
   color: #fff;
-  padding: 1rem 2rem; }
+  padding: 1.2rem 0;
+  width: 100vw; }
 
 .MenuModal-menu {
   -webkit-overflow-scrolling: touch;
@@ -2722,10 +2741,16 @@ textarea {
 .Expandable-toggle {
   background: none;
   border: 0;
+  border-bottom: 1px dotted transparent;
   border-radius: 0;
   color: #e03646;
+  font-size: 0.8em;
   padding: 0;
-  font-size: 0.8em; }
+  -webkit-transition: border 250ms;
+  -o-transition: border 250ms;
+  transition: border 250ms; }
+  .no-touchevents .Expandable-toggle:hover {
+    border-bottom-color: #ddd; }
 
 .Expandable-toggleHideText {
   display: none; }
@@ -2740,7 +2765,7 @@ textarea {
   counter-reset: sidequote; }
 
 .SideNote-trigger {
-  border-bottom: 1px dotted #ccc;
+  border-bottom: 1px dotted #c4c5c6;
   display: inline;
   line-height: 1; }
   .SideNote-trigger::after {
