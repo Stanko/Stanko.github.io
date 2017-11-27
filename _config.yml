@@ -62,7 +62,7 @@ exclude:
 # Setup
 title: Muffin Man
 tagline: Frontend development & rants
-description: Hello, I'm Stanko, a software engineer in Belgrade. If you are looking for frontend develpment stuff, you might be at the right place.
+description: Hello, I'm Stanko, a software engineer in Belgrade. If you are looking for frontend development stuff, you might be at the right place.
 url: http://stanko.github.io
 baseurl: ''
 paginate: 5
