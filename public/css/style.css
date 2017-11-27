@@ -2910,8 +2910,12 @@ textarea {
   @media (min-width: 600px) {
     .SharingButtons {
       margin-right: 1rem; } }
-  .SharingButtons > div {
-    margin-bottom: 1rem; }
+
+.SharingButtons-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1rem; }
 
 .SharingButton {
   -webkit-box-align: center;
@@ -2922,19 +2926,23 @@ textarea {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -ms-flex-preferred-size: 4rem;
+      flex-basis: 4rem;
   height: 4rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 0.5rem 0 0;
+  max-width: 4rem;
+  padding: 1rem;
   -webkit-transition: background 250ms !important;
   -o-transition: background 250ms !important;
   transition: background 250ms !important;
   width: 4rem; }
   .SharingButton svg {
     display: block;
-    height: 2rem;
-    width: 2rem; }
+    height: 100%;
+    width: 100%; }
 
 .SharingButton--facebook {
   border-color: #4867AA !important; }
@@ -2960,8 +2968,7 @@ textarea {
 .SharingButton--hn {
   border-color: #FB651E !important; }
   .SharingButton--hn svg {
-    fill: #FB651E;
-    height: 1.6rem; }
+    fill: #FB651E; }
   .no-touchevents .SharingButton--hn:hover {
     background: rgba(251, 101, 30, 0.1); }
 

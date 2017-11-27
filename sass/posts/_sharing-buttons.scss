@@ -5,10 +5,11 @@
   @include md {
     margin-right: 1rem;
   }
+}
 
-  > div {
-    margin-bottom: 1rem;
-  }
+.SharingButtons-buttons {
+  display: flex;
+  margin-top: 1rem;
 }
 
 .SharingButton {
@@ -16,16 +17,19 @@
   border: 1px solid $black;
   border-radius: 50%;
   display: inline-flex;
+  flex-basis: 4rem;
   height: 4rem;
   justify-content: center;
   margin: 0 0.5rem 0 0;
+  max-width: 4rem;
+  padding: 1rem;
   transition: background $time !important;
   width: 4rem;
 
   svg {
     display: block;
-    height: 2rem;
-    width: 2rem;
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -69,7 +73,6 @@
 
   svg {
     fill: #FB651E;
-    height: 1.6rem;
   }
 
   .no-touchevents &:hover {
