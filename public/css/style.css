@@ -378,6 +378,10 @@ textarea {
   font: inherit;
   /* 2 */ }
 
+figure.highlight pre.lineno {
+  color: #b4b5b6;
+  margin-right: 1.5rem; }
+
 .highlight {
   margin-left: 0;
   margin-right: 0; }

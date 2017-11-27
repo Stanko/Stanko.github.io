@@ -9,6 +9,7 @@ function checkHash() {
 
     if (posts) {
       posts.style.height = 'auto';
+      posts.setAttribute('open', 1);
       window.location.hash = '';
       animateScrollTo(section);
     }
