@@ -1,0 +1,86 @@
+@mixin grid-generate-columns($grid-col-count, $postfix) {
+  @for $i from 0 through $grid-col-count {
+    .Col--#{$postfix}-#{$i} {
+      @include flex-basis($i * (100% / $grid-col-count));
+      max-width: $i * (100% / $grid-col-count);
+      width: $i * (100% / $grid-col-count);
+    }
+
+    .Offset--#{$postfix}-#{$i} {
+      margin-left: $i * (100% / $grid-col-count);
+    }
+  }
+}
+
+.Container {
+  margin: 0 auto;
+  max-width: $container-width;
+  padding: 0 $grid-gutter;
+  width: 100%;
+
+  @include xl {
+    max-width: $container-width-xl;
+  }
+}
+
+.ContainerInner {
+  max-width: $text-width-md;
+  width: 100%;
+
+  @include xl {
+    max-width: $text-width-lg;
+  }
+}
+
+.Grid {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: $container-width;
+  padding: 0 $grid-gutter / 2;
+
+  @include xl {
+    max-width: $container-width-xl;
+  }
+
+  .Grid &,
+  .Container & {
+    margin: 0 (-$grid-gutter);
+  }
+}
+
+.Grid--centered {
+  justify-content: center;
+}
+
+.Grid--rightAligned {
+  justify-content: flex-end;
+}
+
+.Grid--justified {
+  justify-content: space-between;
+}
+
+
+[class*='Col--'] {
+  @include flex-basis(100%);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 $grid-gutter / 2;
+}
+
+
+@include grid-generate-columns($grid-col-count, 'sm');
+
+@include md {
+  @include grid-generate-columns($grid-col-count, 'md');
+}
+
+@include lg {
+  @include grid-generate-columns($grid-col-count, 'lg');
+}
+
+@include xl {
+  @include grid-generate-columns($grid-col-count, 'xl');
+}

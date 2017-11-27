@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  {% include head.html %}
+
+  <body>
+    {% include partials/home-header.html %}
+    <div class="Content">
+      {% include partials/keyboard.html %}
+
+      {{ content }}
+    </div>
+
+    {% include partials/footer.html %}
+
+    {% include partials/menu-modal.html %}
+    {% include scripts.html %}
+  </body>
+</html>

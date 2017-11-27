@@ -1,0 +1,226 @@
+// --- Header
+
+.Header {
+  background-color: $true-black;
+  background-image: url('/public/img/notebook.jpg');
+  background-position: left 5rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: $white;
+  margin-bottom: 3rem;
+  overflow: hidden;
+  position: relative;
+
+  @include md {
+    background-position: left top;
+    margin-bottom: 4rem;
+  }
+}
+
+.Header-content {
+  margin: 0 auto;
+  max-width: $container-width;
+  padding: 2rem $grid-gutter $spacing;
+  position: relative;
+  z-index: $layer-header + 10;
+
+  @include md {
+    padding-bottom: $spacing-md;
+  }
+
+  @include xl {
+    max-width: $container-width-xl;
+  }
+}
+
+.Header-top {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: $layer-header + 20;
+}
+
+// --- Title
+
+.Header-title {
+  color: $white;
+  font-weight: bold;
+  margin: $spacing2 0 $spacing; // -0.3rem;
+  position: relative;
+  z-index: $layer-header + 20;
+
+  @include md {
+    margin-bottom: $spacing-md;
+    margin-top: $spacing2-md;
+  }
+}
+
+.Header-title--home {
+  font-family: 'MarvinVisions';
+  font-size: 4rem;
+  line-height: 0.9em;
+  max-width: 6em;
+
+  @include md {
+    font-size: 7rem;
+  }
+
+  @include lg {
+    font-size: 10rem;
+  }
+
+  span {
+    text-shadow: -0.08em 0 0.2em rgba($shadow, 0.4);
+  }
+}
+
+.Header-title--page {
+  font-size: 3.5rem;
+  letter-spacing: -0.1rem;
+  line-height: 1.15em;
+
+  @include md {
+    font-size: 4.5rem;
+    max-width: 50rem;
+  }
+
+  @include lg {
+    font-size: 5rem;
+    max-width: 55rem;
+  }
+
+  span {
+    text-shadow: -0.15em 0 0.2em rgba($shadow, 0.4);
+  }
+}
+
+.Header-title--largeMarginBottom {
+  margin-bottom: $spacing2 - 1rem;
+
+  @include md {
+    margin-bottom: $spacing2-md - 1rem;
+  }
+}
+
+.Header-date {
+  color: rgba($white, 0.5);
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1em;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+
+  @include md {
+    font-size: 1.8rem;
+  }
+
+  svg {
+    margin-right: 0.8rem;
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+// --- About
+
+.Header-about {
+  color: rgba($white, 0.5);
+  margin: 0;
+  max-width: 35rem;
+  padding-top: $spacing;
+  position: relative;
+  z-index: $layer-header + 20;
+
+  @include md {
+    max-width: 42rem;
+    padding-top: $spacing-md;
+  }
+
+  &::before {
+    border-top: 0.3rem solid $red;
+    content: '';
+    display: block;
+    left: -5rem;
+    position: absolute;
+    top: -0.1rem;
+    width: 15rem;
+  }
+
+  a {
+    color: $white;
+  }
+}
+
+// --- Angles
+
+.Header-angle {
+  bottom: 0;
+  height: 200px;
+  pointer-events: none;
+  width: 50%;
+  z-index: $layer-header + 10;
+}
+
+.Header-angle--left {
+  @include angled-edge('inside bottom', 'upper right', $white, $width: 2000, $height: 200);
+  left: 0;
+  position: absolute;
+
+  &::after {
+    background-position: right center;
+  }
+}
+
+.Header-angle--right {
+  @include angled-edge('inside bottom', 'upper left', $white, $width: 2000, $height: 200);
+  position: absolute;
+  right: 0;
+
+  &::after {
+    background-position: left center;
+  }
+}
+
+// --- Jump to content
+
+.Header-jumpToContent {
+  @include reset-button;
+  display: block;
+  height: 4rem;
+  margin: 0 auto $spacing;
+  position: relative;
+  width: 4rem;
+  z-index: $layer-header + 20;
+
+  @include md {
+    margin-bottom: $spacing-md;
+  }
+}
+
+.Header-jumpToContentInner {
+  align-items: center;
+  border: 1px solid rgba($white, 0.2);
+  border-radius: 50%;
+  display: flex;
+  height: 4rem;
+  justify-content: center;
+  position: relative;
+  transition: border $time;
+  width: 4rem;
+
+  .no-touchevents &:hover {
+    border-color: $white;
+  }
+
+  svg {
+    display: block;
+    height: 0.8rem;
+    overflow: visible;
+    stroke: $white;
+    stroke-linecap: round;
+    stroke-width: 0.2rem;
+    width: 1.4rem;
+  }
+}

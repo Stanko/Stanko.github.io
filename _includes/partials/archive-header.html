@@ -1,0 +1,33 @@
+<div class="Header">
+  <div class="Header-content">
+    <div class="Header-top">
+      {% include partials/logo.html %}
+      {% include partials/menu.html %}
+    </div>
+
+    {% assign title = page.title %}
+    {% if page.headerTitle != nil %}
+      {% assign title = page.headerTitle %}
+    {% endif %}
+
+    <h1 class="Header-title Header-title--page" aria-label="{{ title }}">
+      {% assign letters = title | split: '' %}
+      {% for letter in letters %}<span>{{ letter }}</span>{% endfor %}
+    </h1>
+
+    <p class="Header-about">
+      Over the last {{ site.time | date: '%Y' | minus: 2015 }} years I've written
+      {{ site.posts | size }} posts and here they are sorted in
+      {{ site.categories | size }} categories.
+    </p>
+  </div>
+
+  <button class="Header-jumpToContent" aria-label="Jump to content">
+    <div class="Header-jumpToContentInner">
+      {% include svg/chevron-down.svg %}
+    </div>
+  </button>
+
+  <div class="Header-angle Header-angle--left"></div>
+  <div class="Header-angle Header-angle--right"></div>
+</div>

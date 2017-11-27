@@ -1,0 +1,76 @@
+.Menu-link {
+  @include red-underline-link;
+  background: none;
+  border: 0;
+  color: $white;
+  display: inline-block;
+  margin: 0;
+  padding: 0.2rem 0.3rem;
+  text-decoration: none;
+}
+
+.Menu-link--active {
+  &::before {
+    border-top: 1px solid rgba($white, 0.2);
+    transform: scaleX(1);
+  }
+}
+
+.Menu-linkContent {
+  align-items: center;
+  display: inline-flex;
+}
+
+.Menu-linkIcon {
+  fill: $white;
+  margin-left: 0.5rem;
+}
+
+.Header {
+  .Menu {
+    color: rgba($white, 0.2);
+    display: none;
+    font-size: 1.6rem;
+
+    @include md {
+      display: block;
+    }
+  }
+
+  .Menu-button {
+    background: none;
+    border: 0;
+    height: 6rem;
+    padding: 0;
+    position: absolute;
+    right: -1rem;
+    top: 0;
+    width: 6rem;
+    z-index: 100;
+
+    @include md {
+      display: none;
+    }
+
+    span {
+      background: $white;
+      border-radius: 0.2rem;
+      display: block;
+      height: 0.2rem;
+      margin: 0.8rem auto;
+      transition: background $time;
+      width: 3.2rem;
+    }
+  }
+}
+
+.Footer {
+  .Menu-button {
+    display: none;
+  }
+
+  .Menu-link {
+    color: $white;
+    display: inline-block;
+  }
+}

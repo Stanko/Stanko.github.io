@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'MarvinVisions';
+  src: url('../public/fonts/MarvinVisions-Bold.eot');
+  src: url('../public/fonts/MarvinVisions-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../public/fonts/MarvinVisions-Bold.woff2') format('woff2'),
+       url('../public/fonts/MarvinVisions-Bold.woff') format('woff');
+  font-weight: bold;
+}
+
+@mixin marvin {
+  font-family: MarvinVisions, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  line-height: 0.9em;
+  letter-spacing: 0.05em;
+}

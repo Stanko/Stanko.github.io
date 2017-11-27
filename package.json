@@ -1,0 +1,30 @@
+{
+  "name": "muffinman-blog",
+  "author": "Stanko",
+  "scripts": {
+    "start": "webpack"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "browser-sync": "^2.18.13",
+    "browser-sync-webpack-plugin": "^1.2.0",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "ignore-file-loader": "^1.0.0",
+    "node-sass": "^4.5.3",
+    "postcss": "^6.0.14",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^11.0.0",
+    "postcss-loader": "^2.0.8",
+    "sass-loader": "^6.0.6",
+    "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "animated-scroll-to": "^1.1.7"
+  }
+}

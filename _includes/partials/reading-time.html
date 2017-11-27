@@ -1,0 +1,14 @@
+{% assign words = page.content | split: ' ' | size %}
+{% assign minutes = words | divided_by: 180 | round %}
+
+{% if minutes == 1 %}
+  {% assign minutes_label = "minute" %}
+{% else %}
+  {% assign minutes_label = "minutes" %}
+{% endif %}
+
+{% if minutes > 0 %}
+  This article will take about {{ minutes }} {{ minutes_label }} to read.
+{% else %}
+  This article will take less than 1 minute to read.
+{% endif %}

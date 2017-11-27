@@ -1,109 +1,274 @@
-'use strict';
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
 
-function animateScrollTo(desiredOffset) {
-  var userOptions = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+(function() {
+  'use strict';
 
-  var defaultOptions = {
-    speed: 500,
-    minDuration: 250,
-    maxDuration: 3000,
-    cancelOnUserAction: true
-  };
+  // desiredOffset - page offset to scroll to
+  // speed - duration of the scroll per 1000px
+  function __ANIMATE_SCROLL_TO(desiredOffset) {
+    var userOptions = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
 
-  var options = {};
+    if (desiredOffset instanceof HTMLElement) {
+      if (userOptions.element && userOptions.element instanceof HTMLElement) {
+        desiredOffset = (desiredOffset.getBoundingClientRect().top + userOptions.element.scrollTop)
+          - userOptions.element.getBoundingClientRect().top;
+      } else {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop;
+        desiredOffset = scrollTop + desiredOffset.getBoundingClientRect().top;
+      }
+    }
 
-  Object.keys(defaultOptions).forEach(function (key) {
-    options[key] = userOptions[key] ? userOptions[key] : defaultOptions[key];
-  });
-
-  // get cross browser scroll position
-  var initialScrollPosition = window.scrollY || document.documentElement.scrollTop;
-  // cross browser document height minus window height
-  var maxScroll = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight) - window.innerHeight;
-
-  // If the scroll position is greater than maximum available scroll
-  if (desiredOffset > maxScroll) {
-    desiredOffset = maxScroll;
-  }
-
-  // Calculate diff to scroll
-  var diff = desiredOffset - initialScrollPosition;
-
-  // Do nothing if the page is already there
-  if (diff === 0) {
-    return;
-  }
-
-  // Calculate duration of the scroll
-  var duration = Math.abs(Math.round(diff / 1000 * options.speed));
-
-  // Set minimum and maximum duration
-  if (duration < options.minDuration) {
-    duration = options.minDuration;
-  } else if (duration > options.maxDuration) {
-    duration = options.maxDuration;
-  }
-
-  var startingTime = Date.now();
-
-  // Request animation frame ID
-  var requestID = null;
-
-  // Method handler
-  var handleUserEvent = null;
-
-  if (options.cancelOnUserAction) {
-    // Set handler to cancel scroll on user action
-    handleUserEvent = function handleUserEvent(e) {
-      cancelAnimationFrame(requestID);
+    var defaultOptions = {
+      speed: 500,
+      minDuration: 250,
+      maxDuration: 1500,
+      cancelOnUserAction: true,
+      element: window,
+      onComplete: undefined,
     };
-    window.addEventListener('keydown', handleUserEvent);
-  } else {
-    // Set handler to prevent user actions while scroll is active
-    handleUserEvent = function handleUserEvent(e) {
-      e.preventDefault();
-    };
-    window.addEventListener('scroll', handleUserEvent);
-  }
 
-  window.addEventListener('wheel', handleUserEvent);
-  window.addEventListener('touchstart', handleUserEvent);
+    var options = {};
 
-  var step = function step() {
-    var timeDiff = Date.now() - startingTime;
-    var t = timeDiff / duration - 1;
-    var easing = t * t * t + 1;
-    var scrollPosition = Math.round(initialScrollPosition + diff * easing);
+    Object.keys(defaultOptions).forEach(function(key) {
+      options[key] = userOptions[key] ? userOptions[key] : defaultOptions[key];
+    });
 
-    if (timeDiff < duration && scrollPosition !== desiredOffset) {
-      // If scroll didn't reach desired offset or time is not elapsed
-      // Scroll to a new position
-      // And request a new step
+    options.isWindow = options.element === window;
 
-      window.scrollTo(0, scrollPosition);
-      requestID = requestAnimationFrame(step);
+    var initialScrollPosition = null;
+    var maxScroll = null;
+
+    if (options.isWindow) {
+      // get cross browser scroll position
+      initialScrollPosition = window.scrollY || document.documentElement.scrollTop;
+      // cross browser document height minus window height
+      maxScroll = Math.max(
+        document.body.scrollHeight, document.documentElement.scrollHeight,
+        document.body.offsetHeight, document.documentElement.offsetHeight,
+        document.body.clientHeight, document.documentElement.clientHeight
+      ) - window.innerHeight;
     } else {
-      // If the time elapsed or we reached the desired offset
-      // Set scroll to the desired offset (when rounding made it to be off a pixel or two)
-      // Clear animation frame to be sure
-      window.scrollTo(0, desiredOffset);
-      cancelAnimationFrame(requestID);
+      // DOM element
+      initialScrollPosition = options.element.scrollTop;
+      maxScroll = options.element.scrollHeight - options.element.clientHeight;
+    }
 
-      // Remove listeners
+    // If the scroll position is greater than maximum available scroll
+    if (desiredOffset > maxScroll) {
+      desiredOffset = maxScroll;
+    }
+
+    // Calculate diff to scroll
+    var diff = desiredOffset - initialScrollPosition;
+
+    // Do nothing if the page is already there
+    if (diff === 0) {
+      // Execute callback if there is any
+      if (options.onComplete && typeof options.onComplete === 'function') {
+        options.onComplete()
+      }
+
+      return;
+    }
+
+    // Calculate duration of the scroll
+    var duration = Math.abs(Math.round((diff / 1000) * options.speed));
+
+    // Set minimum and maximum duration
+    if (duration < options.minDuration) {
+      duration = options.minDuration;
+    } else if (duration > options.maxDuration) {
+      duration = options.maxDuration;
+    }
+
+    var startingTime = Date.now();
+
+    // Request animation frame ID
+    var requestID = null;
+
+    // Method handler
+    var handleUserEvent = null;
+
+    if (options.cancelOnUserAction) {
+      // Set handler to cancel scroll on user action
+      handleUserEvent = function() {
+        removeListeners();
+        cancelAnimationFrame(requestID);
+      };
+      window.addEventListener('keydown', handleUserEvent);
+      window.addEventListener('mousedown', handleUserEvent);
+    } else {
+      // Set handler to prevent user actions while scroll is active
+      handleUserEvent = function(e) { e.preventDefault(); };
+      window.addEventListener('scroll', handleUserEvent);
+    }
+
+    window.addEventListener('wheel', handleUserEvent);
+    window.addEventListener('touchstart', handleUserEvent);
+
+    var removeListeners = function () {
       window.removeEventListener('wheel', handleUserEvent);
       window.removeEventListener('touchstart', handleUserEvent);
 
       if (options.cancelOnUserAction) {
         window.removeEventListener('keydown', handleUserEvent);
+        window.removeEventListener('mousedown', handleUserEvent);
       } else {
         window.removeEventListener('scroll', handleUserEvent);
       }
-    }
-  };
+    };
 
-  // Start animating scroll
-  requestID = requestAnimationFrame(step);
-}
+    var step = function () {
+      var timeDiff = Date.now() - startingTime;
+      var t = (timeDiff / duration) - 1;
+      var easing = t * t * t + 1;
+      var scrollPosition = Math.round(initialScrollPosition + (diff * easing));
+
+      if (timeDiff < duration && scrollPosition !== desiredOffset) {
+        // If scroll didn't reach desired offset or time is not elapsed
+        // Scroll to a new position
+        // And request a new step
+
+        if (options.isWindow) {
+          options.element.scrollTo(0, scrollPosition);
+        } else {
+          options.element.scrollTop = scrollPosition;
+        }
+
+        requestID = requestAnimationFrame(step);
+      } else {
+        // If the time elapsed or we reached the desired offset
+        // Set scroll to the desired offset (when rounding made it to be off a pixel or two)
+        // Clear animation frame to be sure
+        if (options.isWindow) {
+          options.element.scrollTo(0, desiredOffset);
+        } else {
+          options.element.scrollTop = desiredOffset;
+        }
+        cancelAnimationFrame(requestID);
+
+        // Remove listeners
+        removeListeners();
+
+        // Animation is complete, execute callback if there is any
+        if (options.onComplete && typeof options.onComplete === 'function') {
+          options.onComplete()
+        }
+      }
+    };
+
+    // Start animating scroll
+    requestID = requestAnimationFrame(step);
+  }
+
+  if (true) {
+    if (typeof module !== 'undefined' && module.exports) {
+      module.exports = __ANIMATE_SCROLL_TO;
+      exports = module.exports;
+    }
+    exports.default = __ANIMATE_SCROLL_TO;
+  } else if (window) {
+    window.animateScrollTo = __ANIMATE_SCROLL_TO;
+  }
+}).call(this);
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(2);
+
+__webpack_require__(3);
+
+__webpack_require__(4);
+
+__webpack_require__(5);
+
+__webpack_require__(6);
+
+__webpack_require__(7);
+
+__webpack_require__(8);
+
+__webpack_require__(9);
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 var commentForm = document.querySelector('.CommentForm');
 var commentFormInputs = document.querySelectorAll('.CommentForm-input');
@@ -197,6 +362,15 @@ if (commentForm) {
     });
   });
 }
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// https://github.com/mattyork/fuzzy/tree/master/lib
 
 /*
  * Fuzzy
@@ -353,29 +527,716 @@ if (commentForm) {
   };
 })();
 
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _animatedScrollTo = __webpack_require__(0);
+
+var _animatedScrollTo2 = _interopRequireDefault(_animatedScrollTo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var jumpToContent = document.querySelector('.Header-jumpToContent');
+var jumpToTop = document.querySelector('.Footer-jumpToTop');
+
+jumpToContent && jumpToContent.addEventListener('click', function (e) {
+  (0, _animatedScrollTo2.default)(document.querySelector('.Header').offsetHeight);
+});
+
+jumpToTop && jumpToTop.addEventListener('click', function (e) {
+  (0, _animatedScrollTo2.default)(0, { maxDuration: 500 });
+});
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var keyCodes = {
+  // 0: {
+  //   // 'Key has no keycode',
+  //   className: '',
+  // },
+  // 3: {
+  //   // 'break',
+  //   className: '',
+  // },
+  8: {
+    // 'backspace / delete',
+    className: 'delete'
+  },
+  9: {
+    className: 'tab'
+  },
+  // 12: {
+  //   // 'clear',
+  //   className: '',
+  // },
+  13: {
+    className: 'enter'
+  },
+  16: {
+    className: 'shift',
+    checkSide: true
+    // DOM_KEY_LOCATION_LEFT
+    // DOM_KEY_LOCATION_RIGHT
+  },
+  17: {
+    className: 'control',
+    checkSide: true
+  },
+  18: {
+    className: 'alt',
+    checkSide: true
+  },
+  // 19: {
+  //   // 'pause/break',
+  //   className: '',
+  // },
+  20: {
+    className: 'capsLock'
+  },
+  // 21: {
+  //   // 'hangul',
+  //   className: '',
+  // },
+  // 25: {
+  //   // 'hanja',
+  //   className: '',
+  // },
+  27: {
+    className: 'esc'
+  },
+  // 28: {
+  //   // 'conversion',
+  //   className: '',
+  // },
+  // 29: {
+  //   // 'non-conversion',
+  //   className: '',
+  // },
+  32: {
+    className: 'space'
+  },
+  // 33: {
+  //   // 'page up',
+  //   className: '',
+  // },
+  // 34: {
+  //   // 'page down',
+  //   className: '',
+  // },
+  // 35: {
+  //   // 'end',
+  //   className: '',
+  // },
+  // 36: {
+  //   // 'home',
+  //   className: '',
+  // },
+  37: {
+    className: 'arrowLeft'
+  },
+  38: {
+    className: 'arrowUp'
+  },
+  39: {
+    className: 'arrowRight'
+  },
+  40: {
+    className: 'arrowDown'
+  },
+  // 41: {
+  //   // 'select',
+  //   className: '',
+  // },
+  // 42: {
+  //   // 'print',
+  //   className: '',
+  // },
+  // 43: {
+  //   // 'execute',
+  //   className: '',
+  // },
+  // 44: {
+  //   // 'print Screen',
+  //   className: '',
+  // },
+  // 45: {
+  //   // 'insert',
+  //   className: '',
+  // },
+  46: {
+    className: 'delete'
+  },
+  // 47: {
+  //   // 'help',
+  //   className: '',
+  // },
+  48: {
+    className: '0'
+  },
+  49: {
+    className: '1'
+  },
+  50: {
+    className: '2'
+  },
+  51: {
+    className: '3'
+  },
+  52: {
+    className: '4'
+  },
+  53: {
+    className: '5'
+  },
+  54: {
+    className: '6'
+  },
+  55: {
+    className: '7'
+  },
+  56: {
+    className: '8'
+  },
+  57: {
+    className: '9'
+  },
+  58: {
+    // ':',
+    className: 'semicolon'
+  },
+  59: {
+    // 'semicolon (firefox), equals',
+    className: 'equals'
+  },
+  60: {
+    // '<',
+    className: 'comma'
+  },
+  61: {
+    // 'equals (firefox)',
+    className: 'equals'
+  },
+  // 63: {
+  //   // 'ß',
+  //   className: '',
+  // },
+  64: {
+    // '@ (firefox)',
+    className: '2'
+  },
+  65: {
+    className: 'a'
+  },
+  66: {
+    className: 'b'
+  },
+  67: {
+    className: 'c'
+  },
+  68: {
+    className: 'd'
+  },
+  69: {
+    className: 'e'
+  },
+  70: {
+    className: 'f'
+  },
+  71: {
+    className: 'g'
+  },
+  72: {
+    className: 'h'
+  },
+  73: {
+    className: 'i'
+  },
+  74: {
+    className: 'j'
+  },
+  75: {
+    className: 'k'
+  },
+  76: {
+    className: 'l'
+  },
+  77: {
+    className: 'm'
+  },
+  78: {
+    className: 'n'
+  },
+  79: {
+    className: 'o'
+  },
+  80: {
+    className: 'p'
+  },
+  81: {
+    className: 'q'
+  },
+  82: {
+    className: 'r'
+  },
+  83: {
+    className: 's'
+  },
+  84: {
+    className: 't'
+  },
+  85: {
+    className: 'u'
+  },
+  86: {
+    className: 'v'
+  },
+  87: {
+    className: 'w'
+  },
+  88: {
+    className: 'x'
+  },
+  89: {
+    className: 'y'
+  },
+  90: {
+    className: 'z'
+  },
+  91: {
+    // 'Windows Key / Left ⌘ / Chromebook Search key',
+    className: 'cmdLeft'
+  },
+  92: {
+    // 'right window key',
+    className: 'cmdRight'
+  },
+  93: {
+    // 'Windows Menu / Right ⌘',
+    className: 'cmdRight'
+  },
+  // 95: {
+  //  '// sleep',
+  //   className: '',
+  // },
+  96: {
+    // 'numpad 0',
+    className: '0'
+  },
+  97: {
+    // 'numpad 1',
+    className: '1'
+  },
+  98: {
+    // 'numpad 2',
+    className: '2'
+  },
+  99: {
+    // 'numpad 3',
+    className: '3'
+  },
+  100: {
+    // 'numpad 4',
+    className: '4'
+  },
+  101: {
+    // 'numpad 5',
+    className: '5'
+  },
+  102: {
+    // 'numpad 6',
+    className: '6'
+  },
+  103: {
+    // 'numpad 7',
+    className: '7'
+  },
+  104: {
+    // 'numpad 8',
+    className: '8'
+  },
+  105: {
+    // 'numpad 9',
+    className: '9'
+  },
+  106: {
+    // 'multiply',
+    className: '8'
+  },
+  107: {
+    // 'add',
+    className: 'equals'
+  },
+  108: {
+    // 'numpad period (firefox)',
+    className: 'dot'
+  },
+  109: {
+    // 'subtract',
+    className: 'minus'
+  },
+  110: {
+    // 'decimal point',
+    className: 'dot'
+  },
+  111: {
+    // 'divide',
+    className: 'slash'
+  },
+  112: {
+    className: 'f1'
+  },
+  113: {
+    className: 'f2'
+  },
+  114: {
+    className: 'f3'
+  },
+  115: {
+    className: 'f4'
+  },
+  116: {
+    className: 'f5'
+  },
+  117: {
+    className: 'f6'
+  },
+  118: {
+    className: 'f7'
+  },
+  119: {
+    className: 'f8'
+  },
+  120: {
+    className: 'f9'
+  },
+  121: {
+    className: 'f10'
+  },
+  122: {
+    className: 'f11'
+  },
+  123: {
+    className: 'f12'
+  },
+  124: {
+    className: 'f13'
+  },
+  125: {
+    className: 'f14'
+  },
+  126: {
+    className: 'f15'
+  },
+  127: {
+    className: 'f16'
+  },
+  128: {
+    className: 'f17'
+  },
+  129: {
+    className: 'f18'
+  },
+  130: {
+    className: 'f19'
+  },
+  131: {
+    className: 'f20'
+  },
+  132: {
+    className: 'f21'
+  },
+  133: {
+    className: 'f22'
+  },
+  134: {
+    className: 'f23'
+  },
+  135: {
+    className: 'f24'
+  },
+  // 144: {
+  //   // 'num lock',
+  //   className: '',
+  // },
+  // 145: {
+  //   // 'scroll lock',
+  //   className: '',
+  // },
+  160: {
+    // '^',
+    className: '6'
+  },
+  161: {
+    // '!',
+    className: '1'
+  },
+  163: {
+    // '#',
+    className: '3'
+  },
+  164: {
+    // '$',
+    className: '4'
+  },
+  165: {
+    // 'ù',
+    className: 'u'
+  },
+  // 166: {
+  //   // 'page backward',
+  //   className: '',
+  // },
+  // 167: {
+  //   // 'page forward',
+  //   className: '',
+  // },
+  168: {
+    // 'refresh',
+    className: 'f5'
+  },
+  169: {
+    // 'closing paren (AZERTY)',
+    className: '0'
+  },
+  170: {
+    // '*',
+    className: '8'
+  },
+  171: {
+    // '~ + * key',
+    className: 'tilde'
+  },
+  // 172: {
+  //   // 'home key',
+  //   className: '',
+  // },
+  173: {
+    // 'minus (firefox), mute/unmute',
+    className: 'minus'
+  },
+  174: {
+    // 'decrease volume level',
+    className: 'f10'
+  },
+  175: {
+    // 'increase volume level',
+    className: 'f11'
+  },
+  // 176: {
+  //   // 'next',
+  //   className: '',
+  // },
+  // 177: {
+  //   // 'previous',
+  //   className: '',
+  // },
+  // 178: {
+  //   // 'stop',
+  //   className: '',
+  // },
+  179: {
+    // 'play/pause',
+    className: 'f8'
+  },
+  // 180: {
+  //   // 'e-mail',
+  //   className: '',
+  // },
+  181: {
+    // 'mute/unmute (firefox)',
+    className: 'f10'
+  },
+  182: {
+    // 'decrease volume level (firefox)',
+    className: 'f11'
+  },
+  183: {
+    // 'increase volume level (firefox)',
+    className: 'f12'
+  },
+  186: {
+    // 'semi-colon / ñ',
+    className: 'semicolon'
+  },
+  187: {
+    // 'equal sign',
+    className: 'equals'
+  },
+  188: {
+    // 'comma',
+    className: 'comma'
+  },
+  189: {
+    // 'dash',
+    className: 'minus'
+  },
+  190: {
+    // 'period',
+    className: 'dot'
+  },
+  191: {
+    // 'forward slash / ç',
+    className: 'slash'
+  },
+  192: {
+    // 'grave accent / ñ / æ / ö',
+    className: 'tilde'
+  },
+  193: {
+    // '?, / or °',
+    className: 'slash'
+  },
+  194: {
+    // 'numpad period (chrome)',
+    className: 'dot'
+  },
+  219: {
+    // 'open bracket',
+    className: 'squareBracketLeft'
+  },
+  220: {
+    // 'back slash',
+    className: 'backslash'
+  },
+  221: {
+    // 'close bracket / å',
+    className: 'squareBracketRight'
+  },
+  222: {
+    // 'single quote / ø / ä',
+    className: 'apostrophe'
+  },
+  223: {
+    // '`',
+    className: 'tilde'
+  },
+  224: {
+    // 'left or right ⌘ key (firefox)',
+    className: 'cmd',
+    checkSide: true
+  },
+  225: {
+    // 'altgr',
+    className: 'altRight'
+  },
+  // 226: {
+  //   // '< /git >, left back slash',
+  //   className: '',
+  // },
+  // 230: {
+  //   // 'GNOME Compose Key',
+  //   className: '',
+  // },
+  231: {
+    // 'ç',
+    className: 'c'
+  }
+  // 233: {
+  //   // 'XF86Forward',
+  //   className: '',
+  // },
+  // 234: {
+  //   // 'XF86Back',
+  //   className: '',
+  // },
+  // 240: {
+  //   // 'alphanumeric',
+  //   className: '',
+  // },
+  // 242: {
+  //   // 'hiragana/katakana',
+  //   className: '',
+  // },
+  // 243: {
+  //   // 'half-width/full-width',
+  //   className: '',
+  // },
+  // 244: {
+  //   // 'kanji',
+  //   className: '',
+  // },
+  // 255: {
+  //   // 'toggle touchpad',
+  //   className: '',
+  // },
+};
+
+function getKeyElement(e) {
+  var key = keyCodes[e.keyCode];
+
+  if (key && key.className) {
+    var keySelector = '#Key--' + key.className;
+
+    if (key.checkSide && KeyboardEvent) {
+      if (e.location === KeyboardEvent.DOM_KEY_LOCATION_LEFT) {
+        keySelector += 'Left';
+      } else if (e.location === KeyboardEvent.DOM_KEY_LOCATION_RIGHT) {
+        keySelector += 'Right';
+      }
+    }
+
+    var keyElement = document.querySelector(keySelector);
+
+    return keyElement;
+  }
+}
+
+document.addEventListener('keydown', function (e) {
+  var keyElement = getKeyElement(e);
+
+  if (keyElement) {
+    keyElement.setAttribute('class', 'Key Key--active');
+  }
+});
+
+document.addEventListener('keyup', function (e) {
+  var keyElement = getKeyElement(e);
+
+  if (keyElement) {
+    keyElement.setAttribute('class', 'Key');
+  }
+});
+
+function removeActiveKeyClass() {
+  var keyElements = document.querySelectorAll('.Key--active');
+
+  for (var i = 0; i < keyElements.length; i++) {
+    keyElements[i].setAttribute('class', 'Key');
+  }
+}
+
+window.addEventListener('blur', removeActiveKeyClass);
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _animatedScrollTo = __webpack_require__(0);
+
+var _animatedScrollTo2 = _interopRequireDefault(_animatedScrollTo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var commentsLink = document.querySelector('.Post-commentsLink');
-var comments = document.querySelector('#comments');
 var postBgArchive = document.querySelector('.Post-bg--archive');
 var expandToggles = document.querySelectorAll('.Expandable-toggle');
-
-function getElementOffset(element) {
-  var top = 0,
-      left = 0;
-  do {
-    top += element.offsetTop || 0;
-    left += element.offsetLeft || 0;
-    element = element.offsetParent;
-  } while (element);
-
-  return {
-    top: top,
-    left: left
-  };
-}
+var sideNoteTriggers = document.querySelectorAll('.SideNote-trigger');
 
 commentsLink && commentsLink.addEventListener('click', function (e) {
   e.preventDefault();
-  animateScrollTo(getElementOffset(comments).top, { maxDuration: 1000 });
+  (0, _animatedScrollTo2.default)(document.querySelector('#comments'), { maxDuration: 1000 });
 });
 
 if (postBgArchive) {
@@ -401,17 +1262,39 @@ for (var i = 0; i < expandToggles.length; ++i) {
   });
 }
 
+for (var _i = 0; _i < sideNoteTriggers.length; ++_i) {
+  var sideNoteTrigger = sideNoteTriggers[_i];
+
+  sideNoteTrigger.addEventListener('click', function (e) {
+    var button = e.currentTarget;
+    var OPEN_CLASSNAME = 'SideNote-toggle--open';
+
+    if (button.className.search(OPEN_CLASSNAME) === -1) {
+      button.classList.add(OPEN_CLASSNAME);
+    } else {
+      button.classList.remove(OPEN_CLASSNAME);
+    }
+  });
+}
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 var options = {
   extract: function extract(el) {
     return el.title;
   }
 };
 
-var menu = document.querySelector('.Menu');
-var searchInput = document.querySelector('.Menu-input');
-var menuWrapper = document.querySelector('.Menu-menuWrapper');
-var menuToggles = document.querySelectorAll('.Menu-toggle');
-var searchResults = document.querySelector('.Menu-results');
+var menu = document.querySelector('.MenuModal');
+var searchInput = document.querySelector('.MenuModal-input');
+var modalMenu = document.querySelector('.MenuModal-menu');
+var menuToggles = document.querySelectorAll('.MenuModal-toggle');
+var searchResults = document.querySelector('.MenuModal-results');
 var html = document.querySelector('html');
 
 var prevSearch = '';
@@ -420,38 +1303,70 @@ var timeout = null;
 var MIN_CHARACTERS = 1;
 
 function renderResult(title, url) {
-  return '<div><a href="' + url + '">' + title + '</a></div>';
+  return '<a href=\'' + url + '\' class=\'MenuModal-result\'><div class=\'Container\'>' + title + '</div></a>';
 }
 
-for (var _i = 0; _i < menuToggles.length; _i++) {
-  var element = menuToggles[_i];
+var ANIMATION_DURATION = 500;
+var scrollPosition = 0;
+
+for (var i = 0; i < menuToggles.length; i++) {
+  var element = menuToggles[i];
   element.addEventListener('click', function () {
     clearTimeout(timeout);
 
     if (menu.style.display === 'none' || !menu.style.display) {
       menu.style.display = 'block';
+      scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
       timeout = setTimeout(function () {
         html.classList.toggle('Html--menuActive');
         searchInput.focus();
+
+        timeout = setTimeout(function () {
+          html.classList.toggle('Html--overflowHidden');
+        }, ANIMATION_DURATION);
       }, 30);
     } else {
       html.classList.remove('Html--menuActive');
+      html.classList.remove('Html--overflowHidden');
+
+      window.scrollTo(0, scrollPosition);
 
       timeout = setTimeout(function () {
         menu.style.display = 'none';
-      }, 500);
+      }, ANIMATION_DURATION);
     }
   });
 }
 
-searchInput.addEventListener('keyup', function () {
+var keyCodes = {
+  UP: 38,
+  DOWN: 40
+};
+
+searchInput.addEventListener('keydown', function (e) {
+  var linkToFocus = null;
+
+  if (e.keyCode === keyCodes.DOWN) {
+    linkToFocus = searchResults.querySelector('a:first-child');
+  } else if (e.keyCode === keyCodes.UP) {
+    linkToFocus = searchResults.querySelector('a:last-child');
+  }
+
+  if (linkToFocus) {
+    e.preventDefault();
+    linkToFocus.focus();
+  }
+});
+
+searchInput.addEventListener('keyup', function (e) {
   var newSearch = searchInput.value.trim();
 
   if (prevSearch === newSearch) {
     return;
   }
 
-  menuWrapper.style.display = newSearch.length > 0 ? 'none' : '';
+  modalMenu.style.display = newSearch.length > 0 ? 'none' : '';
 
   if (newSearch.length < MIN_CHARACTERS) {
     searchResults.innerHTML = '';
@@ -462,13 +1377,131 @@ searchInput.addEventListener('keyup', function () {
   var results = fuzzy.filter(newSearch, posts, options);
 
   if (results.length) {
-    var _html = results.map(function (result) {
-      return renderResult(result.string, result.original.url);
-    }).join('');
-    searchResults.innerHTML = _html;
+    (function () {
+      var html = results.map(function (result) {
+        return renderResult(result.string, result.original.url);
+      }).join('');
+      searchResults.innerHTML = html;
+      var resultLinks = document.querySelectorAll('.MenuModal-result');
+
+      var _loop = function _loop(_i) {
+        var resultLink = resultLinks[_i];
+        console.log(resultLink);
+
+        resultLink.addEventListener('keydown', function (e) {
+          var linkToFocus = null;
+
+          if (e.keyCode === keyCodes.DOWN) {
+            linkToFocus = resultLinks[_i + 1];
+          } else if (e.keyCode === keyCodes.UP) {
+            linkToFocus = resultLinks[_i - 1];
+          }
+
+          if (linkToFocus) {
+            e.preventDefault();
+            linkToFocus.focus();
+          }
+        });
+      };
+
+      for (var _i = 0; _i < resultLinks.length; _i++) {
+        _loop(_i);
+      }
+    })();
   } else {
     searchResults.innerHTML = '<div class="Menu-noResults">No results</div>';
   }
 
   prevSearch = newSearch;
 });
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _animatedScrollTo = __webpack_require__(0);
+
+var _animatedScrollTo2 = _interopRequireDefault(_animatedScrollTo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function checkHash() {
+  var hash = window.location.hash.replace('#/', '');
+
+  if (hash) {
+    var posts = document.querySelector('#posts-' + hash);
+    var section = document.querySelector('#section-' + hash);
+
+    if (posts) {
+      posts.style.height = 'auto';
+      (0, _animatedScrollTo2.default)(section);
+    }
+  }
+
+  window.location.hash = '';
+}
+
+// window.addEventListener('hashchange', function(e) {
+//   checkHash();
+// });
+
+checkHash();
+
+function toggleSection(posts, postsContent) {
+  var isOpen = posts.getAttribute('open') === '1';
+  var isAnimating = posts.getAttribute('animating') === '1';
+
+  if (isAnimating) {
+    return;
+  }
+
+  posts.style.height = postsContent.offsetHeight + 'px';
+  posts.setAttribute('animating', 1);
+
+  if (isOpen) {
+    setTimeout(function () {
+      posts.style.height = 0;
+
+      setTimeout(function () {
+        posts.setAttribute('animating', 0);
+      }, ANIMATION_DURATION);
+    }, 30);
+    posts.setAttribute('open', 0);
+  } else {
+    posts.setAttribute('open', 1);
+
+    setTimeout(function () {
+      posts.style.height = 'auto';
+      posts.setAttribute('animating', 0);
+    }, ANIMATION_DURATION);
+  }
+}
+
+var ANIMATION_DURATION = 500;
+var archiveToggles = document.querySelectorAll('.Archive-title a');
+
+for (var i = 0; i < archiveToggles.length; i++) {
+  var toggle = archiveToggles[i];
+
+  toggle.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    var link = e.currentTarget;
+    var posts = link.parentElement.nextElementSibling;
+    var postsContent = posts.querySelector('.Archive-postsContent');
+
+    toggleSection(posts, postsContent);
+  });
+}
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ })
+/******/ ]);

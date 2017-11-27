@@ -1,0 +1,13 @@
+_id: c76237a0-bcfd-11e7-89a4-e33ab31f5c3f
+slug: webpack-babel-react-revisited
+name: David
+email: c4a8eee3217f5307d027dea0ab6ccd57
+message: >-
+  Thank you for this amazing tutorial.
+
+
+  Minor correction: in the Assets section you forgot to remove the "ADDED IN
+  THIS STEP" comment from the line
+
+  `new ExtractTextPlugin('style.bundle.css'),`
+date: '2017-10-29T23:06:22.014Z'

@@ -1,0 +1,41 @@
+<div class="Header">
+  <div class="Header-content">
+    <div class="Header-top">
+      {% include partials/logo.html %}
+      {% include partials/menu.html %}
+    </div>
+
+    {% assign title = page.title %}
+    {% if page.headerTitle != nil %}
+      {% assign title = page.headerTitle %}
+    {% endif %}
+    <h1 class="Header-title Header-title--page {% if page.about == nil %}Header-title--largeMarginBottom{% endif %}" aria-label="{{ title }}">
+      {% assign letters = title | split: '' %}
+      {% for letter in letters %}<span>{{ letter }}</span>{% endfor %}
+
+      {% if page.date %}
+        <div class="Header-date">
+          {% include svg/clock.svg %}
+          {{ page.date | date_to_string }}
+        </div>
+      {% endif %}
+    </h1>
+
+    {% if page.about != nil %}
+    <p class="Header-about">
+      {{ page.about }}
+    </p>
+    {% endif %}
+  </div>
+
+  {% if page.about != nil %}
+  <button class="Header-jumpToContent" aria-label="Jump to content">
+    <div class="Header-jumpToContentInner">
+      {% include svg/chevron-down.svg %}
+    </div>
+  </button>
+  {% endif %}
+
+  <div class="Header-angle Header-angle--left"></div>
+  <div class="Header-angle Header-angle--right"></div>
+</div>

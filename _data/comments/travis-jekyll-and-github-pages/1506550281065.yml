@@ -1,0 +1,16 @@
+_id: caa38a90-a3d0-11e7-adb3-e700074bdbd8
+slug: travis-jekyll-and-github-pages
+name: Stanko
+email: 13a28fac985c11eb7f40169be7da32f4
+message: >-
+  Hello Lars,
+
+  I'll take a look, but I can't promise anything :) 
+
+  Meanwhile I have a cheesy advice - you could clone my blog's repo, and
+  replace the posts and theme.
+  
+  Btw how are you doing it at the moment, are you building it locally and pushing everything to <code>gh-pages</code> by hand?
+
+  Cheers!
+date: '2017-09-27T22:11:21.057Z'

@@ -1,0 +1,95 @@
+# GitHub
+username: Stanko
+repo: Stanko.github.io
+branch: master
+
+# Jekyll source / destination
+source: .
+destination: _site
+
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink: '/:title/'
+plugins:
+- jekyll-paginate
+- jekyll-octicons
+
+# Plugins which are activated by default
+
+# - jekyll-coffeescript
+# - jekyll-gist
+# - jekyll-github-metadata
+# - jekyll-relative-links
+# - jekyll-optional-front-matter
+# - jekyll-readme-index
+# - jekyll-default-layout
+# - jekyll-titles-from-headings
+
+# Plugins allowed by GitHub Pages
+
+# - jekyll-coffeescript
+# - jekyll-feed
+# - jekyll-gist
+# - jekyll-github-metadata
+# - jekyll-paginate
+# - jekyll-redirect-from
+# - jekyll-seo-tag
+# - jekyll-sitemap
+# - jekyll-avatar
+# - jemoji
+# - jekyll-mentions
+# - jekyll-relative-links
+# - jekyll-optional-front-matter
+# - jekyll-readme-index
+# - jekyll-default-layout
+# - jekyll-titles-from-headings
+# - jekyll-include-cache
+# - jekyll-octicons
+
+exclude:
+ - node_modules
+ - gulpfile.babel.js
+ - package.json
+ - _sass
+# - public/css # gulp injects CSS via browsersync
+ - _js
+ - .sass-cache
+ - Gemfile
+ - Gemfile.lock
+ - vendor
+
+# Setup
+title: Muffin Man
+tagline: Frontend development & rants
+description: Hello, I'm Stanko, a software engineer in Belgrade. If you are looking for frontend develpment stuff, you might be at the right place.
+url: http://stanko.github.io
+baseurl: ''
+paginate: 5
+paginate_path: 'page-:num'
+excerpt_separator: <!--more-->
+
+# About/contact
+author:
+  name: Stanko
+  url: http://stanko.github.io
+  email: stanko.tadic@gmail.com
+
+# Custom vars
+# version: 1.0.0
+
+# Staticman
+staticman:
+  allowedFields: ['name', 'email', 'message', 'slug']
+  branch: master
+  commitMessage: "New comment has been posted"
+  filename: "{@timestamp}"
+  format: yml
+  moderation: true
+  path: "_data/comments/{options.slug}"
+  generatedFields:
+    date:
+      type: date
+  transforms:
+    email: 'md5'
+  requiredFields: ['name', 'email', 'message', 'slug']

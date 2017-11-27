@@ -1,0 +1,147 @@
+.Footer {
+  background: $black;
+  color: $greyA;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  overflow: hidden;
+  padding: 17rem 0 9rem;
+  position: relative;
+  text-align: center;
+
+  @include md {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    padding: 18rem 0 10rem;
+  }
+
+  @include xl {
+    padding: 15rem 0 10rem;
+  }
+
+  &::before {
+    z-index: 11;
+  }
+
+  .Container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 11;
+  }
+}
+
+.Footer-angle {
+  height: 200px;
+  pointer-events: none;
+  top: 0;
+  width: 50%;
+  z-index: $layer-header + 10;
+}
+
+.Footer-angle--left {
+  @include angled-edge('inside top', 'lower right', $white, $width: 2000, $height: 200);
+  left: 0;
+  position: absolute;
+
+  &::after {
+    background-position: right center;
+    z-index: $layer-header + 5;
+  }
+}
+
+.Footer-angle--right {
+  @include angled-edge('inside top', 'lower left', $white, $width: 2000, $height: 200);
+  position: absolute;
+  right: 0;
+
+  &::after {
+    background-position: left center;
+    z-index: $layer-header + 5;
+  }
+}
+
+.Footer-rss {
+  font-size: 1.3em;
+}
+
+.Footer-text {
+}
+
+.Footer-break {
+  @include md {
+    display: none;
+  }
+}
+
+.Footer-jumpToTop {
+  @include reset-button;
+  display: block;
+  height: 4rem;
+  margin: 0 auto 3rem;
+  position: relative;
+  width: 4rem;
+  z-index: $layer-header + 20;
+
+  @include md {
+    margin-bottom: 4rem;
+  }
+}
+
+.Footer-jumpToTopInner {
+  align-items: center;
+  border: 1px solid rgba($white, 0.2);
+  border-radius: 50%;
+  display: flex;
+  height: 4rem;
+  justify-content: center;
+  position: relative;
+  transition: border $time;
+  width: 4rem;
+
+  .no-touchevents &:hover {
+    border-color: $white;
+  }
+
+  svg {
+    display: block;
+    height: 0.8rem;
+    overflow: visible;
+    stroke: $white;
+    stroke-linecap: round;
+    stroke-width: 0.2rem;
+    width: 1.4rem;
+  }
+}
+
+.Body--post .Footer {
+  background: $blacker;
+  height: auto;
+
+  @include md {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+
+  .Footer-angle {
+    // display: none;
+  }
+
+  .Footer-angle--left {
+    @include angled-edge('inside top', 'lower right', $light, $width: 2000, $height: 200);
+    position: absolute;
+  }
+
+  .Footer-angle--right {
+    @include angled-edge('inside top', 'lower left', $light, $width: 2000, $height: 200);
+    position: absolute;
+  }
+
+  .Container {
+  }
+
+  &::before {
+    display: none;
+  }
+}

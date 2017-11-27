@@ -1,0 +1,33 @@
+_id: 2ef15380-b135-11e7-badf-f3eff1f658c7
+slug: webpack-babel-react-revisited
+name: Stanko
+email: 13a28fac985c11eb7f40169be7da32f4
+message: >-
+  Hey Mathew,
+
+  It seems you are running it on Windows, that is a Unix command that fails.
+  Unfortunately, I don't have access to a Windows machine. Without one, it is
+  hard for me to help you, but you can try this.
+
+
+  From you your project's folder add <code>node_modules</code> to the Windows PATH by running:
+
+
+  <code>set -x PATH ./node_modules/.bin $PATH</code>
+
+
+  Then instead of whole <code>/node_modules/webpack/bin/webpack.js
+  [arguments]</code> thing, you can just run <code>webpack [arguments]</code>.
+
+
+  Note that if you close your cmd, you'll need to add it to the path again. But
+  don't worry, you'll probably need this only once (tutorial switches to using
+  <code>npm run</code> commands in the next step).
+
+
+  If any of you Windows folks is familiar with this, please share more elegant
+  solution, so I can update the post.
+
+
+  Thanks guys!
+date: '2017-10-14T23:12:44.030Z'

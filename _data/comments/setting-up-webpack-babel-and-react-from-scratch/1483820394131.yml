@@ -1,0 +1,12 @@
+_id: a64d4f20-d516-11e6-bd2d-451e28d8c3b4
+slug: setting-up-webpack-babel-and-react-from-scratch
+name: Stanko
+email: 13a28fac985c11eb7f40169be7da32f4
+message: >-
+  Thanks Jack!
+
+
+  You are right, it is a bit hard to follow, would it help to add complete
+  <code>webpack.config.js</code> at the end? As it seems to me that repeating it every time
+  there is a change, would make it even harder to follow.
+date: '2017-01-07T20:19:54.129Z'

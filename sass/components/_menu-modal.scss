@@ -1,0 +1,222 @@
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.Html--menuActive {
+  .MenuModal {
+    transform: none;
+  }
+}
+
+.MenuModal-toggle {
+  cursor: pointer;
+}
+
+.MenuModal {
+  background-color: $true-black;
+  background-image: url('/public/img/notebook.jpg');
+  background-position: left 5rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: $white;
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transform: translateY(-120%);
+  transition: transform $time2;
+  width: 100%;
+  z-index: $z-index-10;
+
+  @include md {
+    background-position: left top;
+    background-size: auto 80vh;
+  }
+}
+
+.MenuModal-top {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+  position: relative;
+  z-index: $layer-header + 20;
+}
+
+.MenuModal-close {
+  background: none;
+  border: 0;
+  bottom: 0;
+  height: 6rem;
+  padding: 0;
+  position: absolute;
+  right: 1rem;
+  transition: opacity $time;
+  width: 6rem;
+  z-index: 1001;
+
+  span {
+    background: $white;
+    display: block;
+    height: 3.6rem;
+    left: 2.9rem;
+    margin: 0 auto;
+    position: absolute;
+    top: 1.2rem;
+    width: 0.2rem;
+  }
+
+  span:first-child {
+    transform: rotate(45deg);
+  }
+
+  span:last-child {
+    transform: rotate(-45deg);
+  }
+
+  .no-touchevents &:hover {
+    opacity: 0.7;
+  }
+}
+
+.MenuModal-bottom {
+  height: calc(100% - 15.5rem);
+
+  @include md {
+    height: calc(100% - 15rem);
+  }
+}
+
+.MenuModal-content {
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  z-index: $z-index-10;
+
+  @include md {
+    border-radius: 0.3rem;
+  }
+}
+
+.MenuModal-inputWrapper {
+  flex-grow: 1;
+}
+
+.MenuModal-input {
+  @include placeholder(rgba($white, 0.5));
+  appearance: none;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba($white, 0.3);
+  border-radius: 0;
+  color: $white;
+  font-size: 2.5rem;
+  height: 6.5rem;
+  margin: 0;
+  padding: 0;
+  transition: border $time;
+
+  &:focus {
+    border-bottom: 1px solid rgba($white, 0.5);
+  }
+
+  @include md {
+    font-size: 3rem;
+    height: 7rem;
+  }
+}
+
+.MenuModal-results {
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  overflow-y: scroll;
+  width: 110%;
+
+  a {
+    color: rgba($white, 0.65);
+    display: block;
+    font-weight: 300;
+    padding: 1.2rem 0;
+    position: relative;
+    transition: color $time, background $time;
+    width: 100vw;
+
+    &:last-child {
+      margin-bottom: 10rem;
+    }
+  }
+
+  a:focus,
+  .no-touchevents & a:hover {
+    background: rgba($white, 0.085);
+    color: $white;
+    outline: none;
+  }
+
+  strong {
+    border-bottom: 1px solid $white;
+    color: $white;
+    font-weight: 300;
+    transition: color $time;
+  }
+}
+
+.MenuModal-noResults {
+  color: $white;
+  padding: 1rem $grid-gutter;
+}
+
+.MenuModal-menu {
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  overflow-y: auto;
+  padding-top: 1rem;
+}
+
+.MenuModal-menuLink {
+  color: $white;
+  display: block;
+  font-size: 3.5rem;
+  font-weight: bold;
+  letter-spacing: -0.1rem;
+  line-height: 1.15em;
+  padding: 0.5rem 0;
+  position: relative;
+
+  @include md {
+    font-size: 4.5rem;
+  }
+
+  @include lg {
+    font-size: 5rem;
+  }
+
+  div {
+    @include red-underline-link;
+    display: inline-block;
+  }
+
+  .no-touchevents &:hover div::before {
+    transform: scaleX(1);
+  }
+
+  span {
+    text-shadow: -0.15em 0 0.2em rgba($shadow, 0.4);
+  }
+}
+
+.MenuModal-menuLink--active {
+  div::before {
+    border-top: 1px solid rgba($white, 0.2);
+    transform: scaleX(1);
+  }
+}

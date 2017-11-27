@@ -1,0 +1,52 @@
+<div class="RelatedPosts">
+<h2>Related Posts</h2>
+
+{% assign RELATED_POSTS_THRESHOLD = 3 %}
+
+{% assign related_post_count = 0 %}
+
+{% for post in site.posts %}
+  {% if related_post_count == RELATED_POSTS_THRESHOLD %}
+    {% break %}
+  {% endif %}
+  {% for tag in post.tags %}
+    {% if page.tags contains tag and page.title != post.title %}
+      <div class="RelatedPosts-post">
+        <a href="{{ site.baseurl }}{{ post.url }}">
+          <small>{{ post.date | date_to_string }}</small>
+          {{ post.title }}
+        </a>
+      </div>
+      {% assign related_post_count = related_post_count | plus: 1 %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+{% assign posts_left = RELATED_POSTS_THRESHOLD | minus: related_post_count %}
+{% unless posts_left == 0 %}
+  {% for post in site.posts %}
+    {% if posts_left == 0 %}
+      {% break %}
+    {% endif %}
+
+    {% assign already_related = false %}
+    {% for tag in post.tags %}
+      {% if page.tags contains tag %}
+        {% assign already_related = true %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    {% unless already_related %}
+      {% assign posts_left = posts_left | minus: 1 %}
+      <div class="RelatedPosts-post">
+        <a href="{{ site.baseurl }}{{ post.url }}">
+          <small>{{ post.date | date_to_string }}</small>
+          {{ post.title }}
+        </a>
+      </div>
+    {% endunless %}
+  {% endfor %}
+{% endunless %}
+
+</div>

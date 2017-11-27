@@ -1,0 +1,105 @@
+// --- Breakpoints
+$breakpoint-sm: 400px;
+$breakpoint-md: 600px;
+$breakpoint-lg: 960px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1800px;
+$breakpoint-xxxl: 2100px;
+
+// --- Grid
+$grid-col-count: 12;
+$grid-gutter: 2rem;
+
+$text-width-md: 70rem;
+$text-width-lg: 72rem;
+
+$container-width: 100rem;
+$container-width-xl: 108rem;
+
+// --- Colors
+
+$dark: #232529;
+$grey: #f9fafb;
+$purple: #8E44AD;
+$light: #fafafa;
+
+// --- New colors
+
+$true-black: #000;
+$black: #161617;
+$blacker: #1d1d1e;
+$red: #e03646;
+$shadow: #234;
+$white: #fff;
+
+$text-color: #333639;
+
+// --- Greys
+
+$grey1: #111;
+$grey2: #222;
+$grey3: #333;
+$grey4: #444;
+$grey5: #555;
+$grey6: #666;
+$grey7: #777;
+$grey8: #888;
+$grey9: #999;
+$greyA: #aaa;
+$greyB: #b4b5b6;
+$greyC: #c4c5c6;
+$greyD: #ddd;
+$greyE: #eee;
+
+// --- Z-Index
+$z-index-0: 0;
+$z-index-1: 100;
+$z-index-2: 200;
+$z-index-3: 300;
+$z-index-4: 400;
+$z-index-5: 500;
+$z-index-6: 600;
+$z-index-7: 700;
+$z-index-8: 800;
+$z-index-9: 900;
+$z-index-10: 1000;
+
+$layer-header: 0;
+
+// --- Spacing
+
+$spacing: 4rem;
+$spacing2: $spacing * 2;
+
+$spacing-md: 5rem;
+$spacing2-md: $spacing-md * 2;
+
+// --- Typography
+$font-size: 1.8rem;
+$font-size-md: 2.2rem;
+
+$headers-font-family: 'Merriweather', sans-serif;
+$headers-font-weight: 400;
+// $headers-font-family: 'Raleway', sans-serif;
+// $headers-font-weight: 800;
+
+$body-font-family: 'Merriweather', serif;
+$body-font-weight: 300;
+
+// --- Transitions
+
+$time: 250ms;
+$time2: 500ms;
+
+// --- Header
+$rotation-height: 20rem;
+$rotation-width-xs: 100rem;
+$rotation-width-sm: 130rem;
+$rotation-width-md: 160rem;
+
+// --- Pagination
+$pagination-color: $black;
+$pagination-hover-color: $red;
+$pagination-active-color: $white;
+$pagination-active-bg: $red;
+$pagination-separator-color: #bbb;

@@ -1,0 +1,43 @@
+<div class="MenuModal">
+  <div class="MenuModal-top Container">
+    {% include partials/logo.html %}
+
+    <button class="MenuModal-close MenuModal-toggle">
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div class="MenuModal-content">
+    <div class="MenuModal-inputWrapper Container">
+      <input class="MenuModal-input" placeholder="Search" type="search" />
+    </div>
+
+    <div class="MenuModal-bottom">
+      <div class="MenuModal-menu Container">
+        {% assign letters = "Home" | split: '' %}
+        {% if page.url != '/' %}<a
+          class="MenuModal-menuLink {% if page.url == node.url %}MenuModal-menuLink--active{% endif %}"
+          href="{{ site.baseurl }}/"
+          aria-label="Home"
+        ><div>{% for letter in letters %}<span>{{ letter }}</span>{% endfor %}</div></a>{% endif %}
+
+        {% assign pages_list = site.pages | sort: "url" %}
+        {% for node in pages_list %}{% if node.title != null and (node.layout == "page" or node.layout == "archive") %}{% assign letters = node.title | split: '' %}<a
+          class="MenuModal-menuLink {% if page.url == node.url %}MenuModal-menuLink--active{% endif %}"
+          href="{{ node.url }}"
+          aria-label="{{ node.title }}"
+        ><div>{% for letter in letters %}<span>{{ letter }}</span>{% endfor %}</div></a>{% endif %}{% endfor %}
+
+        {% assign letters = "RSS Feed" | split: '' %}
+        <a class="MenuModal-menuLink" href="/atom.xml" aria-label="RSS Feed"><div>{% for letter in letters %}<span>{{ letter }}</span>{% endfor %}</div></a>
+
+        {% assign letters = "GitHub" | split: '' %}
+        <a class="MenuModal-menuLink" href="https://github.com/stanko" aria-label="GitHub"><div>{% for letter in letters %}<span>{{ letter }}</span>{% endfor %}</div></a>
+      </div>
+      <div class="MenuModal-results">
+      </div>
+      </div>
+    </div>
+  </div>
+</div>

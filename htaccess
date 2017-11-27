@@ -1,0 +1,20 @@
+---
+layout: null
+permalink: .htaccess
+---
+# Block Referrer Spam
+
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} ^https?://.*rank-checker\.online.*                       [NC,OR]
+RewriteCond %{HTTP_REFERER} ^https?://.*monetizationking\.net.*                      [NC,OR]
+RewriteCond %{HTTP_REFERER} ^https?://.*keywords-monitoring-your-success\.com.*      [NC,OR]
+RewriteCond %{HTTP_REFERER} ^https?://.*site-auditor\.online.*                       [NC,OR]
+RewriteCond %{HTTP_REFERER} ^https?://.*fix-website-errors\.com.*                    [NC,OR]
+RewriteCond %{HTTP_REFERER} ^https?://.*social-buttons-ff\.xyz.*                     [NC,OR]
+RewriteCond %{HTTP_REFERER} ^https?://.*law-enforcement-bot-ee\.xyz.*                [NC,OR]
+RewriteCond %{HTTP_REFERER} ^https?://.*free-video-tool\.com.*                       [NC,OR]
+RewriteCond %{HTTP_REFERER} ^https?://.*keywords-monitoring-success\.com.*           [NC,OR]
+RewriteCond %{HTTP_REFERER} ^https?://.*10619916.responsive-test\.net.*              [NC,OR]
+RewriteCond %{HTTP_REFERER} ^https?://.*ibnads\.xl\.co\.id.*                         [NC,OR]
+RewriteCond %{HTTP_REFERER} ^https?://.*24x7-server-support\.site.*                  [NC,OR]
+RewriteRule ^(.*)$ –                                     [F,L]

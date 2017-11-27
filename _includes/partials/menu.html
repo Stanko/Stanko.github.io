@@ -1,0 +1,14 @@
+<div class="Menu">
+  {% if page.url != '/' %}<a class="Menu-link" href="{{ site.baseurl }}/">Home</a> / {% endif %}
+  {% assign pages_list = site.pages | sort: "url" %}
+  {% for node in pages_list %}{% if node.title != null and (node.layout == "page" or node.layout == "archive") %}<a class="Menu-link {% if page.url == node.url %}Menu-link--active{% endif %}" href="{{ node.url }}">{{ node.title }}</a> /{% endif %}{% endfor %}
+  <button class="Menu-link MenuModal-toggle">
+    <div class="Menu-linkContent">Search {% octicon search height: 20 class: "Menu-linkIcon" aria-label: "Search icon" %}</div>
+  </button>
+</div>
+
+<button class="Menu-button MenuModal-toggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>

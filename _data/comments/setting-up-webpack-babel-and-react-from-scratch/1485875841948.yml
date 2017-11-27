@@ -1,0 +1,34 @@
+_id: 5c962cc0-e7c8-11e6-bf17-3b62c726cec1
+slug: setting-up-webpack-babel-and-react-from-scratch
+name: Dev
+email: d334eb9a568c3bbb83607fdaaa996096
+message: >-
+  Hello, 
+
+
+  Thanks for this great article, just had some questions since I'm having
+  difficulty running your code. See I've upgraded to webpack 2.x and did the
+  necessary changes to make it run and most of it works well but I'm stuck at
+  this error. 
+
+
+  [error]
+
+  ERROR in chunk html [entry]
+
+  app.js
+
+  Conflict: Multiple assets emit to the same filename app.js
+   [/error]
+
+  I'm not sure what could be the problem causing it :/ Anyway it was a awesome
+  read especially for me since I've just started on the whole webpack babel
+  react thing. 
+
+
+  Do you think you can update your code to run on webpack 2.x.x or thats too
+  much to ask ? 
+
+
+  Anyway thanks again.
+date: '2017-01-31T15:17:21.893Z'

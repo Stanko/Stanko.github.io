@@ -1,0 +1,82 @@
+// --- General mixins
+
+// Ellipsis
+
+@mixin ellipsis($max-width: 100%) {
+  display: inline-block;
+  max-width: $max-width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Print
+
+@mixin print() {
+  @media print {
+    @content;
+  }
+}
+
+// Placeholder
+
+@mixin placeholder($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  &:-moz-placeholder { // Firefox 18-
+    color: $color;
+  }
+
+  &::-moz-placeholder {  // Firefox 19+
+    color: $color;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+// Button reset
+
+@mixin reset-button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+// Flex basis
+
+@mixin flex-basis($value) {
+  flex-basis: $value;
+  width: $value;
+  max-width: $value;
+}
+
+
+@mixin red-underline-link {
+  position: relative;
+
+  &::before {
+    border-top: 1px solid $red;
+    bottom: 0;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform $time;
+    width: 100%;
+  }
+
+  .no-touchevents &:hover {
+    color: $white;
+
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+}

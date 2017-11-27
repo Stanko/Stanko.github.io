@@ -1,0 +1,19 @@
+_id: 453f8000-d74a-11e6-9d0d-491faa75843b
+slug: setting-up-webpack-babel-and-react-from-scratch
+name: Stanko
+email: 13a28fac985c11eb7f40169be7da32f4
+message: >-
+  Hey Darrel, thanks for the feedback.
+
+
+  Yes, <code>.babelrc</code> file goes to the project root folder (I updated the post as
+  well).
+
+
+  Now at the end of the post you can find complete <code>webpack.config.js</code> and
+  <code>package.json</code> files. Besides that, I created a repository with working example to go
+  along with the tutorial.
+
+
+  Hope you'll find it useful.
+date: '2017-01-10T15:34:27.516Z'
