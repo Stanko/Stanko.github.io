@@ -1265,6 +1265,7 @@ a {
   -o-transition: color 250ms;
   transition: color 250ms; }
 
+.Post.Container a,
 .Post-text a,
 .RelatedPosts-post a,
 .Comment-message a {
@@ -1273,7 +1274,8 @@ a {
   -webkit-transition: border 250ms;
   -o-transition: border 250ms;
   transition: border 250ms; }
-  .no-touchevents .Post-text a:hover, .no-touchevents
+  .no-touchevents .Post.Container a:hover, .no-touchevents
+  .Post-text a:hover, .no-touchevents
   .RelatedPosts-post a:hover, .no-touchevents
   .Comment-message a:hover {
     border-bottom-color: #ddd; }
