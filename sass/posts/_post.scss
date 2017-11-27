@@ -231,64 +231,6 @@
   }
 }
 
-.SharringButtons {
-  font-family: $headers-font-family;
-  margin-bottom: 2rem;
-
-  @include md {
-    margin-right: 1rem;
-  }
-}
-
-.SharringButton {
-  width: 4rem;
-  height: 4rem;
-  padding: 1rem;
-  display: inline-block;
-  border: 1px solid $red;
-  border-radius: 50%;
-  margin: 1rem 0.5rem 0 0;
-
-  svg {
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-
-  &--facebook {
-    border-color: #4867AA;
-    svg {
-      fill: #4867AA;
-    }
-
-    .no-touchevents &:hover {
-      background: rgba(#4867AA, 0.1);
-    }
-  }
-
-  &--twitter {
-    border-color: #00ABF1;
-    svg {
-      fill: #00ABF1;
-    }
-
-    .no-touchevents &:hover {
-      background: rgba(#00ABF1, 0.1);
-    }
-  }
-
-  &--googlePlus {
-    border-color: #DB4437;
-    svg {
-      fill: #DB4437;
-    }
-
-    .no-touchevents &:hover {
-      background: rgba(#DB4437, 0.1);
-    }
-  }
-}
-
 .PostBottom {
   background: $light;
   // color: $white;
