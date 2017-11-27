@@ -111,17 +111,17 @@
   position: relative;
 
   &::after {
-    border-bottom: 1px solid $red;
+    border-bottom: 2px solid $red;
     bottom: -3rem;
     content: '';
-    left: -40%;
+    left: -5rem;
     position: absolute;
     transition: transform $time;
-    width: 60%;
+    width: 15rem;
   }
 
   .no-touchevents .Post:hover &::after {
-    transform: translateX(60%);
+    transform: translateX(5rem);
   }
 
   a {

@@ -1486,7 +1486,7 @@ button {
       max-width: 42rem;
       padding-top: 5rem; } }
   .Header-about::before {
-    border-top: 0.3rem solid #e03646;
+    border-top: 3px solid #e03646;
     content: '';
     display: block;
     left: -5rem;
@@ -2512,21 +2512,21 @@ textarea {
   margin-bottom: 6rem;
   position: relative; }
   .Post-title::after {
-    border-bottom: 1px solid #e03646;
+    border-bottom: 2px solid #e03646;
     bottom: -3rem;
     content: '';
-    left: -40%;
+    left: -5rem;
     position: absolute;
     -webkit-transition: -webkit-transform 250ms;
     transition: -webkit-transform 250ms;
     -o-transition: transform 250ms;
     transition: transform 250ms;
     transition: transform 250ms, -webkit-transform 250ms;
-    width: 60%; }
+    width: 15rem; }
   .no-touchevents .Post:hover .Post-title::after {
-    -webkit-transform: translateX(60%);
-        -ms-transform: translateX(60%);
-            transform: translateX(60%); }
+    -webkit-transform: translateX(5rem);
+        -ms-transform: translateX(5rem);
+            transform: translateX(5rem); }
   .Post-title a {
     display: block; }
 
