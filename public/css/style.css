@@ -2904,46 +2904,66 @@ textarea {
           -ms-transform: translateX(1rem);
               transform: translateX(1rem); }
 
-.SharringButtons {
+.SharingButtons {
   font-family: "Merriweather", sans-serif;
   margin-bottom: 2rem; }
   @media (min-width: 600px) {
-    .SharringButtons {
+    .SharingButtons {
       margin-right: 1rem; } }
+  .SharingButtons > div {
+    margin-bottom: 1rem; }
 
-.SharringButton {
-  border: 1px solid #161617 !important;
+.SharingButton {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #161617;
   border-radius: 50%;
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 4rem;
-  margin: 1rem 0.5rem 0 0;
-  padding: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 0.5rem 0 0;
   -webkit-transition: background 250ms !important;
   -o-transition: background 250ms !important;
   transition: background 250ms !important;
   width: 4rem; }
-  .SharringButton svg {
+  .SharingButton svg {
     display: block;
-    height: 100%;
-    width: 100%; }
-  .SharringButton--facebook {
-    border-color: #4867AA !important; }
-    .SharringButton--facebook svg {
-      fill: #4867AA; }
-    .no-touchevents .SharringButton--facebook:hover {
-      background: rgba(72, 103, 170, 0.1); }
-  .SharringButton--twitter {
-    border-color: #00ABF1 !important; }
-    .SharringButton--twitter svg {
-      fill: #00ABF1; }
-    .no-touchevents .SharringButton--twitter:hover {
-      background: rgba(0, 171, 241, 0.1); }
-  .SharringButton--googlePlus {
-    border-color: #DB4437 !important; }
-    .SharringButton--googlePlus svg {
-      fill: #DB4437; }
-    .no-touchevents .SharringButton--googlePlus:hover {
-      background: rgba(219, 68, 55, 0.1); }
+    height: 2rem;
+    width: 2rem; }
+
+.SharingButton--facebook {
+  border-color: #4867AA !important; }
+  .SharingButton--facebook svg {
+    fill: #4867AA; }
+  .no-touchevents .SharingButton--facebook:hover {
+    background: rgba(72, 103, 170, 0.1); }
+
+.SharingButton--twitter {
+  border-color: #00ABF1 !important; }
+  .SharingButton--twitter svg {
+    fill: #00ABF1; }
+  .no-touchevents .SharingButton--twitter:hover {
+    background: rgba(0, 171, 241, 0.1); }
+
+.SharingButton--reddit {
+  border-color: #fc451e !important; }
+  .SharingButton--reddit svg {
+    fill: #fc451e; }
+  .no-touchevents .SharingButton--reddit:hover {
+    background: rgba(252, 69, 30, 0.1); }
+
+.SharingButton--hn {
+  border-color: #FB651E !important; }
+  .SharingButton--hn svg {
+    fill: #FB651E;
+    height: 1.6rem; }
+  .no-touchevents .SharingButton--hn:hover {
+    background: rgba(251, 101, 30, 0.1); }
 
 .Pagination {
   margin: 30px 0;

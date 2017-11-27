@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-  {% include head.html %}
+  {% include partials/head.html %}
 
   <body class="Body--post">
     {% include partials/page-header.html %}
@@ -26,29 +26,7 @@
         {{ content }}
 
         <div class="Post-shareAndCategories">
-          <div class="SharringButtons">
-            <div>
-              Share on
-            </div>
-            <!-- Sharing button Facebook -->
-            <a
-              class="SharringButton SharringButton--facebook"
-              href="https://facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank">
-              {% include svg/facebook.svg %}
-            </a>
-            <!-- Sharing button Twitter -->
-            <a
-              class="SharringButton SharringButton--twitter"
-              href="https://twitter.com/intent/tweet/?text={{ page.title }}&amp;url={{ site.url }}{{ page.url }}" target="_blank">
-              {% include svg/twitter.svg %}
-            </a>
-            <!-- Sharing button Google+ -->
-            <a
-              class="SharringButton SharringButton--googlePlus"
-              href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" target="_blank">
-              {% include svg/google-plus.svg %}
-            </a>
-          </div>
+          {% include partials/sharing-buttons.html %}
 
           <div class="Post-categories">
             <div>Categories</div>
@@ -78,6 +56,6 @@
     {% include partials/footer.html %}
 
     {% include partials/menu-modal.html %}
-    {% include scripts.html %}
+    {% include partials/scripts.html %}
   </body>
 </html>

@@ -1,0 +1,47 @@
+
+  <div class="SharingButtons">
+    <div>
+      Share on
+    </div>
+    <!-- Sharing button Twitter -->
+    <a
+      class="SharingButton SharingButton--twitter"
+      title="Share post on Twitter"
+      href="https://twitter.com/intent/tweet/?text={{ page.title }}&amp;url={{ site.url }}{{ page.url }}"
+      target="_blank"
+      rel="nofollow"
+    >
+      {% include svg/twitter.svg %}
+    </a>
+    <!-- Sharing button HN -->
+    <a
+      class="SharingButton SharingButton--hn"
+      title="Share post on Hacker News"
+      href="javascript:window.location=%22http://news.ycombinator.com/submitlink?u=%22+encodeURIComponent(document.location)+%22&t=%22+encodeURIComponent(document.title)"
+      target="_blank"
+      rel="nofollow"
+    >
+      {% include svg/hn.svg %}
+    </a>
+    <!-- Sharing button Reddit+ -->
+    <a
+      class="SharingButton SharingButton--reddit"
+      title="Share post on reddit"
+      href="http://www.reddit.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title }}"
+      target="_blank"
+      rel="nofollow"
+    >
+      {% include svg/reddit.svg %}
+    </a>
+    <!-- Sharing button Facebook -->
+    <a
+      class="SharingButton SharingButton--facebook"
+      title="Share post on Facebook"
+      href="https://facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
+      target="_blank"
+      rel="nofollow"
+    >
+      {% include svg/facebook.svg %}
+    </a>
+
+  </div>

@@ -9,16 +9,11 @@ function checkHash() {
 
     if (posts) {
       posts.style.height = 'auto';
+      window.location.hash = '';
       animateScrollTo(section);
     }
   }
-
-  window.location.hash = '';
 }
-
-// window.addEventListener('hashchange', function(e) {
-//   checkHash();
-// });
 
 checkHash();
 

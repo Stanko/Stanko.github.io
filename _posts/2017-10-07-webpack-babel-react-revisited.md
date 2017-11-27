@@ -58,7 +58,7 @@ Create a new folder, and `package.json` file in it, with the following content:
 
 Of course you can replace "webpack-babel-react-revisited" with your project name.
 
-{% include expand-file-structure.html %}
+{% include partials/expand-file-structure.html %}
 
 ```sh
 - package.json
@@ -174,7 +174,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.
 
 Now we have our simple `build` process, so we can proceed with development setup.
 
-{% include expand-file-structure.html %}
+{% include partials/expand-file-structure.html %}
 
 ```sh
 dist # created by webpack when we run "npm run build"
@@ -333,7 +333,7 @@ module.exports = {
 When we restart `dev` task, we'll be able to see `Hello world!` in the console.
 Now we are talking! We can start adding some modern JavaScript.
 
-{% include expand-file-structure.html %}
+{% include partials/expand-file-structure.html %}
 
 ```sh
 dist # created by webpack when we run "npm run build"
@@ -445,7 +445,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
 
 Finally let's add React.
 
-{% include expand-file-structure.html %}
+{% include partials/expand-file-structure.html %}
 
 ```sh
 dist # created by webpack when we run "npm run build"
@@ -649,7 +649,7 @@ And if we run `npm run build` you'll see
 created in the `dist` folder,
 next to js and html files.
 
-{% include expand-file-structure.html %}
+{% include partials/expand-file-structure.html %}
 
 ```sh
 dist # created by webpack when we run "npm run build"
@@ -790,7 +790,7 @@ module.exports = {
 Restart `npm run dev` and refresh the browser to see the image.
 `npm run build` will create image in the `dist` folder.
 
-{% include expand-file-structure.html %}
+{% include partials/expand-file-structure.html %}
 
 ```sh
 dist # created by webpack when we run "npm run build"
