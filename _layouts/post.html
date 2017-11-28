@@ -29,7 +29,7 @@
           {% include partials/sharing-buttons.html %}
 
           <div class="Post-categories">
-            <div>Categories</div>
+            <div>Category</div>
             {% for category in page.categories %}
               <a href="/archive/#/{{ category | slugify }}">{{ category }}</a>
             {% endfor %}
