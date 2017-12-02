@@ -45,6 +45,6 @@ for web development resources.
 
 **Edit 02. Decemeber 2017**
 
-It seems that guys from Mozilla are [aware of it]
-(https://www.reddit.com/r/firefox/comments/7g6k9n/firefox_quantum_is_eating_your_cpu_help_us_debug/) 
+It seems that guys from Mozilla are
+[aware of it](https://www.reddit.com/r/firefox/comments/7g6k9n/firefox_quantum_is_eating_your_cpu_help_us_debug/)
 and that they are trying to fix it. Hooray!
