@@ -42,3 +42,9 @@ I'm really sad, but if they don't fix this I won't be switching back to Firefox.
 Still, I'm going to continue supporting and donating to Mozilla.
 On the plus side, [MDN](https://developer.mozilla.org/en-US/) is one of the best sites
 for web development resources.
+
+**Edit 02. Decemeber 2017**
+
+It seems that guys from Mozilla are [aware of it]
+(https://www.reddit.com/r/firefox/comments/7g6k9n/firefox_quantum_is_eating_your_cpu_help_us_debug/) 
+and that they are trying to fix it. Hooray!
