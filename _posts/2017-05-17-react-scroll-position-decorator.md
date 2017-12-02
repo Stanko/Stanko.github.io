@@ -5,6 +5,12 @@ category: [React]
 tags: [random,scroll]
 ---
 
+## Update, December 2017
+
+Check [this post](/react-decorators-and-scroll-manager) for updated, more performant version.
+
+-----
+
 I love JavaScript decorators. One that I copy to every React project is scroll decorator.
 It is fairly simple way of injecting scroll position to react components. This way you can handle scroll using react lifecycle.
 
