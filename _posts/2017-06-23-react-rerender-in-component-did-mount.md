@@ -111,7 +111,7 @@ See the Pen <a href='http://codepen.io/stanko/pen/WOERrE/'>Rerender React compon
 
 So this is cross browser solution, but I always cringe a little when I'm forced to use timeouts like this. And I have been talking about animation frames a lot, so why don't we try that next?
 
-## Using `requestAnimationFrame` insted on timeout
+## Using `requestAnimationFrame` instead on timeout
 
 We'll just replace timeout with `requestAnimationFrame` and it should work.
 But not in Firefox :( to make things worse, sometimes it does, and sometimes doesn't.
