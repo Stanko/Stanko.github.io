@@ -12,15 +12,20 @@ Check the [live demo](https://stanko.github.io/react-plx/). It is called `Plx`, 
 
 ## What it does
 
-So far in my career, I've built so many parallax components. Parallax is actually wrong term here<sup>1</sup>, but it got accepted by development community.
+So far in my career, I've built so many parallax components. Parallax is actually
+<label class="SideNote-trigger">wrong term</label>
+<span class="SideNote">
+the effect whereby the position or direction of an object appears to differ when
+viewed from different positions, e.g. through the viewfinder and the lens of a camera.
+</span>
+here, but it got accepted by development community.
 
-Designers love them and users are fascinated by fancy effects. Simply explained as you scroll the page down something is changed relative to the scroll position. For example, as you scroll down clock arms are rotating. Just check the [demo](https://stanko.github.io/react-plx/).
+Designers love them and users are fascinated by fancy effects. Simply explained as you scroll the page down something is changed relative to the scroll position. For example, as you scroll you can make things explode! Just check the [demo](https://stanko.github.io/react-plx/).
+
+{:.Image.Image--medium}
+[![Make things explode! Plx demo](/public/img/plx-explode.png)](https://stanko.github.io/react-plx)
 
 There is a lot of solutions out there, but IMHO they are usually bloated or not performant or complicated to use. And as I'm using React a lot, I decided to collect what I have learned about implementing on scroll effects in React and create standalone component. Most of the code in this component is pulled out from my existing projects and glued together.
-
-<small>
-<sup>1</sup> the effect whereby the position or direction of an object appears to differ when viewed from different positions, e.g. through the viewfinder and the lens of a camera.
-</small>
 
 <!--more-->
 
@@ -53,14 +58,16 @@ Read this [great article](https://medium.com/@dhg/parallax-done-right-82ced812e6
 
 ## Supported effects / properties
 
-Plx supports every CSS property that has numeric value (`opacity`, `height`, `padding`...<sup>2</sup>). I wrote a formula (this sounds way more sciency than it is) which calculates property value depending on the scroll position and given input values.
+Plx supports every CSS property that has numeric value (
+<label class="SideNote-trigger">`opacity`, `height`, `padding`</label>
+<span class="SideNote">
+The most performant properties to animate are `opactity` and `transform`. So stick to those two to keep your parallax effects performant. Of course you can animate something else here and there, but be careful and test it throughly.
+</span>
+...). I wrote a formula (this sounds way more sciency than it is)
+which calculates property value depending on the scroll position and given input values.
 
 It also supports `transform`, and you can pass multiple transform functions (`translateX`, `rotate`, `skewZ`...).
 You can even animate colors on scroll (background, text and border colors are supported)! Colors are broken down to their R/G/B/A values, and then same formula is applied to each one of them.
-
-<small>
-<sup>2</sup> The most performant properties to animate are `opactity` and `transform`. So stick to those two to keep your parallax effects performant. Of course you can animate something else here and there, but be careful and test it throughly.
-</small>
 
 
 ## At the end
