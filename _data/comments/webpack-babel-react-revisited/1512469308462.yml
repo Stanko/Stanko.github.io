@@ -1,0 +1,13 @@
+_id: 19dfb7e0-d9a6-11e7-b1ed-e53bbb450d54
+slug: webpack-babel-react-revisited
+name: Stanko
+email: 13a28fac985c11eb7f40169be7da32f4
+message: >-
+  Hey Joey,
+
+  SCSS might be the part of the next post in the series. Meantime you can use <a
+  href="https://github.com/workco/marvin">marvin</a> boilerplate, which has SCSS
+  support out of the box.
+date: '2017-12-05T10:21:48.461Z'
+tags:
+  - ''
