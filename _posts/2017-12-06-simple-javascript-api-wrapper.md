@@ -197,7 +197,7 @@ getUsers()
 
 ### Demo
 
-I've cooked a small demo to show it in practice, in which I used free [Start Wars API](https://swapi.co).
+I've cooked a small demo to show it in practice, in which I used free [Star Wars API](https://swapi.co).
 
 <iframe
 height='400px'
