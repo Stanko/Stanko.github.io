@@ -7,7 +7,6 @@ const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 // Constant with our paths
 const paths = {
@@ -25,29 +24,24 @@ module.exports = {
     filename: 'js/app.js',
   },
   plugins: [
-    // new BrowserSyncPlugin({
-    //   // browse to http://localhost:8080/ during development,
-    //   // ./_site directory is being served
-    //   host: 'localhost',
-    //   port: 8080,
-    //   server: {
-    //     baseDir: ['_site'],
-    //   },
-    //   open: false,
-    //   // reloadDelay: 1000,
-    //   // reloadDebounce: 2000,
-    //   ghostMode: false,
-    //   logLevel: 'debug',
-    //   notify: false,
-    //   files: [
-    //     '_site/public/style.css',
-    //     '_site/**/*.js',
-    //     // '_site/**/*.html',
-    //     // '_site/**/*.jpg',
-    //     // '_site/**/*.png',
-    //   ]
-    // }),
     new ExtractTextPlugin('css/style.css'),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+        screw_ie8: true,
+        conditionals: true,
+        unused: true,
+        comparisons: true,
+        sequences: true,
+        dead_code: true,
+        evaluate: true,
+        if_return: true,
+        join_vars: true,
+      },
+      output: {
+        comments: false,
+      },
+    }),
   ],
   // Loaders configuration
   // We are telling webpack to use "babel-loader" for .js and .jsx files
@@ -66,10 +60,12 @@ module.exports = {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract({
           use: [
-            // 'css-loader?sourceMap',
-            // 'postcss-loader?sourceMap',
-            // 'sass-loader?sourceMap',
-            'css-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                minimize: true,
+              },
+            },
             {
               loader: 'postcss-loader',
               options: {
