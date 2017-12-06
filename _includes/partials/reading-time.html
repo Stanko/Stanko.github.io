@@ -1,5 +1,5 @@
-{% assign words = page.content | split: ' ' | size %}
-{% assign minutes = words | divided_by: 180 | round %}
+{% assign words = page.content | strip_html | split: ' ' | size %}
+{% assign minutes = words | divided_by: 180.0 | round %}
 
 {% if minutes == 1 %}
   {% assign minutes_label = "minute" %}
