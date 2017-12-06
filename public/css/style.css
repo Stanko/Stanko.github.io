@@ -1297,7 +1297,7 @@ code {
   letter-spacing: -0.03rem; }
 
 code.highlighter-rouge {
-  background: #f9fafb;
+  background: rgba(50, 100, 120, 0.03);
   border-radius: 0.2rem;
   color: #458;
   font-style: normal;
@@ -2590,6 +2590,7 @@ textarea {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  line-height: 2.4rem;
   margin-bottom: 4rem; }
   @media (min-width: 600px) {
     .Post-top {
