@@ -22,7 +22,7 @@
   <div class="Pagination">
     <div class="Pagination-inner">
       {% if paginator.previous_page %}
-        <a class="Pagination-link Pagination-link--arrow" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+        <a class="Pagination-link Pagination-link--arrow" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" aria-label="Go to previous page">
           <span class="Pagination-arrow Pagination-arrow--left"></span>
         </a>
       {% else %}
@@ -32,27 +32,27 @@
       {% endif %}
 
       {% if start > 1 %}
-        <a class="Pagination-link" href="{{ site.baseurl }}/">1</a>
+        <a class="Pagination-link" href="{{ site.baseurl }}/" aria-label="Go to page 1">1</a>
         <div class="Pagination-separator"></div>
       {% endif %}
 
       {% for page in (start..end) %}
         {% if page == paginator.page %}
-          <a class="Pagination-link Pagination-link--active" class="active">{{ page }}</a>
+          <a class="Pagination-link Pagination-link--active" class="active" aria-label="Go to page {{ page }}">{{ page }}</a>
         {% elsif page == 1 %}
-          <a class="Pagination-link" href="{{ site.baseurl }}/">{{ page }}</a>
+          <a class="Pagination-link" href="{{ site.baseurl }}/" aria-label="Go to page {{ page }}">{{ page }}</a>
         {% else %}
-          <a class="Pagination-link" href="{{ site.baseurl }}/page-{{ page }}">{{ page }}</a>
+          <a class="Pagination-link" href="{{ site.baseurl }}/page-{{ page }}" aria-label="Go to page {{ page }}">{{ page }}</a>
         {% endif %}
       {% endfor %}
 
       {% if end < paginator.total_pages %}
         <div class="Pagination-separator"></div>
-        <a class="Pagination-link" href="{{ site.baseurl }}/page-{{ paginator.total_pages }}">{{ paginator.total_pages }}</a>
+        <a class="Pagination-link" href="{{ site.baseurl }}/page-{{ paginator.total_pages }}"  aria-label="Go to page {{ paginator.total_pages }}">{{ paginator.total_pages }}</a>
       {% endif %}
 
       {% if paginator.next_page %}
-        <a class="Pagination-link Pagination-link--arrow" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+        <a class="Pagination-link Pagination-link--arrow" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" aria-label="Go to next page">
           <span class="Pagination-arrow Pagination-arrow--right"></span>
         </a>
       {% else %}

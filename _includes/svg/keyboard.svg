@@ -68,10 +68,10 @@
     <rect class="Key" id="Key--altRight" x="444" y="203" width="33" height="37" rx="6"></rect>
     <rect class="Key" id="Key--arrowLeft" x="485" y="221" width="37" height="19" rx="6"></rect>
     <g class="Key" id="Key--arrowUp" transform="translate(529.000000, 203.000000)">
-      <path d="M37,11.5 L37,6 C37,2.6862915 34.3137085,-6.08718376e-16 31,0 L6,0 L6,0 C2.6862915,6.08718376e-16 -4.05812251e-16,2.6862915 0,6 L0,6 L0,11.5 L0,19 L37,19 L37,11.5 Z" id="Combined-Shape"></path>
+      <path d="M37,11.5 L37,6 C37,2.6862915 34.3137085,-6.08718376e-16 31,0 L6,0 L6,0 C2.6862915,6.08718376e-16 -4.05812251e-16,2.6862915 0,6 L0,6 L0,11.5 L0,19 L37,19 L37,11.5 Z"></path>
     </g>
     <g class="Key" id="Key--arrowDown" transform="translate(529.000000, 222.000000)">
-      <path d="M37,7.5 L37,13 C37,16.3137085 34.3137085,19 31,19 L6,19 C2.6862915,19 4.05812251e-16,16.3137085 0,13 L0,7.5 L0,0 L37,0 L37,7.5 Z" id="Combined-Shape"></path>
+      <path d="M37,7.5 L37,13 C37,16.3137085 34.3137085,19 31,19 L6,19 C2.6862915,19 4.05812251e-16,16.3137085 0,13 L0,7.5 L0,0 L37,0 L37,7.5 Z"></path>
     </g>
     <rect class="Key" id="Key--arrowRight" x="573" y="221" width="36" height="19" rx="6"></rect>
     <rect class="Key" id="Key--enter" x="543" y="114" width="66" height="37" rx="6"></rect>
