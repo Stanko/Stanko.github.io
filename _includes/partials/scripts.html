@@ -1,6 +1,11 @@
 <script>
   var posts = [
-    {% for post in site.posts %} { url: '{{ site.baseurl }}{{ post.url }}', title: '{{ post.title | remove: "&lt;" | remove: "&gt;" | escape }}' }, {% endfor %}
+    {% for post in site.posts %}
+    {
+      url: '{{ site.baseurl }}{{ post.url }}',
+      title: '{{ post.title | remove: "&lt;" | remove: "&gt;" | escape }}'
+    },
+    {% endfor %}
   ];
 </script>
 
