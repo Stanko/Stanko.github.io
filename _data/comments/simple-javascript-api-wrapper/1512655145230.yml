@@ -7,7 +7,7 @@ message: >-
 
   If you are asking about <a
   href="https://www.npmjs.com/package/isomorphic-fetch">isomorphic-fetch</a>, it
-  is actually guilt on top of the github's polyfill, just made universal (it can
+  is actually built on top of the github's polyfill, just made universal (it can
   run on the server).
 
 
