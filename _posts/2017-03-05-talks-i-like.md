@@ -32,7 +32,7 @@ Only four minutes long, give it a try.
 ### Live React: Hot Reloading with Time Travel <br><small>Dan Abramov, 2015</small>
 
 We all know Dan Abramov and what he has done for the React/JS community.
-This is his talk before he became famous and started working for Facebook.
+This is the talk that made him famous and he ended up working for Facebook.
 It is about hot reloading in React, which he made mainstream.
 
 It is best described with a YouTube comment: "All that was missing was the mic drop at the end.﻿"
@@ -48,7 +48,7 @@ It is best described with a YouTube comment: "All that was missing was the mic d
 
 ### What the heck is the event loop anyway? <br><small>Philip Roberts, 2014</small>
 
-*Every* JavaScript developer should watch this. Philip explained what event loop is, how it works, in a simple language and beautiful examples.
+*Every* JavaScript developer should watch this. Philip explained what event loop is, how it works, in a simple language using beautiful examples.
 
 <div class="AspectRatioVideo">
 <iframe src="https://www.youtube.com/embed/8aGhZQkoFbQ?rel=0?ecver=2" frameborder="0" allowfullscreen>
@@ -65,8 +65,8 @@ Wow! This reminded me why I started programming, and how I ended up where I am t
 I started with the only one thing in mind - to write games.
 
 Historical talk about couple of kids who wanted to do exactly that.
-How they started, what they principles were. For those who don't know id Software is behind
-Doom, Quake, Commander Keen, Wolfenstein, and many more games.
+How they started, what they principles were. For those who don't know, id Software is behind
+Doom, Quake, Commander Keen, Wolfenstein and many more games.
 Don't get scared because it is almost one hour long, talk itself if about thirty minutes.
 
 It got me thinking about writing games again,
@@ -83,7 +83,7 @@ and hopefully I will have a blog post about that soon.
 
 ### Adjusting the Dials in the Circuits of the Human Brain with Deep by Brain Stimulation<br> <small>Dr Andres Lozan, 2016</small>
 
-I watched this one live and the ng-conf 2016, and it blew me away.
+I watched this one live at ng-conf 2016, and it blew me away.
 It has nothing to do with a development, but medicine.
 How doctors are able to adjust brain functions by applying electricity to a certain parts.
 
