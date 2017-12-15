@@ -12,7 +12,7 @@
 
     <h1 class="Header-title Header-title--page" aria-label="{{ title }}">
       {% assign letters = title | split: '' %}
-      {% for letter in letters %}<span>{{ letter }}</span>{% endfor %}
+      {% for letter in letters %}<span aria-hidden="true">{{ letter }}</span>{% endfor %}
     </h1>
 
     <p class="Header-about">

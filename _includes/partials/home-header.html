@@ -7,7 +7,7 @@
 
     <h2 class="Header-title Header-title--home" aria-label="{{ site.tagline }}">
       {% assign letters = site.tagline | split: '' %}
-      {% for letter in letters %}<span>{{ letter }}</span>{% endfor %}
+      {% for letter in letters %}<span aria-hidden="true">{{ letter }}</span>{% endfor %}
     </h2>
 
     <p class="Header-about">

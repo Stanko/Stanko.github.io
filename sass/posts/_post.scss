@@ -149,6 +149,7 @@
 
 .Post-readmore {
   align-items: center;
+  background: $white;
   border: 1px solid $red;
   border-radius: 2.3rem;
   display: inline-flex;
@@ -359,6 +360,7 @@
 .SideNote {
   border-left: 1px solid $black;
   display: none;
+  font-weight: 300;
   font-size: 1.5rem;
   line-height: 1.9rem;
   margin: 1.5rem 0;
