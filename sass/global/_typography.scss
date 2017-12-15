@@ -161,10 +161,11 @@ iframe {
   background: #f7f7f7
 }
 
-.AspectRatioVideo {
+.Post .AspectRatioVideo {
   position: relative;
   height: 0;
   padding-bottom: 56.25%;
+  max-width: 100%;
 
   iframe {
     position: absolute;
