@@ -135,7 +135,7 @@ const fetchResource = (path, userOptions = {}) => {
       if (response) {
         throw new ApiError(`Request failed with status ${ response.status }.`, error, response.status);
       } else {
-        throw new ApiError(error, null, 'REQUEST_FAILED');
+        throw new ApiError(error.toString(), null, 'REQUEST_FAILED');
       }
     });
 };
