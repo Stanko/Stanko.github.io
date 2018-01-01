@@ -70,11 +70,13 @@
 }
 
 .Post {
-  .Image--small {
+  .Image--small,
+  .Image--sm {
     max-width: 35rem;
   }
 
-  .Image--medium {
+  .Image--medium,
+  .Image--md {
     max-width: 45rem;
   }
 }
