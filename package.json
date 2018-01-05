@@ -2,7 +2,9 @@
   "name": "muffinman-blog",
   "author": "Stanko",
   "scripts": {
-    "start": "webpack"
+    "dev": "webpack",
+    "jekyll": "jekyll serve --incremental --livereload --host 0.0.0.0",
+    "start": "rm -rf _site && concurrently -s first -c blue,yellow -n \"webpack,jekyll\" -k \"npm run dev\" \"npm run jekyll\""
   },
   "license": "SEE LICENSE IN LICENSE.md",
   "devDependencies": {

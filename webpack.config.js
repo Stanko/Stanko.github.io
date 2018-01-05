@@ -95,4 +95,16 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   watch: true,
+  stats: {
+    colors: true,
+    assets: true,
+    children: false,
+    chunks: false,
+    hash: false,
+    modules: false,
+    publicPath: false,
+    timings: true,
+    version: false,
+    warnings: true,
+  },
 };
