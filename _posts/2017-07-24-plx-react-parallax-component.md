@@ -14,10 +14,10 @@ Check the [live demo](https://stanko.github.io/react-plx/). It is called `Plx`, 
 
 So far in my career, I've built so many parallax components. Parallax is actually
 <label class="SideNote-trigger">wrong term</label>
-<span class="SideNote">
+<small class="SideNote">
 the effect whereby the position or direction of an object appears to differ when
 viewed from different positions, e.g. through the viewfinder and the lens of a camera.
-</span>
+</small>
 here, but it got accepted by development community.
 
 Designers love them and users are fascinated by fancy effects. Simply explained as you scroll the page down something is changed relative to the scroll position. For example, as you scroll you can make things explode! Just check the [demo](https://stanko.github.io/react-plx/).
@@ -60,9 +60,9 @@ Read this [great article](https://medium.com/@dhg/parallax-done-right-82ced812e6
 
 Plx supports every CSS property that has numeric value (
 <label class="SideNote-trigger">`opacity`, `height`, `padding`</label>
-<span class="SideNote">
+<small class="SideNote">
 The most performant properties to animate are `opactity` and `transform`. So stick to those two to keep your parallax effects performant. Of course you can animate something else here and there, but be careful and test it throughly.
-</span>
+</small>
 ...). I wrote a formula (this sounds way more sciency than it is)
 which calculates property value depending on the scroll position and given input values.
 

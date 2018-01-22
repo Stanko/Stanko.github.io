@@ -60,9 +60,9 @@ with iOS and `getBoundingClientRect` in combination with `position: fixed`<sup>1
 Sometimes it is returning wrong values.
 So when you have fixed elements, you probably want to fallback to the method above
 
-<small>
+<span class="Small">
   <sup>1</sup> I found about this bug few days ago when I was working on [react-plx](https://github.com/Stanko/react-plx).
-</small>
+</span>
 
 
 ```javascript

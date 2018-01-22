@@ -86,7 +86,7 @@ I've run multiple times into this problem, but I was lazy to dig deeper and find
 
 Now I get the reason why it works. Because 50ms is larger than animation frame (which is around 16ms to achieve 60fps).
 
-<small>(I'll show you just the part of the code that is changed)</small>
+<span class="Small">(I'll show you just the part of the code that is changed)</span>
 ```javascript
 ...
   componentDidMount() {
@@ -122,7 +122,7 @@ My guess that sometimes it gets squeezed in to the same animation frame.
 Hooray! Firefox fixed this one, in newer versions it works without two nested `requestAnimationFrame`.
 But you might want to stick with it for some time, to make sure all of your users upgraded their browsers.
 
-<small>(Again just the part of the code that is changed)</small>
+<span class="Small">(Again just the part of the code that is changed)</span>
 ```javascript
 ...
   componentDidMount() {
@@ -157,7 +157,7 @@ Problem we had in Firefox is now gone.
 This looks hacky, but I think it is a legit solution. Instead of trying to get a *magic*
 value for timeout, just use native methods that browsers provide.
 
-<small>(Again just the part of the code that is changed)</small>
+<span class="Small">(Again just the part of the code that is changed)</span>
 ```javascript
 ...
   componentDidMount() {
@@ -202,7 +202,7 @@ function startAnimation(callback) {
 ```
 
 
-<small>(Our `componentDidMount` code using helper)</small>
+<span class="Small">(Our `componentDidMount` code using helper)</span>
 ```javascript
 ...
   componentDidMount() {

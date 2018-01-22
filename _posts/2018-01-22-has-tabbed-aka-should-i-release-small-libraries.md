@@ -11,9 +11,9 @@ I always considered it too insignificant for releasing it as a standalone packag
 
 When user presses tab key, it adds
 <label class="SideNote-trigger">CSS class</label>
-<span class="SideNote">
+<small class="SideNote">
 By default `--tabbed` is used, but it accepts custom class as parameter.
-</span>
+</small>
 to `html` element.
 Then, if user clicks anywhere on the page, it removes it. That's why I though it is too small.
 But after giving it some thought, my answer to the question in the title is "YES".
@@ -24,9 +24,9 @@ But after giving it some thought, my answer to the question in the title is "YES
 
 It is ok if library does only
 <label class="SideNote-trigger">one small thing</label>
-<span class="SideNote">
+<small class="SideNote">
 It should do it right though.
-</span>.
+</small>.
 It will save you time as you don't have to copy it all the time,
 and sharing will allow other people to use and improve it.
 

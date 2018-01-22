@@ -12,7 +12,7 @@ And I recently got npm update notification, that looks like this:
 
 ![npm update notification](/public/img/npm-update.png)
 
-<small>This is image from the internet.</small>
+<span class="Small">This is image from the internet.</span>
 
 nvm doesn't let you update only npm, but just a node+npm version. But there is a really easy way to do it:
 

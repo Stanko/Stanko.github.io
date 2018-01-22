@@ -64,10 +64,10 @@ JavaScript in the `_js` one.
 
 Complete code is available [here](https://github.com/Stanko/Stanko.github.io).
 
-<small>
+<span class="Small">
 * Actual taks is a bit more complicated, check the whole
 [gulpfile](https://github.com/Stanko/Stanko.github.io/blob/master/gulpfile.babel.js).
-</small>
+</span>
 
 ------
 

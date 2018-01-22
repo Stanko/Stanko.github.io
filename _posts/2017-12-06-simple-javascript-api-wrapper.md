@@ -13,12 +13,12 @@ It is intended to be a starting point, so you might want to customize it to your
 
 It is a simple wrapper around
 <label class="SideNote-trigger">native `fetch`.</label>
-<span class="SideNote">If you need a polyfill [isomorphic-fetch](https://www.npmjs.com/package/isomorphic-fetch) is a great one.</span>
+<small class="SideNote">If you need a polyfill [isomorphic-fetch](https://www.npmjs.com/package/isomorphic-fetch) is a great one.</small>
 
 * For successful requests it will parse the response and return it.
 * When
   <label class="SideNote-trigger">HTTP error occurs</label>
-  <span class="SideNote">It detects errors based on request's HTTP status.</span>
+  <small class="SideNote">It detects errors based on request's HTTP status.</small>
   it will throw a custom error with status code, error message and
   response (parsed if it is a JSON).
 * If request never gets resolved, same custom error will be thrown but

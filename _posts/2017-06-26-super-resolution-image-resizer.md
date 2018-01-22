@@ -15,7 +15,7 @@ The best thing, website is free to use and project is opensource. Code is availa
 
 It supports max scaling of 2x, so if you need more you'll need to process image multiple times. Or you can dig in the code and add option for arbitrary scaling.
 
-<small><sup>1</sup> This is the resized image using waifu2x.</small>
+<span class="Small"><sup>1</sup> This is the resized image using waifu2x.</span>
 
 ### Example
 
@@ -37,4 +37,4 @@ Result, 500x500px png
 
 If you ask me, results are really impressive, kudos to nagadomi!
 
-<small><sup>2</sup> Image is from my favorite animated show [Rick and Morty](https://en.wikipedia.org/wiki/Rick_and_Morty)</small>
+<span class="Small"><sup>2</sup> Image is from my favorite animated show [Rick and Morty](https://en.wikipedia.org/wiki/Rick_and_Morty)</span>

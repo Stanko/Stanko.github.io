@@ -15,7 +15,7 @@ Please comment with the talks you think are worth watching.
 
 ---
 
-### Wat <br><small>Gary Bernhardt, 2012</small>
+### Wat <br><span class="Small">Gary Bernhardt, 2012</span>
 
 The talk I shared too many times. Gary talks about weird stuff in Ruby and JavaScript.
 It is witty and educational at the same time. I guarantee it will make you laugh.
@@ -29,7 +29,7 @@ Only four minutes long, give it a try.
 
 ---
 
-### Live React: Hot Reloading with Time Travel <br><small>Dan Abramov, 2015</small>
+### Live React: Hot Reloading with Time Travel <br><span class="Small">Dan Abramov, 2015</span>
 
 We all know Dan Abramov and what he has done for the React/JS community.
 This is the talk that made him famous and he ended up working for Facebook.
@@ -46,7 +46,7 @@ It is best described with a YouTube comment: "All that was missing was the mic d
 
 ---
 
-### What the heck is the event loop anyway? <br><small>Philip Roberts, 2014</small>
+### What the heck is the event loop anyway? <br><span class="Small">Philip Roberts, 2014</span>
 
 *Every* JavaScript developer should watch this. Philip explained what event loop is, how it works, in a simple language using beautiful examples.
 
@@ -59,7 +59,7 @@ It is best described with a YouTube comment: "All that was missing was the mic d
 
 ---
 
-### The Early Days of id Software<br><small>John Romero, 2016</small>
+### The Early Days of id Software<br><span class="Small">John Romero, 2016</span>
 
 Wow! This reminded me why I started programming, and how I ended up where I am today.
 I started with the only one thing in mind - to write games.
@@ -81,7 +81,7 @@ and hopefully I will have a blog post about that soon.
 
 ---
 
-### Adjusting the Dials in the Circuits of the Human Brain with Deep by Brain Stimulation<br> <small>Dr Andres Lozan, 2016</small>
+### Adjusting the Dials in the Circuits of the Human Brain with Deep by Brain Stimulation<br> <span class="Small">Dr Andres Lozan, 2016</span>
 
 I watched this one live at ng-conf 2016, and it blew me away.
 It has nothing to do with a development, but medicine.
@@ -98,7 +98,7 @@ It still sounds like a science fiction to me.
 
 ---
 
-### Here's What Happens When an 18 Year Old Buys a Mainframe <br><small>Connor Krukosky, 2016</small>
+### Here's What Happens When an 18 Year Old Buys a Mainframe <br><span class="Small">Connor Krukosky, 2016</span>
 
 Title is self-explanatory - young enthusiast got his hands on an old mainframe.
 
@@ -111,7 +111,7 @@ Title is self-explanatory - young enthusiast got his hands on an old mainframe.
 
 ---
 
-### Do schools kill creativity?<br><small>Sir Ken Robinson, 2007</small>
+### Do schools kill creativity?<br><span class="Small">Sir Ken Robinson, 2007</span>
 
 Last, but not the least. This is the most watched TED talk on YouTube.
 Sir Ken Robinson needs no introduction, and he talks about the school system,

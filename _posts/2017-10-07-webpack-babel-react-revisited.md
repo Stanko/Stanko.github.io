@@ -42,7 +42,7 @@ I have a lot of experience on production level React projects,
 for clients like Twitter, Mastercard, Aeromexico, Hampton Creek...
 [Marvin](https://github.com/workco/marvin)
 <label class="SideNote-trigger">boilerplate</label>
-<span class="SideNote">We have big plans for Marvin in the near future.</span>
+<small class="SideNote">We have big plans for Marvin in the near future.</small>
 is my creation as well,
 and what I'm trying to teach you is directly based on my experience on these projects.
 
@@ -98,7 +98,7 @@ As it already looks complicated we'll start moving webpack configuration to a fi
 Let's create `webpack.config.js` in our project's root.
 We need to add config we just used -
 <label class="SideNote-trigger">only entry and output paths.</label>
-<span class="SideNote">Plus `paths` contstant. I like to keep paths in the constant object, as it makes things easier to read.</span>
+<small class="SideNote">Plus `paths` contstant. I like to keep paths in the constant object, as it makes things easier to read.</small>
 
 ```js
 // We are using node's native package 'path'
@@ -290,10 +290,10 @@ npm install --save-dev html-webpack-plugin
 Once installed we need to activate it in `webpack.config.js`.
 Require it and add it to the `plugins` section of
 <label class="SideNote-trigger">the config:</label>
-<span class="SideNote">
+<small class="SideNote">
   We don't need `contentBase: paths.SRC` anymore as it will be handled by html plugin.
   So we'll remove whole `devServer` configuration object for now.
-</span>
+</small>
 
 ```js
 // We are using node's native package 'path'
@@ -364,10 +364,10 @@ Let's continue by installing four packages:
 * Babel core package
 * Babel webpack loader
 * <label class="SideNote-trigger">Babel env preset</label>
-  <span class="SideNote">`babel-preset-env` is successor of `babel-preset-es2015`
+  <small class="SideNote">`babel-preset-env` is successor of `babel-preset-es2015`
   and it has couple of big advantages which may be covered in another post.
   You can read more about using it in
-  [this post](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/)</span>
+  [this post](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/)</small>
 * Babel React preset
 
 ```sh
@@ -645,7 +645,7 @@ Restart `npm run dev`, and you'll see that five lines of our beautiful CSS are a
 
 And if we run `npm run build` you'll see
 <label class="SideNote-trigger">`style.bundle.css`</label>
-<span class="SideNote">I use `.bundle` postfix so you can easier differentiate webpack bundles from the source files.</span>
+<small class="SideNote">I use `.bundle` postfix so you can easier differentiate webpack bundles from the source files.</small>
 created in the `dist` folder,
 next to js and html files.
 
@@ -676,7 +676,7 @@ Let's create `/src/assets/` folder and add
 [Commander Keen](https://raw.githubusercontent.com/Stanko/webpack-babel-react-revisited/master/src/assets/keen.png)
 image
 </label>
-<span class="SideNote">I still love [Commander Keen](https://en.m.wikipedia.org/wiki/Commander_Keen) games.</span>
+<small class="SideNote">I still love [Commander Keen](https://en.m.wikipedia.org/wiki/Commander_Keen) games.</small>
 in it.
 
 Follow the same flow as with CSS files

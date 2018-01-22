@@ -35,7 +35,7 @@ it will recalculate and apply fixed height based on new window height.
 
 Library will only do this if it detects Chrome on Android or iOS.
 
-<small>* Android Chrome has a bug, when keyboard pops up, it triggers orientation change.</small>
+<span class="Small">* Android Chrome has a bug, when keyboard pops up, it triggers orientation change.</span>
 
 ## Usage
 

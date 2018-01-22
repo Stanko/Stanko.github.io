@@ -53,9 +53,9 @@ gem "jekyll-paginate"
 gem "jekyll-archives"
 ```
 
-<small>
+<span class="Small">
 We have seen [intermittent timeouts](http://blog.travis-ci.com/2013-05-20-network-timeouts-build-retries/) fetching gems from Rubygems.org. `install: bundle install` lets Travis CI automatically retry, and we are using `source "http://production.cf.rubygems.org/"` in Gemfile to point to a different repository.
-</small>
+</span>
 
 * Install the travis gem (`gem install travis`) and create `.travis.yml`.
 It will tell Travis what to install and how build our Jekyll site.

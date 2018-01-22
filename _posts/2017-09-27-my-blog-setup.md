@@ -39,7 +39,7 @@ Handling a git repo with a bunch of markdown files should be fairly straight for
 for any developer or tech savvy person. If you feel this is a big burden,
 then static site generators might not be for you.
 
-<small><sup>1</sup> There is [Netlify](https://www.netlify.com/) as well, which I never used myself, but I've heard good things about it.</small>
+<span class="Small"><sup>1</sup> There is [Netlify](https://www.netlify.com/) as well, which I never used myself, but I've heard good things about it.</span>
 
 ## How to start your own
 

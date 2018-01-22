@@ -13,7 +13,7 @@
     {% if page.tags contains tag and page.title != post.title %}
       <div class="RelatedPosts-post">
         <a href="{{ site.baseurl }}{{ post.url }}">
-          <small>{{ post.date | date_to_string }}</small>
+          <span class="Small">{{ post.date | date_to_string }}</span>
           {{ post.title }}
         </a>
       </div>
@@ -41,7 +41,7 @@
       {% assign posts_left = posts_left | minus: 1 %}
       <div class="RelatedPosts-post">
         <a href="{{ site.baseurl }}{{ post.url }}">
-          <small>{{ post.date | date_to_string }}</small>
+          <span class="Small">{{ post.date | date_to_string }}</span>
           {{ post.title }}
         </a>
       </div>

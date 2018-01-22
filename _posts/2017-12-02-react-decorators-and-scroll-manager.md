@@ -12,8 +12,8 @@ Two days ago I released two npm packages,
 ## Scroll manager
 
 <label class="SideNote-trigger">Scroll manager</label>
-<span class="SideNote">[Plx](https://stanko.github.io/react-plx/) uses the
-same scroll manager so I extracted it to the standalone package.</span>
+<small class="SideNote">[Plx](https://stanko.github.io/react-plx/) uses the
+same scroll manager so I extracted it to the standalone package.</small>
  is just a simple wrapper around scroll event, that broadcasts custom
 `window-scroll` event once per `requestAnimationFrame`.
 Idea comes from [MDN](https://developer.mozilla.org/en-US/docs/Web/Events/scroll#Example).
@@ -37,14 +37,14 @@ Two decorators included are:
 
   tracks and injects window size, orientation and
   <label class="SideNote-trigger">breakpoint</label>.
-  <span class="SideNote">User needs to pass breakpoints definition.</span>
+  <small class="SideNote">User needs to pass breakpoints definition.</small>
 
 ### How do they work?
 
 Both scroll and resize decorators are listening to custom events,
 rather than the native ones. This is because both
 <label class="SideNote-trigger">`scroll` and `resize` events</label>
-<span class="SideNote">Especially scroll event.</span>
+<small class="SideNote">Especially scroll event.</small>
 are triggered a lot and can cause performance issues.
 
 That's why I introduced custom `window-scroll` and `window-resize` events.

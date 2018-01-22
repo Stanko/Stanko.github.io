@@ -28,7 +28,7 @@ body {
   }
 }
 
-small {
+.Small {
   font-size: $font-size * 0.8;
 
   @include md {

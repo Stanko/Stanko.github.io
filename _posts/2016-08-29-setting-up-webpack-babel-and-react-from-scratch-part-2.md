@@ -155,10 +155,10 @@ Few links to read more about this plugins:
 
 * [Synthax only for decorators](https://babeljs.io/docs/plugins/syntax-decorators/)
 * [Decorators plugin](https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy)
-<small>
+<span class="Small">
 \- We are using a 3rd party plugin as "Decorators are disabled in Babel v6, pending a proposal update".
 Read more on the first link.
-</small>
+</span>
 * [Static properties](https://babeljs.io/docs/plugins/transform-class-properties/)
 * [Stage 0 (plugin group)](https://babeljs.io/docs/plugins/preset-stage-0/)
 

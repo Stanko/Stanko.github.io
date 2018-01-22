@@ -9,7 +9,7 @@ This is a sad rant :(
 
 I love Firefox (and Mozilla too) and have never switched to
 <label class="SideNote-trigger">Chrome</label>.
-<span class="SideNote">Although I use Chrome for development.</span>
+<small class="SideNote">Although I use Chrome for development.</small>
 But few days ago I switched to Opera, because new Firefox's (aka Quantum)
 CPU usage is insane.
 

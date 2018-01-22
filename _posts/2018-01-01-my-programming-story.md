@@ -23,12 +23,12 @@ Then dialup came along and I got interested in websites. First one I made was de
 ## University
 
 <label class="SideNote-trigger">University</label>
-<span class="SideNote">
+<small class="SideNote">
 Fun fact, university's building is shaped as word *NO* which represents
 <a href="https://en.wikipedia.org/wiki/Tito–Stalin_Split">Tito's no to Stalin</a>.
 <br/><br/>
 In Serbian *NO* written in Cyrillic is *НЕ*.
-</span>
+</small>
 snuck onto me. Oh boy, I was looking forward to learning all the engineering stuff. But my university experience was quite underwhelming. Outdated curriculum, indifferent professors and students. (To be fair some professors were awesome and I learned a lot from them, Predrag Janičić and Milan Tuba to name my favorite ones.)
 
 [![My university's building](/public/img/matf.jpg)](https://www.google.rs/maps/@44.8193555,20.4592253,636a,35y,52.43h/data=!3m1!1e3?hl=en)

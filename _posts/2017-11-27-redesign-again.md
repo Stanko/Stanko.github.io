@@ -9,7 +9,7 @@ Muffin Man is back! This time with new visual identity.
 
 This was long overdue, but new design took me
 <label class="SideNote-trigger">more than I wanted to.</label>
-<span class="SideNote">Mostly because of the [trillion](/trillion-ideas/) things I'm working on.</span>
+<small class="SideNote">Mostly because of the [trillion](/trillion-ideas/) things I'm working on.</small>
 Now I can get back to writing.
 
 Alogn with the new design, some other things got updated too,
