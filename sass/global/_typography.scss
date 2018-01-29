@@ -30,9 +30,11 @@ body {
 
 .Small {
   font-size: $font-size * 0.8;
+  line-height: $font-size * 1.2;
 
   @include md {
     font-size: $font-size-md * 0.8;
+    line-height: $font-size-md * 1.2;
   }
 }
 
