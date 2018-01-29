@@ -1,6 +1,6 @@
 ---
 layout: post
-title: React Router 4 redirect decorator
+title: React Router v4 redirect decorator
 category: [JavaScript]
 tags: [react]
 ---
