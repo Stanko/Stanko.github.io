@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React ratio
-category: [JavaScript]
+category: [React]
 tags: [react]
 ---
 
