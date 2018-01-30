@@ -2,7 +2,7 @@
 layout: post
 title: React Router v4 redirect decorator
 category: [React]
-tags: [react,router]
+tags: [react,tarouter]
 ---
 
 React Router switched to component based routing starting with the version 4.
@@ -58,6 +58,23 @@ const withRedirect = ComposedComponent => class RedirectDecorator extends Compon
   state = {
     push: false,
     redirectUrl: null,
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    const {
+      redirectUrl,
+    } = this.state;
+
+    // If component is rendered on redirect page as well
+    // (i.e. header of footer) it would cause redirect-loop
+    // as "<Redirect />" is being rendered every time.
+    // So we are resetting the state after redirect
+    if (!prevState.redirectUrl && redirectUrl) {
+      this.setState({
+        push: false,
+        redirectUrl: null,
+      });
+    }
   }
 
   redirectTo = (redirectUrl, push = false) => {
