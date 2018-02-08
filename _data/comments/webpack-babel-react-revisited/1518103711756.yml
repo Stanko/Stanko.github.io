@@ -1,0 +1,22 @@
+_id: b7f95e10-0ce4-11e8-afaf-7fed87241dc1
+slug: webpack-babel-react-revisited
+name: Miodrag Trajanovic
+email: d30b81adcdec0fcdd979df8829cdd4f1
+message: >-
+  For setting image on react app we can use next code 
+
+  in parent file setStateHandler() {
+          let image_path = require('../Assets/slike/oblak.jpg');
+          this.setState({ naslov: "Naslov Prvi u Modalu", telo:"Novo Prvo telo modala",slika:image_path, className:" btn-info" });
+
+      };
+
+  in child file 
+
+
+  <img className="img img-responsive" src={this.props.slika} width={100}
+  height={100}
+                                   alt=" ovo je slika "/>
+commentDate: '2018-02-08T15:28:31.754Z'
+date: '2018-02-08T15:28:31.754Z'
+timestamp: 1518103711
