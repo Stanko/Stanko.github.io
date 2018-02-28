@@ -12,6 +12,8 @@ To keep it easily customizable to your needs, I haven't packaged it up.
 
 Just pass a date to it, and function will return one of the seven possible formats:
 
+<!--more-->
+
 * `now` - if no more than five seconds elapsed
 * `about a minute ago` - in no more than ninety seconds elapsed
 * `24 minutes ago` - for anything in the last hour
