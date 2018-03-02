@@ -1,0 +1,16 @@
+_id: e1a18bf0-1e39-11e8-9b51-911143b9faa2
+slug: react-router-subfolder-on-server
+name: Stanko
+email: 13a28fac985c11eb7f40169be7da32f4
+message: >-
+  Hello @Biswajit,
+
+  Unfortunately, I can't help you with that as I have no experience with IIS,
+  but a quick search provided me with <a
+  href="https://docs.microsoft.com/en-us/iis/application-frameworks/install-and-configure-php-applications-on-iis/translate-htaccess-content-to-iis-webconfig">Translate
+  .htaccess Content to IIS web.config</a>. Hopefully that will help you.
+
+
+  Cheers!
+date: '2018-03-02T16:50:58.650Z'
+layout: post
