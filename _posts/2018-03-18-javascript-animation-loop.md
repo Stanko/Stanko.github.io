@@ -149,7 +149,7 @@ See the Pen <a href='http://codepen.io/stanko/pen/zWKXRY/'>JavaScript animation 
 
 We fixed the timing problem, and our box is moving 60px per second.
 Now we can put back `requestAnimationFrame` instead of `setTimeout`,
-and we will get smooth animation without timing problems. Y
+and we will get smooth animation without timing problems.
 
 Check all examples side by side comparison:
 
