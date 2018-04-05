@@ -544,9 +544,14 @@ HTML webpack plugin, that we already set, will add css file to `index.html` for 
 
 Again, start by installing packages:
 
+**Update, April 2018:** Please note, if you are using webpack v4.x you'll need to install
+`extract-text-webpack-plugin@next` which is webpack 4 compatible.
+
 ```sh
 npm install --save-dev css-loader extract-text-webpack-plugin
 ```
+
+
 
 We'll need to do two more things:
 
