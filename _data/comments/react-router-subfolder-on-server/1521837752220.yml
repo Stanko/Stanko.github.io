@@ -5,6 +5,6 @@ email: 8fdec6fbaee7217ed882221f23f5e3ee
 message: |-
   You can use the "Router" prop "basename" for this. 
 
-  <Router basename={'/subdir'} history={history}>
-  </Router>
+  &lt;Router basename={'/subdir'} history={history}&gt;
+  &lt;/Router&gt;
 date: '2018-03-23T20:42:32.220Z'
