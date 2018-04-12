@@ -3,10 +3,8 @@ slug: react-router-subfolder-on-server
 name: Davis Cabral
 email: 8fdec6fbaee7217ed882221f23f5e3ee
 message: |-
-  You can use the `Router` prop `basename` for this. 
+  You can use the "Router" prop "basename" for this. 
 
-  ```js
   <Router basename={'/subdir'} history={history}>
   </Router>
-  ```
 date: '2018-03-23T20:42:32.220Z'
