@@ -75,8 +75,8 @@ author:
   url: http://stanko.github.io
   email: stanko.tadic@gmail.com
 
-# Custom vars
-# version: 1.0.0
+# Live reload
+reload_port: 5678
 
 # Staticman
 staticman:
