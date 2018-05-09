@@ -1,0 +1,28 @@
+_id: ed2b5870-539a-11e8-8290-8bfe9ef925e3
+slug: mobile-chrome-vh-units-fix
+name: Stanko
+email: 13a28fac985c11eb7f40169be7da32f4
+message: >-
+  Hello Pierre,
+
+  If you want to apply it on all of your headers, just make sure they share
+  the same class (for example <code>.header</code>) and pass that as an option.
+  If you need more than one class, library supports multiple selectors as well.
+
+  <pre>var options = [
+    {
+      selector: '.header', // Mandatory, CSS selector
+      vh: 100,  // Mandatory, height in vh units
+    }
+  ];
+
+
+  var vhFix = new VHChromeFix(options);
+
+  </pre>
+
+
+  Hope that helps, cheers!
+date: '2018-05-09T15:09:10.821Z'
+timestamp: 1525878550
+tags: []
