@@ -5,21 +5,23 @@ category: [React]
 tags: [react]
 ---
 
+* May 2018 - Updated to match React Router v4 API.
+
 If you ever had to deploy React Router app to the subfolder on the server, you know what the problem is.
-Dev server will always launch app on the server root.
-And routes will get messed up once you upload it to the server.
+Routes will get messed up once you upload it to the server.
 Here are two solutions I use in these cases.
 
-## Easy way, just use `hashHistory`
+## Easy way, just use `HashRouter`
 
-The easiest way to achieve this is to use `hashHistory` instead of `browserHistory`.
+The easiest way to achieve this is to use `HashRouter` instead of `BrowserRouter`.
 
-```
-import { Router hashHistory } from 'react-router';
+```js
+import { HashRouter } from 'react-router';
 
-<Router history={ hashHistory }>
+// Then in render
+<HashRouter history={ hashHistory }>
   ...
-</Router>
+</HashRouter>
 ```
 
 This is the best approach if your subfolder name changes
@@ -40,6 +42,22 @@ Example of the routes
 If you want to keep browser history implementation, you'll need to change few things.
 First, we need to update our routes to include full absolute path to the subfolder.
 
+### Using React Router's `basename`
+
+As Davis Cabral pointed out in the comments, instead of manually adding `publicPath`
+to all routes, it can be achieved by using React Router's [basename](https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/api/BrowserRouter.md#basename-string) prop.
+
+```js
+import { BrowserRouter } from 'react-router';
+
+// Then in render
+<BrowserRouter basename='/path/to/subfolder/'>
+  ...
+</BrowserRouter>
+```
+
+### Doing it by the hand
+
 I define my routes something like this:
 
 ```javascript
@@ -50,14 +68,19 @@ export const routeCodes = {
   SEARCH: `${ publicPath }search`,
   ABOUT: `${ publicPath }about`,
 };
+
+// Then you can use them like this
+// <Route exact path={ routeCodes.ABOUT } component={ About } />
 ```
 
-Once uplodaded to the server any route but root one will return 404 error.
-For example, in you try to open `http://yourserver.com/path/to/subfolder/about`,
-server will look for file (or folder) named `about` in the app subfolder.
-As it doesn't exist, it will just fail.
+### Setting up `.htaccess` file
 
-You'll need to add simple `.htaccess` file,
+Once uplodaded to the server any route (but root `/`) will return 404 error.
+For example, if you try to open `http://yourserver.com/path/to/subfolder/about`,
+server will look for file (or folder) named `about` in the app subfolder.
+As it doesn't exist, it will fail with 404.
+
+You'll need to add a simple `.htaccess` file,
 in order to tell the server to fallback to our `index.html` file.
 This is the same configuration we would use if the application was on the server root,
 just with a different absolute path to our index file.
