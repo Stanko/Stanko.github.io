@@ -1,10 +1,13 @@
 <script>
   var posts = [
     {% for post in site.posts %}
-    {
-      url: '{{ site.baseurl }}{{ post.url }}',
-      title: '{{ post.title | remove: "&lt;" | remove: "&gt;" | escape }}'
-    },
+      {% comment %} Removing redirect posts {% endcomment %}
+      {% if post.title != "Redirecting" %}
+        {
+          url: '{{ site.baseurl }}{{ post.url }}',
+          title: '{{ post.title | remove: "&lt;" | remove: "&gt;" | escape }}'
+        },
+      {% endif %}
     {% endfor %}
   ];
 </script>
