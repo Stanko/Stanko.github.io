@@ -78,7 +78,8 @@ To enable live reload, SASS and JS transpiling in your Jekyll development grab m
 [package.json](https://github.com/Stanko/Stanko.github.io/blob/master/package.json)
 
 Add this to your `_config.yml`
-<pre>
+
+```js
 exclude: [
   'node_modules',
   'gulpfile.babel.js',
@@ -87,7 +88,7 @@ exclude: [
   '_js',
   '.sass-cache'
 ]
-</pre>
+```
 
 Run `npm install` then `gulp` when it is finished and open `http://localhost:9000` in your browser.
 Then write your posts and enjoy much smoother workflow.
