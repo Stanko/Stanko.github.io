@@ -20,8 +20,7 @@
       {% assign current_year_months = site.time | date: '%m' | minus: 2 %}
       {% assign total_months = site.time | date: '%Y' | minus: 2016 | times: 12 | plus: current_year_months %}
       Over the last {{ total_months | divided_by: 12.0 | round }} years I've written
-      {% comment %} Removing one redirect post {% endcomment %}
-      {{ site.posts | size | minus: 1 }} posts and here they are sorted in
+      {{ site.posts | size }} posts and here they are sorted in
       {{ site.categories | size }} categories.
     </p>
   </div>

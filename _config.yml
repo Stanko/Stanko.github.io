@@ -14,6 +14,7 @@ permalink: '/:title/'
 plugins:
 - jekyll-paginate
 - jekyll-octicons
+- jekyll-redirect-from
 
 # Plugins which are activated by default
 
