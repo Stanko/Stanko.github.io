@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+
+    <title>iOS Safari window.scrollTo / getBoundingClientRect bug</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700&subset=latin-ext" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/favicon/apple-touch-icon.png?v=v3">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon/favicon-32x32.png?v=v3">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon/favicon-16x16.png?v=v3">
+    <link rel="manifest" href="/public/favicon/manifest.json?v=v3">
+    <link rel="mask-icon" href="/public/favicon/safari-pinned-tab.svg?v=v3" color="#e04856">
+    <link rel="shortcut icon" href="/public/favicon/favicon.ico?v=v3">
+    <meta name="msapplication-config" content="/public/favicon/browserconfig.xml?v=v3">
+    <meta name="theme-color" content="#ffffff">
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Helvetica, Arial, sans-serif;
+        padding: 50px 30px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 20px;
+        background: #fdfdfd;
+      }
+
+
+      h1 {
+        color: #333;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      a {
+        color: #409ad7;
+        text-decoration: none;
+        border-bottom: 1px solid #ddd;
+        display: inline-block;
+      }
+
+      a:hover {
+        border-bottom-color: #777;
+      }
+
+      p {
+        margin: 10px 0;
+      }
+
+      .wrapper {
+        max-width: 500px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .button {
+        padding: 8px 12px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        font-size: 16px;
+      }
+
+      .button:hover {
+        border-color: #999;
+        cursor: pointer;
+      }
+
+      .demo {
+        margin-top: 50px;
+        background: #599ACE;
+        min-height: 300px;
+        text-align: center;
+        color: #fff;
+        padding: 20px;
+        line-height: 24px;
+      }
+  </style>
+  </head>
+
+
+  <body>
+    <div class="wrapper">
+      <div class="Intro">
+        <h1>iOS Safari window.scrollTo / getBoundingClientRect bug</h1>
+        <p>
+          For the explanation and the solution
+          <a href="/ios-safari-get-bounding-client-rect-bug/">read the blog post</a>.
+        </p>
+        <p>
+          Make sure to use iOS Safari to see the bug.
+        </p>
+      </div>
+      <button class="button">Click to see the bug</button>
+      <div class="demo">
+        This element's "getBoundingClientRect" will be returned wrong.<br/>
+        Click on the button above to test it.
+      </div>
+    </div>
+
+    <script>
+      var button = document.querySelector('.button');
+      var demo = document.querySelector('.demo');
+
+      var handler = function(e) {
+        e.preventDefault();
+        window.scrollTo(0, 10000);
+        var rect = demo.getBoundingClientRect();
+        var topAfterScrolling = Math.round(rect.top);
+
+        demo.innerHTML = '"top" value right after window.scrollTo: ' + topAfterScrolling + 'px';
+
+        setTimeout(function() {
+          var rect = demo.getBoundingClientRect();
+          var topAfterTimeout = Math.round(rect.top);
+          demo.innerHTML += '<br />"top" value after 100ms timeout (correct value): ' + topAfterTimeout + 'px';
+        }, 100);
+      };
+
+      button.addEventListener('click', handler);
+    </script>
+  </body>
+</html>
