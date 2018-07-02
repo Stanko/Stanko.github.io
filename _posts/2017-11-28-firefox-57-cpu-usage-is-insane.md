@@ -48,3 +48,7 @@ for web development resources.
 It seems that guys from Mozilla are
 [aware of it](https://www.reddit.com/r/firefox/comments/7g6k9n/firefox_quantum_is_eating_your_cpu_help_us_debug/)
 and that they are trying to fix it. Hooray!
+
+**Edit 02. July 2018**
+
+Good news! It seems that Firefox team addressed the issue in version 61. It is still not perfect but way better than it used to be, so I switched back to Firefox!
