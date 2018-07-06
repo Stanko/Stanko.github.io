@@ -23,6 +23,7 @@ message: >-
 
   <pre>function getScrollbarWidth(element) {<br/>  return element.offsetWidth - element.clientWidth;<br/>}</pre>
 
+  Please note that this <b>will not</b> work on <code>body</code> therefore you need to use the method from the blog post.
 
   Hope that helps, cheers!
 date: '2018-07-06T13:08:23.646Z'
