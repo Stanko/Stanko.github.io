@@ -21,13 +21,7 @@ message: >-
 
   So the correct way would be:
 
-  <pre>
-
-  function getScrollbarWidth(element) {
-    return element.offsetWidth - element.clientWidth;
-  }
-
-  </pre>
+  <pre>function getScrollbarWidth(element) {<br/>  return element.offsetWidth - element.clientWidth;<br/>}</pre>
 
 
   Hope that helps, cheers!
