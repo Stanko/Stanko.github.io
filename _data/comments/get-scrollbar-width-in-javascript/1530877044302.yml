@@ -1,0 +1,17 @@
+_id: f3701970-8110-11e8-8fb6-c372d47363bb
+slug: get-scrollbar-width-in-javascript
+name: Jandro Rojas
+email: d5efb7eb231804958cd6eedd2d6ec744
+message: >-
+  What about something more generic? what about a regular div for example? A
+  more general approach would be:
+
+
+  function getScrollbarWidth(element) {
+    return element.scrollWidth - element.clientWidth;
+  }
+
+
+  The scrollWidth property will include the with of the vertical scrollBars even
+  if there is no horizontal scrolling...this works in all major browsers.
+date: '2018-07-06T11:37:24.301Z'
