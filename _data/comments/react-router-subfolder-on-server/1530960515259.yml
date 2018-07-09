@@ -6,17 +6,13 @@ message: >-
   @Stanko:
 
 
-  Instead of this snippet, 
+  Instead of this snippet,
 
-  <BrowserRouter basename='/path/to/subfolder/'>
-    ...
-  </BrowserRouter>
+  &lt;BrowserRouter basename='/path/to/subfolder/'&gt;
 
   can't we use this one ?
 
-  <BrowserRouter basename={location.pathname}>
-    ...
-  </BrowserRouter>
+  &lt;BrowserRouter basename={location.pathname}&gt;
 
   This make the path configurable and this will work even if the path of
   subfolder changes, what do you feel about this?
