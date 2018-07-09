@@ -1,0 +1,15 @@
+_id: 3fbb7e50-8373-11e8-8124-dd9eaf87752c
+slug: react-router-subfolder-on-server
+name: Stanko
+email: 13a28fac985c11eb7f40169be7da32f4
+message: >-
+  Hello Ram,
+
+  That won't work as <code>location.pathname</code> is dynamic property. For
+  example it will be <code>/</code> on your home page, but something like
+  <code>/users/view/1</code> on user profile. Then all of your links would be
+  relative to <code>/users/view/1</code> instead of <code>/</code>.
+
+
+  Cheers!
+date: '2018-07-09T12:26:05.220Z'
