@@ -1,0 +1,15 @@
+comments:
+  allowedFields: ["name", "email", "message", "slug"]
+  branch: "master"
+  commitMessage: "New comment has been posted"
+  filename: "{@timestamp}"
+  format: "yaml"
+  name: "MuffinMan"
+  moderation: true
+  path: "_data/comments/{options.slug}"
+  generatedFields:
+    date:
+      type: date
+  transforms:
+    email: "md5"
+  requiredFields: ["name", "email", "message", "slug"]

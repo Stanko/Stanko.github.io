@@ -78,19 +78,3 @@ author:
 
 # Live reload
 reload_port: 5678
-
-# Staticman
-staticman:
-  allowedFields: ['name', 'email', 'message', 'slug']
-  branch: master
-  commitMessage: "New comment has been posted"
-  filename: "{@timestamp}"
-  format: yml
-  moderation: true
-  path: "_data/comments/{options.slug}"
-  generatedFields:
-    date:
-      type: date
-  transforms:
-    email: 'md5'
-  requiredFields: ['name', 'email', 'message', 'slug']
