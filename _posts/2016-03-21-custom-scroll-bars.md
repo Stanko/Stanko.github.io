@@ -39,13 +39,15 @@ You can use pseudo selectors, these ones are used in the demo:
 ```
 
 Check jsfiddle demo with green-ish scrollbars <i>webkit only</i>.
-
+  
 <iframe
-	width="100%"
-	height="400"
-	src="//jsfiddle.net/on9uho92/embedded/result,css/"
-	allowfullscreen="allowfullscreen"
-	frameborder="0"></iframe>
+height='300px'
+scrolling='no'
+src='//codepen.io/stanko/embed/preview/jpLJbQ/?height=300&theme-id=light&default-tab=result' frameborder='no'
+allowtransparency='true'
+allowfullscreen='true'>
+See the Pen <a href='http://codepen.io/stanko/pen/jpLJbQ/'>Example of customizing webkit scrollbars using CSS</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 -----
 
