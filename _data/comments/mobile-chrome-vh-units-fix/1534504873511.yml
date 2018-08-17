@@ -1,0 +1,13 @@
+_id: a638a760-a20f-11e8-81a4-e32088d3b40d
+slug: mobile-chrome-vh-units-fix
+name: Dusan
+email: 598c296149d6316e2d74c92ed8317108
+message: >-
+  Nice article,
+
+  can this help with IPad devace?
+
+  Problem start after active virtual device(on browser mode), after hiding,
+  whole content move up for 20 px and forw/back arrows are half hidden with
+  statusbar. (Height of main wraper is 100vh)
+date: '2018-08-17T11:21:13.511Z'
