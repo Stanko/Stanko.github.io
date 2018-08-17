@@ -9,18 +9,7 @@ message: >-
   the same class (for example <code>.header</code>) and pass that as an option.
   If you need more than one class, library supports multiple selectors as well.
 
-  <pre>var options = [
-    {
-      selector: '.header', // Mandatory, CSS selector
-      vh: 100,  // Mandatory, height in vh units
-    }
-  ];
-
-
-  var vhFix = new VHChromeFix(options);
-
-  </pre>
-
+  <pre>var options = [<br/>  {<br/>     selector: '.header', // Mandatory, CSS selector<br/>     vh: 100,  // Mandatory, height in vh units<br/>   }<br/>];<br/><br/>var vhFix = new VHChromeFix(options);</pre>
 
   Hope that helps, cheers!
 date: '2018-05-09T15:09:10.821Z'
