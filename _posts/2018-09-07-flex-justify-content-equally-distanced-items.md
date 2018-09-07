@@ -7,9 +7,14 @@ tags: [css,flex]
 
 I want to share a hack (or a trick if you prefer) my colleague Marko showed me today.
 
-What is the problem? If you want your flex items to be equally distanced between each other and from the parent's edge, `space-around` nor `space-between` won't work.
+What is the problem? We want our flex items to be equally distanced between each other and from the parent's edge. Unforunately
+<label class="SideNote-trigger">`space-evenly` </label>
+<small class="SideNote">
+I wasn't aware of this property, thanks Marc for mentioning it in the [comment below](#comment-d24bda80-b2a3-11e8-b0ea-dd7cce39bd78)!
+</small>
+is [not supported in IE and Edge](https://caniuse.com/#search=space-evenly). And `space-around` or `space-between` won't work.
 
-You can see what we are trying to achieve in the first row, and how these flex properties are behaving.
+You can see what we are trying to achieve in the first row, and how the latter two are behaving.
 
 ![Flex justify content examples](/public/img/flex-justify-content.png)
 
