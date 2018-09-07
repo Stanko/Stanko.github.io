@@ -1,0 +1,8 @@
+_id: d24bda80-b2a3-11e8-b0ea-dd7cce39bd78
+slug: flex-justify-content-equally-distanced-items
+name: Marc Bernstein
+email: 3e3fa6269e3861d7fbf2a46683d13f33
+message: >-
+  This is a useful trick for when you need to support browsers until
+  space-evenly is more widely supported.
+date: '2018-09-07T13:42:11.709Z'
