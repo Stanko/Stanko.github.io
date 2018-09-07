@@ -34,7 +34,9 @@ Trick is really simple, use `space-between` and add empty pseudo elements (`::be
 }
 ```
 
-This hack works with dynamic number of elements and dynamic widths, which is really nifty. You can see in the action below:
+This hack works with dynamic number of elements, dynamic widths and for any flex direction.
+
+You can see it in the action below:
 
 <iframe
 height='400px'
@@ -44,5 +46,3 @@ allowtransparency='true'
 allowfullscreen='true'>
 See the Pen <a href='http://codepen.io/stanko/pen/XPzmqg/'>Flex items equally distanced from each other, as well from the parent's edge</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
-
-Please note that this trick will work for any flex direction.
