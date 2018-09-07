@@ -66,7 +66,7 @@ const withRedirect = ComposedComponent => class RedirectDecorator extends Compon
     } = this.state;
 
     // If component is rendered on redirect page as well
-    // (i.e. header of footer) it would cause redirect-loop
+    // (i.e. header or footer) it would cause redirect-loop
     // as "<Redirect />" is being rendered every time.
     // So we are resetting the state after redirect
     if (!prevState.redirectUrl && redirectUrl) {
