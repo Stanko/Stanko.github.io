@@ -1,0 +1,9 @@
+_id: 54495a20-bbdd-11e8-89fb-bde33cd2d3fe
+slug: add-git-version-tag-after-publishing-to-npm
+name: Mikhail
+email: 4502bda88a69f9e52239373d10cb25f4
+message: >-
+  How do you change a package version? There is a command `npm version`. The
+  command changes a version, and adds a git tag. So you need only to push the
+  tag to repo.
+date: '2018-09-19T07:26:31.448Z'
