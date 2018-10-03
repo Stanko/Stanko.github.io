@@ -36,7 +36,7 @@ Few days ago, one of my clients had a question about [React Final Form](https://
 Luckily `JSON.stringify` accepts  `replacer` function as a
 <label class="SideNote-trigger">second parameter</label>
 <small class="SideNote">
-Third one is `space`, number of spaces or a string to be used to indentation
+Third one is `space`, number of spaces or a string to be used for indentation
 </small>.
 Function accepts two parameters, current `key` and `value` being stringified. This allows us to replace any value, in our case `undefined`.
 
