@@ -4,10 +4,10 @@ name: Shawn Erquhart
 email: 49d1a658ac39bdd82d52866b175734c4
 message: >-
   Turns out nvm does have a command for this
-  ([source](https://github.com/creationix/nvm/issues/1541#issuecomment-377826880)):
+  (https://github.com/creationix/nvm/issues/1541#issuecomment-377826880):
 
 
-  `nvm install-latest-npm`
+  nvm install-latest-npm
 
 
   Not sure why it isn't documented.
