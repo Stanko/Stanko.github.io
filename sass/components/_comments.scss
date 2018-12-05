@@ -93,6 +93,7 @@ button {
     padding: 0 3rem;
   }
 
+  &:focus,
   &:hover {
     background: $red;
     color: $white;

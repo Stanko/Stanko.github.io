@@ -104,6 +104,7 @@
   transition: border $time;
   width: 4rem;
 
+  .Footer-jumpToTop:focus &,
   .no-touchevents &:hover {
     border-color: $white;
   }
