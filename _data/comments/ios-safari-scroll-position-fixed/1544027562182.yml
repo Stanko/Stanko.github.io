@@ -1,0 +1,9 @@
+_id: 62ed6020-f8ab-11e8-ab75-1567bf026d9f
+slug: ios-safari-scroll-position-fixed
+name: Mark
+email: 8eb448c561b8dcfe780e9cd75fdebfcc
+message: >-
+  I had an element whose styling would change from relative to fixed but would
+  sometimes fade out and no longer work after a few events on MacBook Air Safari
+  OS 10.14.1. Adding this CSS styling to the element resolved the issue.
+date: '2018-12-05T16:32:42.181Z'
