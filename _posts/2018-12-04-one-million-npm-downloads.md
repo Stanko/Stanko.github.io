@@ -8,7 +8,7 @@ tags: [npm,blog]
 I want to brag a little - my npm packages have been downloaded more than
 <label class="SideNote-trigger">1 million times</label>
 <small class="SideNote">
-Stats are coming from [npm-stat.com](https://npm-stat.com/charts.html?author=stanko&from=2018-01-01&to=2019-12-31).
+Stats are coming from [npm-stat.com](https://npm-stat.com/charts.html?author=stanko&from=2018-01-01&to=2018-12-31).
 </small>
 this year!
 
