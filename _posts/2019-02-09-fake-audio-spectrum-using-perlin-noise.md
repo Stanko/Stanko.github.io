@@ -29,7 +29,11 @@ Before you start playing with the checkboxes I advise you to read the rest of th
 
 <style>
 .Spectrum {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 300px;
 }
