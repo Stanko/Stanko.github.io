@@ -54,7 +54,7 @@ My initial idea was to analyze couple of audio files to extract the
 <small class="SideNote">
 Try disabling all checkboxes but "static".
 </small>
-for the spectrum. Then I combined it with the data from this great post about [language pitch](https://erikbern.com/2017/02/01/language-pitch.html). At the end, I ended up tweaking values for it to "look better", based only on my personal feel.
+for the spectrum. Then combine it with the data from this great post about [language pitch](https://erikbern.com/2017/02/01/language-pitch.html). At the end, I ended up tweaking values to make it "look better", based only on my personal feel.
 
 Only thing left was to multiple the values I got with the
 <label class="SideNote-trigger">randomly generated value.</label>
