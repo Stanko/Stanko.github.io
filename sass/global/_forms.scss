@@ -15,3 +15,9 @@ textarea {
 button {
   cursor: pointer;
 }
+
+input[type=checkbox] {
+  display: inline;
+  margin: 0 0.8rem 0 0;
+  width: auto;
+}
