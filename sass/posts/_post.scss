@@ -437,10 +437,10 @@
   border-left: 2px solid #ddd;
   font-style: italic;
   margin: 3rem 0;
-  padding: 0 2rem;
+  padding: 0 0 0 2rem;
 
   @include md {
-    padding: 0 3rem;
+    padding: 0 0 0 3rem;
   }
 }
 
