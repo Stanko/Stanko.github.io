@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Always use &lt;button&gt; for clickable elements
+title: Always use <button> for clickable elements
 category: [CSS/SASS]
 tags: [js,accessibility]
 ---
