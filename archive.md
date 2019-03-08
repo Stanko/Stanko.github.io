@@ -27,7 +27,7 @@ headerTitle: Browse the archive
               </div>
               {{ post.date | date_to_string }}
             </div>
-            <h3 class="Archive-postTitle">{{ post.title }}</h3>
+            <h3 class="Archive-postTitle">{{ post.title | escape }}</h3>
           </a>
           {% endfor %}
         </div>
