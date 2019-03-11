@@ -13,6 +13,10 @@ message: >-
   Something like:
 
   <pre>
+    if (options && options.headers) {
+      delete options.headers['Content-Type'];
+    }
+  </pre>
 
-  if (options
+  Cheers!
 date: '2019-03-11T11:01:11.049Z'
