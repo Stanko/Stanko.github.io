@@ -12,7 +12,7 @@ message: >-
 
   Something like:
 
-  <code>if (options && options.headers) { delete options.headers['Content-Type']; }</code>
+  <pre>if (options && options.headers) {<br/>  delete options.headers['Content-Type'];<br/>}</pre>
 
   Cheers!
 date: '2019-03-11T11:01:11.049Z'
