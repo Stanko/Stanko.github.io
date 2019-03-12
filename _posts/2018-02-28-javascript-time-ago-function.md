@@ -1,6 +1,6 @@
 ---
 layout: post
-title: JavaScript "time ago" function
+title: JavaScript 'time ago' function
 category: [JavaScript]
 tags: [javascript,date,time]
 ---
