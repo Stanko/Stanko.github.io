@@ -3,10 +3,13 @@ slug: react-router-subfolder-on-server
 name: Robert
 email: 74015114ab8ca79c2b5b00827600f8c4
 message: >-
-  Hi, thanks for the write up, I wanted to add to it if you did.
+  Hi, thanks for the write up, I just wanted to add that you can use
 
-  <Router basename={process.enc.PUBLIC_URL}> and add in package.json 
-  "homepage": "your url plus sub-directory"
+  &lt;Router basename={ process.env.PUBLIC_URL }&gt;
 
-  you are good to go
+  then add
+
+  <pre>"homepage": "your url plus sub-directory"</pre>
+
+  to "package.json", and you should be good to go
 date: '2019-03-18T17:35:57.020Z'
