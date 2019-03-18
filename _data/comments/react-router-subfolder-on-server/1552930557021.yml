@@ -1,0 +1,12 @@
+_id: 48df78e0-49a4-11e9-9070-0d8466e89d64
+slug: react-router-subfolder-on-server
+name: Robert
+email: 74015114ab8ca79c2b5b00827600f8c4
+message: >-
+  Hi, thanks for the write up, I wanted to add to it if you did.
+
+  <Router basename={process.enc.PUBLIC_URL}> and add in package.json 
+  "homepage": "your url plus sub-directory"
+
+  you are good to go
+date: '2019-03-18T17:35:57.020Z'
