@@ -10,17 +10,14 @@ message: >-
   sass-loader`, and then update the CSS module loader rule to this:
 
 
-  ```
-
-  {
+  <pre>{
       test: /\.scss$/,
       loader: ExtractTextPlugin.extract({
           // Loader chaining works from right to left
           use: ['css-loader', 'sass-loader']
       })
   }
-
-  ```
+  </pre>
 
 
   Once you rename your style.css file to style.scss and update the `import`

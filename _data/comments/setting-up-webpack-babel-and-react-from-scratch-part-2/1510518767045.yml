@@ -2,5 +2,37 @@ _id: a4a36040-c7e8-11e7-ba4c-e73d86b6e735
 slug: setting-up-webpack-babel-and-react-from-scratch-part-2
 name: Tommy C
 email: 6197f1340654cf81272f6f3758176232
-message: "Yo! \nI was having trouble with postcss and it was causing compilation errors (11/12/2017): after some stackoverflowing I was able to find a fix that worked for me:\nrequiring webpack at the top of my webpack.config.js\nconst webpack = require('webpack');\nand then inside of the plugins: [] block, I put a new webpack.LoaderOptionsPlugin:\nEx:\nplugins: [\n\t\tnew HtmlWebpackPlugin({\n\t\ttemplate: path.join(paths.SRC, 'index.html'),\n\t\t}),\n\t\tnew ExtractTextPlugin('style.bundle.css'),\n\t\tnew webpack.LoaderOptionsPlugin({\n\t\t\toptions: {\n\t\t\t\tcontext: __dirname,\n\t\t\t\tpostcss: [\n\t\t\t\t\tautoprefixer, precss\n\t\t\t\t]\n\t\t\t}\n\t\t})\n\t],"
+message: >-
+  Yo!
+
+
+  I was having trouble with postcss and it was causing compilation errors (11/12/2017): after some stackoverflowing I was able to find a fix that worked for me:
+
+
+  requiring webpack at the top of my `webpack.config.js`
+
+
+  <pre>const webpack = require('webpack');</pre>
+
+
+  and then inside of the `plugins: []` block, I put a new `webpack.LoaderOptionsPlugin`:
+
+
+  Ex:
+
+
+  <pre>plugins: [
+      new HtmlWebpackPlugin({
+      template: path.join(paths.SRC, 'index.html'),
+    }),
+    new ExtractTextPlugin('style.bundle.css'),
+    new webpack.LoaderOptionsPlugin({
+        options: {
+          context: __dirname,
+        postcss: [
+            autoprefixer, precss
+        ]
+      }
+    })
+  ],</pre>
 date: '2017-11-12T20:32:47.042Z'

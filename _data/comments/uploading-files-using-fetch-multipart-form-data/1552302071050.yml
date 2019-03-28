@@ -5,6 +5,7 @@ email: 13a28fac985c11eb7f40169be7da32f4
 message: >-
   Hello Chap,
 
+
   That means <code>options.headers</code> is <code>null</code> or
   <code>undefined</code>. You probably have to check if it is defined before
   trying to delete it's property.

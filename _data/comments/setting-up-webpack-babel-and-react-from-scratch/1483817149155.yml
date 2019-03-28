@@ -5,13 +5,17 @@ email: 2989b603ce926116647ab10e5704d7b5
 message: >-
   This was mostly helpful and almost clear.
 
-  The use of add 
 
-  ... 
+  The use of add
+
+
+  <pre>...
 
   { something to add }
 
-  ... 
+  ...
+  </pre>
+
 
   made it hard to figure out where I should be adding things. Spent more time
   troubleshooting your tutorial than I would have wanted, which is a same

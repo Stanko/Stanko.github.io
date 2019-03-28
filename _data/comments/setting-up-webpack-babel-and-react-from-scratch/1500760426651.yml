@@ -6,15 +6,20 @@ message: >-
   Thanks for the article.
 
 
-  However, when I try to run 
+  However, when I try to run
 
-  node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js
 
-  I get the following error: 
+  <pre>node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js</pre>
 
-  Invalid configuration object. Webpack has been initialised using a
+
+  I get the following error:
+
+
+  <pre>Invalid configuration object. Webpack has been initialised using a
   configuration object that does not match the API schema.
    - configuration.resolve.extensions[0] should not be empty.
+  </pre>
+
 
   not sure how to resolve.
 date: '2017-07-22T21:53:46.651Z'

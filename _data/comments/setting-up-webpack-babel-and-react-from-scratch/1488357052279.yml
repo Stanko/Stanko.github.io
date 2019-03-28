@@ -5,12 +5,13 @@ email: 13a28fac985c11eb7f40169be7da32f4
 message: >-
   Elvan,
 
+
   Can't really tell what is wrong from the stack you pasted. It seems that you
   are probably missing node modules.
 
 
   Try running <code>webpack --display-error-details</code>, it may give you more
-  details about the error. 
+  details about the error.
 
 
   In the end, clone <a href="https://github.com/Stanko/react-tutorial">this

@@ -5,6 +5,7 @@ email: 13a28fac985c11eb7f40169be7da32f4
 message: >-
   Hello brian,
 
+
   If you are asking about <a
   href="https://www.npmjs.com/package/isomorphic-fetch">isomorphic-fetch</a>, it
   is actually built on top of the github's polyfill, just made universal (it can
@@ -14,10 +15,8 @@ message: >-
   Then if you are asking about my <code> fetchResource</code> function, it is
   just light wrapper for handling API requests in frontend applications. It is
   easy to hook it up with application logic (redux for example) as it handles
-  common logic and gives more descriptive errors. 
+  common logic and gives more descriptive errors.
 
 
   Cheers!
 date: '2017-12-07T13:59:05.229Z'
-tags:
-  - ''

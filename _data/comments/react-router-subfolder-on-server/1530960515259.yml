@@ -8,11 +8,14 @@ message: >-
 
   Instead of this snippet,
 
-  &lt;BrowserRouter basename='/path/to/subfolder/'&gt;
+  <pre>&lt;BrowserRouter basename='/path/to/subfolder/'&gt;</pre>
+
 
   can't we use this one ?
 
-  &lt;BrowserRouter basename={location.pathname}&gt;
+
+  <pre>&lt;BrowserRouter basename={location.pathname}&gt;</pre>
+
 
   This make the path configurable and this will work even if the path of
   subfolder changes, what do you feel about this?

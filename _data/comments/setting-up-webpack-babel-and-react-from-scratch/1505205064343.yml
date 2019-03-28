@@ -5,9 +5,11 @@ email: 13a28fac985c11eb7f40169be7da32f4
 message: >-
   Hello @Tony Bai,
 
+
   I mentioned that already above,
   that is happening because you are using webpack 2 or 3,
   and this tutorial was written for webpack one.
+
 
   Glad it helped, cheers!
 date: '2017-09-12T10:51:46.651Z'

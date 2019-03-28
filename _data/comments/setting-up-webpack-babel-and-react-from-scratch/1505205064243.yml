@@ -9,7 +9,9 @@ message: >-
   },
   </pre>
 
+
   this part of code will caused an issue when you configure scripts in package.json like
+
 
   <pre>
   "scripts": {
@@ -17,8 +19,10 @@ message: >-
   }.
   </pre>
 
-  When I try to run 'npm start' command, Invalid configuration object issue
+
+  When I try to run `npm start` command, Invalid configuration object issue
   returned due to the configuration.resolve.extensions[0] should not be empty.
+
 
   So I change the 0 index of extensions to ' ' solve this problem. And also
   thanks for your blog to help me understanding how react, webpack and babel are

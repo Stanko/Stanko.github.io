@@ -9,9 +9,11 @@ message: >-
   as to post the actual diffs from commits. I did manage to follow through the
   edits with no problem though.
 
+
   That said, nice tutorial, although with a bit too much of loose ends, relying
   a lot on external guides. I also noticed react-router is missing from your
   final package.json, shouldn't it be there?
+
 
   Anyway, looking forward to see the next updates, thanks!
 date: '2017-01-27T03:29:13.379Z'

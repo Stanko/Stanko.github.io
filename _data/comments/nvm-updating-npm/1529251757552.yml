@@ -7,5 +7,5 @@ message: >-
   use the correct path to the current nvm version in use.
 
 
-  npm install -g npm
+  <pre>npm install -g npm</pre>
 date: '2018-06-17T16:09:17.552Z'

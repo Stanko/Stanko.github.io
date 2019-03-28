@@ -9,10 +9,12 @@ message: >-
 
   Input:
 
-  delete options.headers['Content-Type'];
+
+  <pre>delete options.headers['Content-Type'];</pre>
 
 
   Output:
 
-  Uncaught TypeError: Cannot convert undefined or null to object
+
+  <pre>Uncaught TypeError: Cannot convert undefined or null to object</pre>
 date: '2019-03-11T10:39:30.413Z'

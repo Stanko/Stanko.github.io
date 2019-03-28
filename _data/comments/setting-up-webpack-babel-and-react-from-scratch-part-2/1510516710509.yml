@@ -4,24 +4,31 @@ name: Tommy C
 email: 6197f1340654cf81272f6f3758176232
 message: >-
   Hello! These are wonderful tutorials; really digging them and learning a lot
-  about the 'magic' behind boilerplates. 
+  about the 'magic' behind boilerplates.
 
-  As of 11/12/2017 using 
 
-  {
+  As of 11/12/2017 using
+
+
+  <pre>{
     test: /\.scss$/,
     loader: 'style!css!sass'
-  }
+  }</pre>
+
 
   will result in the application failing to compile (at least it did for me
   anyway) and in order to fix it I had to add -loader to the 'loaders'
 
+
   ex:
 
+
+  <pre>
   {
     test: /\.scss$/,
     loader: 'style-loader!css-loader!sass-loader'
   }
+  </pre>
 
 
   Again, thanks for taking the time for these greate tutorials

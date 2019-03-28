@@ -3,7 +3,7 @@ slug: ios-safari-scoll-position-fixed
 name: Michel
 email: 78c1164f8d597845a9f275ee5bf37648
 message: >-
-  Hey, I need to understand one thing, i must to apply translate3d at every
+  Hey, I need to understand one thing, i must to apply `translate3d` at every
   element that it will pass scroll through the fixed element?
 date: '2017-06-28T22:47:19.459Z'
 layout: post

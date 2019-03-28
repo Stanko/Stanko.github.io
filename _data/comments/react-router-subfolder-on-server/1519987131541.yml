@@ -6,7 +6,9 @@ message: >-
   Can you please tell me how I will add .htaccess file, if I am deploying into
   IIS server.My app is in sub folder.
 
+
   I donot have access to iis server. I will do deploy using jenkins.
+
 
   I will appreciate your help.
 date: '2018-03-02T10:38:51.540Z'

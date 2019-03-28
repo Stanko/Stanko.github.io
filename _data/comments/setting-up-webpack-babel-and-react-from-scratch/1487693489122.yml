@@ -5,6 +5,7 @@ email: 13a28fac985c11eb7f40169be7da32f4
 message: >-
   Hi leila,
 
+
   <code>file-loader</code> is used to process html entry point. If we haven't added it,
   webpack wouldn't know how to handle html files.
 

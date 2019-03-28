@@ -7,11 +7,12 @@ message: >-
   more general approach would be:
 
 
-  function getScrollbarWidth(element) {
+  <pre>function getScrollbarWidth(element) {
     return element.scrollWidth - element.clientWidth;
   }
+  </pre>
 
 
-  The scrollWidth property will include the with of the vertical scrollBars even
+  The `scrollWidth` property will include the with of the vertical scrollBars even
   if there is no horizontal scrolling...this works in all major browsers.
 date: '2018-07-06T11:37:24.301Z'

@@ -6,13 +6,15 @@ message: >-
   Hi Stanko,
 
 
-  When run "npm run dev" I get an exception: ERROR in ./app/js/app.js
+  When run `npm run dev` I get an exception: ERROR in ./app/js/app.js
 
+  <pre>
   Module not found: Error: Cannot resolve 'file' or 'directory'
   ./../../node_modules/webpack/buildin/module.js in
   C:\react_tutorial\react-tutorial-master/app\js
    @ ./app/js/app.js 1:0-57
   webpack: Failed to compile.
+  </pre>
 
 
   Please help

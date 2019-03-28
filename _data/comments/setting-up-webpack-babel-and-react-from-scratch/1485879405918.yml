@@ -5,6 +5,7 @@ email: 13a28fac985c11eb7f40169be7da32f4
 message: >-
   Hey Pedro,
 
+
   Thanks for the feedback, it is really hard to get this thing up to date. I
   will try my best, and definitely have that in mind for the new posts. And you
   are right, I forgot to add <code>react-router</code> to the
@@ -14,6 +15,7 @@ message: >-
 
 
   Hey Dev,
+
 
   Thanks, unfortunately I don't plansto update this guide to Webpack 2, but I
   have a complete boilerplate for it. Check <a

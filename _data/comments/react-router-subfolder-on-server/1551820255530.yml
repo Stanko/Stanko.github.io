@@ -5,8 +5,10 @@ email: 13a28fac985c11eb7f40169be7da32f4
 message: >-
   Hello Keyra,
 
-  I can't think of a way to do it dynamically in a library, without using a has
+
+  I can't think of a way to do it dynamically in a library, without using hash
   routing. If you figure out a way, please share the solution.
+
 
   Cheers!
 date: '2019-03-05T21:10:55.530Z'

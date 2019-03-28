@@ -5,6 +5,7 @@ email: 13a28fac985c11eb7f40169be7da32f4
 message: >-
   Hello Jandro,
 
+
   Actually that is not going to work. To get element's scrollbar width you need
   to use <code>.offsetWidth</code> instead of <code>.scrollWidth</code>.
 
@@ -14,16 +15,22 @@ message: >-
   documentation</a> on it:
 
 
-  "The width is measured in the same way as clientWidth: it includes the
+  > The width is measured in the same way as clientWidth: it includes the
   element's padding, but not its border, margin or vertical scrollbar (if
-  present)."
+  present).
 
 
   So the correct way would be:
 
-  <pre>function getScrollbarWidth(element) {<br/>  return element.offsetWidth - element.clientWidth;<br/>}</pre>
+
+  <pre>function getScrollbarWidth(element) {
+    return element.offsetWidth - element.clientWidth;
+  }
+  </pre>
+
 
   Please note that this <b>will not</b> work on <code>body</code> therefore you need to use the method from the blog post.
+
 
   Hope that helps, cheers!
 date: '2018-07-06T13:08:23.646Z'

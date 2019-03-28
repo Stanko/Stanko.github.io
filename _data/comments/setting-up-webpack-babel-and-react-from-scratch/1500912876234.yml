@@ -7,15 +7,19 @@ message: >-
   and this tutorial was written for webpack one.
   You can install webpack 1, but I wouldn't recommend downgrading.
 
+
   I already written
   <a href="https://stanko.github.io/webpack-2-react-redux/">boilerplate for webpack 2</a>
   (which should be soon updated to use webpack 3). So you can use that or
   Facebook's offical
   <a href="https://github.com/facebookincubator/create-react-app">create-react-app</a>.
 
+
   I won't be updating this tutorial, but I might write another one in the future.
 
+
   Cheers!
+
 
   @Ram you are welcome mate!
 date: '2017-07-24T18:16:46.651Z'

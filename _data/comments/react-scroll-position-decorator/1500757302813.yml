@@ -5,6 +5,7 @@ email: 13a28fac985c11eb7f40169be7da32f4
 message: >-
   You are welcome!
 
+
   As I'm reusing this decorator and few others on almost every project, I plan
   to publish small library with them to npm. But I can't promise when.
 date: '2017-07-22T21:01:42.809Z'

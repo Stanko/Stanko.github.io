@@ -5,7 +5,9 @@ email: 13a28fac985c11eb7f40169be7da32f4
 message: >-
   Hi Alexandre,
 
-  I'm on a vacation, with a very bad internet. 
+
+  I'm on a vacation, with a very bad internet.
+
 
   It should be correct, as path resolver is "Nice to have" I didn't include it
   in the demo repo. Feel free to add it yourself and open a PR.

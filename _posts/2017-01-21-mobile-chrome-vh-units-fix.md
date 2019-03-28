@@ -5,6 +5,12 @@ category: [CSS/SASS]
 tags: [css]
 ---
 
+### Update March 2019
+
+Check [this fix](https://css-tricks.com/the-trick-to-viewport-units-on-mobile/) too. It works really well in most cases.
+
+---
+
 If you ever used `vh` units and tested your work on mobile Chrome (iOS and Android),
 you probably were annoyed by page jumping when you scroll.
 
