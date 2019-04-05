@@ -1,0 +1,26 @@
+_id: 617f8ba0-575b-11e9-8b54-315bf370ae21
+slug: react-router-subfolder-on-server
+name: Shubham Kesarwani
+email: 5a416c13b2a788e31bf2246e0f553bd7
+message: >-
+  In my case there are two projects in two different subdirectories. and based
+  on request i want to redirect to that particular project.
+
+
+  For e.g. 
+
+  www.test.com/us should go to project residing in 'us' directory
+
+  and
+
+  same should happen with www.test.com/in 
+
+
+
+  RewriteRule ^ /path/to/subfolder/index.html [L]
+
+  How can I get subfolder dynamically from url.
+
+
+  Please help
+date: '2019-04-05T04:29:20.524Z'
