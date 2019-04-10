@@ -17,4 +17,4 @@ So I guees I have a spare pair of headphones now :)
 
 ### Update, April 2019.
 
-This time lightning connector headphones were washed. And dried. Plastic and cable warped, and I won't be using them. But they still work and can play music.
+This time lightning connector headphones were washed. And dried. Plastic and cable warped, and I won't be using them. But they are still workoing and can play music.
