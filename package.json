@@ -2,28 +2,18 @@
   "name": "muffinman-blog",
   "author": "Stanko",
   "scripts": {
-    "dev": "webpack",
+    "build": "rm -rf ./public/assets && parcel build js/app.js --no-source-maps --out-dir public/assets --public-url /public/assets",
+    "assets": "rm -rf ./public/assets && parcel watch js/app.js --no-source-maps --out-dir public/assets --public-url /public/assets",
     "jekyll": "jekyll serve --incremental --livereload --host 0.0.0.0",
-    "start": "rm -rf _site && concurrently -s first -c blue,yellow -n \"webpack,jekyll\" -k \"npm run dev\" \"npm run jekyll\""
+    "start": "npm run build && npm run jekyll"
   },
   "license": "SEE LICENSE IN LICENSE.md",
   "devDependencies": {
-    "autoprefixer": "^7.1.6",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
-    "concurrently": "^3.5.1",
-    "css-loader": "^0.28.7",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "ignore-file-loader": "^1.0.0",
-    "node-sass": "^4.5.3",
-    "postcss": "^6.0.14",
-    "postcss-cssnext": "^3.0.2",
-    "postcss-import": "^11.0.0",
-    "postcss-loader": "^2.0.8",
-    "sass-loader": "^6.0.6",
-    "webpack": "^3.8.1"
+    "autoprefixer": "^9.5.1",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "node-sass": "^4.11.0",
+    "parcel-bundler": "^1.12.3"
   },
   "dependencies": {
     "animated-scroll-to": "^1.1.7",

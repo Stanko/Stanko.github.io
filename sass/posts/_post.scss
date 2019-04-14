@@ -80,10 +80,10 @@
     max-width: 45rem;
   }
 
-  // .Image--mediumLarge,
-  // .Image--mdlg {
-  //   max-width: 60rem;
-  // }
+  .Image--svg img {
+    // IE fix
+    width: 100%;
+  }
 }
 
 .Post .DualImage {
