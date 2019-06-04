@@ -7,6 +7,8 @@ message: >-
   made a bookmarklet based on the CSS above. Thanks Stanko! The code is below in
   case others need it as well. Cheers!
 
-
+  <pre>
   javascript:(()=>{window.hss?window.hss.remove():(()=>{window.hss=document.createElement('style');hss.innerHTML='html,body{scrollbar-width:none;-ms-overflow-style:none;}body::-webkit-scrollbar{width:0;height:0;}';document.body.appendChild(hss);})()})()
+  </pre>
+  
 date: '2019-06-04T08:44:13.106Z'
