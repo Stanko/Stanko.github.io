@@ -1,0 +1,11 @@
+_id: 8b05a910-879d-11e9-881b-59dc537dbfe4
+slug: uploading-files-using-fetch-multipart-form-data
+name: Lakshay
+email: 85e3b46263299dd3531b49698d3a90a9
+message: >-
+  Hi,
+
+  my upload is working, the issue i am facing is my backend is sending a map as
+  response after this upload but the fetch response.ok always come false. please
+  help here. struck in this from long time.
+date: '2019-06-05T14:23:52.673Z'
