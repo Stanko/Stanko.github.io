@@ -1,0 +1,22 @@
+_id: 323d2b10-8db4-11e9-8faf-d77b8ea6a678
+slug: sektor-draw-and-animate-svg-circle-sectors-2016
+name: Stanko
+email: 13a28fac985c11eb7f40169be7da32f4
+message: >-
+  Hey Bean,
+
+  I'm really glad Sektor was useful for you.
+
+
+  To add easing you need to change this line:
+
+  <a
+  href="https://github.com/Stanko/sektor/blob/gh-pages/js/sektor.es6.js#L57">sektor.es6.js#L57</a>
+
+
+  Just pass <code>angle</code> to a easing function and that's it. I would
+  gladly accept a pull request if you have time to make one.
+
+
+  Cheers!
+date: '2019-06-13T08:21:11.171Z'
