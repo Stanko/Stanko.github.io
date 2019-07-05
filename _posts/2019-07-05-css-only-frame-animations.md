@@ -16,6 +16,8 @@ text only loader. It is a very simple animation swapping between four text chara
 
 ![Text loader animation](/public/img/retro-loader.gif)
 
+<!--more-->
+
 Haven't even checked if they are using gif or not, but immediately tried recreating it using CSS only.
 
 ## The first version
