@@ -1,0 +1,6 @@
+_id: 86ece170-b9ae-11e9-8877-cd438f83f435
+slug: ios-safari-scroll-position-fixed
+name: David
+email: ed87734c6b836b3feab3a37262473132
+message: "Hi,\nWhy is this not working for me?\nive got my button fixed to the bottom with CSS:\n    position: fixed;\n    bottom: 0;\n    left: 0;\n    border-radius: 0;\n\nwithin a div with CSS: \n margin-top: 1.5em;\n\ttext-align: left;\n\n\nI can provide more information if that is not enough"
+date: '2019-08-08T07:31:25.962Z'
