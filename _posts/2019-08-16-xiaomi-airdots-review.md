@@ -18,13 +18,13 @@ Most of the reviews out there are saying AirDots are lacking bass, but that soun
 
 Long story short - sound is bad. I don't like strong bass, but these earphones have no bass at all. Mid and high are acceptable, but lack of bass is really bad. I never thought I'll have to turn on “Bass Booster” equalizer preset, but I had to. Bass boosting eq makes them barely usable, but sound is still far from perfect.
 
-Additionally Google Music on iOS has no equalizer setting nor it uses the system one. That makes Google Music with these earphones unusable for me.
+Additionally Google Music on iOS has no equalizer setting nor does it use the system one. That makes Google Music with these earphones unusable for me.
 
 ## Fit
 
-They are pretty light and sit comfortable in my ear. If I use them for a longer period of time, they can a little uncomfortable, but this is more of a personal feel. I don't like in-ear earphones, and this happens to me with almost any in-ear ones.
+They are pretty light and sit comfortable in my ear. If I use them for a longer period of time, they can get a little uncomfortable, but this is more of a personal feel. I don't like in-ear earphones, and this happens to me with almost any in-ear ones.
 
-To me they they are discrete enough and look good.
+To me they are discrete enough and look good.
 
 ## Conclusion
 
