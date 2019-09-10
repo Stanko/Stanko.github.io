@@ -6,6 +6,7 @@ tags: [react]
 ---
 
 * May 2018 - Updated to match React Router v4 API.
+* September 2019 - Updated to match React Router v5 API, added React Create App part.
 
 If you ever had to deploy React Router app to the subfolder on the server, you know what the problem is.
 Routes will get messed up once you upload it to the server.
@@ -16,11 +17,13 @@ Here are two solutions I use in these cases.
 The easiest way to achieve this is to use `HashRouter` instead of `BrowserRouter`.
 
 ```js
-import { HashRouter } from 'react-router';
+import { HashRouter, Route } from 'react-router-dom';
 
 // Then in render
-<HashRouter history={ hashHistory }>
-  ...
+<HashRouter>
+  <Route path='/' component={ Home } exact />
+  <Route path='/about' component={ About } exact />
+  {/*...*/}
 </HashRouter>
 ```
 
@@ -48,11 +51,13 @@ As Davis Cabral pointed out in the comments, instead of manually adding `publicP
 to all routes, it can be achieved by using React Router's [basename](https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/api/BrowserRouter.md#basename-string) prop.
 
 ```js
-import { BrowserRouter } from 'react-router';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 // Then in render
 <BrowserRouter basename='/path/to/subfolder/'>
-  ...
+  <Route path='/' component={ Home } exact />
+  <Route path='/about' component={ About } exact />
+  {/*...*/}
 </BrowserRouter>
 ```
 
@@ -115,5 +120,11 @@ output: {
   filename: 'app-[hash].js',
 },
 ```
+
+## Create React App
+
+A lot of people are using Create React App. To deploy it in subfolder, you can set `homepage` in your `package.json`, for more details [check their documentation](https://create-react-app.dev/docs/deployment#building-for-relative-paths)
+
+-----
 
 I'm also interested if anyone has different/better ideas, cheers!
