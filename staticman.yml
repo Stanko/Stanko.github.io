@@ -1,7 +1,7 @@
 comments:
   allowedFields: ["name", "email", "message", "slug"]
   branch: "master"
-  commitMessage: "New comment has been posted"
+  commitMessage: "New comment in {options.slug}"
   filename: "{@timestamp}"
   format: "yaml"
   name: "MuffinMan"
