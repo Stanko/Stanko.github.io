@@ -3,6 +3,7 @@ layout: post
 title: My programming story
 category: [Random]
 tags: [random]
+image: /public/img/card.jpg
 ---
 
 This was intended to be a single paragraph in the post I'm still writing. It ended up much longer so I decided to publish it on it's own. So without further due, I present you *my programming story*.

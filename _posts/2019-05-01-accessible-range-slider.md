@@ -3,6 +3,7 @@ layout: post
 title: Accessible range slider
 category: [JavaScript]
 tags: [javascript,accessibility]
+image: /public/img/range-slider.png
 ---
 
 

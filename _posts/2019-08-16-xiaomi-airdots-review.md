@@ -3,6 +3,7 @@ layout: post
 title: Xiaomi AirDots review
 category: [Random]
 tags: [random,music,reviews]
+image: /public/img/airdots.jpg
 ---
 
 Two weeks ago I got a pair of cheap Xiaomi's wireless earphones. This was an experiment to see if I like true wireless concept before buying something more expensive.

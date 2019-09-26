@@ -52,3 +52,7 @@ and that they are trying to fix it. Hooray!
 **Update 04. December 2018**
 
 Unfortunately, even today with version 63.0.3 issue doesn't seem to be resolved. I'm sticking with Opera, but I switched to [Simple Vertical Tabs](https://addons.opera.com/en/extensions/details/simple-vertical-tabs/) extension.
+
+**Update 26. September 2019**
+
+[It is fixed!](/back-to-firefox/)
