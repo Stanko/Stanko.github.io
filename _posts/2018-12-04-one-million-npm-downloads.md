@@ -3,6 +3,7 @@ layout: post
 title: One million npm downloads
 category: [Random]
 tags: [npm,blog]
+image: /public/img/1m.png
 ---
 
 I want to brag a little - my npm packages have been downloaded more than

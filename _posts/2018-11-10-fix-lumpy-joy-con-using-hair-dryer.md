@@ -3,6 +3,7 @@ layout: post
 title: You can fix lumpy Joy-Con using hair dryer
 category: [Random]
 tags: [nintendo]
+image: /public/img/joycon.jpg
 ---
 
 I love my

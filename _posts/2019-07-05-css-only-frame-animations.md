@@ -3,6 +3,7 @@ layout: post
 title: CSS only frame animations
 category: [CSS/SASS]
 tags: [animation,css,sass]
+image: /public/img/rm/frame_10.png
 ---
 
 I haven't published anything in a while, which is a shame because I have a couple of good things to write about. That said, today's post is going to be a short one. I wasn't sure if theme is interesting enough. But in the end I decided to write it anyway. And it will help me get back in the writing shape.

@@ -3,6 +3,7 @@ layout: post
 title: Flex justify content equally distanced items
 category: [CSS/SASS]
 tags: [css,flex]
+image: /public/img/flex-justify-content.png
 ---
 
 I want to share a hack (or a trick if you prefer) my colleague Marko showed me today.

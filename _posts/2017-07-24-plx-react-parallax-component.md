@@ -3,6 +3,7 @@ layout: post
 title: Plx - React parallax component
 category: [React]
 tags: [react]
+image: /public/img/plx-explode.png
 ---
 
 I'm becoming predictable. Again, I haven't found component I like, so I wrote my own.
