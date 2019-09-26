@@ -2,25 +2,32 @@
 <h2>Related Posts</h2>
 
 {% assign RELATED_POSTS_THRESHOLD = 3 %}
+{% assign RELATED_TAG_THRESHOLD = 2 %}
 
 {% assign related_post_count = 0 %}
 
 {% for post in site.posts %}
+  {% if page.title == post.title %}
+    {% continue %}
+  {% endif %}
   {% if related_post_count == RELATED_POSTS_THRESHOLD %}
     {% break %}
   {% endif %}
+  {% assign tag_match_count = 0 %}
   {% for tag in post.tags %}
-    {% if page.tags contains tag and page.title != post.title %}
-      <div class="RelatedPosts-post">
-        <a href="{{ site.baseurl }}{{ post.url }}">
-          <span class="Small">{{ post.date | date_to_string }}</span>
-          {{ post.title }}
-        </a>
-      </div>
-      {% assign related_post_count = related_post_count | plus: 1 %}
-      {% break %}
+    {% if page.tags contains tag %}
+      {% assign tag_match_count = tag_match_count | plus: 1 %}
     {% endif %}
   {% endfor %}
+  {% if tag_match_count >= RELATED_TAG_THRESHOLD %}
+    {% assign related_post_count = related_post_count | plus: 1 %}
+    <div class="RelatedPosts-post">
+      <a href="{{ site.baseurl }}{{ post.url }}">
+        <span class="Small">{{ post.date | date_to_string }}</span>
+        {{ post.title }}
+      </a>
+    </div>
+  {% endif %}
 {% endfor %}
 
 {% assign posts_left = RELATED_POSTS_THRESHOLD | minus: related_post_count %}

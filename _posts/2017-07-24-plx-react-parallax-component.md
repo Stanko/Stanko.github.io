@@ -2,7 +2,7 @@
 layout: post
 title: Plx - React parallax component
 category: [React]
-tags: [react]
+tags: [react,scroll,plx,parallax,js]
 image: /public/img/plx-explode.png
 ---
 
