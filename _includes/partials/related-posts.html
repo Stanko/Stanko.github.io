@@ -1,10 +1,19 @@
 <div class="RelatedPosts">
 <h2>Related Posts</h2>
 
+{% comment %}
+If you change number of related posts to show, you'll have to update
+post_index_N and post_tag_count_N variables to match that number,
+as well as "LOGIC" part in the loop
+{% endcomment %}
 {% assign RELATED_POSTS_THRESHOLD = 3 %}
 
 {% assign related_post_count = 0 %}
 
+{% comment %}
+Liquid has no way of creating objects or array.
+We have to use "flat" variables
+{% endcomment %}
 {% assign post_index_1 = 0 %}
 {% assign post_index_2 = 0 %}
 {% assign post_index_3 = 0 %}
@@ -14,10 +23,16 @@
 {% assign post_tag_count_3 = 0 %}
 
 {% for post in site.posts %}
+  {% comment %}
+  Skip the current post
+  {% endcomment %}
   {% if page.title == post.title %}
     {% continue %}
   {% endif %}
 
+  {% comment %}
+  Calculate the number of matching tags between posts
+  {% endcomment %}
   {% assign tag_match_count = 0 %}
 
   {% for tag in post.tags %}
@@ -28,6 +43,13 @@
 
   {% assign post_index = forloop.index %}
 
+  {% comment %}
+  LOGIC
+  If the number of matched post is larger than one of the current values
+  we also have to check that the current value is equal or smaller than other
+  current values.
+  This ensures we will always have posts with the best match.
+  {% endcomment %}
   {% if tag_match_count > post_tag_count_1 and post_tag_count_1 <= post_tag_count_2 and post_tag_count_1 <= post_tag_count_3 %}
     {% assign post_tag_count_1 = tag_match_count %}
     {% assign post_index_1 = post_index %}
@@ -40,6 +62,9 @@
   {% endif %}
 {% endfor %}
 
+{% comment %}
+Loop through the posts again and display only ones saved in post_index_N variables
+{% endcomment %}
 {% for post in site.posts %}
   {% if forloop.index == post_index_1 or forloop.index == post_index_2 or forloop.index == post_index_3 %}
     <div class="RelatedPosts-post">
@@ -52,30 +77,26 @@
   {% endif %}
 {% endfor %}
 
+{% comment %}
+If we haven't matched the threshold, just display the latest posts
+{% endcomment %}
 {% assign posts_left = RELATED_POSTS_THRESHOLD | minus: related_post_count %}
-{% unless posts_left == 0 %}
+{% if posts_left > 0 %}
   {% for post in site.posts %}
     {% if posts_left == 0 %}
       {% break %}
     {% endif %}
 
-    {% assign already_related = false %}
-    {% for tag in post.tags %}
-      {% if page.tags contains tag %}
-        {% assign already_related = true %}
-        {% break %}
-      {% endif %}
-    {% endfor %}
-    {% unless already_related %}
+    {% if forloop.index != post_index_1 or forloop.index != post_index_2 or forloop.index != post_index_3 %}
       {% assign posts_left = posts_left | minus: 1 %}
-      <div class="RelatedPosts-post">
-        <a href="{{ site.baseurl }}{{ post.url }}">
-          <span class="Small">{{ post.date | date_to_string }}</span>
-          {{ post.title }}
-        </a>
-      </div>
-    {% endunless %}
+        <div class="RelatedPosts-post">
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            <span class="Small">{{ post.date | date_to_string }}</span>
+            {{ post.title }}
+          </a>
+        </div>
+    {% endif %}
   {% endfor %}
-{% endunless %}
+{% endif %}
 
 </div>

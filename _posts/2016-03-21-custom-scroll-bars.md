@@ -39,7 +39,7 @@ You can use pseudo selectors, these ones are used in the demo:
 ```
 
 Check jsfiddle demo with green-ish scrollbars <i>webkit only</i>.
-  
+
 <iframe
 height='300px'
 scrolling='no'
@@ -72,7 +72,7 @@ Grab the code on [GitHub](https://github.com/Stanko/rocketScroll).
 ### CSS solution, all browsers
 
 * Idea - Show scrollbars only on mouse hover.
-* Problem - content will be shrinked for the width of the scrollbar on hover, and jump.
+* Problem - content will be shrunk for the width of the scrollbar on hover, and jump.
 
 We are going to exploit the fast that all of the browsers have sub 20px wide scrollbar.
 This demo is using two divs, outer one which will be scrolled, and content wrapped in the inner one.
@@ -99,19 +99,21 @@ Scrolling on touch devices is already nice and smooth.
 /* no-touchevents class is added by modernizr
  * as we don't want to apply this on touch devices */
 .no-touchevents .scroll-y {
-    overflow-y: hidden;
+  overflow-y: hidden;
 }
 
 .no-touchevents .scroll-y:hover {
-    overflow-y: scroll;
+  overflow-y: scroll;
 }
 ```
 
-Check jsfiddle demo.
+Check demo on CodePen (please note that demo was updated to work without modernizr).
 
 <iframe
-	width="100%"
-	height="400"
-	src="//jsfiddle.net/az220ayb/embedded/result,css,html/"
-	allowfullscreen="allowfullscreen"
-	frameborder="0"></iframe>
+height='420px'
+scrolling='no'
+src='//codepen.io/stanko/embed/preview/BaBEQQG/?height=500&theme-id=light&default-tab=result' frameborder='no'
+allowtransparency='true'
+allowfullscreen='true'>
+See the Pen <a href='http://codepen.io/stanko/pen/BaBEQQG/'>Show scrollbars on hover only</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
