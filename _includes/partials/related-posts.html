@@ -83,6 +83,9 @@ If we haven't matched the threshold, just display the latest posts
 {% assign posts_left = RELATED_POSTS_THRESHOLD | minus: related_post_count %}
 {% if posts_left > 0 %}
   {% for post in site.posts %}
+    {% if page.title == post.title %}
+      {% continue %}
+    {% endif %}
     {% if posts_left == 0 %}
       {% break %}
     {% endif %}
