@@ -7,9 +7,8 @@ message: >-
 
   I hacked <a
   href="https://codesandbox.io/s/react-animate-height-animate-height-when-content-changes-76gli">an
-  example</a> of how can you do it using <code>AnimateHeight</code>. It is a
-  little bit tricky, but it works. Make sure you add a window resize listener
-  and reset the fixed height.
+  example</a> of how you can do it using <code>AnimateHeight</code>. It is a
+  little bit tricky, but it works. (Make sure you reset fixed height on window resize.)
 
 
   Cheers!
