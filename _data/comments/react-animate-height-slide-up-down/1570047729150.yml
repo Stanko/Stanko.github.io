@@ -10,8 +10,10 @@ message: >-
   example</a> of how you can do it using <code>AnimateHeight</code>. It is a
   little bit tricky, but it works. (Make sure you reset fixed height on window resize.)
 
+
   EDIT: Check <a href="/animate-between-two-react-components/">this proof of concept</a> 
   I did some time ago. It animates height and opacity between two React components.
+
 
   Cheers!
 date: '2019-10-02T20:22:09.143Z'
