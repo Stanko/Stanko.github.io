@@ -1,0 +1,16 @@
+_id: 4f29f6e0-e552-11e9-b6ae-4df04491d7e0
+slug: react-animate-height-slide-up-down
+name: Stanko
+email: 13a28fac985c11eb7f40169be7da32f4
+message: >-
+  Hey Ayden,
+
+  I hacked <a
+  href="https://codesandbox.io/s/react-animate-height-animate-height-when-content-changes-76gli">an
+  example</a> of how can you do it using <code>AnimateHeight</code>. It is a
+  little bit tricky, but it works. Make sure you add a window resize listener
+  and reset the fixed height.
+
+
+  Cheers!
+date: '2019-10-02T20:22:09.143Z'
