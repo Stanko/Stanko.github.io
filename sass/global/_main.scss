@@ -75,12 +75,11 @@ $key-color-pressed: #f1f1f3;
 
 .Key {
   fill: $key-color;
-
-  rect {
-    stroke-width: 0;
-  }
+  stroke-width: 2;
+  stroke: transparent;
 }
 
 .Key--active {
   fill: $key-color-pressed;
+  stroke: darken($key-color-pressed, 5);
 }

@@ -1,10 +1,10 @@
 const keyCodes = {
   // 0: {
-  //   // 'Key has no keycode',
+  //   'Key has no keycode',
   //   className: '',
   // },
   // 3: {
-  //   // 'break',
+  //   'break',
   //   className: '',
   // },
   8: {
@@ -15,7 +15,7 @@ const keyCodes = {
     className: 'tab',
   },
   // 12: {
-  //   // 'clear',
+  //   'clear',
   //   className: '',
   // },
   13: {
@@ -36,48 +36,48 @@ const keyCodes = {
     checkSide: true,
   },
   // 19: {
-  //   // 'pause/break',
+  //   'pause/break',
   //   className: '',
   // },
   20: {
     className: 'capsLock',
   },
   // 21: {
-  //   // 'hangul',
+  //   'hangul',
   //   className: '',
   // },
   // 25: {
-  //   // 'hanja',
+  //   'hanja',
   //   className: '',
   // },
   27: {
     className: 'esc',
   },
   // 28: {
-  //   // 'conversion',
+  //   'conversion',
   //   className: '',
   // },
   // 29: {
-  //   // 'non-conversion',
+  //   'non-conversion',
   //   className: '',
   // },
   32: {
     className: 'space',
   },
   // 33: {
-  //   // 'page up',
+  //   'page up',
   //   className: '',
   // },
   // 34: {
-  //   // 'page down',
+  //   'page down',
   //   className: '',
   // },
   // 35: {
-  //   // 'end',
+  //   'end',
   //   className: '',
   // },
   // 36: {
-  //   // 'home',
+  //   'home',
   //   className: '',
   // },
   37: {
@@ -93,30 +93,30 @@ const keyCodes = {
     className: 'arrowDown',
   },
   // 41: {
-  //   // 'select',
+  //   'select',
   //   className: '',
   // },
   // 42: {
-  //   // 'print',
+  //   'print',
   //   className: '',
   // },
   // 43: {
-  //   // 'execute',
+  //   'execute',
   //   className: '',
   // },
   // 44: {
-  //   // 'print Screen',
+  //   'print Screen',
   //   className: '',
   // },
   // 45: {
-  //   // 'insert',
+  //   'insert',
   //   className: '',
   // },
   46: {
     className: 'delete',
   },
   // 47: {
-  //   // 'help',
+  //   'help',
   //   className: '',
   // },
   48: {
@@ -166,7 +166,7 @@ const keyCodes = {
     className: 'equals',
   },
   // 63: {
-  //   // 'ß',
+  //   'ß',
   //   className: '',
   // },
   64: {
@@ -404,11 +404,11 @@ const keyCodes = {
     className: 'f24',
   },
   // 144: {
-  //   // 'num lock',
+  //   'num lock',
   //   className: '',
   // },
   // 145: {
-  //   // 'scroll lock',
+  //   'scroll lock',
   //   className: '',
   // },
   160: {
@@ -432,11 +432,11 @@ const keyCodes = {
     className: 'u',
   },
   // 166: {
-  //   // 'page backward',
+  //   'page backward',
   //   className: '',
   // },
   // 167: {
-  //   // 'page forward',
+  //   'page forward',
   //   className: '',
   // },
   168: {
@@ -456,7 +456,7 @@ const keyCodes = {
     className: 'tilde',
   },
   // 172: {
-  //   // 'home key',
+  //   'home key',
   //   className: '',
   // },
   173: {
@@ -472,15 +472,15 @@ const keyCodes = {
     className: 'f11',
   },
   // 176: {
-  //   // 'next',
+  //   'next',
   //   className: '',
   // },
   // 177: {
-  //   // 'previous',
+  //   'previous',
   //   className: '',
   // },
   // 178: {
-  //   // 'stop',
+  //   'stop',
   //   className: '',
   // },
   179: {
@@ -488,7 +488,7 @@ const keyCodes = {
     className: 'f8',
   },
   // 180: {
-  //   // 'e-mail',
+  //   'e-mail',
   //   className: '',
   // },
   181: {
@@ -569,11 +569,11 @@ const keyCodes = {
     className: 'altRight',
   },
   // 226: {
-  //   // '< /git >, left back slash',
+  //   'left back slash',
   //   className: '',
   // },
   // 230: {
-  //   // 'GNOME Compose Key',
+  //   'GNOME Compose Key',
   //   className: '',
   // },
   231: {
@@ -581,31 +581,31 @@ const keyCodes = {
     className: 'c',
   },
   // 233: {
-  //   // 'XF86Forward',
+  //   'XF86Forward',
   //   className: '',
   // },
   // 234: {
-  //   // 'XF86Back',
+  //   'XF86Back',
   //   className: '',
   // },
   // 240: {
-  //   // 'alphanumeric',
+  //   'alphanumeric',
   //   className: '',
   // },
   // 242: {
-  //   // 'hiragana/katakana',
+  //   'hiragana/katakana',
   //   className: '',
   // },
   // 243: {
-  //   // 'half-width/full-width',
+  //   'half-width/full-width',
   //   className: '',
   // },
   // 244: {
-  //   // 'kanji',
+  //   'kanji',
   //   className: '',
   // },
   // 255: {
-  //   // 'toggle touchpad',
+  //   'toggle touchpad',
   //   className: '',
   // },
 };

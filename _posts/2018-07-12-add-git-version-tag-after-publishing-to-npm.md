@@ -2,7 +2,7 @@
 layout: post
 title: Add git version tag after publishing to npm
 category: [JavaScript]
-tags: [npm, javascript]
+tags: [npm, javascript, git]
 ---
 
 ## TL;DR

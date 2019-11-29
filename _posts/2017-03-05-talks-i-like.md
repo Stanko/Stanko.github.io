@@ -2,7 +2,7 @@
 layout: post
 title: Couple of talks I really liked
 category: [Development]
-tags: [dev]
+tags: [talks,speaking]
 ---
 
 In this post you can find seven talks I really liked in no particular order, most of them development related. I'll explain why I liked them, and why I should recommend watching every single one of them.

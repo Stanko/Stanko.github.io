@@ -9,17 +9,17 @@ headerTitle: Browse the archive
 <div class="Container">
   <div class="Page">
     {% for category in categories %}
-    {% capture categoryName %}{{ category | first }}{% endcapture %}
-    <div class="Archive-section" id="section-{{ categoryName | slugify }}">
+    {% capture category_name %}{{ category | first }}{% endcapture %}
+    <div class="Archive-section" id="section-{{ category_name | slugify }}">
       <h2 class="Archive-title">
-        <a href="#/{{ categoryName | slugify }}">
-          <div>{{ categoryName }}</div>
-          <div class="Archive-titleCount">{{ site.categories[categoryName] | size }}</div>
+        <a href="#/{{ category_name | slugify }}">
+          <div>{{ category_name }}</div>
+          <div class="Archive-titleCount">{{ site.categories[category_name] | size }}</div>
         </a>
       </h2>
-      <div class="Archive-posts" id="posts-{{ categoryName | slugify }}">
+      <div class="Archive-posts" id="posts-{{ category_name | slugify }}">
         <div class="Archive-postsContent">
-          {% for post in site.categories[categoryName] %}
+          {% for post in site.categories[category_name] %}
           <a href="{{ post.url }}" class="Archive-post">
             <div class="Archive-postDate">
               <div class="Archive-postDateIcon">
