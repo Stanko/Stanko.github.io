@@ -1,612 +1,612 @@
 const keyCodes = {
   // 0: {
   //   'Key has no keycode',
-  //   className: '',
+  //   id: '',
   // },
   // 3: {
   //   'break',
-  //   className: '',
+  //   id: '',
   // },
   8: {
     // 'backspace / delete',
-    className: 'delete',
+    id: 'delete',
   },
   9: {
-    className: 'tab',
+    id: 'tab',
   },
   // 12: {
   //   'clear',
-  //   className: '',
+  //   id: '',
   // },
   13: {
-    className: 'enter',
+    id: 'enter',
   },
   16: {
-    className: 'shift',
+    id: 'shift',
     checkSide: true,
     // DOM_KEY_LOCATION_LEFT
     // DOM_KEY_LOCATION_RIGHT
   },
   17: {
-    className: 'control',
+    id: 'control',
     checkSide: true,
   },
   18: {
-    className: 'alt',
+    id: 'alt',
     checkSide: true,
   },
   // 19: {
   //   'pause/break',
-  //   className: '',
+  //   id: '',
   // },
   20: {
-    className: 'capsLock',
+    id: 'capsLock',
   },
   // 21: {
   //   'hangul',
-  //   className: '',
+  //   id: '',
   // },
   // 25: {
   //   'hanja',
-  //   className: '',
+  //   id: '',
   // },
   27: {
-    className: 'esc',
+    id: 'esc',
   },
   // 28: {
   //   'conversion',
-  //   className: '',
+  //   id: '',
   // },
   // 29: {
   //   'non-conversion',
-  //   className: '',
+  //   id: '',
   // },
   32: {
-    className: 'space',
+    id: 'space',
   },
   // 33: {
   //   'page up',
-  //   className: '',
+  //   id: '',
   // },
   // 34: {
   //   'page down',
-  //   className: '',
+  //   id: '',
   // },
   // 35: {
   //   'end',
-  //   className: '',
+  //   id: '',
   // },
   // 36: {
   //   'home',
-  //   className: '',
+  //   id: '',
   // },
   37: {
-    className: 'arrowLeft',
+    id: 'arrowLeft',
   },
   38: {
-    className: 'arrowUp',
+    id: 'arrowUp',
   },
   39: {
-    className: 'arrowRight',
+    id: 'arrowRight',
   },
   40: {
-    className: 'arrowDown',
+    id: 'arrowDown',
   },
   // 41: {
   //   'select',
-  //   className: '',
+  //   id: '',
   // },
   // 42: {
   //   'print',
-  //   className: '',
+  //   id: '',
   // },
   // 43: {
   //   'execute',
-  //   className: '',
+  //   id: '',
   // },
   // 44: {
   //   'print Screen',
-  //   className: '',
+  //   id: '',
   // },
   // 45: {
   //   'insert',
-  //   className: '',
+  //   id: '',
   // },
   46: {
-    className: 'delete',
+    id: 'delete',
   },
   // 47: {
   //   'help',
-  //   className: '',
+  //   id: '',
   // },
   48: {
-    className: '0',
+    id: '0',
   },
   49: {
-    className: '1',
+    id: '1',
   },
   50: {
-    className: '2',
+    id: '2',
   },
   51: {
-    className: '3',
+    id: '3',
   },
   52: {
-    className: '4',
+    id: '4',
   },
   53: {
-    className: '5',
+    id: '5',
   },
   54: {
-    className: '6',
+    id: '6',
   },
   55: {
-    className: '7',
+    id: '7',
   },
   56: {
-    className: '8',
+    id: '8',
   },
   57: {
-    className: '9',
+    id: '9',
   },
   58: {
     // ':',
-    className: 'semicolon',
+    id: 'semicolon',
   },
   59: {
     // 'semicolon (firefox), equals',
-    className: 'equals',
+    id: 'equals',
   },
   60: {
     // '<',
-    className: 'comma',
+    id: 'comma',
   },
   61: {
     // 'equals (firefox)',
-    className: 'equals',
+    id: 'equals',
   },
   // 63: {
   //   'ß',
-  //   className: '',
+  //   id: '',
   // },
   64: {
     // '@ (firefox)',
-    className: '2',
+    id: '2',
   },
   65: {
-    className: 'a',
+    id: 'a',
   },
   66: {
-    className: 'b',
+    id: 'b',
   },
   67: {
-    className: 'c',
+    id: 'c',
   },
   68: {
-    className: 'd',
+    id: 'd',
   },
   69: {
-    className: 'e',
+    id: 'e',
   },
   70: {
-    className: 'f',
+    id: 'f',
   },
   71: {
-    className: 'g',
+    id: 'g',
   },
   72: {
-    className: 'h',
+    id: 'h',
   },
   73: {
-    className: 'i',
+    id: 'i',
   },
   74: {
-    className: 'j',
+    id: 'j',
   },
   75: {
-    className: 'k',
+    id: 'k',
   },
   76: {
-    className: 'l',
+    id: 'l',
   },
   77: {
-    className: 'm',
+    id: 'm',
   },
   78: {
-    className: 'n',
+    id: 'n',
   },
   79: {
-    className: 'o',
+    id: 'o',
   },
   80: {
-    className: 'p',
+    id: 'p',
   },
   81: {
-    className: 'q',
+    id: 'q',
   },
   82: {
-    className: 'r',
+    id: 'r',
   },
   83: {
-    className: 's',
+    id: 's',
   },
   84: {
-    className: 't',
+    id: 't',
   },
   85: {
-    className: 'u',
+    id: 'u',
   },
   86: {
-    className: 'v',
+    id: 'v',
   },
   87: {
-    className: 'w',
+    id: 'w',
   },
   88: {
-    className: 'x',
+    id: 'x',
   },
   89: {
-    className: 'y',
+    id: 'y',
   },
   90: {
-    className: 'z',
+    id: 'z',
   },
   91: {
     // 'Windows Key / Left ⌘ / Chromebook Search key',
-    className: 'cmdLeft',
+    id: 'cmdLeft',
   },
   92: {
     // 'right window key',
-    className: 'cmdRight',
+    id: 'cmdRight',
   },
   93: {
     // 'Windows Menu / Right ⌘',
-    className: 'cmdRight',
+    id: 'cmdRight',
   },
   // 95: {
   //  '// sleep',
-  //   className: '',
+  //   id: '',
   // },
   96: {
     // 'numpad 0',
-    className: '0',
+    id: '0',
   },
   97: {
     // 'numpad 1',
-    className: '1',
+    id: '1',
   },
   98: {
     // 'numpad 2',
-    className: '2',
+    id: '2',
   },
   99: {
     // 'numpad 3',
-    className: '3',
+    id: '3',
   },
   100: {
     // 'numpad 4',
-    className: '4',
+    id: '4',
   },
   101: {
     // 'numpad 5',
-    className: '5',
+    id: '5',
   },
   102: {
     // 'numpad 6',
-    className: '6',
+    id: '6',
   },
   103: {
     // 'numpad 7',
-    className: '7',
+    id: '7',
   },
   104: {
     // 'numpad 8',
-    className: '8',
+    id: '8',
   },
   105: {
     // 'numpad 9',
-    className: '9',
+    id: '9',
   },
   106: {
     // 'multiply',
-    className: '8',
+    id: '8',
   },
   107: {
     // 'add',
-    className: 'equals',
+    id: 'equals',
   },
   108: {
     // 'numpad period (firefox)',
-    className: 'dot',
+    id: 'dot',
   },
   109: {
     // 'subtract',
-    className: 'minus',
+    id: 'minus',
   },
   110: {
     // 'decimal point',
-    className: 'dot',
+    id: 'dot',
   },
   111: {
     // 'divide',
-    className: 'slash',
+    id: 'slash',
   },
   112: {
-    className: 'f1',
+    id: 'f1',
   },
   113: {
-    className: 'f2',
+    id: 'f2',
   },
   114: {
-    className: 'f3',
+    id: 'f3',
   },
   115: {
-    className: 'f4',
+    id: 'f4',
   },
   116: {
-    className: 'f5',
+    id: 'f5',
   },
   117: {
-    className: 'f6',
+    id: 'f6',
   },
   118: {
-    className: 'f7',
+    id: 'f7',
   },
   119: {
-    className: 'f8',
+    id: 'f8',
   },
   120: {
-    className: 'f9',
+    id: 'f9',
   },
   121: {
-    className: 'f10',
+    id: 'f10',
   },
   122: {
-    className: 'f11',
+    id: 'f11',
   },
   123: {
-    className: 'f12',
+    id: 'f12',
   },
   124: {
-    className: 'f13',
+    id: 'f13',
   },
   125: {
-    className: 'f14',
+    id: 'f14',
   },
   126: {
-    className: 'f15',
+    id: 'f15',
   },
   127: {
-    className: 'f16',
+    id: 'f16',
   },
   128: {
-    className: 'f17',
+    id: 'f17',
   },
   129: {
-    className: 'f18',
+    id: 'f18',
   },
   130: {
-    className: 'f19',
+    id: 'f19',
   },
   131: {
-    className: 'f20',
+    id: 'f20',
   },
   132: {
-    className: 'f21',
+    id: 'f21',
   },
   133: {
-    className: 'f22',
+    id: 'f22',
   },
   134: {
-    className: 'f23',
+    id: 'f23',
   },
   135: {
-    className: 'f24',
+    id: 'f24',
   },
   // 144: {
   //   'num lock',
-  //   className: '',
+  //   id: '',
   // },
   // 145: {
   //   'scroll lock',
-  //   className: '',
+  //   id: '',
   // },
   160: {
     // '^',
-    className: '6',
+    id: '6',
   },
   161: {
     // '!',
-    className: '1',
+    id: '1',
   },
   163: {
     // '#',
-    className: '3',
+    id: '3',
   },
   164: {
     // '$',
-    className: '4',
+    id: '4',
   },
   165: {
     // 'ù',
-    className: 'u',
+    id: 'u',
   },
   // 166: {
   //   'page backward',
-  //   className: '',
+  //   id: '',
   // },
   // 167: {
   //   'page forward',
-  //   className: '',
+  //   id: '',
   // },
   168: {
     // 'refresh',
-    className: 'f5',
+    id: 'f5',
   },
   169: {
     // 'closing paren (AZERTY)',
-    className: '0',
+    id: '0',
   },
   170: {
     // '*',
-    className: '8',
+    id: '8',
   },
   171: {
     // '~ + * key',
-    className: 'tilde',
+    id: 'tilde',
   },
   // 172: {
   //   'home key',
-  //   className: '',
+  //   id: '',
   // },
   173: {
     // 'minus (firefox), mute/unmute',
-    className: 'minus',
+    id: 'minus',
   },
   174: {
     // 'decrease volume level',
-    className: 'f10',
+    id: 'f10',
   },
   175: {
     // 'increase volume level',
-    className: 'f11',
+    id: 'f11',
   },
   // 176: {
   //   'next',
-  //   className: '',
+  //   id: '',
   // },
   // 177: {
   //   'previous',
-  //   className: '',
+  //   id: '',
   // },
   // 178: {
   //   'stop',
-  //   className: '',
+  //   id: '',
   // },
   179: {
     // 'play/pause',
-    className: 'f8',
+    id: 'f8',
   },
   // 180: {
   //   'e-mail',
-  //   className: '',
+  //   id: '',
   // },
   181: {
     // 'mute/unmute (firefox)',
-    className: 'f10',
+    id: 'f10',
   },
   182: {
     // 'decrease volume level (firefox)',
-    className: 'f11',
+    id: 'f11',
   },
   183: {
     // 'increase volume level (firefox)',
-    className: 'f12',
+    id: 'f12',
   },
   186: {
     // 'semi-colon / ñ',
-    className: 'semicolon',
+    id: 'semicolon',
   },
   187: {
     // 'equal sign',
-    className: 'equals',
+    id: 'equals',
   },
   188: {
     // 'comma',
-    className: 'comma',
+    id: 'comma',
   },
   189: {
     // 'dash',
-    className: 'minus',
+    id: 'minus',
   },
   190: {
     // 'period',
-    className: 'dot',
+    id: 'dot',
   },
   191: {
     // 'forward slash / ç',
-    className: 'slash',
+    id: 'slash',
   },
   192: {
     // 'grave accent / ñ / æ / ö',
-    className: 'tilde',
+    id: 'tilde',
   },
   193: {
     // '?, / or °',
-    className: 'slash',
+    id: 'slash',
   },
   194: {
     // 'numpad period (chrome)',
-    className: 'dot',
+    id: 'dot',
   },
   219: {
     // 'open bracket',
-    className: 'squareBracketLeft',
+    id: 'squareBracketLeft',
   },
   220: {
     // 'back slash',
-    className: 'backslash',
+    id: 'backslash',
   },
   221: {
     // 'close bracket / å',
-    className: 'squareBracketRight',
+    id: 'squareBracketRight',
   },
   222: {
     // 'single quote / ø / ä',
-    className: 'apostrophe',
+    id: 'apostrophe',
   },
   223: {
     // '`',
-    className: 'tilde',
+    id: 'tilde',
   },
   224: {
     // 'left or right ⌘ key (firefox)',
-    className: 'cmd',
+    id: 'cmd',
     checkSide: true,
   },
   225: {
     // 'altgr',
-    className: 'altRight',
+    id: 'altRight',
   },
   // 226: {
   //   'left back slash',
-  //   className: '',
+  //   id: '',
   // },
   // 230: {
   //   'GNOME Compose Key',
-  //   className: '',
+  //   id: '',
   // },
   231: {
     // 'ç',
-    className: 'c',
+    id: 'c',
   },
   // 233: {
   //   'XF86Forward',
-  //   className: '',
+  //   id: '',
   // },
   // 234: {
   //   'XF86Back',
-  //   className: '',
+  //   id: '',
   // },
   // 240: {
   //   'alphanumeric',
-  //   className: '',
+  //   id: '',
   // },
   // 242: {
   //   'hiragana/katakana',
-  //   className: '',
+  //   id: '',
   // },
   // 243: {
   //   'half-width/full-width',
-  //   className: '',
+  //   id: '',
   // },
   // 244: {
   //   'kanji',
-  //   className: '',
+  //   id: '',
   // },
   // 255: {
   //   'toggle touchpad',
-  //   className: '',
+  //   id: '',
   // },
 };
 
@@ -614,8 +614,8 @@ const keyCodes = {
 function getKeyElement(e) {
   const key = keyCodes[e.keyCode];
 
-  if (key && key.className) {
-    let keySelector = `#Key--${ key.className }`;
+  if (key && key.id) {
+    let keySelector = `#Key--${ key.id }`;
 
     if (key.checkSide && KeyboardEvent) {
       if (e.location === KeyboardEvent.DOM_KEY_LOCATION_LEFT) {
