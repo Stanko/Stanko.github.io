@@ -2,7 +2,7 @@
 layout: post
 title: JavaScript keyboard easter egg
 category: [Music]
-tags: []
+tags: [js, svg, keyboard]
 image: /public/img/keyboard.png
 ---
 
