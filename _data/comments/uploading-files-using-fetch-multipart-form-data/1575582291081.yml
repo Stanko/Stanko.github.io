@@ -1,0 +1,37 @@
+_id: 7705b9f0-17a8-11ea-9cb8-2f1ecf3bf7ce
+slug: uploading-files-using-fetch-multipart-form-data
+name: Hesham Fahed
+email: 26f79e4cc4f911551733816ea6230af5
+message: |-
+  Realy THANK YOU 
+  I get some advices from stackoverflow and it work perfect : 
+  ============= JS FILE =========================
+  const fileInput = ($(this).closest("tr").find(".img"))[0].files[0] ;
+          const formData = new FormData();
+          
+          formData.append('file', fileInput);
+          console.log(formData);
+          const options = {
+            method: 'POST',
+            body: formData,
+            // If you add this, upload won't work
+            // headers: {
+            //   'Content-Type': 'multipart/form-data',
+            // }
+          };
+          
+          fetch('userAction.php?action=img', options);
+  =========userAction.php==================
+  if (($_GET['action'] == 'img')) {
+
+      $file = addslashes(file_get_contents($_FILES["file"]["tmp_name"]));
+      $sql = "INSERT INTO dbname(id, name, address, email, description , img ) VALUES (NULL,'', '', '' , '' , '$file' )";
+      if ($mysqli->query($sql) === TRUE) {
+
+          $returnData = array(
+              'status' => 'ok',
+              'msg' => ' data has been added successfully.',
+            
+          );
+      }
+date: '2019-12-05T21:44:51.074Z'
