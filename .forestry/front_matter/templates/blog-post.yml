@@ -28,5 +28,3 @@ fields:
     required: false
   label: Image
   description: Image used in meta tags
-pages:
-- "./_posts/2019-12-10-remove-macos-catalina-zsh-nagging.md"
