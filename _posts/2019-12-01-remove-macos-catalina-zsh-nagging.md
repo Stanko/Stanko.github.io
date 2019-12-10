@@ -10,7 +10,7 @@ Yesterday I
 <label class="SideNote-trigger">updated my work laptop to MacOS Catalina.</label>
 <small class="SideNote">
 To be able to [use AirPods Pro with it](https://support.apple.com/en-us/HT208718) :/
-</small>,
+</small>
 Apple made a change and switched the default shell to zsh (instead of bash). From what I have read, the reason is [a licensing issue](https://thenextweb.com/dd/2019/06/04/why-does-macos-catalina-use-zsh-instead-of-bash-licensing/).
 
 <!--more-->
