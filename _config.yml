@@ -74,7 +74,6 @@ excerpt_separator: <!--more-->
 author:
   name: Stanko
   url: http://stanko.github.io
-  email: stanko.tadic@gmail.com
 
 # Live reload
 reload_port: 5678
