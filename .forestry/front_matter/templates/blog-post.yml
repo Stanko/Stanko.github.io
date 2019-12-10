@@ -29,4 +29,4 @@ fields:
   label: Image
   description: Image used in meta tags
 pages:
-- "./_posts/remove-macos-catalina-zsh-nagging.md"
+- "./_posts/2019-12-10-remove-macos-catalina-zsh-nagging.md"
