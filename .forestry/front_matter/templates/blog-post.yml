@@ -1,4 +1,30 @@
 ---
 label: Blog post
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: layout
+  type: text
+  config:
+    required: false
+  label: Layout
+  hidden: true
+  default: post
+- name: category
+  type: tag_list
+  default: []
+  label: Category
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
+- name: image
+  type: text
+  config:
+    required: false
+  label: Image
+  description: Image used in meta tags
