@@ -2,7 +2,7 @@
 layout: post
 title: Small Mac apps I love
 category: [Random]
-tags: [mac, apps, bash]
+tags: [mac,apps,bash]
 ---
 
 Recently I switched to a new laptop and had to set it up

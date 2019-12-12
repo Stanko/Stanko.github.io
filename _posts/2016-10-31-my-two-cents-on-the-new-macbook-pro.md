@@ -2,7 +2,7 @@
 layout: post
 title: My two cents on the new MacBook Pro
 category: [Rants]
-tags: [random,rants]
+tags: [random,rants,mac]
 ---
 
 After the recent Apple keynote, it seems that community is not happy with the new MacBook Pro.
