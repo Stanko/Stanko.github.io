@@ -6,7 +6,7 @@ message: >-
   Hi Catarina,
 
 
-  I guess you haven't used has routing. That means you still need to setup
+  I guess you haven't used hash routing. That means you still need to setup
   proper server redirections. If you are using appache, you should check
   [Setting up .htaccess file](#setting-up-htaccess-file) section in this post.
 
