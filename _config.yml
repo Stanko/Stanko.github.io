@@ -59,6 +59,7 @@ exclude:
  - Gemfile
  - Gemfile.lock
  - vendor
+ - .cache
 
 # Setup
 title: Muffin Man

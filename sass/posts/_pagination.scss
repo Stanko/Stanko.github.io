@@ -13,6 +13,7 @@
 
 .Pagination-link {
   align-items: center;
+  border-radius: 50%;
   color: $pagination-color;
   display: flex;
   height: 100%;
@@ -44,7 +45,6 @@
 .Pagination-link--active,
 .Pagination-link--active:hover {
   background: $pagination-active-bg;
-  border-radius: 50%;
   color: $pagination-active-color;
   font-weight: bold;
   margin: 0 0.3rem;

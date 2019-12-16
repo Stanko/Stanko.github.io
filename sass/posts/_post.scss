@@ -1,6 +1,14 @@
 .Post {
   position: relative;
   z-index: $z-index-1;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    position: relative;
+  }
 }
 
 .Posts .Post-content {
@@ -39,6 +47,41 @@
   }
 }
 
+.Post-headerAnchor {
+  border-radius: 0.5rem;
+  border: none !important; // To override the styles in app.scss
+  left: -1.4em;
+  opacity: 0;
+  padding: 0.2em;
+  position: absolute !important; // To override the styles in app.scss
+  top: -0.12em;
+  transition: opacity $time !important; // To override the styles in app.scss
+  widows: 1.4em;
+
+  img {
+    display: block;
+    height: 1em;
+    margin: 0 !important; // To override the styles in app.scss
+    opacity: 0.5;
+    transition: opacity $time;
+    widows: 1em;
+  }
+
+  &:hover img,
+  &:focus img {
+    opacity: 1;
+  }
+
+  &:focus,
+  h1:hover &,
+  h2:hover &,
+  h3:hover &,
+  h3:hover &,
+  h5:hover & {
+    opacity: 1;
+  }
+}
+
 .Post-latest {
   font-size: 0.75em;
   margin-top: 4.5rem;
@@ -67,6 +110,7 @@
   border-radius: 0.3rem;
   display: block;
   max-width: 100%;
+  margin: 3rem 0;
 }
 
 .Post {
@@ -242,7 +286,6 @@
 
 .PostBottom {
   background: $light;
-  // color: $white;
   padding: 18rem 0 0;
   position: relative;
 
@@ -252,14 +295,6 @@
 
   @include lg {
     padding-top: 24rem;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    // color: $white;
   }
 }
 

@@ -2,7 +2,7 @@
 layout: post
 title: Looking forward to the 2017
 category: [Random]
-tags: [random]
+tags: [random,retrospective,year,workco]
 ---
 
 2016 was quite a ride.
@@ -11,12 +11,12 @@ to close this year with one last post.
 
 ## Work & Co
 
-Big news here, my ex-company became a part of [Work & Co](http://work.co).
+Big news here, my company became a part of [Work & Co](http://work.co).
 We're really excited about that, and I'm looking forward to the great stuff we are going to build.
 Our collaboration goes back for a few years now, it was very productive,
 and this is a great step forward.
 
-My current title is a *Principal developer* and I'm in charge of a tech team,
+My current title is a *Technology Director* and I'm in charge of a tech team,
 here in the Belgrade office.
 
 <!--more-->
