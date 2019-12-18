@@ -2,7 +2,7 @@
 layout: post
 title: Uploading files using 'fetch' and 'FormData'
 category: [JavaScript]
-tags: [javascript, til, fetch]
+tags: [js, til, fetch]
 ---
 
 

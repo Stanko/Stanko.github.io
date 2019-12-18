@@ -2,7 +2,7 @@
 layout: post
 title: Fake audio spectrum, using perlin noise
 category: [JavaScript]
-tags: [javascript,animation]
+tags: [js,animation]
 ---
 
 Few days ago, I was chatting with our design team, and we were wondering how hard would be to create a fake audio spectrum (that mimics human speech) and visualize it. I immediately said it should be easy, and that I will play with it over the weekend. Of course, I didn't wait for the weekend, but wrote it the same evening. It was fairly straightforward, but it had few gotchas.
@@ -88,7 +88,7 @@ There are multiple JavaScript implementations, but I ended using [this one](http
 
 Now when I had everything I needed, it was easy to write the actual code. Working demo was done really quickly. Then I started playing with values and tweaking them. Finally I was satisfied with the result. It still feels a little bit too smooth and unnatural. But I didn't mind it that much, I left it as something that can be improved, along with different speed for jumps and drops.
 
-To animate things I ended up using CSS transforms plus flexbox, as it was the easiest way I could think of. Using canvas probably could probably improve performance, but this was a proof of concept and I didn't bother with it. 
+To animate things I ended up using CSS transforms plus flexbox, as it was the easiest way I could think of. Using canvas probably could probably improve performance, but this was a proof of concept and I didn't bother with it.
 
 Code can be found on [Codepen](https://codepen.io/stanko/pen/mvprzX). Have fun!
 

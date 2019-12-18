@@ -2,7 +2,7 @@
 layout: post
 title: JavaScript animation loop
 category: [JavaScript]
-tags: [javascript,games,animation]
+tags: [js,games,animation]
 ---
 
 I've been really busy lately, doing both work and pet projects.

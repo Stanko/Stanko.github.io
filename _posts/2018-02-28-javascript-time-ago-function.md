@@ -2,7 +2,7 @@
 layout: post
 title: JavaScript 'time ago' function
 category: [JavaScript]
-tags: [javascript,date,time]
+tags: [js,date,time]
 ---
 
 Snippet for a rather popular requirement.
