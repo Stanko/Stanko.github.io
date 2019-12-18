@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Three.js extrude SVG path
-category: [Rants]
+category: [JavaScript]
 tags: [js,threejs,3d,svg]
 image: /public/img/extrude-svg/final.png
 ---
