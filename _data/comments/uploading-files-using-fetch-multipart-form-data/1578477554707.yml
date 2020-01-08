@@ -1,0 +1,19 @@
+_id: 86c7a820-31fd-11ea-9814-87f9081fbbbb
+slug: uploading-files-using-fetch-multipart-form-data
+name: Stanko
+email: 13a28fac985c11eb7f40169be7da32f4
+message: >-
+  Hey Dave,
+
+
+  <pre>fetch</pre> accepts two params, <pre>url</pre> and <pre>options</pre>. So
+  before calling it, make sure your options are not including Content-Type
+  header.
+
+
+  To answer your question, delete Content-Type header right before you call
+  fetch.
+
+
+  Cheers!
+date: '2020-01-08T09:59:14.706Z'
