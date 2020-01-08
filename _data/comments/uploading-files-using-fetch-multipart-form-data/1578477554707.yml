@@ -6,7 +6,7 @@ message: >-
   Hey Dave,
 
 
-  <pre>fetch</pre> accepts two params, <pre>url</pre> and <pre>options</pre>. So
+  <code>fetch</code> accepts two params, <code>url</code> and <code>options</code>. So
   before calling it, make sure your options are not including Content-Type
   header.
 
