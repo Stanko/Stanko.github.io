@@ -4,7 +4,7 @@
   "scripts": {
     "build": "rm -rf ./public/assets && parcel build js/app.js --no-source-maps --out-dir public/assets --public-url /public/assets",
     "assets": "rm -rf ./public/assets && parcel watch js/app.js --no-source-maps --out-dir public/assets --public-url /public/assets",
-    "jekyll": "jekyll serve --incremental --livereload --host 0.0.0.0",
+    "jekyll": "bundle exec jekyll serve --incremental --livereload --host 0.0.0.0",
     "start": "rm -rf _site && npm run build && npm run jekyll"
   },
   "license": "SEE LICENSE IN LICENSE.md",
