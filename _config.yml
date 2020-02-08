@@ -15,6 +15,7 @@ plugins:
 - jekyll-paginate
 - jekyll-octicons
 - jekyll-redirect-from
+- jemoji
 
 # Plugins which are activated by default
 

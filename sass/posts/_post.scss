@@ -106,11 +106,15 @@
 }
 
 
-.Post img {
+.Post img:not(.emoji) {
   border-radius: 0.3rem;
   display: block;
   max-width: 100%;
   margin: 3rem 0;
+}
+
+.emoji {
+  vertical-align: middle;
 }
 
 .Post {
