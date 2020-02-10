@@ -1,0 +1,12 @@
+_id: 3116c590-4bf8-11ea-ad26-41cf97d43375
+slug: macos-catalina-ruby-bad-interpreter-error
+name: Stanko
+email: 13a28fac985c11eb7f40169be7da32f4
+message: >-
+  Thank you Mogli, I just want to add that it will work only for people running
+  jekyll in a docker container using <a
+  href="https://github.com/envygeeks/jekyll-docker">jekyll-docker</a>.
+
+
+  Cheers!
+date: '2020-02-10T11:26:33.702Z'
