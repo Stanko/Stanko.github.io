@@ -5,6 +5,13 @@ category: [Jekyll]
 tags: [blog,jekyll]
 ---
 
+
+## Update, March 2020
+
+This post is outdated and I simplified my setup a lot. I'll try to cover my current setup in one of the future blog posts.
+
+## Original post
+
 Few days ago I got a following message on LinkedIn.
 
 > Hi Stanko! I'm a junior front-end web developer and I recently found your amazing blog and fell in love with it. Since you don't have any other social media, I decided to contact you trough here even if it's not ideal. I was wonder what CMS you were using and if you could do a blog post about it ?
