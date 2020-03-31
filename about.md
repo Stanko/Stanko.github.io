@@ -16,7 +16,7 @@ I fool around on [CodePen](http://codepen.io/stanko/) and maintain a few [npm](h
 
 ------
 
-My other interests are music,
+My other interests are <a href="https://www.instagram.com/muffinman_io/">generative art</a>, music,
 <label class="SideNote-trigger">crafts</label>
 <small class="SideNote">
 Among other things I made my own electric guitar.

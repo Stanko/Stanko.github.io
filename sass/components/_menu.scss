@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0.2rem 0.3rem;
   text-decoration: none;
+  vertical-align: bottom;
 }
 
 .Menu-link--active {
@@ -14,6 +15,10 @@
     border-top: 1px solid rgba($white, 0.2);
     transform: scaleX(1);
   }
+}
+
+.Menu-link--instagram {
+  padding-bottom: 1rem;
 }
 
 .Menu-linkContent {
@@ -24,6 +29,13 @@
 .Menu-linkIcon {
   fill: $white;
   margin-left: 0.5rem;
+}
+
+.Menu-instagramIcon {
+  height: 2.2rem;
+  width: 2.2rem;
+  display: block;
+  transform: translateY(0.3rem);
 }
 
 .Header {
@@ -72,5 +84,9 @@
   .Menu-link {
     color: $white;
     display: inline-block;
+  }
+
+  .Menu-instagramIcon {
+    transform: translateY(0.7rem);
   }
 }
