@@ -1,0 +1,15 @@
+_id: 593672e0-7b42-11ea-bda8-5712c9d201a4
+slug: react-router-subfolder-on-server
+name: Moises de Matos
+email: 58dc211c3e91179c5c73e7ff97064b6c
+message: |-
+  HashRouter break links based in Anchor
+
+  Example:
+
+  <NavLink
+                                          data-placement="bottom"
+                                          href="#header"
+                                          className="headerLink"
+                                      >
+date: '2020-04-10T15:45:48.522Z'
