@@ -8,7 +8,7 @@ message: >-
 
   You are right, `react-motion` is nice library, but it is also huge
   one. For simple animations I prefer doing them myself, instead of importing
-  large dependencies of which I'll just a tiny portion.
+  large dependencies of which I'll use just a tiny portion.
 
 
   This is just proof of concept, so take it with a grain of salt.
