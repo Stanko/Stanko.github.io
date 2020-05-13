@@ -13,17 +13,17 @@ For now, you can see my work on my [Instagram](https://www.instagram.com/muffinm
 Expect new posts about my process and tools in the near future.
 </small>.
 
-I also got my hands on the brilliant little machine by Evil Mad Scientist, [AxiDraw plotter](https://shop.evilmadscientist.com/908), and it is the best purchase I made in a long time. I love everything about it - how it is engineered, images I can produce using it and with their support.
+I also got my hands on the brilliant little machine by Evil Mad Scientist, [AxiDraw plotter](https://shop.evilmadscientist.com/908), and it is the best purchase I made in a long time. I love everything about it - how it is engineered, images I can produce using it and their support.
 
-Then I saw [this video](https://www.instagram.com/p/B-5TeGDHo2c/) and was blown away by the idea of recording a plotter from this perspective. When I asked the author how he does it, he pointed me out to [the tutorial he selflessly created](https://www.instructables.com/id/Raspberry-Pi-Camara-Mount-for-the-AxiDraw/). To film these wonderful videos, he made a mount for Raspberry Pi camera he can put directly on the plotter.
+Then I saw [this video](https://www.instagram.com/p/B-5TeGDHo2c/) and was blown away by the idea of recording a plotter from this perspective. When I asked the author how he does it, he pointed me to [the tutorial he selflessly created](https://www.instructables.com/id/Raspberry-Pi-Camara-Mount-for-the-AxiDraw/). To film these wonderful videos, he made a mount for Raspberry Pi camera he can put directly on the plotter.
 
 <!--more-->
 -----
 
 I had a Raspberry lying somewhere in the flat, so I immediately ordered a camera and a 3d printed mount. Because of the COVID situation and the curfew it took a week for these to arrive, making me impatient.
 
-It didn't took me long to assemble this, but I did
-<label class="SideNote-trigger">break one </label>
+It didn't take me long to assemble this, but I did
+<label class="SideNote-trigger">break one</label>
 <small class="SideNote">
 Luckily I ordered two.
 </small>
