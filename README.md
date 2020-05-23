@@ -2,7 +2,7 @@
 
 Frontend development & rants.
 
-[https://stanko.github.io](https://stanko.github.io)
+[https://muffinman.io](https://muffinman.io)
 
 -----
 

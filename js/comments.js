@@ -71,7 +71,6 @@ if (commentForm) {
 
     for (let i = 0; i < spamFilter.length; i++) {
       const spamWord = spamFilter[i];
-
       if (
         sp ||
         name.toLowerCase().indexOf(spamWord) >= 0 ||
