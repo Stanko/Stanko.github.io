@@ -38,13 +38,15 @@ if (commentForm) {
     const catchValue = catchInput.value.trim();
     const email = emailInput.value.trim();
     const message = messageInput.value.trim();
+    const spKey = '__s_p__';
+    const sp = localStorage.getItem(spKey);
 
     let error = false;
-    let fatalError = false;
     const messages = [];
+    const spamFilter = ['bully', 'bullies', 'bullying', 'abuser'];
 
     if (slug === '' || slug !== optionsSlug || catchValue !== '') {
-      fatalError = true;
+      return false;
     }
 
     if (name.length < 2) {
@@ -62,15 +64,26 @@ if (commentForm) {
       messages.push('Please enter message');
     }
 
-    if (fatalError) {
-      return false;
-    }
-
     if (error) {
       errorMessagesDiv.innerHTML = messages.join('<br>');
       return false;
     }
 
+    for (let i = 0; i < spamFilter.length; i++) {
+      const spamWord = spamFilter[i];
+
+      if (
+        sp ||
+        name.toLowerCase().indexOf(spamWord) >= 0 ||
+        email.toLowerCase().indexOf(spamWord) >= 0 ||
+        message.toLowerCase().indexOf(spamWord) >= 0
+      ) {
+        commentForm.reset();
+        localStorage.setItem(spKey, '_');
+        sendSucceededDiv.style.display = 'block';
+        return false;
+      }
+    }
 
     const params = [];
 
