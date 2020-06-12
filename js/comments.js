@@ -43,7 +43,7 @@ if (commentForm) {
 
     let error = false;
     const messages = [];
-    const spamFilter = ['bully', 'bullies', 'bullying', 'abuser'];
+    const spamFilter = ['bully', 'bullies', 'bullying', 'abuser', 'violent', 'criminal'];
 
     if (slug === '' || slug !== optionsSlug || catchValue !== '') {
       return false;
