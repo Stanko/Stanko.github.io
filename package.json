@@ -9,14 +9,14 @@
   },
   "license": "SEE LICENSE IN LICENSE.md",
   "devDependencies": {
-    "autoprefixer": "^9.7.3",
+    "autoprefixer": "^9.8.2",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.14.1",
     "parcel-bundler": "^1.12.4"
   },
   "dependencies": {
-    "animated-scroll-to": "^2.0.5",
+    "animated-scroll-to": "^2.0.8",
     "window-scroll-manager": "^1.1.4"
   }
 }
