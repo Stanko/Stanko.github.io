@@ -1,0 +1,43 @@
+_id: 4a02eb80-f1c8-11ea-894e-1b3701341697
+slug: three-js-extrude-svg-path
+name: tuseroni
+email: 3acf152393048d53644754b8bdabac39
+message: >-
+  "If you can explain this and how to get their actual position in the scene,
+  please leave a comment."
+
+
+  i can actually explain this, yay.
+
+
+  the different shapes have an offset from 0 when they are drawn. so let's say
+  the first M has it's bottom left corner at your 0,0 point, the NEXT M has IT'S
+  bottom left corner at the end of the FIRST M's bottom right corner. see it has
+  an offset in its drawing from 0,0, this is why each SHAPE has a position of
+  0,0,0 if you move,say the second M, you will see it position is offset from
+  where you moved it to by the width of the first M.
+
+
+  to fix this, change this code:
+
+  ```
+  const mesh = new THREE.Mesh(geometry, material);
+  ```
+
+  to 
+
+  ```
+  geometry.center();
+
+  const mesh = new THREE.Mesh(geometry, material);
+  ```
+
+  and then you can remove this:
+
+  ```
+  svgGroup.children.forEach(item => {
+    item.position.x = xOffset;
+    item.position.y = yOffset;
+  });
+  ```
+date: '2020-09-08T11:41:52.726Z'
