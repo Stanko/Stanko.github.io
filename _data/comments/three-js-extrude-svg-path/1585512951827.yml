@@ -6,7 +6,7 @@ message: >-
   Hey Victor,
 
   You can apply this method to all of the paths in the SVG file. But you need to
-  color them by hand using <codeMeshStandardMaterial</code> or other ThreeJS
+  color them by hand using <code>MeshStandardMaterial</code> or other ThreeJS
   material.
 
 

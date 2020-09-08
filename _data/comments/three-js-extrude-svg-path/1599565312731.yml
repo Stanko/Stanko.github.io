@@ -20,24 +20,20 @@ message: >-
 
   to fix this, change this code:
 
-  ```
-  const mesh = new THREE.Mesh(geometry, material);
-  ```
+  <pre>const mesh = new THREE.Mesh(geometry, material);</pre>
 
-  to 
+  to
 
-  ```
-  geometry.center();
+  <pre>geometry.center();
+
 
   const mesh = new THREE.Mesh(geometry, material);
-  ```
+  </pre>
 
   and then you can remove this:
 
-  ```
-  svgGroup.children.forEach(item => {
+  <pre>svgGroup.children.forEach(item => {
     item.position.x = xOffset;
     item.position.y = yOffset;
-  });
-  ```
+  });</pre>
 date: '2020-09-08T11:41:52.726Z'
