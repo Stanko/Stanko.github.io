@@ -1,0 +1,12 @@
+_id: 330f0500-f41e-11ea-a8b6-4d92b0e2c766
+slug: macos-catalina-ruby-bad-interpreter-error
+name: Stanko
+email: 13a28fac985c11eb7f40169be7da32f4
+message: >-
+  Lukas, I'm no ruby expert but that seems like a missing gem in your app.
+
+
+  Suresh, not sure where you got stuck. You just need to add paths to the
+  <code>ruby</code> and <code>gems</code> folders to the <code>PATH</code> ENV
+  variable.
+date: '2020-09-11T11:01:53.206Z'
