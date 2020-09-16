@@ -34,7 +34,7 @@ title: Home
         {% if comments != null %}
           <a href="{{ site.baseurl }}{{ post.url }}#comments">
             {{ comments.size }}
-            {% if comments != 1 %}Comments{% else %}Comment{% endif %}
+            {% if comments.size != 1 %}Comments{% else %}Comment{% endif %}
           </a>
         {% endif %}
       </div>
