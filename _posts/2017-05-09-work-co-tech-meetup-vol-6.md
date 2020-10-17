@@ -32,7 +32,7 @@ Check the details and sign up at [meetup.com page](https://www.meetup.com/Tech-M
 
 * Javascript Unit Testing, **Sarah Mogin**
 
-  Learn the value of testing your Javascript applications and the tools and techniques for effective testing. We’ll focus on how to test React components, selectors, reducers, and sagas using the Jest and Enzyme libraries. 
+  Learn the value of testing your Javascript applications and the tools and techniques for effective testing. We’ll focus on how to test React components, selectors, reducers, and sagas using the Jest and Enzyme libraries.
 
   [Slides](/public/pdf/Sarah - UnitTesting.pdf)
 
