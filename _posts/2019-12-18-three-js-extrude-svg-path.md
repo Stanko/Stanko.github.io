@@ -138,6 +138,10 @@ To show our object in it's full 3d glory let's add a rotation around Y axis. But
 
 ![Our element rotates around it's corner and it's center](/public/img/extrude-svg/step-three.png)
 
+**September 2020 update**: if you have only one path in the SVG you can use the tip from [tuseroni's comment](#comment-4a02eb80-f1c8-11ea-894e-1b3701341697). Basically you just need to call `geometry.center()` before creating the mesg, to center it based on the bounding box. Unfortunately if you have multiple paths, this won't work.
+
+----
+
 Usual way of changing the rotation pivot is by offsetting the object's geometry. We can't do that, as `Group` class doesn't have geometry, but we can offset all of it's children. Now it comes handy that children are relative to themselves. We are just going to offset each child object for the half of the width and height of the whole group.
 
 ```js
