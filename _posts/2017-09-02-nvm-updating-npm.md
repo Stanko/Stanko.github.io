@@ -8,13 +8,13 @@ tags: [js,node]
 If you are JavaScript developer and not using [nvm](https://github.com/creationix/nvm) you might want to look at it.
 Node Version Manager is easy way to install, manage and work with multiple node versions.
 
-And I recently got npm update notification, that looks like this:
-
+Recently I got npm update notification, that looks something like this:
+ 
 ![npm update notification](/public/img/npm-update.png)
 
-<span class="Small">This is image from the internet.</span>
+For some reason, when I had node installed through nvm, `npm i -g npm` didn't work. However, when I was using a "system" node verrsion, installed from their website, it did. I can't remember the exact error, but it was probably something with my `PATH` configuration.
 
-nvm doesn't let you update only npm, but just a node+npm version. But there is a really easy way to do it:
+So I tried to find a path where global packages are installed when using nvm. Once I found it, it was super easy to update `npm` in that specific folder.
 
 ```bash
 # navigate to nvm's node lib folder
@@ -28,3 +28,8 @@ npm install npm
 ```
 
 That's it. Great thing is that npm can update itself. And this works for any other global npm package.
+
+Or, as suggested in the comments, just use nvm's command:
+```
+nvm install-latest-npm
+```
