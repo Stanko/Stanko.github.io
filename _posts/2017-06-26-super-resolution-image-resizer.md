@@ -3,6 +3,7 @@ layout: post
 title: waifu2x super resolution image resizer
 category: [Random]
 tags: [random]
+redirect_from: "/super-resolution-image-resizer"
 ---
 
 I use [the same wallpaper](/public/img/image-resize/odin-2x.png)<sup>1</sup> (warning, 6mb file) for a long time now.

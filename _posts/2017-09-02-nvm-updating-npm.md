@@ -3,6 +3,7 @@ layout: post
 title: How to update npm using nvm
 category: [JavaScript]
 tags: [js,node]
+redirect_from: "/nvm-updating-npm"
 ---
 
 If you are JavaScript developer and not using [nvm](https://github.com/creationix/nvm) you might want to look at it.

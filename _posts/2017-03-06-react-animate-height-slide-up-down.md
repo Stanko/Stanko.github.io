@@ -3,6 +3,7 @@ layout: post
 title: React animate height (slide up/down) component
 category: [React]
 tags: [react,animation]
+redirect_from: "/react-animate-height-slide-up-down"
 ---
 
 Most JavaScript developers used jQuery's `.slideUp()` and `.slideDown()` methods,

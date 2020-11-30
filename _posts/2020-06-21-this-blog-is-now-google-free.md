@@ -3,6 +3,7 @@ layout: post
 title: This blog is now Google free
 category: [Random]
 tags: [blog,analytics,gdpr,google]
+redirect_from: "/this-blog-is-now-google-free"
 ---
 
 Earlier today I removed Google Analytics script from my website. Long time ago I switched to self hosted fonts instead of Google Fonts. That means, as of today, my blog is completely Google free.

@@ -10,7 +10,7 @@ destination: _site
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
-permalink: '/:title/'
+permalink: '/blog/:title/'
 plugins:
 - jekyll-paginate
 - jekyll-octicons
@@ -49,13 +49,15 @@ plugins:
 # - jekyll-include-cache
 # - jekyll-octicons
 
+collections:
+  artwork:
+    output: true
+
 exclude:
  - node_modules
  - gulpfile.babel.js
  - package.json
- - _sass
-# - public/css # gulp injects CSS via browsersync
- - _js
+ - sass
  - js
  - .sass-cache
  - Gemfile
@@ -65,12 +67,12 @@ exclude:
 
 # Setup
 title: Muffin Man
-tagline: Frontend development & rants
-description: Hello, I'm Stanko, a software engineer in Belgrade, writing mostly about JavaScript and React.
-url: http://stanko.github.io
+tagline: Frontend & creative coding
+description: Hello, I'm Stanko, a software engineer in Belgrade, making digital products and generative art.
+url: https://muffinman.io
 baseurl: ''
 paginate: 5
-paginate_path: 'page-:num'
+paginate_path: '/blog/page/:num'
 excerpt_separator: <!--more-->
 
 # About/contact

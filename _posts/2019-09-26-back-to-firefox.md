@@ -4,6 +4,7 @@ title: Back to Firefox (Nightly)
 category: [Random]
 tags: [firefox,browser,cpu]
 image: /public/img/ff-nightly.png
+redirect_from: "/back-to-firefox"
 ---
 
 Two years ago I wrote [this rant](/firefox-57-cpu-usage-is-insane/). Firefox had a problem on MacOS on scaled resolutions, resulting in insanely high CPU usage and battery drain.

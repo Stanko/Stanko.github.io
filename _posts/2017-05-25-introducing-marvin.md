@@ -3,6 +3,7 @@ layout: post
 title: Introducing Marvin
 category: [React]
 tags: [react,webpack,babel]
+redirect_from: "/introducing-marvin"
 ---
 
 I'm happy to announce [Marvin](https://github.com/workco/marvin), boilerplate for kicking off React/Redux applications.

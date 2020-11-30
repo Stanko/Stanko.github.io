@@ -3,6 +3,7 @@ layout: post
 title: Get element offset in JavaScript
 category: [JavaScript]
 tags: [js]
+redirect_from: "/javascript-get-element-offset"
 ---
 
 When we left jQuery behind and embraced modern JavaScript frameworks,

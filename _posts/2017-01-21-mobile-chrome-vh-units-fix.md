@@ -3,6 +3,7 @@ layout: post
 title: Mobile Chrome vh units fix
 category: [CSS/SASS]
 tags: [css]
+redirect_from: "/mobile-chrome-vh-units-fix"
 ---
 
 ### Update March 2019

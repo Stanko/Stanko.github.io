@@ -3,6 +3,7 @@ layout: post
 title: Deprecating Marvin
 category: [Random]
 tags: [react,webpack,marvin]
+redirect_from: "/deprecating-marvin"
 ---
 
 It is funny, I would never say I would be sad to deprecate a software project. Especially a project boilerplate. But I just merged the deprecation notice, and I do feel down a little.

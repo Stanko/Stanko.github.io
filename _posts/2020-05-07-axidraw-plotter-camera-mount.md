@@ -4,7 +4,9 @@ title: AxiDraw plotter Raspberry Pi camera mount
 category: [Random]
 tags: [generative-art,plotter,raspberrypi,camera]
 image: /public/img/axidraw/mounted-1.jpg
-redirect_from: "/axidraw-plotter-camera-point/"
+redirect_from:
+  - "/axidraw-plotter-camera-point/"
+  - "/axidraw-plotter-camera-mount/"
 ---
 
 It has been almost two months since my last post because I was super busy with my new passion,

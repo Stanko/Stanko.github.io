@@ -3,6 +3,7 @@ layout: post
 title: Firefox 57 CPU usage is insane
 category: [Rants]
 tags: [rants,firefox,browser,cpu]
+redirect_from: "/firefox-57-cpu-usage-is-insane"
 ---
 
 This is a sad rant :(

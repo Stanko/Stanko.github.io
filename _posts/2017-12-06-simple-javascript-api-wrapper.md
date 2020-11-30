@@ -3,6 +3,7 @@ layout: post
 title: Simple JavaScript API wrapper
 category: [JavaScript]
 tags: [js]
+redirect_from: "/simple-javascript-api-wrapper"
 ---
 
 For handling API calls I have a small snippet I'm copying from project to project.

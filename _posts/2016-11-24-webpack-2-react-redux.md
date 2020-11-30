@@ -3,6 +3,7 @@ layout: post
 title: React and Redux, Webpack 2 boilerplate
 category: [React]
 tags: [react,webpack,redux]
+redirect_from: "/webpack-2-react-redux"
 ---
 
 Currently, I'm working on a relatively small pet project.

@@ -3,6 +3,7 @@ layout: post
 title: Jekyll "Read more" link
 category: [Jekyll]
 tags: [jekyll]
+redirect_from: "/jekyll-read-more-link"
 ---
 
 It is nice to use `{{ post.excerpt }}` instead of `{{ post.content }}`

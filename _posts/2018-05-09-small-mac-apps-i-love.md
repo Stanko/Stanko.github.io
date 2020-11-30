@@ -3,6 +3,7 @@ layout: post
 title: Small Mac apps I love
 category: [Random]
 tags: [mac,apps,bash]
+redirect_from: "/small-mac-apps-i-love"
 ---
 
 Recently I switched to a new laptop and had to set it up

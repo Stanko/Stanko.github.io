@@ -3,6 +3,7 @@ layout: post
 title: Always use <button> for clickable elements
 category: [CSS/SASS]
 tags: [js,accessibility]
+redirect_from: "/always-use-button-for-clickable-elements"
 ---
 
 Always try to use `<button>` when  **element is clickable, but it is not a link**.

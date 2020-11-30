@@ -3,6 +3,7 @@ layout: post
 title: JSON.stringify removes undefined and how to keep it
 category: [JavaScript]
 tags: [js, json]
+redirect_from: "/json-stringify-removes-undefined"
 ---
 
 This is something I keep rediscovering, because I keep forgetting it. `JSON.stringify` will omit all object attributes that are `undefined`.

@@ -3,6 +3,7 @@ layout: post
 title: Simple React slider with touch support
 category: [React]
 tags: [react]
+redirect_from: "/simple-react-slider"
 ---
 
 I needed simple React slider component, as we are building our new website as a universal React application.

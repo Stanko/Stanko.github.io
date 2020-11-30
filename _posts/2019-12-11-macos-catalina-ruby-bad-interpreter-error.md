@@ -4,6 +4,7 @@ title: MacOS Catalina, ruby bad interpreter error
 category: [Rants]
 tags: [rants,ruby,jekyll,mac]
 image: /public/img/catalina-ruby-bad-interpreter.png
+redirect_from: "/macos-catalina-ruby-bad-interpreter-error"
 ---
 
 Another Catalina rant, this time about Ruby. As far as I know, on MacOS, it is advisable to

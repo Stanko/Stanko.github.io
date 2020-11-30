@@ -4,6 +4,7 @@ title: "Disable Cmd + Mouse Wheel (or Ctrl + Mouse Wheel) zoom in Firefox"
 category: [Random]
 tags: [firefox,browser,zoom]
 image: /public/img/ff-about-config.png
+redirect_from: "/disable-cmd-mouse-wheel-zoom-in-firefox"
 ---
 
 Short Firefox tip to disable `Cmd + MouseWheel` zoom. There is a weird interaction with it. Therefore I decided to turn it off completely (I never used it anyway).

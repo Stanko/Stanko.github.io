@@ -3,6 +3,7 @@ layout: post
 title: CSS and SVG input animations
 category: [CSS/SASS]
 tags: [css,svg,animation]
+redirect_from: "/css-and-svg-input-animations"
 ---
 
 Yesterday, one of my colleagues shared [UI Movement](https://uimovement.com/) website. It resulted in me playing with random animations trying to replicate mockups I liked.

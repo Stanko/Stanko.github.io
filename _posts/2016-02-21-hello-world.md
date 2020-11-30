@@ -3,6 +3,7 @@ layout: post
 title: Hello World
 category: Random
 tags: [random]
+redirect_from: "/hello-world"
 ---
 
 Everything starts with a `Hello World` so does this blog.

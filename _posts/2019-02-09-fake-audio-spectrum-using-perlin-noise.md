@@ -3,6 +3,7 @@ layout: post
 title: Fake audio spectrum, using perlin noise
 category: [JavaScript]
 tags: [js,animation]
+redirect_from: "/fake-audio-spectrum-using-perlin-noise"
 ---
 
 Few days ago, I was chatting with our design team, and we were wondering how hard would be to create a fake audio spectrum (that mimics human speech) and visualize it. I immediately said it should be easy, and that I will play with it over the weekend. Of course, I didn't wait for the weekend, but wrote it the same evening. It was fairly straightforward, but it had few gotchas.

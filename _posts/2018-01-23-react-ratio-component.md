@@ -3,6 +3,7 @@ layout: post
 title: React ratio
 category: [React]
 tags: [react]
+redirect_from: "/react-ratio-component"
 ---
 
 Short one today.

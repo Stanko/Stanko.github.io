@@ -3,6 +3,7 @@ layout: post
 title: Plain JavaScript animated window scroll function
 category: [JavaScript]
 tags: [js,scroll]
+redirect_from: "/animate-window-scroll-to"
 ---
 
 Before modern frameworks, I always used jQuery's `scrollTo` method.

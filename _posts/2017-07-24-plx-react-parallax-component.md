@@ -4,6 +4,7 @@ title: Plx - React parallax component
 category: [React]
 tags: [react,scroll,plx,parallax,js]
 image: /public/img/plx-explode.png
+redirect_from: "/plx-react-parallax-component"
 ---
 
 I'm becoming predictable. Again, I haven't found component I like, so I wrote my own.

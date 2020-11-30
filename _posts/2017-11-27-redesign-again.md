@@ -3,6 +3,7 @@ layout: post
 title: Blog redesign
 category: [Random]
 tags: [design,blog]
+redirect_from: "/redesign-again"
 ---
 
 Muffin Man is back! This time with new visual identity.

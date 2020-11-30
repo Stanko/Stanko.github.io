@@ -32,7 +32,7 @@
       {% endif %}
 
       {% if start > 1 %}
-        <a class="Pagination-link" href="{{ site.baseurl }}/" aria-label="Go to page 1">1</a>
+        <a class="Pagination-link" href="{{ site.baseurl }}/blog/" aria-label="Go to page 1">1</a>
         <div class="Pagination-separator"></div>
       {% endif %}
 
@@ -42,13 +42,13 @@
         {% elsif page == 1 %}
           <a class="Pagination-link" href="{{ site.baseurl }}/" aria-label="Go to page {{ page }}">{{ page }}</a>
         {% else %}
-          <a class="Pagination-link" href="{{ site.baseurl }}/page-{{ page }}" aria-label="Go to page {{ page }}">{{ page }}</a>
+          <a class="Pagination-link" href="{{ site.baseurl }}/blog/page/{{ page }}" aria-label="Go to page {{ page }}">{{ page }}</a>
         {% endif %}
       {% endfor %}
 
       {% if end < paginator.total_pages %}
         <div class="Pagination-separator"></div>
-        <a class="Pagination-link" href="{{ site.baseurl }}/page-{{ paginator.total_pages }}"  aria-label="Go to page {{ paginator.total_pages }}">{{ paginator.total_pages }}</a>
+        <a class="Pagination-link" href="{{ site.baseurl }}/blog/page/{{ paginator.total_pages }}"  aria-label="Go to page {{ paginator.total_pages }}">{{ paginator.total_pages }}</a>
       {% endif %}
 
       {% if paginator.next_page %}

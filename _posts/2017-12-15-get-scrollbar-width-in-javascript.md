@@ -3,6 +3,7 @@ layout: post
 title: Get scrollbar width in JavaScript
 category: [JavaScript]
 tags: [js]
+redirect_from: "/get-scrollbar-width-in-javascript"
 ---
 
 Another onliner I love, that returns body scrollbar width.

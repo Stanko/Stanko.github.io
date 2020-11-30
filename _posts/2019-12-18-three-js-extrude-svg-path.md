@@ -4,6 +4,7 @@ title: Three.js extrude SVG path
 category: [JavaScript]
 tags: [js,threejs,3d,svg]
 image: /public/img/extrude-svg/final.png
+redirect_from: "/three-js-extrude-svg-path"
 ---
 
 These days I'm playing with [three.js](https://threejs.org/) again. I'm not an expert but I enjoy playing with graphics.

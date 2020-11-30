@@ -3,6 +3,7 @@ layout: post
 title: Internet Explorer 6 hacks, ten years after
 category: [CSS/SASS]
 tags: [ie,css]
+redirect_from: "/ie6-hacks-ten-years-after"
 ---
 
 Exactly ten years ago, on my [my friend](http://rand.rs/)'s blog I published a blog post about Internet Explorer 6 CSS hacks. I remembered it recently, and thought it would be really cool if I republished that same post, on it's 10th anniversary.

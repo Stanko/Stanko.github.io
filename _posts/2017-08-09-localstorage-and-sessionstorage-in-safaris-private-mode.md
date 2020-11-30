@@ -3,6 +3,7 @@ layout: post
 title: localStorage and sessionStorage in Safari's private mode
 category: [JavaScript]
 tags: [js]
+redirect_from: "/localstorage-and-sessionstorage-in-safaris-private-mode"
 ---
 
 If you didn't know, in Safari's private mode both `localStorage` and `sessionStorage` are not working.

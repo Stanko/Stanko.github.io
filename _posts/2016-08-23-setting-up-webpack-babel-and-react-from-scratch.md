@@ -3,6 +3,7 @@ layout: post
 title: Setting up Webpack, Babel and React from scratch
 category: [React]
 tags: [react,webpack,babel]
+redirect_from: "/setting-up-webpack-babel-and-react-from-scratch"
 ---
 
 ## Update, October 2017

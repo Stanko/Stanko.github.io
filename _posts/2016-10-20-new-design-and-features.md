@@ -3,6 +3,7 @@ layout: post
 title: Blog redesign and new features
 category: [Jekyll]
 tags: [blog,design,jekyll]
+redirect_from: "/new-design-and-features"
 ---
 
 As you probably noticed I redesigned my blog and added some new features.

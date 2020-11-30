@@ -3,6 +3,7 @@ layout: post
 title: Nicer git log
 category: [Development]
 tags: [git, bash]
+redirect_from: "/nicer-git-log"
 ---
 
 Just a short one. I want to share a simple command to display nicer `git log` in the terminal. `git log` has `--pretty=format` option built-in, we are just going to pass formatting to it.

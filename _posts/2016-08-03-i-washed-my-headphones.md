@@ -3,6 +3,7 @@ layout: post
 title: I washed my headphones
 category: [Random]
 tags: [random]
+redirect_from: "/i-washed-my-headphones"
 ---
 
 Recently I lost my iPhone headphones.

@@ -1,0 +1,37 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="canonical" href="{{ page.redirect_to }}"/>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="refresh" content="0;url={{ page.redirect_to }}" />
+  <style>
+    * { margin: 0; padding: 0 }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+    body {
+      padding: 40px;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    }
+    a {
+      color: #e03646;
+      text-decoration: none;
+      transition: border 250ms;
+      border-bottom: 1px solid transparent;
+      font-size: 18px;
+    }
+    a:hover {
+      border-bottom-color:#ddd
+    }
+  </style>
+</head>
+<body>
+  <h1>Redirecting to {{ page.redirect_to }}</h1>
+  <a href="{{ page.redirect_to }}">Click here if you are not redirected.<a>
+  <script>location='{{ page.redirect_to }}'</script>
+</body>
+</html>

@@ -3,7 +3,9 @@ layout: post
 title: Change to position fixed on iOS Safari while scrolling
 category: [CSS/SASS]
 tags: [css]
-redirect_from: "/ios-safari-scoll-position-fixed/"
+redirect_from:
+  - "/ios-safari-scoll-position-fixed/"
+  - "/ios-safari-scroll-position-fixed/"
 ---
 
 If you ever had to fix element on scroll, you probably had an issue on iOS Safari (and other mobile devices).

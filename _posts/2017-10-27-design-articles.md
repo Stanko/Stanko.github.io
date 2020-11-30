@@ -3,6 +3,7 @@ layout: post
 title: Two design articles
 category: [Random]
 tags: [design]
+redirect_from: "/design-articles"
 ---
 
 Just wanted to share two articles that helped me understand visual design better.

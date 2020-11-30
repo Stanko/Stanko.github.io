@@ -3,6 +3,7 @@ layout: post
 title: Setting up Travis, Jekyll and GitHub pages
 category: [Jekyll]
 tags: [jekyll,travis,blog]
+redirect_from: "/travis-jekyll-and-github-pages"
 ---
 
 ## Update, November 2017

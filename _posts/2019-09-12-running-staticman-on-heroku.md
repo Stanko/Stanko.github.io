@@ -3,6 +3,7 @@ layout: post
 title: Running Staticman on Heroku
 category: [Jekyll]
 tags: [staticman,jekyll,comments,heroku]
+redirect_from: "/running-staticman-on-heroku"
 ---
 
 I'm using [Staticman](https://github.com/eduardoboucas/staticman/issues/222) as a comment system on this blog. Unfortunately public instance [can't handle](https://github.com/eduardoboucas/staticman/issues/294) all of the requests coming in. That resulted in some readers being unable to post a comment.

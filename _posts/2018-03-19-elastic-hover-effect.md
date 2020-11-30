@@ -3,6 +3,7 @@ layout: post
 title: CSS only elastic hover effect
 category: [CSS/SASS]
 tags: [css]
+redirect_from: "/elastic-hover-effect"
 ---
 
 Some CSS fun. Lately I've stumbled upon couple of websites with elastic hover effect on buttons.

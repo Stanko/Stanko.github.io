@@ -3,6 +3,7 @@ layout: post
 title: Deploying React (Router) app to the subfolder on server
 category: [React]
 tags: [react]
+redirect_from: "/react-router-subfolder-on-server"
 ---
 
 * May 2018 - Updated to match React Router v4 API.

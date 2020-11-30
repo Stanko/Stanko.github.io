@@ -3,6 +3,7 @@ layout: post
 title: React Image Filter
 category: [React]
 tags: [react,svg]
+redirect_from: "/react-image-filter-component"
 ---
 
 On the project I'm currently working on, client's logo is displayed in two versions,

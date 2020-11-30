@@ -3,6 +3,7 @@ layout: post
 title: Highlight variables in Atom, Babel template strings
 category: [Development]
 tags: [dev,atom]
+redirect_from: "/highlight-vars-in-atom-babel-javascript"
 ---
 
 Atom [Babel](https://babeljs.io/) plugin doesn't highlight variables
