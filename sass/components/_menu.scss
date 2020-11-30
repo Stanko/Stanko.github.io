@@ -5,7 +5,7 @@
   color: $white;
   display: inline-block;
   margin: 0;
-  padding: 0.2rem 0.3rem;
+  padding: 0.2rem;
   text-decoration: none;
   vertical-align: bottom;
 }
@@ -28,7 +28,9 @@
 
 .Menu-linkIcon {
   fill: $white;
-  margin-left: 0.5rem;
+  height: 1.7rem;
+  width: 1.7rem;
+  margin: 0 -0.5rem 0 0.5rem;
 }
 
 .Menu-instagramIcon {
