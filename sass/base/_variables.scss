@@ -9,12 +9,13 @@ $breakpoint-xxxl: 2100px;
 // --- Grid
 $grid-col-count: 12;
 $grid-gutter: 2rem;
+$grid-gutter-md: 4rem;
 
-$text-width-md: 70rem;
-$text-width-lg: 72rem;
+$text-width-md: 62rem;
+$text-width-lg: 62rem;
 
-$container-width: 100rem;
-$container-width-xl: 108rem;
+$container-width: 90rem;
+$container-width-xl: 100rem;
 
 // --- Colors
 
@@ -33,19 +34,20 @@ $shadow: #234;
 $white: #fff;
 
 $text-color: #333639;
+$text-grey: #5f5f66;
 
 // --- Greys
 
-$grey1: #111;
-$grey2: #222;
-$grey3: #333;
-$grey4: #444;
-$grey5: #555;
-$grey6: #666;
-$grey7: #777;
-$grey8: #888;
-$grey9: #999;
-$greyA: #aaa;
+$grey1: #112;
+$grey2: #223;
+$grey3: #334;
+$grey4: #445;
+$grey5: #556;
+$grey6: #667;
+$grey7: #778;
+$grey8: #889;
+$grey9: #99a;
+$greyA: #aab;
 $greyB: #b4b5b6;
 $greyC: #c4c5c6;
 $greyD: #ddd;
@@ -75,16 +77,17 @@ $spacing-md: 5rem;
 $spacing2-md: $spacing-md * 2;
 
 // --- Typography
-$font-size: 1.8rem;
-$font-size-md: 2.2rem;
+$font-size: 1.9rem;
+$font-size-md: 2.1rem;
 
 $headers-font-family: 'Merriweather', serif;
 $headers-font-weight: 400;
 // $headers-font-family: 'Raleway', sans-serif;
 // $headers-font-weight: 800;
 
-$body-font-family: 'Merriweather', serif;
-$body-font-weight: 300;
+$body-font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+// 'Merriweather', serif;
+$body-font-weight: 400;
 
 // --- Transitions
 

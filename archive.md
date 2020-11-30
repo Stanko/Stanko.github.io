@@ -22,9 +22,9 @@ headerTitle: Browse the archive
           {% for post in site.categories[category_name] %}
           <a href="{{ post.url }}" class="Archive-post">
             <div class="Archive-postDate">
-              <div class="Archive-postDateIcon">
+              <!-- <div class="Archive-postDateIcon">
                 {% include svg/clock.svg %}
-              </div>
+              </div> -->
               {{ post.date | date_to_string }}
             </div>
             <h3 class="Archive-postTitle">{{ post.title | escape }}</h3>

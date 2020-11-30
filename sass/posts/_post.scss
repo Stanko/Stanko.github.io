@@ -29,8 +29,9 @@
 
 .Post-date {
   align-items: center;
+  color: $grey7;
   display: flex;
-  font-size: 0.75em;
+  font-size: 1.4rem;
   margin-right: auto;
 }
 
@@ -156,6 +157,11 @@
   }
 }
 
+.Post-text,
+.Post.Container {
+  color: $text-grey;
+}
+
 .Post-content {
   position: relative;
   z-index: 1;
@@ -253,7 +259,7 @@
 }
 
 .Post-readTime {
-  color: $greyC;
+  color: $greyB;
 }
 
 .Post-shareAndCategories {
@@ -407,7 +413,6 @@
 .SideNote {
   border-left: 1px solid $black;
   display: none;
-  font-weight: 300;
   font-size: 1.5rem;
   line-height: 1.9rem;
   margin: 1.5rem 0;

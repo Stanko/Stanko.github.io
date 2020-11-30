@@ -18,6 +18,10 @@
   padding: 0 $grid-gutter;
   width: 100%;
 
+  @include md {
+    padding: 0 $grid-gutter-md;
+  }
+
   @include xl {
     max-width: $container-width-xl;
   }

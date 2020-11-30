@@ -9,23 +9,6 @@
 .Archive-title {
   margin: 0;
 
-  // margin-bottom: 6rem;
-  // position: relative;
-  //
-  // &::after {
-  //   border-bottom: 1px solid $red;
-  //   bottom: -3rem;
-  //   content: '';
-  //   left: -40%;
-  //   position: absolute;
-  //   transition: transform $time;
-  //   width: 60%;
-  // }
-  //
-  // .Archive-section:hover &::after {
-  //   transform: translateX(60%);
-  // }
-
   .no-touchevents &:hover a {
     color: $red;
   }
@@ -51,7 +34,7 @@
 }
 
 .Archive-postsContent {
-  padding: 2rem 0 5rem;
+  padding: 2rem 0.3rem 5rem;
 }
 
 .Archive-post {
@@ -60,14 +43,15 @@
 
 .Archive-postTitle {
   display: inline-block;
-  font-size: 2rem;
-  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 1.2em;
   margin-top: 0;
+  font-family: $body-font-family;
   padding-bottom: 0.3rem;
   position: relative;
 
   @include md {
-    font-size: 2.4rem;
+    font-size: 2.1rem;
   }
 
   &::before {
@@ -92,21 +76,9 @@
 
 .Archive-postDate {
   align-items: center;
-  color: $text-color;
+  color: $grey7;
   display: flex;
-  font-size: 0.75em;
+  font-size: 1.4rem;
+  line-height: 1.4em;
   margin-right: auto;
-}
-
-.Archive-postDateIcon {
-  display: inline-block;
-  fill: $red;
-  margin-right: 0.7rem;
-  margin-top: 0.2rem;
-
-  svg {
-    display: block;
-    height: 1.8rem;
-    width: 1.8rem;
-  }
 }

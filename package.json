@@ -2,10 +2,11 @@
   "name": "muffinman-blog",
   "author": "Stanko",
   "scripts": {
-    "build": "rm -rf ./public/assets && parcel build js/app.js --no-source-maps --out-dir public/assets --public-url /public/assets",
-    "assets": "rm -rf ./public/assets && parcel watch js/app.js --no-source-maps --out-dir public/assets --public-url /public/assets",
-    "jekyll": "bundle exec jekyll serve --incremental --livereload --host 0.0.0.0",
-    "start": "rm -rf _site && npm run build && npm run jekyll"
+    "build-assets": "rm -rf ./public/assets && parcel build js/app.js --no-source-maps --out-dir public/assets --public-url /public/assets",
+    "watch-assets": "rm -rf ./public/assets && parcel watch js/app.js --no-source-maps --out-dir public/assets --public-url /public/assets",
+    "jekyll-serve": "bundle exec jekyll serve --incremental --livereload --host 0.0.0.0",
+    "jekyll-build": "rm -rf _site && bundle exec jekyll build",
+    "start": "rm -rf _site && npm run build-assets && npm run jekyll-serve"
   },
   "license": "SEE LICENSE IN LICENSE.md",
   "devDependencies": {

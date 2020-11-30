@@ -144,7 +144,6 @@
   a {
     color: rgba($white, 0.65);
     display: block;
-    font-weight: 300;
     padding: 1.2rem 0;
     position: relative;
     transition: color $time, background $time;
@@ -165,7 +164,7 @@
   strong {
     border-bottom: 1px solid $white;
     color: $white;
-    font-weight: 300;
+    font-weight: inherit;
     transition: color $time;
   }
 }
@@ -184,6 +183,7 @@
 }
 
 .MenuModal-menuLink {
+  font-family: $headers-font-family;
   color: $white;
   display: block;
   font-size: 3.5rem;
@@ -216,8 +216,9 @@
 }
 
 .MenuModal-menuLink--active {
+  opacity: 0.4;
+
   div::before {
-    border-top: 1px solid rgba($white, 0.2);
-    transform: scaleX(1);
+    display: none;
   }
 }
