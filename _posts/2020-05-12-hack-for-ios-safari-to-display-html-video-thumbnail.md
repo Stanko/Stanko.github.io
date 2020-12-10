@@ -4,7 +4,7 @@ title: Hack for iOS Safari to display the HTML video thumbnail
 category: [Development]
 tags: [html,video]
 image: /public/img/ios-safari-video-thumbnail-hack.jpg
-redirect_from: "/hack-for-ios-safari-to-display-html-video-thumbnail"
+redirect_from: "/hack-for-ios-safari-to-display-html-video-thumbnail/"
 ---
 
 Mobile iOS Safari doesn't display preview thumbnail until you tap on the video. My go-to solution was to define a `poster` attribute and move on. But today I learned I could use something called [Media Fragments](https://www.w3.org/TR/media-frags/).

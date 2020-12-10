@@ -3,7 +3,7 @@ layout: post
 title: Animate between two react components
 category: [React]
 tags: [react,animation]
-redirect_from: "/animate-between-two-react-components"
+redirect_from: "/animate-between-two-react-components/"
 ---
 
 Just a quick proof of concept I made for transitioning between two react components.

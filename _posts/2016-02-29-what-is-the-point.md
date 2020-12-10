@@ -3,7 +3,7 @@ layout: post
 title: What is the point of the website if it kills my laptop?
 category: [Rants]
 tags: [rants]
-redirect_from: "/what-is-the-point"
+redirect_from: "/what-is-the-point/"
 ---
 
 People need to realize that is not enough to have a nice website with a ton of animations and effects.

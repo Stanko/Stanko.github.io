@@ -3,7 +3,7 @@ layout: post
 title: JavaScript animation loop
 category: [JavaScript]
 tags: [js,games,animation]
-redirect_from: "/javascript-animation-loop"
+redirect_from: "/javascript-animation-loop/"
 ---
 
 I've been really busy lately, doing both work and pet projects.

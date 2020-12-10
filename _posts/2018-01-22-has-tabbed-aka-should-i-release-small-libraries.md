@@ -3,7 +3,7 @@ layout: post
 title: '"has-tabbed" aka "Should I release small libraries?"'
 category: [JavaScript]
 tags: [npm,js,accessibility]
-redirect_from: "/has-tabbed-aka-should-i-release-small-libraries"
+redirect_from: "/has-tabbed-aka-should-i-release-small-libraries/"
 ---
 
 I just released tiny library called [has-tabbed](https://www.npmjs.com/package/has-tabbed).

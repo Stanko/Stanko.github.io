@@ -3,7 +3,7 @@ layout: post
 title: React Window decorators
 category: [React]
 tags: [react,scroll]
-redirect_from: "/react-decorators-and-scroll-manager"
+redirect_from: "/react-decorators-and-scroll-manager/"
 ---
 
 Two days ago I released two npm packages,

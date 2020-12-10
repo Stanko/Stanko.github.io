@@ -3,7 +3,7 @@ layout: post
 title: Looking forward to the 2017
 category: [Random]
 tags: [random,retrospective,year,workco]
-redirect_from: "/looking-forward-to-2017"
+redirect_from: "/looking-forward-to-2017/"
 ---
 
 2016 was quite a ride.

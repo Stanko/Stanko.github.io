@@ -3,7 +3,7 @@ layout: post
 title: Fix for Chrome not rendering 1px borders
 category: [CSS/SASS]
 tags: [css, chrome]
-redirect_from: "/fix-for-chrome-not-rendering-borders"
+redirect_from: "/fix-for-chrome-not-rendering-borders/"
 ---
 
 This happened to me couple of times - borders would just randomly disappear in Chrome. All other browsers render them normally, but they just vanish in Chrome, on some screen sizes. Resizing helps sometimes, but I never was able to catch real pattern for reproducing.

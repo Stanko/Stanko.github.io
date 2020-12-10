@@ -3,7 +3,7 @@ layout: post
 title: Custom scroll bars
 category: [CSS/SASS]
 tags: [js,css,scroll]
-redirect_from: "/custom-scroll-bars"
+redirect_from: "/custom-scroll-bars/"
 ---
 
 Generally when comes to replacing native UI components, I'm strongly against it.

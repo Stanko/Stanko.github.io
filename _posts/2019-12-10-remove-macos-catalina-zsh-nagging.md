@@ -4,7 +4,7 @@ title: Remove MacOS Catalina zsh nagging
 category: [Rants]
 tags: [rants, bash, zsh, mac]
 image: /public/img/zsh-nagging.png
-redirect_from: "/remove-macos-catalina-zsh-nagging"
+redirect_from: "/remove-macos-catalina-zsh-nagging/"
 ---
 
 Yesterday I

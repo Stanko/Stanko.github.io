@@ -4,7 +4,7 @@ title: Null Object Tech Meetup Vol 3
 category: [Speaking]
 tags: [meetups,speaking]
 image: /public/img/meetup-vol-3/2.JPG
-redirect_from: "/null-object-meetup-vol-3"
+redirect_from: "/null-object-meetup-vol-3/"
 ---
 
 Another tech meetup is behind us, even more people came this time.

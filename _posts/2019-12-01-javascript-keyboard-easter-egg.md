@@ -4,7 +4,7 @@ title: JavaScript keyboard easter egg
 category: [Music]
 tags: [js, svg, keyboard]
 image: /public/img/keyboard.png
-redirect_from: "/javascript-keyboard-easter-egg"
+redirect_from: "/javascript-keyboard-easter-egg/"
 ---
 
 I love [easter eggs](https://en.wikipedia.org/wiki/Easter_egg_(media)#Software) in software.

@@ -4,7 +4,7 @@ title: Simple video buffering loader in React
 category: [React]
 tags: [react,video,buffering,loader,js]
 image: /public/img/video-buffering.jpg
-redirect_from: "/react-simple-video-buffering-loader"
+redirect_from: "/react-simple-video-buffering-loader/"
 ---
 
 For multiple projects, I had to add a simple video component with

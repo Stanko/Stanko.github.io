@@ -3,7 +3,7 @@ layout: post
 title: Sektor - draw and animate SVG sectors
 category: [JavaScript]
 tags: [js,svg]
-redirect_from: "/sektor-draw-and-animate-svg-circle-sectors-2016"
+redirect_from: "/sektor-draw-and-animate-svg-circle-sectors-2016/"
 ---
 
 For a current project I'm on, we needed both circular timer, and progress bar.

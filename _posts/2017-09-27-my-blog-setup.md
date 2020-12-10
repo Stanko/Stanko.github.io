@@ -3,7 +3,7 @@ layout: post
 title: My blog setup
 category: [Jekyll]
 tags: [blog,jekyll]
-redirect_from: "/my-blog-setup"
+redirect_from: "/my-blog-setup/"
 ---
 
 

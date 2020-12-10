@@ -3,7 +3,7 @@ layout: post
 title: Hiding body scrollbars using CSS
 category: [JavaScript]
 tags: [css,scroll]
-redirect_from: "/hiding-body-scrollbars-using-css"
+redirect_from: "/hiding-body-scrollbars-using-css/"
 ---
 
 Let me start with a little disclaimer. Just because you can, doesn't mean you should use it. Hiding scrollbars can be bad for accessibility and user experience.

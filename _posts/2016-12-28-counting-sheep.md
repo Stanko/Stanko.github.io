@@ -3,7 +3,7 @@ layout: post
 title: Counting sheep
 category: [CSS/SASS]
 tags: [css,animation]
-redirect_from: "/counting-sheep"
+redirect_from: "/counting-sheep/"
 ---
 
 Just something to cheer you up for the holidays :)

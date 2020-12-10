@@ -3,7 +3,7 @@ layout: post
 title: Custom Jekyll pagination
 category: [Jekyll]
 tags: [jekyll,blog]
-redirect_from: "/custom-jekyll-pagination"
+redirect_from: "/custom-jekyll-pagination/"
 ---
 
 Jekyll comes with simple pagination which has only `Newer` and `Older` links.

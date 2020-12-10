@@ -3,7 +3,7 @@ layout: post
 title: Jekyll and Gulp workflow
 category: [Jekyll]
 tags: [jekyll,blog]
-redirect_from: "/jekyll-gulp-workflow"
+redirect_from: "/jekyll-gulp-workflow/"
 ---
 
 ## Update, November 2017

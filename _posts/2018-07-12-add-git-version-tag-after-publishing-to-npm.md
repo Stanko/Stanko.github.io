@@ -3,7 +3,7 @@ layout: post
 title: Add git version tag after publishing to npm
 category: [JavaScript]
 tags: [npm, js, git]
-redirect_from: "/add-git-version-tag-after-publishing-to-npm"
+redirect_from: "/add-git-version-tag-after-publishing-to-npm/"
 ---
 
 ## TL;DR
