@@ -4,7 +4,7 @@ title: AxiDraw Lego camera mount
 category: [Random]
 tags: [generative-art,plotter,raspberrypi,camera]
 image: /public/img/axidraw/mounted-1.jpg
-redirect_from: "/axidraw-lego-camera-mount"
+redirect_from: "/axidraw-lego-camera-mount/"
 ---
 
 I already [built a mount](/axidraw-plotter-camera-mount/) for my Raspberry Pi camera, but it was 3d printed. Meaning that it has one fixed position. I used it a couple of times, but I wasn't super satisfied. Then I stumbled on [these images](https://imgur.com/gallery/VjXSSzh), and thought it was a great idea to use Lego to build a new, more versatile mount.

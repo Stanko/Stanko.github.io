@@ -3,7 +3,7 @@ layout: post
 title: Implementing PhotoShop font sizes and tracking in CSS, points to pixels conversion
 category: [CSS/SASS]
 tags: [css]
-redirect_from: "/font-size-and-tracking-points-to-pixels"
+redirect_from: "/font-size-and-tracking-points-to-pixels/"
 ---
 
 We've all been there - trying to get right font sizes from PhotoShop to CSS.

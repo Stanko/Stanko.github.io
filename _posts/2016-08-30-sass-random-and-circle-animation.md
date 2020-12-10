@@ -3,7 +3,7 @@ layout: post
 title: SASS random() and circle animation
 category: [CSS/SASS]
 tags: [css]
-redirect_from: "/sass-random-and-circle-animation"
+redirect_from: "/sass-random-and-circle-animation/"
 ---
 
 I decided to move my CSS playground to the CodePen, and this is the first one I made.

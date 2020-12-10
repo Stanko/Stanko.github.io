@@ -4,7 +4,7 @@ title: Work&Co Tech Meetup Vol 6
 category: [Speaking]
 tags: [meetups,speaking]
 image: /public/img/meetup-vol-6/milos.jpg
-redirect_from: "/work-co-tech-meetup-vol-6"
+redirect_from: "/work-co-tech-meetup-vol-6/"
 ---
 
 Another tech meetup coming up. This time we have three great talks about engineering and project planning. We also have a special guest - **IT girls team**.

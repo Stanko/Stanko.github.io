@@ -4,7 +4,7 @@ title: Accessible range slider
 category: [JavaScript]
 tags: [js,accessibility]
 image: /public/img/range-slider.png
-redirect_from: "/accessible-range-slider"
+redirect_from: "/accessible-range-slider/"
 ---
 
 

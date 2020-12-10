@@ -3,7 +3,7 @@ layout: post
 title: JavaScript 'time ago' function
 category: [JavaScript]
 tags: [js,date,time]
-redirect_from: "/javascript-time-ago-function"
+redirect_from: "/javascript-time-ago-function/"
 ---
 
 Snippet for a rather popular requirement.

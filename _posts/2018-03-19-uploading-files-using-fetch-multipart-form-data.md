@@ -3,7 +3,7 @@ layout: post
 title: Uploading files using 'fetch' and 'FormData'
 category: [JavaScript]
 tags: [js, til, fetch]
-redirect_from: "/uploading-files-using-fetch-multipart-form-data"
+redirect_from: "/uploading-files-using-fetch-multipart-form-data/"
 ---
 
 

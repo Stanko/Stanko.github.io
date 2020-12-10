@@ -3,7 +3,7 @@ layout: post
 title: Switching to Atom, this time for good
 category: [Development]
 tags: [dev,atom]
-redirect_from: "/trying-atom-for-the-third-time"
+redirect_from: "/trying-atom-for-the-third-time/"
 ---
 
 I'm a big fan of [Sublime Text](https://www.sublimetext.com/) editor, which I was using for years now.

@@ -3,7 +3,7 @@ layout: post
 title: Animate React component by calling 'setState' in 'componentDidMount'
 category: [React]
 tags: [react]
-redirect_from: "/react-rerender-in-component-did-mount"
+redirect_from: "/react-rerender-in-component-did-mount/"
 ---
 
 On the frontend, we do a lot of animations. Most of the simple animations I create by using CSS transitions.

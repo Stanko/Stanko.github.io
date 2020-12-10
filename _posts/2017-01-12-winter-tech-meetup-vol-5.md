@@ -4,7 +4,7 @@ title: Winter Tech Meetup Vol 5
 category: [Speaking]
 tags: [meetups,speaking]
 image: /public/img/winter-meetup-vol-5/4.jpg
-redirect_from: "/winter-tech-meetup-vol-5"
+redirect_from: "/winter-tech-meetup-vol-5/"
 ---
 
 We prepared another tech meetup, this time with four presentations.

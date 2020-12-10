@@ -3,7 +3,7 @@ layout: post
 title: 3D Rotating cubes hover effect
 category: [JavaScript, CSS/SASS]
 tags: [js,css]
-redirect_from: "/3d-rotating-cube-effect"
+redirect_from: "/3d-rotating-cube-effect/"
 ---
 
 Again, I've seen it somewhere on the internet and recreated it.

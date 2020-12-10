@@ -3,7 +3,7 @@ layout: post
 title: Minor design refresh
 category: [Random]
 tags: [design,blog]
-redirect_from: "/minor-design-refresh"
+redirect_from: "/minor-design-refresh/"
 ---
 
 I kinda got bored by the current design.

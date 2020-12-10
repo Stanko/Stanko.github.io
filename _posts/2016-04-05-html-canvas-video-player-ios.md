@@ -3,7 +3,7 @@ layout: post
 title: HTML canvas video player
 category: [JavaScript]
 tags: [js,canvas,video]
-redirect_from: "/html-canvas-video-player-ios"
+redirect_from: "/html-canvas-video-player-ios/"
 ---
 
 This is the one of my most popular repos. Once client asked for inline video that works on iPhone too.

@@ -4,7 +4,7 @@ title: Neon, generative art piece made using 2d vector field
 category: [Generative Art]
 tags: [svg,js,drawing,generative-art]
 image: /public/img/neon/meta.png
-redirect_from: "/neon-generative-art-piece-made-using-2d-vector-field"
+redirect_from: "/neon-generative-art-piece-made-using-2d-vector-field/"
 ---
 
 Recently I started playing with [generative art](https://en.wikipedia.org/wiki/Generative_art). I'm new to the whole thing and I'm absolutely enjoying it. Today I want to show you the first generative art project I'm satisfied with.

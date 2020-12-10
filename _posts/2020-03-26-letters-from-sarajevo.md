@@ -4,7 +4,7 @@ title: Letters from Sarajevo
 category: [Random]
 tags: [book,jekyll,illustrations,sarajevo]
 image: /public/img/letters-from-sarajevo/book.jpg
-redirect_from: "/letters-from-sarajevo"
+redirect_from: "/letters-from-sarajevo/"
 ---
 
 

@@ -3,7 +3,7 @@ layout: post
 title: iOS Safari window.scrollTo / getBoundingClientRect bug
 category: [JavaScript]
 tags: [ios, safari, bug]
-redirect_from: "/ios-safari-get-bounding-client-rect-bug"
+redirect_from: "/ios-safari-get-bounding-client-rect-bug/"
 ---
 
 This is a weird one, and not something you will stumble into every day. But it is a bug nonetheless.

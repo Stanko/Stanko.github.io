@@ -3,7 +3,7 @@ layout: post
 title: First talk in React series
 category: [Speaking]
 tags: [meetups,speaking]
-redirect_from: "/it-girls-react-series"
+redirect_from: "/it-girls-react-series/"
 ---
 
 This time we joined forces with our friends from [IT Girls](http://itgirls.rs/).

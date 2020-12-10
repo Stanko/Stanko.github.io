@@ -3,14 +3,14 @@ layout: post
 title: How to update npm using nvm
 category: [JavaScript]
 tags: [js,node]
-redirect_from: "/nvm-updating-npm"
+redirect_from: "/nvm-updating-npm/"
 ---
 
 If you are JavaScript developer and not using [nvm](https://github.com/creationix/nvm) you might want to look at it.
 Node Version Manager is easy way to install, manage and work with multiple node versions.
 
 Recently I got npm update notification, that looks something like this:
- 
+
 ![npm update notification](/public/img/npm-update.png)
 
 For some reason, when I had node installed through nvm, `npm i -g npm` didn't work. However, when I was using a "system" node verrsion, installed from their website, it did. I can't remember the exact error, but it was probably something with my `PATH` configuration.

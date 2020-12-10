@@ -3,7 +3,7 @@ layout: post
 title: Couple of talks I really liked
 category: [Development]
 tags: [talks,speaking]
-redirect_from: "/talks-i-like"
+redirect_from: "/talks-i-like/"
 ---
 
 In this post you can find seven talks I really liked in no particular order, most of them development related. I'll explain why I liked them, and why I should recommend watching every single one of them.
@@ -14,7 +14,7 @@ Please comment with the talks you think are worth watching.
 
 <!--more-->
 
----
+----
 
 ### Wat <br><span class="Small">Gary Bernhardt, 2012</span>
 
@@ -28,7 +28,7 @@ Only four minutes long, give it a try.
 
 [Link](https://www.destroyallsoftware.com/talks/wat)
 
----
+----
 
 ### Live React: Hot Reloading with Time Travel <br><span class="Small">Dan Abramov, 2015</span>
 
@@ -45,7 +45,7 @@ It is best described with a YouTube comment: "All that was missing was the mic d
 
 [Link](https://www.youtube.com/watch?v=xsSnOQynTHs)
 
----
+----
 
 ### What the heck is the event loop anyway? <br><span class="Small">Philip Roberts, 2014</span>
 
@@ -58,7 +58,7 @@ It is best described with a YouTube comment: "All that was missing was the mic d
 
 [Link](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
 
----
+----
 
 ### The Early Days of id Software<br><span class="Small">John Romero, 2016</span>
 
@@ -80,7 +80,7 @@ and hopefully I will have a blog post about that soon.
 
 [Link](https://www.youtube.com/watch?v=E2MIpi8pIvY)
 
----
+----
 
 ### Adjusting the Dials in the Circuits of the Human Brain with Deep by Brain Stimulation<br> <span class="Small">Dr Andres Lozan, 2016</span>
 
@@ -97,7 +97,7 @@ It still sounds like a science fiction to me.
 
 [Link](https://www.youtube.com/watch?v=IEMLGrKJeK0)
 
----
+----
 
 ### Here's What Happens When an 18 Year Old Buys a Mainframe <br><span class="Small">Connor Krukosky, 2016</span>
 
@@ -110,7 +110,7 @@ Title is self-explanatory - young enthusiast got his hands on an old mainframe.
 
 [Link](https://www.youtube.com/watch?v=45X4VP8CGtk)
 
----
+----
 
 ### Do schools kill creativity?<br><span class="Small">Sir Ken Robinson, 2007</span>
 
@@ -125,6 +125,6 @@ and how it may be killing kid's creativity.
 
 [Link](https://www.youtube.com/watch?v=iG9CE55wbtY)
 
----
+----
 
-Hope you found any of these interesting to watch, and that you learned something new.
+Hope you found some of these interesting to watch, and that you learned something new.

@@ -3,7 +3,7 @@ layout: post
 title: Three web development bookmarklets
 category: [Development]
 tags: [js,css,bookmarklet]
-redirect_from: "/three-web-development-bookmarklets"
+redirect_from: "/three-web-development-bookmarklets/"
 ---
 
 Today I want to share three bookmarklets I love to use in development. You can add them to your browser, by creating a new bookmark and entering bookmarklet code instead of URL.

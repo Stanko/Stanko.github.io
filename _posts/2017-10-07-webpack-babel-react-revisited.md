@@ -4,7 +4,7 @@ title: Setting up Webpack, Babel and React from scratch, revisited
 category: [React]
 tags: [react,webpack,babel]
 image: /public/img/running-dev-server.png
-redirect_from: "/webpack-babel-react-revisited"
+redirect_from: "/webpack-babel-react-revisited/"
 ---
 
 Last summer I wrote [this post](/setting-up-webpack-babel-and-react-from-scratch/)

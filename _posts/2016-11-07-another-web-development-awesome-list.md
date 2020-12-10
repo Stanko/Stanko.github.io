@@ -3,7 +3,7 @@ layout: post
 title: Another web development awesome list
 category: [Development]
 tags: [dev]
-redirect_from: "/another-web-development-awesome-list"
+redirect_from: "/another-web-development-awesome-list/"
 ---
 
 ### Update November 2017

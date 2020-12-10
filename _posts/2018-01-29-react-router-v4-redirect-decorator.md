@@ -3,7 +3,7 @@ layout: post
 title: React Router v4 redirect decorator
 category: [React]
 tags: [react,router]
-redirect_from: "/react-router-v4-redirect-decorator"
+redirect_from: "/react-router-v4-redirect-decorator/"
 ---
 
 React Router switched to component based routing starting with the version 4.

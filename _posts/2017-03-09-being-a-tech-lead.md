@@ -3,7 +3,7 @@ layout: post
 title: Being a tech lead, the thing I miss the most
 category: [Random]
 tags: [random]
-redirect_from: "/being-a-tech-lead"
+redirect_from: "/being-a-tech-lead/"
 ---
 
 I started leading teams relatively early in my career.

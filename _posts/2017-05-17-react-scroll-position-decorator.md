@@ -3,7 +3,7 @@ layout: post
 title: React scroll decorator
 category: [React]
 tags: [random,scroll]
-redirect_from: "/react-scroll-position-decorator"
+redirect_from: "/react-scroll-position-decorator/"
 ---
 
 ## Update, December 2017

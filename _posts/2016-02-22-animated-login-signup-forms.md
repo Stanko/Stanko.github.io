@@ -3,7 +3,7 @@ layout: post
 title: Animated login and signup forms
 category: [CSS/SASS]
 tags: [animation,js,css]
-redirect_from: "/animated-login-signup-forms"
+redirect_from: "/animated-login-signup-forms/"
 ---
 
 Well I saw pretty nice mockup on [Dribbble](https://dribbble.com/shots/2311260-Day-1-Sign-Up-and-Login-Animated-Download-Template)
