@@ -6,7 +6,7 @@ tags: [jekyll]
 redirect_from: "/jekyll-read-more-link/"
 ---
 
-It is nice to use `{{ post.excerpt }}` instead of `{{ post.content }}`
+It is nice to use `post.excerpt` instead of `post.content`
 on your Jekyll home page, but then users can't see if there is more to read until they open
 the whole post.
 
