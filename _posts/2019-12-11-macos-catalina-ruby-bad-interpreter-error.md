@@ -51,3 +51,9 @@ export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.6.0/bin/:$PATH"
 ```
 
 It looks like a common sense, but it took me a couple of hours to figure it out. Hopefully this will save time people facing the same issue.
+
+----
+
+## Big Sur update (December 2020)
+
+I got the same error after updating to Big Sur, but this time I couldn't solve it. I still don't know what I was doing wrong. In the end I started using [rbenv](https://github.com/rbenv/rbenv) to manage ruby installations, and it works flawlessly.
