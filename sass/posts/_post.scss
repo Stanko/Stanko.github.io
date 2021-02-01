@@ -133,6 +133,10 @@
     // IE fix
     width: 100%;
   }
+
+  .Image--shadow img {
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .Post .DualImage {
