@@ -28,11 +28,12 @@
             </div>
           {% endfor %}
         </div>
-        <h3>Leave a comment</h3>
+        {% comment %}<h3>Leave a comment</h3>{% endcomment %}
       {% else %}
-        <h2 class="Comments-title">No comments, be the first to comment</h2>
+        {% comment %}<h2 class="Comments-title">No comments, be the first to comment</h2>{% endcomment %}
       {% endif %}
 
+      {% comment %}
       <form
         data-action="https://muffinman-staticman.herokuapp.com/v3/entry/github/Stanko/Stanko.github.io/master/comments"
         class="CommentForm"
@@ -93,7 +94,7 @@
 
         <button class="CommentForm-sendButton" type="submit">Send</button>
       </form>
-
+      {% endcomment %}
     </div>
   </div>
 </div>

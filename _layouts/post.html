@@ -22,7 +22,7 @@ layout: compress
             {% if comments != null %}
               {{ comments.size }} {% if comments.size != 1 %}Comments{% else %}Comment{% endif %}
             {% else %}
-              No comments
+              {% comment %}No comments{% endcomment %}
             {% endif %}
           </a>
         </div>
