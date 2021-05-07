@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JavaScript keyboard easter egg
-category: [Music]
+category: [JavaScript]
 tags: [js, svg, keyboard]
 image: /public/img/keyboard.png
 redirect_from: "/javascript-keyboard-easter-egg/"

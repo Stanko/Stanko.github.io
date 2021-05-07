@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Metaballs
-category: [Generative Art]
+category: ["Generative Art / Plotting"]
 tags: [svg,generative-art,threejs,js,metaballs]
 image: /public/img/metaballs/05a.png
 redirect_from: "/metaballs-generative-art/"

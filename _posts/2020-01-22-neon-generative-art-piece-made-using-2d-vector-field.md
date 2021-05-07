@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Neon, generative art piece made using 2d vector field
-category: [Generative Art]
+category: ["Generative Art / Plotting"]
 tags: [svg,js,drawing,generative-art]
 image: /public/img/neon/meta.png
 redirect_from: "/neon-generative-art-piece-made-using-2d-vector-field/"
