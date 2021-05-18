@@ -2,22 +2,21 @@
   "name": "muffinman-blog",
   "author": "Stanko",
   "scripts": {
-    "build-assets": "rm -rf ./public/assets && parcel build js/app.js --no-source-maps --out-dir public/assets --public-url /public/assets",
-    "watch-assets": "rm -rf ./public/assets && parcel watch js/app.js --no-source-maps --out-dir public/assets --public-url /public/assets",
+    "build-assets": "rm -rf ./public/assets && parcel build js/app.js --no-source-maps --dist-dir public/assets --public-url /public/assets",
+    "watch-assets": "rm -rf ./public/assets && parcel watch js/app.js --no-source-maps --dist-dir public/assets --public-url /public/assets",
     "jekyll-serve": "bundle exec jekyll serve --incremental --livereload --host 0.0.0.0",
     "jekyll-build": "rm -rf _site && bundle exec jekyll build",
     "start": "rm -rf _site && npm run build-assets && npm run jekyll-serve"
   },
   "license": "SEE LICENSE IN LICENSE.md",
-  "devDependencies": {
-    "autoprefixer": "^9.8.2",
+  "dependencies": {
+    "@parcel/transformer-sass": "^2.0.0-beta.2",
+    "animated-scroll-to": "^2.2.0",
+    "autoprefixer": "^10.2.5",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "node-sass": "^4.14.1",
-    "parcel-bundler": "^1.12.4"
-  },
-  "dependencies": {
-    "animated-scroll-to": "^2.0.8",
+    "node-sass": "^6.0.0",
+    "parcel": "^2.0.0-beta.2",
     "window-scroll-manager": "^1.1.4"
   }
 }

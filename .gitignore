@@ -20,3 +20,4 @@ node_modules
 .jekyll-cache/
 vendor
 .cache
+.parcel-cache/
