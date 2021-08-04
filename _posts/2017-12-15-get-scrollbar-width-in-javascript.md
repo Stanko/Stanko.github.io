@@ -6,7 +6,7 @@ tags: [js]
 redirect_from: "/get-scrollbar-width-in-javascript/"
 ---
 
-Another onliner I love, that returns body scrollbar width.
+Another one-liner I love, that returns body scrollbar width.
 If scrollbar is not shown it will return zero (including mobile devices).
 
 ```js
