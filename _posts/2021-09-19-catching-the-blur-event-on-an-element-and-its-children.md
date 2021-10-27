@@ -34,9 +34,7 @@ const handleBlur = (e) => {
 };
 ```
 
-## React components
-
-React component
+## React component
 
 I pulled out the logic and created a small React component:
 
