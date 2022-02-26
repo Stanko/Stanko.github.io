@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "esbuild js/app.js --bundle --outfile=static/js/app.js --watch",
-    "build": "esbuild js/app.js --bundle --outfile=static/js/app.js"
+    "start": "esbuild js/app.js --bundle --minify --outfile=static/js/app.js --watch",
+    "build": "esbuild js/app.js --bundle --minify --outfile=static/js/app.js"
   },
   "author": "Stanko",
   "license": "SEE LICENSE IN LICENSE.md",

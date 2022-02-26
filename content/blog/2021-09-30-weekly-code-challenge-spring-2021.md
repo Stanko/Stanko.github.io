@@ -3,7 +3,7 @@ title = "<span>Weekly Code Challenge</span> (spring 2021)"
 
 [taxonomies]
 category = ["Random"]
-tags = ["javascript", "css", "animation", "challenge"]
+tags = ["js", "css", "animation", "challenge"]
 
 [extra]
 image = "/img/code-challenge-spring-2021/waves.png"

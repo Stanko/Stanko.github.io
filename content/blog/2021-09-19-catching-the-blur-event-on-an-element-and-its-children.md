@@ -3,7 +3,7 @@ title = "Catching the blur event on an element and its children"
 
 [taxonomies]
 category = ["JavaScript"]
-tags = ["react", "event", "blur", "javascript"]
+tags = ["react", "event", "blur", "js"]
 
 [extra]
 
