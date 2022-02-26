@@ -1,21 +1,32 @@
+name: Build and Deploy
 on:
   push:
     branches:
       - zola
-  pull_request:
+    paths-ignore:
+      - '**/README.md'
+      - '**/TODO.md'
+      - '**/NOTES.md'
+      - '**/LICENSE.md'
+      - '**/serve.sh'
+      - js/**
+      - .vscode/**
+  # pull_request:
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    if: github.ref != 'refs/heads/zola'
-    steps:
-      - name: 'Checkout'
-        uses: actions/checkout@master
-      - name: 'Build only'
-        uses: Stanko/zola-deploy-action@master
-        env:
-          BUILD_DIR: .
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BUILD_ONLY: true
+  # Only build PRs
+  # Disabled for now
+  # build:
+  #   runs-on: ubuntu-latest
+  #   if: github.ref != 'refs/heads/zola'
+  #   steps:
+  #     - name: 'Checkout'
+  #       uses: actions/checkout@master
+  #     - name: 'Build only'
+  #       uses: Stanko/zola-deploy-action@master
+  #       env:
+  #         BUILD_DIR: .
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #         BUILD_ONLY: true
   build_and_deploy:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/zola'

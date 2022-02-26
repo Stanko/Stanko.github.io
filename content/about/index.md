@@ -26,6 +26,6 @@ Prior to Work & Co, I was a CTO at Null Object, small technology agency which I 
 
 My other interests are music,
 {{ sidenote(text="crafts", note="Among other things I made my own electric guitar.") }}
-and gaming. Old DOS games are what [got me into the tech](/blog/my-programming-story/) in the first place. I love indie games and I'm so happy that we many so people making them today. I'm also a terrible guitar player.
+and gaming. Old DOS games are what [got me into the tech](/blog/my-programming-story/) in the first place. I love indie games and I'm super happy that so many people are making them today. I'm also a terrible guitar player.
 
 Nick Muffin Man comes from the [Frank Zappa's song](https://www.youtube.com/watch?v=WMwY49vTBk0) of the same name.
