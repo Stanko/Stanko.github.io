@@ -3,11 +3,18 @@ body {
 }
 
 .sidenote__trigger {
-  text-decoration: 1px underline dotted $cool-gray-400;
   display: inline;
   line-height: 1;
-  transition: text-decoration $time;
+  transition: all $time;
   outline: none;
+  // Messy as text-decoration props support is weird
+  text-decoration: underline;
+  text-decoration: 1px underline $cool-gray-400;
+  text-decoration-style: dotted;
+  text-underline-offset: 2rem;
+  -webkit-text-decoration-style: dotted;
+  text-decoration-color: $cool-gray-400;
+  -webkit-text-decoration-color: $cool-gray-400;
 
   &::after {
     content: counter(sidenote);
@@ -19,12 +26,15 @@ body {
 
   &:hover {
     text-decoration-style: solid;
+    -webkit-text-decoration-style: solid;
     cursor: help;
   }
 
   &:focus {
     text-decoration-color: $cool-gray-700;
+    -webkit-text-decoration-color: $cool-gray-700;
     text-decoration-style: solid;
+    -webkit-text-decoration-style: solid;
   }
 }
 

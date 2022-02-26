@@ -75,11 +75,17 @@
   }
 
   a {
-    transition: text-decoration $time;
+    transition: all $time;
+    // Messy as text-decoration props support is weird
+    text-decoration: underline;
     text-decoration: 1px underline $separator-color;
+    text-decoration-color: $separator-color;
+    text-underline-offset: 2rem;
+    -webkit-text-decoration-color: $separator-color;
 
     &:hover {
       text-decoration-color: var(--theme-color);
+      -webkit-text-decoration-color: var(--theme-color);
     }
   }
 
