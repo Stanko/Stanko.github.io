@@ -1,122 +1,99 @@
-const options = {
-  extract: function(el) { return el.title; }
-};
+import fuzzysort from "fuzzysort";
 
-const menu = document.querySelector('.MenuModal');
-const searchInput = document.querySelector('.MenuModal-input');
-const modalMenu = document.querySelector('.MenuModal-menu');
-const menuToggles = document.querySelectorAll('.MenuModal-toggle');
-const searchResults = document.querySelector('.MenuModal-results');
-const html = document.querySelector('html');
+const searchInput = document.querySelector(".search__input");
+const searchResults = document.querySelector(".search__results");
+const modalNav = document.querySelector(".modal-nav");
 
-let prevSearch = '';
-let timeout = null;
+let previousSearchTerm;
 
 const MIN_CHARACTERS = 1;
+const RESULT_FOCUS_CLASS = "search__result--focused";
+const MAX_RESULTS = 15;
 
-function renderResult(title, url) {
-  return `<a href='${ url }' class='MenuModal-result'><div class='Container'>${ title }</div></a>`;
-}
+// Clean search input on page refresh
+searchInput.value = "";
 
-const ANIMATION_DURATION = 500;
-let scrollPosition = 0;
+searchInput.addEventListener("keyup", function (e) {
+  const searchTerm = searchInput.value.trim();
 
-for (let i = 0; i < menuToggles.length; i++) {
-  const element = menuToggles[i];
-  element.addEventListener('click', function() {
-    clearTimeout(timeout);
-
-    if (menu.style.display === 'none' || !menu.style.display) {
-      menu.style.display = 'block';
-      scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-
-      timeout = setTimeout(function(){
-        html.classList.toggle('Html--menuActive');
-        searchInput.focus();
-
-        timeout = setTimeout(function(){
-          html.classList.toggle('Html--overflowHidden');
-        }, ANIMATION_DURATION);
-      }, 30);
-
-
-    } else {
-      html.classList.remove('Html--menuActive');
-      html.classList.remove('Html--overflowHidden');
-
-      window.scrollTo(0, scrollPosition);
-
-      timeout = setTimeout(function(){
-        menu.style.display = 'none';
-      }, ANIMATION_DURATION);
-    }
-  });
-}
-
-const keyCodes = {
-  UP: 38,
-  DOWN: 40,
-};
-
-searchInput.addEventListener('keydown', function(e) {
-  let linkToFocus = null;
-
-  if (e.keyCode === keyCodes.DOWN) {
-    linkToFocus = searchResults.querySelector('a:first-child');
-  } else if (e.keyCode === keyCodes.UP) {
-    linkToFocus = searchResults.querySelector('a:last-child');
+  // Same search, do nothing
+  if (previousSearchTerm === searchTerm) {
+    return;
   }
 
-  if (linkToFocus) {
-    e.preventDefault();
-    linkToFocus.focus();
+  // Empty results when search term is too short
+  if (searchTerm.length < MIN_CHARACTERS) {
+    searchResults.innerHTML = "";
+    previousSearchTerm = "";
+    modalNav.style.display = "block";
+    return;
+  }
+
+  modalNav.style.display = "none";
+  previousSearchTerm = searchTerm;
+
+  const results = fuzzysort.go(searchTerm, searchData, {
+    key: "title",
+    limit: MAX_RESULTS,
+    threshold: -50000, // don't return bad results
+  });
+
+  if (results.length === 0) {
+    searchResults.innerHTML = `<div class="search__no-results"><div class="container">No results found for "${searchTerm}"</div></div>`;
+  } else {
+    const html = results
+      .map((result, index) => {
+        return `<a class="search__result ${
+          index === 0 ? RESULT_FOCUS_CLASS : ""
+        }" href="${result.obj.url}">
+        <div class="container">
+        <div class="search__result-eyebrow">${result.obj.eyebrow}</div>
+        <div class="search__result-title">
+        ${fuzzysort.highlight(
+          result
+        )}<svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" class="post-arrow" aria-hidden="true">
+          <path d="M 0 10 30 10 20 0 30 10 20 20" />
+        </svg>
+        </div>
+        </div>
+        </a>`;
+      })
+      .join("\n");
+
+    searchResults.innerHTML = html;
   }
 });
 
-searchInput.addEventListener('keyup', function(e) {
-  const newSearch = searchInput.value.trim();
+searchInput.addEventListener("keydown", function (e) {
+  const current = searchResults.querySelector(`.${RESULT_FOCUS_CLASS}`);
 
-  if (prevSearch === newSearch) {
+  // On enter, open the focused link
+  if (e.code === "Enter") {
+    e.preventDefault();
+    current.click();
     return;
   }
 
-  modalMenu.style.display = newSearch.length > 0 ? 'none' : '';
+  let item = null;
+  const isUp = e.code === "ArrowUp";
+  const isDown = e.code === "ArrowDown";
 
-  if (newSearch.length < MIN_CHARACTERS) {
-    searchResults.innerHTML = '';
-    prevSearch = '';
-    return;
+  // On up and down arrows
+  // find the next/previous element
+  if (isDown || isUp) {
+    e.preventDefault();
+
+    item = isDown ? current.nextElementSibling : current.previousElementSibling;
   }
 
-  const results = fuzzy.filter(newSearch, posts, options);
+  if (item) {
+    e.preventDefault();
+    item.classList.add(RESULT_FOCUS_CLASS);
 
-  if (results.length) {
-    const html = results.map(result => renderResult(result.string, result.original.url)).join('');
-    searchResults.innerHTML = html;
-    const resultLinks = document.querySelectorAll('.MenuModal-result');
+    item.scrollIntoView({ behavior: "smooth", block: "center" });
 
-    for (let i = 0; i < resultLinks.length; i++) {
-      const resultLink = resultLinks[i];
-
-      resultLink.addEventListener('keydown', function(e) {
-        let linkToFocus = null;
-
-        if (e.keyCode === keyCodes.DOWN) {
-          linkToFocus = resultLinks[i + 1];
-        } else if (e.keyCode === keyCodes.UP) {
-          linkToFocus = resultLinks[i - 1];
-        }
-
-        if (linkToFocus) {
-          e.preventDefault();
-          linkToFocus.focus();
-        }
-      });
+    if (current) {
+      current.classList.remove(RESULT_FOCUS_CLASS);
     }
-  } else {
-    searchResults.innerHTML = '<div class="MenuModal-noResults"><div class="Container">No results</div></div>';
   }
-
-  prevSearch = newSearch;
-
 });

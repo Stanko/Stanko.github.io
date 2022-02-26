@@ -1,9 +1,0 @@
-_id: 1c475a50-38e3-11e8-b26d-cdd54f698020
-slug: webpack-babel-react-revisited
-name: Roberto
-email: 2658d91163bffab4b6f17c5c4e9a8a3d
-message: >-
-  Hi, great tutorial thank you. I encountered an error due to the version of
-  "extract-text-webpack-plugin", and i solved it by installing
-  extract-text-webpack-plugin@next instead, which points to the beta branch.
-date: '2018-04-05T15:07:52.131Z'

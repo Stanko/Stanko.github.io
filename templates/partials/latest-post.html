@@ -1,0 +1,41 @@
+<div class="container">
+  <a
+    class="latest-post {% if latest_post.extra.theme %}{{ latest_post.extra.theme }}{% endif %}"
+    href="{{ latest_post.permalink }}"
+  >
+    <div class="latest-post__content">
+      <div class="latest-post__text">
+        <div class="latest-post__eyebrow">
+          {% include "partials/svg-leaf.html" %}
+          Latest post
+        </div>
+        <h2 class="latest-post__title h3">
+          <div class="latest-post__title-text">
+            {{ latest_post.title | safe }}{% include "partials/svg-post-arrow.html" %}
+          </div>
+          {% if latest_post.extra.vertigo %}
+            {% include "partials/svg-vertigo.html" %}
+          {% endif %}
+          {% if latest_post.extra.icon %}
+            <img src="{{ latest_post.extra.icon }}" alt="" aria-hidden="true" class="blog-list__icon" />
+          {% endif %}
+        </h2>
+
+        <div class="latest-post__date">
+          {{ latest_post.date | date(format="%d. %b %Y") }}
+          &bull; {{ latest_post.taxonomies.category[0] }}
+        </div>
+
+        <div class="latest-post__intro">
+          {{ latest_post.extra.intro }}
+        </div>
+      </div>
+      {% if latest_post.extra.image %}
+        <div class="latest-post__image-wrapper">
+          <img src="{{ latest_post.extra.image }}" alt="" aria-hidden="true" class=""  />
+        </div>
+      {% endif %}
+    </div>
+  </a>
+</div>
+

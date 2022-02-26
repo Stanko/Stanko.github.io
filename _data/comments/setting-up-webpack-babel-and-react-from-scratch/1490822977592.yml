@@ -1,9 +1,0 @@
-_id: cf45d5b0-14c6-11e7-94de-d70da9440bd5
-slug: setting-up-webpack-babel-and-react-from-scratch
-name: Alexandre
-email: 2577b8e70e6c85f3579fdecfc1485de8
-message: >-
-  Is your package.json correct? I don't see "eslint-import-resolver-webpack".
-  Thanks for the post.
-date: '2017-03-29T21:29:37.591Z'
-timestamp: 1490822977

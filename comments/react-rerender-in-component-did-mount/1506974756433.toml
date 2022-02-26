@@ -1,0 +1,7 @@
+comment_id = "19ac6a00-a7ad-11e7-ba25-ff198669fadf"
+slug = "react-rerender-in-component-did-mount"
+name = "Jimmy"
+email = "7087e6dbd9dbddfb093ad400f1c042a6"
+message = "Not sure why – but this method didn't work for me.\n\nThis appears to be the pattern at the moment: https://reactjs.org/docs/animation.html"
+date = "2017-10-02T20:05:56.429Z"
+timestamp = 1506974756

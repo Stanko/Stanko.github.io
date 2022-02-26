@@ -1,66 +1,48 @@
-import animateScrollTo from 'animated-scroll-to';
+import toggleHeight from "./toggle-height";
 
-function checkHash() {
-  const hash = window.location.hash.replace('#/', '');
+const toggles = document.querySelectorAll(".archive__toggle");
 
-  if (hash) {
-    const posts = document.querySelector(`#posts-${ hash }`);
-    const section = document.querySelector(`#section-${ hash }`);
+const slug = window.location.hash.replace("#", "").trim();
 
-    if (posts) {
-      posts.style.height = 'auto';
-      posts.setAttribute('open', 1);
-      window.location.hash = '';
-      animateScrollTo(section);
-    }
+// Open section from the URL slug
+if (slug) {
+  const category = document.querySelector(`.archive__category--${slug}`);
+
+  if (category) {
+    const toggle = category.querySelector(".archive__posts");
+    const posts = category.querySelector(".archive__posts");
+
+    posts.style.display = "block";
+    posts.setAttribute("aria-hidden", false);
+    toggle.setAttribute("aria-expanded", true);
   }
 }
 
-checkHash();
-
-function toggleSection(posts, postsContent) {
-  const isOpen = posts.getAttribute('open') === '1';
-  const isAnimating = posts.getAttribute('animating') === '1';
-
-  if (isAnimating) {
-    return;
-  }
-
-  posts.style.height = `${ postsContent.offsetHeight }px`;
-  posts.setAttribute('animating', 1);
-
-  if (isOpen) {
-    setTimeout(function() {
-      posts.style.height = 0;
-
-      setTimeout(function() {
-        posts.setAttribute('animating', 0);
-      }, ANIMATION_DURATION);
-    }, 30);
-    posts.setAttribute('open', 0);
-  } else {
-    posts.setAttribute('open', 1);
-
-    setTimeout(function() {
-      posts.style.height = 'auto';
-      posts.setAttribute('animating', 0);
-    }, ANIMATION_DURATION);
-  }
-}
-
-const ANIMATION_DURATION = 500;
-const archiveToggles = document.querySelectorAll('.Archive-title a');
-
-for (let i = 0; i < archiveToggles.length; i++) {
-  const toggle = archiveToggles[i];
-
-  toggle.addEventListener('click', function(e) {
+toggles.forEach((toggle) => {
+  toggle.addEventListener("click", (e) => {
     e.preventDefault();
+    const isOpening = toggle.getAttribute("aria-expanded") === "false";
 
-    const link = e.currentTarget;
-    const posts = link.parentElement.nextElementSibling;
-    const postsContent = posts.querySelector('.Archive-postsContent');
+    if (isOpening) {
+      // Replace hash without scrolling the page
+      const url = `${window.location.pathname}${toggle.getAttribute("href")}`;
+      window.history.replaceState({}, document.title, url);
+    } else {
+      const openCount = document.querySelectorAll(
+        ".archive__toggle[aria-expanded=true]"
+      ).length;
 
-    toggleSection(posts, postsContent);
+      if (openCount === 1) {
+        // Only this accordion is opened, hash can be safely removed
+        window.history.replaceState(
+          {},
+          document.title,
+          window.location.pathname
+        );
+      }
+    }
+
+    toggle.setAttribute("aria-expanded", isOpening);
+    toggleHeight(toggle.nextSibling);
   });
-}
+});

@@ -1,0 +1,66 @@
+.sharing {
+  margin-bottom: 100rem;
+}
+
+.sharing__buttons {
+  display: flex;
+  margin-top: 10rem;
+}
+
+.sharing__button {
+  align-items: center;
+  border: 1px solid $black;
+  border-radius: 50%;
+  display: inline-flex;
+  height: 36rem;
+  justify-content: center;
+  margin-right: 8rem;
+  transition: background $time;
+  width: 36rem;
+  flex-shrink: 0;
+
+  svg {
+    display: block;
+    overflow: visible;
+  }
+}
+
+.sharing__button--twitter {
+  border-color: #00abf1;
+
+  svg {
+    fill: #00abf1;
+    transform: translateY(1rem);
+    height: 18rem;
+  }
+
+  &:hover {
+    background: rgba(#00abf1, 0.1);
+  }
+}
+
+.sharing__button--reddit {
+  border-color: #fc451e;
+
+  svg {
+    fill: #fc451e;
+    height: 20rem;
+  }
+
+  &:hover {
+    background: rgba(#fc451e, 0.1);
+  }
+}
+
+.sharing__button--hn {
+  border-color: #fb651e;
+
+  svg {
+    fill: #fb651e;
+    height: 14rem;
+  }
+
+  &:hover {
+    background: rgba(#fb651e, 0.1);
+  }
+}

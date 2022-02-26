@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% set all_categories = get_taxonomy(kind="category") %}
+{% set category = "" %}
+
+{% for current_category in all_categories.items %}
+  {% if page.taxonomies.category is containing(current_category.name) %}
+    {% set_global category = current_category %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+<div class="post__top">
+  <div class="container post__top-content">
+    <h1 class="post__title">
+      {{ page.title | safe }}
+    </h1>
+
+    <div class="post__date">
+      {{ page.date | date(format="%d. %B %Y") }}
+    </div>
+
+    <div class="post__info">
+      {% if category %}
+        <div>
+          Posted in <a href="/archive/#{{ category.slug }}">{{ category.name }}</a>
+        </div>
+        <span class="post__info-separator">&middot;</span>
+      {% endif %}
+      {{page.reading_time}} minute{{ page.reading_time | pluralize }} read
+
+      <div class="post__comments-link">
+        {% if page.extra.comments %}
+          {% set comments_count = page.extra.comments | length %}
+          <a href="#comments" class="scroll-to">{{ comments_count }} Comment{% if comments_count > 1 %}s{% endif %}</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  {% if page.taxonomies.category is containing("Jekyll") %}
+    <div class="notice">
+      Please note that I'm not using Jekyll anymore, so this post might be outdated.
+    </div>
+  {% endif %}
+
+  {% include "partials/content.html" %}
+
+  {% include "partials/sharing.html" %}
+</div>
+
+<div class="post__bottom">
+  <div class="container">
+    {% include "partials/related-posts.html" %}
+    {% include "partials/comments.html" %}
+  </div>
+</div>
+
+{% endblock content %}

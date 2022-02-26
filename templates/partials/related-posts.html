@@ -1,0 +1,68 @@
+{% set RELATED_POSTS_THRESHOLD = 3 %}
+
+{% set related_data = [] %}
+
+{% set all_posts = get_section(path="blog/_index.md") %}
+{% set posts_count = all_posts.pages | length %}
+
+{% for post in all_posts.pages %}
+  {# Get index from the tail, because we want newer posts on top #}
+  {% set post_index_reversed = posts_count - loop.index0 %}
+
+  {# Add trailing zeros for sorting #}
+  {% if post_index_reversed < 10 %}
+    {% set post_index_reversed = "000" ~ post_index_reversed %}
+  {% elif post_index_reversed < 100 %}
+    {% set post_index_reversed = "00" ~ post_index_reversed %}
+  {% elif post_index_reversed < 1000 %}
+    {% set post_index_reversed = "0" ~ post_index_reversed %}
+  {% endif %}
+  
+  {# Skip the current post #}
+  {% if page.title == post.title %}
+    {% continue %}
+  {% endif %}
+
+  {# Calculate the number of matching tags between posts #}
+  {% set_global score = 0 %}
+
+  {% for tag in post.taxonomies.tags %}
+    {% if page.taxonomies.tags is containing(tag) %}
+      {% set_global score = score + 1 %}
+    {% endif %}
+  {% endfor %}
+
+  {% for category in post.taxonomies.category %}
+    {% if page.taxonomies.category is containing(category) %}
+      {% set_global score = score + 0.5 %}
+    {% endif %}
+  {% endfor %}
+
+  {% if score > 0 %}
+    {% set item = score ~ "-" ~ post_index_reversed %}
+    {% set_global related_data = related_data | concat(with=item) %}
+  {% endif %}
+{% endfor %}
+
+{% set related_data = related_data | sort | reverse | slice(end = RELATED_POSTS_THRESHOLD) %}
+
+
+<div class="related-posts">
+  <h2 class="h3 related-posts__title">Related Posts</h2>
+  {% for data in related_data %}
+    {% set parts = data | split(pat="-") %}
+    {% set r = parts[1] | int %}
+    {% set index = posts_count - r %}
+    {% set post = all_posts.pages[index] %}
+
+    <a href="{{ post.permalink }}" class="related-posts__post">
+      <div class="related-posts__post-title">
+        {{post.title | safe}}
+      </div>
+      <div class="related-posts__date">
+        {{ post.date | date(format="%d. %B %Y") }}
+      </div>
+    </a>
+  {% endfor %}
+</div>
+  

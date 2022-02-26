@@ -1,0 +1,6 @@
+comment_id = "2a1d2d30-3f8b-11e9-bf1e-1f0cfd7e6c9f"
+slug = "react-router-subfolder-on-server"
+name = "Stanko"
+email = "13a28fac985c11eb7f40169be7da32f4"
+message = "Hello Keyra,\n\nI can't think of a way to do it dynamically in a library, without using hash routing. If you figure out a way, please share the solution.\n\nCheers!"
+date = "2019-03-05T21:10:55.530Z"

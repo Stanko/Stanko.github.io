@@ -1,0 +1,6 @@
+comment_id = "bb83f910-a6d6-11e7-9a6f-7f9cb7c46180"
+slug = "travis-jekyll-and-github-pages"
+name = "Stanko"
+email = "13a28fac985c11eb7f40169be7da32f4"
+message = "Hey Lars,\n\nI downloaded your blog's repo and dug around but I couldn't get Travis working :(\n\nI'm pretty sure that it doesn't matter if it is a user or organization.\n\nPersonally, I would start setup from scratch following this link:\n<a href=\"https://github.com/mfenner/jekyll-travis\">github.com/mfenner/jekyll-travis</a>.\n\nIf you manage to get everything working, please share your solution.\n\nCheers!"
+date = "2017-10-01T18:31:26.172Z"

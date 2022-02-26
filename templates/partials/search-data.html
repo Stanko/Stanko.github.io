@@ -1,0 +1,6 @@
+{% set blog_posts = get_section(path="blog/_index.md") -%}
+var searchData = [
+{% for post in blog_posts.pages -%}
+{ title: "{{ post.title | striptags | safe }}", url: "{{ post.permalink }}", eyebrow: "{{ post.taxonomies.category[0] }}" }{% if loop.last == false %},{% endif %}
+{% endfor -%}
+];

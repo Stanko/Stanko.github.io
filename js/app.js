@@ -1,12 +1,9 @@
-import './comments';
-import './fuzzy';
-import './jump';
-import './keyboard';
-import './post';
-import './search';
-import './archive';
-import './parallax';
-import './header-anchors';
+import "./debug";
 
-
-import '../sass/style.scss';
+import "./archive";
+import "./comments";
+import "./menu";
+import "./scroll-to";
+import "./search";
+import "./sidenote";
+import "./spoiler";

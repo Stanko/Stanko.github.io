@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="page__top">
+  <div class="container">
+    <h1 class="page__title home__title">
+      Frontend &<br />
+      <span>creative</span> coding
+    </h1>
+    <p class="page__intro">
+      Hello, I'm Stanko, a software engineer in Belgrade, making digital products and generative art.
+    </p>
+  </div>
+</div>
+
+<div class="container">
+  <h2 class="home__section-title">Blog Posts</h2>
+</div>
+
+{% set blog_posts = get_section(path="blog/_index.md") -%}
+
+{% set latest_post = blog_posts.pages[0] %}
+
+{% include "partials/latest-post.html" %}
+
+<div class="blog-list">
+  {% for post in blog_posts.pages | slice(start=1, end=5) %}
+    {% include "partials/blog-list-post.html" %}
+  {% endfor %}
+</div>
+
+<div class="container">
+  <a class="btn home__see-more-posts" href="/archive/">Check all posts in the archive</a>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,6 @@
+comment_id = "85bd9c20-b19c-11e7-b553-d17830342549"
+slug = "webpack-babel-react-revisited"
+name = "Timothy"
+email = "646501daa3b04e5d1d6762f34fc39aa4"
+message = "Thanks for a great tutorial! Really helps to take some of the magic and head-scratching out.\n\nNo need to post this in your comments, but there is a typo in the \"update webpack config to handle image assets\" code: Line 6 has the \"//  -> ADDED IN THIS STEP\" comment when it was actually added in a previous step."
+date = "2017-10-15T11:32:27.972Z"

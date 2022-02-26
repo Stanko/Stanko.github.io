@@ -1,0 +1,6 @@
+comment_id = "2653dcb0-e315-11ea-b55d-817289a58d75"
+slug = "macos-catalina-ruby-bad-interpreter-error"
+name = "Lucas"
+email = "84b729c217999aefce8a347a48f75080"
+message = "I tried to follow along with what you are doing but get this error - An error occurred while installing http_parser.rb (0.6.0), and Bundler cannot continue.\nMake sure that `gem install http_parser.rb -v '0.6.0' --source 'https://rubygems.org/'` succeeds before\nbundling."
+date = "2020-08-20T18:44:16.668Z"

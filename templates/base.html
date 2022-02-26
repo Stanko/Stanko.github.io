@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% if page.title %}
+  {% set page_data = page %}
+{% elif section.title %}
+  {% set page_data = section %}
+{% else %}
+  {% set title = "Muffin Man · Frontend & Creative Coding" %}
+  {% set meta_title = "Frontend & Creative Coding" %}
+  {% set description = "Hello, I'm a software engineer in Belgrade, making digital products and generative art." %}
+{% endif %}
+
+{% if page_data %}
+  {% set title = page_data.title ~ " · Muffin Man" | striptags | safe %}
+  {% set meta_title = page_data.title | striptags | safe %}
+
+  {% if page_data.extra.intro %}
+    {% set description = page_data.extra.intro %}
+  {% else %}
+    {% set description = page_data.content | striptags | truncate(length=150) %}
+  {% endif %}
+{% endif %}
+
+{% set theme_class = ""%}
+{% set theme_suffix = ""%}
+
+{% if page_data.extra.theme %}
+  {% set theme_class = page.extra.theme %}
+  {% set theme_suffix = "-" ~ page.extra.theme %}
+{% endif %}
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>{{ title }}</title>
+
+  <meta name="description" content="{{ description }}">
+  <meta property="og:site_name" content="Muffin Man">
+  <meta property="og:title" content="{{ meta_title }}">
+  <meta property="og:description" content="{{ description }}">
+  {% if current_url %}
+    <meta property="og:url" content="{{ current_url }}">
+  {% else %}
+    {# 404 error page  #}
+    <meta property="og:url" content="https://muffinman.io">
+  {% endif %}
+  <meta name="twitter:title" content="{{ meta_title }}">
+  <meta name="twitter:description" content="{{ description }}">
+  {% if page_data.extra.image %}
+    <meta property="twitter:image" content="{{ config.base_url }}{{ page_data.extra.image }}">
+    <meta property="og:image" content="{{ config.base_url }}{{ page_data.extra.image }}">
+  {% else %}
+    <meta property="twitter:image" content="{{ config.base_url }}/img/cover.png">
+    <meta property="og:image" content="{{ config.base_url }}/img/cover.png">
+  {% endif %}
+
+  {# https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs #}
+  <link rel="icon" href="/favicon/icon{{ theme_suffix }}.ico" sizes="any" />
+  <link rel="icon" href="/favicon/icon{{ theme_suffix }}.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/favicon/icon-180{{ theme_suffix }}.png" />
+  <link rel="manifest" href="/favicon/manifest{{ theme_suffix }}.webmanifest" />
+
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  {% block head %}{% endblock %}
+</head>
+
+<body class="{{ theme_class }}">
+  <div id="page">
+    <a href="#content" class="jump-to-content">Jump to content</a>
+    {% include "partials/menu.html" %}
+
+    <section role="main" class="main" id="content" tabindex="-1">
+      {% block content %} {% endblock %}
+    </section>
+
+    {% include "partials/footer.html" %}
+  </div>
+
+  {% include "partials/menu-modal.html" %}
+
+  {% if config.mode =="Serve" %}
+    <script>
+      {% include "partials/search-data.html" %}
+    </script>
+  {% else %}
+    <script src="/js/search-data.js"></script>
+  {% endif %}
+
+  <script src="/js/app.js"></script>
+
+  <script>
+    if (window.location.hostname !== 'localhost' && window.location.hostname.search('.local') > -1 && window.location.hostname !== '0.0.0.0') {
+      (function() {
+        window.counter = 'https://muffinman_io.goatcounter.com/count';
+
+        var script = document.createElement('script');
+        script.async = 1;
+        script.src = '//gc.zgo.at/count.js';
+        var ins = document.getElementsByTagName('script')[0];
+        ins.parentNode.insertBefore(script, ins);
+      })();
+    }
+  </script>
+</body>
+</html>

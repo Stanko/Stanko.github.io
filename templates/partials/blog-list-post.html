@@ -1,0 +1,16 @@
+<a href="{{ post.permalink }}" class="blog-list__post {% if post.extra.theme %}{{ post.extra.theme }}{% endif %}">
+  <div class="blog-list__title h3">
+    <div class="blog-list__title-text">
+      {{ post.title | safe }}{% include "partials/svg-post-arrow.html" %}
+    </div>
+    {% if post.extra.vertigo %}
+      {% include "partials/svg-vertigo.html" %}
+    {% endif %}
+    {% if post.extra.icon %}
+      <img src="{{ post.extra.icon }}" alt="" aria-hidden="true" class="blog-list__icon" />
+    {% endif %}
+  </div>
+  <div class="blog-list__date">
+    {{ post.date | date(format="%d. %b %Y") }} &bull; {{ post.taxonomies.category[0] }}
+  </div>
+</a>

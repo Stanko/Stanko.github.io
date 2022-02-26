@@ -1,0 +1,33 @@
+.home__title {
+  @include marvin;
+  font-size: 50rem;
+
+  @include md {
+    font-size: 70rem;
+  }
+
+  @include lg {
+    font-size: 90rem;
+  }
+
+  span {
+    @include text-gradient;
+  }
+}
+
+.home__section-title {
+  margin-bottom: 10rem;
+
+  @include md {
+    margin-bottom: 20rem;
+  }
+}
+
+.home__see-more-posts {
+  margin-top: 20rem;
+  margin-bottom: 100rem;
+
+  @include md {
+    margin-top: 40rem;
+  }
+}

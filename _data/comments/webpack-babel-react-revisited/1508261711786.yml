@@ -1,9 +1,0 @@
-_id: 86dab810-b361-11e7-8146-2924d4c3fe6b
-slug: webpack-babel-react-revisited
-name: Anthony
-email: 17080510314c2f11f2309159297aa9c6
-message: >-
-  Awesome tutorial. Hard to find a clear and easy to follow breakdown of how to
-  setup a React/ES2015 project with Babel. How would you incorporate using SASS
-  into the webpack config?
-date: '2017-10-17T17:35:11.785Z'

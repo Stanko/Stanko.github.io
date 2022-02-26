@@ -1,0 +1,6 @@
+comment_id = "83251bd0-aa34-11ea-b39d-b13f935405a2"
+slug = "javascript-get-element-offset"
+name = "Stanko"
+email = "13a28fac985c11eb7f40169be7da32f4"
+message = "Hey David,\nSure thing, for example if you want to scroll to a footer element:\n\n<pre>const element = document.querySelector('.footer');\nconst offset = getElementOffset(element);\nwindow.scrollTo(0, offset);\n</pre>\n\nHope this helps!"
+date = "2020-06-09T09:35:10.444Z"

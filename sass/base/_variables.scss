@@ -1,108 +1,135 @@
 // --- Breakpoints
+
 $breakpoint-sm: 400px;
 $breakpoint-md: 600px;
 $breakpoint-lg: 960px;
-$breakpoint-xl: 1200px;
-$breakpoint-xxl: 1800px;
-$breakpoint-xxxl: 2100px;
+$breakpoint-xl: 1100px;
+$breakpoint-xxl: 1600px;
+$breakpoint-xxxl: 2000px;
 
-// --- Grid
-$grid-col-count: 12;
-$grid-gutter: 2rem;
-$grid-gutter-md: 4rem;
+// --- Layout
 
-$text-width-md: 62rem;
-$text-width-lg: 62rem;
+$container-width: 1100rem;
+$container-width-narrow: 550rem;
 
-$container-width: 90rem;
-$container-width-xl: 100rem;
+$gutter: 20rem;
+$gutter-md: 40rem;
+$gutter-lg: 90rem;
 
-// --- Colors
+$sidenote-width: 220rem;
+$sidenote-margin: 20rem;
 
-$dark: #232529;
-$grey: #f9fafb;
-$purple: #8E44AD;
-$light: #fafafa;
-
-// --- New colors
-
-$true-black: #000;
-$black: #161617;
-$blacker: #1d1d1e;
-$red: #e03646;
-$shadow: #234;
-$white: #fff;
-
-$text-color: #333639;
-$text-grey: #5f5f66;
-
-// --- Greys
-
-$grey1: #112;
-$grey2: #223;
-$grey3: #334;
-$grey4: #445;
-$grey5: #556;
-$grey6: #667;
-$grey7: #778;
-$grey8: #889;
-$grey9: #99a;
-$greyA: #aab;
-$greyB: #b4b5b6;
-$greyC: #c4c5c6;
-$greyD: #ddd;
-$greyE: #eee;
-
-// --- Z-Index
-$z-index-0: 0;
-$z-index-1: 100;
-$z-index-2: 200;
-$z-index-3: 300;
-$z-index-4: 400;
-$z-index-5: 500;
-$z-index-6: 600;
-$z-index-7: 700;
-$z-index-8: 800;
-$z-index-9: 900;
-$z-index-10: 1000;
-
-$layer-header: 0;
+$top-stripe-height: 3px; // In px on purpose
 
 // --- Spacing
 
-$spacing: 4rem;
-$spacing2: $spacing * 2;
+$spacing-sm: 10rem;
+$spacing-md: 20rem;
+$spacing-lg: 40rem;
+$spacing-xl: 60rem;
 
-$spacing-md: 5rem;
-$spacing2-md: $spacing-md * 2;
+// --- Fonts
 
-// --- Typography
-$font-size: 1.9rem;
-$font-size-md: 2.1rem;
-
-$headers-font-family: 'Merriweather', serif;
-$headers-font-weight: 400;
-// $headers-font-family: 'Raleway', sans-serif;
-// $headers-font-weight: 800;
+// $headers-font-family: 'Arima Madurai', sans-serif;
+$headers-font-family: 'Salsa', sans-serif;
+$headers-font-weight: 800;
+$headers-line-height: 1.1;
 
 $body-font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-// 'Merriweather', serif;
 $body-font-weight: 400;
+
+// --- Colors
+
+$true-black: #000;
+$black: #111112;
+$true-white: #fff;
+$white: #fff;
+
+$cool-gray-50: #F8FAFC;
+$cool-gray-100: #F1F5F9;
+$cool-gray-200: #E2E8F0;
+$cool-gray-300: #CBD5E1;
+$cool-gray-400: #94A3B8;
+$cool-gray-500: #64748B;
+$cool-gray-600: #475569;
+$cool-gray-700: #334155;
+$cool-gray-800: #1E293B;
+$cool-gray-900: #0F172A;
+
+$text-color: #1a212a;
+$text-light: $cool-gray-500;
+
+$header-color: $cool-gray-800;
+$page-top-bg: $cool-gray-100;
+$page-top-border-color: $cool-gray-200;
+
+$code-color: $cool-gray-600;
+$code-bg: $cool-gray-50;
+
+$block-bg: $cool-gray-50;
+$separator-color: $cool-gray-200;
+
+// --- Themes
+
+$blue-theme-color: #196ee6;
+$blue-theme-gradient-color-1: #4341d7;
+$blue-theme-gradient-color-2: #00a3ef;
+
+$red-theme-color: #d62940;
+$red-theme-gradient-color-1: #da3654;
+$red-theme-gradient-color-2: #feac0e;
+
+$cool-gray-theme-color: #304f6e;
+$cool-gray-gradient-color-1: #2e4e6e;
+$cool-gray-gradient-color-2: #7ea6c7;
+
+$purple-theme-color: #8854d0;
+$purple-gradient-color-1: #a55eea;
+$purple-gradient-color-2: #eb3b5a;
+
+:root,
+.blue {
+  --theme-color: #{$blue-theme-color};
+  --gradient-color-1: #{$blue-theme-gradient-color-1};
+  --gradient-color-2: #{$blue-theme-gradient-color-2};
+}
+
+// :root,
+.red {
+  --theme-color: #{$red-theme-color};
+  --gradient-color-1: #{$red-theme-gradient-color-1};
+  --gradient-color-2: #{$red-theme-gradient-color-2};
+}
+
+// :root,
+.gray {
+  --theme-color: #{$cool-gray-theme-color};
+  --gradient-color-1: #{$cool-gray-gradient-color-1};
+  --gradient-color-2: #{$cool-gray-gradient-color-2};
+}
+
+// :root,
+.purple {
+  --theme-color: #{$purple-theme-color};
+  --gradient-color-1: #{$purple-gradient-color-1};
+  --gradient-color-2: #{$purple-gradient-color-2};
+}
+
+// --- Z-Index
+
+$layer-default: 0;
+$layer-sidenote: 10;
+$layer-menu: 100;
+$layer-modal: 1000;
+$layer-jump-to-content: 1200;
 
 // --- Transitions
 
 $time: 250ms;
-$time2: 500ms;
+$time-long: 500ms;
 
-// --- Header
-$rotation-height: 20rem;
-$rotation-width-xs: 100rem;
-$rotation-width-sm: 130rem;
-$rotation-width-md: 160rem;
+// --- Border radius
 
-// --- Pagination
-$pagination-color: $black;
-$pagination-hover-color: $red;
-$pagination-active-color: $white;
-$pagination-active-bg: $red;
-$pagination-separator-color: #bbb;
+$radius-xxs: 1px;
+$radius-xs: 2px;
+$radius-sm: 4px;

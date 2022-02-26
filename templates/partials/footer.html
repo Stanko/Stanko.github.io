@@ -1,0 +1,21 @@
+<footer class="footer">
+  <div class="container footer__content">
+    <a href="/atom.xml" class="footer__rss-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8" aria-hidden="true">
+        <g fill="currentColor" transform="matrix(1.3329835,0,0,1.3333333,-0.12812669,-2.6739007)">
+          <ellipse cx="0.88595736" cy="7.2168303" rx="0.78983712" ry="0.78859526" />
+          <path d="m 0.09769498,5.0054256 a 3,3 0 0 1 3.00000002,3 h 1 a 4,4 0 0 0 -4.00000002,-4 z" />
+          <path d="m 0.09769498,3.0054256 a 5,5 0 0 1 5.00000002,5 h 1 a 6,6 0 0 0 -6.00000002,-6 z" />
+        </g>
+      </svg>
+      RSS Feed
+    </a>
+    <div class="footer__text">
+      {% include "partials/svg-logo.html" %}
+      <p>© 2016-2022. All rights reserved.</p>
+      <p>Written with ♡ by Stanko Tadić. Made in Serbia.</p>
+    </div>
+    {% set nav_class = "nav--footer" %}
+    {% include "partials/nav.html" %}
+  </div>
+</footer>

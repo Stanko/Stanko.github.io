@@ -1,0 +1,92 @@
+body {
+  counter-reset: sidenote;
+}
+
+.sidenote__trigger {
+  text-decoration: 1px underline dotted $cool-gray-400;
+  display: inline;
+  line-height: 1;
+  transition: text-decoration $time;
+  outline: none;
+
+  &::after {
+    content: counter(sidenote);
+    counter-increment: sidenote;
+    font-size: 12rem;
+    line-height: 1;
+    vertical-align: super;
+  }
+
+  &:hover {
+    text-decoration-style: solid;
+    cursor: help;
+  }
+
+  &:focus {
+    text-decoration-color: $cool-gray-700;
+    text-decoration-style: solid;
+  }
+}
+
+.sidenote__note {
+  display: none;
+  border-left: 1px solid $cool-gray-700;
+  padding: 6rem 10rem;
+  font-size: 16rem;
+  margin: 5rem 0;
+  transition: background $time, border $time;
+
+  @include md-and-lower {
+    background-color: $cool-gray-50;
+  }
+
+  .sidenote__trigger--expanded + & {
+    // TODO explore it being inline on small screens
+    display: block;
+  }
+
+  @include lg {
+    .sidenote__trigger:hover + &,
+    .sidenote__trigger:focus + & {
+      border-color: $cool-gray-200;
+    }
+  }
+
+  @include lg {
+    border: 1px solid transparent;
+    background-color: white;
+    font-size: 14rem;
+    display: block !important;
+    clear: right;
+    float: right;
+    margin: -2rem #{-$sidenote-width - $sidenote-margin} 0 0;
+    width: $sidenote-width;
+    border-radius: $radius-sm;
+    padding: 7rem 10rem 8rem;
+    position: relative;
+    z-index: $layer-sidenote;
+
+    &::before {
+      content: counter(sidenote);
+      font-size: 12rem;
+      line-height: 1;
+      padding-right: 4rem;
+      vertical-align: super;
+    }
+  }
+
+  code {
+    font-size: 15rem !important;
+    background: none !important;
+    padding: 0 !important;
+    color: $cool-gray-800 !important;
+
+    @include lg {
+      font-size: 13rem !important;
+    }
+  }
+}
+
+.sidenote__bracket {
+  @include sr-only;
+}

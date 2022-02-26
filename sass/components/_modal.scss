@@ -1,0 +1,120 @@
+.modal {
+  display: none;
+}
+
+.modal.is-open {
+  display: block;
+}
+
+.modal {
+  z-index: $layer-modal;
+  position: fixed;
+}
+
+.modal__top {
+  background-color: $cool-gray-100;
+  position: relative;
+  z-index: $layer-modal;
+}
+
+.html--overflow-hidden .modal__top {
+  top: $top-stripe-height;
+  position: sticky;
+}
+
+.modal__bottom {
+  padding: 20rem 0;
+}
+
+.modal__overlay,
+.modal__shadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  // height: 100vh; // fallback
+  // height: calc(var(--vh, 1vh) * 100);
+}
+
+.modal__container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  // height: 100vh; // fallback
+  // height: calc(var(--vh, 1vh) * 100);
+}
+
+.modal__shadow {
+  background: rgba($black, 0.3);
+  pointer-events: none;
+}
+
+.modal__container {
+  background-color: $cool-gray-100;
+  overflow-y: hidden;
+}
+
+.html--overflow-hidden .modal__container {
+  overflow-y: scroll;
+}
+
+@keyframes overlay-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes overlay-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes content-in {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes content-out {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.modal[aria-hidden="false"] .modal__shadow {
+  animation: overlay-in $time-long;
+}
+
+.modal[aria-hidden="true"] .modal__shadow {
+  animation: overlay-out $time-long;
+}
+
+.modal[aria-hidden="false"] .modal__container {
+  animation: content-in $time-long;
+}
+
+.modal[aria-hidden="true"] .modal__container {
+  animation: content-out $time-long;
+}
+
+.modal .modal__container,
+.modal .modal__overlay {
+  will-change: transform;
+}

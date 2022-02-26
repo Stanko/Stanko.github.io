@@ -14,7 +14,7 @@
 
 // --- Small
 @mixin sm-only() {
-  @media (max-width: $breakpoint-md - 1) {
+  @media (max-width: #{$breakpoint-md - 1}) {
     @content;
   }
 }
@@ -27,7 +27,7 @@
 }
 
 @mixin md-and-lower() {
-  @media (max-width: $breakpoint-lg - 1) {
+  @media (max-width: #{$breakpoint-lg - 1}) {
     @content;
   }
 }
@@ -40,7 +40,7 @@
 }
 
 @mixin lg-and-lower() {
-  @media (max-width: $breakpoint-xl - 1) {
+  @media (max-width: #{$breakpoint-xl - 1}) {
     @content;
   }
 }
@@ -53,7 +53,7 @@
 }
 
 @mixin xl-and-lower() {
-  @media (max-width: $breakpoint-xxl - 1) {
+  @media (max-width: #{$breakpoint-xxl - 1}) {
     @content;
   }
 }
@@ -66,7 +66,7 @@
 }
 
 @mixin xxl-and-lower() {
-  @media (max-width: $breakpoint-xxxl - 1) {
+  @media (max-width: #{$breakpoint-xxxl - 1}) {
     @content;
   }
 }

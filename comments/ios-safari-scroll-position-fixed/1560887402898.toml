@@ -1,0 +1,6 @@
+comment_id = "42952010-9202-11e9-bb11-a5d7d6c43cd1"
+slug = "ios-safari-scroll-position-fixed"
+name = "Stanko"
+email = "13a28fac985c11eb7f40169be7da32f4"
+message = "Hi Sean,\n\nThat is correct, <code>position: fixed</code> won't work if any parent element has a transform applied. Unfortunately, without a example it is hard to see what is going on in your case. Try applying <code>transform: translate3d(0, 0, 0)</code> and <code>backface-visibility: hidden</code> hacks, but it is hard to tell if that is going to help.\n\nCheers!"
+date = "2019-06-18T19:50:02.897Z"

@@ -1,0 +1,6 @@
+comment_id = "08fdd7b0-acae-11e7-a70c-e7da05d06b40"
+slug = "webpack-babel-react-revisited"
+name = "Daniel Lo Nigro"
+email = "9e14f4d0793db81eb5f5580c0a88e642"
+message = "A minor note: Instead of running\n./node_modules/webpack/bin/webpack.js\n\nyou can run\n./node_modules/.bin/webpack\n\nIt's a little bit shorter :)"
+date = "2017-10-09T04:55:13.732Z"

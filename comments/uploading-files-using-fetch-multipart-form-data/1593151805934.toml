@@ -1,0 +1,6 @@
+comment_id = "add59840-b773-11ea-b26a-afb3e6be421e"
+slug = "uploading-files-using-fetch-multipart-form-data"
+name = "Sanyukta"
+email = "c797c51376a3fbeca5d18f52ed010ade"
+message = "Thank you. This post really helped. How do we upload multiple files? \nThis is my code which does not work.\n\n```\nvar formData = new FormData();\nvar fileField = document.querySelector(\"input[type='file']\");\n\nformData.append('file', fileField.files[0]); \nformData.append('file', fileField.files[1]); \nformData.append('file', fileField.files[2]); \n```\nWhen I print the length of the fileField.files, it gives me as 1. where as I have uploaded 3 files using my html code. \n\nHow do we upload 3 files?"
+date = "2020-06-26T06:10:05.930Z"

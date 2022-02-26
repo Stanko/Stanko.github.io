@@ -1,9 +1,0 @@
-_id: b8c7a4b0-13fc-11eb-ad86-09a54e6727d7
-slug: uploading-files-using-fetch-multipart-form-data
-name: Dave
-email: b631218a62720ae0094ebcd81e8bed87
-message: >-
-  I can't thank you for enough for posting this solution. Never would have
-  thought that specifying an accurate Content-Type header field would be an
-  issue. Saved me hours!
-date: '2020-10-22T00:22:51.943Z'

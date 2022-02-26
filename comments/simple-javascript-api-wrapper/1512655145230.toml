@@ -1,0 +1,6 @@
+comment_id = "c93c4490-db56-11e7-95c9-2dc45a1a7a05"
+slug = "simple-javascript-api-wrapper"
+name = "Stanko"
+email = "13a28fac985c11eb7f40169be7da32f4"
+message = "Hello brian,\n\nIf you are asking about <a href=\"https://www.npmjs.com/package/isomorphic-fetch\">isomorphic-fetch</a>, it is actually built on top of the github's polyfill, just made universal (it can run on the server).\n\nThen if you are asking about my <code> fetchResource</code> function, it is just light wrapper for handling API requests in frontend applications. It is easy to hook it up with application logic (redux for example) as it handles common logic and gives more descriptive errors.\n\nCheers!"
+date = "2017-12-07T13:59:05.229Z"

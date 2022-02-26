@@ -1,9 +1,0 @@
-_id: e7744050-f84b-11e6-a680-697c180ca854
-slug: setting-up-webpack-babel-and-react-from-scratch
-name: leila
-email: 79d2cb0ed58764d2b1311da07a1e7adb
-message: >-
-  hmm sorry, complete noob. why do we need file loader? doesnt webpack also
-  build the .html file into the dist folder? thanks!
-date: '2017-02-21T15:39:17.517Z'
-timestamp: 1487691557

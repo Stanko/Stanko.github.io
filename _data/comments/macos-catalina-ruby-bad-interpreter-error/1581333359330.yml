@@ -1,6 +1,0 @@
-_id: b6f551b0-4bf6-11ea-ad26-41cf97d43375
-slug: macos-catalina-ruby-bad-interpreter-error
-name: Mogli
-email: a01f2aa58192745cad0e22ab12cda5f2
-message: 'Or.... `docker run --rm -it -w /src -v $PWD:/src jekyll/jekyll`'
-date: '2020-02-10T11:15:59.326Z'

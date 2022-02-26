@@ -1,0 +1,13 @@
+{% if page and page.path == href %}
+  {% set active = true %}%
+{% endif %}
+{% if section and section.path == href %}
+  {% set active = true %}%
+{% endif %}
+
+<a
+  class="{% if class %}{{class}}{% endif %} {% if active %}active{% endif %}"
+  href="{{href}}"
+>
+  {{text}}
+</a>

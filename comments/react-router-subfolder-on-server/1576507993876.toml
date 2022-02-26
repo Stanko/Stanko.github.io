@@ -1,0 +1,6 @@
+comment_id = "c90ad820-2013-11ea-bffe-5d8553fd4a3a"
+slug = "react-router-subfolder-on-server"
+name = "Stanko"
+email = "13a28fac985c11eb7f40169be7da32f4"
+message = "Hi Catarina,\n\nI guess you haven't used hash routing. That means you still need to setup proper server redirections. If you are using appache, you should check [Setting up .htaccess file](#setting-up-htaccess-file) section in this post.\n\nCheers!"
+date = "2019-12-16T14:53:13.874Z"

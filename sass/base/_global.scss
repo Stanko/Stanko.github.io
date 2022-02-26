@@ -1,0 +1,184 @@
+.html--overflow-hidden {
+  &, body {
+    overflow: hidden;
+    height: 100%;
+  }
+}
+
+html {
+  font-size: 1px;
+
+  @include xxl {
+    font-size: 1.1px;
+  }
+
+  @include xxxl {
+    font-size: 1.2px;
+  }
+}
+
+body {
+  font-size: 18rem;
+  line-height: 1.5;
+  color: $text-color;
+  font-family: $body-font-family;
+  font-weight: $body-font-weight;
+
+  @include md {
+    font-size: 20rem;
+  }
+}
+
+.main {
+  background-color: $white;
+  outline: none;
+}
+
+a {
+  color: var(--theme-color);
+  text-decoration: none;
+  transition: border $time, background $time, color $time;
+}
+
+button {
+  transition: border $time, background $time, color $time;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  @include header;
+}
+
+h1,
+.h1 {
+  // @include text-gradient;
+  font-size: 34rem;
+
+  @include md {
+    font-size: 40rem;
+  }
+
+  @include lg {
+    font-size: 64rem;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 30rem;
+
+  @include md {
+    font-size: 34rem;
+  }
+
+  @include lg {
+    font-size: 40rem;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 24rem;
+
+  @include md {
+    font-size: 28rem;
+  }
+
+  @include lg {
+    font-size: 34rem;
+  }
+}
+
+h4,
+.h4{
+  font-size: 22rem;
+
+  @include md {
+    font-size: 24rem;
+  }
+
+  @include lg {
+    font-size: 26rem;
+  }
+}
+
+h5,
+h6,
+.h5,
+.h6 {
+  font-size: 18rem;
+
+  @include md {
+    font-size: 20rem;
+  }
+
+  @include lg {
+    font-size: 22rem;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+img[src$='.jpg'],
+img[src$='.jpeg'],
+img[src$='.JPG'],
+img[src$='.JPEG'] {
+  background-color: $block-bg;
+}
+
+iframe {
+  width: 100%;
+  display: block;
+  background-color: $block-bg;
+}
+
+svg {
+  overflow: visible;
+}
+
+.sr-only {
+  opacity: 0;
+  position: absolute;
+  left: -1000vw;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.text-gradient {
+  @include text-gradient;
+}
+
+.jump-to-content {
+  @include text-sm;
+  @include animated-underline;
+  color: $text-color;
+  background: $white;
+  display: block;
+  left: -200rem;
+  overflow: hidden;
+  padding: 10rem 15rem;
+  position: absolute;
+  top: $top-stripe-height;
+  z-index: $layer-jump-to-content;
+
+  &:focus {
+    left: 0;
+  }
+}
+
+.pixel-art {
+  image-rendering: crisp-edges;
+}

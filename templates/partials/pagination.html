@@ -1,0 +1,63 @@
+{% set start = paginator.current_index - 1 %}
+{% set end = paginator.current_index + 2 %}
+
+{% if start < 1 %}
+  {% set start = 1 %}
+{% endif %}
+
+{% if end >= paginator.number_pagers %}
+  {% set end = paginator.number_pagers + 1 %}
+{% endif %}
+
+<nav class="pagination container">
+  {% if paginator.previous %}
+    <a
+      class="pagination__item pagination__item--previous"
+      href="{{ paginator.previous }}"
+      aria-label="Previous page"
+    >
+      <svg viewBox="0 0 10 20" width="10" height="20" aria-hidden="true"><path d="M 10 0 0 10 10 20" class="pagination__arrow" /></svg>
+    </a>
+  {% else %}
+    <span class="pagination__item pagination__item--disabled pagination__item--previous" aria-hidden="true">
+      <svg viewBox="0 0 10 20" width="10" height="20" aria-hidden="true"><path d="M 10 0 0 10 10 20" class="pagination__arrow" /></svg>
+    </span>
+  {% endif %}
+
+  {% if start > 1 %}
+    {% set paginator_index = 1 %}
+    {% include "partials/pagination-link.html" %}
+  {% endif %}
+
+  {% if start > 2 %}
+    <span class="pagination__separator" aria-hidden="true">...</span>
+  {% endif %}
+
+  {% for i in range(start=start, end=end) %}
+    {% set paginator_index = i %}
+    {% include "partials/pagination-link.html" %}
+  {% endfor %}
+
+  {% if end < paginator.number_pagers %}
+    <span class="pagination__separator" aria-hidden="true">...</span>
+  {% endif %}
+
+  {% if end < paginator.number_pagers %}
+    {% set paginator_index = paginator.number_pagers %}
+    {% include "partials/pagination-link.html" %}
+  {% endif %}
+
+  {% if paginator.next %}
+    <a
+      class="pagination__item pagination__item--next"
+      href="{{ paginator.next }}"
+      aria-label="Next page"
+    >
+      <svg viewBox="0 0 10 20" width="10" height="20" aria-hidden="true"><path d="M 0 0 10 10 0 20" class="pagination__arrow" /></svg>
+    </a>
+  {% else %}
+    <span class="pagination__item pagination__item--disabled pagination__item--next" aria-hidden="true">
+      <svg viewBox="0 0 10 20" width="10" height="20" aria-hidden="true"><path d="M 0 0 10 10 0 20" class="pagination__arrow" /></svg>
+    </span>
+  {% endif %}
+</nav>

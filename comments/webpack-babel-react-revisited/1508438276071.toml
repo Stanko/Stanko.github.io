@@ -1,0 +1,6 @@
+comment_id = "9f698360-b4fc-11e7-9670-3b6a9dc04145"
+slug = "webpack-babel-react-revisited"
+name = "Elizabeth Reiher"
+email = "e961434174704044a7617e671d8a56a0"
+message = "I started receiving this error after we added 'index.html' and installed package with 'npm install --save-dev html-webpa-plugin'.\n\nError: Cannot find module '../lib/polyfills'\nAnd so my 'npm run dev' would not work after that."
+date = "2017-10-19T18:37:56.069Z"

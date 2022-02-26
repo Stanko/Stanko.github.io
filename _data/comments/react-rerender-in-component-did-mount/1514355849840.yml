@@ -1,9 +1,0 @@
-_id: 8b8a03d0-eace-11e7-a44f-935f90061bb7
-slug: react-rerender-in-component-did-mount
-name: Benjamin
-email: d3e5192b0dbdba1f1d379e69526a82bc
-message: >-
-  I came here because animationFrame was updating too fast, and setting timeouts
-  made it look choppy. Your double requestAnimationFrame did the trick. Would
-  never have thought of that.
-date: '2017-12-27T06:24:09.839Z'

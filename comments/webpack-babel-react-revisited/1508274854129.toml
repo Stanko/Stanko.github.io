@@ -1,0 +1,6 @@
+comment_id = "204e2ef0-b380-11e7-8146-2924d4c3fe6b"
+slug = "webpack-babel-react-revisited"
+name = "Nahuel José"
+email = "59b75bb18610cdc7603b9d0292f0babf"
+message = "Awesome! I needed this. Just one thing you should fix. The \"build\" script should be \"webpack -p\", this way we get the production version of React!"
+date = "2017-10-17T21:14:14.128Z"

@@ -1,0 +1,6 @@
+comment_id = "4c1187e0-81d3-11e8-ad81-0bb488426aeb"
+slug = "react-router-subfolder-on-server"
+name = "Ram"
+email = "aff5b420d655fda397cfae110a89533a"
+message = "@Stanko:\n\nInstead of this snippet,\n<pre>&lt;BrowserRouter basename='/path/to/subfolder/'&gt;</pre>\n\ncan't we use this one ?\n\n<pre>&lt;BrowserRouter basename={location.pathname}&gt;</pre>\n\nThis make the path configurable and this will work even if the path of subfolder changes, what do you feel about this?"
+date = "2018-07-07T10:48:35.259Z"

@@ -1,9 +1,0 @@
-_id: e04920f0-31fc-11ea-9814-87f9081fbbbb
-slug: uploading-files-using-fetch-multipart-form-data
-name: Dave
-email: 4ed39ae7dc70314eb6aa65209614cb04
-message: >-
-  Thank you for this article. I've been stumped on a file upload forever. I'm
-  still new to development, so I have a question. Where exactly do I write the
-  delete options.headers['Content-Type']; code? Inside the fetch request?
-date: '2020-01-08T09:54:35.444Z'

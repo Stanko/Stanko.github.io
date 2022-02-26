@@ -1,0 +1,41 @@
+{% set timestamp = now() | date(format="%s%f") %}
+
+<div class="spoiler {% if class %}{{class}}{% endif %}">
+  <button
+    aria-expanded="{% if isExpanded %}true{% else %}false{% endif %}"
+    aria-controls='spoiler-{{timestamp}}'
+    class="spoiler__toggle btn btn--sm btn--empty"
+  >
+    <span
+      class="spoiler__show"
+      {% if isExpanded %}style="display: none"{% endif %}
+    >
+      {% if show %}
+        {{show}}
+      {% else %}
+        Show
+      {% endif %}
+      + <!-- TODO add icon -->
+    </span>
+    <span
+      class="spoiler__hide"
+      {% if isExpanded is undefined %}style="display: none"{% endif %}
+    >
+      {% if hide %}
+        {{hide}}
+      {% else %}
+        Hide
+      {% endif %}
+      - <!-- TODO add icon -->
+    </span>
+  </button>
+
+  <div
+    id='spoiler-{{timestamp}}'
+    class="spoiler__content"
+    aria-hidden="{% if isExpanded %}false{% else %}true{% endif %}"
+    {% if isExpanded is undefined %}style="display: none"{% endif %}
+  >
+    {{text | markdown(inline=true) | safe}}
+  </div>
+</div>

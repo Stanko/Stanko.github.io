@@ -1,0 +1,10 @@
+.notice {
+  @include text-sm;
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  border-radius: $radius-sm;
+  padding: 10rem 20rem;
+  color: #925f07;
+  margin-bottom: 20rem;
+  max-width: $container-width-narrow;
+}

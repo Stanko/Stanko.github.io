@@ -1,94 +1,116 @@
-.Menu-link {
-  @include red-underline-link;
-  background: none;
-  border: 0;
-  color: $white;
-  display: inline-block;
-  margin: 0;
-  padding: 0.2rem;
-  text-decoration: none;
-  vertical-align: bottom;
-}
+.menu {
+  background-color: $page-top-bg;
+  padding: 10rem 0;
+  z-index: $layer-menu;
+  transition: transform $time-long, border $time-long;
+  border-bottom: 1px solid transparent;
 
-.Menu-link--active {
-  &::before {
-    border-top: 1px solid rgba($white, 0.2);
-    transform: scaleX(1);
+  > .container {
+    display: flex;
+    align-items: center;
+  }
+
+  @include lg {
+    padding: 20rem 0;
+    pointer-events: none;
+
+    & > * {
+      pointer-events: all;
+    }
   }
 }
 
-.Menu-link--instagram {
-  padding-bottom: 1rem;
+.menu--hide {
+  transform: translateY(-100%);
 }
 
-.Menu-linkContent {
+.menu-stripe {
+  border-top: $top-stripe-height solid var(--theme-color);
+  position: fixed;
+  top: 0;
+  z-index: $layer-modal + 1;
+  width: 100%;
+}
+
+.menu__logo {
+  display: flex;
   align-items: center;
-  display: inline-flex;
-}
+  padding: 10rem;
+  margin-left: -10rem;
+  margin-right: auto;
 
-.Menu-linkIcon {
-  fill: $white;
-  height: 1.7rem;
-  width: 1.7rem;
-  margin: 0 -0.5rem 0 0.5rem;
-}
-
-.Menu-instagramIcon {
-  height: 2.2rem;
-  width: 2.2rem;
-  display: block;
-  transform: translateY(0.3rem);
-}
-
-.Header {
-  .Menu {
-    color: rgba($white, 0.2);
-    display: none;
-    font-size: 1.6rem;
-
-    @include md {
-      display: block;
-    }
+  svg {
+    height: 30rem;
+    transition: transform $time;
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
   }
 
-  .Menu-button {
-    background: none;
-    border: 0;
-    height: 6rem;
-    padding: 0;
+  &:hover svg {
+    transform: scale(1.06);
+  }
+
+  path {
+    fill: var(--theme-color);
+  }
+}
+
+.menu__logo-text {
+  @include marvin;
+  margin-left: 8rem;
+  font-size: 16rem;
+  letter-spacing: 0.5rem;
+  color: $text-color;
+  font-weight: bold;
+}
+
+.menu__logo-big-letter {
+  font-size: 18rem;
+}
+
+.menu__toggle {
+  padding: 10rem;
+  margin-right: -10rem;
+  width: 50rem;
+  height: 50rem;
+
+  @include md {
+    display: none;
+  }
+
+  span {
+    background: $cool-gray-600;
+    border-radius: 2rem;
+    display: block;
+    height: 2rem;
+    margin: 6rem auto;
+    transition: background $time;
+    width: 28rem;
+  }
+}
+
+.menu__close {
+  width: 50rem;
+  height: 50rem;
+  margin-right: -10rem;
+  position: relative;
+
+  span {
     position: absolute;
-    right: -1rem;
-    top: 0;
-    width: 6rem;
-    z-index: 100;
-
-    @include md {
-      display: none;
-    }
-
-    span {
-      background: $white;
-      border-radius: 0.2rem;
-      display: block;
-      height: 0.2rem;
-      margin: 0.8rem auto;
-      transition: background $time;
-      width: 3.2rem;
-    }
-  }
-}
-
-.Footer {
-  .Menu-button {
-    display: none;
+    background: $cool-gray-600;
+    border-radius: 2rem;
+    display: block;
+    height: 2rem;
+    // margin: 6rem auto;
+    transition: background $time;
+    width: 28rem;
+    left: 11rem;
   }
 
-  .Menu-link {
-    color: $white;
-    display: inline-block;
+  span:first-child {
+    transform: rotate(45deg);
   }
-
-  .Menu-instagramIcon {
-    transform: translateY(0.7rem);
+  span:last-child {
+    transform: rotate(-45deg);
   }
 }

@@ -1,0 +1,26 @@
+{% set VISIBLE_COMMENTS = 10 %}
+
+{% if page.extra.comments %}
+  <div class="comments">
+    <h2 id="comments" class="h3 comments__title">Comments ({{ page.extra.comments | length }})</h2>
+
+    <div>
+      {% for comment_path in page.extra.comments | slice(end=VISIBLE_COMMENTS) %}
+        {% set comment = load_data(path=comment_path) %}
+
+        {% include "partials/comment.html" %}
+      {% endfor %}
+    </div>
+
+    {% if page.extra.comments | length > VISIBLE_COMMENTS %}
+      <button class="btn btn--empty comments__show-all">Show all comments</button>
+      <div class="comments__all">
+        {% for comment_path in page.extra.comments | slice(start=VISIBLE_COMMENTS) %}
+        {% set comment = load_data(path=comment_path) %}
+
+          {% include "partials/comment.html" %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+{% endif %}

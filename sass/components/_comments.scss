@@ -1,189 +1,96 @@
-input,
-textarea {
-  display: block;
-  width: 100%;
-  margin-bottom: 2rem;
+.comments {
+  max-width: $container-width-narrow;
 }
 
-button {
-
+.comments__title {
+  margin-top: 100rem;
+  padding-top: 20rem;
 }
 
-.CommentForm {
-  position: relative;
-}
-
-.CommentForm-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  z-index: 10;
-  align-items: center;
-  justify-content: center;
+.comments__all {
   display: none;
 }
 
-.CommentForm-input {
-  @include placeholder(rgba($black, 0.5));
-  background: rgba($black, 0.03);
-  border-radius: 0.4rem;
-  color: $black;
-  padding: 1rem 1.5rem;
-  resize: none;
-  transition: background $time;
+.comments__show-all {
+  margin: 20rem 0;
+}
 
-  &:focus {
-    @include placeholder(rgba($black, 0.75));
-    background: rgba($black, 0.05);
+.comments__all .comment:first-child {
+  border-top: 1px solid $separator-color;
+}
+
+.comment {
+  padding-top: 40rem;
+
+  & {
+    border-bottom: 1px solid $separator-color;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  pre, p {
+    margin-bottom: 20rem;
+  }
+
+  p code {
+    font-size: 16rem;
+    background-color: $cool-gray-100;
+    color: $code-color;
+    padding: 1rem 5rem;
+    border-radius: $radius-xxs;
+  }
+
+  pre {
+    background-color: $cool-gray-100;
+    color: $code-color;
+    padding: 1rem 5rem;
+    overflow: auto;
+    padding: $spacing-md $spacing-lg;
+    margin-left: -$gutter;
+    margin-right: -$gutter;
+    @include text-sm;
+
+    @include md {
+      border-radius: $radius-xs;
+      margin-left: -$gutter-md;
+      margin-right: -$gutter-md;
+    }
   }
 }
 
-.CommentForm-input--catch {
-  margin-left: -10000px;
-  opacity: 0;
-  position: absolute;
-}
-
-.CommentForm-input--message {
-  height: 20rem;
-}
-
-.CommentForm-errorMessages {
-  color: $red;
-  margin-bottom: 2rem;
-}
-
-.CommentForm-sendFailed {
-  color: $red;
-  display: none;
-  margin-bottom: 2rem;
-}
-
-.CommentForm-sendSucceeded {
-  display: none;
-  margin-bottom: 2rem;
-}
-
-.CommentForm-loader {
-  width: 40px;
-  height: 40px;
-  position: relative;
-  margin: 0 auto;
-}
-
-.CommentForm-sendButton {
-  align-items: center;
-  border: 1px solid $red;
-  border-radius: 2.3rem;
-  background: none;
-  color: $red;
-  display: inline-flex;
-  font-size: 1.8rem;
-  height: 4.6rem;
-  margin: 0;
-  padding: 0 2.5rem;
-  transition: color $time, background $time;
-
-  @include md {
-    border-radius: 2.5rem;
-    height: 5rem;
-    padding: 0 3rem;
-  }
-
-  &:focus,
-  &:hover {
-    background: $red;
-    color: $white;
-  }
-}
-
-@keyframes comment-loader-bounce {
-  0%, 100% {
-    transform: scale(0);
-  } 50% {
-    transform: scale(1);
-  }
-}
-
-.CommentForm-loaderElement {
-  animation: comment-loader-bounce 2.0s infinite ease-in-out;
-  background-color: $red;
-  border-radius: 50%;
-  height: 100%;
-  left: 0;
-  opacity: 0.6;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.CommentForm-loaderElement--two {
-  animation-delay: -1.0s;
-  background-color: $purple;
-}
-
-.Comments-wrapper {
-  padding-top: 4rem;
-}
-
-.Comments-title {
-  margin-top: 0;
-}
-
-.Comments h3 {
-  margin-top: 2.5rem;
-}
-
-.Comment {
-  border-bottom: 1px dotted rgba($black, 0.1);
-  padding: 3.5rem 0 2rem;
-
-  @include md {
-    padding: 4.5rem 0 3rem;
-  }
-
-  &:first-child {
-    border-top: 1px dotted rgba($black, 0.1);
-  }
-}
-
-.Comment-data {
-  align-items: center;
+.comment__top {
   display: flex;
+  align-items: center;
 }
 
-.Comment-avatar {
+.comment__avatar {
   border-radius: 50%;
   display: block;
-  height: 5rem;
-  margin-right: 1.5rem;
-  width: 5rem;
+  height: 50rem;
+  margin-right: 15rem;
+  width: 50rem;
+  background-color: $cool-gray-200;
 }
 
-.Comment-name {
-  font-family: $headers-font-family;
+.comment__avatar--mm {
+  border: 1px solid $cool-gray-200;
+  background-color: white;
+  display: flex;
+  padding: 10rem;
+
+  path {
+    stroke-width: 1.5px;
+  }
 }
 
-.Comment-date {
-  color: $grey7;
-  font-size: 1.5rem;
+.comment__date {
+  @include text-sm;
+  color: $text-light;
 }
 
-.Comment-message {
-  margin: 1.5rem 0 0;
+.comment__message {
+  padding: 20rem 0;
 }
 
-
-.Comment-message code {
-  background: rgba($black, 0.03);
-  border-radius: 0.2rem;
-  color: #458;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 0.9em;
-  margin: 0;
-  padding: 0.1rem 0.6rem;
-}

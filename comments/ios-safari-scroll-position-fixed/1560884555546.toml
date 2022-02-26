@@ -1,0 +1,6 @@
+comment_id = "a187a130-91fb-11e9-bb11-a5d7d6c43cd1"
+slug = "ios-safari-scroll-position-fixed"
+name = "Sean"
+email = "3f190140a0296e0f6065888652415e90"
+message = "I've got the transform on the parent of a child that is fixed to the top of a modal whose contents are scrollable, which is set to be 100% of the width and height of the viewport, interestingly, the transform seems to just prevent the child element from being fixed, it no longer scrolls with the page, if I remove the transform from the parent, the child will scroll with the page, but it's flickering real bad. Can you think of any reason why this would happen? I'm stumped."
+date = "2019-06-18T19:02:35.545Z"
