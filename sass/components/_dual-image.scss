@@ -13,10 +13,9 @@
   @include lg {
     margin: 40rem 0;
     width: $container-inner-width;
-    max-width: calc(100vw - #{ 2 * $gutter-lg });
+    max-width: calc(100vw - #{2 * $gutter-lg});
   }
 }
-
 
 .dual-image__img {
   @include sm-only {

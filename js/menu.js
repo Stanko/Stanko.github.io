@@ -5,7 +5,9 @@ const ANIMATION_DURATION = 500;
 const searchInput = document.querySelector(".search__input");
 const page = document.querySelector("#page");
 
-const reducedMotionMediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+const reducedMotionMediaQuery = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+);
 
 let y;
 let timeout;

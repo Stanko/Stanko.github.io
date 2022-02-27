@@ -37,7 +37,10 @@
   top: -500vh;
 }
 
-@mixin text-gradient($color1: var(--gradient-color-1), $color2: var(--gradient-color-2)) {
+@mixin text-gradient(
+  $color1: var(--gradient-color-1),
+  $color2: var(--gradient-color-2)
+) {
   color: var(--theme-color);
   // TODO decide if this is better
   box-decoration-break: clone;
@@ -66,7 +69,7 @@
   &::before {
     border-top: $width solid $color;
     bottom: -$width;
-    content: '';
+    content: "";
     display: block;
     left: 0;
     position: absolute;
@@ -90,11 +93,13 @@
     color: $color;
   }
 
-  &:-moz-placeholder { // Firefox 18-
+  &:-moz-placeholder {
+    // Firefox 18-
     color: $color;
   }
 
-  &::-moz-placeholder {  // Firefox 19+
+  &::-moz-placeholder {
+    // Firefox 19+
     color: $color;
   }
 

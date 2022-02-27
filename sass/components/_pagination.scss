@@ -21,7 +21,7 @@
 
 a.pagination__item {
   &:hover {
-    color: var(--theme-color)
+    color: var(--theme-color);
   }
 }
 
@@ -32,7 +32,7 @@ a.pagination__item {
   border-radius: 50%;
 }
 
-.pagination__item--disabled  {
+.pagination__item--disabled {
   opacity: 0.3;
 }
 
@@ -40,7 +40,6 @@ a.pagination__item {
 .pagination__item--next {
   margin: 0 10rem;
 }
-
 
 .pagination__separator {
   color: $cool-gray-300;

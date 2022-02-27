@@ -1,5 +1,14 @@
 {
   "cSpell.words": [
     "sidenote"
-  ]
+  ],
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.formatOnSave": true
+  },
+  "[scss]": {
+    "editor.formatOnSave": true
+  }
 }

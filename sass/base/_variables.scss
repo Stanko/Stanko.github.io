@@ -31,12 +31,13 @@ $spacing-xl: 60rem;
 // --- Fonts
 
 // $headers-font-family: 'Arima Madurai', sans-serif;
-$headers-font-family: 'Salsa', sans-serif;
+$headers-font-family: "Salsa", sans-serif;
 $headers-font-weight: 800;
 $headers-line-height: 1.1;
 
 // $body-font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-$body-font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, Inter, Arial, "Noto Sans", sans-serif;
+$body-font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, Roboto,
+  "Helvetica Neue", Helvetica, Inter, Arial, "Noto Sans", sans-serif;
 $body-font-weight: 400;
 
 // --- Colors
@@ -46,16 +47,16 @@ $black: #111112;
 $true-white: #fff;
 $white: #fff;
 
-$cool-gray-50: #F8FAFC;
-$cool-gray-100: #F1F5F9;
-$cool-gray-200: #E2E8F0;
-$cool-gray-300: #CBD5E1;
-$cool-gray-400: #94A3B8;
-$cool-gray-500: #64748B;
+$cool-gray-50: #f8fafc;
+$cool-gray-100: #f1f5f9;
+$cool-gray-200: #e2e8f0;
+$cool-gray-300: #cbd5e1;
+$cool-gray-400: #94a3b8;
+$cool-gray-500: #64748b;
 $cool-gray-600: #475569;
 $cool-gray-700: #334155;
-$cool-gray-800: #1E293B;
-$cool-gray-900: #0F172A;
+$cool-gray-800: #1e293b;
+$cool-gray-900: #0f172a;
 
 $text-color: #1a212a;
 $text-light: $cool-gray-500;

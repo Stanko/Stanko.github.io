@@ -1,5 +1,6 @@
 .html--overflow-hidden {
-  &, body {
+  &,
+  body {
     overflow: hidden;
     height: 100%;
   }
@@ -99,7 +100,7 @@ h3,
 }
 
 h4,
-.h4{
+.h4 {
   font-size: 22rem;
 
   @include md {
@@ -130,10 +131,10 @@ img {
   max-width: 100%;
 }
 
-img[src$='.jpg'],
-img[src$='.jpeg'],
-img[src$='.JPG'],
-img[src$='.JPEG'] {
+img[src$=".jpg"],
+img[src$=".jpeg"],
+img[src$=".JPG"],
+img[src$=".JPEG"] {
   background-color: $block-bg;
 }
 
