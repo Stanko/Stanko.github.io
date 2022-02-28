@@ -11,7 +11,6 @@
 
   .logo {
     height: 30rem;
-    margin: 0 auto 10rem;
   }
 
   .logo path {
@@ -50,4 +49,9 @@
 
 .footer__text {
   margin: 30rem 0;
+}
+
+.footer__logo-link {
+  display: inline-block;
+  margin-bottom: 10rem;
 }

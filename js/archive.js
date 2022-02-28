@@ -9,8 +9,11 @@ if (slug) {
   const category = document.querySelector(`.archive__category--${slug}`);
 
   if (category) {
-    const toggle = category.querySelector(".archive__posts");
+    const toggle = category.querySelector(".archive__toggle");
     const posts = category.querySelector(".archive__posts");
+
+    toggle.setAttribute("aria-expanded", true);
+    console.log(toggle);
 
     posts.style.display = "block";
     posts.setAttribute("aria-hidden", false);
