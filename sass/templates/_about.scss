@@ -1,5 +1,8 @@
 .about__myself {
   width: 200rem;
+  float: right;
+  text-align: right;
+  aspect-ratio: 0.945;
   shape-outside: polygon(
     41% 6%,
     46% 0%,
@@ -18,7 +21,6 @@
     32% 18%,
     41% 15%
   );
-  float: right;
 
   @include md {
     width: 300rem;

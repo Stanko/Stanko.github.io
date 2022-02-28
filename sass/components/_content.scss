@@ -159,6 +159,18 @@ $container-inner-width: $container-width - (2 * $gutter-lg);
   max-width: 700rem;
 }
 
+.image--xs {
+  @include md {
+    max-width: 300rem;
+  }
+}
+
+.image--sm {
+  @include md {
+    max-width: 450rem;
+  }
+}
+
 .image--lg {
   @include lg {
     width: $container-inner-width;

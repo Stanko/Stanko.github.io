@@ -31,8 +31,8 @@
         </div>
       </div>
       {% if latest_post.extra.image %}
-        <div class="latest-post__image-wrapper">
-          <img src="{{ latest_post.extra.image }}" alt="" aria-hidden="true" class=""  />
+        <div class="latest-post__image-wrapper {% if latest_post.extra.shadow %}latest-post__image-wrapper--shadow{% endif %}">
+          <img src="{{ latest_post.extra.image }}" alt="" aria-hidden="true"  />
         </div>
       {% endif %}
     </div>

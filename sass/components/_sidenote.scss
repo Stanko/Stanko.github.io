@@ -4,7 +4,8 @@ body {
 
 .sidenote__trigger {
   display: inline;
-  line-height: 1;
+  text-align: inherit;
+  white-space: normal;
   transition: all $time;
   outline: none;
   // Messy as text-decoration props support is weird

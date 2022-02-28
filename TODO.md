@@ -1,10 +1,8 @@
 ## Must have
 
-* about
-* build process
-
 ## Maybe / nice to have
 
+* article tag for posts - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article
 * more categories?
 * spomenuti #debug u postu
 * spoiler animation
