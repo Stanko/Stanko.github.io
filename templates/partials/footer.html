@@ -1,6 +1,6 @@
 <footer class="footer">
   <div class="container footer__content">
-    <a href="/atom.xml" class="footer__rss-link">
+    <a href="/atom.xml" class="footer__rss-link" target="_blank">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8" aria-hidden="true">
         <g fill="currentColor" transform="matrix(1.3329835,0,0,1.3333333,-0.12812669,-2.6739007)">
           <ellipse cx="0.88595736" cy="7.2168303" rx="0.78983712" ry="0.78859526" />
@@ -11,7 +11,9 @@
       RSS Feed
     </a>
     <div class="footer__text">
-      {% include "partials/svg-logo.html" %}
+      <a href="/" aria-label="Home">
+        {% include "partials/svg-logo.html" %}
+      </a>
       <p>© 2016-2022. All rights reserved.</p>
       <p>Written with ♡ by Stanko Tadić. Made in Serbia.</p>
     </div>

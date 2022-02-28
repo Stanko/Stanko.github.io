@@ -3,7 +3,7 @@ title = "Neon, generative art piece made using 2d vector field"
 aliases = ["/neon-generative-art-piece-made-using-2d-vector-field/"]
 
 [taxonomies]
-category = ["Generative Art & Plotting"]
+category = ["Generative"]
 tags = ["svg", "js", "drawing", "generative-art"]
 
 [extra]

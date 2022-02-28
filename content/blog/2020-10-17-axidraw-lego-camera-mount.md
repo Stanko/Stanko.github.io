@@ -3,7 +3,7 @@ title = "AxiDraw Lego camera mount"
 aliases = ["/axidraw-lego-camera-mount/"]
 
 [taxonomies]
-category = ["Random"]
+category = ["Pen Plotting"]
 tags = ["generative-art", "plotter", "raspberrypi", "camera"]
 
 [extra]

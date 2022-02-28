@@ -3,7 +3,7 @@ title = "AxiDraw plotter Raspberry Pi camera mount"
 aliases = ["/axidraw-plotter-camera-point/", "/axidraw-plotter-camera-mount/"]
 
 [taxonomies]
-category = ["Random"]
+category = ["Pen Plotting"]
 tags = ["generative-art", "plotter", "raspberrypi", "camera"]
 
 [extra]

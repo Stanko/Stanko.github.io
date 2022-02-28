@@ -17,7 +17,7 @@
   {% elif post_index_reversed < 1000 %}
     {% set post_index_reversed = "0" ~ post_index_reversed %}
   {% endif %}
-  
+
   {# Skip the current post #}
   {% if page.title == post.title %}
     {% continue %}
@@ -57,12 +57,11 @@
 
     <a href="{{ post.permalink }}" class="related-posts__post">
       <div class="related-posts__post-title">
-        {{post.title | safe}}
+        {{ post.title | safe }}{% include "partials/svg-post-arrow.html" %}
       </div>
       <div class="related-posts__date">
         {{ post.date | date(format="%d. %B %Y") }}
       </div>
     </a>
-  {% endfor %}
+{% endfor %}
 </div>
-  

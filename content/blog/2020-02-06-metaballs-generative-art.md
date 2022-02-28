@@ -3,7 +3,7 @@ title = "Metaballs"
 aliases = ["/metaballs-generative-art/"]
 
 [taxonomies]
-category = ["Generative Art & Plotting"]
+category = ["Generative"]
 tags = ["svg", "generative-art", "threejs", "js", "metaballs"]
 
 [extra]
