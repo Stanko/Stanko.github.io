@@ -19,7 +19,7 @@ awk 'NR==FNR{if (/muffinman.io\/search-data/) for (i=-1;i<=1;i++) del[NR+i]; nex
 rm ./public/sitemap-tmp.xml
 
 # Switch to gh-pages branch
-git checkout ${remote_branch}
+git checkout gh-pages
 
 git config user.name "GitHub Actions"
 git config user.email "github-actions-bot@users.noreply.${GITHUB_HOSTNAME}"
@@ -37,4 +37,4 @@ git add .
 git commit -a -m "Deploy `date +'%Y-%m-%d %H:%M:%S'`"
 
 # Push changes
-git push origin ${remote_branch}
+git push origin gh-pages
