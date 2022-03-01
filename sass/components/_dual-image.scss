@@ -8,6 +8,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: $spacing-md;
+    align-items: flex-start;
   }
 
   @include lg {
@@ -30,6 +31,10 @@
   @include lg {
     width: calc(50% - #{$spacing-md});
   }
+}
+
+.dual-image--shadow .dual-image__img {
+  box-shadow: $image-shadow;
 }
 
 .dual-image__text {

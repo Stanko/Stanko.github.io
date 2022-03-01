@@ -25,7 +25,7 @@
 {% include "partials/latest-post.html" %}
 
 <div class="blog-list">
-  {% for post in blog_posts.pages | slice(start=1, end=5) %}
+  {% for post in blog_posts.pages | slice(start=1, end=7) %}
     {% include "partials/blog-list-post.html" %}
   {% endfor %}
 </div>

@@ -137,6 +137,7 @@ $container-inner-width: $container-width - (2 * $gutter-lg);
 
 .image {
   margin-bottom: $spacing-md;
+  border-radius: $radius-xs;
 }
 
 .image--lg,
@@ -194,5 +195,5 @@ $container-inner-width: $container-width - (2 * $gutter-lg);
 }
 
 .image--shadow {
-  box-shadow: 1px 1px 7px rgba(0, 0, 20, 0.15);
+  box-shadow: $image-shadow;
 }

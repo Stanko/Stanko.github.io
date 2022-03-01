@@ -86,7 +86,7 @@ $cool-gray-gradient-color-1: #2e4e6e;
 $cool-gray-gradient-color-2: #7ea6c7;
 
 $purple-theme-color: #8854d0;
-$purple-gradient-color-1: #a55eea;
+$purple-gradient-color-1: #6f52d7;
 $purple-gradient-color-2: #eb3b5a;
 
 :root,
@@ -135,3 +135,7 @@ $time-long: 500ms;
 $radius-xxs: 1px;
 $radius-xs: 2px;
 $radius-sm: 4px;
+
+// --- Shadows
+
+$image-shadow: 1px 1px 7px rgba(0, 0, 20, 0.15);
