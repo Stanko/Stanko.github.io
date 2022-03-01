@@ -1,6 +1,6 @@
 #!/bin/sh
 
-./zola build
+./zola-linux-0.15.3 build
 
 # Create JS file from search data
 mv ./public/search-data/index.html ./public/js/search-data.js
@@ -28,9 +28,12 @@ git config user.email "github-actions-bot@users.noreply.${GITHUB_HOSTNAME}"
 find . ! -path './.git' ! -path . ! -name 'public' -maxdepth 1 -exec rm -rf {} +
 
 # Copy everything from the new build to root
-cp -r ./public/ ./
+cp -r ./public/* ./
 # Remove public folder
 rm -rf ./public
+
+# Create .nojekyll file
+touch .nojekyll
 
 # Commit with current time
 git add .

@@ -30,4 +30,4 @@ jobs:
       - name: 'Checkout'
         uses: actions/checkout@master
       - name: Build and deploy
-        run: sh build-and-deploy.sh
+        run: sh deploy.sh
