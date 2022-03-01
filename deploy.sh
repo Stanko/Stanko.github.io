@@ -19,7 +19,7 @@ awk 'NR==FNR{if (/muffinman.io\/search-data/) for (i=-1;i<=1;i++) del[NR+i]; nex
 rm ./public/sitemap-tmp.xml
 
 # Switch to gh-pages branch
-git fetch
+git fetch origin gh-pages gh-pages
 git checkout gh-pages
 
 git config user.name "GitHub Actions"

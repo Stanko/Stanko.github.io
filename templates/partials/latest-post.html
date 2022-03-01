@@ -27,7 +27,7 @@
         </div>
 
         <div class="latest-post__intro">
-          {{ latest_post.extra.intro }}
+          {{ latest_post.extra.intro | safe }}
         </div>
       </div>
       {% if latest_post.extra.image %}

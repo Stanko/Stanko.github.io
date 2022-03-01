@@ -45,7 +45,7 @@ body {
   padding: 6rem 10rem;
   font-size: 16rem;
   margin: 5rem 0;
-  transition: background $time, border $time;
+  transition: box-shadow $time, transform $time;
 
   @include md-and-lower {
     background-color: $cool-gray-50;
@@ -59,7 +59,8 @@ body {
   @include lg {
     .sidenote__trigger:hover + &,
     .sidenote__trigger:focus + & {
-      border-color: $cool-gray-200;
+      box-shadow: $image-shadow;
+      transform: translateY(-2px);
     }
   }
 

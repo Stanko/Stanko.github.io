@@ -9,14 +9,13 @@ minify_html = true
 generate_feed = true
 
 taxonomies = [
-    { name = "category", feed = true},
-    { name = "tags", feed = false},
+  { name = "category", feed = true},
+  { name = "tags", feed = false},
 ]
 
 [markdown]
 highlight_code = true
 highlight_theme = "OneHalfLight"
-
 
 [extra]
 

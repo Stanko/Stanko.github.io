@@ -1,5 +1,5 @@
 +++
-title = "Neon, generative art piece made using 2d vector field"
+title = "<span>Neon,</span> a glowy vector field"
 aliases = ["/neon-generative-art-piece-made-using-2d-vector-field/"]
 
 [taxonomies]
@@ -13,6 +13,8 @@ comments = [
 ]
 image = "/img/neon/meta.png"
 icon = "/icons/neon.svg"
+theme = "purple"
+
 +++
 
 Recently I started playing with [generative art](https://en.wikipedia.org/wiki/Generative_art). I'm new to the whole thing and I'm absolutely enjoying it. Today I want to show you the first generative art project I'm satisfied with.
