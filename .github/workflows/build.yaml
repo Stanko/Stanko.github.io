@@ -31,9 +31,10 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/zola'
     steps:
-      - uses: actions/checkout@master
       - name: 'Checkout'
+        uses: actions/checkout@master
       - name: 'Build and deploy'
+        uses: actions/checkout@master
         uses: Stanko/zola-deploy-action@master
         env:
           PAGES_BRANCH: gh-pages
