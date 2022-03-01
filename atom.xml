@@ -522,7 +522,7 @@ See the Pen &lt;a href=&#x27;http:&#x2F;&#x2F;codepen.io&#x2F;stanko&#x2F;pen&#x
 		<content type="html">&lt;p&gt;I already &lt;a href=&quot;&#x2F;blog&#x2F;axidraw-plotter-camera-mount&#x2F;&quot;&gt;built a mount&lt;&#x2F;a&gt; for my Raspberry Pi camera, but it was 3d printed. Meaning that it has one fixed position. I used it a couple of times, but I wasn&#x27;t super satisfied. Then I stumbled on &lt;a href=&quot;https:&#x2F;&#x2F;imgur.com&#x2F;gallery&#x2F;VjXSSzh&quot;&gt;these images&lt;&#x2F;a&gt;, and thought it was a great idea to use Lego to build a new, more versatile mount.&lt;&#x2F;p&gt;
 &lt;p&gt;A friend of mine had a bunch of spare Legos laying around, so he gave me two bags full of Legos to play around. I wasn&#x27;t sure where to start, especially because I wanted to make both height and rotation adjustable. After fiddling with the blocks for about an hour, I came up with this:&lt;&#x2F;p&gt;
 &lt;div
-  class=&quot;dual-image &quot; 
+  class=&quot;dual-image  &quot;
 &gt;
   &lt;img class=&quot;dual-image__img&quot; src=&quot;&amp;#x2F;img&amp;#x2F;axidraw&amp;#x2F;lego-front.jpg&quot; alt=&quot;Camera on the mount, front view&quot; &#x2F;&gt;
   &lt;img class=&quot;dual-image__img&quot; src=&quot;&amp;#x2F;img&amp;#x2F;axidraw&amp;#x2F;lego-back.jpg&quot; alt=&quot;Camera on the mount, back view&quot; &#x2F;&gt;
@@ -876,7 +876,7 @@ Expect new posts about my process and tools in the near future.&lt;span class=&q
 &lt;hr &#x2F;&gt;
 &lt;p&gt;More images to show how it looks mounted on the plotter:&lt;&#x2F;p&gt;
 &lt;div
-  class=&quot;dual-image &quot; 
+  class=&quot;dual-image  &quot;
 &gt;
   &lt;img class=&quot;dual-image__img&quot; src=&quot;&amp;#x2F;img&amp;#x2F;axidraw&amp;#x2F;mounted-1.jpg&quot; alt=&quot;The contraption mounted on AxiDraw plotter&quot; &#x2F;&gt;
   &lt;img class=&quot;dual-image__img&quot; src=&quot;&amp;#x2F;img&amp;#x2F;axidraw&amp;#x2F;mounted-2.jpg&quot; alt=&quot;Another angle of the contraption mounted with the Raspberry Pi in the background&quot; &#x2F;&gt;
@@ -904,7 +904,7 @@ And of course, big thanks to &lt;a href=&quot;https:&#x2F;&#x2F;www.instagram.co
 &lt;p&gt;In the process of publishing the book, my father&#x27;s original letters got lost. We were left with only low resolution scans. That&#x27;s why I asked my friend &lt;a href=&quot;https:&#x2F;&#x2F;www.instagram.com&#x2F;sun_day_sign&#x2F;&quot;&gt;Ivan&lt;&#x2F;a&gt;, to redraw (and digitalize) all of the illustrations using scans as a reference.&lt;&#x2F;p&gt;
 &lt;p&gt;Ivan did an amazing job, just check the comparison below:&lt;&#x2F;p&gt;
 &lt;div
-  class=&quot;dual-image &quot; 
+  class=&quot;dual-image  &quot;
 &gt;
   &lt;img class=&quot;dual-image__img&quot; src=&quot;&amp;#x2F;img&amp;#x2F;letters-from-sarajevo&amp;#x2F;water-original.jpg&quot; alt=&quot;One of the original illustrations, low resolution scan&quot; &#x2F;&gt;
   &lt;img class=&quot;dual-image__img&quot; src=&quot;&amp;#x2F;img&amp;#x2F;letters-from-sarajevo&amp;#x2F;water.png&quot; alt=&quot;Same illustration redrawn by Ivan&quot; &#x2F;&gt;
@@ -4523,7 +4523,7 @@ and what I&#x27;m trying to teach you is directly based on my experience on thes
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646074829358239861&#x27;
+    aria-controls=&#x27;spoiler-1646144818453566436&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -4547,7 +4547,7 @@ and what I&#x27;m trying to teach you is directly based on my experience on thes
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646074829358239861&#x27;
+    id=&#x27;spoiler-1646144818453566436&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
@@ -4657,7 +4657,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.&lt;&#x
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646074829360271730&#x27;
+    aria-controls=&#x27;spoiler-1646144818455889894&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -4681,7 +4681,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.&lt;&#x
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646074829360271730&#x27;
+    id=&#x27;spoiler-1646144818455889894&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
@@ -4837,7 +4837,7 @@ Now we are talking! We can start adding some modern JavaScript.&lt;&#x2F;p&gt;
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646074829366768832&#x27;
+    aria-controls=&#x27;spoiler-1646144818461755994&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -4861,7 +4861,7 @@ Now we are talking! We can start adding some modern JavaScript.&lt;&#x2F;p&gt;
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646074829366768832&#x27;
+    id=&#x27;spoiler-1646144818461755994&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
@@ -4983,7 +4983,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646074829369785487&#x27;
+    aria-controls=&#x27;spoiler-1646144818465354839&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -5007,7 +5007,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646074829369785487&#x27;
+    id=&#x27;spoiler-1646144818465354839&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
@@ -5214,7 +5214,7 @@ next to js and html files.&lt;&#x2F;p&gt;
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646074829377515270&#x27;
+    aria-controls=&#x27;spoiler-1646144818476003164&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -5238,7 +5238,7 @@ next to js and html files.&lt;&#x2F;p&gt;
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646074829377515270&#x27;
+    id=&#x27;spoiler-1646144818476003164&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
@@ -5392,7 +5392,7 @@ in it.&lt;&#x2F;p&gt;
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646074829383296683&#x27;
+    aria-controls=&#x27;spoiler-1646144818483406269&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -5416,7 +5416,7 @@ in it.&lt;&#x2F;p&gt;
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646074829383296683&#x27;
+    id=&#x27;spoiler-1646144818483406269&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
@@ -6413,7 +6413,7 @@ See you there!&lt;&#x2F;p&gt;
   &#x2F;&gt;
 
 &lt;div
-  class=&quot;dual-image &quot; 
+  class=&quot;dual-image  &quot;
 &gt;
   &lt;img class=&quot;dual-image__img&quot; src=&quot;&amp;#x2F;img&amp;#x2F;meetup-vol-6&amp;#x2F;sarah.jpg&quot; alt=&quot;Sarah speaking about JavaScript testing&quot; &#x2F;&gt;
   &lt;img class=&quot;dual-image__img&quot; src=&quot;&amp;#x2F;img&amp;#x2F;meetup-vol-6&amp;#x2F;milos.jpg&quot; alt=&quot;Milos AKA Docker overlord&quot; &#x2F;&gt;
