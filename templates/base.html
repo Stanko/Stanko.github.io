@@ -93,10 +93,9 @@
   <script src="/js/app.js"></script>
 
   <script>
-    if (window.location.hostname !== 'localhost' && window.location.hostname.search('.local') > -1 && window.location.hostname !== '0.0.0.0') {
+    if (window.location.hostname !== 'localhost' && window.location.hostname !== 'motorhead.local' && window.location.hostname !== '0.0.0.0') {
       (function() {
         window.counter = 'https://muffinman_io.goatcounter.com/count';
-
         var script = document.createElement('script');
         script.async = 1;
         script.src = '//gc.zgo.at/count.js';

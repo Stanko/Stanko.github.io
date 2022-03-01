@@ -60,6 +60,7 @@
 
 .html--overflow-hidden .modal__container {
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 @keyframes overlay-in {

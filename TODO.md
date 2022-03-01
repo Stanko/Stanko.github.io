@@ -2,20 +2,10 @@
 
 ## Maybe / nice to have
 
+* better image sizing
 * article tag for posts - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article
 * more categories?
 * spomenuti #debug u postu
-* spoiler animation
+* spoiler and sidenote reveal animation
 * 3d buttons - https://www.joshwcomeau.com/animation/3d-button/
-
-```
-stanko:stanko.github.io/ $ bundle exec jekyll build --trace
-Configuration file: /Users/stanko/Projects/stanko.github.io/_config.yml
-            Source: /Users/stanko/Projects/stanko.github.io
-       Destination: /Users/stanko/Projects/stanko.github.io/_site
- Incremental build: disabled. Enable with --incremental
-      Generating...
-                    done in 1.987 seconds.
- Auto-regeneration: disabled. Use --watch to enable.
- ```
 
