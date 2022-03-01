@@ -16,7 +16,7 @@
 		<content type="html">
       &lt;p&gt;This post was originally written for our internal technology newsletter at &lt;a href=&quot;https:&#x2F;&#x2F;work.co&quot;&gt;Work &amp;amp; Co&lt;&#x2F;a&gt;. It is a little bit adapted for web, but the content is almost identical.&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
-&lt;p&gt;Almost a year ago I made this plot. It is called &lt;span
+&lt;p&gt;About a year ago I made this plot. It is called &lt;span
   class=&quot;sidenote__trigger &quot;
   tabindex=&quot;0&quot;
   role=&quot;button&quot;
@@ -65,7 +65,8 @@
   title=&quot;Anchor link for: voronoi-diagram&quot;
 &gt;&lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
 &lt;&#x2F;h2&gt;
-&lt;p&gt;I use Voronoi diagrams a lot in my drawings. So much, that I&#x27;m sometimes trying to avoid them, to make sure I&#x27;m not limiting myself by a single algorithm. Voronoi diagram takes a collection of points, and then partitions a plane into polygons, where each polygon&#x27;s edge is right in the middle of two points. It sounds like a lot, but if you study this image, it should become clearer. For a more detailed explanation you can check out &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Voronoi_diagram&quot;&gt;the article on Wikipedia&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I use Voronoi diagrams a lot in my drawings. So much, that I&#x27;m sometimes trying to avoid them, to make sure I&#x27;m not limiting myself by a single algorithm.&lt;&#x2F;p&gt;
+&lt;p&gt;Voronoi diagram takes a collection of points, and then partitions a plane into polygons, where each polygon&#x27;s edge is right in the middle of two points. It sounds like a lot, but if you study this image, it should become clearer. For a more detailed explanation you can check out &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Voronoi_diagram&quot;&gt;the article on Wikipedia&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 
   &lt;img
     class=&quot;image image--sm  &quot;
@@ -79,7 +80,7 @@
   title=&quot;Anchor link for: generating-points&quot;
 &gt;&lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
 &lt;&#x2F;h2&gt;
-&lt;p&gt;To get Voronoi polygons, we&#x27;ll need some points. We&#x27;ll iterate from the center. In each iteration, we take a random point on a circle and displace it a little bit, so it doesn&#x27;t look artificial. Then, increase radius a little bit and repeat the whole process. The larger the radius, the more points we are going to generate.&lt;&#x2F;p&gt;
+&lt;p&gt;To get Voronoi polygons, we&#x27;ll need some points. We&#x27;ll iterate from the center, and in each iteration, we&#x27;ll take a random point on a circle and displace it a little bit, so it doesn&#x27;t look artificial. Then, increase the radius and repeat the whole process. The larger the radius, the more points we are going to generate.&lt;&#x2F;p&gt;
 &lt;p&gt;The result looks nice, but it took me a number of tries to get it just right.&lt;&#x2F;p&gt;
 
   &lt;img
@@ -97,8 +98,8 @@
   &#x2F;&gt;
 
 &lt;p&gt;&lt;strong&gt;Different points distribution&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;Like I mentioned, the point distribution is something I tweaked to get the result I like. For example, if we change the easing function when increasing radius (&amp;quot;ease in&amp;quot; instead of &amp;quot;ease out&amp;quot;), we&#x27;ll get a completely different result. If you ask me, it doesn&#x27;t look nearly as good.&lt;&#x2F;p&gt;
-&lt;p&gt;Let me give you a tip, if you start doing generative art, don&#x27;t be afraid to experiment. If a parameter looks nice in a range between 10 and 20, try -50 or 300 or swap &lt;em&gt;x&lt;&#x2F;em&gt; and &lt;em&gt;y&lt;&#x2F;em&gt; coordinates. Do it for fun, a lot of times it will not look good, but sometimes it will blow your mind.&lt;&#x2F;p&gt;
+&lt;p&gt;Like I mentioned, the point distribution is something I tweaked to get the result I like. For example, if we change the easing function for radius increasing (&amp;quot;ease in&amp;quot; instead of &amp;quot;ease out&amp;quot;), we&#x27;ll get a completely different result. If you ask me, it doesn&#x27;t look nearly as good.&lt;&#x2F;p&gt;
+&lt;p&gt;Let me give you a tip, if you start doing generative art, don&#x27;t be afraid to experiment. If a parameter looks nice in a range between 10 and 20, try -50 or 300 or swap &lt;code&gt;x&lt;&#x2F;code&gt; and &lt;code&gt;y&lt;&#x2F;code&gt; coordinates. Do it for fun, as a lot of times it will not look good, but sometimes it will and it will just blow your mind.&lt;&#x2F;p&gt;
 &lt;div
   class=&quot;dual-image  &quot;
 &gt;
@@ -111,14 +112,14 @@
   title=&quot;Anchor link for: cleaning-up-voronoi&quot;
 &gt;&lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
 &lt;&#x2F;h2&gt;
-&lt;p&gt;Let&#x27;s get rid of points, as they already did their work. We can loose these weird looking edge polygons. When I got to this point I thought to myself: &lt;em&gt;&amp;quot;OK, it is taking shape. I can work with this.&amp;quot;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Let&#x27;s get rid of points, as they already did their work. We can loose these weird looking edge polygons as well. When I got to this point I thought to myself: &lt;em&gt;&amp;quot;OK, this is taking shape. I can work with this.&amp;quot;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;div
   class=&quot;dual-image  &quot;
 &gt;
   &lt;img class=&quot;dual-image__img&quot; src=&quot;&amp;#x2F;img&amp;#x2F;krypton&amp;#x2F;30.png&quot; alt=&quot;Diagram without points&quot; &#x2F;&gt;
   &lt;img class=&quot;dual-image__img&quot; src=&quot;&amp;#x2F;img&amp;#x2F;krypton&amp;#x2F;40.png&quot; alt=&quot;Diagram with edge polygons removed&quot; &#x2F;&gt;
 &lt;&#x2F;div&gt;
-&lt;p&gt;Back then I experimented a little bit with colors. But as I wanted to pen plot it, I abandoned the whole gradient idea.&lt;&#x2F;p&gt;
+&lt;p&gt;Back then, I experimented a little bit with colors.&lt;&#x2F;p&gt;
 
   &lt;img
     class=&quot;image image--md  &quot;
@@ -126,14 +127,15 @@
     alt=&quot;Color exploration&quot;
   &#x2F;&gt;
 
+&lt;p&gt;But as I wanted to pen plot the drawing, I abandoned the whole full color idea.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;making-it-interesting&quot;&gt;Making it interesting&lt;a
   class=&quot;header-anchor&quot;
   href=&quot;#making-it-interesting&quot; aria-label=&quot;Anchor link for: making-it-interesting&quot;
   title=&quot;Anchor link for: making-it-interesting&quot;
 &gt;&lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
 &lt;&#x2F;h2&gt;
-&lt;p&gt;We made a solid base, but let&#x27;s try to make it more interesting. How about we space the tiles apart a little? Randomly remove pieces? Make the whole thing explode? Or maybe pieces could start falling apart? Tiles could have rounded corners? The overall idea is to mimic phenomena from real physical world, by carefully introducing randomness.&lt;&#x2F;p&gt;
-&lt;p&gt;I tried all of the things mentioned above, and for the final plot I scaled the tiles and make pieces break off the main structure. Only pieces in the lower half are offset. The further away they are from the center, the more offset they are going to be. A little bit of randomness is sprinkled on top to break the mathematical orderliness.&lt;&#x2F;p&gt;
+&lt;p&gt;We made a solid base, but let&#x27;s try to make it more interesting. How about we space the tiles apart a little? Randomly remove pieces? Make the whole thing explode? Or maybe pieces could start falling apart? Tiles could have rounded corners? The general idea is to mimic phenomena from the physical world by using a little bit of carefully introduced randomness.&lt;&#x2F;p&gt;
+&lt;p&gt;I tried all of the things mentioned above, and for the final plot I scaled the tiles and made pieces break off the main structure. Only pieces in the lower half are offset. The further away they are from the center, the more offset they are going to be. A little bit of randomness is sprinkled on top to break the mathematical orderliness.&lt;&#x2F;p&gt;
 &lt;div
   class=&quot;dual-image  &quot;
 &gt;
@@ -5030,7 +5032,7 @@ and what I&#x27;m trying to teach you is directly based on my experience on thes
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646156198603377795&#x27;
+    aria-controls=&#x27;spoiler-1646157351227126950&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -5054,7 +5056,7 @@ and what I&#x27;m trying to teach you is directly based on my experience on thes
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646156198603377795&#x27;
+    id=&#x27;spoiler-1646157351227126950&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
@@ -5165,7 +5167,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.&lt;&#x
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646156198605542714&#x27;
+    aria-controls=&#x27;spoiler-1646157351229685852&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -5189,7 +5191,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.&lt;&#x
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646156198605542714&#x27;
+    id=&#x27;spoiler-1646157351229685852&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
@@ -5347,7 +5349,7 @@ Now we are talking! We can start adding some modern JavaScript.&lt;&#x2F;p&gt;
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646156198610441256&#x27;
+    aria-controls=&#x27;spoiler-1646157351236441375&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -5371,7 +5373,7 @@ Now we are talking! We can start adding some modern JavaScript.&lt;&#x2F;p&gt;
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646156198610441256&#x27;
+    id=&#x27;spoiler-1646157351236441375&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
@@ -5494,7 +5496,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646156198613418282&#x27;
+    aria-controls=&#x27;spoiler-1646157351240318611&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -5518,7 +5520,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646156198613418282&#x27;
+    id=&#x27;spoiler-1646157351240318611&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
@@ -5728,7 +5730,7 @@ next to js and html files.&lt;&#x2F;p&gt;
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646156198621546152&#x27;
+    aria-controls=&#x27;spoiler-1646157351250729767&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -5752,7 +5754,7 @@ next to js and html files.&lt;&#x2F;p&gt;
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646156198621546152&#x27;
+    id=&#x27;spoiler-1646157351250729767&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
@@ -5907,7 +5909,7 @@ in it.&lt;&#x2F;p&gt;
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646156198627719006&#x27;
+    aria-controls=&#x27;spoiler-1646157351258366660&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -5931,7 +5933,7 @@ in it.&lt;&#x2F;p&gt;
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646156198627719006&#x27;
+    id=&#x27;spoiler-1646157351258366660&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
