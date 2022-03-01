@@ -16,7 +16,7 @@ This post was originally written for our internal technology newsletter at [Work
 
 -----
 
-Almost a year ago I made this plot. It is called {{ sidenote(text='"The Fall of Krypton"', note="Named by a dear friend and ex-colleague") }}, and I'll try to break down how it was made.
+About a year ago I made this plot. It is called {{ sidenote(text='"The Fall of Krypton"', note="Named by a dear friend and ex-colleague") }}, and I'll try to break down how it was made.
 
 {{ image(
   alt="The Fall of Krypton plot"
@@ -51,7 +51,9 @@ To make navigation through the history easier, for each unique combination of pa
 
 ## Voronoi diagram
 
-I use Voronoi diagrams a lot in my drawings. So much, that I'm sometimes trying to avoid them, to make sure I'm not limiting myself by a single algorithm. Voronoi diagram takes a collection of points, and then partitions a plane into polygons, where each polygon's edge is right in the middle of two points. It sounds like a lot, but if you study this image, it should become clearer. For a more detailed explanation you can check out [the article on Wikipedia](https://en.wikipedia.org/wiki/Voronoi_diagram).
+I use Voronoi diagrams a lot in my drawings. So much, that I'm sometimes trying to avoid them, to make sure I'm not limiting myself by a single algorithm.
+
+Voronoi diagram takes a collection of points, and then partitions a plane into polygons, where each polygon's edge is right in the middle of two points. It sounds like a lot, but if you study this image, it should become clearer. For a more detailed explanation you can check out [the article on Wikipedia](https://en.wikipedia.org/wiki/Voronoi_diagram).
 
 {{ image(
   alt="Voronoi diagram"
@@ -62,7 +64,7 @@ I use Voronoi diagrams a lot in my drawings. So much, that I'm sometimes trying 
 
 ## Generating points
 
-To get Voronoi polygons, we'll need some points. We'll iterate from the center. In each iteration, we take a random point on a circle and displace it a little bit, so it doesn't look artificial. Then, increase radius a little bit and repeat the whole process. The larger the radius, the more points we are going to generate.
+To get Voronoi polygons, we'll need some points. We'll iterate from the center, and in each iteration, we'll take a random point on a circle and displace it a little bit, so it doesn't look artificial. Then, increase the radius and repeat the whole process. The larger the radius, the more points we are going to generate.
 
 The result looks nice, but it took me a number of tries to get it just right.
 
@@ -82,9 +84,9 @@ Now when we have our points, Voronoi can do it's thing. This is what we end up w
 
 **Different points distribution**
 
-Like I mentioned, the point distribution is something I tweaked to get the result I like. For example, if we change the easing function when increasing radius ("ease in" instead of "ease out"), we'll get a completely different result. If you ask me, it doesn't look nearly as good.
+Like I mentioned, the point distribution is something I tweaked to get the result I like. For example, if we change the easing function for radius increasing ("ease in" instead of "ease out"), we'll get a completely different result. If you ask me, it doesn't look nearly as good.
 
-Let me give you a tip, if you start doing generative art, don't be afraid to experiment. If a parameter looks nice in a range between 10 and 20, try -50 or 300 or swap *x* and *y* coordinates. Do it for fun, a lot of times it will not look good, but sometimes it will blow your mind.
+Let me give you a tip, if you start doing generative art, don't be afraid to experiment. If a parameter looks nice in a range between 10 and 20, try -50 or 300 or swap `x` and `y` coordinates. Do it for fun, as a lot of times it will not look good, but sometimes it will and it will just blow your mind.
 
 {{ dual_image(
   alt1="Points with different distribution"
@@ -95,7 +97,7 @@ Let me give you a tip, if you start doing generative art, don't be afraid to exp
 
 ## Cleaning up Voronoi
 
-Let's get rid of points, as they already did their work. We can loose these weird looking edge polygons. When I got to this point I thought to myself: *"OK, it is taking shape. I can work with this."*
+Let's get rid of points, as they already did their work. We can loose these weird looking edge polygons as well. When I got to this point I thought to myself: *"OK, this is taking shape. I can work with this."*
 
 
 {{ dual_image(
@@ -106,7 +108,7 @@ Let's get rid of points, as they already did their work. We can loose these weir
 ) }}
 
 
-Back then I experimented a little bit with colors. But as I wanted to pen plot it, I abandoned the whole gradient idea.
+Back then, I experimented a little bit with colors.
 
 {{ image(
   alt="Color exploration"
@@ -114,12 +116,13 @@ Back then I experimented a little bit with colors. But as I wanted to pen plot i
   size="md"
 ) }}
 
+But as I wanted to pen plot the drawing, I abandoned the whole full color idea.
 
 ## Making it interesting
 
-We made a solid base, but let's try to make it more interesting. How about we space the tiles apart a little? Randomly remove pieces? Make the whole thing explode? Or maybe pieces could start falling apart? Tiles could have rounded corners? The overall idea is to mimic phenomena from real physical world, by carefully introducing randomness.
+We made a solid base, but let's try to make it more interesting. How about we space the tiles apart a little? Randomly remove pieces? Make the whole thing explode? Or maybe pieces could start falling apart? Tiles could have rounded corners? The general idea is to mimic phenomena from the physical world by using a little bit of carefully introduced randomness.
 
-I tried all of the things mentioned above, and for the final plot I scaled the tiles and make pieces break off the main structure. Only pieces in the lower half are offset. The further away they are from the center, the more offset they are going to be. A little bit of randomness is sprinkled on top to break the mathematical orderliness.
+I tried all of the things mentioned above, and for the final plot I scaled the tiles and made pieces break off the main structure. Only pieces in the lower half are offset. The further away they are from the center, the more offset they are going to be. A little bit of randomness is sprinkled on top to break the mathematical orderliness.
 
 {{ dual_image(
   alt1="Add polygon offset"
