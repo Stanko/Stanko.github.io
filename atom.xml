@@ -2149,9 +2149,6 @@ Apple made a change and switched the default shell to zsh (instead of bash). Fro
 		<id>https://muffinman.io/blog/javascript-keyboard-easter-egg/</id>
 		<content type="html">
       &lt;p&gt;I love &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Easter_egg_(media)#Software&quot;&gt;easter eggs&lt;&#x2F;a&gt; in software.&lt;&#x2F;p&gt;
-&lt;div class=&quot;notice&quot;&gt;
-  Keyboard easter egg is not a part of my website since the redesign in 2022. But there is still a functional demo at the bottom of the post.
-&lt;&#x2F;div&gt;
 &lt;p&gt;You may have noticed the keyboard image in the background of my blog. This thing on the right side of the screen. Those with a keen eye figured out it highlights keys as you are typing. It has been here for some time now, and on my colleague&#x27;s request, I&#x27;ll explain how it works.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
 &lt;p&gt;Let&#x27;s break it down.&lt;&#x2F;p&gt;
@@ -5032,7 +5029,7 @@ and what I&#x27;m trying to teach you is directly based on my experience on thes
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646296994962171899&#x27;
+    aria-controls=&#x27;spoiler-1646341336548270734&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -5056,7 +5053,7 @@ and what I&#x27;m trying to teach you is directly based on my experience on thes
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646296994962171899&#x27;
+    id=&#x27;spoiler-1646341336548270734&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
@@ -5167,7 +5164,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.&lt;&#x
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646296994964370045&#x27;
+    aria-controls=&#x27;spoiler-1646341336550564064&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -5191,7 +5188,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.&lt;&#x
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646296994964370045&#x27;
+    id=&#x27;spoiler-1646341336550564064&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
@@ -5349,7 +5346,7 @@ Now we are talking! We can start adding some modern JavaScript.&lt;&#x2F;p&gt;
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646296994970279673&#x27;
+    aria-controls=&#x27;spoiler-1646341336556456726&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -5373,7 +5370,7 @@ Now we are talking! We can start adding some modern JavaScript.&lt;&#x2F;p&gt;
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646296994970279673&#x27;
+    id=&#x27;spoiler-1646341336556456726&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
@@ -5496,7 +5493,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646296994973879097&#x27;
+    aria-controls=&#x27;spoiler-1646341336560059359&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -5520,7 +5517,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646296994973879097&#x27;
+    id=&#x27;spoiler-1646341336560059359&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
@@ -5730,7 +5727,7 @@ next to js and html files.&lt;&#x2F;p&gt;
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646296994985971103&#x27;
+    aria-controls=&#x27;spoiler-1646341336569060588&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -5754,7 +5751,7 @@ next to js and html files.&lt;&#x2F;p&gt;
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646296994985971103&#x27;
+    id=&#x27;spoiler-1646341336569060588&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
@@ -5909,7 +5906,7 @@ in it.&lt;&#x2F;p&gt;
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646296995000175726&#x27;
+    aria-controls=&#x27;spoiler-1646341336575923570&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -5933,7 +5930,7 @@ in it.&lt;&#x2F;p&gt;
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646296995000175726&#x27;
+    id=&#x27;spoiler-1646341336575923570&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
