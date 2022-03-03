@@ -1,7 +1,7 @@
 .footer {
   @include text-sm;
   background-color: $black;
-  color: $cool-gray-400;
+  color: $gray-400;
   padding: 60rem 0;
   text-align: center;
 
@@ -15,7 +15,7 @@
 
   .logo path {
     fill: none;
-    stroke: $cool-gray-400;
+    stroke: $gray-400;
     stroke-width: 1rem;
   }
 }
@@ -24,7 +24,7 @@
   @include animated-underline(var(--theme-color), 2px);
   @include header;
   display: inline-flex;
-  color: $cool-gray-100;
+  color: $gray-100;
   align-items: flex-end;
   padding-bottom: 2rem;
   margin-left: -0.5em; // to visually balance it

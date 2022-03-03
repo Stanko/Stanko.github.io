@@ -14,10 +14,6 @@ image = "/img/keyboard.png"
 
 I love [easter eggs](https://en.wikipedia.org/wiki/Easter_egg_(media)#Software) in software.
 
-<div class="notice">
-  Keyboard easter egg is not a part of my website since the redesign in 2022. But there is still a functional demo at the bottom of the post.
-</div>
-
 You may have noticed the keyboard image in the background of my blog. This thing on the right side of the screen. Those with a keen eye figured out it highlights keys as you are typing. It has been here for some time now, and on my colleague's request, I'll explain how it works.
 
 <!-- more -->

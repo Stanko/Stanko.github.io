@@ -1,4 +1,6 @@
 .content {
+  position: relative;
+  z-index: $layer-content;
   padding-bottom: 40rem;
   max-width: $container-width-narrow;
 
@@ -64,7 +66,7 @@
   ul code,
   ol code {
     font-size: 17rem;
-    background-color: $cool-gray-100;
+    background-color: $gray-100;
     color: $code-color;
     padding: 1rem 5rem;
     border-radius: $radius-xxs;

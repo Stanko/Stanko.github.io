@@ -26,14 +26,14 @@
 }
 
 .btn--empty {
-  border: 1px solid $cool-gray-300;
-  color: $cool-gray-600;
+  border: 1px solid $gray-300;
+  color: $gray-600;
   background-color: transparent;
 
   &:hover {
     background-color: transparent;
     color: $black;
-    border-color: $cool-gray-400;
+    border-color: $gray-400;
   }
 }
 

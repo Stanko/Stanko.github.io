@@ -9,4 +9,5 @@
 * spoiler and sidenote reveal animation
 * 3d buttons - https://www.joshwcomeau.com/animation/3d-button/
 * anchor links on touch screens
+* mini game
 

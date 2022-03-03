@@ -15,15 +15,15 @@
   }
 
   .nav__item.active {
-    border-bottom-color: $cool-gray-400;
+    border-bottom-color: $gray-400;
   }
 
   .nav__item {
-    color: $cool-gray-800;
+    color: $gray-800;
   }
 
   span {
-    color: $cool-gray-300;
+    color: $gray-300;
   }
 }
 
@@ -31,15 +31,15 @@
   justify-content: center;
 
   .nav__item.active {
-    border-bottom-color: $cool-gray-700;
+    border-bottom-color: $gray-700;
   }
 
   .nav__item {
-    color: $cool-gray-100;
+    color: $gray-100;
   }
 
   span {
-    color: $cool-gray-800;
+    color: $gray-800;
   }
 }
 

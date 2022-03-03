@@ -1,0 +1,35 @@
+.keyboard-svg {
+  display: none;
+  left: 50%;
+  opacity: 0.15;
+  overflow: visible;
+  position: absolute;
+  top: 50rem;
+  transform: rotate(-7deg);
+  width: 500rem;
+  z-index: $layer-default;
+
+  @include md {
+    display: block;
+    width: 650rem;
+  }
+
+  @include lg {
+    opacity: 0.25;
+    max-width: 900rem;
+    width: 80%;
+  }
+}
+
+// --- Keyboard keys
+
+.key {
+  fill: $gray-200;
+  stroke-width: 2;
+  stroke: transparent;
+}
+
+.key--active {
+  stroke: var(--theme-color);
+  // opacity: 0.7;
+}

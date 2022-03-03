@@ -37,14 +37,14 @@
 
   p code {
     font-size: 16rem;
-    background-color: $cool-gray-100;
+    background-color: $gray-100;
     color: $code-color;
     padding: 1rem 5rem;
     border-radius: $radius-xxs;
   }
 
   pre {
-    background-color: $cool-gray-100;
+    background-color: $gray-100;
     color: $code-color;
     padding: 1rem 5rem;
     overflow: auto;
@@ -72,11 +72,11 @@
   height: 50rem;
   margin-right: 15rem;
   width: 50rem;
-  background-color: $cool-gray-200;
+  background-color: $gray-200;
 }
 
 .comment__avatar--mm {
-  border: 1px solid $cool-gray-200;
+  border: 1px solid $gray-200;
   background-color: white;
   display: flex;
   padding: 10rem;
