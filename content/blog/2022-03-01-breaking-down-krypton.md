@@ -24,14 +24,14 @@ About a year ago I made this plot. It is called {{ sidenote(text='"The Fall of K
   size="md"
 ) }}
 
-The wonderful thing about generative art is that code is just a tool. Thing that really matters is the actual artwork. In this specific case, code is straight forward and relatively simple. But it produces drawings that, in my opinion, look visually pleasing and have a nice sense of depth to them.
+The wonderful thing about generative art is that code is just a tool. Thing that really matters is the actual artwork. In this specific case, code is straightforward and relatively simple. But it produces drawings that, in my opinion, look visually pleasing and have a nice sense of depth to them.
 
 
 ## Tooling
 
 For all of my generative work, I use plain JavaScript, [p5.js](https://p5js.org/) and a couple of custom-made tools. These tools are often crude, but they do exactly what I want so I don't mind. With each new project I keep adding more features and polishing them. At some point these tools may reach the point where they are presentable. If that happens I'll gladly share them with the world and open source everything.
 
-This is how the interface looks like. I have an easy way to add controls for image parameters. These controls allow me to tweak drawings with a short feedback loop. Each time a parameter is changed, the image is redrawn and the parameter is reflected in the URL. This allows me to go through iterations using the browser history.
+This is how the interface looks. I have an easy way to add controls for image parameters. These controls allow me to tweak drawings with a short feedback loop. Each time a parameter is changed, the image is redrawn and the parameter is reflected in the URL. This allows me to go through iterations using the browser history.
 
 {{ image(
   alt="My tooling"
@@ -51,7 +51,7 @@ To make navigation through the history easier, for each unique combination of pa
 
 ## Voronoi diagram
 
-I use Voronoi diagrams a lot in my drawings. So much, that I'm sometimes trying to avoid them, to make sure I'm not limiting myself by a single algorithm.
+I use Voronoi diagrams a lot in my drawings. So much, that I'm sometimes trying to avoid them, to make sure I'm not limiting myself to a single algorithm.
 
 Voronoi diagram takes a collection of points, and then partitions a plane into polygons, where each polygon's edge is right in the middle of two points. It sounds like a lot, but if you study this image, it should become clearer. For a more detailed explanation you can check out [the article on Wikipedia](https://en.wikipedia.org/wiki/Voronoi_diagram).
 
