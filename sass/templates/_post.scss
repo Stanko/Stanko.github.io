@@ -103,17 +103,20 @@
 a.header-anchor {
   background: transparent url("/img/link.svg") no-repeat;
   background-size: auto 1.1em;
-  position: absolute;
-  left: -1.2em;
+  position: relative;
+  display: inline-block;
   line-height: inherit;
   transition: opacity $time;
   width: 1.1em;
   height: 1.1em;
-  top: 1.2em;
+  top: 0.2em;
+  left: 0.2em;
   border: none;
-  opacity: 0;
+  opacity: 0.3;
 
-  @include md {
+  @include lg {
+    position: absolute;
+    left: -1.2em;
     top: 1.5em;
   }
 
@@ -122,11 +125,14 @@ a.header-anchor {
   }
 
   @include hover {
+    opacity: 0;
+
     h1:hover &,
     h2:hover &,
     h3:hover &,
     h4:hover &,
-    h5:hover & {
+    h5:hover &,
+    h6:hover & {
       opacity: 0.3;
 
       &:hover {

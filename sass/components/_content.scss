@@ -154,12 +154,15 @@ $container-inner-width: $container-width - (2 * $gutter-lg);
   }
 
   @include lg {
-    margin: 40rem 0; // TODO check how it looks with more than one image
+    margin: 40rem 0;
   }
 }
 
 .image--md {
-  max-width: 700rem;
+  @include lg {
+    width: 700rem;
+    margin: 40rem 0;
+  }
 }
 
 .image--xs {

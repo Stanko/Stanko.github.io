@@ -1,21 +1,18 @@
-const styleElement =
-  '<style class="debug-styles">* { outline: 1px solid rgb(57, 102, 230, 0.2); }</style>';
+const styleElement = document.createElement("style");
+styleElement.className = "debug-styles";
+styleElement.innerHTML = "* { outline: 1px solid rgb(57, 102, 230, 0.2); }";
 
 if (window.location.hash === "#debug") {
-  document.body.innerHTML += styleElement;
+  document.head.appendChild(styleElement);
 }
 
 window.addEventListener(
   "hashchange",
   () => {
     if (window.location.hash === "#debug") {
-      document.body.innerHTML += styleElement;
+      document.head.appendChild(styleElement);
     } else {
-      const element = document.querySelector(".debug-styles");
-
-      if (element) {
-        element.remove();
-      }
+      styleElement.remove();
     }
   },
   false

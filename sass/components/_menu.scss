@@ -12,11 +12,6 @@
 
   @include lg {
     padding: 20rem 0;
-    pointer-events: none;
-
-    & > * {
-      pointer-events: all;
-    }
   }
 }
 
