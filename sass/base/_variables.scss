@@ -92,6 +92,10 @@ $purple-gradient-color-2: #eb3b8d;
 :root,
 .blue {
   --theme-color: #{$blue-theme-color};
+  --theme-color-darken-5: #{darken($blue-theme-color, 5)};
+  --theme-color-darken-10: #{darken($blue-theme-color, 10)};
+  --theme-color-darken-15: #{darken($blue-theme-color, 15)};
+  --theme-color-darken-20: #{darken($blue-theme-color, 20)};
   --gradient-color-1: #{$blue-theme-gradient-color-1};
   --gradient-color-2: #{$blue-theme-gradient-color-2};
 }
@@ -99,6 +103,10 @@ $purple-gradient-color-2: #eb3b8d;
 // :root,
 .red {
   --theme-color: #{$red-theme-color};
+  --theme-color-darken-5: #{darken($red-theme-color, 5)};
+  --theme-color-darken-10: #{darken($red-theme-color, 10)};
+  --theme-color-darken-15: #{darken($red-theme-color, 15)};
+  --theme-color-darken-20: #{darken($red-theme-color, 20)};
   --gradient-color-1: #{$red-theme-gradient-color-1};
   --gradient-color-2: #{$red-theme-gradient-color-2};
 }
@@ -106,6 +114,10 @@ $purple-gradient-color-2: #eb3b8d;
 // :root,
 .gray {
   --theme-color: #{$gray-theme-color};
+  --theme-color-darken-5: #{darken($gray-theme-color, 5)};
+  --theme-color-darken-10: #{darken($gray-theme-color, 10)};
+  --theme-color-darken-15: #{darken($gray-theme-color, 15)};
+  --theme-color-darken-20: #{darken($gray-theme-color, 20)};
   --gradient-color-1: #{$gray-gradient-color-1};
   --gradient-color-2: #{$gray-gradient-color-2};
 }
@@ -113,6 +125,10 @@ $purple-gradient-color-2: #eb3b8d;
 // :root,
 .purple {
   --theme-color: #{$purple-theme-color};
+  --theme-color-darken-5: #{darken($purple-theme-color, 5)};
+  --theme-color-darken-10: #{darken($purple-theme-color, 10)};
+  --theme-color-darken-15: #{darken($purple-theme-color, 15)};
+  --theme-color-darken-20: #{darken($purple-theme-color, 20)};
   --gradient-color-1: #{$purple-gradient-color-1};
   --gradient-color-2: #{$purple-gradient-color-2};
 }

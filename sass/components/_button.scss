@@ -1,39 +1,108 @@
+$btn-height: 3px;
+$btn-drop: 2px;
+
 .btn {
+  position: relative;
   font-weight: $headers-font-weight;
   letter-spacing: -0.03em;
   font-size: 14rem;
   display: inline-block;
-  transition: border $time, color $time, background $time;
+  transition: color $time, transform $time;
   border-radius: $radius-sm;
   padding: 12rem 26rem;
-  border: 1px solid $black;
-  background-color: $black;
-  color: $white;
+  z-index: 1;
+  transform: translate3d(0, 0, 0);
+  outline: none;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: $radius-sm;
+    left: 0;
+    z-index: -1;
+    transition: border 250ms, background 250ms, transform 250ms;
+  }
 
   @include lg {
     padding: 16rem 36rem;
     font-size: 16rem;
   }
 
-  &:hover {
-    border-color: var(--theme-color);
-    background-color: var(--theme-color);
+  &::after {
+    top: 0;
+  }
+
+  &::before {
+    top: $btn-height;
+  }
+
+  &:hover,
+  &:focus {
+    transform: translateY(-1px);
+
+    &::before {
+      transform: translateY(1px);
+    }
   }
 
   &:active {
-    transform: translateY(1px);
+    transform: translateY($btn-drop);
+
+    &::before {
+      transform: translateY(-$btn-drop);
+    }
+  }
+}
+
+.btn--main {
+  color: $white;
+
+  &::after {
+    background: var(--theme-color);
+  }
+
+  &::before {
+    background: var(--theme-color-darken-15);
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      background: var(--theme-color-darken-5);
+    }
+
+    &::before {
+      background: var(--theme-color-darken-20);
+    }
   }
 }
 
 .btn--empty {
-  border: 1px solid $gray-300;
   color: $gray-600;
-  background-color: transparent;
 
-  &:hover {
-    background-color: transparent;
-    color: $black;
-    border-color: $gray-400;
+  &::after {
+    background: $white;
+    border: 1px solid $gray-200;
+  }
+
+  &::before {
+    background: $gray-300;
+  }
+
+  &:hover,
+  &:focus {
+    color: $text-color;
+
+    &::after {
+      border-color: $gray-300;
+    }
+
+    &::before {
+      background-color: $gray-400;
+    }
   }
 }
 

@@ -7,6 +7,6 @@
 * more categories?
 * mention #debug in post
 * spoiler and sidenote reveal animation
-* 3d buttons - https://www.joshwcomeau.com/animation/3d-button/
 * mini game
+* dark mode
 
