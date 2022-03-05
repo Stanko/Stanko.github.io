@@ -10,7 +10,7 @@
   "license": "SEE LICENSE IN LICENSE.md",
   "dependencies": {
     "animated-scroll-to": "^2.2.0",
-    "esbuild": "^0.14.23",
+    "esbuild": "^0.14.25",
     "fuzzysort": "^1.2.1",
     "micromodal": "^0.4.10"
   }
