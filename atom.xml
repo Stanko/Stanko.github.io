@@ -5,8 +5,143 @@
 	<link href="https://muffinman.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://muffinman.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-03-01T00:00:00+00:00</updated>
+	<updated>2022-04-04T00:00:00+00:00</updated>
 	<id>https://muffinman.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Into 2022</title>
+		<published>2022-04-04T00:00:00+00:00</published>
+		<updated>2022-04-04T00:00:00+00:00</updated>
+		<link href="https://muffinman.io/blog/into-2022/" type="text/html"/>
+		<id>https://muffinman.io/blog/into-2022/</id>
+		<content type="html">
+      &lt;p&gt;I&#x27;m super late with this post, but again, better late than never. I just couldn&#x27;t find the inspiration and drive for writing last year. Generally, I lacked motivation and wasn&#x27;t really productive.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;generative-art&quot;&gt;Generative Art&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#generative-art&quot; aria-label=&quot;Anchor link for: generative-art&quot;
+  title=&quot;Anchor link for: generative-art&quot;
+&gt;&lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt; #&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;As for my art, 2021 wasn&#x27;t as fruitful as the year before, but I did finish a couple of drawings. I&#x27;m still very much into it and lately I have found my drive again.&lt;&#x2F;p&gt;
+&lt;p&gt;AxiDraw, the pen plotter, continues to be my favorite purchase ever. Here are a couple of my plotted drawings from the last year:&lt;&#x2F;p&gt;
+
+  &lt;img
+    class=&quot;image image--md  &quot;
+    src=&quot;&amp;#x2F;img&amp;#x2F;into-2022&amp;#x2F;pokeball.jpg&quot;
+    alt=&quot;Space Armadillo (aka Pokeball)&quot;
+  &#x2F;&gt;
+
+
+  &lt;img
+    class=&quot;image image--md  &quot;
+    src=&quot;&amp;#x2F;img&amp;#x2F;into-2022&amp;#x2F;untitled.jpg&quot;
+    alt=&quot;Untitled&quot;
+  &#x2F;&gt;
+
+&lt;p&gt;
+  &lt;img
+    class=&quot;image   &quot;
+    src=&quot;&amp;#x2F;img&amp;#x2F;krypton&amp;#x2F;plot-01.jpg&quot;
+    alt=&quot;The fall of Krypton&quot;
+  &#x2F;&gt;
+
+
+I wrote a separate post about the creative process behind the last drawing - &lt;a href=&quot;&#x2F;blog&#x2F;breaking-down-krypton&#x2F;&quot;&gt;Breaking down Krypton&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;blog&quot;&gt;Blog&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#blog&quot; aria-label=&quot;Anchor link for: blog&quot;
+  title=&quot;Anchor link for: blog&quot;
+&gt;&lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt; #&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;Oh boy, did I neglect this blog last year. I wrote only four posts. But I really couldn&#x27;t find the inspiration and will to write. Naturally, the number of visits dropped, and it was a little above 90K. The fact that adblockers now block Goat Analytics also had an impact on numbers.&lt;&#x2F;p&gt;
+
+  &lt;img
+    class=&quot;image image--md  image--shadow&quot;
+    src=&quot;&amp;#x2F;img&amp;#x2F;into-2022&amp;#x2F;analytics.png&quot;
+    alt=&quot;Analytics breakdown for 2021&quot;
+  &#x2F;&gt;
+
+&lt;p&gt;Luckily, now I have way more drive to write and keep the site updated.&lt;&#x2F;p&gt;
+&lt;p&gt;This February, the blog got a redesign that I planned for a long time. I wanted to add &amp;quot;Art&amp;quot; and &amp;quot;Projects&amp;quot; sections, but I kept redesigning it over and over again. Finally, when I decided to &lt;span
+  class=&quot;sidenote__trigger &quot;
+  tabindex=&quot;0&quot;
+  role=&quot;button&quot;
+&gt;
+  switch from Jekyll
+&lt;&#x2F;span&gt;
+
+&lt;span
+  class=&quot;sidenote__note &quot;
+&gt;&lt;span class=&quot;sidenote__bracket&quot;&gt;(&lt;&#x2F;span&gt;I&#x27;ll probably cover that in a another post.&lt;span class=&quot;sidenote__bracket&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+ to &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;Zola&lt;&#x2F;a&gt; I was able to focus and finish the redesign.&lt;&#x2F;p&gt;
+&lt;p&gt;I did the design myself, using the thing or two I picked up from my designer colleagues. I released it as soon as I had something presentable. It was super bare bones and I&#x27;m still tweaking it and adding more personality, but nonetheless, I&#x27;m pretty satisfied with how it turned out.&lt;&#x2F;p&gt;
+&lt;p&gt;Fun fact, you can try my layout &lt;a href=&quot;#debug&quot;&gt;debug mode&lt;&#x2F;a&gt;, I kept it in the production on purpose.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;work&quot;&gt;Work&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#work&quot; aria-label=&quot;Anchor link for: work&quot;
+  title=&quot;Anchor link for: work&quot;
+&gt;&lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt; #&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;Last year was productive for &lt;a href=&quot;https:&#x2F;&#x2F;work.co&quot;&gt;my company&lt;&#x2F;a&gt; as a whole. I had the pleasure of working with two clients, TED and IBM Research. In both cases, teams consisted of wonderful people and I feel proud that I was able to help them build and improve their digital products.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;side-projects&quot;&gt;Side projects&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#side-projects&quot; aria-label=&quot;Anchor link for: side-projects&quot;
+  title=&quot;Anchor link for: side-projects&quot;
+&gt;&lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt; #&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;I tremendously enjoy these small pet projects. &lt;a href=&quot;&#x2F;archive&#x2F;#generative&quot;&gt;Generative art&lt;&#x2F;a&gt; was a big part of this in 2021, but beside that I did a couple of other things. At our Belgrade office we did &lt;a href=&quot;&#x2F;blog&#x2F;weekly-code-challenge-spring-2021&#x2F;&quot;&gt;a weekly code challenge&lt;&#x2F;a&gt; which was a lot of fun.&lt;&#x2F;p&gt;
+&lt;p&gt;I got a 3d printer, Prusa Mini+, so I started playing with some 3d modeling (using code of course). Few days ago I found out about &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;jscad&#x2F;OpenJSCAD.org&quot;&gt;JSCAD&lt;&#x2F;a&gt;, so I started making &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Stanko&#x2F;jscad-models&quot;&gt;some models&lt;&#x2F;a&gt; using it.&lt;&#x2F;p&gt;
+&lt;p&gt;I also got my hands dirty with some soldering and electronics. Which takes me to:&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;retro-frame&quot;&gt;Retro frame&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#retro-frame&quot; aria-label=&quot;Anchor link for: retro-frame&quot;
+  title=&quot;Anchor link for: retro-frame&quot;
+&gt;&lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt; #&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;This one is really close to my heart. I created a physical pixel art frame and I call it &amp;quot;Retro frame&amp;quot;. This is just a teaser, as I&#x27;m waiting for a new wooden frame and making small adjustments. But don&#x27;t worry, I plan on doing a write up and open sourcing everything.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;video class=&quot;video video--shadow&quot; playsinline loop src=&quot;&#x2F;img&#x2F;into-2022&#x2F;mario.mov#t=0.001&quot; controls muted&gt;&lt;&#x2F;video&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Just looking at &lt;span
+  class=&quot;sidenote__trigger &quot;
+  tabindex=&quot;0&quot;
+  role=&quot;button&quot;
+&gt;
+  this video
+&lt;&#x2F;span&gt;
+
+&lt;span
+  class=&quot;sidenote__note &quot;
+&gt;&lt;span class=&quot;sidenote__bracket&quot;&gt;(&lt;&#x2F;span&gt;Check the original animation on the &lt;a href=&quot;https:&#x2F;&#x2F;rephil.dribbble.com&#x2F;&quot;&gt;artist&#x27;s website&lt;&#x2F;a&gt;&lt;span class=&quot;sidenote__bracket&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+ makes me happy!&lt;&#x2F;p&gt;
+&lt;p&gt;I have a similar project planned, including an e-ink screen, so stay tuned!&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;npm-packages&quot;&gt;npm packages&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#npm-packages&quot; aria-label=&quot;Anchor link for: npm-packages&quot;
+  title=&quot;Anchor link for: npm-packages&quot;
+&gt;&lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt; #&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;Number of downloads of my npm packages was up slightly, which is nice because I haven&#x27;t done much work on that front. The total number went over 10 million!&lt;&#x2F;p&gt;
+
+&lt;a href=&quot;https:&amp;#x2F;&amp;#x2F;npm-stat.com&amp;#x2F;charts.html?author=stanko&amp;amp;from=2021-01-01&amp;amp;to=2021-12-31&quot; class=&quot;image__link&quot;&gt;
+
+  &lt;img
+    class=&quot;image image--sm  &quot;
+    src=&quot;&amp;#x2F;img&amp;#x2F;into-2022&amp;#x2F;npm.png&quot;
+    alt=&quot;Npm packages stats for 2021&quot;
+  &#x2F;&gt;
+
+&lt;&#x2F;a&gt;
+
+&lt;h2 id=&quot;thank-you&quot;&gt;Thank you!&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#thank-you&quot; aria-label=&quot;Anchor link for: thank-you&quot;
+  title=&quot;Anchor link for: thank-you&quot;
+&gt;&lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt; #&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;To all people who actually read my ramblings, thank you! I sincerely hope that you occasionally  stumble on something you like on my website - a solution to a programming problem, inspiration or just find  something interesting.&lt;&#x2F;p&gt;
+&lt;p&gt;To a better year, cheers!&lt;&#x2F;p&gt;
+
+    </content>
+
+	</entry>
 	<entry xml:lang="en">
 		<title>Breaking down Krypton</title>
 		<published>2022-03-01T00:00:00+00:00</published>
@@ -170,7 +305,7 @@
 &gt;&lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt; #&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
 &lt;&#x2F;h2&gt;
 &lt;p&gt;Basically, it takes only a few steps to generate The Fall of Krypton. I hope this will inspire you to try fooling around with creative coding.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;video src=&quot;&#x2F;img&#x2F;krypton&#x2F;output.mp4#t=0.001&quot; playsinline controls muted class=&quot;image image--shadow&quot;&gt;&lt;&#x2F;video&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;video src=&quot;&#x2F;img&#x2F;krypton&#x2F;output.mp4#t=0.001&quot; playsinline controls muted class=&quot;video video--shadow&quot;&gt;&lt;&#x2F;video&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;To encourage you, here are a few rejected examples of generated images. These are not nearly as nice. Randomness is a super powerful tool, but you need to play around with the values and finely tune them to get good results.&lt;&#x2F;p&gt;
 &lt;div
   class=&quot;dual-image dual-image--shadow &quot;
@@ -5029,7 +5164,7 @@ and what I&#x27;m trying to teach you is directly based on my experience on thes
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646393620016302698&#x27;
+    aria-controls=&#x27;spoiler-1646472240961394504&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -5053,7 +5188,7 @@ and what I&#x27;m trying to teach you is directly based on my experience on thes
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646393620016302698&#x27;
+    id=&#x27;spoiler-1646472240961394504&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
@@ -5164,7 +5299,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.&lt;&#x
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646393620018449474&#x27;
+    aria-controls=&#x27;spoiler-1646472240963305950&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -5188,7 +5323,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.&lt;&#x
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646393620018449474&#x27;
+    id=&#x27;spoiler-1646472240963305950&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
@@ -5346,7 +5481,7 @@ Now we are talking! We can start adding some modern JavaScript.&lt;&#x2F;p&gt;
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646393620024491688&#x27;
+    aria-controls=&#x27;spoiler-1646472240968150084&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -5370,7 +5505,7 @@ Now we are talking! We can start adding some modern JavaScript.&lt;&#x2F;p&gt;
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646393620024491688&#x27;
+    id=&#x27;spoiler-1646472240968150084&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
@@ -5493,7 +5628,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646393620028160342&#x27;
+    aria-controls=&#x27;spoiler-1646472240971175132&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -5517,7 +5652,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646393620028160342&#x27;
+    id=&#x27;spoiler-1646472240971175132&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
@@ -5727,7 +5862,7 @@ next to js and html files.&lt;&#x2F;p&gt;
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646393620037153237&#x27;
+    aria-controls=&#x27;spoiler-1646472240978712562&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -5751,7 +5886,7 @@ next to js and html files.&lt;&#x2F;p&gt;
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646393620037153237&#x27;
+    id=&#x27;spoiler-1646472240978712562&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
@@ -5906,7 +6041,7 @@ in it.&lt;&#x2F;p&gt;
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646393620043531890&#x27;
+    aria-controls=&#x27;spoiler-1646472240984439901&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -5930,7 +6065,7 @@ in it.&lt;&#x2F;p&gt;
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646393620043531890&#x27;
+    id=&#x27;spoiler-1646472240984439901&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
