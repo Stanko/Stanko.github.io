@@ -137,14 +137,16 @@
 
 $container-inner-width: $container-width - (2 * $gutter-lg);
 
+.video,
 .image {
   margin-bottom: $spacing-md;
   border-radius: $radius-xs;
 }
 
+.video--lg,
+.video--md,
 .image--lg,
-.image--md,
-.image--full {
+.image--md {
   width: 100vw;
   max-width: 100vw;
   margin-left: -$gutter;
@@ -158,6 +160,7 @@ $container-inner-width: $container-width - (2 * $gutter-lg);
   }
 }
 
+.video--md,
 .image--md {
   @include lg {
     width: 700rem;
@@ -165,18 +168,21 @@ $container-inner-width: $container-width - (2 * $gutter-lg);
   }
 }
 
+.video--xs,
 .image--xs {
   @include md {
     max-width: 300rem;
   }
 }
 
+.video--sm,
 .image--sm {
   @include md {
     max-width: 450rem;
   }
 }
 
+.video--lg,
 .image--lg {
   @include lg {
     width: $container-inner-width;
@@ -184,21 +190,11 @@ $container-inner-width: $container-width - (2 * $gutter-lg);
   }
 }
 
-// TODO revisit full width on large screens
-.image--full {
-  @include lg {
-    margin-left: -$gutter-lg;
-  }
-
-  @include xl {
-    margin-left: calc(-50vw + #{$container-inner-width / 2});
-  }
+.video--shadow,
+.image--shadow {
+  box-shadow: $shadow-md;
 }
 
 .image__link {
   display: block;
-}
-
-.image--shadow {
-  box-shadow: $image-shadow;
 }

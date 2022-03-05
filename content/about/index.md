@@ -10,7 +10,7 @@ this blog comes from.
 
 <img src="/img/s1.png" alt="My pixel art portrait" class="about__myself pixel-art" />
 
-I'm mostly maker of a digital stuff, but I love bringing digital into physical world. That includes pen plotting my generative art, tinkering with hobby electronics and crafts.
+I'm mostly a maker of a digital stuff, but I love bringing digital into the physical world. That includes pen plotting my generative art, tinkering with hobby electronics and crafts.
 
 This is my longest living website/blog. It has been up since 2016 and I'm pretty proud how it evolved. I also fool around on [CodePen](http://codepen.io/stanko/) and maintain a few [npm](https://www.npmjs.com/~stanko) packages. You can find me on [GitHub](https://github.com/Stanko) or [LinkedIn](https://linkedin.com/in/stankotadic).
 
@@ -19,7 +19,7 @@ This is my longest living website/blog. It has been up since 2016 and I'm pretty
 
 I'm a Group Technology Director at [Work & Co](https://work.co). Work & Co is a design and technology company, and we help our clients build digital products. I have personally lead the development track on multiple large scale projects. Mailchimp, TED, IKEA and IBM are just a few names on my personal client list.
 
-Prior to Work & Co, I was a CTO at Null Object, small technology agency which I co-founded. We got acquihired and became Work & Co's Belgrade office in 2016.
+Prior to Work & Co, I was a CTO at Null Object, small technology agency which I co-founded. We got acqui-hired and became Work & Co's Belgrade office in 2016.
 
 
 ## Other
@@ -28,4 +28,4 @@ My other interests are music,
 {{ sidenote(text="crafts", note="Among other things I made my own electric guitar.") }}
 and gaming. Old DOS games are what [got me into the tech](/blog/my-programming-story/) in the first place. I love indie games and I'm super happy that so many people are making them today. I'm also a terrible guitar player.
 
-Nick Muffin Man comes from the [Frank Zappa's song](https://www.youtube.com/watch?v=WMwY49vTBk0) of the same name.
+Nick Muffin Man comes from [Frank Zappa's song](https://www.youtube.com/watch?v=WMwY49vTBk0) of the same name.

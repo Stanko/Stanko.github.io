@@ -16,12 +16,13 @@ MicroModal.init({
   onShow: () => {
     y = window.scrollY;
 
+    searchInput.focus();
+    searchInput.select();
     clearTimeout(timeout);
 
     timeout = setTimeout(() => {
       document.documentElement.classList.add("html--overflow-hidden");
       page.style.marginTop = `-${y}px`;
-      searchInput.focus();
     }, ANIMATION_DURATION);
   },
   onClose: () => {

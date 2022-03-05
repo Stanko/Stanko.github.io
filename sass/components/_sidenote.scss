@@ -13,8 +13,8 @@ body {
   text-decoration: 1px underline $gray-400;
   text-decoration-style: dotted;
   text-underline-offset: 2rem;
-  -webkit-text-decoration-style: dotted;
   text-decoration-color: $gray-400;
+  -webkit-text-decoration-style: dotted;
   -webkit-text-decoration-color: $gray-400;
 
   &::after {
@@ -25,10 +25,11 @@ body {
     vertical-align: super;
   }
 
-  &:hover {
+  &:hover,
+  &.sidenote__trigger--hover {
+    cursor: help;
     text-decoration-style: solid;
     -webkit-text-decoration-style: solid;
-    cursor: help;
   }
 
   &:focus {
@@ -41,31 +42,33 @@ body {
 
 .sidenote__note {
   display: none;
-  border-left: 1px solid $gray-700;
   padding: 6rem 10rem;
   font-size: 16rem;
   margin: 5rem 0;
   transition: box-shadow $time, transform $time;
 
   @include md-and-lower {
+    border-left: 2px solid $gray-300;
     background-color: $gray-50;
   }
 
   .sidenote__trigger--expanded + & {
-    // TODO explore it being inline on small screens
     display: block;
   }
 
   @include lg {
     .sidenote__trigger:hover + &,
     .sidenote__trigger:focus + & {
-      box-shadow: $image-shadow;
+      box-shadow: $shadow-md;
       transform: translateY(-2px);
+    }
+
+    .sidenote__trigger--hover + & {
+      box-shadow: $shadow-md;
     }
   }
 
   @include lg {
-    border: 1px solid transparent;
     background-color: white;
     font-size: 14rem;
     display: block !important;

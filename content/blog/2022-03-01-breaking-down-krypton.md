@@ -163,7 +163,7 @@ Fun fact, the drawing was reserved and sold even before it was plotted. It went 
 Basically, it takes only a few steps to generate The Fall of Krypton. I hope this will inspire you to try fooling around with creative coding.
 
 
-<video src="/img/krypton/output.mp4#t=0.001" playsinline controls muted class="image image--shadow"></video>
+<video src="/img/krypton/output.mp4#t=0.001" playsinline controls muted class="video video--shadow"></video>
 
 
 To encourage you, here are a few rejected examples of generated images. These are not nearly as nice. Randomness is a super powerful tool, but you need to play around with the values and finely tune them to get good results.

@@ -32,32 +32,32 @@
 <div class="archive__bottom">
   {% for category in categories.items | sort(attribute="name") %}
     {% set posts_count = category.pages | length %}
-      <div class="archive__category archive__category--{{ category.slug }}">
-        <a
-          class="archive__toggle"
-          aria-controls="posts--{{ category.slug }}"
-          aria-expanded="false"
-          href="#{{category.slug}}"
-          id="{{category.slug}}"
-        >
-          <div class="container">
-            <div class="archive__toggle-content">
-              <div class="archive__toggle-left">
-                <div class="h2">
-                  {{ category.name }}
-                </div>
-                <div class="archive__count">
-                  {{ category.pages | length }} post{{ category.pages | length | pluralize }}
-                </div>
+    <div class="archive__category archive__category--{{ category.slug }}">
+      <a
+        class="archive__toggle"
+        aria-controls="posts--{{ category.slug }}"
+        aria-expanded="false"
+        href="#{{category.slug}}"
+        id="{{category.slug}}"
+      >
+        <div class="container">
+          <div class="archive__toggle-content">
+            <div class="archive__toggle-left">
+              <div class="h2">
+                {{ category.name }}
               </div>
-              <div class="archive__arrow">
-                <svg viewBox="0 0 20 10" width="20" height="10" aria-hidden="true">
-                  <path d="M 0 0 10 10 20 0" />
-                </svg>
+              <div class="archive__count">
+                {{ posts_count }} post{{ category.pages | length | pluralize }}
               </div>
             </div>
+            <div class="archive__arrow">
+              <svg viewBox="0 0 20 10" width="20" height="10" aria-hidden="true">
+                <path d="M 0 0 10 10 20 0" />
+              </svg>
+            </div>
           </div>
-        </a>
+        </div>
+      </a>
       <div
         class="archive__posts"
         id="posts--{{ category.slug }}"
