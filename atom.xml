@@ -5164,7 +5164,7 @@ and what I&#x27;m trying to teach you is directly based on my experience on thes
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646472240961394504&#x27;
+    aria-controls=&#x27;spoiler-1646556786440177155&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -5188,7 +5188,7 @@ and what I&#x27;m trying to teach you is directly based on my experience on thes
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646472240961394504&#x27;
+    id=&#x27;spoiler-1646556786440177155&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
@@ -5299,7 +5299,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.&lt;&#x
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646472240963305950&#x27;
+    aria-controls=&#x27;spoiler-1646556786442369659&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -5323,7 +5323,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.&lt;&#x
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646472240963305950&#x27;
+    id=&#x27;spoiler-1646556786442369659&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
@@ -5481,7 +5481,7 @@ Now we are talking! We can start adding some modern JavaScript.&lt;&#x2F;p&gt;
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646472240968150084&#x27;
+    aria-controls=&#x27;spoiler-1646556786449418138&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -5505,7 +5505,7 @@ Now we are talking! We can start adding some modern JavaScript.&lt;&#x2F;p&gt;
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646472240968150084&#x27;
+    id=&#x27;spoiler-1646556786449418138&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
@@ -5628,7 +5628,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646472240971175132&#x27;
+    aria-controls=&#x27;spoiler-1646556786453101556&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -5652,7 +5652,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646472240971175132&#x27;
+    id=&#x27;spoiler-1646556786453101556&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
@@ -5862,7 +5862,7 @@ next to js and html files.&lt;&#x2F;p&gt;
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646472240978712562&#x27;
+    aria-controls=&#x27;spoiler-1646556786466745640&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -5886,7 +5886,7 @@ next to js and html files.&lt;&#x2F;p&gt;
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646472240978712562&#x27;
+    id=&#x27;spoiler-1646556786466745640&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
@@ -6041,7 +6041,7 @@ in it.&lt;&#x2F;p&gt;
 &lt;div class=&quot;spoiler &quot;&gt;
   &lt;button
     aria-expanded=&quot;false&quot;
-    aria-controls=&#x27;spoiler-1646472240984439901&#x27;
+    aria-controls=&#x27;spoiler-1646556786482698508&#x27;
     class=&quot;spoiler__toggle btn btn--sm btn--empty&quot;
   &gt;
     &lt;span
@@ -6065,7 +6065,7 @@ in it.&lt;&#x2F;p&gt;
   &lt;&#x2F;button&gt;
 
   &lt;div
-    id=&#x27;spoiler-1646472240984439901&#x27;
+    id=&#x27;spoiler-1646556786482698508&#x27;
     class=&quot;spoiler__content&quot;
     aria-hidden=&quot;true&quot;
     style=&quot;display: none&quot;
