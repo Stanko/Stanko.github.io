@@ -114,7 +114,7 @@
             {% set filename = asset | split(pat="/") | last %}
             {% set video_size = filename | split(pat=".") | first | split(pat="_") | last | split(pat="x") -%}
             <a
-              class="gallery__item"
+              class="gallery__item gallery__item--video"
               href="{{ filename }}"
               data-pswp-width="{{ video_size[0] }}"
               data-pswp-height="{{ video_size[1] }}"

@@ -99,6 +99,10 @@ $col-gap-sm: 20rem;
   }
 }
 
+.gallery__item--video:hover {
+  cursor: pointer;
+}
+
 .gallery__video-thumbnail {
   pointer-events: none;
 }

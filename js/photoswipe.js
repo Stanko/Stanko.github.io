@@ -20,7 +20,11 @@ if (document.querySelector(".gallery")) {
   });
 
   lightbox.on("itemData", (e) => {
-    if (e.itemData?.element?.dataset.isVideo) {
+    if (
+      e.itemData &&
+      e.itemData.element &&
+      e.itemData.element.dataset.isVideo
+    ) {
       e.itemData.html = `<video class="art-single__video" src="${e.itemData.src}#t=0.001" controls playsinline />`;
       e.itemData.src = undefined;
     }
