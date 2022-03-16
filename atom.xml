@@ -1650,7 +1650,8 @@ And of course, big thanks to <a href="https://www.instagram.com/dutchplottr/">@d
       <name>Stanko</name>
     </author>
 		<content type="html">
-      
+      <p>Image was generated using <a href="https://muffinman.io/vertigo/">Vertigo</a>, a small vector <em>shader</em> tool I created. It is open source and you can try it live on it's website.</p>
+
     </content>
 
 	</entry>
@@ -5683,7 +5684,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1647449799965500261'
+    aria-controls='spoiler-1647451773319362557'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -5707,7 +5708,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
   </button>
 
   <div
-    id='spoiler-1647449799965500261'
+    id='spoiler-1647451773319362557'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -5818,7 +5819,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1647449799967695280'
+    aria-controls='spoiler-1647451773321574057'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -5842,7 +5843,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
   </button>
 
   <div
-    id='spoiler-1647449799967695280'
+    id='spoiler-1647451773321574057'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6000,7 +6001,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1647449799974471928'
+    aria-controls='spoiler-1647451773328521524'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6024,7 +6025,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
   </button>
 
   <div
-    id='spoiler-1647449799974471928'
+    id='spoiler-1647451773328521524'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6147,7 +6148,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1647449799979120341'
+    aria-controls='spoiler-1647451773332138972'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6171,7 +6172,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
   </button>
 
   <div
-    id='spoiler-1647449799979120341'
+    id='spoiler-1647451773332138972'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6381,7 +6382,7 @@ next to js and html files.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1647449799988179402'
+    aria-controls='spoiler-1647451773342401249'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6405,7 +6406,7 @@ next to js and html files.</p>
   </button>
 
   <div
-    id='spoiler-1647449799988179402'
+    id='spoiler-1647451773342401249'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6560,7 +6561,7 @@ in it.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1647449799995202501'
+    aria-controls='spoiler-1647451773349301698'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6584,7 +6585,7 @@ in it.</p>
   </button>
 
   <div
-    id='spoiler-1647449799995202501'
+    id='spoiler-1647451773349301698'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
