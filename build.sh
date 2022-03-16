@@ -1,5 +1,7 @@
 #!/bin/sh
 
+find . -name '.DS_Store' -type f -delete
+
 cp ./node_modules/photoswipe/dist/photoswipe.css ./sass/components/_photoswipe.scss
 
 zola build
