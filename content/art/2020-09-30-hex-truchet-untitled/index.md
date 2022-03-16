@@ -8,7 +8,7 @@ paper = "200gsm"
 pens = "Sakura Gelly Roll 0.8mm pen"
 
 iterations = 2
-image = "/art/2020-09-30-hex-truchet-untitled/0.jpg"
+image = "/art/hex-truchet-untitled/0.jpg"
 
 wide = true
 +++

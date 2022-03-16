@@ -8,7 +8,7 @@ paper = "Kunstdruck"
 pens = "Pigma Micron"
 
 iterations = 2
-image = "/art/2020-04-18-pillars/0.jpg"
+image = "/art/pillars/0.jpg"
 
 +++
 

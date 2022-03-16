@@ -3,6 +3,8 @@ title = "About"
 [extra]
 headerTitle = 'Hello there. <span class="sr-only" aria-hidden="true">General Kenobi.</span>'
 subheading = "Welcome to my little website. My name is Stanko and here you'll find my ramblings, rants, projects and generative art."
+
+image = "/img/about.png"
 +++
 
 I'm a programmer, but I like to think of myself as a maker. I tremendously enjoy software development, experimenting with small projects and playing with random technologies. That is where

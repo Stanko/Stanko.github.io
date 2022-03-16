@@ -8,7 +8,7 @@ paper = "Fabriano Black Black 300gsm"
 pens = "Sakura Gelly Rolls"
 
 iterations = 1
-image = "/art/2021-03-27-krypton/0.jpg"
+image = "/art/krypton/0.jpg"
 
 tall = true
 

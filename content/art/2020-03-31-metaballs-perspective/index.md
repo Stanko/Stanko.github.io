@@ -8,7 +8,7 @@ paper = "Fabriano Black Black 300gsm"
 pens = "Uni-ball Signo UM-153"
 
 iterations = 1
-image = "/art/2020-03-31-metaballs-perspective/0.jpg"
+image = "/art/metaballs-perspective/0.jpg"
 
 wide = true
 +++

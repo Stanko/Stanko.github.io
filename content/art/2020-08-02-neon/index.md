@@ -8,7 +8,7 @@ paper = "Fabriano Black Black 300gsm"
 pens = "Sakura Gelly Rolls"
 
 iterations = 2
-image = "/art/2020-08-02-neon/0.jpg"
+image = "/art/neon/0.jpg"
 
 wide = true
 +++

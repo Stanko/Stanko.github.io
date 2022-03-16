@@ -15,6 +15,18 @@
 </div>
 
 <div class="container">
+  <h2 class="home__section-title">Generative Art</h2>
+</div>
+
+{% set drawings = get_section(path="art/_index.md") -%}
+
+<div class="home__drawings art__list">
+  {% for drawing in drawings.pages | slice(start=0, end=4) %}
+  {% include "partials/art-list-drawing.html" %}
+  {% endfor %}
+</div>
+
+<div class="container">
   <h2 class="home__section-title">Blog Posts</h2>
 </div>
 
@@ -25,7 +37,7 @@
 {% include "partials/latest-post.html" %}
 
 <div class="blog-list">
-  {% for post in blog_posts.pages | slice(start=1, end=7) %}
+  {% for post in blog_posts.pages | slice(start=1, end=5) %}
     {% include "partials/blog-list-post.html" %}
   {% endfor %}
 </div>

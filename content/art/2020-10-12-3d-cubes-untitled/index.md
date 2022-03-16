@@ -8,7 +8,7 @@ paper = "Fabriano Bristol 250gsm"
 pens = "Molotow Blackliner, Koi Coloring Brush, Mechanical pencil"
 
 iterations = 2
-image = "/art/2020-10-12-3d-cubes-untitled/0.jpg"
+image = "/art/3d-cubes-untitled/0.jpg"
 
 +++
 

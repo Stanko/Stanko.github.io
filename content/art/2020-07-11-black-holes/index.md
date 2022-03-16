@@ -8,7 +8,7 @@ paper = "200gsm"
 pens = "Uni-ball Signo UM-153"
 
 iterations = 1
-image = "/art/2020-07-11-black-holes/0.jpg"
+image = "/art/black-holes/0.jpg"
 
 wide = true
 +++

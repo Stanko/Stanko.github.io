@@ -31,3 +31,12 @@
     margin-top: 40rem;
   }
 }
+
+.home__drawings {
+  @include md {
+    // Hide fourth drawing on large screens, as only three fit in a row
+    .art__single:nth-child(4) {
+      display: none;
+    }
+  }
+}

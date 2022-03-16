@@ -30,8 +30,9 @@
         </div>
       </div>
       {% if latest_post.extra.image %}
+        {%- set image = resize_image(path=latest_post.extra.image, width=1000, height=1000, op="fit", quality=90) %}
         <div class="latest-post__image-wrapper {% if latest_post.extra.shadow %}latest-post__image-wrapper--shadow{% endif %}">
-          <img src="{{ latest_post.extra.image }}" alt="" aria-hidden="true"  />
+          <img src="{{ image.url }}" alt="" aria-hidden="true"  />
         </div>
       {% endif %}
     </div>

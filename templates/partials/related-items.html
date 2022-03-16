@@ -15,7 +15,9 @@
           href="{{ page.earlier.permalink }}"
           class="related-items__item related-items__item--prev {% if page.earlier.extra.tall %}related-items__item--tall{% endif %}"
         >
-          {%- set image = resize_image(path=page.earlier.extra.image, width=500, height=500, op="fit", quality=90) %}
+          {%- set date_string = "/art/" ~ page.earlier.date ~ "-" %}
+          {%- set image_path = page.earlier.extra.image | replace(from="/art/", to=date_string) %}
+          {%- set image = resize_image(path=image_path, width=500, height=500, op="fit", quality=90) %}
           <div class="related-items__item-eyebrow">
             Previous
           </div>
@@ -33,7 +35,9 @@
           href="{{ page.later.permalink }}"
           class="related-items__item related-items__item--next {% if page.later.extra.tall %}related-items__item--tall{% endif %}"
         >
-          {%- set image = resize_image(path=page.later.extra.image, width=500, height=500, op="fit", quality=90) %}
+          {%- set date_string = "/art/" ~ page.later.date ~ "-" %}
+          {%- set image_path = page.later.extra.image | replace(from="/art/", to=date_string) %}
+          {%- set image = resize_image(path=image_path, width=500, height=500, op="fit", quality=90) %}
           <div class="related-items__item-eyebrow">
             Next
           </div>

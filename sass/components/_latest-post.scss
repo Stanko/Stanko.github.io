@@ -22,15 +22,13 @@
   padding: $spacing-md 0;
 
   @include md-and-lower {
-    max-width: $container-width-narrow;
+    max-width: 700rem;
   }
 
   @include md {
-    padding: $spacing-lg 0;
-  }
-
-  @include lg {
     display: flex;
+    align-items: center;
+    padding: $spacing-lg 0;
   }
 }
 
@@ -94,9 +92,14 @@
 .latest-post__image-wrapper {
   margin-top: 20rem;
 
+  @include md {
+    max-width: 40%;
+    flex-shrink: 0;
+    margin: 0em 0 0 40rem;
+  }
+
   @include lg {
     max-width: 50%;
-    flex-shrink: 0;
     margin: 0 0 0 40rem;
   }
 

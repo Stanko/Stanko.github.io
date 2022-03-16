@@ -8,7 +8,7 @@ paper = "Kunstdruck"
 pens = "Pigma Micron"
 
 iterations = 1
-image = "/art/2020-04-03-waves/0.jpg"
+image = "/art/waves/0.jpg"
 
 filter = ["favorite"]
 tall = true

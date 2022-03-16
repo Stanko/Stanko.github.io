@@ -8,7 +8,7 @@ paper = "Fabriano Bristol 250gsm"
 pens = "Pigma Micron, Molotow Blackliner, Mechanical pencil"
 
 iterations = 2
-image = "/art/2021-03-14-pokeball/0.jpg"
+image = "/art/pokeball/0.jpg"
 
 +++
 

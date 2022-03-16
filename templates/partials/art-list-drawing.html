@@ -1,0 +1,20 @@
+<a href="{{ drawing.permalink }}" class="art__single {% if post.extra.theme %}{{ post.extra.theme }}{% endif %}">
+  <div class="art__single-title h5">
+    {{ drawing.title | safe }}{% include "partials/svg-post-arrow.html" %}
+  </div>
+
+  <div class="art__single-date">
+    {{ drawing.date | date(format="%B %Y") }}
+  </div>
+
+  {%- set image = resize_image(path=drawing.extra.image, width=500, height=500, op="fit", quality=90) %}
+  {%- set image_tiny = resize_image(path=drawing.extra.image, width=40, height=40, op="fit", quality=100) %}
+  <div class="art__single-image-wrapper" aria-hidden="true">
+    {% if loop.index0 < 12 %}
+      <img src="{{ image.url }}" alt="" class="art__single-image" />
+    {% else %}
+      <img src="{{ image_tiny.url }}" alt="" class="art__single-image" />
+      <img src="{{ image.url }}" alt="" class="art__single-image" loading="lazy" />
+    {% endif %}
+  </div>
+</a>

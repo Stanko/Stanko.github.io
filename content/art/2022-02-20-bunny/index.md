@@ -8,7 +8,7 @@ paper = "Fabriano Bristol 250gsm"
 pens = "Pigma Micron"
 
 iterations = 1
-image = "/art/2022-03-06-bunny/0.jpg"
+image = "/art/bunny/0.jpg"
 
 filter = ["available"]
 +++

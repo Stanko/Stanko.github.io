@@ -11,6 +11,8 @@ paginate_by = 1000
 [extra]
 intro = "I use code and algorithms to make drawings, and a robot to draw them."
 theme = "red"
+
+image = "/art/beach/0.jpg"
 +++
 
 <div class="notice">This page is still a work in progress. I will be adding more drawings in the following days, but I wanted to launch it as soon as the page became presentable. Meanwhile, for more content you can check my <a href="https://instagram.com/muffinman_io">Instagram account</a>.</div>

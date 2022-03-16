@@ -8,7 +8,7 @@ paper = "Fabriano Bristol 250gsm"
 pens = "Pigma Micron"
 
 iterations = 3
-image = "/art/2020-05-17-belgrade/0.jpg"
+image = "/art/belgrade/0.jpg"
 
 +++
 

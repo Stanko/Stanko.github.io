@@ -8,7 +8,7 @@ paper = "Fabriano Black Black 300gsm"
 pens = "Sakura Gelly Rolls Metallic"
 
 iterations = 2
-image = "/art/2020-10-02-alien-machinery/0.jpg"
+image = "/art/alien-machinery/0.jpg"
 
 wide = true
 +++
