@@ -1596,6 +1596,20 @@ And of course, big thanks to <a href="https://www.instagram.com/dutchplottr/">@d
 
 	</entry>
 	<entry xml:lang="en">
+		<title>Attractions</title>
+		<published>2020-04-04T00:00:00+00:00</published>
+		<updated>2020-04-04T00:00:00+00:00</updated>
+		<link href="https://muffinman.io/art/attractions/" type="text/html"/>
+		<id>https://muffinman.io/art/attractions/</id>
+    <author>
+      <name>Stanko</name>
+    </author>
+		<content type="html">
+      
+    </content>
+
+	</entry>
+	<entry xml:lang="en">
 		<title>Waves</title>
 		<published>2020-04-03T00:00:00+00:00</published>
 		<updated>2020-04-03T00:00:00+00:00</updated>
@@ -5669,7 +5683,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1647446328098750815'
+    aria-controls='spoiler-1647447636863039526'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -5693,7 +5707,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
   </button>
 
   <div
-    id='spoiler-1647446328098750815'
+    id='spoiler-1647447636863039526'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -5804,7 +5818,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1647446328100956907'
+    aria-controls='spoiler-1647447636865264551'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -5828,7 +5842,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
   </button>
 
   <div
-    id='spoiler-1647446328100956907'
+    id='spoiler-1647447636865264551'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -5986,7 +6000,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1647446328107826029'
+    aria-controls='spoiler-1647447636871847728'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6010,7 +6024,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
   </button>
 
   <div
-    id='spoiler-1647446328107826029'
+    id='spoiler-1647447636871847728'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6133,7 +6147,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1647446328111443060'
+    aria-controls='spoiler-1647447636875366769'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6157,7 +6171,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
   </button>
 
   <div
-    id='spoiler-1647446328111443060'
+    id='spoiler-1647447636875366769'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6367,7 +6381,7 @@ next to js and html files.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1647446328121702271'
+    aria-controls='spoiler-1647447636885975792'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6391,7 +6405,7 @@ next to js and html files.</p>
   </button>
 
   <div
-    id='spoiler-1647446328121702271'
+    id='spoiler-1647447636885975792'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6546,7 +6560,7 @@ in it.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1647446328134901732'
+    aria-controls='spoiler-1647447636892782670'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6570,7 +6584,7 @@ in it.</p>
   </button>
 
   <div
-    id='spoiler-1647446328134901732'
+    id='spoiler-1647447636892782670'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
