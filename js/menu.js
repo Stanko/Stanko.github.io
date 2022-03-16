@@ -12,12 +12,18 @@ const reducedMotionMediaQuery = window.matchMedia(
 let y;
 let timeout;
 
+const isTouch = "ontouchstart" in document.documentElement;
+
 MicroModal.init({
   onShow: () => {
     y = window.scrollY;
 
-    searchInput.focus();
-    searchInput.select();
+    // Don't auto focus input on mobile phones
+    if (!isTouch || window.innerWidth > 768) {
+      searchInput.focus();
+      searchInput.select();
+    }
+
     clearTimeout(timeout);
 
     timeout = setTimeout(() => {
@@ -26,6 +32,7 @@ MicroModal.init({
     }, ANIMATION_DURATION);
   },
   onClose: () => {
+    searchInput.blur();
     document.documentElement.classList.remove("html--overflow-hidden");
     page.style.marginTop = "";
 

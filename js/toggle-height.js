@@ -24,9 +24,8 @@ export default function toggleHeight(element) {
 
   if (wasHidden) {
     element.style.height = 0;
-    element.style.display = "block";
-    // TODO decide whether to keep the opacity animation
     element.style.opacity = 0;
+    element.style.display = "block";
 
     setTimeout(() => {
       element.style.height = `${content.offsetHeight}px`;

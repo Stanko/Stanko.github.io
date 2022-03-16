@@ -39,12 +39,19 @@ $btn-drop: 2px;
     top: $btn-height;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     transform: translateY(-1px);
 
     &::before {
       transform: translateY(1px);
+    }
+  }
+
+  &:focus {
+    transform: translateY(-5px);
+
+    &::before {
+      transform: translateY(5px);
     }
   }
 

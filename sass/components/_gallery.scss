@@ -1,0 +1,140 @@
+$col-count-sm: 2;
+$col-count-md: 3;
+$col-count-lg: 4;
+
+$col-gap-sm: 20rem;
+
+.gallery {
+  -webkit-overflow-scrolling: touch;
+  margin: 0 #{-$gutter};
+  overflow-x: auto;
+  width: 100vw;
+  white-space: nowrap;
+  padding: 0;
+  padding-left: $gutter;
+  display: flex;
+
+  &::after {
+    content: "";
+    flex: 0 0 $gutter;
+  }
+
+  @include md {
+    margin: 0 #{-$gutter-md};
+    padding-left: $gutter-md;
+
+    &::after {
+      flex-basis: $gutter-md;
+    }
+  }
+
+  /* Firefox */
+  scrollbar-width: none;
+  /* IE 10+ */
+  -ms-overflow-style: none;
+
+  /* WebKit - Safari, Chrome, Opera */
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  &:hover {
+    scrollbar-color: $gray-300 $white;
+  }
+}
+
+.gallery__item {
+  @include transparent-outline;
+  min-height: 0;
+  border-radius: $radius-xs;
+  background-color: $gray-100;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+  transition: opacity $time;
+  outline-offset: -2px;
+
+  &:not(:last-child) {
+    margin-right: 20rem;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    cursor: zoom-in;
+  }
+
+  video,
+  img {
+    height: 150rem;
+  }
+}
+
+@include lg {
+  .art-single__images--tall {
+    .gallery {
+      margin: 0;
+      padding: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      width: auto;
+      flex-shrink: 0;
+      margin-left: 20rem;
+    }
+
+    .gallery__item {
+      margin-right: 0;
+      width: 200rem;
+
+      &:not(:last-child) {
+        margin-bottom: 20rem;
+      }
+    }
+
+    video,
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+.gallery__video-thumbnail {
+  pointer-events: none;
+}
+
+.gallery__play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 40rem;
+  paint-order: stroke;
+
+  @include lg {
+    width: 50rem;
+  }
+
+  path {
+    fill: $white;
+    stroke: rgba(0, 0, 0, 0.5);
+    stroke-width: 10rem;
+    opacity: 0.95;
+  }
+}
+
+// ----- Photoswipe blur background
+
+.pswp {
+  transition: all 333ms;
+}
+
+.pswp--open {
+  @include backdrop-filter(10px);
+}
+
+.pwsp--no-backdrop-filter {
+  backdrop-filter: none !important;
+  -ms-backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}

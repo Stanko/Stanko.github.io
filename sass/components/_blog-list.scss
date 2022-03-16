@@ -33,12 +33,7 @@
   }
 
   &:focus {
-    background-color: $gray-50;
-    outline: none;
-
-    .blog-list__title {
-      color: var(--theme-color);
-    }
+    background-color: $gray-100;
   }
 }
 

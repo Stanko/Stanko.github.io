@@ -1,0 +1,146 @@
+.related-items {
+  padding: 80rem 0;
+  background: $gray-50;
+  border-top: 1px solid $gray-200;
+
+  @include md {
+    padding: 100rem 0;
+  }
+}
+
+.related-items__links {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.related-items__title {
+  margin-bottom: 40rem;
+}
+
+.related-items__item {
+  display: flex;
+  flex-direction: column;
+  color: $text-color;
+  outline: none;
+
+  &:hover {
+    color: var(--theme-color);
+
+    .related-items__image-wrapper {
+      opacity: 0.9;
+    }
+  }
+
+  &:focus-visible {
+    color: var(--theme-color);
+
+    .related-items__image-wrapper {
+      outline: 2px solid var(--theme-color);
+    }
+  }
+}
+
+.related-items__item--prev {
+  margin-right: 20rem;
+  align-items: flex-start;
+
+  @include md {
+    margin-right: 40rem;
+  }
+}
+
+.related-items__item--next {
+  margin-left: auto;
+  align-items: flex-end;
+
+  .related-items__item-title {
+    text-align: right;
+  }
+}
+
+.related-items__item-eyebrow {
+  color: $text-light;
+  font-size: 13rem;
+}
+
+.related-items__item-title {
+  font-weight: $headers-font-weight;
+  margin-bottom: 5rem;
+  line-height: 1.2;
+  font-size: 16rem;
+
+  @include md {
+    font-size: 18rem;
+  }
+
+  @include lg {
+    font-size: 20rem;
+  }
+}
+
+.related-items__arrow--prev {
+  transform: rotate(180deg);
+}
+
+.related-items__height-fix {
+  height: 140px;
+
+  @include md {
+    height: 200px;
+  }
+
+  @include lg {
+    height: 220px;
+  }
+}
+
+.related-items__image-wrapper {
+  @include transparent-outline;
+  position: relative;
+  border-radius: $radius-xs;
+  transition: opacity $time;
+  transform-origin: top left;
+
+  .related-items__item--next & {
+    transform-origin: top right;
+  }
+}
+
+.related-items__image-wrapper img {
+  border-radius: $radius-xs;
+  background-color: $gray-100;
+  max-height: 140px;
+
+  @include md {
+    max-height: 200px;
+  }
+
+  @include lg {
+    max-height: 220px;
+  }
+}
+
+.related-items--tall .related-items__height-fix {
+  height: 200px;
+
+  @include md {
+    height: 280px;
+  }
+
+  @include lg {
+    height: 320px;
+  }
+}
+
+.related-items__item--tall .related-items__image-wrapper img {
+  max-height: 200px;
+
+  @include md {
+    max-height: 280px;
+  }
+
+  @include lg {
+    max-height: 320px;
+  }
+}

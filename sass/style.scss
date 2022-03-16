@@ -5,18 +5,25 @@
 @import "base/_fonts.scss";
 @import "base/_global.scss";
 
+@import "components/_photoswipe.scss";
+
 @import "templates/_about.scss";
 @import "templates/_archive.scss";
+@import "templates/_art-single.scss";
+@import "templates/_art.scss";
 @import "templates/_home.scss";
 @import "templates/_page.scss";
 @import "templates/_post.scss";
 
+@import "components/_back-arrow.scss";
 @import "components/_blog-list.scss";
 @import "components/_button.scss";
+// @import "components/_color-scheme-switcher.scss";
 @import "components/_comments.scss";
 @import "components/_content.scss";
 @import "components/_dual-image.scss";
 @import "components/_footer.scss";
+@import "components/_gallery.scss";
 @import "components/_keyboard.scss";
 @import "components/_latest-post.scss";
 @import "components/_menu.scss";
@@ -27,6 +34,7 @@
 @import "components/_pagination.scss";
 @import "components/_post-arrow.scss";
 @import "components/_post-list.scss";
+@import "components/_related-items.scss";
 @import "components/_related-posts.scss";
 @import "components/_search.scss";
 @import "components/_sharing.scss";

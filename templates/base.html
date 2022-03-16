@@ -25,9 +25,15 @@
 {% set theme_class = ""%}
 {% set theme_suffix = ""%}
 
+{# Default theme for art #}
+{% if current_path and current_path is starting_with("/art/") %}
+  {% set theme_class = "red"%}
+  {% set theme_suffix = "-red"%}
+{% endif %}
+
 {% if page_data.extra.theme %}
-  {% set theme_class = page.extra.theme %}
-  {% set theme_suffix = "-" ~ page.extra.theme %}
+  {% set theme_class = page_data.extra.theme %}
+  {% set theme_suffix = "-" ~ page_data.extra.theme %}
 {% endif %}
 
 <head>
@@ -69,6 +75,14 @@
 </head>
 
 <body class="{{ theme_class }}">
+  {#
+  TODO uncomment when dark mode is ready
+  <script>
+    var userSelected = localStorage.getItem('color-scheme');
+    if (userSelected) { document.documentElement.classList.add(userSelected); }
+  </script>
+  #}
+
   <div id="page">
     <a href="#content" class="jump-to-content">Jump to content</a>
     {% include "partials/menu.html" %}
@@ -91,6 +105,8 @@
   {% endif %}
 
   <script src="/js/app.js"></script>
+
+  {% block scripts %} {% endblock %}
 
   <script>
     if (window.location.hostname !== 'localhost' && window.location.hostname !== 'motorhead.local' && window.location.hostname !== '0.0.0.0') {

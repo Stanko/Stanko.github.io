@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+<script src=/js/photoswipe.js></script>
+{% endblock scripts %}
+
+{% block content %}
+
+<div class="page__top">
+  <div class="container art-single__top">
+    <h1 class="page__title">
+      {{ page.title | safe }}
+    </h1>
+
+    <a href="/art/" class="art-single__back art-single__back--top">
+      <span>Back to</span> Art
+    </a>
+
+    {% if page.extra.intro %}
+      <div class="page__intro">{{ page.extra.intro }}</div>
+    {% endif %}
+  </div>
+</div>
+
+<div class="container">
+  {% if page.content %}
+    <div class="content">
+      {{ page.content | safe }}
+    </div>
+  {% endif %}
+
+  <div class="art-single__content">
+    <table class="art-single__info">
+      <tr>
+        <td>Created:</td>
+        <td>{{ page.date | date(format="%B %Y") }}</td>
+      </tr>
+      <tr>
+        <td>Size:</td>
+        <td>{{ page.extra.size }}</td>
+      </tr>
+      <tr>
+        <td>Iterations:</td>
+        <td>{{ page.extra.iterations }}</td>
+      </tr>
+      <tr>
+        <td>Paper:</td>
+        <td>{{ page.extra.paper }}</td>
+      </tr>
+      <tr>
+        <td>Pens:</td>
+        <td>{{ page.extra.pens }}</td>
+      </tr>
+    </table>
+
+    <div class="art-single__images {% if page.extra.wide %}art-single__images--wide{% else %}art-single__images--tall{% endif %}">
+      {% set images = page.assets | sort %}
+      {% set start_index = 0 %}
+      {% set first_file = images[0] %}
+
+      {# Skip .DS_Store #}
+      {%- if first_file is matching("DS_Store") -%}
+        {% set start_index = 1 %}
+      {%- endif %}
+
+
+      {% set meta = get_image_metadata(path=images[start_index]) %}
+      {% set filename = images[start_index] | split(pat="/") | last %}
+
+      <a
+        href="{{ filename }}"
+        target="_blank"
+        data-pswp-width="{{ meta.width }}"
+        data-pswp-height="{{ meta.height }}"
+        target="_blank"
+        class="art-single__main-image"
+      >
+        <div class="art-single__main-image-ratio" style="padding-bottom: {{ meta.height / meta.width * 100 }}%">
+          <img
+            src="{{ filename }}"
+            alt="{{ page.title }} plot"
+          />
+        </div>
+      </a>
+
+      <div class="gallery">
+        {%- for asset in images | slice(start=start_index+1) -%}
+          {%- if asset is matching("[.](jpg|png|gif)$") -%}
+            {# Skip thumbnail #}
+            {%- if asset is matching("(thumb[.]jpg)$") -%}
+              {%- continue %}
+            {%- endif %}
+            {%- set image = resize_image(path=asset, width=500, height=500, op="fit", quality=90) %}
+            {#
+              I can go back to get_url when this issue is fixed
+              https://github.com/getzola/zola/issues/788
+              get_url(path=asset)
+            #}
+            {%- set meta = get_image_metadata(path=asset) %}
+            {%- set filename = asset | split(pat="/") | last %}
+            <a
+              class="gallery__item"
+              href="{{ filename }}"
+              data-pswp-width="{{ meta.width }}"
+              data-pswp-height="{{ meta.height }}"
+              style="aspect-ratio: {{ meta.width / meta.height }}"
+              target="_blank"
+            >
+              {# TODO think what to do about alt text #}
+              <img src="{{ image.url }}" alt="{{ page.title }} image {{ loop.index }}"  />
+            </a>
+          {%- endif %}
+          {%- if asset is matching("[.](mp4)$") -%}
+            {% set filename = asset | split(pat="/") | last %}
+            {% set video_size = filename | split(pat=".") | first | split(pat="_") | last | split(pat="x") -%}
+            <a
+              class="gallery__item"
+              href="{{ filename }}"
+              data-pswp-width="{{ video_size[0] }}"
+              data-pswp-height="{{ video_size[1] }}"
+              data-is-video="true"
+              style="aspect-ratio: {{ video_size[0] }} / {{ video_size[1] }}"
+              target="_blank"
+              aria-label="Plotting {{ page.title }}"
+              {# TODO think what to do about alt text #}
+            >
+              <video
+                src="{{ filename }}#t=0.001"
+                muted
+                playsinline
+                class="gallery__video-thumbnail"
+                aria-hidden="true"
+                tabindex="-1"
+              ></video>
+              <svg viewBox="0 0 512 512" class="gallery__play-icon" aria-hidden="true">
+                <path d="M405.2,232.9L126.8,67.2c-3.4-2-6.9-3.2-10.9-3.2c-10.9,0-19.8,9-19.8,20H96v344h0.1c0,11,8.9,20,19.8,20  c4.1,0,7.5-1.4,11.2-3.4l278.1-165.5c6.6-5.5,10.8-13.8,10.8-23.1C416,246.7,411.8,238.5,405.2,232.9z"/>
+              </svg>
+            </a>
+          {%- endif %}
+        {%- endfor %}
+      </div>
+    </div>
+
+    <a href="/art/" class="art-single__back art-single__back--bottom">
+      <span>Back to</span> Art
+    </a>
+  </div>
+</div>
+
+{% include "partials/related-items.html" %}
+
+{% endblock content %}

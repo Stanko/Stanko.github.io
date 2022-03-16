@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "esbuild js/app.js --bundle --minify --outfile=static/js/app.js --watch",
-    "build": "esbuild js/app.js --bundle --minify --outfile=static/js/app.js"
+    "start": "esbuild js/app.js js/photoswipe.js --bundle --sourcemap --minify --watch --outdir=static/js",
+    "build": "esbuild js/app.js js/photoswipe.js --bundle --sourcemap --minify --outdir=static/js"
   },
   "author": "Stanko",
   "license": "SEE LICENSE IN LICENSE.md",
@@ -12,6 +12,7 @@
     "animated-scroll-to": "^2.2.0",
     "esbuild": "^0.14.25",
     "fuzzysort": "^1.2.1",
-    "micromodal": "^0.4.10"
+    "micromodal": "^0.4.10",
+    "photoswipe": "^5.2.0-beta.2"
   }
 }

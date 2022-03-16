@@ -1,5 +1,7 @@
 #!/bin/sh
 
+cp ./node_modules/photoswipe/dist/photoswipe.css ./sass/components/_photoswipe.scss
+
 zola build
 
 # Create JS file from search data

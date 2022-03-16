@@ -64,7 +64,7 @@ This library is a lifesaver. For all your polygon clipping and offseting needs. 
 Sometimes I think I use Voronoi diagrams too much in my work. Anyway, this library efficiently computes Voronoi diagrams.
 
 {{ image(
-  alt="The Fall of Krypton"
+  alt="Krypton"
   src="/img/js-libs/krypton.jpg"
   size="xs"
 ) }}

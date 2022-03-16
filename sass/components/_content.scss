@@ -86,8 +86,8 @@
     -webkit-text-decoration-color: $separator-color;
 
     &:hover {
-      text-decoration-color: var(--theme-color);
-      -webkit-text-decoration-color: var(--theme-color);
+      text-decoration-color: currentColor;
+      -webkit-text-decoration-color: currentColor;
     }
   }
 

@@ -83,6 +83,10 @@
   }
 }
 
+.post__container {
+  min-height: 50vh;
+}
+
 .post__comments-link {
   @include text-sm;
   margin-left: auto;

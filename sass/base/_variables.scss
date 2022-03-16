@@ -1,3 +1,17 @@
+// --- Color scheme  mixin
+
+@mixin dark-scheme {
+  @media (prefers-color-scheme: dark) {
+    html:not(.light-scheme) & {
+      @content;
+    }
+  }
+
+  .dark-scheme & {
+    @content;
+  }
+}
+
 // --- Breakpoints
 
 $breakpoint-sm: 400px;
@@ -42,12 +56,9 @@ $body-font-weight: 400;
 
 // --- Colors
 
-$true-black: #000;
-$black: #111112;
-$true-white: #fff;
 $white: #fff;
 
-$gray-50: #f8fafc;
+$gray-50: #f8fbfe;
 $gray-100: #f1f5f9;
 $gray-200: #e2e8f0;
 $gray-300: #cbd5e1;
@@ -78,8 +89,8 @@ $blue-theme-gradient-color-1: #4341d7;
 $blue-theme-gradient-color-2: #00a3ef;
 
 $red-theme-color: #d62940;
-$red-theme-gradient-color-1: #da3654;
-$red-theme-gradient-color-2: #feac0e;
+$red-theme-gradient-color-1: #d62940;
+$red-theme-gradient-color-2: #b13464;
 
 $gray-theme-color: #304f6e;
 $gray-gradient-color-1: #2e4e6e;
@@ -91,6 +102,11 @@ $purple-gradient-color-2: #eb3b8d;
 
 :root,
 .blue {
+  --true-black: #000;
+  --black: #111112;
+  --true-white: #fff;
+  --white: #fff;
+
   --theme-color: #{$blue-theme-color};
   --theme-color-darken-5: #{darken($blue-theme-color, 5)};
   --theme-color-darken-10: #{darken($blue-theme-color, 10)};
@@ -132,6 +148,13 @@ $purple-gradient-color-2: #eb3b8d;
   --gradient-color-1: #{$purple-gradient-color-1};
   --gradient-color-2: #{$purple-gradient-color-2};
 }
+
+// TODO add real dark theme
+// body {
+//   @include dark-scheme {
+//     filter: invert(1);
+//   }
+// }
 
 // --- Z-Index
 

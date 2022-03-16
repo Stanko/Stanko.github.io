@@ -1,3 +1,5 @@
 .DS_Store
 public
 node_modules
+static/js/*.js.map
+static/processed_images/

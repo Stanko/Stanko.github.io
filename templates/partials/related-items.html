@@ -1,0 +1,50 @@
+{% set tall_class="" %}
+{% if page.earlier and page.earlier.extra.tall or page.later and page.later.extra.tall %}
+  {% set tall_class="related-items--tall" %}
+{% endif %}
+
+<div class="related-items {{ tall_class }}">
+  <div class="container">
+    <h2 class="h4 related-items__title">
+      More generative drawings
+    </h2>
+
+    <div class="related-items__links">
+      {% if page.earlier %}
+        <a
+          href="{{ page.earlier.permalink }}"
+          class="related-items__item related-items__item--prev {% if page.earlier.extra.tall %}related-items__item--tall{% endif %}"
+        >
+          {%- set image = resize_image(path=page.earlier.extra.image, width=500, height=500, op="fit", quality=90) %}
+          <div class="related-items__item-eyebrow">
+            Previous
+          </div>
+          <div class="related-items__item-title">{{ page.earlier.title | safe }}</div>
+          <div class="related-items__height-fix">
+            <div class="related-items__image-wrapper">
+              <img src="{{ image.url }}" alt="" aria-hidden="true"  />
+            </div>
+          </div>
+        </a>
+      {% endif %}
+
+      {% if page.later %}
+        <a
+          href="{{ page.later.permalink }}"
+          class="related-items__item related-items__item--next {% if page.later.extra.tall %}related-items__item--tall{% endif %}"
+        >
+          {%- set image = resize_image(path=page.later.extra.image, width=500, height=500, op="fit", quality=90) %}
+          <div class="related-items__item-eyebrow">
+            Next
+          </div>
+          <div class="related-items__item-title">{{ page.later.title | safe }}</div>
+          <div class="related-items__height-fix">
+            <div class="related-items__image-wrapper">
+              <img src="{{ image.url }}" alt="" aria-hidden="true"  />
+            </div>
+          </div>
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>

@@ -7,7 +7,7 @@ tags = ["js", "voronoi", "generative-art"]
 
 [extra]
 image = "/img/krypton/cover-horizontal.jpg"
-intro = 'Walk through the creative process behind my pen plotted piece, <i>"The Fall of Krypton"</i>'
+intro = 'Walk through the creative process behind my pen plotted piece, <i>"Krypton"</i>'
 theme = "gray"
 
 +++
@@ -16,10 +16,10 @@ This post was originally written for our internal technology newsletter at [Work
 
 -----
 
-About a year ago I made this plot. It is called {{ sidenote(text='"The Fall of Krypton"', note="Named by a dear friend and ex-colleague") }}, and I'll try to break down how it was made.
+About a year ago I made this plot. It is called {{ sidenote(text='"Krypton"', note="Named by a dear friend and ex-colleague") }}, and I'll try to break down how it was made.
 
 {{ image(
-  alt="The Fall of Krypton plot"
+  alt="Krypton plot"
   src="/img/krypton/cover.jpg"
   size="md"
 ) }}
@@ -160,7 +160,7 @@ Fun fact, the drawing was reserved and sold even before it was plotted. It went 
 
 ## Conclusion
 
-Basically, it takes only a few steps to generate The Fall of Krypton. I hope this will inspire you to try fooling around with creative coding.
+Basically, it takes only a few steps to generate Krypton. I hope this will inspire you to try fooling around with creative coding.
 
 
 <video src="/img/krypton/output.mp4#t=0.001" playsinline controls muted class="video video--shadow"></video>

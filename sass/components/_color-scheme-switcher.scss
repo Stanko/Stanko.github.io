@@ -1,0 +1,22 @@
+.color-scheme-switcher {
+  height: 30rem;
+  width: 30rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.color-scheme-switcher__to-dark {
+  @include dark-scheme {
+    display: none;
+  }
+}
+
+.color-scheme-switcher__to-light {
+  display: none;
+
+  @include dark-scheme {
+    display: block;
+  }
+}

@@ -42,7 +42,6 @@
   $color2: var(--gradient-color-2)
 ) {
   color: var(--theme-color);
-  // TODO decide if this is better
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 
@@ -105,5 +104,19 @@
 
   &:-ms-input-placeholder {
     color: $color;
+  }
+}
+
+@mixin transparent-outline($color: rgba(black, 0.075)) {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: $radius-xs;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border: 1px solid $color;
   }
 }

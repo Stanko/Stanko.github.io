@@ -26,12 +26,11 @@
 		<updated>{{ page.updated | default(value=page.date) | date(format="%+") }}</updated>
 		<link href="{{ page.permalink | safe }}" type="text/html"/>
 		<id>{{ page.permalink | safe }}</id>
+    <author>
+      <name>Stanko</name>
+    </author>
 		<content type="html">
-      {{ page.content | replace(
-        from='<a class="header-anchor"', to='aaaaaaaaaaaaaaaaaaaa'
-      ) | replace(
-        from='<img src="/img/link.svg" aria-hidden="true" /></a>', to='<img src="/img/link.svg" aria-hidden="true" /></a>-->'
-      ) }}
+      {{ page.content | safe }}
     </content>
 
 	</entry>

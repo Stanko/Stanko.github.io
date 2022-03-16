@@ -30,11 +30,22 @@ body {
   }
 }
 
+*:focus-visible {
+  outline: 2px solid var(--theme-color);
+  outline: -1px;
+}
+
+#page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
+}
+
 .main {
   background-color: $white;
   outline: none;
-  width: 100%;
-  overflow-x: hidden;
 }
 
 a {
@@ -133,12 +144,13 @@ img {
   max-width: 100%;
 }
 
-img[src$=".jpg"],
-img[src$=".jpeg"],
-img[src$=".JPG"],
-img[src$=".JPEG"] {
-  background-color: $block-bg;
-}
+// TODO revisit
+// img[src$=".jpg"],
+// img[src$=".jpeg"],
+// img[src$=".JPG"],
+// img[src$=".JPEG"] {
+//   background-color: $block-bg;
+// }
 
 iframe {
   width: 100%;

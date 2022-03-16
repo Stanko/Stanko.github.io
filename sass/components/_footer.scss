@@ -1,9 +1,10 @@
 .footer {
   @include text-sm;
-  background-color: $black;
+  background-color: var(--black);
   color: $gray-400;
   padding: 60rem 0;
   text-align: center;
+  margin-top: auto;
 
   @include lg {
     padding: 100rem 0;
