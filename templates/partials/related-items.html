@@ -17,7 +17,7 @@
         >
           {%- set date_string = "/art/" ~ page.earlier.date ~ "-" %}
           {%- set image_path = page.earlier.extra.image | replace(from="/art/", to=date_string) %}
-          {%- set image = resize_image(path=image_path, width=500, height=500, op="fit", quality=90) %}
+          {%- set image = resize_image(path=image_path, width=700, height=700, op="fit", quality=90) %}
           <div class="related-items__item-eyebrow">
             Previous
           </div>
@@ -37,7 +37,7 @@
         >
           {%- set date_string = "/art/" ~ page.later.date ~ "-" %}
           {%- set image_path = page.later.extra.image | replace(from="/art/", to=date_string) %}
-          {%- set image = resize_image(path=image_path, width=500, height=500, op="fit", quality=90) %}
+          {%- set image = resize_image(path=image_path, width=700, height=700, op="fit", quality=90) %}
           <div class="related-items__item-eyebrow">
             Next
           </div>

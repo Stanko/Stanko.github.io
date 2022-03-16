@@ -79,10 +79,6 @@
   }
 }
 
-.related-items__arrow--prev {
-  transform: rotate(180deg);
-}
-
 .related-items__height-fix {
   height: 140px;
 
@@ -101,6 +97,7 @@
   border-radius: $radius-xs;
   transition: opacity $time;
   transform-origin: top left;
+  max-width: 350rem;
 
   .related-items__item--next & {
     transform-origin: top right;
