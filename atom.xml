@@ -784,6 +784,35 @@ See the Pen <a href='http://codepen.io/stanko/pen/NWgvOXp/'>React, blur on an el
 
 	</entry>
 	<entry xml:lang="en">
+		<title>Untitled</title>
+		<published>2021-07-27T00:00:00+00:00</published>
+		<updated>2021-07-27T00:00:00+00:00</updated>
+		<link href="https://muffinman.io/art/boxes-untitled/" type="text/html"/>
+		<id>https://muffinman.io/art/boxes-untitled/</id>
+    <author>
+      <name>Stanko</name>
+    </author>
+		<content type="html">
+      <p>Shading was done by generating (a lot of) dots. Then I used <a href="https://github.com/nornagon/saxi">saxi's</a> option to connect nearby dots in order to create these squiggly lines.</p>
+
+    </content>
+
+	</entry>
+	<entry xml:lang="en">
+		<title>Beach (print)</title>
+		<published>2021-04-11T00:00:00+00:00</published>
+		<updated>2021-04-11T00:00:00+00:00</updated>
+		<link href="https://muffinman.io/art/beach-print/" type="text/html"/>
+		<id>https://muffinman.io/art/beach-print/</id>
+    <author>
+      <name>Stanko</name>
+    </author>
+		<content type="html">
+      
+    </content>
+
+	</entry>
+	<entry xml:lang="en">
 		<title>Krypton</title>
 		<published>2021-03-27T00:00:00+00:00</published>
 		<updated>2021-03-27T00:00:00+00:00</updated>
@@ -1358,6 +1387,21 @@ and was used by thousands of people.</p>
 		<content type="html">
       <p>You can play with algorithm <a href="https://neon.muffinman.io/">here</a> and download images. It took me ages to find appropriate pens to plot this one. Also check <a href="http://motorhead.local:1234/blog/neon-generative-art-piece-made-using-2d-vector-field/">the blog post</a> about how it is made.</p>
 <p>On the images below you can see two different drawings.</p>
+
+    </content>
+
+	</entry>
+	<entry xml:lang="en">
+		<title>Waves (prints)</title>
+		<published>2020-07-20T00:00:00+00:00</published>
+		<updated>2020-07-20T00:00:00+00:00</updated>
+		<link href="https://muffinman.io/art/waves-prints/" type="text/html"/>
+		<id>https://muffinman.io/art/waves-prints/</id>
+    <author>
+      <name>Stanko</name>
+    </author>
+		<content type="html">
+      <p>Generative process allows me to work with huge number of elements and tiny details. These details are sometimes impossible to plot, as they would just get lost in the process. That's why I love large format prints - they allow tiny details to be seen and shine through.</p>
 
     </content>
 
@@ -5684,7 +5728,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1647451773319362557'
+    aria-controls='spoiler-1647458796896074931'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -5708,7 +5752,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
   </button>
 
   <div
-    id='spoiler-1647451773319362557'
+    id='spoiler-1647458796896074931'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -5819,7 +5863,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1647451773321574057'
+    aria-controls='spoiler-1647458796898302663'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -5843,7 +5887,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
   </button>
 
   <div
-    id='spoiler-1647451773321574057'
+    id='spoiler-1647458796898302663'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6001,7 +6045,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1647451773328521524'
+    aria-controls='spoiler-1647458796906072678'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6025,7 +6069,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
   </button>
 
   <div
-    id='spoiler-1647451773328521524'
+    id='spoiler-1647458796906072678'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6148,7 +6192,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1647451773332138972'
+    aria-controls='spoiler-1647458796910360348'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6172,7 +6216,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
   </button>
 
   <div
-    id='spoiler-1647451773332138972'
+    id='spoiler-1647458796910360348'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6382,7 +6426,7 @@ next to js and html files.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1647451773342401249'
+    aria-controls='spoiler-1647458796920701026'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6406,7 +6450,7 @@ next to js and html files.</p>
   </button>
 
   <div
-    id='spoiler-1647451773342401249'
+    id='spoiler-1647458796920701026'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6561,7 +6605,7 @@ in it.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1647451773349301698'
+    aria-controls='spoiler-1647458796935628402'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6585,7 +6629,7 @@ in it.</p>
   </button>
 
   <div
-    id='spoiler-1647451773349301698'
+    id='spoiler-1647458796935628402'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
