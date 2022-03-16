@@ -47,10 +47,18 @@
         <td>Paper:</td>
         <td>{{ page.extra.paper }}</td>
       </tr>
+      {% if page.extra.pens %}
       <tr>
         <td>Pens:</td>
         <td>{{ page.extra.pens }}</td>
       </tr>
+      {% endif %}
+      {% if page.extra.print %}
+      <tr>
+        <td>Medium:</td>
+        <td>Print</td>
+      </tr>
+      {% endif %}
     </table>
 
     <div class="art-single__images {% if page.extra.wide %}art-single__images--wide{% else %}art-single__images--tall{% endif %}">

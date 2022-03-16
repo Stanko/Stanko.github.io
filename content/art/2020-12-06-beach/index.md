@@ -7,7 +7,7 @@ size = "70x35cm"
 paper = "Bristol 220gsm"
 pens = "Pigma Micron"
 
-iterations = 1
+iterations = 2
 image = "/art/beach/0.jpg"
 
 wide = true
