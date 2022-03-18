@@ -1,7 +1,9 @@
 import PhotoSwipeLightbox from "photoswipe/dist/photoswipe-lightbox.esm.js";
 import PhotoSwipe from "photoswipe/dist/photoswipe.esm.js";
 
-// Update CSS when updating JS lib!!
+let playTimeout;
+
+const PHOTOSWIPE_ANIMATION_DURATION = 333;
 
 if (document.querySelector(".gallery")) {
   const lightbox = new PhotoSwipeLightbox({
@@ -30,10 +32,24 @@ if (document.querySelector(".gallery")) {
     }
   });
 
-  lightbox.on("change", (e) => {
+  lightbox.on("change", () => {
+    clearTimeout(playTimeout);
     document.querySelectorAll(".art-single__video").forEach((video) => {
       video.pause();
     });
+  });
+
+  lightbox.on("afterInit", () => {
+    const video =
+      lightbox.pswp.currSlide.content.element.querySelector(
+        ".art-single__video"
+      );
+
+    if (video) {
+      // Add a timeout to wait out the initial animation
+      clearTimeout(playTimeout);
+      timeout = setTimeout(() => video.play(), PHOTOSWIPE_ANIMATION_DURATION);
+    }
   });
 
   lightbox.init();

@@ -130,6 +130,7 @@ $col-gap-sm: 20rem;
 // ----- Photoswipe blur background
 
 .pswp {
+  // 333 is a default PhotoSwipe animation duration
   transition: all 333ms;
 }
 
