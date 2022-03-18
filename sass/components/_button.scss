@@ -88,15 +88,15 @@ $btn-drop: 2px;
 }
 
 .btn--empty {
-  color: var(--gray-600);
+  color: var(--neutral-600);
 
   &::after {
     background: var(--bg-color);
-    border: 1px solid var(--gray-200);
+    border: 1px solid var(--neutral-200);
   }
 
   &::before {
-    background: var(--gray-300);
+    background: var(--neutral-300);
   }
 
   &:hover,
@@ -104,11 +104,11 @@ $btn-drop: 2px;
     color: var(--text-color);
 
     &::after {
-      border-color: var(--gray-300);
+      border-color: var(--neutral-300);
     }
 
     &::before {
-      background-color: var(--gray-400);
+      background-color: var(--neutral-400);
     }
   }
 }

@@ -38,7 +38,7 @@
   &:focus,
   &:hover {
     .art__single-image-wrapper {
-      background-color: var(--gray-100);
+      background-color: var(--neutral-100);
     }
 
     .art__single-image {
@@ -75,7 +75,7 @@
   padding-bottom: 100%;
   position: relative;
   border-radius: $radius-xs;
-  background-color: var(--gray-50);
+  background-color: var(--neutral-50);
   transition: background $time;
 }
 

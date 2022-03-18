@@ -9,12 +9,12 @@ body {
   transition: all $time;
   // Messy as text-decoration props support is weird
   text-decoration: underline;
-  text-decoration: 1px underline var(--gray-400);
+  text-decoration: 1px underline var(--neutral-400);
   text-decoration-style: dotted;
   text-underline-offset: 2rem;
-  text-decoration-color: var(--gray-400);
+  text-decoration-color: var(--neutral-400);
   -webkit-text-decoration-style: dotted;
-  -webkit-text-decoration-color: var(--gray-400);
+  -webkit-text-decoration-color: var(--neutral-400);
 
   &::after {
     content: counter(sidenote);
@@ -32,8 +32,8 @@ body {
   }
 
   &:focus {
-    text-decoration-color: var(--gray-700);
-    -webkit-text-decoration-color: var(--gray-700);
+    text-decoration-color: var(--neutral-700);
+    -webkit-text-decoration-color: var(--neutral-700);
     text-decoration-style: solid;
     -webkit-text-decoration-style: solid;
   }
@@ -47,8 +47,8 @@ body {
   transition: box-shadow $time, transform $time;
 
   @include md-and-lower {
-    border-left: 2px solid var(--gray-300);
-    background-color: var(--gray-50);
+    border-left: 2px solid var(--neutral-300);
+    background-color: var(--neutral-50);
   }
 
   .sidenote__trigger--expanded + & {
@@ -93,7 +93,7 @@ body {
     font-size: 15rem !important;
     background: none !important;
     padding: 0 !important;
-    color: var(--gray-800) !important;
+    color: var(--neutral-800) !important;
 
     @include lg {
       font-size: 13rem !important;

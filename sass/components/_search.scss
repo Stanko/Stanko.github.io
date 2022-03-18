@@ -1,8 +1,8 @@
 .search__input {
-  @include placeholder(var(--gray-400));
+  @include placeholder(var(--neutral-400));
   background: none;
   border: none;
-  border-bottom: 1px solid var(--gray-300);
+  border-bottom: 1px solid var(--neutral-300);
   display: block;
   font-weight: $headers-font-weight;
   outline: none;
@@ -17,7 +17,7 @@
   }
 
   &:focus {
-    border-bottom: 1px solid var(--gray-400);
+    border-bottom: 1px solid var(--neutral-400);
   }
 }
 
@@ -55,7 +55,7 @@
 
 .search__result-eyebrow {
   @include text-sm;
-  color: var(--gray-600);
+  color: var(--neutral-600);
 }
 
 .search__no-results {

@@ -40,7 +40,7 @@ $col-gap-sm: 20rem;
   }
 
   &:hover {
-    scrollbar-color: var(--gray-300) var(--bg-color);
+    scrollbar-color: var(--neutral-300) var(--bg-color);
   }
 }
 
@@ -48,7 +48,7 @@ $col-gap-sm: 20rem;
   @include transparent-outline;
   min-height: 0;
   border-radius: $radius-xs;
-  background-color: var(--gray-100);
+  background-color: var(--neutral-100);
   overflow: hidden;
   flex-shrink: 0;
   position: relative;

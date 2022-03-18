@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 {% if page.title %}
   {% set page_data = page %}
 {% elif section.title %}
@@ -36,6 +33,8 @@
   {% set theme_suffix = "-" ~ page_data.extra.theme %}
 {% endif %}
 
+<!DOCTYPE html>
+<html lang="en" class="{{ theme_class }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -74,7 +73,7 @@
   {% block head %}{% endblock %}
 </head>
 
-<body class="{{ theme_class }}">
+<body>
   <script>
     var userSelected = localStorage.getItem('color-scheme');
     if (userSelected) { document.documentElement.classList.add(userSelected); }

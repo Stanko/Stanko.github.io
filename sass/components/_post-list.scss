@@ -5,11 +5,11 @@
   border-radius: $radius-xs;
 
   &:hover {
-    background-color: var(--gray-100);
+    background-color: var(--neutral-100);
   }
 
   &:focus {
-    background-color: var(--gray-50);
+    background-color: var(--neutral-50);
     outline: none;
 
     .post-list__title {

@@ -11,7 +11,7 @@
 
   span,
   svg {
-    color: var(--gray-600);
+    color: var(--neutral-600);
   }
 }
 
@@ -49,7 +49,7 @@
 .art-single__main-image {
   @include transparent-outline;
   display: block;
-  background-color: var(--gray-100);
+  background-color: var(--neutral-100);
   margin-bottom: 20rem;
   border-radius: $radius-xs;
   overflow: hidden;
@@ -98,5 +98,5 @@
 }
 
 .art-single__video {
-  background: var(--gray-500);
+  background: var(--neutral-500);
 }
