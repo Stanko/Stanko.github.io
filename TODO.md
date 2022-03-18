@@ -11,6 +11,11 @@
 * spoiler and sidenote reveal animation
 * mini game
 * dark mode
+  * notice
+  * footer
+  * neutral color
+  * sidenote shadow
+  * theme color
 * parallax
 * clean up gallery/art-single SCSS (tall/wide)
 * custom icons for photoswipe

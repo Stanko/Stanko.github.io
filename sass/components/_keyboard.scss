@@ -24,7 +24,7 @@
 // --- Keyboard keys
 
 .key {
-  fill: $gray-200;
+  fill: var(--gray-200);
   stroke-width: 2;
   stroke: transparent;
 }

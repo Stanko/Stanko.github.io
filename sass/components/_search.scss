@@ -1,8 +1,8 @@
 .search__input {
-  @include placeholder($gray-400);
+  @include placeholder(var(--gray-400));
   background: none;
   border: none;
-  border-bottom: 1px solid $gray-300;
+  border-bottom: 1px solid var(--gray-300);
   display: block;
   font-weight: $headers-font-weight;
   outline: none;
@@ -17,13 +17,13 @@
   }
 
   &:focus {
-    border-bottom: 1px solid $gray-400;
+    border-bottom: 1px solid var(--gray-400);
   }
 }
 
 .search__result {
   @include text-lg;
-  color: $text-color;
+  color: var(--text-color);
   display: block;
   padding: 10rem 0 15rem;
   transition: color $time, background $time;
@@ -41,7 +41,7 @@
 .search__result--focused {
   display: block;
   color: var(--theme-color);
-  background-color: $white;
+  background-color: var(--bg-color);
 
   .post-arrow {
     opacity: 1;
@@ -55,7 +55,7 @@
 
 .search__result-eyebrow {
   @include text-sm;
-  color: $gray-600;
+  color: var(--gray-600);
 }
 
 .search__no-results {

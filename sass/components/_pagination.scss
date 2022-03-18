@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: $text-color;
+  color: var(--text-color);
   overflow: hidden;
 }
 
@@ -27,7 +27,7 @@ a.pagination__item {
 
 .pagination__item--active {
   font-weight: bold;
-  color: $white;
+  color: var(--white);
   background-color: var(--theme-color);
   border-radius: 50%;
 }
@@ -42,7 +42,7 @@ a.pagination__item {
 }
 
 .pagination__separator {
-  color: $gray-300;
+  color: var(--gray-300);
 }
 
 .pagination__arrow {

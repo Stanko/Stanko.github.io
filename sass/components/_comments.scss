@@ -16,14 +16,14 @@
 }
 
 .comments__all .comment:first-child {
-  border-top: 1px solid $separator-color;
+  border-top: 1px solid var(--separator-color);
 }
 
 .comment {
   padding-top: 40rem;
 
   & {
-    border-bottom: 1px solid $separator-color;
+    border-bottom: 1px solid var(--separator-color);
   }
 
   &:last-child {
@@ -37,15 +37,15 @@
 
   p code {
     font-size: 16rem;
-    background-color: $gray-100;
-    color: $code-color;
+    background-color: var(--gray-100);
+    color: var(--code-color);
     padding: 1rem 5rem;
     border-radius: $radius-xxs;
   }
 
   pre {
-    background-color: $gray-100;
-    color: $code-color;
+    background-color: var(--gray-100);
+    color: var(--code-color);
     padding: 1rem 5rem;
     overflow: auto;
     padding: $spacing-md $spacing-lg;
@@ -72,11 +72,11 @@
   height: 50rem;
   margin-right: 15rem;
   width: 50rem;
-  background-color: $gray-200;
+  background-color: var(--gray-200);
 }
 
 .comment__avatar--mm {
-  border: 1px solid $gray-200;
+  border: 1px solid var(--gray-200);
   background-color: white;
   display: flex;
   padding: 10rem;
@@ -88,7 +88,7 @@
 
 .comment__date {
   @include text-sm;
-  color: $text-light;
+  color: var(--text-light);
 }
 
 .comment__message {

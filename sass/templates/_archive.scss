@@ -2,14 +2,14 @@
   display: block;
   width: 100%;
   text-align: left;
-  color: $text-color;
+  color: var(--text-color);
 
   &:hover {
     color: var(--theme-color);
 
     .archive__count,
     .archive__arrow {
-      color: $text-color;
+      color: var(--text-color);
     }
   }
 
@@ -32,7 +32,7 @@
   max-width: 700rem;
 
   .archive__category:not(:first-child) & {
-    border-top: 1px solid $separator-color;
+    border-top: 1px solid var(--separator-color);
   }
 
   @include md {
@@ -54,7 +54,7 @@
 
 .archive__count {
   @include text-sm;
-  color: $text-light;
+  color: var(--text-light);
   order: -1;
   font-weight: 500;
   transition: color $time;
@@ -62,7 +62,7 @@
 }
 
 .archive__arrow {
-  color: $text-light;
+  color: var(--text-light);
   display: block;
   fill: none;
   flex-shrink: 0;

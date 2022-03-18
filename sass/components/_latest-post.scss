@@ -1,5 +1,5 @@
 .latest-post {
-  color: $text-color;
+  color: var(--text-color);
   display: block;
   margin: 0 #{-$gutter} $spacing-lg;
   padding: 0 $gutter;
@@ -14,7 +14,7 @@
   }
 
   &:hover {
-    background-color: $gray-100;
+    background-color: var(--gray-100);
   }
 }
 
@@ -75,7 +75,7 @@
 
 .latest-post__date {
   @include text-sm;
-  color: $text-light;
+  color: var(--text-light);
 }
 
 .latest-post__intro {
@@ -109,5 +109,5 @@
 }
 
 .latest-post__image-wrapper--shadow img {
-  box-shadow: $shadow-md;
+  box-shadow: var(--image-shadow);
 }

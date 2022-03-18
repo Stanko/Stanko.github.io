@@ -1,7 +1,7 @@
 .related-items {
   padding: 80rem 0;
-  background: $gray-50;
-  border-top: 1px solid $gray-200;
+  background: var(--gray-50);
+  border-top: 1px solid var(--gray-200);
 
   @include md {
     padding: 100rem 0;
@@ -21,7 +21,7 @@
 .related-items__item {
   display: flex;
   flex-direction: column;
-  color: $text-color;
+  color: var(--text-color);
   outline: none;
 
   &:hover {
@@ -60,7 +60,7 @@
 }
 
 .related-items__item-eyebrow {
-  color: $text-light;
+  color: var(--text-light);
   font-size: 13rem;
 }
 
@@ -106,7 +106,7 @@
 
 .related-items__image-wrapper img {
   border-radius: $radius-xs;
-  background-color: $gray-100;
+  background-color: var(--gray-100);
   max-height: 140px;
 
   @include md {

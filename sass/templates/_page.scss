@@ -19,8 +19,8 @@
 .page__top {
   padding: 40rem 0 60rem;
   margin-bottom: 40rem;
-  background-color: $page-top-bg;
-  border-bottom: 1px solid $page-top-border-color;
+  background-color: var(--page-top-bg);
+  border-bottom: 1px solid var(--page-top-border-color);
 
   @include md {
     padding: 40rem 0 80rem;
@@ -44,6 +44,6 @@
 
 .page__intro {
   margin-top: 10rem;
-  color: $gray-600;
+  color: var(--gray-600);
   max-width: 22em;
 }

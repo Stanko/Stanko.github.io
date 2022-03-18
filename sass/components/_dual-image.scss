@@ -34,7 +34,7 @@
 }
 
 .dual-image--shadow .dual-image__img {
-  box-shadow: $shadow-md;
+  box-shadow: var(--image-shadow);
 }
 
 .dual-image__text {

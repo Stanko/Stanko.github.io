@@ -16,8 +16,8 @@
 .post__top {
   padding: 20rem 0 30rem;
   margin-bottom: 40rem;
-  background-color: $page-top-bg;
-  border-bottom: 1px solid $page-top-border-color;
+  background-color: var(--page-top-bg);
+  border-bottom: 1px solid var(--page-top-border-color);
 
   @include md {
     padding: 40rem 0 60rem;
@@ -49,7 +49,7 @@
 
 .post__date,
 .post__info {
-  color: $gray-600;
+  color: var(--gray-600);
 }
 
 .post__date {
@@ -98,8 +98,8 @@
 
 .post__bottom {
   padding: 100rem 0;
-  background: $gray-50;
-  border-top: 1px solid $gray-200;
+  background: var(--gray-50);
+  border-top: 1px solid var(--gray-200);
 }
 
 // ------- Header anchor

@@ -15,15 +15,15 @@
   }
 
   .nav__item.active {
-    border-bottom-color: $gray-400;
+    border-bottom-color: var(--gray-400);
   }
 
   .nav__item {
-    color: $gray-800;
+    color: var(--gray-800);
   }
 
   span {
-    color: $gray-300;
+    color: var(--gray-300);
   }
 }
 
@@ -31,15 +31,15 @@
   justify-content: center;
 
   .nav__item.active {
-    border-bottom-color: $gray-700;
+    border-bottom-color: var(--footer-underline);
   }
 
   .nav__item {
-    color: $gray-100;
+    color: var(--footer-link);
   }
 
   span {
-    color: $gray-800;
+    color: var(--footer-separator);
   }
 }
 

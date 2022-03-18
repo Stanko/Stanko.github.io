@@ -151,9 +151,9 @@ Fun fact, the drawing was reserved and sold even before it was plotted. It went 
 {{ dual_image(
   shadow=true
   alt1="Pen plot, white on black paper"
-  src1="/img/krypton/plot-01.jpg"
+  src1="/art/krypton/0.jpg"
   alt2="Detail of the plotted piece"
-  src2="/img/krypton/plot-02.jpg"
+  src2="/art/krypton/2.jpg"
 ) }}
 
 

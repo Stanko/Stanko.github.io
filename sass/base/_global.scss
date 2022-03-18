@@ -21,7 +21,8 @@ html {
 body {
   font-size: 18rem;
   line-height: 1.5;
-  color: $text-color;
+  color: var(--text-color);
+  background-color: var(--bg-color);
   font-family: $body-font-family;
   font-weight: $body-font-weight;
 
@@ -44,7 +45,7 @@ body {
 }
 
 .main {
-  background-color: $white;
+  background-color: var(--bg-color);
   outline: none;
 }
 
@@ -149,13 +150,13 @@ img {
 // img[src$=".jpeg"],
 // img[src$=".JPG"],
 // img[src$=".JPEG"] {
-//   background-color: $block-bg;
+//   background-color: var(--block-bg);
 // }
 
 iframe {
   width: 100%;
   display: block;
-  background-color: $block-bg;
+  background-color: var(--block-bg);
 }
 
 svg {
@@ -171,15 +172,11 @@ svg {
   overflow: hidden;
 }
 
-.text-gradient {
-  @include text-gradient;
-}
-
 .jump-to-content {
   @include text-sm;
   @include animated-underline;
-  color: $text-color;
-  background: $white;
+  color: var(--text-color);
+  background: var(--bg-color);
   display: block;
   left: -200rem;
   overflow: hidden;

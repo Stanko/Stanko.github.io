@@ -13,18 +13,18 @@
   margin-bottom: 20rem;
 
   &:hover {
-    color: $text-color;
+    color: var(--text-color);
 
     .related-posts__post-title {
-      text-decoration-color: $gray-300;
-      -webkit-text-decoration-color: $gray-300;
+      text-decoration-color: var(--gray-300);
+      -webkit-text-decoration-color: var(--gray-300);
     }
   }
 }
 
 .related-posts__date {
   @include text-sm;
-  color: $text-light;
+  color: var(--text-light);
 }
 
 .related-posts__post-title {

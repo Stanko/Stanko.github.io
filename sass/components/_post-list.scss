@@ -1,15 +1,15 @@
 .post-list__post {
   display: block;
-  color: $text-color;
+  color: var(--text-color);
   padding: 10rem 0;
   border-radius: $radius-xs;
 
   &:hover {
-    background-color: $gray-100;
+    background-color: var(--gray-100);
   }
 
   &:focus {
-    background-color: $gray-50;
+    background-color: var(--gray-50);
     outline: none;
 
     .post-list__title {
@@ -42,7 +42,7 @@
 
 .post-list__date {
   @include text-sm;
-  color: $text-light;
+  color: var(--text-light);
   order: -1;
 }
 

@@ -65,7 +65,7 @@ $btn-drop: 2px;
 }
 
 .btn--main {
-  color: $white;
+  color: var(--white);
 
   &::after {
     background: var(--theme-color);
@@ -88,27 +88,27 @@ $btn-drop: 2px;
 }
 
 .btn--empty {
-  color: $gray-600;
+  color: var(--gray-600);
 
   &::after {
-    background: $white;
-    border: 1px solid $gray-200;
+    background: var(--bg-color);
+    border: 1px solid var(--gray-200);
   }
 
   &::before {
-    background: $gray-300;
+    background: var(--gray-300);
   }
 
   &:hover,
   &:focus {
-    color: $text-color;
+    color: var(--text-color);
 
     &::after {
-      border-color: $gray-300;
+      border-color: var(--gray-300);
     }
 
     &::before {
-      background-color: $gray-400;
+      background-color: var(--gray-400);
     }
   }
 }

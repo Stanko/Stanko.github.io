@@ -1,5 +1,5 @@
 .menu {
-  background-color: $page-top-bg;
+  background-color: var(--page-top-bg);
   padding: 10rem 0;
   z-index: $layer-menu;
   transition: transform $time-long, border $time-long;
@@ -54,7 +54,7 @@
   margin-left: 8rem;
   font-size: 16rem;
   letter-spacing: 0.5rem;
-  color: $text-color;
+  color: var(--text-color);
   font-weight: bold;
 }
 
@@ -73,7 +73,7 @@
   }
 
   span {
-    background: $gray-600;
+    background: var(--gray-600);
     border-radius: 2rem;
     display: block;
     height: 2rem;
@@ -91,11 +91,10 @@
 
   span {
     position: absolute;
-    background: $gray-600;
+    background: var(--gray-600);
     border-radius: 2rem;
     display: block;
     height: 2rem;
-    // margin: 6rem auto;
     transition: background $time;
     width: 28rem;
     left: 11rem;
@@ -106,5 +105,12 @@
   }
   span:last-child {
     transform: rotate(-45deg);
+  }
+}
+
+.menu__close:hover,
+.menu__toggle:hover {
+  span {
+    background: var(--text-color);
   }
 }

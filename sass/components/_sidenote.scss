@@ -9,12 +9,12 @@ body {
   transition: all $time;
   // Messy as text-decoration props support is weird
   text-decoration: underline;
-  text-decoration: 1px underline $gray-400;
+  text-decoration: 1px underline var(--gray-400);
   text-decoration-style: dotted;
   text-underline-offset: 2rem;
-  text-decoration-color: $gray-400;
+  text-decoration-color: var(--gray-400);
   -webkit-text-decoration-style: dotted;
-  -webkit-text-decoration-color: $gray-400;
+  -webkit-text-decoration-color: var(--gray-400);
 
   &::after {
     content: counter(sidenote);
@@ -32,8 +32,8 @@ body {
   }
 
   &:focus {
-    text-decoration-color: $gray-700;
-    -webkit-text-decoration-color: $gray-700;
+    text-decoration-color: var(--gray-700);
+    -webkit-text-decoration-color: var(--gray-700);
     text-decoration-style: solid;
     -webkit-text-decoration-style: solid;
   }
@@ -47,8 +47,8 @@ body {
   transition: box-shadow $time, transform $time;
 
   @include md-and-lower {
-    border-left: 2px solid $gray-300;
-    background-color: $gray-50;
+    border-left: 2px solid var(--gray-300);
+    background-color: var(--gray-50);
   }
 
   .sidenote__trigger--expanded + & {
@@ -58,17 +58,17 @@ body {
   @include lg {
     .sidenote__trigger:hover + &,
     .sidenote__trigger:focus + & {
-      box-shadow: $shadow-md;
+      box-shadow: var(--image-shadow);
       transform: translateY(-2px);
     }
 
     .sidenote__trigger--hover + & {
-      box-shadow: $shadow-md;
+      box-shadow: var(--image-shadow);
     }
   }
 
   @include lg {
-    background-color: white;
+    background-color: var(--bg-color);
     font-size: 14rem;
     display: block !important;
     clear: right;
@@ -93,7 +93,7 @@ body {
     font-size: 15rem !important;
     background: none !important;
     padding: 0 !important;
-    color: $gray-800 !important;
+    color: var(--gray-800) !important;
 
     @include lg {
       font-size: 13rem !important;

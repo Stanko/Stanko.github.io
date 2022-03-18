@@ -25,7 +25,7 @@
   flex-direction: column;
   flex: 0 0 50%;
   padding: $gutter / 2;
-  color: $text-color;
+  color: var(--text-color);
   transition: background $time;
   position: relative;
   outline: none;
@@ -38,7 +38,7 @@
   &:focus,
   &:hover {
     .art__single-image-wrapper {
-      background-color: $gray-100;
+      background-color: var(--gray-100);
     }
 
     .art__single-image {
@@ -65,7 +65,7 @@
 
 .art__single-date {
   font-size: 10rem;
-  color: $text-light;
+  color: var(--text-light);
   order: 3;
   margin-top: 5rem;
 }
@@ -75,7 +75,7 @@
   padding-bottom: 100%;
   position: relative;
   border-radius: $radius-xs;
-  background-color: $gray-50;
+  background-color: var(--gray-50);
   transition: background $time;
 }
 
