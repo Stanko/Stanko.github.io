@@ -183,24 +183,28 @@ $purple-gradient-color-2: #eb3b8d;
   // --notice-text: #925f07;
 
   // color themes
-  &.blue {
+  &.blue,
+  .blue {
     --link-color: #408fff;
 
     --gradient-color-1: #3257cf;
     --gradient-color-2: #0083ef;
   }
 
-  &.gray {
+  &.gray,
+  .gray {
     --theme-color: #9ca3af;
     --gradient-color-1: #6b7280;
     --gradient-color-2: #89909c;
   }
 
-  &.red {
+  &.red,
+  .red {
     --link-color: #ff475f;
   }
 
-  &.purple {
+  &.purple,
+  .purple {
     --link-color: #a05dff;
   }
 }
