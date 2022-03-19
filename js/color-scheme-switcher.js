@@ -7,6 +7,8 @@ const toggleButtons = document.querySelectorAll(".color-scheme-switcher");
 toggleButtons.forEach((toggleButton) => {
   toggleButton.addEventListener("click", () => {
     const userSelected = localStorage.getItem(COLOR_SCHEME_KEY);
+    const isUserSelectedDark = userSelected && userSelected === DARK;
+
     const isSystemDark = window.matchMedia(
       "(prefers-color-scheme: dark)"
     ).matches;
@@ -14,13 +16,21 @@ toggleButtons.forEach((toggleButton) => {
 
     document.documentElement.classList.remove(DARK, LIGHT);
 
-    if (userSelected && userSelected !== systemScheme) {
-      localStorage.removeItem(COLOR_SCHEME_KEY);
-    } else {
-      const newMode = isSystemDark ? LIGHT : DARK;
+    const isCurrentDark = userSelected ? isUserSelectedDark : isSystemDark;
 
-      document.documentElement.classList.add(newMode);
-      localStorage.setItem(COLOR_SCHEME_KEY, newMode);
-    }
+    const newMode = isCurrentDark ? LIGHT : DARK;
+
+    document.documentElement.classList.add(newMode);
+    localStorage.setItem(COLOR_SCHEME_KEY, newMode);
+
+    // TODO check if this is too complicated
+    // if (userSelected && userSelected !== systemScheme) {
+    //   localStorage.removeItem(COLOR_SCHEME_KEY);
+    // } else {
+    //   const newMode = isSystemDark ? LIGHT : DARK;
+
+    //   document.documentElement.classList.add(newMode);
+    //   localStorage.setItem(COLOR_SCHEME_KEY, newMode);
+    // }
   });
 });

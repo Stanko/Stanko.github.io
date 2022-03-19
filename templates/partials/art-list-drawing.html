@@ -1,4 +1,4 @@
-<a href="{{ drawing.permalink }}" class="art__single {% if post.extra.theme %}{{ post.extra.theme }}{% endif %}">
+<a href="{{ drawing.permalink }}" class="art__single {% if drawing.extra.theme %}{{ drawing.extra.theme }}{% endif %}">
   <div class="art__single-title h5">
     {{ drawing.title | safe }}{% include "partials/svg-post-arrow.html" %}
   </div>

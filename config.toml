@@ -15,7 +15,7 @@ taxonomies = [
 
 [markdown]
 highlight_code = true
-highlight_theme = "OneHalfLight"
+highlight_theme = "OneHalfDark"
 
 [extra]
 

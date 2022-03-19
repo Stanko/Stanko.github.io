@@ -16,6 +16,7 @@
     color: var(--text-color);
 
     .related-posts__post-title {
+      text-underline-offset: 3rem;
       text-decoration-color: var(--neutral-300);
       -webkit-text-decoration-color: var(--neutral-300);
     }

@@ -77,18 +77,7 @@
   }
 
   a {
-    transition: all $time;
-    // Messy as text-decoration props support is weird
-    text-decoration: underline;
-    text-decoration: 1px underline var(--separator-color);
-    text-decoration-color: var(--separator-color);
-    text-underline-offset: 2rem;
-    -webkit-text-decoration-color: var(--separator-color);
-
-    &:hover {
-      text-decoration-color: currentColor;
-      -webkit-text-decoration-color: currentColor;
-    }
+    @include content-link;
   }
 
   iframe {

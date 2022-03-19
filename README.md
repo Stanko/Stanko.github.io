@@ -11,3 +11,4 @@ Frontend development & rants.
 Copyright (c) Stanko Tadić
 
 [All rights reserved.](LICENSE.md)
+

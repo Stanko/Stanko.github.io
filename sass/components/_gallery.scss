@@ -28,20 +28,7 @@ $col-gap-sm: 20rem;
     }
   }
 
-  /* Firefox */
-  scrollbar-width: none;
-  /* IE 10+ */
-  -ms-overflow-style: none;
-
-  /* WebKit - Safari, Chrome, Opera */
-  &::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-  }
-
-  &:hover {
-    scrollbar-color: var(--neutral-300) var(--bg-color);
-  }
+  // TODO - fix horizontal scrollbars for desktops
 }
 
 .gallery__item {

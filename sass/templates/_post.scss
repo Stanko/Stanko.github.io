@@ -71,7 +71,7 @@
   }
 
   a {
-    @include animated-underline;
+    @include link-underline;
   }
 }
 
@@ -99,7 +99,7 @@
 .post__bottom {
   padding: 100rem 0;
   background: var(--neutral-50);
-  border-top: 1px solid var(--neutral-200);
+  border-top: 1px solid var(--separator-color);
 }
 
 // ------- Header anchor

@@ -59,6 +59,10 @@
       margin-right: -$gutter-md;
     }
   }
+
+  a {
+    @include content-link;
+  }
 }
 
 .comment__top {

@@ -39,12 +39,21 @@ body {
   }
 }
 
+.sidenote__trigger:hover + .sidenote__note,
+.sidenote__trigger:focus + .sidenote__note,
+.sidenote__trigger--hover + .sidenote__note {
+  @include dark-scheme {
+    border-color: var(--neutral-100);
+  }
+}
+
 .sidenote__note {
   display: none;
   padding: 6rem 10rem;
   font-size: 16rem;
   margin: 5rem 0;
-  transition: box-shadow $time, transform $time;
+  border: 1px solid transparent;
+  transition: box-shadow $time, transform $time, border $time;
 
   @include md-and-lower {
     border-left: 2px solid var(--neutral-300);

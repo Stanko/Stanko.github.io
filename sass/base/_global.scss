@@ -50,7 +50,7 @@ body {
 }
 
 a {
-  color: var(--theme-color);
+  color: var(--link-color);
   text-decoration: none;
   transition: border $time, background $time, color $time;
 }
@@ -174,7 +174,7 @@ svg {
 
 .jump-to-content {
   @include text-sm;
-  @include animated-underline;
+  @include link-underline;
   color: var(--text-color);
   background: var(--bg-color);
   display: block;

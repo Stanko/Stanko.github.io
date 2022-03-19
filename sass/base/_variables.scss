@@ -1,17 +1,3 @@
-// --- Color scheme  mixin
-
-@mixin dark-scheme {
-  @media (prefers-color-scheme: dark) {
-    html:not(.light-scheme) & {
-      @content;
-    }
-  }
-
-  .dark-scheme & {
-    @content;
-  }
-}
-
 // --- Breakpoints
 
 $breakpoint-sm: 400px;
@@ -57,6 +43,9 @@ $body-font-weight: 400;
 // --- Colors
 
 :root {
+  --true-black: #000;
+  --black: #111112;
+  --true-white: #fff;
   --white: #fff;
 
   --neutral-50: #f8fbfe;
@@ -79,55 +68,43 @@ $body-font-weight: 400;
   --page-top-border-color: var(--neutral-200);
 
   --code-color: var(--neutral-600);
-  --code-bg: var(--neutral-50);
+  --code-bg: #18181b; // dark --neutral-100
 
   --block-bg: var(--neutral-50);
   --separator-color: var(--neutral-200);
+  --link-underline-color: var(--neutral-300);
+
+  --link-color: var(--theme-color);
 
   // shadows
   --image-shadow: 1px 1px 7px rgba(0, 0, 20, 0.15);
 
   // footer (always dark)
+  --footer-bg: var(--black);
   --footer-text: #94a3b8; // gray 400
   --footer-link: #f1f5f9; // gray 100
   --footer-underline: #334155; // gray 700
   --footer-separator: #1e293b; // gray 800
+
+  // notice
+  --notice-bg: #fffbeb;
+  --notice-border: #fde68a;
+  --notice-text: #925f07;
 }
 
-html:not(.light-scheme),
-.dark-scheme {
-  --text-color: #f1f5f9;
-  --text-light: #94a3b8;
-
-  --bg-color: #111;
-
-  --neutral-900: #aaa;
-  --neutral-800: #999;
-  --neutral-700: #888;
-  --neutral-600: #777;
-  --neutral-500: #666;
-  --neutral-400: #555;
-  --neutral-300: #444;
-  --neutral-200: #333;
-  --neutral-100: #222;
-  --neutral-50: #191919;
-
-  // shadows
-  --image-shadow: none;
-}
-// --- Themes
+// --- Color themes
 
 $blue-theme-color: #196ee6;
 $blue-theme-gradient-color-1: #4341d7;
 $blue-theme-gradient-color-2: #00a3ef;
 
 $red-theme-color: #d62940;
+$red-theme-gradient-color-2: #f86945;
 $red-theme-gradient-color-1: #d62940;
-$red-theme-gradient-color-2: #b13464;
 
-$gray-theme-color: #304f6e;
-$gray-gradient-color-1: #2e4e6e;
-$gray-gradient-color-2: #7ea6c7;
+$gray-theme-color: #4b5563;
+$gray-gradient-color-1: #374151;
+$gray-gradient-color-2: #6b7280;
 
 $purple-theme-color: #8854d0;
 $purple-gradient-color-1: #6f52d7;
@@ -135,11 +112,6 @@ $purple-gradient-color-2: #eb3b8d;
 
 :root,
 .blue {
-  --true-black: #000;
-  --black: #111112;
-  --true-white: #fff;
-  --white: #fff;
-
   --theme-color: #{$blue-theme-color};
   --theme-color-darken-5: #{darken($blue-theme-color, 5)};
   --theme-color-darken-10: #{darken($blue-theme-color, 10)};
@@ -149,7 +121,6 @@ $purple-gradient-color-2: #eb3b8d;
   --gradient-color-2: #{$blue-theme-gradient-color-2};
 }
 
-// :root,
 .red {
   --theme-color: #{$red-theme-color};
   --theme-color-darken-5: #{darken($red-theme-color, 5)};
@@ -160,7 +131,6 @@ $purple-gradient-color-2: #eb3b8d;
   --gradient-color-2: #{$red-theme-gradient-color-2};
 }
 
-// :root,
 .gray {
   --theme-color: #{$gray-theme-color};
   --theme-color-darken-5: #{darken($gray-theme-color, 5)};
@@ -171,7 +141,6 @@ $purple-gradient-color-2: #eb3b8d;
   --gradient-color-2: #{$gray-gradient-color-2};
 }
 
-// :root,
 .purple {
   --theme-color: #{$purple-theme-color};
   --theme-color-darken-5: #{darken($purple-theme-color, 5)};
@@ -180,6 +149,60 @@ $purple-gradient-color-2: #eb3b8d;
   --theme-color-darken-20: #{darken($purple-theme-color, 20)};
   --gradient-color-1: #{$purple-gradient-color-1};
   --gradient-color-2: #{$purple-gradient-color-2};
+}
+
+.dark-scheme {
+  --text-color: var(--neutral-800);
+  --text-light: var(--neutral-600);
+
+  --bg-color: var(--black);
+
+  --neutral-900: #f3f4f6;
+  --neutral-800: #e5e7ea;
+  --neutral-700: #d1d5db;
+  --neutral-600: #9ca3af;
+  --neutral-500: #6b7280;
+  --neutral-400: #4b5563;
+  --neutral-300: #374151;
+  --neutral-200: #2f3947;
+  --neutral-100: #1f232b;
+  --neutral-50: #18181b;
+
+  --footer-bg: var(--neutral-100);
+
+  // shadows
+  --image-shadow: none;
+
+  // notice
+  --notice-bg: #2a2720;
+  --notice-border: #a77b0b;
+  --notice-text: #fbbf24;
+
+  // --notice-bg: #756c15;
+  // --notice-border: #fde68a;
+  // --notice-text: #925f07;
+
+  // color themes
+  &.blue {
+    --link-color: #408fff;
+
+    --gradient-color-1: #3257cf;
+    --gradient-color-2: #0083ef;
+  }
+
+  &.gray {
+    --theme-color: #9ca3af;
+    --gradient-color-1: #6b7280;
+    --gradient-color-2: #89909c;
+  }
+
+  &.red {
+    --link-color: #ff475f;
+  }
+
+  &.purple {
+    --link-color: #a05dff;
+  }
 }
 
 // --- Z-Index

@@ -1,14 +1,19 @@
 .notice {
   @include text-sm;
-  background: #fffbeb;
-  border: 1px solid #fde68a;
+  background: var(--notice-bg);
+  border: 1px solid var(--notice-border);
+  color: var(--notice-text);
   border-radius: $radius-sm;
   padding: 10rem 20rem;
-  color: #925f07;
   margin-bottom: 20rem;
   max-width: $container-width-narrow;
 
   a {
-    color: #000000;
+    color: var(--text-color);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

@@ -6,12 +6,11 @@
 
 .art-single__back {
   @include text-sm;
-  @include animated-underline;
+  @include link-underline;
   display: inline-block;
 
-  span,
-  svg {
-    color: var(--neutral-600);
+  span {
+    color: var(--text-light);
   }
 }
 

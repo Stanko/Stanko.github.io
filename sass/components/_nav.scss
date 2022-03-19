@@ -49,7 +49,7 @@
 }
 
 .nav__item:not(.active) {
-  @include animated-underline;
+  @include link-underline;
 }
 
 .nav__item--with-icon {

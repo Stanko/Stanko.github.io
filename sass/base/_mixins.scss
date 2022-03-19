@@ -1,3 +1,9 @@
+@mixin dark-scheme {
+  .dark-scheme & {
+    @content;
+  }
+}
+
 @mixin header {
   // font-family: $headers-font-family;
   font-weight: $headers-font-weight;
@@ -62,7 +68,7 @@
   }
 }
 
-@mixin animated-underline($color: var(--theme-color), $width: 1px) {
+@mixin link-underline($color: var(--theme-color), $width: 1px) {
   position: relative;
 
   &::before {
@@ -118,5 +124,21 @@
     width: 100%;
     height: 100%;
     border: 1px solid $color;
+  }
+}
+
+@mixin content-link {
+  transition: all $time;
+  color: var(--link-color);
+  // Messy as text-decoration props support is weird
+  text-underline-offset: 2rem;
+  text-decoration: underline;
+  text-decoration: 1px underline var(--link-underline-color);
+  text-decoration-color: var(--link-underline-color);
+  -webkit-text-decoration-color: var(--link-underline-color);
+
+  &:hover {
+    text-decoration-color: currentColor;
+    -webkit-text-decoration-color: currentColor;
   }
 }

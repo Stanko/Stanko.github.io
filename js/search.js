@@ -33,7 +33,7 @@ searchInput.addEventListener("keyup", function (e) {
   previousSearchTerm = searchTerm;
 
   const results = fuzzysort.go(searchTerm, searchData, {
-    key: "title",
+    key: "t", // title
     limit: MAX_RESULTS,
     threshold: -50000, // don't return bad results
   });
@@ -45,9 +45,9 @@ searchInput.addEventListener("keyup", function (e) {
       .map((result, index) => {
         return `<a class="search__result ${
           index === 0 ? RESULT_FOCUS_CLASS : ""
-        }" href="${result.obj.url}">
+        }" href="${result.obj.u}">
         <div class="container">
-        <div class="search__result-eyebrow">${result.obj.eyebrow}</div>
+        <div class="search__result-eyebrow">${result.obj.e}</div>
         <div class="search__result-title">
         ${fuzzysort.highlight(
           result

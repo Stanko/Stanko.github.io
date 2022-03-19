@@ -5,7 +5,7 @@
         {% include "partials/svg-logo.html" %}
       </div>
     {% else %}
-      <img class="comment__avatar" src="https://www.gravatar.com/avatar/{{ comment.email }}?d=mm&r=g" />
+      <img aria-hidden="true" class="comment__avatar" src="https://www.gravatar.com/avatar/{{ comment.email }}?d=mm&r=g" />
     {% endif %}
 
     <div class="comment__right">
