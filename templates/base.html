@@ -73,7 +73,11 @@
 
 <body>
   <script>
-    var userSelected = localStorage.getItem('color-scheme'); if (userSelected) { document.documentElement.classList.add(userSelected); }
+    var isSystemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    var userSelected = localStorage.getItem('color-scheme');
+    var scheme = 'light-scheme';
+    if (userSelected) { scheme = userSelected } else if(isSystemDark) { scheme = 'dark-scheme'; }
+    document.documentElement.classList.add(scheme);
   </script>
 
   <div id="page">
