@@ -21,7 +21,6 @@ Today. I have a very personal project to share with you all.
 For more information about the book, please check [about page](https://lettersfromsarajevo.com/en/about/).
 
 
-<!--{:.Image--md}-->
 [![One of the images from the book, soldier lying on the cannon which is plugged with a cork](/img/letters-from-sarajevo/truce.png)](https://lettersfromsarajevo.com/)
 
 <!-- more -->

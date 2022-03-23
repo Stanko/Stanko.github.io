@@ -86,14 +86,11 @@ export default class AnimateMe extends Component {
 }
 ```
 
-<iframe
-height='400px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/XgaNyq/?height=400&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/XgaNyq/'>Rerender React component in componentDidMount - Step 1</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+{{ codepen(
+  id="XgaNyq",
+  title="Rerender React component in componentDidMount - Step 1",
+  height=400
+) }}
 
 ## Solution, add a short timeout
 
@@ -116,14 +113,11 @@ Now I get the reason why it works. Because 50ms is larger than animation frame (
 ...
 ```
 
-<iframe
-height='400px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/WOERrE/?height=400&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/WOERrE/'>Rerender React component in componentDidMount - Step 2</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+{{ codepen(
+  id="WOERrE",
+  title="Rerender React component in componentDidMount - Step 2",
+  height=400
+) }}
 
 So this is cross browser solution, but I always cringe a little when I'm forced to use timeouts like this. And I have been talking about animation frames a lot, so why don't we try that next?
 
@@ -151,14 +145,11 @@ But you might want to stick with it for some time, to make sure all of your user
 ...
 ```
 
-<iframe
-height='400px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/JJyEoz/?height=400&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/JJyEoz/'>Rerender React component in componentDidMount - Step 3</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+{{ codepen(
+  id="JJyEoz",
+  title="Rerender React component in componentDidMount - Step 3",
+  height=400
+) }}
 
 So now we need to make sure our two states belong to different animation frames each.
 
@@ -190,15 +181,11 @@ value for timeout, just use native methods that browsers provide.
 ...
 ```
 
-
-<iframe
-height='400px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/JJyEXq/?height=400&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/JJyEXq/'>Rerender React component in componentDidMount - Step 4</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+{{ codepen(
+  id="JJyEXq",
+  title="Rerender React component in componentDidMount - Step 4",
+  height=400
+) }}
 
 
 ## Finally, put it in a helper

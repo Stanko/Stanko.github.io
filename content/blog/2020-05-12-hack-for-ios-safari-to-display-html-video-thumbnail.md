@@ -40,11 +40,11 @@ Please note that you need to check the example using iOS Safari to see the diffe
 <div class="dual-image">
   <div class="dual-image__img">
     <b class="dual-image__text">Without media fragments</b>
-    <video playsinline controls muted src="/videos/video.mp4" style="background: #f2f5f9"></video>
+    <video playsinline="true" controls="true" muted="true" src="/videos/video.mp4" style="background: #f2f5f9"></video>
   </div>
   <div class="dual-image__img">
     <b class="dual-image__text">With media fragments</b>
-    <video playsinline controls muted src="/videos/video.mp4#t=0.001" style="background: #f2f5f9"></video>
+    <video playsinline="true" controls="true" muted="true" src="/videos/video.mp4#t=0.001" style="background: #f2f5f9"></video>
   </div>
 </div>
 

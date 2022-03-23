@@ -45,9 +45,9 @@ Shorty after I was able to record the first video using the little contraption I
 <video
   poster="/img/axidraw/poster.jpg"
   style="width:100%"
-  controls
-  muted
-  playsinline
+  controls="true"
+  muted="true"
+  playsinline="true"
   alt-text="White pen drawing stars on the black paper, the first video I recorded using the mount"
   src="/img/axidraw/stars.mp4"
 ></video>

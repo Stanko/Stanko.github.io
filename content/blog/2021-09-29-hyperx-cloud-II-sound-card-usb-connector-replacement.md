@@ -15,7 +15,6 @@ If you are only interested in the wiring diagram, jump directly to the [wiring](
 
 HyperX's Cloud II headphones come with a USB sound card, which looks like this:
 
-<!--{:.Image}-->
 ![USB sound card that comes with Cloud II headphones](/img/hyperx-cloud2/usb-sound-card.jpg)
 
 It is a convenient little dongle. I had it plugged in into the front USB port, and I bumped into it, bending the connector for ninety degrees. Naturally, it stopped working. Good thing about these headphones is that the sound card isn't mandatory for headphones to work, but the regular audio cable is pretty short.

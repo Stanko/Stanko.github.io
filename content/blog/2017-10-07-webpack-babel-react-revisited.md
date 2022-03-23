@@ -904,7 +904,6 @@ src
 
 And all that to create a very simple application, that should look something like this:
 
-<!--{:.Image.Image--lg}-->
 [![Example app running in the browser](/img/running-dev-server.png)](https://github.com/Stanko/webpack-babel-react-revisited)
 
 Hopefully, you now understand webpack better and are able to create new apps from scratch.

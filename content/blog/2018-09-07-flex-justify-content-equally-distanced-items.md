@@ -46,11 +46,9 @@ This hack works with dynamic number of elements, dynamic widths and for any flex
 
 You can see it in the action below:
 
-<iframe
-height='400px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/XPzmqg/?height=400&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/XPzmqg/'>Flex items equally distanced from each other, as well from the parent's edge</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+
+{{ codepen(
+  id="XPzmqg",
+  title="Flex items equally distanced from each other, as well from the parent's edge",
+  height=400
+) }}

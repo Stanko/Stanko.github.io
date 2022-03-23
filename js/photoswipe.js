@@ -27,7 +27,7 @@ if (document.querySelector(".gallery")) {
       e.itemData.element &&
       e.itemData.element.dataset.isVideo
     ) {
-      e.itemData.html = `<video class="art-single__video" src="${e.itemData.src}#t=0.001" controls playsinline />`;
+      e.itemData.html = `<video class="art-single__video" src="${e.itemData.src}#t=0.001" controls playsinline="true" />`;
       e.itemData.src = undefined;
     }
   });

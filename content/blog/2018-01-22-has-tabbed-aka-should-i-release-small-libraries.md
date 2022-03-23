@@ -49,7 +49,6 @@ You can safely remove focus rings for people using a mouse,
 but as soon as they start tabbing you can put them back in.
 You'll understand what I'm talking about when you see [the demo](https://muffinman.io/has-tabbed/).
 
-<!--{:.Image.Image--md}-->
 !["has-tabbed" in action](/img/projects/has-tabbed.png)
 
 On the left, you can see colorful buttons without focus state (with hover state on the first one).

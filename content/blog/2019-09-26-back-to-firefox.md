@@ -17,7 +17,6 @@ Issue is [finally fixed](https://www.mozilla.org/en-US/firefox/70.0beta/releasen
 
 Meanwhile you can download [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly), which is the freshest (and sometimes unstable) version of Firefox.
 
-<!--{:.Image.Image--sm}-->
 [![Firefox Nightly](/img/ff-nightly.png)](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly)
 
 I'm really happy to be using Firefox again, and I think you should try it as well.

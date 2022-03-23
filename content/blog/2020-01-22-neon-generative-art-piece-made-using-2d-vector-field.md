@@ -49,7 +49,6 @@ After watching [Vladimir's talk](https://www.youtube.com/watch?v=NAil0DzclFA) ab
 
 This is an example of one randomly generated vector field:
 
-<!--{:.Image.Image--md}-->
 ![Randomly generated 2d vector field](/img/neon/00.png)
 
 Think of it like it is an air or water flow. If this field was a river and you drop a leaf in it, these forces will take it and carry it around. If we plot the movement of the leaf, we'll get a line.
@@ -60,34 +59,28 @@ If we draw a lot of these lines, we will visualize the flow of the field. That i
 
 To draw a line, we'll select a random point for its start (we are *dropping a leaf*).
 
-<!--{:.Image.Image--..}-->
 ![Random point in the vector field](/img/neon/10.png)
 
 We need to define which vectors are applying "force" to our point. Let's use radial search radius of 1.5 times grid item size.
 
-<!--{:.Image.Image--..}-->
 ![Showing search range around the point](/img/neon/11.png)
 
 We'll select only vectors that start in this area (nine in this specific scenario).
 
 For each one we will calculate a new force vector with the same direction, but with intensity reciprocal to its distance from the point. Meaning that the closer the vector is to the point, it will apply more force to it.
 
-<!--{:.Image.Image--..}-->
 ![Highlighted vectors in the search range](/img/neon/12.png)
 
 Adding up all of these newly calculated force vectors will give us a single vector pointing where our next point should be.
 
-<!--{:.Image.Image--..}-->
 ![Newly calculated vector points where the next point will be](/img/neon/13.png)
 
 Let's draw the next point and apply the same steps to it.
 
-<!--{:.Image.Image--..}-->
 ![Starting point and the first calculated one](/img/neon/20.png)
 
 Repeat the process recursively for each new point, until we are out of bounds or if we reach the limit of points we set (Neon uses maximum of 50 points).
 
-<!--{:.Image.Image--..}-->
 ![All points drawn recursively](/img/neon/30.png)
 
 Now we can draw a
@@ -98,25 +91,19 @@ I followed the great [post by François Romain's](https://medium.com/@francoisro
 ") }}
 through these points.
 
-<!--{:.Image.Image--..}-->
 ![Bezier curve drawn through the points](/img/neon/40.png)
 
 This process allows us to draw a line by only defining a starting point. We can draw as many lines as we want.
 
-<!--{:.Image.Image--..}-->
 ![Multiple lines generated and drawn](/img/neon/50.png)
 
 I created a live example for you to try it out:
 
-<iframe
-height='420px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/rNavBvN/?height=500&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/rNavBvN/'>2d vector field</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
-
+{{ codepen(
+  id="rNavBvN",
+  title="2d vector field",
+  height=420
+) }}
 
 ## Neon vector field
 
@@ -125,7 +112,6 @@ But I quickly realized that *real* randomness creates chaos. To get something vi
 
 Random vectors would often create a *spiral of doom*. Vectors would create a small *black hole* which would pull in any line that comes close.
 
-<!--{:.Image.Image--..}-->
 !["Spiral of doom" produced by random vectors](/img/neon/spiral-of-doom.png)
 
 To avoid that, I used a very simple solution - to each random vector I added a constant vector that

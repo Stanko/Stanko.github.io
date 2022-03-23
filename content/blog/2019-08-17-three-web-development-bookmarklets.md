@@ -46,7 +46,7 @@ One line version:
 javascript:void(function () { var documentWidth = document.documentElement.offsetWidth; var treeWalker = document.createTreeWalker(document.body, NodeFilter.SHOW_ELEMENT); while (treeWalker.nextNode()) { var rect = treeWalker.currentNode.getBoundingClientRect(); if (rect.right > documentWidth || rect.left < 0) { treeWalker.currentNode.style.setProperty('outline', '1px dotted red', 'important'); console.log(treeWalker.currentNode); } }; }());
 ```
 
-<button class="btn btn--sm btn--empty" onClick="javascript:void(function () { var documentWidth = document.documentElement.offsetWidth; var treeWalker = document.createTreeWalker(document.body, NodeFilter.SHOW_ELEMENT); while (treeWalker.nextNode()) { var rect = treeWalker.currentNode.getBoundingClientRect(); if (rect.right > documentWidth || rect.left < 0) { treeWalker.currentNode.style.setProperty('outline', '1px dotted red', 'important'); console.log(treeWalker.currentNode); } }; }());">Horizontal scroll detection</button>
+<button class="btn btn--sm btn--empty" onclick="javascript:void(function () { var documentWidth = document.documentElement.offsetWidth; var treeWalker = document.createTreeWalker(document.body, NodeFilter.SHOW_ELEMENT); while (treeWalker.nextNode()) { var rect = treeWalker.currentNode.getBoundingClientRect(); if (rect.right &gt; documentWidth || rect.left &lt; 0) { treeWalker.currentNode.style.setProperty('outline', '1px dotted red', 'important'); console.log(treeWalker.currentNode); } }; }());">Horizontal scroll detection</button>
 
 <small>Please note that my site has `overflow-x: hidden` on the content area.</small>
 
@@ -67,7 +67,7 @@ One line version:
 javascript:void(function () { document.body.contentEditable = 'true'; document.designMode = 'on'; }());
 ```
 
-<button class="btn btn--sm btn--empty" onClick="javascript:void(function () { document.body.contentEditable = 'true'; document.designMode = 'on'; }());">Edit page</button>
+<button class="btn btn--sm btn--empty" onclick="javascript:void(function () { document.body.contentEditable = 'true'; document.designMode = 'on'; }());">Edit page</button>
 
 ## Toggle between RTL and LTR direction
 
@@ -92,4 +92,4 @@ One line version:
 javascript:void(function () { var html = document.querySelector('html'); var dir = html.getAttribute('dir'); if (!dir || dir == 'ltr') { html.setAttribute('dir', 'rtl'); } else { html.setAttribute('dir', 'ltr'); } }());
 ```
 
-<button class="btn btn--sm btn--empty" onClick="javascript:void(function () { var html = document.querySelector('html'); var dir = html.getAttribute('dir'); if (!dir || dir == 'ltr') { html.setAttribute('dir', 'rtl'); } else { html.setAttribute('dir', 'ltr'); } }());">Toggle between RTL and LTR</button>
+<button class="btn btn--sm btn--empty" onclick="javascript:void(function () { var html = document.querySelector('html'); var dir = html.getAttribute('dir'); if (!dir || dir == 'ltr') { html.setAttribute('dir', 'rtl'); } else { html.setAttribute('dir', 'ltr'); } }());">Toggle between RTL and LTR</button>

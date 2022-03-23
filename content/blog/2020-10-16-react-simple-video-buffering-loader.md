@@ -24,14 +24,11 @@ Therefore, I created a simple component which I now copy from project to project
 
 Here you can see the final version (it might be easier to see the functionality if you <a href="https://codepen.io/stanko/pen/WNxwreJ" target="_blank">open it in a separate tab</a>).
 
-<iframe
-height='550px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/WNxwreJ/?height=450&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/WNxwreJ/'>React - Simple video buffering loader</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+{{ codepen(
+  id="WNxwreJ",
+  title="React - Simple video buffering loader",
+  height=550
+) }}
 
 ## How it works
 

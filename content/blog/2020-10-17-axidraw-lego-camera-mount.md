@@ -39,10 +39,10 @@ And finally I shot a short test video plotting my logo:
 
 <video
   style="width:100%"
-  controls
-  muted
-  loop
-  playsinline
+  controls="true"
+  muted="true"
+  loop="true"
+  playsinline="true"
   alt-text="Silver pen drawing my logo on black paper"
   src="/img/axidraw/lego-example.mp4#t=0.001"
 ></video>

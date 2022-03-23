@@ -17,14 +17,11 @@ comments = [
 Just a quick proof of concept I made for transitioning between two react components.
 It animates height (of the parent) and fades components into each other.
 
-<iframe
-height='500px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/eGwNZd/?height=500&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/eGwNZd/'>React transition between two components</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+{{ codepen(
+  id="eGwNZd",
+  title="React transition between two components",
+  height=500
+) }}
 
 In `componentWillReceiveProps` it checks if `children` prop has changed.
 When that happens, it will save currently rendered children and the height of the wrapper.

@@ -116,14 +116,11 @@ $frame-duration: $time / $number-of-frames;
 
 Retro loader I tried to replicate in the first place:
 
-<iframe
-height='300px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/XLYRQV/?height=300&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/XLYRQV/'>CSS only retro CLI loader</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+{{ codepen(
+  id="XLYRQV",
+  title="CSS only retro CLI loader",
+  height=300
+) }}
 
 After I've done the retro loader, I thought it would be fun to animate some images, preferably
 {{ sidenote(text="pixel art", note="
@@ -132,14 +129,11 @@ I loooove pixel art
 So I found this nifty [Rick and Morty animation](https://www.artstation.com/artwork/YEJeY) and animated it in CSS.
 
 
-<iframe
-height='500px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/GbBqwZ/?height=500&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/GbBqwZ/'>CSS Frame animation (Rick and Morty)</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+{{ codepen(
+  id="GbBqwZ",
+  title="CSS Frame animation (Rick and Morty)",
+  height=500
+) }}
 
 ## Conclusion
 

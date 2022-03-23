@@ -20,14 +20,11 @@ And you can see the usage of SASS `random()` function.
 
 <!-- more -->
 
-<iframe
-height='400px'
-scrolling='no'
-src='//codepen.io/stanko/embed/VKkaJB/?height=400&theme-id=light&default-tab=result&embed-version=2' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/VKkaJB/'>Circle Logo Animation</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+{{ codepen(
+  id="VKkaJB",
+  title="Circle Logo Animation",
+  height=400
+) }}
 
 `random()` will return random integer between 1 and `n`, where `n` is the number you pass to it.
 Default param is 100.

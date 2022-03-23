@@ -117,12 +117,8 @@ function timeAgo(dateParam) {
 
 *Update, August 2020*
 
-
-<iframe
-height='400px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/rNeWbje/?height=400&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/rNeWbje/'>Javascript "time ago" function</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+{{ codepen(
+  id="rNeWbje",
+  title="Javascript "time ago" function",
+  height=400
+) }}

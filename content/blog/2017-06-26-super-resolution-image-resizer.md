@@ -30,7 +30,8 @@ Original, 250x250px jpeg <sup>2</sup>
   class="Image"
   style="max-width: 500px; width: 100%;"
   src="/img/image-resize/rickmorty-250x250.jpg"
-  alt="Original 250x250px image">
+  alt="Original 250x250px image"
+/>
 
 Result, 500x500px png
 
@@ -38,7 +39,8 @@ Result, 500x500px png
   class="Image"
   style="max-width: 500px; width: 100%;"
   src="/img/image-resize/rickmorty-500x500.png"
-  alt="Resized 2x 500x500px image">
+  alt="Resized 2x 500x500px image"
+/>
 
 If you ask me, results are really impressive, kudos to nagadomi!
 

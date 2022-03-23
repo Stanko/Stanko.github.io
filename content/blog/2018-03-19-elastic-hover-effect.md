@@ -15,14 +15,11 @@ Each one was using SVG morphing, which is fine, but I was wondering how hard wou
 
 It ended up up being pretty easy.
 
-<iframe
-height='500px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/VXPeoP/?height=500&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/VXPeoP/'>Elastic hover effect (CSS only)</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+{{ codepen(
+  id="VXPeoP",
+  title="Elastic hover effect (CSS only)",
+  height=500
+) }}
 
 <!-- more -->
 

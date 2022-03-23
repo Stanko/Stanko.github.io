@@ -24,7 +24,7 @@ The talk I shared too many times. Gary talks about weird stuff in Ruby and JavaS
 It is witty and educational at the same time. I guarantee it will make you laugh.
 Only four minutes long, give it a try.
 
-<video poster="/img/wat.png" preload="none" controls src="/videos/wat.mov"></video>
+<video poster="/img/wat.png" preload="none" controls="true" src="/videos/wat.mov"></video>
 
 [Link](https://www.destroyallsoftware.com/talks/wat)
 
@@ -37,7 +37,7 @@ It is about hot reloading in React, which he made mainstream.
 It is best described with a YouTube comment: "All that was missing was the mic drop at the end.﻿"
 
 <div class="aspect-ratio-video">
-<iframe src="https://www.youtube.com/embed/xsSnOQynTHs?rel=0?ecver=2" frameborder="0" allowfullscreen>
+<iframe src="https://www.youtube.com/embed/xsSnOQynTHs?rel=0?ecver=2" frameborder="0" allowfullscreen="true">
 </iframe>
 </div>
 
@@ -48,7 +48,7 @@ It is best described with a YouTube comment: "All that was missing was the mic d
 *Every* JavaScript developer should watch this. Philip explained what event loop is, how it works, in a simple language using beautiful examples.
 
 <div class="aspect-ratio-video">
-<iframe src="https://www.youtube.com/embed/8aGhZQkoFbQ?rel=0?ecver=2" frameborder="0" allowfullscreen>
+<iframe src="https://www.youtube.com/embed/8aGhZQkoFbQ?rel=0?ecver=2" frameborder="0" allowfullscreen="true">
 </iframe>
 </div>
 
@@ -68,7 +68,7 @@ It got me thinking about writing games again,
 and hopefully I will have a blog post about that soon.
 
 <div class="aspect-ratio-video">
-<iframe src="https://www.youtube.com/embed/E2MIpi8pIvY?rel=0?ecver=2" frameborder="0" allowfullscreen>
+<iframe src="https://www.youtube.com/embed/E2MIpi8pIvY?rel=0?ecver=2" frameborder="0" allowfullscreen="true">
 </iframe>
 </div>
 
@@ -84,7 +84,7 @@ How doctors are able to adjust brain functions by applying electricity to a cert
 It still sounds like a science fiction to me.
 
 <div class="aspect-ratio-video">
-<iframe src="https://www.youtube.com/embed/IEMLGrKJeK0?rel=0?ecver=2" frameborder="0" allowfullscreen>
+<iframe src="https://www.youtube.com/embed/IEMLGrKJeK0?rel=0?ecver=2" frameborder="0" allowfullscreen="true">
 </iframe>
 </div>
 
@@ -95,7 +95,7 @@ It still sounds like a science fiction to me.
 Title is self-explanatory - young enthusiast got his hands on an old mainframe.
 
 <div class="aspect-ratio-video">
-<iframe src="https://www.youtube.com/embed/45X4VP8CGtk?rel=0?ecver=2" frameborder="0" allowfullscreen>
+<iframe src="https://www.youtube.com/embed/45X4VP8CGtk?rel=0?ecver=2" frameborder="0" allowfullscreen="true">
 </iframe>
 </div>
 
@@ -108,7 +108,7 @@ Sir Ken Robinson needs no introduction, and he talks about the school system,
 and how it may be killing kid's creativity.
 
 <div class="aspect-ratio-video">
-<iframe src="https://www.youtube.com/embed/iG9CE55wbtY?rel=0?ecver=2" frameborder="0" allowfullscreen>
+<iframe src="https://www.youtube.com/embed/iG9CE55wbtY?rel=0?ecver=2" frameborder="0" allowfullscreen="true">
 </iframe>
 </div>
 

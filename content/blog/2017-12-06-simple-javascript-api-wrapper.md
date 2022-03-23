@@ -208,13 +208,10 @@ getUsers()
 
 I've cooked a small demo to show it in practice, in which I used free [Star Wars API](https://swapi.co).
 
-<iframe
-height='400px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/LOoPQp/?height=400&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/LOoPQp/'>Simple JavaScript API wrapper demo</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+{{ codepen(
+  id="LOoPQp",
+  title="Simple JavaScript API wrapper demo",
+  height=500
+) }}
 
 Feel free to play with it [on CodePen](https://codepen.io/stanko/pen/LOoPQp?editors=0110).

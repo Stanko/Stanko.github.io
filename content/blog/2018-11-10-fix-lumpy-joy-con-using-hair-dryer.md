@@ -24,7 +24,6 @@ I have a huge draft about Switch, and how it have put the fun back in gaming for
 ") }}
 Unfortunately, tonight I noticed that one of my Joy-Cons has weird lumps on it.
 
-<!--{:.Image.Image--sm}-->
 ![Lumpy Nintendo Switch Joy-Con](/img/joycon.jpg)
 
 (This is the image from the internet, not mine.)

@@ -140,12 +140,8 @@ When I initially decided to add an easter egg to my website, I was thinking of  
 
 And for the end, to see how everything fits together, I created a demo for you to play with:
 
-<iframe
-class='Block--lg'
-height='450px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/KKwPJvL/?height=450&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/KKwPJvL/'>Keyboard easter egg</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+{{ codepen(
+  id="KKwPJvL",
+  title="Keyboard easter egg",
+  height=450
+) }}

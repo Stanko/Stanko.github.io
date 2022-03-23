@@ -56,35 +56,32 @@ At the moment, it seems only Chrome gets it right.
 
 #### Chrome
 
-<img src="/img/button-flex/chrome.png" alt="Display flex on buttons, Chrome">
+<img src="/img/button-flex/chrome.png" alt="Display flex on buttons, Chrome" />
 
 #### Firefox
 
-<img src="/img/button-flex/firefox.png" alt="Display flex on buttons, Firefox">
+<img src="/img/button-flex/firefox.png" alt="Display flex on buttons, Firefox" />
 
 #### Safari 8
 
-<img src="/img/button-flex/safari8.png" alt="Display flex on buttons, Safari 8">
+<img src="/img/button-flex/safari8.png" alt="Display flex on buttons, Safari 8" />
 
 #### Safari 9
 
-<img src="/img/button-flex/safari9.png" alt="Display flex on buttons, Safari 9">
+<img src="/img/button-flex/safari9.png" alt="Display flex on buttons, Safari 9" />
 
 #### IE10
 
-<img src="/img/button-flex/ie10.png" alt="Display flex on buttons, IE10">
+<img src="/img/button-flex/ie10.png" alt="Display flex on buttons, IE10" />
 
 #### IE11
 
-<img src="/img/button-flex/ie11.png" alt="Display flex on buttons, IE11">
+<img src="/img/button-flex/ie11.png" alt="Display flex on buttons, IE11" />
 
 #### CodePen
 
-<iframe
-height='300px'
-scrolling='no'
-src='//codepen.io/stanko/embed/ALjvYj/?height=300&theme-id=light&default-tab=result&embed-version=2' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/ALjvYj/'>Fix for button display:flex</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+{{ codepen(
+  id="ALjvYj",
+  title="Fix for button display:flex",
+  height=300
+) }}

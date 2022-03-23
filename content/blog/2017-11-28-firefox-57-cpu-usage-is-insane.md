@@ -22,7 +22,6 @@ I love Firefox (and Mozilla too) and have never switched to
 But few days ago I switched to Opera, because new Firefox's (aka Quantum)
 CPU usage is insane.
 
-<!--{:.Image.Image--medium}-->
 ![Firefox :(](/img/ff.jpg)
 
 Disabling extensions didn't help, it just hogs all available resources.

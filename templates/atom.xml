@@ -30,6 +30,9 @@
       <name>Stanko</name>
     </author>
 		<content type="html">
+      {%- if page.path is starting_with("/art/") and page.extra.intro -%}
+        <p>{{ page.extra.intro }}</p>
+      {%- endif -%}
       {{ page.content | safe }}
     </content>
 

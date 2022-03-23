@@ -31,17 +31,16 @@ and if you like them, consider donating to authors.
 
 So here they are in the alphabetical order:
 
-### AppCleaner 
+### AppCleaner
 
 [AppCleaner website](https://freemacsoft.net/appcleaner/)
 
 > AppCleaner is a small application which allows you to thoroughly uninstall unwanted apps.
 
-<!--{:.Image}-->
 ![AppCleaner window](/img/mac-utils/appcleaner.png)
 
 
-### CopyClip 
+### CopyClip
 
 [CopyClip website](https://itunes.apple.com/us/app/copyclip-clipboard-history-manager/id595191960)
 
@@ -49,7 +48,7 @@ Simple clipboard manager, stores what you copied allowing you to quickly find it
 
 ![CopyClip clipboard history](/img/mac-utils/copyclip.png)
 
-### HapticKey 
+### HapticKey
 
 [HapticKey website](https://github.com/niw/HapticKey)
 
@@ -60,7 +59,7 @@ Give it a try and decide for yourself.
 
 ![HapticKey](/img/mac-utils/haptickey.png)
 
-### Itsycal 
+### Itsycal
 
 [Itsycal website](https://www.mowglii.com/itsycal/)
 
@@ -76,7 +75,7 @@ Custom date formats are supported as well, allowing you replace Mac's clock comp
 ![Itsycal using custom date format](/img/mac-utils/itsycal.png)
 
 
-### Spectacle 
+### Spectacle
 
 [Spectacle website](https://www.spectacleapp.com/)
 
@@ -85,7 +84,7 @@ All that by using using customizable global shortcuts.
 
 ![Spectacle main window](/img/mac-utils/spectacle.png)
 
-### The Unarchiver 
+### The Unarchiver
 
 [The Unarchiver website](https://theunarchiver.com/)
 
@@ -100,7 +99,7 @@ on this list.
 Unarchiver does exactly what it's name suggests.
 It supports all of the archive formats you'll ever need.
 
-### TotalFinder ($12.00) 
+### TotalFinder ($12.00)
 
 [TotalFinder website](https://totalfinder.binaryage.com/)
 
@@ -114,7 +113,7 @@ There is a catch - both application require [system tweak](https://totalfinder.b
 to install. You need to disable System Integrity Protection
 (don't worry, you can enable it once app is installed).
 
-### XtraFinder 
+### XtraFinder
 
 [XtraFinder website](https://www.trankynam.com/xtrafinder/)
 
@@ -130,14 +129,14 @@ Requires same [system tweak](https://www.trankynam.com/xtrafinder/sip.html) as T
 
 As a bonus here are my two favorite bash tools.
 
-### Bash-it 
+### Bash-it
 
 [Bash-it website](https://github.com/Bash-it/bash-it)
 
 This is a clone of oh-my-zsh for bash. Includes autocompletion, themes, aliases, custom functions and more.
 I have been using for a few years now and migrating my config to every new machine I use.
 
-### autojump 
+### autojump
 
 [autojump website](https://github.com/wting/autojump)
 

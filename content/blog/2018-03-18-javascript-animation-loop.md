@@ -48,14 +48,12 @@ function animate() {
 animate();
 ```
 
-<iframe
-height='250px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/GxjLmE/?height=250&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/GxjLmE/'>JavaScript animation loop - step 1</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+{{ codepen(
+  id="GxjLmE",
+  title="JavaScript animation loop - step 1",
+  height=250
+) }}
+
 
 At the first glance this looks fine. But it has one major problem.
 `requestAnimationFrame` is usually triggered 60 times per second, but often this is not the case.
@@ -70,14 +68,11 @@ In the example bellow I faked it by using 100ms `setTimeout`.
 ") }}
 In that case our box will be moved by 1px every 100ms, ending up on 10px per second.
 
-<iframe
-height='250px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/ZxpZyZ/?height=250&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/ZxpZyZ/'>JavaScript animation loop - step 2</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+{{ codepen(
+  id="ZxpZyZ",
+  title="JavaScript animation loop - step 2",
+  height=250
+) }}
 
 This means our animation speed is relative to how many times `requestAnimationFrame` is called per second.
 
@@ -142,14 +137,11 @@ function animate() {
 animate();
 ```
 
-<iframe
-height='250px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/zWKXRY/?height=250&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/zWKXRY/'>JavaScript animation loop - step 3</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+{{ codepen(
+  id="zWKXRY",
+  title="JavaScript animation loop - step 3",
+  height=250
+) }}
 
 We fixed the timing problem, and our box is moving 60px per second.
 Now we can put back `requestAnimationFrame` instead of `setTimeout`,
@@ -157,14 +149,11 @@ and we will get smooth animation without timing problems.
 
 Check all examples side by side comparison:
 
-<iframe
-height='500px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/pLEYEw/?height=500&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/pLEYEw/'>JavaScript animation loop - step 4 (all examples combined)</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+{{ codepen(
+  id="pLEYEw",
+  title="JavaScript animation loop - step 4 (all examples combined)",
+  height=500
+) }}
 
 Hopefully you learned something reading this.
 I'm going to write more posts about three.js and JavaScript game development.

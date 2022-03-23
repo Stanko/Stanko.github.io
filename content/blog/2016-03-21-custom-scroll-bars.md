@@ -47,14 +47,11 @@ You can use pseudo selectors, these ones are used in the demo:
 
 Check jsfiddle demo with green-ish scrollbars <i>webkit only</i>.
 
-<iframe
-height='300px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/jpLJbQ/?height=300&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/jpLJbQ/'>Example of customizing webkit scrollbars using CSS</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+{{ codepen(
+  id="jpLJbQ",
+  title="Example of customizing webkit scrollbars using CSS",
+  height=300
+) }}
 
 ### Custom JavaScript plugin, using native scroll
 
@@ -113,11 +110,8 @@ Scrolling on touch devices is already nice and smooth.
 
 Check demo on CodePen (please note that demo was updated to work without modernizr).
 
-<iframe
-height='420px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/BaBEQQG/?height=500&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/BaBEQQG/'>Show scrollbars on hover only</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+{{ codepen(
+  id="BaBEQQG",
+  title="Show scrollbars on hover only",
+  height=420
+) }}

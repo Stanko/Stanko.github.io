@@ -250,11 +250,8 @@ scene.add(svgGroup);
 
 ### Live demo
 
-<iframe
-height='420px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/gObMepb/?height=500&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/gObMepb/'>three.js extrude SVG path</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+{{ codepen(
+  id="gObMepb",
+  title="three.js extrude SVG path",
+  height=420
+) }}

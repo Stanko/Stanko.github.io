@@ -19,15 +19,15 @@ Before you start playing with the checkboxes I advise you to read the rest of th
 <div class="Spectrum"></div>
 
 <label style="display: block; display: flex; align-items: center; font-size: 0.8em">
-  <input type="checkbox" class="Spectrum-checkbox Spectrum-checkbox--random" checked style="margin-right: 0.2em" />
+  <input type="checkbox" class="Spectrum-checkbox Spectrum-checkbox--random" checked="true" style="margin-right: 0.2em" />
   Use random value
 </label>
 <label style="display: block; display: flex; align-items: center; font-size: 0.8em">
-  <input type="checkbox" class="Spectrum-checkbox Spectrum-checkbox--sample" checked style="margin-right: 0.2em" />
+  <input type="checkbox" class="Spectrum-checkbox Spectrum-checkbox--sample" checked="true" style="margin-right: 0.2em" />
   Use static sample
 </label>
 <label style="display: block; display: flex; align-items: center; font-size: 0.8em">
-  <input type="checkbox" class="Spectrum-checkbox Spectrum-checkbox--perlin" checked style="margin-right: 0.2em" />
+  <input type="checkbox" class="Spectrum-checkbox Spectrum-checkbox--perlin" checked="true" style="margin-right: 0.2em" />
   Use perlin noise value
 </label>
 
