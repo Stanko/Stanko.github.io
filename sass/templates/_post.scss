@@ -118,6 +118,10 @@ a.header-anchor {
   border: none;
   opacity: 0.3;
 
+  @include dark-scheme {
+    background-image: url("/img/link-white.svg");
+  }
+
   @include lg {
     position: absolute;
     left: -1.2em;
