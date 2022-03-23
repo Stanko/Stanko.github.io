@@ -16,8 +16,7 @@
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>I'm super late with this post, but again, better late than never. I just couldn't find the inspiration and drive for writing last year. Generally, I lacked motivation and wasn't really productive.</p>
+		<content type="html"><p>I'm super late with this post, but again, better late than never. I just couldn't find the inspiration and drive for writing last year. Generally, I lacked motivation and wasn't really productive.</p>
 <span id="continue-reading"></span><h2 id="generative-art">Generative Art<a
   class="header-anchor"
   href="#generative-art" aria-label="Anchor link for: generative-art"
@@ -101,7 +100,7 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 > <span class="sr-only" aria-hidden="true">#</span></a>
 </h3>
 <p>This one is really close to my heart. I created a physical pixel art frame and I call it &quot;Retro frame&quot;. This is just a teaser, as I'm waiting for a new wooden frame and making small adjustments. But don't worry, I plan on doing a write up and open sourcing everything.</p>
-<p><video class="video video--shadow" playsinline loop src="/img/into-2022/mario.mov#t=0.001" controls muted></video></p>
+<p><video class="video video--shadow" playsinline="true" loop="true" src="/img/into-2022/mario.mov#t=0.001" controls="true" muted="true"></video></p>
 <p>Just looking at <span
   class="sidenote__trigger "
   tabindex="0"
@@ -154,8 +153,7 @@ I wrote a separate post about the creative process behind the last drawing - <a 
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>This post was originally written for our internal technology newsletter at <a href="https://work.co">Work &amp; Co</a>. It is a little bit adapted for web, but the content is almost identical.</p>
+		<content type="html"><p>This post was originally written for our internal technology newsletter at <a href="https://work.co">Work &amp; Co</a>. It is a little bit adapted for web, but the content is almost identical.</p>
 <hr />
 <p>About a year ago I made this plot. It is called <span
   class="sidenote__trigger "
@@ -311,7 +309,7 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 > <span class="sr-only" aria-hidden="true">#</span></a>
 </h2>
 <p>Basically, it takes only a few steps to generate Krypton. I hope this will inspire you to try fooling around with creative coding.</p>
-<p><video src="/img/krypton/output.mp4#t=0.001" playsinline controls muted class="video video--shadow"></video></p>
+<p><video src="/img/krypton/output.mp4#t=0.001" playsinline="true" controls="true" muted="true" class="video video--shadow"></video></p>
 <p>To encourage you, here are a few rejected examples of generated images. These are not nearly as nice. Randomness is a super powerful tool, but you need to play around with the values and finely tune them to get good results.</p>
 <div
   class="dual-image dual-image--shadow "
@@ -333,8 +331,7 @@ I wrote a separate post about the creative process behind the last drawing - <a 
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>This is going to be a very straight forward post. Just a list of JavaScript libraries I use in creating my generative art. And I really mean I use (and abuse) them. All of them are used in multiple of my drawings. I'll include couple of photos under the respective libraries.</p>
+		<content type="html"><p>This is going to be a very straight forward post. Just a list of JavaScript libraries I use in creating my generative art. And I really mean I use (and abuse) them. All of them are used in multiple of my drawings. I'll include couple of photos under the respective libraries.</p>
 <p>I finally settled with these libraries after trying several other alternatives for each. Performance was one of the key factors (especially as generative work can get brute-forcy sometimes).</p>
 <p>Huge <strong>thank you</strong> to <span
   class="sidenote__trigger "
@@ -555,8 +552,7 @@ I wrote a separate post about the creative process behind the last drawing - <a 
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      
+		<content type="html"><p>I&#x27;m still working on this algorithm, but I had to plot a small one.</p>
     </content>
 
 	</entry>
@@ -569,8 +565,7 @@ I wrote a separate post about the creative process behind the last drawing - <a 
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>I still think it is not perfect, but I stopped here. I may revisit the algorithm and generate a different drawing in the future.</p>
+		<content type="html"><p>I plotted it four times before I was satisfied.</p><p>I still think it is not perfect, but I stopped here. I may revisit the algorithm and generate a different drawing in the future.</p>
 
     </content>
 
@@ -584,8 +579,7 @@ I wrote a separate post about the creative process behind the last drawing - <a 
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>If you just want the see the submissions, jump to the <a href="https://muffinman.io/code-challenge/">Weekly Code Challege</a> website. But please bare in mind that the most of these were created in a couple of hours.</p>
+		<content type="html"><p>If you just want the see the submissions, jump to the <a href="https://muffinman.io/code-challenge/">Weekly Code Challege</a> website. But please bare in mind that the most of these were created in a couple of hours.</p>
 <span id="continue-reading"></span>
 <hr />
 <p>This post is long overdue. Earlier this year, I came with an idea to organize a weekly code challenge in our <a href="https://work.co/careers/offices/belgrade/">Belgrade office</a>. With the whole  COVID situation going on, I hoped it could inspire people to start hacking and make programming fun again.</p>
@@ -642,11 +636,9 @@ I wrote a separate post about the creative process behind the last drawing - <a 
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>If you are only interested in the wiring diagram, jump directly to the <a href="https://muffinman.io/blog/hyperx-cloud-ii-sound-card-usb-connector-replacement/#wiring">wiring</a> section.</p>
+		<content type="html"><p>If you are only interested in the wiring diagram, jump directly to the <a href="https://muffinman.io/blog/hyperx-cloud-ii-sound-card-usb-connector-replacement/#wiring">wiring</a> section.</p>
 <hr />
 <p>HyperX's Cloud II headphones come with a USB sound card, which looks like this:</p>
-<!--{:.Image}-->
 <p><img src="/img/hyperx-cloud2/usb-sound-card.jpg" alt="USB sound card that comes with Cloud II headphones" /></p>
 <p>It is a convenient little dongle. I had it plugged in into the front USB port, and I bumped into it, bending the connector for ninety degrees. Naturally, it stopped working. Good thing about these headphones is that the sound card isn't mandatory for headphones to work, but the regular audio cable is pretty short.</p>
 <p>After searching for the replacement, I realized I can't buy it where I live, and that it costs around 35-40$ which is more than the half of the price for a whole new pair. That is why I decided to try to repair it on my own.</p>
@@ -683,8 +675,7 @@ I wrote a separate post about the creative process behind the last drawing - <a 
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Recently I implemented a fly out menu in React, and stumbled on the following problem - I had to catch a blur event on the menu, but it had multiple focusable children. When user is tabbing between these menu items, blur event is triggered every time on the parent, followed by the focus event on the next item. As I wanted to close the menu on blur, this would close it before user was able to get to the next menu item.</p>
+		<content type="html"><p>Recently I implemented a fly out menu in React, and stumbled on the following problem - I had to catch a blur event on the menu, but it had multiple focusable children. When user is tabbing between these menu items, blur event is triggered every time on the parent, followed by the focus event on the next item. As I wanted to close the menu on blur, this would close it before user was able to get to the next menu item.</p>
 <span id="continue-reading"></span>
 <p>Solution is fairly simple and it is not React exclusive - it can be used with any other framework or vanilla JavaScript. The flow goes something like this:</p>
 <ul>
@@ -756,12 +747,18 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 </h2>
 <p>To see it live check the demo on Codepen:</p>
 <iframe
-height='380px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/NWgvOXp/?height=450&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/NWgvOXp/'>React, blur on an element and its children</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+  height="380"
+  scrolling="no"
+  title="React, blur on an element and its children"
+  src="https://codepen.io/stanko/embed/NWgvOXp?default-tab=result&amp;theme-id=light"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/NWgvOXp">
+  React, blur on an element and its children</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 <hr />
 <p>I really like this technique, and I found it useful in multiple places like tooltips and dropdowns, where it can replace “outside click” listeners.</p>
@@ -778,8 +775,7 @@ See the Pen <a href='http://codepen.io/stanko/pen/NWgvOXp/'>React, blur on an el
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      
+		<content type="html"><p>Plotted one for my best man.</p>
     </content>
 
 	</entry>
@@ -792,8 +788,7 @@ See the Pen <a href='http://codepen.io/stanko/pen/NWgvOXp/'>React, blur on an el
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Shading was done by generating (a lot of) dots. Then I used <a href="https://github.com/nornagon/saxi">saxi's</a> option to connect nearby dots in order to create these squiggly lines.</p>
+		<content type="html"><p>Shading was done by generating (a lot of) dots. Then I used <a href="https://github.com/nornagon/saxi">saxi's</a> option to connect nearby dots in order to create these squiggly lines.</p>
 
     </content>
 
@@ -807,8 +802,7 @@ See the Pen <a href='http://codepen.io/stanko/pen/NWgvOXp/'>React, blur on an el
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      
+		<content type="html"><p>Pretty large print, on a thick watercolor cotton paper.</p>
     </content>
 
 	</entry>
@@ -821,8 +815,7 @@ See the Pen <a href='http://codepen.io/stanko/pen/NWgvOXp/'>React, blur on an el
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>I wrote <a href="/blog/breaking-down-krypton/">the blog post</a> about the creation process. Fun fact, this plot got sold even before I plotted it.</p>
+		<content type="html"><p>Power of Voronoi diagrams.</p><p>I wrote <a href="/blog/breaking-down-krypton/">the blog post</a> about the creation process. Fun fact, this plot got sold even before I plotted it.</p>
 
     </content>
 
@@ -836,8 +829,7 @@ See the Pen <a href='http://codepen.io/stanko/pen/NWgvOXp/'>React, blur on an el
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Everything is actually 2D, but made to look like 3D. Same algorithm as &quot;Pokeball&quot;.</p>
+		<content type="html"><p>Small plots are fun.</p><p>Everything is actually 2D, but made to look like 3D. Same algorithm as &quot;Pokeball&quot;.</p>
 
     </content>
 
@@ -851,8 +843,7 @@ See the Pen <a href='http://codepen.io/stanko/pen/NWgvOXp/'>React, blur on an el
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>You can see some ellipses are not being cropped properly. I love how it turned out so I kept it like this.</p>
+		<content type="html"><p>Classic example of bug becoming a feature.</p><p>You can see some ellipses are not being cropped properly. I love how it turned out so I kept it like this.</p>
 
     </content>
 
@@ -866,8 +857,7 @@ See the Pen <a href='http://codepen.io/stanko/pen/NWgvOXp/'>React, blur on an el
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>2020 was a hard one.</p>
+		<content type="html"><p>2020 was a hard one.</p>
 <p>I started writing this post in December, but I couldn't make myself finish it. The whole situation with COVID made me anxious at times and I didn't really have motivation for my side projects including this blog. But I won't focus on bad things, everyone had a tough year, so let's try to stay positive.</p>
 <span id="continue-reading"></span><h2 id="generative-art">Generative Art<a
   class="header-anchor"
@@ -1021,8 +1011,7 @@ See the Pen <a href='http://codepen.io/stanko/pen/NWgvOXp/'>React, blur on an el
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Two separate plots, and I'm super happy how I managed to align them. On the last image, you can see the lines I drew to help me align it. My wife insisted we keep this one.</p>
+		<content type="html"><p>11 hours of plotting and 115 981 dots.</p><p>Two separate plots, and I'm super happy how I managed to align them. On the last image, you can see the lines I drew to help me align it. My wife insisted we keep this one.</p>
 <p>Pigma Micron pens are indestructible, just saying.</p>
 
     </content>
@@ -1037,8 +1026,7 @@ See the Pen <a href='http://codepen.io/stanko/pen/NWgvOXp/'>React, blur on an el
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>It ended up being vertically symmetrical because I forgot to change parameters for the bottom half.</p>
+		<content type="html"><p>46534 pen plotted dots.</p><p>It ended up being vertically symmetrical because I forgot to change parameters for the bottom half.</p>
 
     </content>
 
@@ -1052,8 +1040,7 @@ See the Pen <a href='http://codepen.io/stanko/pen/NWgvOXp/'>React, blur on an el
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      
+		<content type="html"><p>The best photo I had is this one that I took while plotting was still in progress.</p>
     </content>
 
 	</entry>
@@ -1066,8 +1053,7 @@ See the Pen <a href='http://codepen.io/stanko/pen/NWgvOXp/'>React, blur on an el
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      
+		<content type="html"><p>It gives me almost claustrophobic vibe, therefore the name. Silver looks so much nicer in person.</p>
     </content>
 
 	</entry>
@@ -1080,8 +1066,7 @@ See the Pen <a href='http://codepen.io/stanko/pen/NWgvOXp/'>React, blur on an el
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>I already <a href="/blog/axidraw-plotter-camera-mount/">built a mount</a> for my Raspberry Pi camera, but it was 3d printed. Meaning that it has one fixed position. I used it a couple of times, but I wasn't super satisfied. Then I stumbled on <a href="https://imgur.com/gallery/VjXSSzh">these images</a>, and thought it was a great idea to use Lego to build a new, more versatile mount.</p>
+		<content type="html"><p>I already <a href="/blog/axidraw-plotter-camera-mount/">built a mount</a> for my Raspberry Pi camera, but it was 3d printed. Meaning that it has one fixed position. I used it a couple of times, but I wasn't super satisfied. Then I stumbled on <a href="https://imgur.com/gallery/VjXSSzh">these images</a>, and thought it was a great idea to use Lego to build a new, more versatile mount.</p>
 <p>A friend of mine had a bunch of spare Legos laying around, so he gave me two bags full of Legos to play around. I wasn't sure where to start, especially because I wanted to make both height and rotation adjustable. After fiddling with the blocks for about an hour, I came up with this:</p>
 <div
   class="dual-image  "
@@ -1109,10 +1094,10 @@ See the Pen <a href='http://codepen.io/stanko/pen/NWgvOXp/'>React, blur on an el
 <p>And finally I shot a short test video plotting my logo:</p>
 <p><video
   style="width:100%"
-  controls
-  muted
-  loop
-  playsinline
+  controls="true"
+  muted="true"
+  loop="true"
+  playsinline="true"
   alt-text="Silver pen drawing my logo on black paper"
   src="/img/axidraw/lego-example.mp4#t=0.001"
 ></video></p>
@@ -1130,8 +1115,7 @@ See the Pen <a href='http://codepen.io/stanko/pen/NWgvOXp/'>React, blur on an el
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>For multiple projects, I had to add a simple video component with
+		<content type="html"><p>For multiple projects, I had to add a simple video component with
 <span
   class="sidenote__trigger "
   tabindex="0"
@@ -1154,12 +1138,18 @@ and a buffering loader. It is not hard to detect the buffering state, but it can
 </h2>
 <p>Here you can see the final version (it might be easier to see the functionality if you <a href="https://codepen.io/stanko/pen/WNxwreJ" target="_blank">open it in a separate tab</a>).</p>
 <iframe
-height='550px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/WNxwreJ/?height=450&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/WNxwreJ/'>React - Simple video buffering loader</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+  height="550"
+  scrolling="no"
+  title="React - Simple video buffering loader"
+  src="https://codepen.io/stanko/embed/WNxwreJ?default-tab=result&amp;theme-id=light"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/WNxwreJ">
+  React - Simple video buffering loader</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 <h2 id="how-it-works">How it works<a
   class="header-anchor"
@@ -1295,8 +1285,7 @@ Now, if buffering happens, we'll get these events fired:</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>One plot ended up being smaller because I screwed up cutting it.</p>
+		<content type="html"><p>Not really generative, I just played with blender&#x27;s SVG export.</p><p>One plot ended up being smaller because I screwed up cutting it.</p>
 
     </content>
 
@@ -1310,8 +1299,7 @@ Now, if buffering happens, we'll get these events fired:</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>It was generated using the same algorithm as the previous drawing. Metallic pens give it a really nice effect in person.</p>
+		<content type="html"><p>This one gives me strong sci-fi vibes.</p><p>It was generated using the same algorithm as the previous drawing. Metallic pens give it a really nice effect in person.</p>
 
     </content>
 
@@ -1325,8 +1313,7 @@ Now, if buffering happens, we'll get these events fired:</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Be sure t o check the timelapse in the gallery below.</p>
+		<content type="html"><p>Although simple, I really like this one and hexagon-based tilings in general.</p><p>Be sure t o check the timelapse in the gallery below.</p>
 
     </content>
 
@@ -1340,8 +1327,7 @@ Now, if buffering happens, we'll get these events fired:</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>It is funny, I would never say I would be sad to deprecate a software project. Especially a project boilerplate. But I just merged the deprecation notice, and I do feel down a little.</p>
+		<content type="html"><p>It is funny, I would never say I would be sad to deprecate a software project. Especially a project boilerplate. But I just merged the deprecation notice, and I do feel down a little.</p>
 <p>I created <a href="https://github.com/workco/marvin">Marvin</a> about <a href="/blog/webpack-2-react-redux/">four years ago</a> for my own needs. Since then it grew, became internal project at
 <span
   class="sidenote__trigger "
@@ -1384,8 +1370,7 @@ and was used by thousands of people.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>You can play with algorithm <a href="https://neon.muffinman.io/">here</a> and download images. It took me ages to find appropriate pens to plot this one. Also check <a href="http://motorhead.local:1234/blog/neon-generative-art-piece-made-using-2d-vector-field/">the blog post</a> about how it is made.</p>
+		<content type="html"><p>My first real attempt at generative drawings.</p><p>You can play with algorithm <a href="https://neon.muffinman.io/">here</a> and download images. It took me ages to find appropriate pens to plot this one. Also check <a href="http://motorhead.local:1234/blog/neon-generative-art-piece-made-using-2d-vector-field/">the blog post</a> about how it is made.</p>
 <p>On the images below you can see two different drawings.</p>
 
     </content>
@@ -1400,8 +1385,7 @@ and was used by thousands of people.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Generative process allows me to work with huge number of elements and tiny details. These details are sometimes impossible to plot, as they would just get lost in the process. That's why I love large format prints - they allow tiny details to be seen and shine through.</p>
+		<content type="html"><p>Large one was planned, small was not.</p><p>Generative process allows me to work with huge number of elements and tiny details. These details are sometimes impossible to plot, as they would just get lost in the process. That's why I love large format prints - they allow tiny details to be seen and shine through.</p>
 
     </content>
 
@@ -1415,8 +1399,7 @@ and was used by thousands of people.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Plotted in two takes on a single paper. White could be a little stronger, I still regret not doing two passes for each layer.</p>
+		<content type="html"><p>Finely tuned vector field. Myself for scale.</p><p>Plotted in two takes on a single paper. White could be a little stronger, I still regret not doing two passes for each layer.</p>
 
     </content>
 
@@ -1430,8 +1413,7 @@ and was used by thousands of people.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Earlier today I removed Google Analytics script from my website. Long time ago I switched to self hosted fonts instead of Google Fonts. That means, as of today, my blog is completely Google free.</p>
+		<content type="html"><p>Earlier today I removed Google Analytics script from my website. Long time ago I switched to self hosted fonts instead of Google Fonts. That means, as of today, my blog is completely Google free.</p>
 <span id="continue-reading"></span>
 <p>Google Analytics is a great product, but I probably used up to five percent of it's features. Still I had a fear of missing out. That's why I delayed pulling the plug for so many months.</p>
 <p>I've tried a lot of other solutions, but they all felt either too complex or too simplistic. In the end, I did find the replacement.</p>
@@ -1470,8 +1452,7 @@ and was used by thousands of people.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Real elevation data but with applied exponential scale to emphasize the relief.
+		<content type="html"><p>City of Belgrade.</p><p>Real elevation data but with applied exponential scale to emphasize the relief.
 I made three plots, all three a little bit different. They ended up in three different countries.</p>
 
     </content>
@@ -1486,8 +1467,7 @@ I made three plots, all three a little bit different. They ended up in three dif
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Mobile iOS Safari doesn't display preview thumbnail until you tap on the video. My go-to solution was to define a <code>poster</code> attribute and move on. But today I learned I could use something called <a href="https://www.w3.org/TR/media-frags/">Media Fragments</a>.</p>
+		<content type="html"><p>Mobile iOS Safari doesn't display preview thumbnail until you tap on the video. My go-to solution was to define a <code>poster</code> attribute and move on. But today I learned I could use something called <a href="https://www.w3.org/TR/media-frags/">Media Fragments</a>.</p>
 <p>Media Fragments specify a way of sharing parts of audio and video files by simply adding url params. <a href="https://caniuse.com/#feat=media-fragments">Browser support</a> varies, but fortunately support for what we need is pretty good.</p>
 <span id="continue-reading"></span><h2 id="code">Code<a
   class="header-anchor"
@@ -1511,11 +1491,11 @@ I made three plots, all three a little bit different. They ended up in three dif
 <div class="dual-image">
   <div class="dual-image__img">
     <b class="dual-image__text">Without media fragments</b>
-    <video playsinline controls muted src="/videos/video.mp4" style="background: #f2f5f9"></video>
+    <video playsinline="true" controls="true" muted="true" src="/videos/video.mp4" style="background: #f2f5f9"></video>
   </div>
   <div class="dual-image__img">
     <b class="dual-image__text">With media fragments</b>
-    <video playsinline controls muted src="/videos/video.mp4#t=0.001" style="background: #f2f5f9"></video>
+    <video playsinline="true" controls="true" muted="true" src="/videos/video.mp4#t=0.001" style="background: #f2f5f9"></video>
   </div>
 </div>
 <p>It is a hacky solution, but I've tested it on desktop Firefox, Safari, Chrome, IE11 and Edge, as well as on iOS and Android phones and it works in all of those.</p>
@@ -1532,8 +1512,7 @@ I made three plots, all three a little bit different. They ended up in three dif
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>It has been almost two months since my last post because I was super busy with my new passion,
+		<content type="html"><p>It has been almost two months since my last post because I was super busy with my new passion,
 <span
   class="sidenote__trigger "
   tabindex="0"
@@ -1574,9 +1553,9 @@ Expect new posts about my process and tools in the near future.<span class="side
 <p><video
   poster="/img/axidraw/poster.jpg"
   style="width:100%"
-  controls
-  muted
-  playsinline
+  controls="true"
+  muted="true"
+  playsinline="true"
   alt-text="White pen drawing stars on the black paper, the first video I recorded using the mount"
   src="/img/axidraw/stars.mp4"
 ></video></p>
@@ -1604,8 +1583,7 @@ And of course, big thanks to <a href="https://www.instagram.com/dutchplottr/">@d
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      
+		<content type="html"><p>The second galaxy plot, silver on black. Pen for scale again.</p>
     </content>
 
 	</entry>
@@ -1618,8 +1596,7 @@ And of course, big thanks to <a href="https://www.instagram.com/dutchplottr/">@d
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>My first attempt at real 3D vector composition. The gap was initially added to hide the border between two papers, but it grew on me.</p>
+		<content type="html"><p>Super wide, plotted on two separate papers. Pen for scale.</p><p>My first attempt at real 3D vector composition. The gap was initially added to hide the border between two papers, but it grew on me.</p>
 
     </content>
 
@@ -1633,8 +1610,7 @@ And of course, big thanks to <a href="https://www.instagram.com/dutchplottr/">@d
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>On the second to last image, you can see one of my first attempts to simulate tearing. If I ever return to this algorithm, I'll make a new composition wider.</p>
+		<content type="html"><p>~27000 circles, 82 meters of lines and 6 hours of plotting.</p><p>On the second to last image, you can see one of my first attempts to simulate tearing. If I ever return to this algorithm, I'll make a new composition wider.</p>
 
     </content>
 
@@ -1648,8 +1624,7 @@ And of course, big thanks to <a href="https://www.instagram.com/dutchplottr/">@d
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      
+		<content type="html"><p>Unfortunately I don&#x27;t have good photos of these.</p>
     </content>
 
 	</entry>
@@ -1662,8 +1637,7 @@ And of course, big thanks to <a href="https://www.instagram.com/dutchplottr/">@d
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>I love the patterns that emerged from polygon splitting, it is a perfect contrast with the geometrical base of the drawing. My plotter wasn't calibrated properly, resulting in some lines not being perfectly aligned, but to me, it just gave even more soul to the drawing.</p>
+		<content type="html"><p>It took more than 16 hours to plot this one. One of my first plots and definitely one of my all time favorites.</p><p>I love the patterns that emerged from polygon splitting, it is a perfect contrast with the geometrical base of the drawing. My plotter wasn't calibrated properly, resulting in some lines not being perfectly aligned, but to me, it just gave even more soul to the drawing.</p>
 
     </content>
 
@@ -1677,8 +1651,7 @@ And of course, big thanks to <a href="https://www.instagram.com/dutchplottr/">@d
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Check more drawings on <a href="/metaballs">the mini site</a>. I also did a <a href="http://motorhead.local:1234/blog/metaballs-generative-art/">write up</a> on how it is made.</p>
+		<content type="html"><p>First plot from the Metaballs series.</p><p>Check more drawings on <a href="/metaballs">the mini site</a>. I also did a <a href="http://motorhead.local:1234/blog/metaballs-generative-art/">write up</a> on how it is made.</p>
 <p>I really need to plot a couple more of these.</p>
 
     </content>
@@ -1693,8 +1666,7 @@ And of course, big thanks to <a href="https://www.instagram.com/dutchplottr/">@d
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Image was generated using <a href="https://muffinman.io/vertigo/">Vertigo</a>, a small vector <em>shader</em> tool I created. It is open source and you can try it live on it's website.</p>
+		<content type="html"><p>The first real plot I did, made for a friend of mine who is also a Zappa fan.</p><p>Image was generated using <a href="https://muffinman.io/vertigo/">Vertigo</a>, a small vector <em>shader</em> tool I created. It is open source and you can try it live on it's website.</p>
 
     </content>
 
@@ -1708,11 +1680,9 @@ And of course, big thanks to <a href="https://www.instagram.com/dutchplottr/">@d
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Today. I have a very personal project to share with you all.</p>
+		<content type="html"><p>Today. I have a very personal project to share with you all.</p>
 <p><a href="https://lettersfromsarajevo.com/">Letters from Sarajevo</a> is a web adaptation of the book of the same name. My brother wrote the book using authentic letters our father sent us while being stuck in Sarajevo during the war in the nineties.</p>
 <p>For more information about the book, please check <a href="https://lettersfromsarajevo.com/en/about/">about page</a>.</p>
-<!--{:.Image--md}-->
 <p><a href="https://lettersfromsarajevo.com/"><img src="/img/letters-from-sarajevo/truce.png" alt="One of the images from the book, soldier lying on the cannon which is plugged with a cork" /></a></p>
 <span id="continue-reading"></span><h2 id="illustrations">Illustrations<a
   class="header-anchor"
@@ -1782,8 +1752,7 @@ And of course, big thanks to <a href="https://www.instagram.com/dutchplottr/">@d
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>I'm all about generative art these days. Today, I present you <a href="/metaballs/">Metaballs</a>, my latest creation. It is one of those projects that I visualized in my head and managed to pull it off exactly how I imagined it.</p>
+		<content type="html"><p>I'm all about generative art these days. Today, I present you <a href="/metaballs/">Metaballs</a>, my latest creation. It is one of those projects that I visualized in my head and managed to pull it off exactly how I imagined it.</p>
 <p>Somehow I came up with an idea to generate spheres, smoothly merge them to get organic looking shapes, which then I would slice up and render the
 <span
   class="sidenote__trigger "
@@ -1958,8 +1927,7 @@ these.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Recently I started playing with <a href="https://en.wikipedia.org/wiki/Generative_art">generative art</a>. I'm new to the whole thing and I'm absolutely enjoying it. Today I want to show you the first generative art project I'm satisfied with.</p>
+		<content type="html"><p>Recently I started playing with <a href="https://en.wikipedia.org/wiki/Generative_art">generative art</a>. I'm new to the whole thing and I'm absolutely enjoying it. Today I want to show you the first generative art project I'm satisfied with.</p>
 <p>It is called <strong>Neon</strong> and you can check it out <a href="https://neon.muffinman.io/">here</a> or by clicking on the image below.</p>
 
 <a href="https:&#x2F;&#x2F;neon.muffinman.io&#x2F;#&#x2F;false&#x2F;14&#x2F;8&#x2F;60&#x2F;70&#x2F;200&#x2F;5&#x2F;r4rquxotz3q&#x2F;ouihz7hmsic&#x2F;0z5d8xa8yrd" class="image__link">
@@ -1995,7 +1963,6 @@ these.</p>
 </h2>
 <p>After watching <a href="https://www.youtube.com/watch?v=NAil0DzclFA">Vladimir's talk</a> about his <a href="http://brutalism.rs/project/aesthetic-engine-2/">Aesthetic Engine 2</a>, I started experimenting with <a href="https://en.wikipedia.org/wiki/Vector_field">vector fields</a>.</p>
 <p>This is an example of one randomly generated vector field:</p>
-<!--{:.Image.Image--md}-->
 <p><img src="/img/neon/00.png" alt="Randomly generated 2d vector field" /></p>
 <p>Think of it like it is an air or water flow. If this field was a river and you drop a leaf in it, these forces will take it and carry it around. If we plot the movement of the leaf, we'll get a line.</p>
 <p>If we draw a lot of these lines, we will visualize the flow of the field. That is the core concept I used with Neon. But for a start let's see how can we draw a single line.</p>
@@ -2006,23 +1973,17 @@ these.</p>
 > <span class="sr-only" aria-hidden="true">#</span></a>
 </h2>
 <p>To draw a line, we'll select a random point for its start (we are <em>dropping a leaf</em>).</p>
-<!--{:.Image.Image--..}-->
 <p><img src="/img/neon/10.png" alt="Random point in the vector field" /></p>
 <p>We need to define which vectors are applying &quot;force&quot; to our point. Let's use radial search radius of 1.5 times grid item size.</p>
-<!--{:.Image.Image--..}-->
 <p><img src="/img/neon/11.png" alt="Showing search range around the point" /></p>
 <p>We'll select only vectors that start in this area (nine in this specific scenario).</p>
 <p>For each one we will calculate a new force vector with the same direction, but with intensity reciprocal to its distance from the point. Meaning that the closer the vector is to the point, it will apply more force to it.</p>
-<!--{:.Image.Image--..}-->
 <p><img src="/img/neon/12.png" alt="Highlighted vectors in the search range" /></p>
 <p>Adding up all of these newly calculated force vectors will give us a single vector pointing where our next point should be.</p>
-<!--{:.Image.Image--..}-->
 <p><img src="/img/neon/13.png" alt="Newly calculated vector points where the next point will be" /></p>
 <p>Let's draw the next point and apply the same steps to it.</p>
-<!--{:.Image.Image--..}-->
 <p><img src="/img/neon/20.png" alt="Starting point and the first calculated one" /></p>
 <p>Repeat the process recursively for each new point, until we are out of bounds or if we reach the limit of points we set (Neon uses maximum of 50 points).</p>
-<!--{:.Image.Image--..}-->
 <p><img src="/img/neon/30.png" alt="All points drawn recursively" /></p>
 <p>Now we can draw a
 <span
@@ -2038,19 +1999,23 @@ these.</p>
 ><span class="sidenote__bracket">(</span>I followed the great <a href="https://medium.com/@francoisromain/smooth-a-svg-path-with-cubic-bezier-curves-e37b49d46c74">post by François Romain's</a> on SVG path smoothing.<span class="sidenote__bracket">)</span></span>
 
 through these points.</p>
-<!--{:.Image.Image--..}-->
 <p><img src="/img/neon/40.png" alt="Bezier curve drawn through the points" /></p>
 <p>This process allows us to draw a line by only defining a starting point. We can draw as many lines as we want.</p>
-<!--{:.Image.Image--..}-->
 <p><img src="/img/neon/50.png" alt="Multiple lines generated and drawn" /></p>
 <p>I created a live example for you to try it out:</p>
 <iframe
-height='420px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/rNavBvN/?height=500&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/rNavBvN/'>2d vector field</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+  height="420"
+  scrolling="no"
+  title="2d vector field"
+  src="https://codepen.io/stanko/embed/rNavBvN?default-tab=result&amp;theme-id=light"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/rNavBvN">
+  2d vector field</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 <h2 id="neon-vector-field">Neon vector field<a
   class="header-anchor"
@@ -2061,7 +2026,6 @@ See the Pen <a href='http://codepen.io/stanko/pen/rNavBvN/'>2d vector field</a> 
 <p>Heart of Neon is one of these vector fields. I started with completely randomly generated vectors.
 But I quickly realized that <em>real</em> randomness creates chaos. To get something visually pleasing, I had to put some constraints in. However, randomness is what gives these projects life and unpredictability.</p>
 <p>Random vectors would often create a <em>spiral of doom</em>. Vectors would create a small <em>black hole</em> which would pull in any line that comes close.</p>
-<!--{:.Image.Image--..}-->
 <p><img src="/img/neon/spiral-of-doom.png" alt="&quot;Spiral of doom&quot; produced by random vectors" /></p>
 <p>To avoid that, I used a very simple solution - to each random vector I added a constant vector that
 <span
@@ -2198,8 +2162,7 @@ colors. Saturation and lightness are fixed to 70% and 60% respectively, while hu
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Last time I wrote one of these recaps was <a href="/blog/looking-forward-to-2017/">in 2016</a>. Not sure why I waited three years to write another, and from now on I'll try to do these annually.</p>
+		<content type="html"><p>Last time I wrote one of these recaps was <a href="/blog/looking-forward-to-2017/">in 2016</a>. Not sure why I waited three years to write another, and from now on I'll try to do these annually.</p>
 <p>2019 was a good year for me, and I want to highlight a couple of things.</p>
 <span id="continue-reading"></span><h2 id="blog">Blog<a
   class="header-anchor"
@@ -2370,8 +2333,7 @@ haven't marketed it at all, but we think it is a nifty little thing, as it signi
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>These days I'm playing with <a href="https://threejs.org/">three.js</a> again. I'm not an expert but I enjoy playing with graphics.</p>
+		<content type="html"><p>These days I'm playing with <a href="https://threejs.org/">three.js</a> again. I'm not an expert but I enjoy playing with graphics.</p>
 <p>Conveniently, a friend of mine sent me this <a href="https://dribbble.com/shots/8907229-Urban-Planners-Mobile-Animation">Dribble</a>, and I thought it would be a perfect exercise to try making it. I still haven't done it, but I did some exploration on how to built it.</p>
 <span id="continue-reading"></span>
 <p>My plan was to draw the parallaxing layers as vectors, import it in three.js and use <code>ExtrudeGeometry</code> to give them a third dimension. To three.js ninjas this might be funny, but it took me some time.</p>
@@ -2599,12 +2561,18 @@ You'll notice that every geometry in three.js has a &quot;Buffer&quot; version (
 > <span class="sr-only" aria-hidden="true">#</span></a>
 </h3>
 <iframe
-height='420px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/gObMepb/?height=500&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/gObMepb/'>three.js extrude SVG path</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+  height="420"
+  scrolling="no"
+  title="three.js extrude SVG path"
+  src="https://codepen.io/stanko/embed/gObMepb?default-tab=result&amp;theme-id=light"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/gObMepb">
+  three.js extrude SVG path</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
     </content>
@@ -2619,8 +2587,7 @@ See the Pen <a href='http://codepen.io/stanko/pen/gObMepb/'>three.js extrude SVG
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Another Catalina rant, this time about Ruby. As far as I know, on MacOS, it is advisable to
+		<content type="html"><p>Another Catalina rant, this time about Ruby. As far as I know, on MacOS, it is advisable to
 <span
   class="sidenote__trigger "
   tabindex="0"
@@ -2684,8 +2651,7 @@ See the Pen <a href='http://codepen.io/stanko/pen/gObMepb/'>three.js extrude SVG
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Yesterday I
+		<content type="html"><p>Yesterday I
 <span
   class="sidenote__trigger "
   tabindex="0"
@@ -2732,8 +2698,7 @@ Apple made a change and switched the default shell to zsh (instead of bash). Fro
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>I love <a href="https://en.wikipedia.org/wiki/Easter_egg_(media)#Software">easter eggs</a> in software.</p>
+		<content type="html"><p>I love <a href="https://en.wikipedia.org/wiki/Easter_egg_(media)#Software">easter eggs</a> in software.</p>
 <p>You may have noticed the keyboard image in the background of my blog. This thing on the right side of the screen. Those with a keen eye figured out it highlights keys as you are typing. It has been here for some time now, and on my colleague's request, I'll explain how it works.</p>
 <span id="continue-reading"></span>
 <p>Let's break it down.</p>
@@ -2861,13 +2826,18 @@ We are going to use this property to map physical key presses to keys in our ima
 <p>When I initially decided to add an easter egg to my website, I was thinking of  using <a href="https://en.wikipedia.org/wiki/Konami_Code">Konami Code</a> or even creating a tiny video game. But in the end, I really loved the keyboard one, as it was easy to find and fun to play with.</p>
 <p>And for the end, to see how everything fits together, I created a demo for you to play with:</p>
 <iframe
-class='Block--lg'
-height='450px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/KKwPJvL/?height=450&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/KKwPJvL/'>Keyboard easter egg</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+  height="450"
+  scrolling="no"
+  title="Keyboard easter egg"
+  src="https://codepen.io/stanko/embed/KKwPJvL?default-tab=result&amp;theme-id=light"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/KKwPJvL">
+  Keyboard easter egg</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
     </content>
@@ -2882,8 +2852,7 @@ See the Pen <a href='http://codepen.io/stanko/pen/KKwPJvL/'>Keyboard easter egg<
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Short Firefox tip to disable <code>Cmd + MouseWheel</code> zoom. There is a weird interaction with it. Therefore I decided to turn it off completely (I never used it anyway).</p>
+		<content type="html"><p>Short Firefox tip to disable <code>Cmd + MouseWheel</code> zoom. There is a weird interaction with it. Therefore I decided to turn it off completely (I never used it anyway).</p>
 <p>When I scroll a page using a trackpad and start switching tabs via <code>Cmd + Tab</code>, inertia scrolling would still be active, and the page I switched to gets zoomed in a lot (as I'm still holding <code>Cmd</code>). It really got on my nerves.</p>
 <span id="continue-reading"></span>
 <p>To disable it, you'll need to type <code>about:config</code> in your address bar. A
@@ -2917,11 +2886,9 @@ may appear. Continue like the hacker you are, and search for <code>mousewheel.wi
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Two years ago I wrote <a href="/blog/firefox-57-cpu-usage-is-insane/">this rant</a>. Firefox had a problem on MacOS on scaled resolutions, resulting in insanely high CPU usage and battery drain.</p>
+		<content type="html"><p>Two years ago I wrote <a href="/blog/firefox-57-cpu-usage-is-insane/">this rant</a>. Firefox had a problem on MacOS on scaled resolutions, resulting in insanely high CPU usage and battery drain.</p>
 <p>Issue is <a href="https://www.mozilla.org/en-US/firefox/70.0beta/releasenotes/">finally fixed</a>, and I'm happy to say I'm using it again. The fix is expected to land in the stable version in late October 2019, with the release of Firefox 70.</p>
 <p>Meanwhile you can download <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly">Firefox Nightly</a>, which is the freshest (and sometimes unstable) version of Firefox.</p>
-<!--{:.Image.Image--sm}-->
 <p><a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly"><img src="/img/ff-nightly.png" alt="Firefox Nightly" /></a></p>
 <p>I'm really happy to be using Firefox again, and I think you should try it as well.</p>
 
@@ -2937,8 +2904,7 @@ may appear. Continue like the hacker you are, and search for <code>mousewheel.wi
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>I'm using <a href="https://github.com/eduardoboucas/staticman/issues/222">Staticman</a> as a comment system on this blog. Unfortunately public instance <a href="https://github.com/eduardoboucas/staticman/issues/294">can't handle</a> all of the requests coming in. That resulted in some readers being unable to post a comment.</p>
+		<content type="html"><p>I'm using <a href="https://github.com/eduardoboucas/staticman/issues/222">Staticman</a> as a comment system on this blog. Unfortunately public instance <a href="https://github.com/eduardoboucas/staticman/issues/294">can't handle</a> all of the requests coming in. That resulted in some readers being unable to post a comment.</p>
 <p>That is why I decided to run my own instance on Heroku. It was easy to find this <a href="https://vincenttam.gitlab.io/post/2018-09-16-staticman-powered-gitlab-pages/2/">great article</a> describing the process thoroughly. But after following it and deploying Statamic to Heroku, I just couldn't make it work.</p>
 <p>It took me a while until I found <a href="https://networkhobo.com/staticman-the-journey-continues">another article with a workaround</a>. Long story short, you need to use a specific version instead of the latest one.</p>
 <p>In the first article in &quot;Stage 2&quot; in &quot;Step 7&quot; replace this:</p>
@@ -2961,8 +2927,7 @@ may appear. Continue like the hacker you are, and search for <code>mousewheel.wi
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Today I want to share three bookmarklets I love to use in development. You can add them to your browser, by creating a new bookmark and entering bookmarklet code instead of URL.
+		<content type="html"><p>Today I want to share three bookmarklets I love to use in development. You can add them to your browser, by creating a new bookmark and entering bookmarklet code instead of URL.
 <span
   class="sidenote__trigger "
   tabindex="0"
@@ -3001,7 +2966,7 @@ may appear. Continue like the hacker you are, and search for <code>mousewheel.wi
 <p>One line version:</p>
 <pre data-lang="js" style="background-color:#282c34;color:#dcdfe4;" class="language-js "><code class="language-js" data-lang="js"><span>javascript:</span><span style="color:#c678dd;">void</span><span>(</span><span style="color:#c678dd;">function </span><span>() { </span><span style="color:#c678dd;">var </span><span style="color:#e06c75;">documentWidth </span><span style="color:#c678dd;">= </span><span>document.documentElement.</span><span style="color:#e06c75;">offsetWidth</span><span>; </span><span style="color:#c678dd;">var </span><span style="color:#e06c75;">treeWalker </span><span style="color:#c678dd;">= </span><span>document.</span><span style="color:#61afef;">createTreeWalker</span><span>(document.body, </span><span style="color:#e5c07b;">NodeFilter</span><span>.</span><span style="color:#e06c75;">SHOW_ELEMENT</span><span>); </span><span style="color:#c678dd;">while </span><span>(</span><span style="color:#e06c75;">treeWalker</span><span>.</span><span style="color:#61afef;">nextNode</span><span>()) { </span><span style="color:#c678dd;">var </span><span style="color:#e06c75;">rect </span><span style="color:#c678dd;">= </span><span style="color:#e06c75;">treeWalker</span><span>.</span><span style="color:#e06c75;">currentNode</span><span>.</span><span style="color:#61afef;">getBoundingClientRect</span><span>(); </span><span style="color:#c678dd;">if </span><span>(</span><span style="color:#e06c75;">rect</span><span>.right </span><span style="color:#c678dd;">&gt; </span><span style="color:#e06c75;">documentWidth </span><span style="color:#c678dd;">|| </span><span style="color:#e06c75;">rect</span><span>.left </span><span style="color:#c678dd;">&lt; </span><span style="color:#e5c07b;">0</span><span>) { </span><span style="color:#e06c75;">treeWalker</span><span>.</span><span style="color:#e06c75;">currentNode</span><span>.style.</span><span style="color:#61afef;">setProperty</span><span>(</span><span style="color:#98c379;">&#39;outline&#39;</span><span>, </span><span style="color:#98c379;">&#39;1px dotted red&#39;</span><span>, </span><span style="color:#98c379;">&#39;important&#39;</span><span>); </span><span style="color:#e5c07b;">console</span><span>.</span><span style="color:#61afef;">log</span><span>(</span><span style="color:#e06c75;">treeWalker</span><span>.</span><span style="color:#e06c75;">currentNode</span><span>); } }; }());
 </span></code></pre>
-<p><button class="btn btn--sm btn--empty" onClick="javascript:void(function () { var documentWidth = document.documentElement.offsetWidth; var treeWalker = document.createTreeWalker(document.body, NodeFilter.SHOW_ELEMENT); while (treeWalker.nextNode()) { var rect = treeWalker.currentNode.getBoundingClientRect(); if (rect.right > documentWidth || rect.left < 0) { treeWalker.currentNode.style.setProperty('outline', '1px dotted red', 'important'); console.log(treeWalker.currentNode); } }; }());">Horizontal scroll detection</button></p>
+<p><button class="btn btn--sm btn--empty" onclick="javascript:void(function () { var documentWidth = document.documentElement.offsetWidth; var treeWalker = document.createTreeWalker(document.body, NodeFilter.SHOW_ELEMENT); while (treeWalker.nextNode()) { var rect = treeWalker.currentNode.getBoundingClientRect(); if (rect.right &gt; documentWidth || rect.left &lt; 0) { treeWalker.currentNode.style.setProperty('outline', '1px dotted red', 'important'); console.log(treeWalker.currentNode); } }; }());">Horizontal scroll detection</button></p>
 <p><small>Please note that my site has <code>overflow-x: hidden</code> on the content area.</small></p>
 <h2 id="make-page-editable">Make page editable<a
   class="header-anchor"
@@ -3018,7 +2983,7 @@ may appear. Continue like the hacker you are, and search for <code>mousewheel.wi
 <p>One line version:</p>
 <pre data-lang="js" style="background-color:#282c34;color:#dcdfe4;" class="language-js "><code class="language-js" data-lang="js"><span>javascript:</span><span style="color:#c678dd;">void</span><span>(</span><span style="color:#c678dd;">function </span><span>() { document.body.</span><span style="color:#e06c75;">contentEditable </span><span style="color:#c678dd;">= </span><span style="color:#98c379;">&#39;true&#39;</span><span>; document.</span><span style="color:#e06c75;">designMode </span><span style="color:#c678dd;">= </span><span style="color:#98c379;">&#39;on&#39;</span><span>; }());
 </span></code></pre>
-<p><button class="btn btn--sm btn--empty" onClick="javascript:void(function () { document.body.contentEditable = 'true'; document.designMode = 'on'; }());">Edit page</button></p>
+<p><button class="btn btn--sm btn--empty" onclick="javascript:void(function () { document.body.contentEditable = 'true'; document.designMode = 'on'; }());">Edit page</button></p>
 <h2 id="toggle-between-rtl-and-ltr-direction">Toggle between RTL and LTR direction<a
   class="header-anchor"
   href="#toggle-between-rtl-and-ltr-direction" aria-label="Anchor link for: toggle-between-rtl-and-ltr-direction"
@@ -3040,7 +3005,7 @@ may appear. Continue like the hacker you are, and search for <code>mousewheel.wi
 <p>One line version:</p>
 <pre data-lang="js" style="background-color:#282c34;color:#dcdfe4;" class="language-js "><code class="language-js" data-lang="js"><span>javascript:</span><span style="color:#c678dd;">void</span><span>(</span><span style="color:#c678dd;">function </span><span>() { </span><span style="color:#c678dd;">var </span><span style="color:#e06c75;">html </span><span style="color:#c678dd;">= </span><span>document.</span><span style="color:#61afef;">querySelector</span><span>(</span><span style="color:#98c379;">&#39;html&#39;</span><span>); </span><span style="color:#c678dd;">var </span><span style="color:#e06c75;">dir </span><span style="color:#c678dd;">= </span><span style="color:#e06c75;">html</span><span>.</span><span style="color:#61afef;">getAttribute</span><span>(</span><span style="color:#98c379;">&#39;dir&#39;</span><span>); </span><span style="color:#c678dd;">if </span><span>(</span><span style="color:#c678dd;">!</span><span style="color:#e06c75;">dir </span><span style="color:#c678dd;">|| </span><span style="color:#e06c75;">dir </span><span style="color:#c678dd;">== </span><span style="color:#98c379;">&#39;ltr&#39;</span><span>) { </span><span style="color:#e06c75;">html</span><span>.</span><span style="color:#61afef;">setAttribute</span><span>(</span><span style="color:#98c379;">&#39;dir&#39;</span><span>, </span><span style="color:#98c379;">&#39;rtl&#39;</span><span>); } </span><span style="color:#c678dd;">else </span><span>{ </span><span style="color:#e06c75;">html</span><span>.</span><span style="color:#61afef;">setAttribute</span><span>(</span><span style="color:#98c379;">&#39;dir&#39;</span><span>, </span><span style="color:#98c379;">&#39;ltr&#39;</span><span>); } }());
 </span></code></pre>
-<p><button class="btn btn--sm btn--empty" onClick="javascript:void(function () { var html = document.querySelector('html'); var dir = html.getAttribute('dir'); if (!dir || dir == 'ltr') { html.setAttribute('dir', 'rtl'); } else { html.setAttribute('dir', 'ltr'); } }());">Toggle between RTL and LTR</button></p>
+<p><button class="btn btn--sm btn--empty" onclick="javascript:void(function () { var html = document.querySelector('html'); var dir = html.getAttribute('dir'); if (!dir || dir == 'ltr') { html.setAttribute('dir', 'rtl'); } else { html.setAttribute('dir', 'ltr'); } }());">Toggle between RTL and LTR</button></p>
 
     </content>
 
@@ -3054,8 +3019,7 @@ may appear. Continue like the hacker you are, and search for <code>mousewheel.wi
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Two weeks ago I got a pair of cheap Xiaomi's wireless earphones. This was an experiment to see if I like true wireless concept before buying something more expensive.</p>
+		<content type="html"><p>Two weeks ago I got a pair of cheap Xiaomi's wireless earphones. This was an experiment to see if I like true wireless concept before buying something more expensive.</p>
 <p><img src="/img/airdots.jpg" alt="Xiaomi AirDots earphones" /></p>
 <span id="continue-reading"></span><h2 id="sound">Sound<a
   class="header-anchor"
@@ -3108,8 +3072,7 @@ may appear. Continue like the hacker you are, and search for <code>mousewheel.wi
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>I haven't published anything in a while, which is a shame because I have a couple of good things to write about. That said, today's post is going to be a short one. I wasn't sure if theme is interesting enough. But in the end I decided to write it anyway. And it will help me get back in the writing shape.</p>
+		<content type="html"><p>I haven't published anything in a while, which is a shame because I have a couple of good things to write about. That said, today's post is going to be a short one. I wasn't sure if theme is interesting enough. But in the end I decided to write it anyway. And it will help me get back in the writing shape.</p>
 <p>While setting up a new project on Netlify, I was going through the logs and noticed they are using
 <span
   class="sidenote__trigger "
@@ -3212,12 +3175,18 @@ text only loader. It is a very simple animation swapping between four text chara
 </h2>
 <p>Retro loader I tried to replicate in the first place:</p>
 <iframe
-height='300px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/XLYRQV/?height=300&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/XLYRQV/'>CSS only retro CLI loader</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+  height="300"
+  scrolling="no"
+  title="CSS only retro CLI loader"
+  src="https://codepen.io/stanko/embed/XLYRQV?default-tab=result&amp;theme-id=light"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/XLYRQV">
+  CSS only retro CLI loader</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 <p>After I've done the retro loader, I thought it would be fun to animate some images, preferably
 <span
@@ -3234,12 +3203,18 @@ See the Pen <a href='http://codepen.io/stanko/pen/XLYRQV/'>CSS only retro CLI lo
 .
 So I found this nifty <a href="https://www.artstation.com/artwork/YEJeY">Rick and Morty animation</a> and animated it in CSS.</p>
 <iframe
-height='500px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/GbBqwZ/?height=500&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/GbBqwZ/'>CSS Frame animation (Rick and Morty)</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+  height="500"
+  scrolling="no"
+  title="CSS Frame animation (Rick and Morty)"
+  src="https://codepen.io/stanko/embed/GbBqwZ?default-tab=result&amp;theme-id=light"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/GbBqwZ">
+  CSS Frame animation (Rick and Morty)</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 <h2 id="conclusion">Conclusion<a
   class="header-anchor"
@@ -3276,8 +3251,7 @@ See the Pen <a href='http://codepen.io/stanko/pen/GbBqwZ/'>CSS Frame animation (
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>This time I want to share a small range slider (progress bar) I built. Check the <a href="http://muffinman.io/aria-progress-range-slider/">demo</a>. Code and documentation are available <a href="https://github.com/Stanko/aria-progress-range-slider">here</a>.</p>
+		<content type="html"><p>This time I want to share a small range slider (progress bar) I built. Check the <a href="http://muffinman.io/aria-progress-range-slider/">demo</a>. Code and documentation are available <a href="https://github.com/Stanko/aria-progress-range-slider">here</a>.</p>
 <p><a href="http://muffinman.io/aria-progress-range-slider/"><img src="/img/range-slider.png" alt="Range slider screenshot" /></a></p>
 <p>Same story again, on a React project we needed a media progress bar, and I ended up writing one myself.</p>
 <p>Why I didn't like anything I found? Well, everything I tried was missing one of the things we considered mandatory - good touch support, accessibility (aria attributes, keyboard control), callbacks or easy styling.</p>
@@ -3339,8 +3313,7 @@ See the Pen <a href='http://codepen.io/stanko/pen/GbBqwZ/'>CSS Frame animation (
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Let me start with a little disclaimer. Just because you can, doesn't mean you should use it. Hiding scrollbars can be bad for accessibility and user experience.</p>
+		<content type="html"><p>Let me start with a little disclaimer. Just because you can, doesn't mean you should use it. Hiding scrollbars can be bad for accessibility and user experience.</p>
 <p>But there are rare cases where it makes sense, usually when you have scrolling effects or when modal is opened. So use it wisely.</p>
 <p>Check <a href="/demos/hide-body-scrollbars/">the demo</a>. And find the cross browser code below:</p>
 <span id="continue-reading"></span><pre data-lang="scss" style="background-color:#282c34;color:#dcdfe4;" class="language-scss "><code class="language-scss" data-lang="scss"><span style="color:#e06c75;">html</span><span style="color:#c678dd;">,
@@ -3371,8 +3344,7 @@ See the Pen <a href='http://codepen.io/stanko/pen/GbBqwZ/'>CSS Frame animation (
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Exactly ten years ago, on my <a href="http://rand.rs/">my friend</a>'s blog I published a blog post about Internet Explorer 6 CSS hacks. I remembered it recently, and thought it would be really cool if I republished that same post, on it's 10th anniversary.</p>
+		<content type="html"><p>Exactly ten years ago, on my <a href="http://rand.rs/">my friend</a>'s blog I published a blog post about Internet Explorer 6 CSS hacks. I remembered it recently, and thought it would be really cool if I republished that same post, on it's 10th anniversary.</p>
 <p>I added comments about the hacks from today's perspective to give you some context. Cited parts are from the original post. Younger developers may find some things unbelievable, because browsers came a long way in the last ten years :)</p>
 <p>So here it is.</p>
 <span id="continue-reading"></span><h2 id="calculating-width-and-height">Calculating <code>width</code> and <code>height</code><a
@@ -3533,8 +3505,7 @@ It is enough to include it on you page. Only drawback is that it doesn't support
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Few days ago, I was chatting with our design team, and we were wondering how hard would be to create a fake audio spectrum (that mimics human speech) and visualize it. I immediately said it should be easy, and that I will play with it over the weekend. Of course, I didn't wait for the weekend, but wrote it the same evening. It was fairly straightforward, but it had few gotchas.</p>
+		<content type="html"><p>Few days ago, I was chatting with our design team, and we were wondering how hard would be to create a fake audio spectrum (that mimics human speech) and visualize it. I immediately said it should be easy, and that I will play with it over the weekend. Of course, I didn't wait for the weekend, but wrote it the same evening. It was fairly straightforward, but it had few gotchas.</p>
 <h2 id="result">Result<a
   class="header-anchor"
   href="#result" aria-label="Anchor link for: result"
@@ -3544,15 +3515,15 @@ It is enough to include it on you page. Only drawback is that it doesn't support
 <p>Before you start playing with the checkboxes I advise you to read the rest of this post.</p>
 <div class="Spectrum"></div>
 <label style="display: block; display: flex; align-items: center; font-size: 0.8em">
-  <input type="checkbox" class="Spectrum-checkbox Spectrum-checkbox--random" checked style="margin-right: 0.2em" />
+  <input type="checkbox" class="Spectrum-checkbox Spectrum-checkbox--random" checked="true" style="margin-right: 0.2em" />
   Use random value
 </label>
 <label style="display: block; display: flex; align-items: center; font-size: 0.8em">
-  <input type="checkbox" class="Spectrum-checkbox Spectrum-checkbox--sample" checked style="margin-right: 0.2em" />
+  <input type="checkbox" class="Spectrum-checkbox Spectrum-checkbox--sample" checked="true" style="margin-right: 0.2em" />
   Use static sample
 </label>
 <label style="display: block; display: flex; align-items: center; font-size: 0.8em">
-  <input type="checkbox" class="Spectrum-checkbox Spectrum-checkbox--perlin" checked style="margin-right: 0.2em" />
+  <input type="checkbox" class="Spectrum-checkbox Spectrum-checkbox--perlin" checked="true" style="margin-right: 0.2em" />
   Use perlin noise value
 </label>
 <style>
@@ -3630,8 +3601,7 @@ Disable &quot;random&quot; and play with the other two checkboxes to see how it 
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>I want to brag a little - my npm packages have been downloaded more than
+		<content type="html"><p>I want to brag a little - my npm packages have been downloaded more than
 <span
   class="sidenote__trigger "
   tabindex="0"
@@ -3663,8 +3633,7 @@ this year!</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>I love my
+		<content type="html"><p>I love my
 <span
   class="sidenote__trigger "
   tabindex="0"
@@ -3678,7 +3647,6 @@ this year!</p>
 ><span class="sidenote__bracket">(</span>I have a huge draft about Switch, and how it have put the fun back in gaming for me. It takes me forever to publish it.<span class="sidenote__bracket">)</span></span>
 
 Unfortunately, tonight I noticed that one of my Joy-Cons has weird lumps on it.</p>
-<!--{:.Image.Image--sm}-->
 <p><img src="/img/joycon.jpg" alt="Lumpy Nintendo Switch Joy-Con" /></p>
 <p>(This is the image from the internet, not mine.)</p>
 <p>On multiple forum threads, people suggested using hair dryer to fix it. But nobody did explain how. I tried it, and in couple of minutes I managed to get it, and here is how I did it.</p>
@@ -3697,8 +3665,7 @@ Unfortunately, tonight I noticed that one of my Joy-Cons has weird lumps on it.<
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>This is something I keep rediscovering, because I keep forgetting it. <code>JSON.stringify</code> will omit all object attributes that are <code>undefined</code>.</p>
+		<content type="html"><p>This is something I keep rediscovering, because I keep forgetting it. <code>JSON.stringify</code> will omit all object attributes that are <code>undefined</code>.</p>
 <p>In most cases, it doesn't really matter, because if we parse that string back, and try to access that attribute - it will be <code>undefined</code> by design. Check the example below:</p>
 <pre data-lang="js" style="background-color:#282c34;color:#dcdfe4;" class="language-js "><code class="language-js" data-lang="js"><span style="color:#c678dd;">const </span><span style="color:#e06c75;">user </span><span style="color:#c678dd;">= </span><span>{ name: </span><span style="color:#98c379;">&#39;Stanko&#39;</span><span>, phone: </span><span style="color:#e5c07b;">undefined </span><span>};
 </span><span style="color:#e06c75;">user</span><span>.</span><span style="color:#e06c75;">phone</span><span>; </span><span style="color:#5c6370;">// -&gt; undefined
@@ -3763,8 +3730,7 @@ Function accepts two parameters, current <code>key</code> and <code>value</code>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>I want to share a hack (or a trick if you prefer) my colleague Marko showed me today.</p>
+		<content type="html"><p>I want to share a hack (or a trick if you prefer) my colleague Marko showed me today.</p>
 <p>What is the problem? We want our flex items to be equally distanced between each other and from the parent's edge. Unforunately
 <span
   class="sidenote__trigger "
@@ -3796,12 +3762,18 @@ is <a href="https://caniuse.com/#search=space-evenly">not supported in IE and Ed
 <p>This hack works with dynamic number of elements, dynamic widths and for any flex direction.</p>
 <p>You can see it in the action below:</p>
 <iframe
-height='400px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/XPzmqg/?height=400&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/XPzmqg/'>Flex items equally distanced from each other, as well from the parent's edge</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+  height="400"
+  scrolling="no"
+  title="Flex items equally distanced from each other, as well from the parent&#x27;s edge"
+  src="https://codepen.io/stanko/embed/XPzmqg?default-tab=result&amp;theme-id=light"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/XPzmqg">
+  Flex items equally distanced from each other, as well from the parent&#x27;s edge</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
     </content>
@@ -3816,24 +3788,35 @@ See the Pen <a href='http://codepen.io/stanko/pen/XPzmqg/'>Flex items equally di
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Yesterday, one of my colleagues shared <a href="https://uimovement.com/">UI Movement</a> website. It resulted in me playing with random animations trying to replicate mockups I liked.</p>
+		<content type="html"><p>Yesterday, one of my colleagues shared <a href="https://uimovement.com/">UI Movement</a> website. It resulted in me playing with random animations trying to replicate mockups I liked.</p>
 <p>Here are the results:</p>
 <iframe
-height='300px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/PdwGEy/?height=500&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/PdwGEy/'>Fancy input, CSS animation</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+  height="300"
+  scrolling="no"
+  title="Fancy input, CSS animation"
+  src="https://codepen.io/stanko/embed/PdwGEy?default-tab=result&amp;theme-id=light"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/PdwGEy">
+  Fancy input, CSS animation</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 <iframe
-height='300px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/KxwLpd/?height=500&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/KxwLpd/'>Kick input, SVG animation</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+  height="300"
+  scrolling="no"
+  title="Kick input, SVG animation"
+  src="https://codepen.io/stanko/embed/KxwLpd?default-tab=result&amp;theme-id=light"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/KxwLpd">
+  Kick input, SVG animation</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
     </content>
@@ -3848,8 +3831,7 @@ See the Pen <a href='http://codepen.io/stanko/pen/KxwLpd/'>Kick input, SVG anima
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>This happened to me couple of times - borders would just randomly disappear in Chrome. All other browsers render them normally, but they just vanish in Chrome, on some screen sizes. Resizing helps sometimes, but I never was able to catch real pattern for reproducing.</p>
+		<content type="html"><p>This happened to me couple of times - borders would just randomly disappear in Chrome. All other browsers render them normally, but they just vanish in Chrome, on some screen sizes. Resizing helps sometimes, but I never was able to catch real pattern for reproducing.</p>
 <p>If this ever happens to you, there is a (hacky) solution.
 Change border width from <code>1px</code> to <code>thin</code>.</p>
 <pre data-lang="css" style="background-color:#282c34;color:#dcdfe4;" class="language-css "><code class="language-css" data-lang="css"><span style="color:#c678dd;">border: 1px solid #000;
@@ -3871,8 +3853,7 @@ Change border width from <code>1px</code> to <code>thin</code>.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <h2 id="tl-dr">TL;DR<a
+		<content type="html"><h2 id="tl-dr">TL;DR<a
   class="header-anchor"
   href="#tl-dr" aria-label="Anchor link for: tl-dr"
   title="Anchor link for: tl-dr"
@@ -3975,8 +3956,7 @@ and here is code explained.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>This is a weird one, and not something you will stumble into every day. But it is a bug nonetheless.</p>
+		<content type="html"><p>This is a weird one, and not something you will stumble into every day. But it is a bug nonetheless.</p>
 <p>On iOS safari, if you use <code>window.scrollTo(0, y)</code> and <code>y</code> <em>is larger than document's maximum scroll</em>, any immediate call to <code>getBoundingClientRect</code> will return
 <span
   class="sidenote__trigger "
@@ -4058,8 +4038,7 @@ and here is code explained.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Recently I switched to a new laptop and had to set it up
+		<content type="html"><p>Recently I switched to a new laptop and had to set it up
 <span
   class="sidenote__trigger "
   tabindex="0"
@@ -4089,7 +4068,6 @@ and if you like them, consider donating to authors.</p>
 <blockquote>
 <p>AppCleaner is a small application which allows you to thoroughly uninstall unwanted apps.</p>
 </blockquote>
-<!--{:.Image}-->
 <p><img src="/img/mac-utils/appcleaner.png" alt="AppCleaner window" /></p>
 <h3 id="copyclip">CopyClip<a
   class="header-anchor"
@@ -4232,17 +4210,22 @@ instead of my home folder (<code>/Users/stanko</code>) because I navigate to the
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Some CSS fun. Lately I've stumbled upon couple of websites with elastic hover effect on buttons.
+		<content type="html"><p>Some CSS fun. Lately I've stumbled upon couple of websites with elastic hover effect on buttons.
 Each one was using SVG morphing, which is fine, but I was wondering how hard would it be to implement it in CSS.</p>
 <p>It ended up up being pretty easy.</p>
 <iframe
-height='500px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/VXPeoP/?height=500&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/VXPeoP/'>Elastic hover effect (CSS only)</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+  height="500"
+  scrolling="no"
+  title="Elastic hover effect (CSS only)"
+  src="https://codepen.io/stanko/embed/VXPeoP?default-tab=result&amp;theme-id=light"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/VXPeoP">
+  Elastic hover effect (CSS only)</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 <span id="continue-reading"></span>
 <p>I created four
@@ -4278,8 +4261,7 @@ Wireframe version is included as well, to make it easier to see how it works.</p
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Today I learned:</p>
+		<content type="html"><p>Today I learned:</p>
 <p>To upload files using <code>fetch</code> and
 <span
   class="sidenote__trigger "
@@ -4375,8 +4357,7 @@ and server was unable to parse the file correctly.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>I've been really busy lately, doing both work and pet projects.
+		<content type="html"><p>I've been really busy lately, doing both work and pet projects.
 At the moment I'm playing with <a href="https://threejs.org/">three.js</a> trying to
 <a href="https://codepen.io/stanko/full/jZROmX/">clone old DOS game</a> to JavaScript.
 Games (and animations in general) need animation loop in which we are going to update the scene and re-render it.</p>
@@ -4412,12 +4393,18 @@ My first attempt ended up being naive and it looked something like this:</p>
 </span><span style="color:#61afef;">animate</span><span>();
 </span></code></pre>
 <iframe
-height='250px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/GxjLmE/?height=250&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/GxjLmE/'>JavaScript animation loop - step 1</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+  height="250"
+  scrolling="no"
+  title="JavaScript animation loop - step 1"
+  src="https://codepen.io/stanko/embed/GxjLmE?default-tab=result&amp;theme-id=light"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/GxjLmE">
+  JavaScript animation loop - step 1</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 <p>At the first glance this looks fine. But it has one major problem.
 <code>requestAnimationFrame</code> is usually triggered 60 times per second, but often this is not the case.
@@ -4438,12 +4425,18 @@ Busy (or low-end) CPU will also slow it down.</p>
 
 In that case our box will be moved by 1px every 100ms, ending up on 10px per second.</p>
 <iframe
-height='250px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/ZxpZyZ/?height=250&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/ZxpZyZ/'>JavaScript animation loop - step 2</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+  height="250"
+  scrolling="no"
+  title="JavaScript animation loop - step 2"
+  src="https://codepen.io/stanko/embed/ZxpZyZ?default-tab=result&amp;theme-id=light"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/ZxpZyZ">
+  JavaScript animation loop - step 2</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 <p>This means our animation speed is relative to how many times <code>requestAnimationFrame</code> is called per second.</p>
 <p>That is the big timing problem we are trying to solve.
@@ -4505,24 +4498,36 @@ which is the exactly what we are trying to achieve (60px per second).</p>
 </span><span style="color:#61afef;">animate</span><span>();
 </span></code></pre>
 <iframe
-height='250px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/zWKXRY/?height=250&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/zWKXRY/'>JavaScript animation loop - step 3</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+  height="250"
+  scrolling="no"
+  title="JavaScript animation loop - step 3"
+  src="https://codepen.io/stanko/embed/zWKXRY?default-tab=result&amp;theme-id=light"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/zWKXRY">
+  JavaScript animation loop - step 3</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 <p>We fixed the timing problem, and our box is moving 60px per second.
 Now we can put back <code>requestAnimationFrame</code> instead of <code>setTimeout</code>,
 and we will get smooth animation without timing problems.</p>
 <p>Check all examples side by side comparison:</p>
 <iframe
-height='500px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/pLEYEw/?height=500&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/pLEYEw/'>JavaScript animation loop - step 4 (all examples combined)</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+  height="500"
+  scrolling="no"
+  title="JavaScript animation loop - step 4 (all examples combined)"
+  src="https://codepen.io/stanko/embed/pLEYEw?default-tab=result&amp;theme-id=light"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/pLEYEw">
+  JavaScript animation loop - step 4 (all examples combined)</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 <p>Hopefully you learned something reading this.
 I'm going to write more posts about three.js and JavaScript game development.</p>
@@ -4539,8 +4544,7 @@ I'm going to write more posts about three.js and JavaScript game development.</p
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Snippet for a rather popular requirement.
+		<content type="html"><p>Snippet for a rather popular requirement.
 Formatting a date in a nice way, using infamous &quot;time ago&quot; function.
 This is the basic version which I adapt to fit a specific project.
 To keep it easily customizable to your needs, I haven't packaged it up.</p>
@@ -4639,14 +4643,11 @@ To keep it easily customizable to your needs, I haven't packaged it up.</p>
 > <span class="sr-only" aria-hidden="true">#</span></a>
 </h2>
 <p><em>Update, August 2020</em></p>
-<iframe
-height='400px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/rNeWbje/?height=400&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/rNeWbje/'>Javascript "time ago" function</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+<p>{{ codepen(
+id=&quot;rNeWbje&quot;,
+title=&quot;Javascript &quot;time ago&quot; function&quot;,
+height=400
+) }}</p>
 
     </content>
 
@@ -4660,8 +4661,7 @@ See the Pen <a href='http://codepen.io/stanko/pen/rNeWbje/'>Javascript "time ago
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>This time we joined forces with our friends from <a href="http://itgirls.rs/">IT Girls</a>.
+		<content type="html"><p>This time we joined forces with our friends from <a href="http://itgirls.rs/">IT Girls</a>.
 They are promoting tech among women, and helping them start a career in it.
 Together, we are organizing a series of meetups and workshops about React.</p>
 <p>Last night, my colleague Nemanja and myself had a pleasure to give the first talk in the series.
@@ -4685,8 +4685,7 @@ Slides are available for <a href="/pdf/Introduction%20to%20React.pdf">download</
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>React Router switched to component based routing starting with the version 4.
+		<content type="html"><p>React Router switched to component based routing starting with the version 4.
 Redirects are now done by rendering a <code>Redirect</code> component,
 <span
   class="sidenote__trigger "
@@ -4832,8 +4831,7 @@ When set to <code>true</code> it will push new URL to the history, leaving the o
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Short one today.</p>
+		<content type="html"><p>Short one today.</p>
 <p>I'm continuing to release <a href="/blog/has-tabbed-aka-should-i-release-small-libraries/">small libraries</a>.
 So let me present <a href="https://www.npmjs.com/package/react-ratio">react-ratio</a>, another small React component.
 You probably guessed what it does - creates element with the given aspect ratio.</p>
@@ -4851,8 +4849,7 @@ You probably guessed what it does - creates element with the given aspect ratio.
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>I just released tiny library called <a href="https://www.npmjs.com/package/has-tabbed">has-tabbed</a>.
+		<content type="html"><p>I just released tiny library called <a href="https://www.npmjs.com/package/has-tabbed">has-tabbed</a>.
 Again, it is a small piece of code I regularly copy from project to project.
 I always considered it too insignificant for releasing it as a standalone package.</p>
 <p>When user presses tab key, it adds
@@ -4907,7 +4904,6 @@ It gives you a way yo differentiate if user is using keyboard or mouse to get ar
 You can safely remove focus rings for people using a mouse,
 but as soon as they start tabbing you can put them back in.
 You'll understand what I'm talking about when you see <a href="https://muffinman.io/has-tabbed/">the demo</a>.</p>
-<!--{:.Image.Image--md}-->
 <p><img src="/img/projects/has-tabbed.png" alt="&quot;has-tabbed&quot; in action" /></p>
 <p>On the left, you can see colorful buttons without focus state (with hover state on the first one).
 As soon as user presses tab we can add focus state as shown on the right.</p>
@@ -4926,8 +4922,7 @@ Enjoy!</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p><a href="https://github.com/workco/marvin/">Marvin</a> just got better!</p>
+		<content type="html"><p><a href="https://github.com/workco/marvin/">Marvin</a> just got better!</p>
 <p><img src="/img/marvin.jpg" alt="" /></p>
 <p>Few days ago I've released version 1.0 of my
 <span
@@ -5000,8 +4995,7 @@ Although, I personally think it is pretty easy to modify it to fit custom needs.
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>That's my new year's resolution. Code, write, play and craft more!</p>
+		<content type="html"><p>That's my new year's resolution. Code, write, play and craft more!</p>
 
     </content>
 
@@ -5015,8 +5009,7 @@ Although, I personally think it is pretty easy to modify it to fit custom needs.
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>This was intended to be a single paragraph in the post I'm still writing. It ended up much longer so I decided to publish it on it's own. So without further due, I present you <em>my programming story</em>.</p>
+		<content type="html"><p>This was intended to be a single paragraph in the post I'm still writing. It ended up much longer so I decided to publish it on it's own. So without further due, I present you <em>my programming story</em>.</p>
 <span id="continue-reading"></span><h2 id="origins">Origins<a
   class="header-anchor"
   href="#origins" aria-label="Anchor link for: origins"
@@ -5099,8 +5092,7 @@ snuck onto me. Oh boy, I was looking forward to learning all the engineering stu
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Another one-liner I love, that returns body scrollbar width.
+		<content type="html"><p>Another one-liner I love, that returns body scrollbar width.
 If scrollbar is not shown it will return zero (including mobile devices).</p>
 <pre data-lang="js" style="background-color:#282c34;color:#dcdfe4;" class="language-js "><code class="language-js" data-lang="js"><span style="color:#c678dd;">function </span><span style="color:#61afef;">getScrollbarWidth</span><span>() {
 </span><span>  </span><span style="color:#c678dd;">return </span><span>window.innerWidth </span><span style="color:#c678dd;">- </span><span>document.documentElement.</span><span style="color:#e06c75;">clientWidth</span><span>;
@@ -5134,8 +5126,7 @@ If scrollbar is not shown it will return zero (including mobile devices).</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>For handling API calls I have a small snippet I'm copying from project to project.
+		<content type="html"><p>For handling API calls I have a small snippet I'm copying from project to project.
 I decided to clean it up, make more generic and share it.
 It is intended to be a starting point, so you might want to customize it to your custom needs.</p>
 <h2 id="what-it-does">What it does?<a
@@ -5351,12 +5342,18 @@ they will return a Promise, so you need to define <code>then</code> (and <code>c
 </h3>
 <p>I've cooked a small demo to show it in practice, in which I used free <a href="https://swapi.co">Star Wars API</a>.</p>
 <iframe
-height='400px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/LOoPQp/?height=400&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/LOoPQp/'>Simple JavaScript API wrapper demo</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+  height="500"
+  scrolling="no"
+  title="Simple JavaScript API wrapper demo"
+  src="https://codepen.io/stanko/embed/LOoPQp?default-tab=result&amp;theme-id=light"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/LOoPQp">
+  Simple JavaScript API wrapper demo</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 <p>Feel free to play with it <a href="https://codepen.io/stanko/pen/LOoPQp?editors=0110">on CodePen</a>.</p>
 
@@ -5372,8 +5369,7 @@ See the Pen <a href='http://codepen.io/stanko/pen/LOoPQp/'>Simple JavaScript API
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Two days ago I released two npm packages,
+		<content type="html"><p>Two days ago I released two npm packages,
 <a href="https://www.npmjs.com/package/window-scroll-manager">window-scroll-manager</a> and
 <a href="https://www.npmjs.com/package/react-window-decorators">react-window-decorators</a>.</p>
 <h2 id="scroll-manager">Scroll manager<a
@@ -5490,8 +5486,7 @@ some time to put in the effort to release them as a standalone package.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>This is a sad rant :(</p>
+		<content type="html"><p>This is a sad rant :(</p>
 <p>I love Firefox (and Mozilla too) and have never switched to
 <span
   class="sidenote__trigger "
@@ -5507,7 +5502,6 @@ some time to put in the effort to release them as a standalone package.</p>
 
 But few days ago I switched to Opera, because new Firefox's (aka Quantum)
 CPU usage is insane.</p>
-<!--{:.Image.Image--medium}-->
 <p><img src="/img/ff.jpg" alt="Firefox :(" /></p>
 <p>Disabling extensions didn't help, it just hogs all available resources.
 MacOS is giving me &quot;Service Battery&quot; warning when Firefox is running.
@@ -5551,8 +5545,7 @@ and that they are trying to fix it. Hooray!</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Muffin Man is back! This time with new visual identity.</p>
+		<content type="html"><p>Muffin Man is back! This time with new visual identity.</p>
 <p>This was long overdue, but new design took me
 <span
   class="sidenote__trigger "
@@ -5590,8 +5583,7 @@ Some of them got rewritten to Liquid.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Just wanted to share two articles that helped me understand visual design better.
+		<content type="html"><p>Just wanted to share two articles that helped me understand visual design better.
 I was already aware of the most of these things, but having someone explain it how and why was really helpful.</p>
 <ul>
 <li><a href="https://medium.com/@erikdkennedy/7-rules-for-creating-gorgeous-ui-part-1-559d4e805cda">7 Rules for Creating Gorgeous UI</a></li>
@@ -5626,16 +5618,21 @@ Hopefully, these links will help you in that regard.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Just a quick proof of concept I made for transitioning between two react components.
+		<content type="html"><p>Just a quick proof of concept I made for transitioning between two react components.
 It animates height (of the parent) and fades components into each other.</p>
 <iframe
-height='500px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/eGwNZd/?height=500&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/eGwNZd/'>React transition between two components</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+  height="500"
+  scrolling="no"
+  title="React transition between two components"
+  src="https://codepen.io/stanko/embed/eGwNZd?default-tab=result&amp;theme-id=light"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/eGwNZd">
+  React transition between two components</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 <p>In <code>componentWillReceiveProps</code> it checks if <code>children</code> prop has changed.
 When that happens, it will save currently rendered children and the height of the wrapper.</p>
@@ -5657,8 +5654,7 @@ If you make use out of it, please share in the comments.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Last summer I wrote <a href="/blog/setting-up-webpack-babel-and-react-from-scratch/">this post</a>
+		<content type="html"><p>Last summer I wrote <a href="/blog/setting-up-webpack-babel-and-react-from-scratch/">this post</a>
 which quickly became my most popular one to day.
 With webpack 2 and 3 it got outdated, so I decided to write a new one.</p>
 <h2 id="before-we-start">Before we start<a
@@ -5728,7 +5724,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1648029165623435961'
+    aria-controls='spoiler-1648062396978682150'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -5752,7 +5748,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
   </button>
 
   <div
-    id='spoiler-1648029165623435961'
+    id='spoiler-1648062396978682150'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -5863,7 +5859,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1648029165626310498'
+    aria-controls='spoiler-1648062396980898422'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -5887,7 +5883,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
   </button>
 
   <div
-    id='spoiler-1648029165626310498'
+    id='spoiler-1648062396980898422'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6045,7 +6041,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1648029165633283888'
+    aria-controls='spoiler-1648062396988674924'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6069,7 +6065,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
   </button>
 
   <div
-    id='spoiler-1648029165633283888'
+    id='spoiler-1648062396988674924'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6192,7 +6188,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1648029165637170637'
+    aria-controls='spoiler-1648062396993059157'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6216,7 +6212,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
   </button>
 
   <div
-    id='spoiler-1648029165637170637'
+    id='spoiler-1648062396993059157'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6426,7 +6422,7 @@ next to js and html files.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1648029165650360607'
+    aria-controls='spoiler-1648062397002836038'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6450,7 +6446,7 @@ next to js and html files.</p>
   </button>
 
   <div
-    id='spoiler-1648029165650360607'
+    id='spoiler-1648062397002836038'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6605,7 +6601,7 @@ in it.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1648029165657066992'
+    aria-controls='spoiler-1648062397009841190'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6629,7 +6625,7 @@ in it.</p>
   </button>
 
   <div
-    id='spoiler-1648029165657066992'
+    id='spoiler-1648062397009841190'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6659,7 +6655,6 @@ in it.</p>
 > <span class="sr-only" aria-hidden="true">#</span></a>
 </h2>
 <p>And all that to create a very simple application, that should look something like this:</p>
-<!--{:.Image.Image--lg}-->
 <p><a href="https://github.com/Stanko/webpack-babel-react-revisited"><img src="/img/running-dev-server.png" alt="Example app running in the browser" /></a></p>
 <p>Hopefully, you now understand webpack better and are able to create new apps from scratch.</p>
 <p>If you enjoyed this tutorial, please share it, and help me improving
@@ -6692,8 +6687,7 @@ are some of the themes that I want to write about.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>I kinda got bored by the current design.
+		<content type="html"><p>I kinda got bored by the current design.
 Rotating SVGs in the header ate too much CPU power (oh <a href="/blog/what-is-the-point/">the irony</a>).
 So I decided to change a thing or two.</p>
 <p>First thing was to get rid of the rotation.
@@ -6715,8 +6709,7 @@ Code snippets are now using a light theme, which should be easier on the eye.</p
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <h2 id="update-march-2020">Update, March 2020<a
+		<content type="html"><h2 id="update-march-2020">Update, March 2020<a
   class="header-anchor"
   href="#update-march-2020" aria-label="Anchor link for: update-march-2020"
   title="Anchor link for: update-march-2020"
@@ -6879,8 +6872,7 @@ If you do, please share your blog in the comments.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>But I need to regroup and focus on finishing at least one, instead of starting all of the trillion ones and finishing none.</p>
+		<content type="html"><p>But I need to regroup and focus on finishing at least one, instead of starting all of the trillion ones and finishing none.</p>
 
     </content>
 
@@ -6894,8 +6886,7 @@ If you do, please share your blog in the comments.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>If you are JavaScript developer and not using <a href="https://github.com/creationix/nvm">nvm</a> you might want to look at it.
+		<content type="html"><p>If you are JavaScript developer and not using <a href="https://github.com/creationix/nvm">nvm</a> you might want to look at it.
 Node Version Manager is easy way to install, manage and work with multiple node versions.</p>
 <p>Recently I got npm update notification, that looks something like this:</p>
 <p><img src="/img/npm-update.png" alt="npm update notification" /></p>
@@ -6927,8 +6918,7 @@ Node Version Manager is easy way to install, manage and work with multiple node 
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>On the project I'm currently working on, client's logo is displayed in two versions,
+		<content type="html"><p>On the project I'm currently working on, client's logo is displayed in two versions,
 black on the white background and vice versa.
 To make their life easier, so they don't have to upload two assets, I suggested SVG.
 Alas they can't use SVGs (kinda long story), so I just applied CSS <code>filter: invert(1);</code>, but...</p>
@@ -7006,8 +6996,7 @@ This way SVG always keeps image aspect ratio.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>If you didn't know, in Safari's private mode both <code>localStorage</code> and <code>sessionStorage</code> are not working.
+		<content type="html"><p>If you didn't know, in Safari's private mode both <code>localStorage</code> and <code>sessionStorage</code> are not working.
 To be exact, Safari sets storage's limit to 0, so you can't write anything to it.
 I keep forgetting this, until QA people report it at some point.</p>
 <p>So I quickly wrote a small facade for it, which fails silently in this case.
@@ -7070,8 +7059,7 @@ That means it still doesn't work but it won't throw an error and break your appl
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>When we left jQuery behind and embraced modern JavaScript frameworks,
+		<content type="html"><p>When we left jQuery behind and embraced modern JavaScript frameworks,
 we thought we would never touch DOM directly again.
 Well that is not entirely true.
 There are a lot of cases when you need to get some DOM element size.
@@ -7150,8 +7138,7 @@ with iOS and <code>getBoundingClientRect</code> in combination with <code>positi
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>I'm becoming predictable. Again, I haven't found component I like, so I wrote my own.</p>
+		<content type="html"><p>I'm becoming predictable. Again, I haven't found component I like, so I wrote my own.</p>
 <p>This time, I've build React component for parallax (on scroll) effects.
 Check the <a href="https://muffinman.io/react-plx/">live demo</a>. It is called <code>Plx</code>, it is open source and available on <a href="https://github.com/Stanko/react-plx">GitHub</a> and <a href="https://www.npmjs.com/package/react-plx">npm</a>.</p>
 <h2 id="what-it-does">What it does<a
@@ -7276,8 +7263,7 @@ You can even animate colors on scroll (background, text and border colors are su
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>I use <a href="/img/image-resize/odin-2x.png">the same wallpaper</a><sup>1</sup> (warning, 6mb file) for a long time now.
+		<content type="html"><p>I use <a href="/img/image-resize/odin-2x.png">the same wallpaper</a><sup>1</sup> (warning, 6mb file) for a long time now.
 Not sure who is the author (if anyone knows the original author, please let me know in the comments).
 But with high resolution displays, wallpaper started to look blurry and noisy, so I stopped using it.</p>
 <p>But recently, my girlfriend reminded me of <a href="http://waifu2x.udp.jp/">this great website</a> which super-scales images using magic. Ok, not magic, but it uses &quot;Deep Convolutional Neural Networks&quot;, which is pretty much the same thing. Results are amazing, try it yourself.</p>
@@ -7295,13 +7281,15 @@ But with high resolution displays, wallpaper started to look blurry and noisy, s
   class="Image"
   style="max-width: 500px; width: 100%;"
   src="/img/image-resize/rickmorty-250x250.jpg"
-  alt="Original 250x250px image"></p>
+  alt="Original 250x250px image"
+/></p>
 <p>Result, 500x500px png</p>
 <p><img
   class="Image"
   style="max-width: 500px; width: 100%;"
   src="/img/image-resize/rickmorty-500x500.png"
-  alt="Resized 2x 500x500px image"></p>
+  alt="Resized 2x 500x500px image"
+/></p>
 <p>If you ask me, results are really impressive, kudos to nagadomi!</p>
 <p><small><sup>2</sup> Image is from my favorite animated show <a href="https://en.wikipedia.org/wiki/Rick_and_Morty">Rick and Morty</a></small></p>
 
@@ -7317,8 +7305,7 @@ But with high resolution displays, wallpaper started to look blurry and noisy, s
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>On the frontend, we do a lot of animations. Most of the simple animations I create by using CSS transitions.
+		<content type="html"><p>On the frontend, we do a lot of animations. Most of the simple animations I create by using CSS transitions.
 Either I will change class or inline style of the element, and define transitions in CSS file.</p>
 <p>Easiest way to do this in React is to render initial state, and then when it renders, change the state to apply class or style to animate. The easiest way to do it in React is to change state in <code>componentDidMount</code>.
 Setting state in <code>componentDidMount</code> is considered to be anti-pattern, as it forces rerender and can lead to property/layout thrashing. But in our case, that is exactly what we want to do.</p>
@@ -7376,12 +7363,18 @@ and render only the end result. This way our element immediately gets height of 
 </span><span style="color:#e5c07b;">}
 </span></code></pre>
 <iframe
-height='400px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/XgaNyq/?height=400&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/XgaNyq/'>Rerender React component in componentDidMount - Step 1</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+  height="400"
+  scrolling="no"
+  title="Rerender React component in componentDidMount - Step 1"
+  src="https://codepen.io/stanko/embed/XgaNyq?default-tab=result&amp;theme-id=light"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/XgaNyq">
+  Rerender React component in componentDidMount - Step 1</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 <h2 id="solution-add-a-short-timeout">Solution, add a short timeout<a
   class="header-anchor"
@@ -7404,12 +7397,18 @@ See the Pen <a href='http://codepen.io/stanko/pen/XgaNyq/'>Rerender React compon
 </span><span style="color:#c678dd;">...
 </span></code></pre>
 <iframe
-height='400px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/WOERrE/?height=400&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/WOERrE/'>Rerender React component in componentDidMount - Step 2</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+  height="400"
+  scrolling="no"
+  title="Rerender React component in componentDidMount - Step 2"
+  src="https://codepen.io/stanko/embed/WOERrE?default-tab=result&amp;theme-id=light"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/WOERrE">
+  Rerender React component in componentDidMount - Step 2</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 <p>So this is cross browser solution, but I always cringe a little when I'm forced to use timeouts like this. And I have been talking about animation frames a lot, so why don't we try that next?</p>
 <h2 id="using-requestanimationframe-instead-on-timeout">Using <code>requestAnimationFrame</code> instead on timeout<a
@@ -7440,12 +7439,18 @@ But you might want to stick with it for some time, to make sure all of your user
 </span><span style="color:#c678dd;">...
 </span></code></pre>
 <iframe
-height='400px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/JJyEoz/?height=400&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/JJyEoz/'>Rerender React component in componentDidMount - Step 3</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+  height="400"
+  scrolling="no"
+  title="Rerender React component in componentDidMount - Step 3"
+  src="https://codepen.io/stanko/embed/JJyEoz?default-tab=result&amp;theme-id=light"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/JJyEoz">
+  Rerender React component in componentDidMount - Step 3</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 <p>So now we need to make sure our two states belong to different animation frames each.</p>
 <h2 id="nested-requestanimationframe-to-the-rescue">Nested <code>requestAnimationFrame</code> to the rescue<a
@@ -7475,12 +7480,18 @@ value for timeout, just use native methods that browsers provide.</p>
 </span><span style="color:#c678dd;">...
 </span></code></pre>
 <iframe
-height='400px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/JJyEXq/?height=400&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/JJyEXq/'>Rerender React component in componentDidMount - Step 4</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+  height="400"
+  scrolling="no"
+  title="Rerender React component in componentDidMount - Step 4"
+  src="https://codepen.io/stanko/embed/JJyEXq?default-tab=result&amp;theme-id=light"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/JJyEXq">
+  Rerender React component in componentDidMount - Step 4</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 <h2 id="finally-put-it-in-a-helper">Finally, put it in a helper<a
   class="header-anchor"
@@ -7530,8 +7541,7 @@ This can be used in our React examples but also with any other framework or vani
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>I'm happy to announce <a href="https://github.com/workco/marvin">Marvin</a>, boilerplate for kicking off React/Redux applications.</p>
+		<content type="html"><p>I'm happy to announce <a href="https://github.com/workco/marvin">Marvin</a>, boilerplate for kicking off React/Redux applications.</p>
 <p><a href="https://github.com/workco/marvin"><img src="/img/marvin.jpg" alt="Marvin on Github" /></a></p>
 <p>Basically my <a href="/blog/webpack-2-react-redux/">boilerplate</a> became Work &amp; Co's internal project. It is meant to be a starting point for our React projects. This way faster development is assured along with higher quality code. It is open source, and external contributions are welcome.</p>
 <p>Name comes from a fictional character Marvin, android from the The Hitchhiker's Guide to the Galaxy book as a homage to it's author Douglas Adams.</p>
@@ -7548,8 +7558,7 @@ This can be used in our React examples but also with any other framework or vani
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <h2 id="update-december-2017">Update, December 2017<a
+		<content type="html"><h2 id="update-december-2017">Update, December 2017<a
   class="header-anchor"
   href="#update-december-2017" aria-label="Anchor link for: update-december-2017"
   title="Anchor link for: update-december-2017"
@@ -7668,8 +7677,7 @@ It is fairly simple way of injecting scroll position to react components. This w
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Friends of mine from the band <a href="https://soundcloud.com/timepills">Time Pills</a> opensourced bunch of their tracks. You can find them on <a href="https://github.com/nndmlsvc/time-pills">GitHub</a>. They are looking forward to having them remixed by creative people and sharing it with the world</p>
+		<content type="html"><p>Friends of mine from the band <a href="https://soundcloud.com/timepills">Time Pills</a> opensourced bunch of their tracks. You can find them on <a href="https://github.com/nndmlsvc/time-pills">GitHub</a>. They are looking forward to having them remixed by creative people and sharing it with the world</p>
 <p>Repo contains all of the tracks, stems, presets, loops and even midi files.</p>
 <p><a href="https://soundcloud.com/timepills"><img src="/img/timepills.jpg" alt="Time Pills SoundCloud profile" /></a></p>
 <p>Be sure to check them on <a href="https://soundcloud.com/timepills">SoundCloud</a> as well.</p>
@@ -7687,8 +7695,7 @@ It is fairly simple way of injecting scroll position to react components. This w
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Another tech meetup coming up. This time we have three great talks about engineering and project planning. We also have a special guest - <strong>IT girls team</strong>.</p>
+		<content type="html"><p>Another tech meetup coming up. This time we have three great talks about engineering and project planning. We also have a special guest - <strong>IT girls team</strong>.</p>
 <p>The IT Girls team will share their advances in promoting the professional development of women in technology in Serbia.</p>
 <p>This one will be held on Tuesday, May 16th at <a href="https://www.google.com/maps/place/Impact+Hub+Belgrade/@44.8157208,20.460881,17z/data=!3m1!4b1!4m5!3m4!1s0x475a7ab185427a37:0x2344b5ab238871dc!8m2!3d44.815717!4d20.463075">Impact Hub Belgrade</a>.
 See you there!</p>
@@ -7766,8 +7773,7 @@ See you there!</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Just a short one. I want to share a simple command to display nicer <code>git log</code> in the terminal. <code>git log</code> has <code>--pretty=format</code> option built-in, we are just going to pass formatting to it.</p>
+		<content type="html"><p>Just a short one. I want to share a simple command to display nicer <code>git log</code> in the terminal. <code>git log</code> has <code>--pretty=format</code> option built-in, we are just going to pass formatting to it.</p>
 <pre style="background-color:#282c34;color:#dcdfe4;"><code><span>git log --graph --pretty=format:&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39;
 </span></code></pre>
 <p>And it looks like this:</p>
@@ -7794,8 +7800,7 @@ See you there!</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>I started leading teams relatively early in my career.
+		<content type="html"><p>I started leading teams relatively early in my career.
 Mentoring and leading younger developers is something I tremendously enjoy.
 But there is one thing I really miss about being a &quot;regular&quot; developer.</p>
 <p>And that is - being able to put my headphones, play some rock 'n roll,
@@ -7817,8 +7822,7 @@ Luckily, I can fulfill my geek needs working on pet projects.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Most JavaScript developers used jQuery's <code>.slideUp()</code> and <code>.slideDown()</code> methods,
+		<content type="html"><p>Most JavaScript developers used jQuery's <code>.slideUp()</code> and <code>.slideDown()</code> methods,
 and got used to them. As component based frameworks usually do not include such functionality,
 the first logic choice is to turn to CSS. But alas, CSS transitions do not work with <code>height: auto</code>.
 (Transitions can do a tween only between two numeric values.)</p>
@@ -7915,8 +7919,7 @@ Please, when you are open sourcing a library, keep it small and simple!</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>In this post you can find seven talks I really liked in no particular order, most of them development related. I'll explain why I liked them, and why I should recommend watching every single one of them.</p>
+		<content type="html"><p>In this post you can find seven talks I really liked in no particular order, most of them development related. I'll explain why I liked them, and why I should recommend watching every single one of them.</p>
 <p>Every talks is embedded, but link to a website or youtube is included as well.</p>
 <p>Please comment with the talks you think are worth watching.</p>
 <span id="continue-reading"></span><h3 id="watgary-bernhardt-2012">Wat<br /><span class="h5">Gary Bernhardt, 2012</span><a
@@ -7928,7 +7931,7 @@ Please, when you are open sourcing a library, keep it small and simple!</p>
 <p>The talk I shared too many times. Gary talks about weird stuff in Ruby and JavaScript.
 It is witty and educational at the same time. I guarantee it will make you laugh.
 Only four minutes long, give it a try.</p>
-<p><video poster="/img/wat.png" preload="none" controls src="/videos/wat.mov"></video></p>
+<p><video poster="/img/wat.png" preload="none" controls="true" src="/videos/wat.mov"></video></p>
 <p><a href="https://www.destroyallsoftware.com/talks/wat">Link</a></p>
 <h3 id="live-react-hot-reloading-with-time-traveldan-abramov-2015">Live React: Hot Reloading with Time Travel<br /><span class="h5">Dan Abramov, 2015</span><a
   class="header-anchor"
@@ -7941,7 +7944,7 @@ This is the talk that made him famous and he ended up working for Facebook.
 It is about hot reloading in React, which he made mainstream.</p>
 <p>It is best described with a YouTube comment: &quot;All that was missing was the mic drop at the end.﻿&quot;</p>
 <div class="aspect-ratio-video">
-<iframe src="https://www.youtube.com/embed/xsSnOQynTHs?rel=0?ecver=2" frameborder="0" allowfullscreen>
+<iframe src="https://www.youtube.com/embed/xsSnOQynTHs?rel=0?ecver=2" frameborder="0" allowfullscreen="true">
 </iframe>
 </div>
 <p><a href="https://www.youtube.com/watch?v=xsSnOQynTHs">Link</a></p>
@@ -7953,7 +7956,7 @@ It is about hot reloading in React, which he made mainstream.</p>
 </h3>
 <p><em>Every</em> JavaScript developer should watch this. Philip explained what event loop is, how it works, in a simple language using beautiful examples.</p>
 <div class="aspect-ratio-video">
-<iframe src="https://www.youtube.com/embed/8aGhZQkoFbQ?rel=0?ecver=2" frameborder="0" allowfullscreen>
+<iframe src="https://www.youtube.com/embed/8aGhZQkoFbQ?rel=0?ecver=2" frameborder="0" allowfullscreen="true">
 </iframe>
 </div>
 <p><a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ">Link</a></p>
@@ -7972,7 +7975,7 @@ Don't get scared because it is almost one hour long, talk itself if about thirty
 <p>It got me thinking about writing games again,
 and hopefully I will have a blog post about that soon.</p>
 <div class="aspect-ratio-video">
-<iframe src="https://www.youtube.com/embed/E2MIpi8pIvY?rel=0?ecver=2" frameborder="0" allowfullscreen>
+<iframe src="https://www.youtube.com/embed/E2MIpi8pIvY?rel=0?ecver=2" frameborder="0" allowfullscreen="true">
 </iframe>
 </div>
 <p><a href="https://www.youtube.com/watch?v=E2MIpi8pIvY">Link</a></p>
@@ -7987,7 +7990,7 @@ It has nothing to do with a development, but medicine.
 How doctors are able to adjust brain functions by applying electricity to a certain parts.</p>
 <p>It still sounds like a science fiction to me.</p>
 <div class="aspect-ratio-video">
-<iframe src="https://www.youtube.com/embed/IEMLGrKJeK0?rel=0?ecver=2" frameborder="0" allowfullscreen>
+<iframe src="https://www.youtube.com/embed/IEMLGrKJeK0?rel=0?ecver=2" frameborder="0" allowfullscreen="true">
 </iframe>
 </div>
 <p><a href="https://www.youtube.com/watch?v=IEMLGrKJeK0">Link</a></p>
@@ -7999,7 +8002,7 @@ How doctors are able to adjust brain functions by applying electricity to a cert
 </h3>
 <p>Title is self-explanatory - young enthusiast got his hands on an old mainframe.</p>
 <div class="aspect-ratio-video">
-<iframe src="https://www.youtube.com/embed/45X4VP8CGtk?rel=0?ecver=2" frameborder="0" allowfullscreen>
+<iframe src="https://www.youtube.com/embed/45X4VP8CGtk?rel=0?ecver=2" frameborder="0" allowfullscreen="true">
 </iframe>
 </div>
 <p><a href="https://www.youtube.com/watch?v=45X4VP8CGtk">Link</a></p>
@@ -8013,7 +8016,7 @@ How doctors are able to adjust brain functions by applying electricity to a cert
 Sir Ken Robinson needs no introduction, and he talks about the school system,
 and how it may be killing kid's creativity.</p>
 <div class="aspect-ratio-video">
-<iframe src="https://www.youtube.com/embed/iG9CE55wbtY?rel=0?ecver=2" frameborder="0" allowfullscreen>
+<iframe src="https://www.youtube.com/embed/iG9CE55wbtY?rel=0?ecver=2" frameborder="0" allowfullscreen="true">
 </iframe>
 </div>
 <p><a href="https://www.youtube.com/watch?v=iG9CE55wbtY">Link</a></p>
@@ -8031,8 +8034,7 @@ and how it may be killing kid's creativity.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <h3 id="update-march-2019">Update March 2019<a
+		<content type="html"><h3 id="update-march-2019">Update March 2019<a
   class="header-anchor"
   href="#update-march-2019" aria-label="Anchor link for: update-march-2019"
   title="Anchor link for: update-march-2019"
@@ -8111,8 +8113,7 @@ but I need to extract it, and pack it up as a separate <code>npm</code> package 
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <ul>
+		<content type="html"><ul>
 <li>May 2018 - Updated to match React Router v4 API.</li>
 <li>September 2019 - Updated to match React Router v5 API, added React Create App part.</li>
 </ul>
@@ -8255,8 +8256,7 @@ which should work with your new configuration.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>We prepared another tech meetup, this time with four presentations.
+		<content type="html"><p>We prepared another tech meetup, this time with four presentations.
 There will be a break after the second one.
 This should be the biggest one so far, with two guest speakers.</p>
 <p>It will happen on February the 4th, at Belgrade Youth Centre.
@@ -8332,17 +8332,22 @@ And apply
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Just something to cheer you up for the holidays :)
+		<content type="html"><p>Just something to cheer you up for the holidays :)
 I got this idea while I was sick in bed, and had nothing smarter to do.
 Pure CSS, no JavaScript at all. Hope you like it, I may add some more details.</p>
 <iframe
-height='400px'
-scrolling='no'
-src='//codepen.io/stanko/embed/BQgZda/?height=400&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/BQgZda/'>Counting sheep</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+  height="400"
+  scrolling="no"
+  title="Counting sheep"
+  src="https://codepen.io/stanko/embed/BQgZda?default-tab=result&amp;theme-id=light"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/BQgZda">
+  Counting sheep</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 <p>Check the code on <a href="http://codepen.io/stanko/pen/BQgZda/">codepen</a>.</p>
 <p>Happy new year!</p>
@@ -8359,8 +8364,7 @@ See the Pen <a href='http://codepen.io/stanko/pen/BQgZda/'>Counting sheep</a> by
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>2016 was quite a ride.
+		<content type="html"><p>2016 was quite a ride.
 I just want to write a couple of random things,
 to close this year with one last post.</p>
 <h2 id="work-co">Work &amp; Co<a
@@ -8451,8 +8455,7 @@ Now, I took some days off, to get prepared for the new chapter the 2017 will bri
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <h2 id="part-three-also-the-last-part">Part three - also the last part<a
+		<content type="html"><h2 id="part-three-also-the-last-part">Part three - also the last part<a
   class="header-anchor"
   href="#part-three-also-the-last-part" aria-label="Anchor link for: part-three-also-the-last-part"
   title="Anchor link for: part-three-also-the-last-part"
@@ -8515,8 +8518,7 @@ so you understand the flow and the tooling behind it.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Currently, I'm working on a relatively small pet project.
+		<content type="html"><p>Currently, I'm working on a relatively small pet project.
 While setting it up, I decided to extract a webpack boilerplate from it.</p>
 <p>As whole JS community is moving really fast, I found very hard to
 set everything up using Webpack 1.x. One package would ask to update the other,
@@ -8592,8 +8594,7 @@ My goal was to be ready immediately after cloning the repo (and running <code>np
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <h3 id="update-november-2017">Update November 2017<a
+		<content type="html"><h3 id="update-november-2017">Update November 2017<a
   class="header-anchor"
   href="#update-november-2017" aria-label="Anchor link for: update-november-2017"
   title="Anchor link for: update-november-2017"
@@ -8620,8 +8621,7 @@ So I created one awesome list as well.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>After the recent Apple keynote, it seems that community is not happy with the new MacBook Pro.
+		<content type="html"><p>After the recent Apple keynote, it seems that community is not happy with the new MacBook Pro.
 Well, I'm not either.</p>
 <p>As for iPhone/iPad, those are toys, I could use pretty much any other modern smartphone/tablet.
 But MBP is my working horse, and I was always saying that
@@ -8673,8 +8673,7 @@ But, I hate that feeling Apple is pushing this down our throats -
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <h2 id="update-november-2017">Update, November 2017<a
+		<content type="html"><h2 id="update-november-2017">Update, November 2017<a
   class="header-anchor"
   href="#update-november-2017" aria-label="Anchor link for: update-november-2017"
   title="Anchor link for: update-november-2017"
@@ -8796,8 +8795,7 @@ It depends of the software Travis installs on every build.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>As you probably noticed I redesigned my blog and added some new features.
+		<content type="html"><p>As you probably noticed I redesigned my blog and added some new features.
 This is a list of the new stuff.</p>
 <ul>
 <li>New design</li>
@@ -8935,8 +8933,7 @@ I'll try to answer it, or even write a completely new post about it. Thanks!</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Before modern frameworks, I always used jQuery's <code>scrollTo</code> method.
+		<content type="html"><p>Before modern frameworks, I always used jQuery's <code>scrollTo</code> method.
 At some point, not every project included jQuery, so I wrote simple function
 to animate window scroll.</p>
 <p>I have kept copying that function from project to project.
@@ -9003,8 +9000,7 @@ and <a href="https://www.npmjs.com/package/animated-scroll-to">npm</a></p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>We've all been there - trying to get right font sizes from PhotoShop to CSS.
+		<content type="html"><p>We've all been there - trying to get right font sizes from PhotoShop to CSS.
 Designers usually work with points, which are used in the print, but not common on the web.
 They also use term <em>tracking</em> a lot, which is actually only a letter spacing with different units.</p>
 <p>You can recalculate everything by hand and try to keep track of it.
@@ -9057,8 +9053,7 @@ so keep it in a mixin.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Always try to use <code>&lt;button&gt;</code> when  <strong>element is clickable, but it is not a link</strong>.
+		<content type="html"><p>Always try to use <code>&lt;button&gt;</code> when  <strong>element is clickable, but it is not a link</strong>.
 Avoid <code>&lt;a&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;div&gt;</code> and other elements.</p>
 <p>Note that <code>display: flex</code> works differently on buttons in different browsers,
 but we have easy fix for that.</p>
@@ -9112,42 +9107,42 @@ Original CodePen is included at the end.</p>
   title="Anchor link for: chrome"
 > <span class="sr-only" aria-hidden="true">#</span></a>
 </h4>
-<img src="/img/button-flex/chrome.png" alt="Display flex on buttons, Chrome">
+<img src="/img/button-flex/chrome.png" alt="Display flex on buttons, Chrome" />
 <h4 id="firefox">Firefox<a
   class="header-anchor"
   href="#firefox" aria-label="Anchor link for: firefox"
   title="Anchor link for: firefox"
 > <span class="sr-only" aria-hidden="true">#</span></a>
 </h4>
-<img src="/img/button-flex/firefox.png" alt="Display flex on buttons, Firefox">
+<img src="/img/button-flex/firefox.png" alt="Display flex on buttons, Firefox" />
 <h4 id="safari-8">Safari 8<a
   class="header-anchor"
   href="#safari-8" aria-label="Anchor link for: safari-8"
   title="Anchor link for: safari-8"
 > <span class="sr-only" aria-hidden="true">#</span></a>
 </h4>
-<img src="/img/button-flex/safari8.png" alt="Display flex on buttons, Safari 8">
+<img src="/img/button-flex/safari8.png" alt="Display flex on buttons, Safari 8" />
 <h4 id="safari-9">Safari 9<a
   class="header-anchor"
   href="#safari-9" aria-label="Anchor link for: safari-9"
   title="Anchor link for: safari-9"
 > <span class="sr-only" aria-hidden="true">#</span></a>
 </h4>
-<img src="/img/button-flex/safari9.png" alt="Display flex on buttons, Safari 9">
+<img src="/img/button-flex/safari9.png" alt="Display flex on buttons, Safari 9" />
 <h4 id="ie10">IE10<a
   class="header-anchor"
   href="#ie10" aria-label="Anchor link for: ie10"
   title="Anchor link for: ie10"
 > <span class="sr-only" aria-hidden="true">#</span></a>
 </h4>
-<img src="/img/button-flex/ie10.png" alt="Display flex on buttons, IE10">
+<img src="/img/button-flex/ie10.png" alt="Display flex on buttons, IE10" />
 <h4 id="ie11">IE11<a
   class="header-anchor"
   href="#ie11" aria-label="Anchor link for: ie11"
   title="Anchor link for: ie11"
 > <span class="sr-only" aria-hidden="true">#</span></a>
 </h4>
-<img src="/img/button-flex/ie11.png" alt="Display flex on buttons, IE11">
+<img src="/img/button-flex/ie11.png" alt="Display flex on buttons, IE11" />
 <h4 id="codepen">CodePen<a
   class="header-anchor"
   href="#codepen" aria-label="Anchor link for: codepen"
@@ -9155,12 +9150,18 @@ Original CodePen is included at the end.</p>
 > <span class="sr-only" aria-hidden="true">#</span></a>
 </h4>
 <iframe
-height='300px'
-scrolling='no'
-src='//codepen.io/stanko/embed/ALjvYj/?height=300&theme-id=light&default-tab=result&embed-version=2' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/ALjvYj/'>Fix for button display:flex</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+  height="300"
+  scrolling="no"
+  title="Fix for button display:flex"
+  src="https://codepen.io/stanko/embed/ALjvYj?default-tab=result&amp;theme-id=light"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/ALjvYj">
+  Fix for button display:flex</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
     </content>
@@ -9175,19 +9176,24 @@ See the Pen <a href='http://codepen.io/stanko/pen/ALjvYj/'>Fix for button displa
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>I decided to move my CSS playground to the CodePen, and this is the first one I made.</p>
+		<content type="html"><p>I decided to move my CSS playground to the CodePen, and this is the first one I made.</p>
 <p>Idea came to me while I was riding on a bus, and I might use it on this blog,
 as a part of it's redesign.</p>
 <p>This is CSS only animation (I used JS to create 50 elements though).
 And you can see the usage of SASS <code>random()</code> function.</p>
 <span id="continue-reading"></span><iframe
-height='400px'
-scrolling='no'
-src='//codepen.io/stanko/embed/VKkaJB/?height=400&theme-id=light&default-tab=result&embed-version=2' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/VKkaJB/'>Circle Logo Animation</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+  height="400"
+  scrolling="no"
+  title="Circle Logo Animation"
+  src="https://codepen.io/stanko/embed/VKkaJB?default-tab=result&amp;theme-id=light"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/VKkaJB">
+  Circle Logo Animation</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 <p><code>random()</code> will return random integer between 1 and <code>n</code>, where <code>n</code> is the number you pass to it.
 Default param is 100.</p>
@@ -9214,8 +9220,7 @@ But once generated, CSS will stay static, until the next compilation.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <h2 id="part-two">Part two<a
+		<content type="html"><h2 id="part-two">Part two<a
   class="header-anchor"
   href="#part-two" aria-label="Anchor link for: part-two"
   title="Anchor link for: part-two"
@@ -9395,8 +9400,7 @@ Read more on the first link.</li>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <h2 id="update-october-2017">Update, October 2017<a
+		<content type="html"><h2 id="update-october-2017">Update, October 2017<a
   class="header-anchor"
   href="#update-october-2017" aria-label="Anchor link for: update-october-2017"
   title="Anchor link for: update-october-2017"
@@ -9863,8 +9867,7 @@ You can find it on <a href="https://github.com/Stanko/react-tutorial">GitHub</a>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Recently I lost my iPhone headphones.
+		<content type="html"><p>Recently I lost my iPhone headphones.
 I didn't care much, as they were almost three years old, and I had a brand new ones.
 But today, while getting ready for work, I found them in the pocket
 of the pants I washed about week ago.</p>
@@ -9891,8 +9894,7 @@ Probably the fact that they dried for days helped.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Another tech meetup is behind us, even more people came this time.
+		<content type="html"><p>Another tech meetup is behind us, even more people came this time.
 As promised, we will keep them coming more often.</p>
 
   <img
@@ -9941,8 +9943,7 @@ We are planning charity hackatons as well and I'll keep you posted about them.</
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>For a current project I'm on, we needed both circular timer, and progress bar.
+		<content type="html"><p>For a current project I'm on, we needed both circular timer, and progress bar.
 Again, I wasn't able to find small library to do that. But I found
 <a href="http://stackoverflow.com/questions/21205652/how-to-draw-a-circle-sector-in-css/21206274#21206274">awesome answer</a>
 on Stack Overflow, decided SVG is way to go, and wrote <a href="https://muffinman.io/sektor/">Sektor</a>.</p>
@@ -9969,8 +9970,7 @@ If you are bored, try it yourself, and you'll see that animating using <code>req
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>If you ever had to fix element on scroll, you probably had an issue on iOS Safari (and other mobile devices).
+		<content type="html"><p>If you ever had to fix element on scroll, you probably had an issue on iOS Safari (and other mobile devices).
 Element will usually flicker, and disappear until scrolling has stopped completely.</p>
 <p>Just force GPU acceleration by adding <code>transform: translate3d(0,0,0);</code> to your element.</p>
 <p>You will have something like this:</p>
@@ -10008,8 +10008,7 @@ in order for it to not flicker/disappear.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Atom <a href="https://babeljs.io/">Babel</a> plugin doesn't highlight variables
+		<content type="html"><p>Atom <a href="https://babeljs.io/">Babel</a> plugin doesn't highlight variables
 in ES6 (ES2015) template strings.</p>
 <p>You'll need to add this snippet to your Atom's <code>style.less</code></p>
 <pre data-lang="css" style="background-color:#282c34;color:#dcdfe4;" class="language-css "><code class="language-css" data-lang="css"><span style="color:#e06c75;">atom-text-editor</span><span style="color:#e5c07b;">::</span><span style="color:#c678dd;">shadow </span><span style="color:#e5c07b;">.variable.js </span><span>{
@@ -10034,8 +10033,7 @@ Just don't forget to add <code>atom-text-editor::shadow</code> before your rules
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>I'm a big fan of <a href="https://www.sublimetext.com/">Sublime Text</a> editor, which I was using for years now.
+		<content type="html"><p>I'm a big fan of <a href="https://www.sublimetext.com/">Sublime Text</a> editor, which I was using for years now.
 Minimal, fast, reliable. But there is one big problem with it.
 Only one man is working on it's development and community really slowed down.
 JavaScript ecosystem is going forward at incredible speed, and I'm not sure if Sublime will be able to keep up.</p>
@@ -10088,8 +10086,7 @@ and keeping it open source.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Two days ago, we held the second Tech Meetup.
+		<content type="html"><p>Two days ago, we held the second Tech Meetup.
 There were two speakers including myself, and Nemanja Nićiforović, our CEO.
 Nemanja spoke <i>How to Freelance</i>, and I covered <i>Intro to React</i>.</p>
 <p>Grab slides:</p>
@@ -10138,8 +10135,7 @@ Hopefully, we are not going to make a year long pause like we did between this a
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>This is the one of my most popular repos. Once client asked for inline video that works on iPhone too.
+		<content type="html"><p>This is the one of my most popular repos. Once client asked for inline video that works on iPhone too.
 As Apple doesn't allow that (all videos are full screen in native player, and autoplay is not supported),.
 There was no easy solution, so this player was born.</p>
 <p>It uses HTML <code>video</code> and <code>canvas</code>. Script picks up the frame from the video and draws it on the canvas.
@@ -10162,8 +10158,7 @@ But please check the <a href="https://muffinman.io/html-canvas-video-player/">do
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>This simple bash command finds all of the files matching <code>*~</code> recursively, executes <code>rm</code> on them
+		<content type="html"><p>This simple bash command finds all of the files matching <code>*~</code> recursively, executes <code>rm</code> on them
 and prints out which files are affected.</p>
 <p>You can replace file matching pattern, and command you want to execute.</p>
 <pre>
@@ -10182,8 +10177,7 @@ and prints out which files are affected.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Generally when comes to replacing native UI components, I'm strongly against it.
+		<content type="html"><p>Generally when comes to replacing native UI components, I'm strongly against it.
 But, we've all been there, when the client insists on it.</p>
 <p>You'll see how to style it via CSS (webkit only),
 apply pure JavaScipt plugin with native scrolling or apply simple CSS hack.</p>
@@ -10211,12 +10205,18 @@ CSS tricks has a <a href="https://css-tricks.com/custom-scrollbars-in-webkit/">g
 </span></code></pre>
 <p>Check jsfiddle demo with green-ish scrollbars <i>webkit only</i>.</p>
 <iframe
-height='300px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/jpLJbQ/?height=300&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/jpLJbQ/'>Example of customizing webkit scrollbars using CSS</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+  height="300"
+  scrolling="no"
+  title="Example of customizing webkit scrollbars using CSS"
+  src="https://codepen.io/stanko/embed/jpLJbQ?default-tab=result&amp;theme-id=light"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/jpLJbQ">
+  Example of customizing webkit scrollbars using CSS</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 <h3 id="custom-javascript-plugin-using-native-scroll">Custom JavaScript plugin, using native scroll<a
   class="header-anchor"
@@ -10274,12 +10274,18 @@ Scrolling on touch devices is already nice and smooth.</p>
 </span></code></pre>
 <p>Check demo on CodePen (please note that demo was updated to work without modernizr).</p>
 <iframe
-height='420px'
-scrolling='no'
-src='//codepen.io/stanko/embed/preview/BaBEQQG/?height=500&theme-id=light&default-tab=result' frameborder='no'
-allowtransparency='true'
-allowfullscreen='true'>
-See the Pen <a href='http://codepen.io/stanko/pen/BaBEQQG/'>Show scrollbars on hover only</a> by Stanko (<a href='http://codepen.io/stanko'>@stanko</a>) on <a href='http://codepen.io'>CodePen</a>.
+  height="420"
+  scrolling="no"
+  title="Show scrollbars on hover only"
+  src="https://codepen.io/stanko/embed/BaBEQQG?default-tab=result&amp;theme-id=light"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/BaBEQQG">
+  Show scrollbars on hover only</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
     </content>
@@ -10294,8 +10300,7 @@ See the Pen <a href='http://codepen.io/stanko/pen/BaBEQQG/'>Show scrollbars on h
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>I needed simple React slider component, as we are building our new website as a universal React application.
+		<content type="html"><p>I needed simple React slider component, as we are building our new website as a universal React application.
 But I did not find anything lightweight. There is a crazy trend in JavaScript world - add gazillion dependencies.</p>
 <p>So again, I made something myself.</p>
 
@@ -10327,8 +10332,7 @@ Very simple and extensible. Every modern browser is supported and IE10+.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>People need to realize that is not enough to have a nice website with a ton of animations and effects.
+		<content type="html"><p>People need to realize that is not enough to have a nice website with a ton of animations and effects.
 There is no point having such website if I can't scroll it, while CPU and coolers go crazy.
 And I use latest MacBook with maxed hardware. Can't imagine trying to use those websites on the old machine (or IE8-9).</p>
 <p>Get your performance together.</p>
@@ -10345,8 +10349,7 @@ And I use latest MacBook with maxed hardware. Can't imagine trying to use those 
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <h2 id="update-november-2017">Update, November 2017<a
+		<content type="html"><h2 id="update-november-2017">Update, November 2017<a
   class="header-anchor"
   href="#update-november-2017" aria-label="Anchor link for: update-november-2017"
   title="Anchor link for: update-november-2017"
@@ -10437,8 +10440,7 @@ Then write your posts and enjoy much smoother workflow.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>It is nice to use <code>post.excerpt</code> instead of <code>post.content</code>
+		<content type="html"><p>It is nice to use <code>post.excerpt</code> instead of <code>post.content</code>
 on your Jekyll home page, but then users can't see if there is more to read until they open
 the whole post.</p>
 <p>To add <code>Read more</code> link, you can use this simple snippet.</p>
@@ -10459,8 +10461,7 @@ the whole post.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Again, I've seen it somewhere on the internet and recreated it.
+		<content type="html"><p>Again, I've seen it somewhere on the internet and recreated it.
 This one uses jQuery, although I plan to rewrite it to vanilla JavaScript.</p>
 <p>It switches between two <i>sides</i> of the cube, every time you hover.
 Depending from which side cursor entered the cube, it will rotate in opposite direction.
@@ -10498,8 +10499,7 @@ Documentation is on the same page.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Well I saw pretty nice mockup on <a href="https://dribbble.com/shots/2311260-Day-1-Sign-Up-and-Login-Animated-Download-Template">Dribbble</a>
+		<content type="html"><p>Well I saw pretty nice mockup on <a href="https://dribbble.com/shots/2311260-Day-1-Sign-Up-and-Login-Animated-Download-Template">Dribbble</a>
 and decided to make it for fun. It didn't include mobile/responsive solution, so I came up with my own.</p>
 
 <a href="https:&#x2F;&#x2F;muffinman.io&#x2F;animated-onboarding&#x2F;" class="image__link">
@@ -10530,8 +10530,7 @@ This is neat, as it also can be bookmarked on both states, and browser button wo
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Jekyll comes with simple pagination which has only <code>Newer</code> and <code>Older</code> links.
+		<content type="html"><p>Jekyll comes with simple pagination which has only <code>Newer</code> and <code>Older</code> links.
 I wanted a little bit more, now pagination shows at least five pages, with current in the middle.
 On the larger screens there are also first and last page links.
 <code>Newer</code> and <code>Older</code> links are, of course, still there.</p>
@@ -10551,8 +10550,7 @@ On the larger screens there are also first and last page links.
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html">
-      <p>Everything starts with a <code>Hello World</code> so does this blog.</p>
+		<content type="html"><p>Everything starts with a <code>Hello World</code> so does this blog.</p>
 <p>In the first couple of weeks, everything will be under heavy development, until I get it the way I want.</p>
 <p>As I really enjoy making stuff, I decided to try to make small JavaScript or CSS (SASS) plugin/script every week.
 Those are going to be both big and small, proof of concepts and production ready stuff.</p>
