@@ -862,6 +862,21 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 
 	</entry>
 	<entry xml:lang="en">
+		<title>Untitled (five prints)</title>
+		<published>2021-02-16T00:00:00+00:00</published>
+		<updated>2021-02-16T00:00:00+00:00</updated>
+		<link href="https://muffinman.io/art/untitled-vector-field-prints/" type="text/html"/>
+		<id>https://muffinman.io/art/untitled-vector-field-prints/</id>
+    <author>
+      <name>Stanko</name>
+    </author>
+		<content type="html"><p>Colorful blobs following a vector field.</p><p>It took me some time to get the color blending just right. Because of so many colors, it was impossible to plot these. In the end I did five very tall prints.</p>
+<p>Be sure to check out the last photo to see all prints in one place.</p>
+
+    </content>
+
+	</entry>
+	<entry xml:lang="en">
 		<title>Into 2021</title>
 		<published>2021-02-01T00:00:00+00:00</published>
 		<updated>2021-02-01T00:00:00+00:00</updated>
@@ -1638,6 +1653,21 @@ And of course, big thanks to <a href="https://www.instagram.com/dutchplottr/">@d
       <name>Stanko</name>
     </author>
 		<content type="html"><p>Super wide, plotted on two separate papers. Pen for scale.</p><p>My first attempt at real 3D vector composition. The gap was initially added to hide the border between two papers, but it grew on me.</p>
+
+    </content>
+
+	</entry>
+	<entry xml:lang="en">
+		<title>Untitled</title>
+		<published>2020-04-24T00:00:00+00:00</published>
+		<updated>2020-04-24T00:00:00+00:00</updated>
+		<link href="https://muffinman.io/art/untitled-tracing-paper/" type="text/html"/>
+		<id>https://muffinman.io/art/untitled-tracing-paper/</id>
+    <author>
+      <name>Stanko</name>
+    </author>
+		<content type="html"><p>I tried adding some depth by plotting on multiple layers, using tracing paper.</p><p>The base is white Bristol and the upper layer is tracing paper. I really like how it turned out, transparency gives it a nice sense of depth.</p>
+<p>But tracing paper is incredibly hard to work with, it has mind of it's own. Once it gets framed, I hope glass will press it evenly against the base layer.</p>
 
     </content>
 
@@ -5779,7 +5809,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1648067547735175532'
+    aria-controls='spoiler-1648479666305085440'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -5803,7 +5833,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
   </button>
 
   <div
-    id='spoiler-1648067547735175532'
+    id='spoiler-1648479666305085440'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -5914,7 +5944,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1648067547738532375'
+    aria-controls='spoiler-1648479666307362020'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -5938,7 +5968,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
   </button>
 
   <div
-    id='spoiler-1648067547738532375'
+    id='spoiler-1648479666307362020'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6096,7 +6126,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1648067547745248661'
+    aria-controls='spoiler-1648479666315208524'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6120,7 +6150,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
   </button>
 
   <div
-    id='spoiler-1648067547745248661'
+    id='spoiler-1648479666315208524'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6243,7 +6273,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1648067547748281291'
+    aria-controls='spoiler-1648479666318784617'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6267,7 +6297,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
   </button>
 
   <div
-    id='spoiler-1648067547748281291'
+    id='spoiler-1648479666318784617'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6477,7 +6507,7 @@ next to js and html files.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1648067547755911416'
+    aria-controls='spoiler-1648479666329278475'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6501,7 +6531,7 @@ next to js and html files.</p>
   </button>
 
   <div
-    id='spoiler-1648067547755911416'
+    id='spoiler-1648479666329278475'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6656,7 +6686,7 @@ in it.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1648067547761633161'
+    aria-controls='spoiler-1648479666336288774'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6680,7 +6710,7 @@ in it.</p>
   </button>
 
   <div
-    id='spoiler-1648067547761633161'
+    id='spoiler-1648479666336288774'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
