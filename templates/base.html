@@ -68,18 +68,18 @@
   <link rel="stylesheet" href="/style.css" />
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 
-  {% block head %}{% endblock %}
-</head>
-
-<body>
   <script>
     var isSystemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     var userSelected = localStorage.getItem('color-scheme');
     var scheme = 'light-scheme';
-    if (userSelected) { scheme = userSelected } else if(isSystemDark) { scheme = 'dark-scheme'; }
+    if (userSelected) { scheme = userSelected } else if (isSystemDark) { scheme = 'dark-scheme'; }
     document.documentElement.classList.add(scheme);
   </script>
 
+  {% block head %}{% endblock %}
+</head>
+
+<body>
   <div id="page">
     <a href="#content" class="jump-to-content">Jump to content</a>
     {% include "partials/menu.html" %}

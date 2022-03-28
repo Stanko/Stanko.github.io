@@ -31,7 +31,7 @@ $spacing-xl: 60rem;
 // --- Fonts
 
 // $headers-font-family: 'Arima Madurai', sans-serif;
-$headers-font-family: "Salsa", sans-serif;
+// $headers-font-family: "Salsa", sans-serif;
 $headers-font-weight: 800;
 $headers-line-height: 1.1;
 
@@ -179,10 +179,6 @@ $purple-gradient-color-2: #eb3b8d;
   --notice-bg: #2a2720;
   --notice-border: #a77b0b;
   --notice-text: #fbbf24;
-
-  // --notice-bg: #756c15;
-  // --notice-border: #fde68a;
-  // --notice-text: #925f07;
 
   // color themes
   &.blue,

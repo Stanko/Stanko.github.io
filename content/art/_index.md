@@ -15,8 +15,7 @@ theme = "red"
 image = "/art/beach/0.jpg"
 +++
 
-<div class="notice">This page is still a work in progress. I will be adding more drawings in the following days, but I wanted to launch it as soon as the page became presentable. Meanwhile, for more content you can check out my <a href="https://instagram.com/muffinman_io">Instagram account</a>.</div>
+In 2020 I started playing with generative art and I immediately fell in love with it. Soon after, I got a pen plotter. The plotter allows me to bring these digital drawings to the physical world.  {{ sidenote(text="All of the drawings below", note="If not stated otherwise") }}
+are real, physical, pen plotted drawings on paper.
 
-In 2020 I started playing with generative art and I immediately fell in love with it. Soon after, I got a pen plotter. The plotter allows me to bring these digital drawings to the physical world.
-
-I'm very proud of my drawings, so I really hope you'll like them.
+I'm very proud of my drawings, so I really hope you'll like them. For more experiments and work in progress check out my Instagram <a href="https://instagram.com/muffinman_io">profile</a>.
