@@ -146,7 +146,7 @@ To show our object in it's full 3d glory let's add a rotation around Y axis. But
 
 ![Our element rotates around it's corner and it's center](/img/extrude-svg/step-three.png)
 
-**September 2020 update**: if you have only one path in the SVG you can use the tip from tuseroni's comment. Basically you just need to call `geometry.center()` before creating the mesg, to center it based on the bounding box. Unfortunately if you have multiple paths, this won't work.
+**September 2020 update**: if you have only one path in the SVG you can use the tip from tuseroni's comment. Basically you just need to call `geometry.center()` before creating the mesh, to center it based on the bounding box. Unfortunately if you have multiple paths, this won't work.
 
 ----
 

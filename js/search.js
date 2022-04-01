@@ -13,7 +13,7 @@ const MAX_RESULTS = 15;
 // Clean search input on page refresh
 searchInput.value = "";
 
-searchInput.addEventListener("keyup", function (e) {
+export function search() {
   const searchTerm = searchInput.value.trim();
 
   // Same search, do nothing
@@ -62,7 +62,9 @@ searchInput.addEventListener("keyup", function (e) {
 
     searchResults.innerHTML = html;
   }
-});
+}
+
+searchInput.addEventListener("keyup", search);
 
 searchInput.addEventListener("keydown", function (e) {
   const current = searchResults.querySelector(`.${RESULT_FOCUS_CLASS}`);

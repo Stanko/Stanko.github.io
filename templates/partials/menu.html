@@ -9,12 +9,20 @@
       {% endif %}
     </a>
 
+    {% include "partials/color-scheme-switcher.html" %}
+
     {% set header_nav = true %}
     {% include "partials/nav.html" %}
 
-    {% include "partials/color-scheme-switcher.html" %}
+    <button class="menu__toggle menu__toggle--static" data-micromodal-trigger="modal-menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
 
-    <button class="menu__toggle" data-micromodal-trigger="modal-menu" aria-label="Menu">
+  <div class="menu__toggle-fixed-wrapper menu__toggle-fixed-wrapper--hidden">
+    <button class="menu__toggle menu__toggle--fixed" data-micromodal-trigger="modal-menu" aria-label="Menu" tabindex="-1">
       <span></span>
       <span></span>
       <span></span>

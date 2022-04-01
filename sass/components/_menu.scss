@@ -64,23 +64,57 @@
 
 .menu__toggle {
   padding: 10rem;
-  margin-right: -10rem;
   width: 50rem;
   height: 50rem;
-
-  @include md {
-    display: none;
-  }
 
   span {
     background: var(--neutral-600);
     border-radius: 2rem;
     display: block;
-    height: 2rem;
+    height: 2px; // when rem is uneven (1.1 and 1.2px) it becomes blurry
     margin: 6rem auto;
     transition: background $time;
     width: 28rem;
   }
+}
+
+.menu__toggle--static {
+  margin-right: -10rem;
+
+  @include md {
+    display: none;
+  }
+}
+
+.menu__toggle-fixed-wrapper {
+  border-radius: 50%;
+  padding: 0;
+  position: fixed;
+  right: 10rem;
+  top: 10rem;
+  transition: transform $time, opacity $time;
+
+  @include md {
+    right: 30rem;
+  }
+
+  @include lg {
+    background-color: none;
+    top: 20rem;
+    right: 80rem;
+  }
+
+  @include xl {
+    // 10rem is padding on the close button
+    $content-half-width: ($container-width - 2 * ($gutter-lg - 10rem)) / 2;
+    right: calc(50vw - #{$content-half-width});
+  }
+}
+
+.menu__toggle-fixed-wrapper--hidden {
+  opacity: 0;
+  transform: translateY(-30rem);
+  pointer-events: none;
 }
 
 .menu__close {

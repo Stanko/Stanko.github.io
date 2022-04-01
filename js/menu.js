@@ -1,4 +1,5 @@
 import MicroModal from "micromodal";
+import { search } from "./search";
 
 const ANIMATION_DURATION = 500;
 
@@ -16,6 +17,7 @@ const isTouch = "ontouchstart" in document.documentElement;
 
 MicroModal.init({
   onShow: () => {
+    // Save scroll position
     y = window.scrollY;
 
     // Don't auto focus input on mobile phones
@@ -27,54 +29,56 @@ MicroModal.init({
     clearTimeout(timeout);
 
     timeout = setTimeout(() => {
+      // Disable scroll
       document.documentElement.classList.add("html--overflow-hidden");
       page.style.marginTop = `-${y}px`;
     }, ANIMATION_DURATION);
   },
   onClose: () => {
-    searchInput.blur();
+    // Enable scroll and reset scroll position
     document.documentElement.classList.remove("html--overflow-hidden");
     page.style.marginTop = "";
 
     window.scrollTo({
       top: y,
     });
+
+    // Clear search
+    searchInput.value = "";
+    search();
+    searchInput.blur();
   },
   awaitCloseAnimation: !reducedMotionMediaQuery.matches,
   disableFocus: true,
 });
 
-// const HIDE_CLASS = 'menu--hide';
-// const TIMEOUT = 300;
+const HIDE_TOGGLE_CLASS = "menu__toggle-fixed-wrapper--hidden";
+const SHOW_TOGGLE_SCROLL = 250;
 
-// let previousScrollPosition = window.scrollY;
-// let lastUpdate = null;
+const menuToggleFixedWrapper = document.querySelector(
+  ".menu__toggle-fixed-wrapper"
+);
+const menuToggleFixed = document.querySelector(".menu__toggle--fixed");
 
-// const menu = document.querySelector('.menu');
+function checkMenu() {
+  const currentY = window.scrollY;
+  const toggleHidden =
+    menuToggleFixedWrapper.classList.contains(HIDE_TOGGLE_CLASS);
 
-// function checkMenu() {
-//   const currentScrollPosition = window.scrollY;
-//   const now = new Date().getTime();
+  // Show toggle only when user scrolled past the threshold
+  const isScrolled = currentY > SHOW_TOGGLE_SCROLL;
 
-//   if (!lastUpdate || now - lastUpdate > TIMEOUT) {
-//     if (currentScrollPosition > previousScrollPosition) {
-//       menu.classList.add(HIDE_CLASS);
-//     } else {
-//       menu.classList.remove(HIDE_CLASS);
-//     }
+  if (isScrolled && toggleHidden) {
+    menuToggleFixedWrapper.classList.remove(HIDE_TOGGLE_CLASS);
+    menuToggleFixed.setAttribute("tabindex", 0);
+  } else if (!isScrolled && !toggleHidden) {
+    menuToggleFixedWrapper.classList.add(HIDE_TOGGLE_CLASS);
+    menuToggleFixed.setAttribute("tabindex", -1);
+  }
 
-//     lastUpdate = now;
-//   }
+  prevY = currentY;
+}
 
-//   previousScrollPosition = currentScrollPosition;
-
-//   if (currentScrollPosition > menu.clientHeight) {
-//     document.body.classList.add('body--scrolled');
-//   } else {
-//     document.body.classList.remove('body--scrolled');
-//   }
-// }
-
-// window.addEventListener('scroll', () => {
-//   checkMenu();
-// });
+window.addEventListener("scroll", () => {
+  checkMenu();
+});
