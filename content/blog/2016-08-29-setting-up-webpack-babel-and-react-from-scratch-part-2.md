@@ -130,25 +130,25 @@ Again here's link to the [official documentation](https://github.com/postcss/pos
 
 Note that
 
-<pre>
+```js
 {
   ...
   postcss() {
     return [autoprefixer, precss];
   }
 }
-</pre>
+```
 
 is the same as
 
-<pre>
+```js
 {
   ...
   postcss: function () {
     return [autoprefixer, precss];
   }
 }
-</pre>
+```
 
 but only using [method shorthand](http://eslint.org/docs/rules/object-shorthand).
 ES6 rules!

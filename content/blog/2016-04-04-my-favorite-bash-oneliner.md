@@ -15,6 +15,6 @@ and prints out which files are affected.
 
 You can replace file matching pattern, and command you want to execute.
 
-<pre>
-  find ./ -name '*~' -exec rm '{}' ';' -print
-</pre>
+```
+find ./ -name '*~' -exec rm '{}' ';' -print
+```

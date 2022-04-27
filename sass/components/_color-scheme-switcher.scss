@@ -8,6 +8,7 @@
   color: var(--neutral-600);
   transition: color $time;
   position: relative;
+  border-radius: 50%;
 
   @include hover {
     &::after {

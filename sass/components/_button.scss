@@ -48,6 +48,14 @@ $btn-drop: 2px;
   }
 
   &:focus {
+    transform: translateY(-2px);
+
+    &::before {
+      transform: translateY(2px);
+    }
+  }
+
+  &:focus-visible {
     transform: translateY(-5px);
 
     &::before {

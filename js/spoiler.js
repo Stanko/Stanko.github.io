@@ -12,7 +12,13 @@ spoilers.forEach((spoiler) => {
 
     showLabel.style.display = isExpanded ? "none" : "";
     hideLabel.style.display = isExpanded ? "" : "none";
+
     content.style.display = isExpanded ? "" : "none";
+
+    // TODO solve:
+    // * margins are collapsing
+    // * overflow hidden cuts of code
+    // toggleHeight(content);
 
     toggleButton.setAttribute("aria-expanded", isExpanded);
     content.setAttribute("aria-hidden", !isExpanded);
