@@ -5809,7 +5809,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1648823578802518883'
+    aria-controls='spoiler-1651045064056777672'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -5833,7 +5833,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
   </button>
 
   <div
-    id='spoiler-1648823578802518883'
+    id='spoiler-1651045064056777672'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -5944,7 +5944,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1648823578804504782'
+    aria-controls='spoiler-1651045064059098483'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -5968,7 +5968,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
   </button>
 
   <div
-    id='spoiler-1648823578804504782'
+    id='spoiler-1651045064059098483'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6126,7 +6126,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1648823578811039477'
+    aria-controls='spoiler-1651045064074175858'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6150,7 +6150,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
   </button>
 
   <div
-    id='spoiler-1648823578811039477'
+    id='spoiler-1651045064074175858'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6273,7 +6273,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1648823578814128274'
+    aria-controls='spoiler-1651045064084335309'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6297,7 +6297,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
   </button>
 
   <div
-    id='spoiler-1648823578814128274'
+    id='spoiler-1651045064084335309'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6507,7 +6507,7 @@ next to js and html files.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1648823578823140467'
+    aria-controls='spoiler-1651045064093493555'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6531,7 +6531,7 @@ next to js and html files.</p>
   </button>
 
   <div
-    id='spoiler-1648823578823140467'
+    id='spoiler-1651045064093493555'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6686,7 +6686,7 @@ in it.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1648823578828952163'
+    aria-controls='spoiler-1651045064100228788'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6710,7 +6710,7 @@ in it.</p>
   </button>
 
   <div
-    id='spoiler-1648823578828952163'
+    id='spoiler-1651045064100228788'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -9412,23 +9412,21 @@ Try adding <code>display: flex</code> to one of the elements to check if autopre
 > <span class="sr-only" aria-hidden="true">#</span></a>
 </h2>
 <p>Note that</p>
-<pre>
-{
-  ...
-  postcss() {
-    return [autoprefixer, precss];
-  }
-}
-</pre>
+<pre data-lang="js" style="background-color:#282c34;color:#dcdfe4;" class="language-js "><code class="language-js" data-lang="js"><span>{
+</span><span>  </span><span style="color:#c678dd;">...
+</span><span>  </span><span style="color:#61afef;">postcss</span><span>() {
+</span><span>    </span><span style="color:#c678dd;">return </span><span>[</span><span style="color:#e06c75;">autoprefixer</span><span>, </span><span style="color:#e06c75;">precss</span><span>];
+</span><span>  }
+</span><span>}
+</span></code></pre>
 <p>is the same as</p>
-<pre>
-{
-  ...
-  postcss: function () {
-    return [autoprefixer, precss];
-  }
-}
-</pre>
+<pre data-lang="js" style="background-color:#282c34;color:#dcdfe4;" class="language-js "><code class="language-js" data-lang="js"><span>{
+</span><span>  </span><span style="color:#c678dd;">...
+</span><span>  postcss: </span><span style="color:#c678dd;">function </span><span>() {
+</span><span>    </span><span style="color:#c678dd;">return </span><span>[</span><span style="color:#e06c75;">autoprefixer</span><span>, </span><span style="color:#e06c75;">precss</span><span>];
+</span><span>  }
+</span><span>}
+</span></code></pre>
 <p>but only using <a href="http://eslint.org/docs/rules/object-shorthand">method shorthand</a>.
 ES6 rules!</p>
 <h2 id="more-es6-stuff">More ES6 stuff<a
@@ -10246,9 +10244,8 @@ But please check the <a href="https://muffinman.io/html-canvas-video-player/">do
 		<content type="html"><p>This simple bash command finds all of the files matching <code>*~</code> recursively, executes <code>rm</code> on them
 and prints out which files are affected.</p>
 <p>You can replace file matching pattern, and command you want to execute.</p>
-<pre>
-  find ./ -name '*~' -exec rm '{}' ';' -print
-</pre>
+<pre style="background-color:#282c34;color:#dcdfe4;"><code><span>find ./ -name &#39;*~&#39; -exec rm &#39;{}&#39; &#39;;&#39; -print
+</span></code></pre>
 
     </content>
 

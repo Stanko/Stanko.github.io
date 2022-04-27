@@ -56,21 +56,19 @@ Part 1 - Webpack, Babel, React, Rou…" name=twitter:description><meta content=h
 </span><span>    return [autoprefixer, precss];
 </span><span>  },
 </span><span>...
-</span></code></pre><p>Restart webpack, and you should have autoprefixing in place. Try adding <code>display: flex</code> to one of the elements to check if autoprefixer added <code>-ms-display: flex</code> and <code>-webkit-display: flex</code>.<p>Again here's link to the <a href=https://github.com/postcss/postcss-loader>official documentation</a><h2 id=method-shorthand>Method shorthand<a aria-label="Anchor link for: method-shorthand" title="Anchor link for: method-shorthand" class=header-anchor href=#method-shorthand> <span aria-hidden=true class=sr-only>#</span></a></h2><p>Note that<pre>
-{
-  ...
-  postcss() {
-    return [autoprefixer, precss];
-  }
-}
-</pre><p>is the same as<pre>
-{
-  ...
-  postcss: function () {
-    return [autoprefixer, precss];
-  }
-}
-</pre><p>but only using <a href=http://eslint.org/docs/rules/object-shorthand>method shorthand</a>. ES6 rules!<h2 id=more-es6-stuff>More ES6 stuff<a aria-label="Anchor link for: more-es6-stuff" title="Anchor link for: more-es6-stuff" class=header-anchor href=#more-es6-stuff> <span aria-hidden=true class=sr-only>#</span></a></h2><p>To be able to use deconstruction (<code>...object</code>), static class properties and decorators (<code>@connect</code>) we need to add a couple of Babel plugins.<p>Install them using following command<pre style=background-color:#282c34;color:#dcdfe4;><code><span>npm i --save-dev babel-plugin-syntax-decorators babel-plugin-transform-class-properties babel-plugin-transform-decorators-legacy babel-preset-stage-0
+</span></code></pre><p>Restart webpack, and you should have autoprefixing in place. Try adding <code>display: flex</code> to one of the elements to check if autoprefixer added <code>-ms-display: flex</code> and <code>-webkit-display: flex</code>.<p>Again here's link to the <a href=https://github.com/postcss/postcss-loader>official documentation</a><h2 id=method-shorthand>Method shorthand<a aria-label="Anchor link for: method-shorthand" title="Anchor link for: method-shorthand" class=header-anchor href=#method-shorthand> <span aria-hidden=true class=sr-only>#</span></a></h2><p>Note that<pre class=language-js data-lang=js style=background-color:#282c34;color:#dcdfe4;><code class=language-js data-lang=js><span>{
+</span><span>  </span><span style=color:#c678dd;>...
+</span><span>  </span><span style=color:#61afef;>postcss</span><span>() {
+</span><span>    </span><span style=color:#c678dd;>return </span><span>[</span><span style=color:#e06c75;>autoprefixer</span><span>, </span><span style=color:#e06c75;>precss</span><span>];
+</span><span>  }
+</span><span>}
+</span></code></pre><p>is the same as<pre class=language-js data-lang=js style=background-color:#282c34;color:#dcdfe4;><code class=language-js data-lang=js><span>{
+</span><span>  </span><span style=color:#c678dd;>...
+</span><span>  postcss: </span><span style=color:#c678dd;>function </span><span>() {
+</span><span>    </span><span style=color:#c678dd;>return </span><span>[</span><span style=color:#e06c75;>autoprefixer</span><span>, </span><span style=color:#e06c75;>precss</span><span>];
+</span><span>  }
+</span><span>}
+</span></code></pre><p>but only using <a href=http://eslint.org/docs/rules/object-shorthand>method shorthand</a>. ES6 rules!<h2 id=more-es6-stuff>More ES6 stuff<a aria-label="Anchor link for: more-es6-stuff" title="Anchor link for: more-es6-stuff" class=header-anchor href=#more-es6-stuff> <span aria-hidden=true class=sr-only>#</span></a></h2><p>To be able to use deconstruction (<code>...object</code>), static class properties and decorators (<code>@connect</code>) we need to add a couple of Babel plugins.<p>Install them using following command<pre style=background-color:#282c34;color:#dcdfe4;><code><span>npm i --save-dev babel-plugin-syntax-decorators babel-plugin-transform-class-properties babel-plugin-transform-decorators-legacy babel-preset-stage-0
 </span></code></pre><p>Few links to read more about this plugins:<ul><li><a href=https://babeljs.io/docs/plugins/syntax-decorators/>Synthax only for decorators</a><li><a href=https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy>Decorators plugin</a> - We are using a 3rd party plugin as "Decorators are disabled in Babel v6, pending a proposal update". Read more on the first link.<li><a href=https://babeljs.io/docs/plugins/transform-class-properties/>Static properties</a><li><a href=https://babeljs.io/docs/plugins/preset-stage-0/>Stage 0 (plugin group)</a></ul><p>Now we need to add it to our Babel configuration. Open your <code>.babelrc</code> file and add them.<p>Add these to the <code>"plugins"</code> array<pre style=background-color:#282c34;color:#dcdfe4;><code><span>"syntax-decorators"
 </span><span>"transform-decorators-legacy"
 </span><span>"transform-class-properties"
