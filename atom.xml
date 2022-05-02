@@ -5,8 +5,289 @@
 	<link href="https://muffinman.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://muffinman.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-03-04T00:00:00+00:00</updated>
+	<updated>2022-05-02T00:00:00+00:00</updated>
 	<id>https://muffinman.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>SVG non-scaling circle and rectangle</title>
+		<published>2022-05-02T00:00:00+00:00</published>
+		<updated>2022-05-02T00:00:00+00:00</updated>
+		<link href="https://muffinman.io/blog/svg-non-scaling-circle-and-rectangle/" type="text/html"/>
+		<id>https://muffinman.io/blog/svg-non-scaling-circle-and-rectangle/</id>
+    <author>
+      <name>Stanko</name>
+    </author>
+		<content type="html"><p>While making a simple SVG chart, I realized I would like to have non-scaling circles for data points. Unfortunately, SVG doesn't support it out of the box.</p>
+<p>If you are eager to see the result, jump to <a href="https://muffinman.io/blog/svg-non-scaling-circle-and-rectangle/#examples">the examples below</a> or play with the code on <a href="https://codepen.io/stanko/pen/wvyvZaB?editors=1100">Codepen</a>.</p>
+<h2 id="non-scaling-stroke-example">Non-scaling stroke example<a
+  class="header-anchor"
+  href="#non-scaling-stroke-example" aria-label="Anchor link for: non-scaling-stroke-example"
+  title="Anchor link for: non-scaling-stroke-example"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>SVG does support non-scaling stroke width by setting <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/vector-effect">vector-effect</a> to <code>non-scaling-stroke</code>. When you set it, strokes will stay the same width no matter the scale of the SVG image.</p>
+<p>Try <span
+  class="sidenote__trigger "
+  tabindex="0"
+  role="button"
+>
+  resizing your window
+</span>
+
+<span
+  class="sidenote__note "
+><span class="sidenote__bracket">(</span>On desktop, you should be able to resize each image on it's own by dragging the bottom right corner<span class="sidenote__bracket">)</span></span>
+, and you'll see that the bottom line always stays 1px, while the upper one scales with the image:</p>
+<div class="resize">
+  <svg
+    aria-label="Example of vector-effect='non-scaling-stroke'"
+    viewBox="0 0 200 30"
+  >
+    <path d="M 0 5 200 5" fill="none" stroke="black" />
+    <path d="M 0 25 200 25" fill="none" stroke="black" vector-effect="non-scaling-stroke" />
+  </svg>
+</div>
+<h2 id="stroke-line-cap">Stroke line cap<a
+  class="header-anchor"
+  href="#stroke-line-cap" aria-label="Anchor link for: stroke-line-cap"
+  title="Anchor link for: stroke-line-cap"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>SVG also allows you to change how your line's ends look like, by using <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes#stroke">stroke-linecap</a> property. Available options are <code>butt</code>, <code>square</code> and <code>round</code>, and on the image below they are presented in that order.</p>
+<p><svg
+  aria-label="Example of different stroke-linecap values"
+  style="background: white; padding: 30rem;"
+  viewBox="0 0 200 100" class="image"
+>
+<path d="M 10 10 l 180 0" stroke="black" stroke-linecap="butt" stroke-width="20" />
+<path d="M 10 10 l 180 0" stroke="#e6a03c" />
+<path d="M 10 50 l 180 0" stroke="black" stroke-linecap="square" stroke-width="20" />
+<path d="M 10 50 l 180 0" stroke="#e6a03c" />
+<path d="M 10 90 l 180 0" stroke="black" stroke-linecap="round" stroke-width="20" />
+<path d="M 10 90 l 180 0" stroke="#e6a03c" />
+</svg></p>
+<p>As you can see <code>square</code> and <code>round</code> line caps are sticking out of our line. You probably figured it out, but that is exactly what we are going to use to create non-scaling circles and rectangles.</p>
+<h2 id="putting-it-all-together">Putting it all together<a
+  class="header-anchor"
+  href="#putting-it-all-together" aria-label="Anchor link for: putting-it-all-together"
+  title="Anchor link for: putting-it-all-together"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>Up to this point we know that we can have a non-scaling stroke and that we can change its caps to be round and square. If we use a line with no length, sticking parts will join and create a perfect circle (or rectangle). SVG doesn't support lines with length of zero pixels, so we'll set the length to something negligible.</p>
+<p>The only thing left is to set a thick stroke width to create a shape.</p>
+<h3 id="circle">Circle<a
+  class="header-anchor"
+  href="#circle" aria-label="Anchor link for: circle"
+  title="Anchor link for: circle"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h3>
+<p>The code below will create a black circle with a radius of 50 and center at <code>{ x: 50, y: 50 }</code>.</p>
+<pre data-lang="html" style="background-color:#282c34;color:#dcdfe4;" class="language-html "><code class="language-html" data-lang="html"><span>&lt;</span><span style="color:#e06c75;">path
+</span><span>  </span><span style="color:#e5c07b;">d</span><span>=</span><span style="color:#98c379;">&quot;M 50 50 l 0.0001 0&quot;
+</span><span>  </span><span style="color:#e5c07b;">vector-effect</span><span>=</span><span style="color:#98c379;">&quot;non-scaling-stroke&quot;
+</span><span>  </span><span style="color:#e5c07b;">stroke-width</span><span>=</span><span style="color:#98c379;">&quot;100&quot;
+</span><span>  </span><span style="color:#e5c07b;">stroke-linecap</span><span>=</span><span style="color:#98c379;">&quot;round&quot;
+</span><span>  </span><span style="color:#e5c07b;">stroke</span><span>=</span><span style="color:#98c379;">&quot;black&quot;
+</span><span>/&gt;
+</span></code></pre>
+<p><svg
+  aria-label="Black circle with a radius of 50"
+  viewBox="0 0 100 100"
+  width="200"
+  style="background: white"
+>
+<path
+  d="M 50 50 l 0.0001 0"
+  vector-effect="non-scaling-stroke"
+  stroke-width="100"
+  stroke-linecap="round"
+  stroke="black"
+/>
+</svg></p>
+<p>Let me quickly break the code down:</p>
+<ul>
+<li><code>d=&quot;M 50 50 l 0.0001 0&quot;</code> - this creates a super short line. The first two coordinates (<code>M 50 50</code>) are the line's start and our circle's center. The rest of the code (<code>l 0.0001 0</code>) draws a horizontal
+<span
+  class="sidenote__trigger "
+  tabindex="0"
+  role="button"
+>
+  line 0.0001px long
+</span>
+
+<span
+  class="sidenote__note "
+><span class="sidenote__bracket">(</span>Please be aware that going with a lower value might break it in some browsers<span class="sidenote__bracket">)</span></span>
+.</li>
+<li><code>vector-effect=&quot;non-scaling-stroke&quot;</code> - enables non-scaling stroke.</li>
+<li><code>stroke-width=&quot;100&quot;</code> - stroke width should be a diameter (<code>2 * radius</code>) of the circle.</li>
+<li><code>stroke-linecap=&quot;round&quot;</code> - finally set line caps to <code>round</code> and by sticking out they will create a circle.</li>
+</ul>
+<h3 id="rectangle">Rectangle<a
+  class="header-anchor"
+  href="#rectangle" aria-label="Anchor link for: rectangle"
+  title="Anchor link for: rectangle"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h3>
+<p>Code for the rectangle is almost the same, just set line caps to square.</p>
+<pre data-lang="html" style="background-color:#282c34;color:#dcdfe4;" class="language-html "><code class="language-html" data-lang="html"><span>&lt;</span><span style="color:#e06c75;">path
+</span><span>  </span><span style="color:#e5c07b;">d</span><span>=</span><span style="color:#98c379;">&quot;M 50 50 l 0.0001 0&quot;
+</span><span>  </span><span style="color:#e5c07b;">vector-effect</span><span>=</span><span style="color:#98c379;">&quot;non-scaling-stroke&quot;
+</span><span>  </span><span style="color:#e5c07b;">stroke-width</span><span>=</span><span style="color:#98c379;">&quot;100&quot;
+</span><span>  </span><span style="color:#e5c07b;">stroke-linecap</span><span>=</span><span style="color:#98c379;">&quot;square&quot;
+</span><span>  </span><span style="color:#e5c07b;">stroke</span><span>=</span><span style="color:#98c379;">&quot;black&quot;
+</span><span>/&gt;
+</span></code></pre>
+<h2 id="examples">Examples<a
+  class="header-anchor"
+  href="#examples" aria-label="Anchor link for: examples"
+  title="Anchor link for: examples"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>On the left are
+<span
+  class="sidenote__trigger "
+  tabindex="0"
+  role="button"
+>
+  standard scaling shapes
+</span>
+
+<span
+  class="sidenote__note "
+><span class="sidenote__bracket">(</span><code>&lt;circle /&gt;</code> and <code>&lt;rect /&gt;</code><span class="sidenote__bracket">)</span></span>
+
+, while on the right are non-scaling shapes created using the method I described above. Try resizing your window and you'll see that the shapes on the right always stay the same size, no matter the image size.</p>
+<div class="resize">
+  <svg
+    aria-label="Example of filled non-scaling circle next to the standard scaling one"
+    viewBox="0 0 200 100"
+  >
+    <circle
+      cx="50"
+      cy="50"
+      r="50"
+      fill="#2980b9"
+    />
+    <path
+      stroke="#2980b9"
+      d="M 150 50 l 0.0001 0"
+      stroke-linecap="round"
+      stroke-width="100"
+      vector-effect="non-scaling-stroke"
+    />
+  </svg>
+</div>
+<div class="resize">
+  <svg
+    aria-label="Example of filled non-scaling rectangle next to the standard scaling one"
+    viewBox="0 0 200 100"
+  >
+    <rect
+      x="10"
+      y="0"
+      width="100"
+      height="100"
+      fill="#16a085"
+    />
+    <path
+      stroke="#16a085"
+      d="M 150 50 l 0.0001 0"
+      vector-effect="non-scaling-stroke"
+      stroke-linecap="square"
+      stroke-width="100"
+    />
+  </svg>
+</div>
+<h2 id="outlined-shapes">Outlined shapes<a
+  class="header-anchor"
+  href="#outlined-shapes" aria-label="Anchor link for: outlined-shapes"
+  title="Anchor link for: outlined-shapes"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>We can even add an outline, but we'll need two elements. One acts as the outline, and the smaller one as a fill. Because the stroke width is the diameter, just make sure the smaller element's stroke is smaller for two times the outline width.</p>
+<p>To give you an example, if we want a circle with radius of 50px and outline of 1px, stroke widths need to be 100px and 98px.</p>
+<p>Which gives us the following code:</p>
+<pre data-lang="html" style="background-color:#282c34;color:#dcdfe4;" class="language-html "><code class="language-html" data-lang="html"><span>&lt;</span><span style="color:#e06c75;">path
+</span><span>  </span><span style="color:#e5c07b;">stroke</span><span>=</span><span style="color:#98c379;">&quot;black&quot;
+</span><span>  </span><span style="color:#e5c07b;">d</span><span>=</span><span style="color:#98c379;">&quot;M 50 50 l 0.0001 0&quot;
+</span><span>  </span><span style="color:#e5c07b;">vector-effect</span><span>=</span><span style="color:#98c379;">&quot;non-scaling-stroke&quot;
+</span><span>  </span><span style="color:#e5c07b;">stroke-linecap</span><span>=</span><span style="color:#98c379;">&quot;round&quot;
+</span><span>  </span><span style="color:#e5c07b;">stroke-width</span><span>=</span><span style="color:#98c379;">&quot;100&quot;
+</span><span>/&gt;
+</span><span>&lt;</span><span style="color:#e06c75;">path
+</span><span>  </span><span style="color:#e5c07b;">stroke</span><span>=</span><span style="color:#98c379;">&quot;white&quot;
+</span><span>  </span><span style="color:#e5c07b;">d</span><span>=</span><span style="color:#98c379;">&quot;M 50 50 l 0.0001 0&quot;
+</span><span>  </span><span style="color:#e5c07b;">vector-effect</span><span>=</span><span style="color:#98c379;">&quot;non-scaling-stroke&quot;
+</span><span>  </span><span style="color:#e5c07b;">stroke-linecap</span><span>=</span><span style="color:#98c379;">&quot;round&quot;
+</span><span>  </span><span style="color:#e5c07b;">stroke-width</span><span>=</span><span style="color:#98c379;">&quot;98&quot;
+</span><span>/&gt;
+</span></code></pre>
+<div class="resize">
+  <svg
+    aria-label="Example of outlined non-scaling circle next to the standard scaling one"
+    viewBox="0 0 200 100"
+  >
+    <circle
+      cx="50"
+      cy="50"
+      r="50"
+      vector-effect="non-scaling-stroke"
+      stroke="black"
+      fill="none"
+    />
+    <path
+      stroke="black"
+      d="M 150 50 l 0.0001 0"
+      vector-effect="non-scaling-stroke"
+      stroke-linecap="round"
+      stroke-width="100"
+    />
+    <path
+      stroke="white"
+      d="M 150 50 l 0.0001 0"
+      vector-effect="non-scaling-stroke"
+      stroke-linecap="round"
+      stroke-width="98"
+    />
+  </svg>
+</div>
+<div class="resize">
+  <svg
+    viewBox="0 0 200 100"
+    aria-label="Example of outlined non-scaling rectangle next to the standard scaling one"
+  >
+    <rect
+      x="10"
+      y="0"
+      width="100"
+      height="100"
+      vector-effect="non-scaling-stroke"
+      stroke="black"
+      fill="none"
+    />
+    <path
+      stroke="black"
+      d="M 150 50 l 0.0001 0"
+      vector-effect="non-scaling-stroke"
+      stroke-linecap="square"
+      stroke-width="100"
+    />
+    <path
+      stroke="white"
+      d="M 150 50 l 0.0001 0"
+      vector-effect="non-scaling-stroke"
+      stroke-linecap="square"
+      stroke-width="98"
+    />
+  </svg>
+</div>
+<p>This method is practical for elements that should stay the same when image scales. I already mentioned data points on charts, but it is also useful for map markers.</p>
+<p>It might even be possible to create more complex elements combining multiple paths, but I haven't really looked into it.</p>
+<p>I hope you'll find it useful!</p>
+
+    </content>
+
+	</entry>
 	<entry xml:lang="en">
 		<title>Into 2022</title>
 		<published>2022-03-04T00:00:00+00:00</published>
@@ -5809,7 +6090,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1651510837305136707'
+    aria-controls='spoiler-1651524905583763793'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -5833,7 +6114,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
   </button>
 
   <div
-    id='spoiler-1651510837305136707'
+    id='spoiler-1651524905583763793'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -5944,7 +6225,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1651510837307612617'
+    aria-controls='spoiler-1651524905585689465'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -5968,7 +6249,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
   </button>
 
   <div
-    id='spoiler-1651510837307612617'
+    id='spoiler-1651524905585689465'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6126,7 +6407,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1651510837314066801'
+    aria-controls='spoiler-1651524905590488994'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6150,7 +6431,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
   </button>
 
   <div
-    id='spoiler-1651510837314066801'
+    id='spoiler-1651524905590488994'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6273,7 +6554,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1651510837317672460'
+    aria-controls='spoiler-1651524905593568149'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6297,7 +6578,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
   </button>
 
   <div
-    id='spoiler-1651510837317672460'
+    id='spoiler-1651524905593568149'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6507,7 +6788,7 @@ next to js and html files.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1651510837326465548'
+    aria-controls='spoiler-1651524905602280821'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6531,7 +6812,7 @@ next to js and html files.</p>
   </button>
 
   <div
-    id='spoiler-1651510837326465548'
+    id='spoiler-1651524905602280821'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6686,7 +6967,7 @@ in it.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1651510837334096785'
+    aria-controls='spoiler-1651524905608057636'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6710,7 +6991,7 @@ in it.</p>
   </button>
 
   <div
-    id='spoiler-1651510837334096785'
+    id='spoiler-1651524905608057636'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
