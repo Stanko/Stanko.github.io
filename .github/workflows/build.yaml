@@ -14,15 +14,14 @@ on:
   # pull_request:
 jobs:
   # Only build PRs
-  # Disabled for now
-  # build:
-  #   runs-on: ubuntu-latest
-  #   if: github.ref != 'refs/heads/zola'
-  #   steps:
-      # - name: 'Checkout'
-      #   uses: actions/checkout@master
-      # - name: Build
-      #   run: sh build-only
+  build:
+    runs-on: ubuntu-latest
+    if: github.ref != 'refs/heads/zola'
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@master
+      - name: Build
+        run: sh build-only.sh
   build_and_deploy:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/zola'
