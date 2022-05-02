@@ -10,7 +10,7 @@
   {# Add date to the image path #}
   {# To prevent this weird error I can't replicate locally #}
   {# https://github.com/Stanko/Stanko.github.io/runs/6260600239 #}
-  {%- set date_string = "/art/" ~ page.earlier.date ~ "-" %}
+  {%- set date_string = "/art/" ~ drawing.date ~ "-" %}
   {%- set image_path = drawing.extra.image | replace(from="/art/", to=date_string) %}
 
   {%- set image = resize_image(path=image_path, width=500, height=500, op="fit", quality=90) %}
