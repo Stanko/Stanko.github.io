@@ -51,8 +51,13 @@
   {% endif %}
   <meta name="twitter:title" content="{{ meta_title }}">
   <meta name="twitter:description" content="{{ description }}">
+  {% if page_data.extra.image %}
+    <meta property="twitter:image" content="{{ config.base_url }}{{ page_data.extra.image }}">
+    <meta property="og:image" content="{{ config.base_url }}{{ page_data.extra.image }}">
+  {% else %}
     <meta property="twitter:image" content="{{ config.base_url }}/favicon/{{ theme_class }}/cover.png">
     <meta property="og:image" content="{{ config.base_url }}/favicon/{{ theme_class }}/cover.png">
+  {% endif %}
 
   {# https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs #}
   <link rel="icon" href="/favicon/{{ theme_class }}/icon-32.ico" sizes="any" />

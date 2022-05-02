@@ -98,6 +98,8 @@
             {%- if asset is matching("(thumb[.]jpg)$") -%}
               {%- continue %}
             {%- endif %}
+            {%- set date_string = "/art/" ~ page.date ~ "-" %}
+            {%- set image_path = page.extra.image | replace(from="/art/", to=date_string) %}
             {%- set image = resize_image(path=asset, width=500, height=500, op="fit", quality=90) %}
             {#
               I can go back to get_url when this issue is fixed
