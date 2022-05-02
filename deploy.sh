@@ -4,9 +4,6 @@
 
 if [ $? -eq 0 ]
 then
-  echo "Successfully created file"
-  exit 0
-
   # Create JS file from search data
   mv ./public/search-data/index.html ./public/js/search-data.js
   rm -rf ./public/search-data/
