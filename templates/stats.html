@@ -19,7 +19,12 @@
 </div>
 
 <div class="container page__bottom">
-  {% include "partials/content.html" %}
+  <div class="content">
+    {% include "partials/blog-stats.html" %}
+
+    {% include "partials/year-stats.html" %}
+  </div>
 </div>
+
 
 {% endblock content %}

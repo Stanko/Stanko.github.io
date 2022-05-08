@@ -6,6 +6,8 @@ const ANIMATION_DURATION = 500;
 const searchInput = document.querySelector(".search__input");
 const page = document.querySelector("#page");
 
+const modalLogo = document.querySelector("#modal-menu .menu__logo");
+
 const reducedMotionMediaQuery = window.matchMedia(
   "(prefers-reduced-motion: reduce)"
 );
@@ -20,18 +22,20 @@ MicroModal.init({
     // Save scroll position
     y = window.scrollY;
 
-    // Don't auto focus input on mobile phones
-    if (!isTouch || window.innerWidth > 768) {
-      searchInput.focus();
-      searchInput.select();
-    }
-
     clearTimeout(timeout);
 
     timeout = setTimeout(() => {
       // Disable scroll
       document.documentElement.classList.add("html--overflow-hidden");
       page.style.marginTop = `-${y}px`;
+
+      // Don't auto focus the input on mobile phones
+      if (!isTouch || window.innerWidth > 768) {
+        searchInput.focus();
+        searchInput.select();
+      } else {
+        modalLogo.focus();
+      }
     }, ANIMATION_DURATION);
   },
   onClose: () => {

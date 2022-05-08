@@ -1,0 +1,82 @@
+{# ----- Posts by year ----- #}
+{% set all_posts = get_section(path="blog/_index.md") %}
+{% set posts_by_year = all_posts.pages | reverse | group_by(attribute="year") %}
+
+{% set total_post_count = all_posts.pages | length %}
+{% set total_reading_time = 0 %}
+{% set total_word_count = 0 %}
+{% set longest_post = false %}
+{% set shortest_post = false %}
+
+{% for post in all_posts.pages %}
+  {% set_global total_reading_time = total_reading_time + post.reading_time  %}
+  {% set_global total_word_count = total_word_count + post.word_count  %}
+
+  {% if not longest_post or post.word_count > longest_post.word_count %}
+    {% set_global longest_post = post  %}
+  {% endif %}
+  {% if not shortest_post or post.word_count < shortest_post.word_count %}
+    {% set_global shortest_post = post  %}
+  {% endif %}
+{% endfor %}
+
+{# I started writing in february 2016. #}
+{% set start_year = 2016 %}
+{% set current_year = now() | date(format='%Y') | int %}
+{% set current_year_months = now() | date(format='%m') | int %}
+
+<div class="blog-stats__row">
+  <div class="blog-stats__row-left">Writing for</div>
+  <div class="blog-stats__row-right">
+    {{ current_year - start_year }} years {{ current_year_months }} month{{ current_year_months | pluralize }}
+  </div>
+</div>
+<div class="blog-stats__row">
+  <div class="blog-stats__row-left">Posts written:</div>
+  <div class="blog-stats__row-right">
+    {{ total_post_count }}
+  </div>
+</div>
+<div class="blog-stats__row">
+  <div class="blog-stats__row-left">Total words written:</div>
+  <div class="blog-stats__row-right">
+    {{ total_word_count }}
+  </div>
+</div>
+<div class="blog-stats__row">
+  <div class="blog-stats__row-left">Shortest post:</div>
+  <div class="blog-stats__row-right">
+    <a href="{{ shortest_post.permalink }}">{{ shortest_post.title | safe }}</a>
+    <div>{{ shortest_post.word_count }} words</div>
+  </div>
+</div>
+<div class="blog-stats__row">
+  <div class="blog-stats__row-left">Longest post:</div>
+  <div class="blog-stats__row-right">
+    <a href="{{ longest_post.permalink }}">{{ longest_post.title | safe }}</a>
+    <div>{{ longest_post.word_count }} words</div>
+  </div>
+</div>
+<div class="blog-stats__row">
+  <div class="blog-stats__row-left">Average words per post:</div>
+  <div class="blog-stats__row-right">
+    {{ total_word_count / total_post_count | round  }}
+  </div>
+</div>
+<div class="blog-stats__row">
+  <div class="blog-stats__row-left">Total estimated reading time:</div>
+  <div class="blog-stats__row-right">
+    {% set hours = total_reading_time / 60 | round(method="floor") %}
+    {% set minutes = total_reading_time - (hours * 60) | round %}
+
+    {{ hours }} hours {{ minutes }} minutes
+  </div>
+</div>
+<div class="blog-stats__row">
+  <div class="blog-stats__row-left">Number of <a href="/art/">generative drawings</a>:</div>
+  <div class="blog-stats__row-right">
+    {% set all_drawings = get_section(path="art/_index.md") %}
+    {{ all_drawings.pages | length }}
+  </div>
+</div>
+

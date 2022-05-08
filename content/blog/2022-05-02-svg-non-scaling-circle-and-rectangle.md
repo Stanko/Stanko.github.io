@@ -11,7 +11,7 @@ image = "/img/non-scaling-shapes.png"
 
 +++
 
-While making a simple SVG chart, I realized I would like to have non-scaling circles for data points. Unfortunately, SVG doesn't support it out of the box.
+While making [a simple SVG chart](/stats/#posts-per-year), I realized I would like to have non-scaling circles for data points. Unfortunately, SVG doesn't support it out of the box.
 
 If you are eager to see the result, jump to [the examples below](#examples) or play with the code on [Codepen](https://codepen.io/stanko/pen/wvyvZaB?editors=1100).
 

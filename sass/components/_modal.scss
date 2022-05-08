@@ -27,15 +27,15 @@
   padding: 20rem 0;
 }
 
-.modal__overlay,
 .modal__shadow {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  // height: 100vh;
-  // height: 100svh;
+  background: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  will-change: opacity;
 }
 
 .modal__container {
@@ -44,18 +44,9 @@
   right: 0;
   width: 100%;
   bottom: 0;
-  // height: 100vh;
-  // height: 100svh;
-}
-
-.modal__shadow {
-  background: rgba(0, 0, 0, 0.3);
-  pointer-events: none;
-}
-
-.modal__container {
   background-color: var(--neutral-100);
   overflow-y: hidden;
+  will-change: transform, opacity;
 }
 
 .html--overflow-hidden .modal__container {
@@ -63,7 +54,7 @@
   -webkit-overflow-scrolling: touch;
 }
 
-@keyframes overlay-in {
+@keyframes shadow-in {
   from {
     opacity: 0;
   }
@@ -72,7 +63,7 @@
   }
 }
 
-@keyframes overlay-out {
+@keyframes shadow-out {
   from {
     opacity: 1;
   }
@@ -81,16 +72,20 @@
   }
 }
 
-@keyframes content-in {
-  from {
+@keyframes container-in {
+  0% {
+    opacity: 0;
     transform: translateY(-100%);
   }
-  to {
+  50% {
+    opacity: 1;
+  }
+  100% {
     transform: translateY(0);
   }
 }
 
-@keyframes content-out {
+@keyframes container-out {
   from {
     transform: translateY(0);
   }
@@ -100,22 +95,17 @@
 }
 
 .modal[aria-hidden="false"] .modal__shadow {
-  animation: overlay-in $time-long;
+  animation: shadow-in $time-long;
 }
 
 .modal[aria-hidden="true"] .modal__shadow {
-  animation: overlay-out $time-long;
+  animation: shadow-out $time-long;
 }
 
 .modal[aria-hidden="false"] .modal__container {
-  animation: content-in $time-long;
+  animation: container-in $time-long;
 }
 
 .modal[aria-hidden="true"] .modal__container {
-  animation: content-out $time-long;
-}
-
-.modal .modal__container,
-.modal .modal__overlay {
-  will-change: transform;
+  animation: container-out $time-long;
 }

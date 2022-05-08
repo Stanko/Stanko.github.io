@@ -1,43 +1,39 @@
 <div class="modal" id="modal-menu" aria-hidden="true">
-  <div class="modal__overlay">
-    {# This div can be removed once this is fixed #}
-    {# https://github.com/ghosh/Micromodal/issues/490 #}
-    <div>
-      <div class="modal__shadow" aria-hidden="true"></div>
-      <div
-        class="modal__container"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="modal-menu-title"
-      >
-        <main class="modal__content" id="modal-menu-content">
-          <h2 class="sr-only" id="modal-menu-title">Menu and search</h2>
-          <div class="menu">
-            <div class="container">
-              <a href="/" class="menu__logo" aria-label="Home">
-                {% include "partials/svg-logo.html" %}
-              </a>
+  <div class="modal__shadow" aria-hidden="true"></div>
+  {# <div class="modal__overlay" tabindex="-1" data-micromodal-close=""> #}
+    <div
+      class="modal__container"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-menu-title"
+    >
+      <main class="modal__content" id="modal-menu-content">
+        <h2 class="sr-only" id="modal-menu-title">Menu and search</h2>
+        <div class="menu">
+          <div class="container">
+            <a href="/" class="menu__logo" aria-label="Home">
+              {% include "partials/svg-logo.html" %}
+            </a>
 
-              <button class="menu__close" data-micromodal-close aria-label="Close">
-                <span></span>
-                <span></span>
-              </button>
-            </div>
+            <button class="menu__close" data-micromodal-close aria-label="Close">
+              <span></span>
+              <span></span>
+            </button>
           </div>
+        </div>
 
-          <div class="modal__top">
-            <div class="container">
-              <label class="sr-only" for="search">Search</label>
-              <input class="search__input" id="search" placeholder="Search" type="text" autocomplete="off" />
-            </div>
+        <div class="modal__top">
+          <div class="container">
+            <label class="sr-only" for="search">Search</label>
+            <input class="search__input" id="search" placeholder="Search" type="text" autocomplete="off" />
           </div>
+        </div>
 
-          <div class="modal__bottom">
-            {% include "partials/modal-nav.html" %}
-            <div class="search__results">
-          </div>
-        </main>
-      </div>
+        <div class="modal__bottom">
+          {% include "partials/modal-nav.html" %}
+          <div class="search__results">
+        </div>
+      </main>
     </div>
-  </div>
+  {# </div> #}
 </div>
