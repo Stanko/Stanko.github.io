@@ -16,7 +16,7 @@
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html"><p>While making a simple SVG chart, I realized I would like to have non-scaling circles for data points. Unfortunately, SVG doesn't support it out of the box.</p>
+		<content type="html"><p>While making <a href="/stats/#posts-per-year">a simple SVG chart</a>, I realized I would like to have non-scaling circles for data points. Unfortunately, SVG doesn't support it out of the box.</p>
 <p>If you are eager to see the result, jump to <a href="https://muffinman.io/blog/svg-non-scaling-circle-and-rectangle/#examples">the examples below</a> or play with the code on <a href="https://codepen.io/stanko/pen/wvyvZaB?editors=1100">Codepen</a>.</p>
 <h2 id="non-scaling-stroke-example">Non-scaling stroke example<a
   class="header-anchor"
@@ -6090,7 +6090,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1651524905583763793'
+    aria-controls='spoiler-1652003087730844783'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6114,7 +6114,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
   </button>
 
   <div
-    id='spoiler-1651524905583763793'
+    id='spoiler-1652003087730844783'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6225,7 +6225,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1651524905585689465'
+    aria-controls='spoiler-1652003087732850499'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6249,7 +6249,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
   </button>
 
   <div
-    id='spoiler-1651524905585689465'
+    id='spoiler-1652003087732850499'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6407,7 +6407,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1651524905590488994'
+    aria-controls='spoiler-1652003087737554537'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6431,7 +6431,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
   </button>
 
   <div
-    id='spoiler-1651524905590488994'
+    id='spoiler-1652003087737554537'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6554,7 +6554,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1651524905593568149'
+    aria-controls='spoiler-1652003087740615761'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6578,7 +6578,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
   </button>
 
   <div
-    id='spoiler-1651524905593568149'
+    id='spoiler-1652003087740615761'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6788,7 +6788,7 @@ next to js and html files.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1651524905602280821'
+    aria-controls='spoiler-1652003087748749926'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6812,7 +6812,7 @@ next to js and html files.</p>
   </button>
 
   <div
-    id='spoiler-1651524905602280821'
+    id='spoiler-1652003087748749926'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6967,7 +6967,7 @@ in it.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1651524905608057636'
+    aria-controls='spoiler-1652003087754566472'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6991,7 +6991,7 @@ in it.</p>
   </button>
 
   <div
-    id='spoiler-1651524905608057636'
+    id='spoiler-1652003087754566472'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
