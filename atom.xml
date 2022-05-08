@@ -6055,7 +6055,7 @@ and gives you a solid ground to start from.</p>
   title="Anchor link for: who-am-i-and-why-should-you-listen-to-me"
 > <span class="sr-only" aria-hidden="true">#</span></a>
 </h3>
-<p>Well, I'm a principle developer at <a href="https://work.co">Work&amp;Co</a>.
+<p>Well, I'm a principal developer at <a href="https://work.co">Work&amp;Co</a>.
 I have a lot of experience on production level React projects,
 for clients like Twitter, Mastercard, Aeromexico, Hampton Creek...
 <a href="https://github.com/workco/marvin">Marvin</a>
@@ -6090,7 +6090,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1652003087730844783'
+    aria-controls='spoiler-1652011679239503209'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6114,7 +6114,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
   </button>
 
   <div
-    id='spoiler-1652003087730844783'
+    id='spoiler-1652011679239503209'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6225,7 +6225,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1652003087732850499'
+    aria-controls='spoiler-1652011679241472422'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6249,7 +6249,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
   </button>
 
   <div
-    id='spoiler-1652003087732850499'
+    id='spoiler-1652011679241472422'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6407,7 +6407,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1652003087737554537'
+    aria-controls='spoiler-1652011679246153452'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6431,7 +6431,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
   </button>
 
   <div
-    id='spoiler-1652003087737554537'
+    id='spoiler-1652011679246153452'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6554,7 +6554,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1652003087740615761'
+    aria-controls='spoiler-1652011679249184971'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6578,7 +6578,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
   </button>
 
   <div
-    id='spoiler-1652003087740615761'
+    id='spoiler-1652011679249184971'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6788,7 +6788,7 @@ next to js and html files.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1652003087748749926'
+    aria-controls='spoiler-1652011679256947121'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6812,7 +6812,7 @@ next to js and html files.</p>
   </button>
 
   <div
-    id='spoiler-1652003087748749926'
+    id='spoiler-1652011679256947121'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6967,7 +6967,7 @@ in it.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1652003087754566472'
+    aria-controls='spoiler-1652011679262679758'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6991,7 +6991,7 @@ in it.</p>
   </button>
 
   <div
-    id='spoiler-1652003087754566472'
+    id='spoiler-1652011679262679758'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
