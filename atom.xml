@@ -5,8 +5,46 @@
 	<link href="https://muffinman.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://muffinman.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-05-02T00:00:00+00:00</updated>
+	<updated>2022-06-16T00:00:00+00:00</updated>
 	<id>https://muffinman.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Goodbye IE</title>
+		<published>2022-06-16T00:00:00+00:00</published>
+		<updated>2022-06-16T00:00:00+00:00</updated>
+		<link href="https://muffinman.io/blog/goodbye-ie/" type="text/html"/>
+		<id>https://muffinman.io/blog/goodbye-ie/</id>
+    <author>
+      <name>Stanko</name>
+    </author>
+		<content type="html"><p>End of an era.</p>
+<p>I started my career when
+<span
+  class="sidenote__trigger "
+  tabindex="0"
+  role="button"
+>
+  IE6
+</span>
+
+<span
+  class="sidenote__note "
+><span class="sidenote__bracket">(</span>First time I wrote about <a href="/blog/ie6-hacks-ten-years-after/">IE6</a> was back in 2009.<span class="sidenote__bracket">)</span></span>
+
+was a thing.
+And yesterday, <a href="https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549">Microsoft announced</a> they are retiring IE11. With that, no version of Internet Explorer is longer supported.</p>
+
+  <img
+    class="image image--sm  "
+    src="&#x2F;img&#x2F;ie6.jpg"
+    alt="IE6 logo"
+  />
+
+<p>Over the years it seemed that we are doomed to support IE forever. We even planned celebrating when we finally don't have to. But today, it feels funny, nobody is celebrating. Modern browsers came in, slowly but surely overthrown it, leaving us with a pretty evergreen landscape today.</p>
+<p>So, IE, you weren't really a good browser, but it has been so long, so I bid you farewell!</p>
+
+    </content>
+
+	</entry>
 	<entry xml:lang="en">
 		<title>SVG non-scaling circle and rectangle</title>
 		<published>2022-05-02T00:00:00+00:00</published>
@@ -6090,7 +6128,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1652011679239503209'
+    aria-controls='spoiler-1655369163878194977'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6114,7 +6152,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
   </button>
 
   <div
-    id='spoiler-1652011679239503209'
+    id='spoiler-1655369163878194977'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6225,7 +6263,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1652011679241472422'
+    aria-controls='spoiler-1655369163880591996'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6249,7 +6287,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
   </button>
 
   <div
-    id='spoiler-1652011679241472422'
+    id='spoiler-1655369163880591996'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6407,7 +6445,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1652011679246153452'
+    aria-controls='spoiler-1655369163885310035'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6431,7 +6469,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
   </button>
 
   <div
-    id='spoiler-1652011679246153452'
+    id='spoiler-1655369163885310035'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6554,7 +6592,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1652011679249184971'
+    aria-controls='spoiler-1655369163891177583'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6578,7 +6616,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
   </button>
 
   <div
-    id='spoiler-1652011679249184971'
+    id='spoiler-1655369163891177583'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6788,7 +6826,7 @@ next to js and html files.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1652011679256947121'
+    aria-controls='spoiler-1655369163918305305'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6812,7 +6850,7 @@ next to js and html files.</p>
   </button>
 
   <div
-    id='spoiler-1652011679256947121'
+    id='spoiler-1655369163918305305'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6967,7 +7005,7 @@ in it.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1652011679262679758'
+    aria-controls='spoiler-1655369163932308520'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6991,7 +7029,7 @@ in it.</p>
   </button>
 
   <div
-    id='spoiler-1652011679262679758'
+    id='spoiler-1655369163932308520'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
