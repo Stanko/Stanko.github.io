@@ -4,7 +4,7 @@ aliases = ["/ie6-hacks-ten-years-after/"]
 
 [taxonomies]
 category = ["CSS/SASS"]
-tags = ["ie", "css"]
+tags = ["ie", "css", "microsoft"]
 
 [extra]
 
