@@ -5,8 +5,91 @@
 	<link href="https://muffinman.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://muffinman.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-06-16T00:00:00+00:00</updated>
+	<updated>2022-06-17T00:00:00+00:00</updated>
 	<id>https://muffinman.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Back to the basics</title>
+		<published>2022-06-17T00:00:00+00:00</published>
+		<updated>2022-06-17T00:00:00+00:00</updated>
+		<link href="https://muffinman.io/blog/back-to-the-basics/" type="text/html"/>
+		<id>https://muffinman.io/blog/back-to-the-basics/</id>
+    <author>
+      <name>Stanko</name>
+    </author>
+		<content type="html"><p>I started this blog in 2016. More than six years now. But if you check my stats page, you'll see that <a href="https://muffinman.io/stats/#posts-per-year">the number of posts started declining</a> fairly quickly, since 2018.</p>
+<p>I finally decided to stop this downward trend and to remember why I started writing in the first place.</p>
+<h2 id="why-i-started-writing">Why I started writing<a
+  class="header-anchor"
+  href="#why-i-started-writing" aria-label="Anchor link for: why-i-started-writing"
+  title="Anchor link for: why-i-started-writing"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>For the joy of small projects.</p>
+<p>Basically I was just keeping a log of the things I've been working on. Also, when I encountered a problem, I would document it. Mainly to make sure I don't forget about it, and if someone finds it useful, even better.</p>
+<p>I didn't worry about the number of visits, &quot;building a brand&quot; or anything along those lines. This is how this blog used to look like:</p>
+
+  <img
+    class="image image--md  image--shadow image--caption"
+    src="&#x2F;img&#x2F;muffinman-2017.png"
+    alt="Old screenshot of my blog"
+  />
+  <small class="image__caption">Screenshot of my blog from 2017.</small>
+
+<h2 id="popularity-affected-my-joy-of-writing">&quot;Popularity&quot; affected my joy of writing<a
+  class="header-anchor"
+  href="#popularity-affected-my-joy-of-writing" aria-label="Anchor link for: popularity-affected-my-joy-of-writing"
+  title="Anchor link for: popularity-affected-my-joy-of-writing"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>At some point I tried writing a little longer, more educative posts. <a href="/blog/setting-up-webpack-babel-and-react-from-scratch/">One of them</a> caught eye of the community and it exploded. It appeared on Hacker News, Reddit and multiple front-end oriented websites. Honestly, it felt great!</p>
+<p>There was an insane spike in my analytics, and when it stabilized I had way more visits then before. Then people and companies started contacting me about putting up their ads and doing
+<span
+  class="sidenote__trigger "
+  tabindex="0"
+  role="button"
+>
+  sponsored posts
+</span>
+
+<span
+  class="sidenote__note "
+><span class="sidenote__bracket">(</span>I always hated how even the term tries to disguise the real purpose - advertising.<span class="sidenote__bracket">)</span></span>
+. I never intended to do this, so I turned all of these offers down.</p>
+<p>Everyone around me started talking how great it is that I'm building my own &quot;brand&quot;. How I should create a newsletter and increase <em>conversion</em>. I was a little bit confused, but it still felt good.</p>
+<h2 id="building-a-brand">&quot;Building a brand&quot;<a
+  class="header-anchor"
+  href="#building-a-brand" aria-label="Anchor link for: building-a-brand"
+  title="Anchor link for: building-a-brand"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>With all this attention, I tried to maintain quality and write better, more <em>professional</em> posts. I felt like there were expectations and that there will be more people judging my writing.</p>
+<p>I would write a post and feel like it wasn't good or <em>professional</em> enough and just scrape it. For that reason I never wrote about some projects that I'm super excited and proud about (for example <a href="https://muffinman.io/vertigo/">Vertigo</a> or <a href="https://github.com/stanko/retro-frame">Retro Frame</a>). Writing is <span
+  class="sidenote__trigger "
+  tabindex="0"
+  role="button"
+>
+  hard enough as it is
+</span>
+
+<span
+  class="sidenote__note "
+><span class="sidenote__bracket">(</span>Especially in a foreign language<span class="sidenote__bracket">)</span></span>
+, and this newly added pressure made it even harder.</p>
+<p>It ended up feeling like a rat race and it literally took all of the joy out of writing and sharing my projects. Number of posts kept declining. In 2021 it fell down to a record low of only four posts.</p>
+<p>I finally realized that I don't really care about this <em>brand</em> nonsense and that I need to do what makes me happy instead. If that content still gets me some traction, then that is the brand I'll be thrilled to keep building.</p>
+<h2 id="what-s-next">What's next<a
+  class="header-anchor"
+  href="#what-s-next" aria-label="Anchor link for: what-s-next"
+  title="Anchor link for: what-s-next"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>It is time to get back to the roots. I'll write about things I'm excited about and share my projects and passions. Writing short posts is fine as well. I'll do it when I feel like writing, instead of just trying to get any content out of the door. This blog was never about money nor brand, and I'll never put ads nor do <em>sponsored posts</em>.</p>
+<p>Hopefully, with me writing about the things I love, the number of posts will organically start to grow again.</p>
+<p>This blog was created for the joy of small projects, and I got sidetracked, but now I'm taking it back where it should be.</p>
+
+    </content>
+
+	</entry>
 	<entry xml:lang="en">
 		<title>Goodbye IE</title>
 		<published>2022-06-16T00:00:00+00:00</published>
@@ -34,10 +117,11 @@ was a thing.
 And yesterday, <a href="https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549">Microsoft announced</a> they are retiring IE11. With that, no version of Internet Explorer is longer supported.</p>
 
   <img
-    class="image image--sm  "
+    class="image image--sm   "
     src="&#x2F;img&#x2F;ie6.jpg"
     alt="IE6 logo"
   />
+  
 
 <p>Over the years it seemed that we are doomed to support IE forever. We even planned celebrating when we finally don't have to. But today, it feels funny, nobody is celebrating. Modern browsers came in, slowly but surely overthrown it, leaving us with a pretty evergreen landscape today.</p>
 <p>So, IE, you weren't really a good browser, but it has been so long, so I bid you farewell!</p>
@@ -346,24 +430,27 @@ And yesterday, <a href="https://techcommunity.microsoft.com/t5/windows-it-pro-bl
 <p>AxiDraw, the pen plotter, continues to be my favorite purchase ever. Here are a couple of my plotted drawings from the last year:</p>
 
   <img
-    class="image image--md  "
+    class="image image--md   "
     src="&#x2F;art&#x2F;pokeball&#x2F;1.jpg"
     alt="Space Armadillo (aka Pokeball)"
   />
+  
 
 
   <img
-    class="image image--md  "
+    class="image image--md   "
     src="&#x2F;img&#x2F;into-2022&#x2F;untitled.jpg"
     alt="Untitled"
   />
+  
 
 <p>
   <img
-    class="image   "
+    class="image    "
     src="&#x2F;art&#x2F;krypton&#x2F;0.jpg"
     alt="Krypton"
   />
+  
 
 
 I wrote a separate post about the creative process behind the last drawing - <a href="/blog/breaking-down-krypton/">Breaking down Krypton</a>.</p>
@@ -376,10 +463,11 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 <p>Oh boy, did I neglect this blog last year. I wrote only four posts. But I really couldn't find the inspiration and will to write. Naturally, the number of visits dropped, and it was a little above 90K. The fact that adblockers now block Goat Analytics also had an impact on numbers.</p>
 
   <img
-    class="image image--md  image--shadow"
+    class="image image--md  image--shadow "
     src="&#x2F;img&#x2F;into-2022&#x2F;analytics.png"
     alt="Analytics breakdown for 2021"
   />
+  
 
 <p>Luckily, now I have way more drive to write and keep the site updated.</p>
 <p>This February, the blog got a redesign that I planned for a long time. I wanted to add &quot;Art&quot; and &quot;Projects&quot; sections, but I kept redesigning it over and over again. Finally, when I decided to <span
@@ -444,10 +532,11 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 <a href="https:&#x2F;&#x2F;npm-stat.com&#x2F;charts.html?author=stanko&amp;from=2021-01-01&amp;to=2021-12-31" class="image__link">
 
   <img
-    class="image image--sm  "
+    class="image image--sm   "
     src="&#x2F;img&#x2F;into-2022&#x2F;npm.png"
     alt="Npm packages stats for 2021"
   />
+  
 
 </a>
 
@@ -488,10 +577,11 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 , and I'll try to break down how it was made.</p>
 
   <img
-    class="image image--md  "
+    class="image image--md   "
     src="&#x2F;img&#x2F;krypton&#x2F;cover.jpg"
     alt="Krypton plot"
   />
+  
 
 <p>The wonderful thing about generative art is that code is just a tool. Thing that really matters is the actual artwork. In this specific case, code is straightforward and relatively simple. But it produces drawings that, in my opinion, look visually pleasing and have a nice sense of depth to them.</p>
 <h2 id="tooling">Tooling<a
@@ -504,18 +594,20 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 <p>This is how the interface looks. I have an easy way to add controls for image parameters. These controls allow me to tweak drawings with a short feedback loop. Each time a parameter is changed, the image is redrawn and the parameter is reflected in the URL. This allows me to go through iterations using the browser history.</p>
 
   <img
-    class="image image--md  "
+    class="image image--md   "
     src="&#x2F;img&#x2F;krypton&#x2F;tooling.png"
     alt="My tooling"
   />
+  
 
 <p>To make navigation through the history easier, for each unique combination of parameters, I generate a random color and ASCII face. That is why my browser history looks like this :)</p>
 
   <img
-    class="image image--xs  image--shadow"
+    class="image image--xs  image--shadow "
     src="&#x2F;img&#x2F;krypton&#x2F;history.png"
     alt="History dropdown with ASCII faces"
   />
+  
 
 <h2 id="voronoi-diagram">Voronoi diagram<a
   class="header-anchor"
@@ -527,10 +619,11 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 <p>Voronoi diagram takes a collection of points, and then partitions a plane into polygons, where each polygon's edge is right in the middle of two points. It sounds like a lot, but if you study this image, it should become clearer. For a more detailed explanation you can check out <a href="https://en.wikipedia.org/wiki/Voronoi_diagram">the article on Wikipedia</a>.</p>
 
   <img
-    class="image image--sm  "
+    class="image image--sm   "
     src="&#x2F;img&#x2F;krypton&#x2F;voronoi.png"
     alt="Voronoi diagram"
   />
+  
 
 <h2 id="generating-points">Generating points<a
   class="header-anchor"
@@ -542,18 +635,20 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 <p>The result looks nice, but it took me a number of tries to get it just right.</p>
 
   <img
-    class="image image--md  "
+    class="image image--md   "
     src="&#x2F;img&#x2F;krypton&#x2F;10.png"
     alt="Points"
   />
+  
 
 <p>Now when we have our points, Voronoi can do it's thing. This is what we end up with.</p>
 
   <img
-    class="image image--md  "
+    class="image image--md   "
     src="&#x2F;img&#x2F;krypton&#x2F;20.png"
     alt="Voronoi diagram with points visible"
   />
+  
 
 <p><strong>Different points distribution</strong></p>
 <p>Like I mentioned, the point distribution is something I tweaked to get the result I like. For example, if we change the easing function for radius increasing (&quot;ease in&quot; instead of &quot;ease out&quot;), we'll get a completely different result. If you ask me, it doesn't look nearly as good.</p>
@@ -580,10 +675,11 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 <p>Back then, I experimented a little bit with colors.</p>
 
   <img
-    class="image image--md  "
+    class="image image--md   "
     src="&#x2F;img&#x2F;krypton&#x2F;color.jpg"
     alt="Color exploration"
   />
+  
 
 <p>But as I wanted to pen plot the drawing, I abandoned the whole full color idea.</p>
 <h2 id="making-it-interesting">Making it interesting<a
@@ -730,10 +826,11 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 <p>Sometimes I think I use Voronoi diagrams too much in my work. Anyway, this library efficiently computes Voronoi diagrams.</p>
 
   <img
-    class="image image--xs  "
+    class="image image--xs   "
     src="&#x2F;img&#x2F;js-libs&#x2F;krypton.jpg"
     alt="Krypton"
   />
+  
 
 <h5 id="robust-point-in-polygon"><a href="https://github.com/mikolalysenko/robust-point-in-polygon">robust-point-in-polygon</a><a
   class="header-anchor"
@@ -771,10 +868,11 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 <p>Calculates stream lines for a given vector field.</p>
 
   <img
-    class="image image--sm  "
+    class="image image--sm   "
     src="&#x2F;img&#x2F;js-libs&#x2F;black-holes.jpg"
     alt="Black Holes"
   />
+  
 
 <p>When I was making <a href="/blog/neon-generative-art-piece-made-using-2d-vector-field/">Neon</a> I stumbled on <a href="https://web.cs.ucdavis.edu/%7Ema/SIGGRAPH02/course23/notes/papers/Jobard.pdf">this paper</a>. Before even trying to implement it myself, I searched for a good soul who already did it. Luckily I found Andrei's repo.</p>
 <h3 id="3d-vector-line-engines">3D vector line engines<a
@@ -792,10 +890,11 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 <p>This is my port of <a href="https://github.com/fogleman/ln">Michael Fogleman's ln</a> from Go to TypeScript. It was never fully finished, so you might want to check another port - <a href="https://github.com/aweary/ln.js">ln.js</a>. It is complete and has better documentation than my port. Personally, I still use mine as it is easier for me to hack around.</p>
 
   <img
-    class="image image--sm  image--shadow"
+    class="image image--sm  image--shadow "
     src="&#x2F;img&#x2F;js-libs&#x2F;belgrade.jpg"
     alt="Belgrade"
   />
+  
 
 <h3 id="spatial-data-structures">Spatial data structures<a
   class="header-anchor"
@@ -853,10 +952,11 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 <p><span aria-hidden="true">ʕ•ᴥ•ʔ</span> cause why not? Just kidding. To make navigation through the history easier, for each unique combination of parameters I generate a random color and ASCII face. Then my browser history looks like this:</p>
 
   <img
-    class="image image--xs  image--shadow"
+    class="image image--xs  image--shadow "
     src="&#x2F;img&#x2F;js-libs&#x2F;cool-faces.png"
     alt="Funky browser history"
   />
+  
 
 
     </content>
@@ -906,10 +1006,11 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 <a href="https:&#x2F;&#x2F;muffinman.io&#x2F;code-challenge&#x2F;" class="image__link">
 
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;img&#x2F;code-challenge-spring-2021&#x2F;waves.png"
     alt="CSS only 3D people making waves"
   />
+  
 
 </a>
 
@@ -1215,34 +1316,38 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 <p>I had one huge positive this year - I got into <a href="https://en.wikipedia.org/wiki/Generative_art">generative art</a>. My fiance likes to say that I woke up on the first on January and <i>started drawing some triangles</i>. <a href="https://codepen.io/stanko/pen/XWJeBqQ">Triangles</a> were super naive, but I'm super happy with my progress and these are some of my creations (all pen plotted):</p>
 
   <img
-    class="image image--md  "
+    class="image image--md   "
     src="&#x2F;img&#x2F;2021&#x2F;waves.jpg"
     alt="&quot;Waves&quot;, one of the first pieces I made"
   />
+  
 
 
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;img&#x2F;2021&#x2F;black-holes.jpg"
     alt="Me holding my generative piece &quot;Black Holes&quot;"
   />
+  
 
 
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;img&#x2F;2021&#x2F;truchet.jpg"
     alt="&quot;Untitled&quot;, drawing based on Truchet tiling"
   />
+  
 
 <p>Special thanks to Vladimir Mitrović who was the only person I knew doing generative art. When I reached out, he selflessly helped me start with the whole thing. Be sure to visit <a href="https://brutalism.rs/">his website</a> as he is doing amazing stuff.</p>
 <p>I <a href="/archive/#generative-art">already wrote</a> about my generative work a little, but I will create a separate site section for my artwork. Meanwhile, you can see the most of my work on <a href="https://www.instagram.com/muffinman_io/">Instagram</a>. I'm super thrilled that people like my art enough to hang it on their walls.</p>
 <p>All of my work is done with pen plotting in mind. I'm using <a href="https://shop.evilmadscientist.com/908">AxiDraw SE/A3</a> by Evil Mad Scientist and I love everything about this machine. Pen plotting is something that I want to write more about in the future.</p>
 
   <img
-    class="image image--lg  image--shadow"
+    class="image image--lg  image--shadow "
     src="&#x2F;img&#x2F;2021&#x2F;beach.jpg"
     alt="&quot;Beach&quot;, generative piece consisting of 116 thousands dots"
   />
+  
 
 <h2 id="blog">Blog<a
   class="header-anchor"
@@ -1255,10 +1360,11 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 <p>Even without writing much, I had more visits than in 2020. But you can see the drop in May, about the same time I removed Google Analytics. Coincidence or not, I can't say. The second drop happened in early December, as I moved posts under <code>/blog</code> prefix but screwed up the redirections. I can only hope search engines won't derank me too much because of that.</p>
 
   <img
-    class="image image--md  "
+    class="image image--md   "
     src="&#x2F;img&#x2F;2021&#x2F;analytics.png"
     alt="My blog&#x27;s analytics for 2020"
   />
+  
 
 <p>People are still not sticking around after reading one article, but that is ok, I never optimized for that. I'm happy to see that traffic is still mainly organic, coming from the search engines. Interesting thing is that macOS is almost tied with Windows.</p>
 <h2 id="work">Work<a
@@ -1296,10 +1402,11 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 <a href="https:&#x2F;&#x2F;work.co" class="image__link">
 
   <img
-    class="image image--lg  image--shadow"
+    class="image image--lg  image--shadow "
     src="&#x2F;img&#x2F;2021&#x2F;workco.png"
     alt="Work &amp; Co website"
   />
+  
 
 </a>
 
@@ -1787,10 +1894,11 @@ and was used by thousands of people.</p>
 <p>It has a funky name, <a href="https://www.goatcounter.com/">GoatCounter</a>. It is open source and privacy respecting. There isn't nearly as much data, but it is all the data I need. You should check it out. It has a generous free tier for non-commercial websites - but please consider donating or contributing as it is a work of a single developer. And he is doing a great job, every time I open the dashboard, there is something new or polished.</p>
 
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;img&#x2F;goatcounter.png"
     alt="GoatCounter dashboard for my website"
   />
+  
 
 <h2 id="why">Why?<a
   class="header-anchor"
@@ -2175,10 +2283,11 @@ And of course, big thanks to <a href="https://www.instagram.com/dutchplottr/">@d
 <a href="&#x2F;metaballs&#x2F;" class="image__link">
 
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;img&#x2F;metaballs&#x2F;03a.png"
     alt="&amp;quot;Ginger&amp;quot;, image generated using Metaballs"
   />
+  
 
 </a>
 
@@ -2337,10 +2446,11 @@ these.</p>
 <a href="https:&#x2F;&#x2F;neon.muffinman.io&#x2F;#&#x2F;false&#x2F;14&#x2F;8&#x2F;60&#x2F;70&#x2F;200&#x2F;5&#x2F;r4rquxotz3q&#x2F;ouihz7hmsic&#x2F;0z5d8xa8yrd" class="image__link">
 
   <img
-    class="image image--md  "
+    class="image image--md   "
     src="&#x2F;img&#x2F;neon&#x2F;example.png"
     alt="Example image generated by Neon"
   />
+  
 
 </a>
 
@@ -2522,10 +2632,11 @@ colors. Saturation and lightness are fixed to 70% and 60% respectively, while hu
 <a href="https:&#x2F;&#x2F;neon.muffinman.io&#x2F;#&#x2F;false&#x2F;15&#x2F;6&#x2F;60&#x2F;55&#x2F;140&#x2F;5&#x2F;2aybxq8tmqv&#x2F;crdmt2f7nn8&#x2F;i5g7i80cigf" class="image__link">
 
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;img&#x2F;neon&#x2F;example2.png"
     alt="Another image generated by Neon"
   />
+  
 
 </a>
 
@@ -2539,18 +2650,20 @@ colors. Saturation and lightness are fixed to 70% and 60% respectively, while hu
 <p>All of my art is made with pen plotting in mind. Few days ago, I finally got my hands on some gel pens (Sakura's Gelly Roll Moonlight) and the first thing I plotted was my favorite Neon piece:</p>
 
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;art&#x2F;neon&#x2F;0.jpg"
     alt="Pen plotted image generated by Neon, gel pens on black paper"
   />
+  
 
 <p>It is really hard to take a good photo of it, as in person, colors are much more bright and vivid. On the photo below colors are more accurate, but still not quite as nice as in real life.</p>
 
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;art&#x2F;neon&#x2F;1.jpg"
     alt="Detail of the plotted image to show colors better"
   />
+  
 
 <p>If you want to see more of my generative art, check my <a href="https://www.instagram.com/muffinman_io/">Instagram profile</a>.</p>
 
@@ -2577,10 +2690,11 @@ colors. Saturation and lightness are fixed to 70% and 60% respectively, while hu
 <p>I'm really proud of my blog. And judging by the analytics, people are actually reading it - this year I had over 100k users visiting and ~85% of the traffic is coming from the organic search! This is not the first blog I had, but this is the one I'm sticking with.</p>
 
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;img&#x2F;2020&#x2F;analytics.png"
     alt="This year&#x27;s analytics, over 100k users"
   />
+  
 
 <p>I love how there is a dip every single weekend. People are finding my articles almost exclusively on work days, probably while searching for work related problems.</p>
 <p>But the bounce rate is also high, almost 85%. After reading one article users are not sticking for long. That is something I want to improve in the next year.</p>
@@ -2603,10 +2717,11 @@ colors. Saturation and lightness are fixed to 70% and 60% respectively, while hu
 <a href="https:&#x2F;&#x2F;mailchimp.com&#x2F;presents" class="image__link">
 
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;img&#x2F;2020&#x2F;mcp.jpg"
     alt="Mailchimp Presents media portal"
   />
+  
 
 </a>
 
@@ -2665,10 +2780,11 @@ This was so fun to make, and I learned about canvas and SVG things I never touch
 <a href="https:&#x2F;&#x2F;muffinman.io&#x2F;vertigo&#x2F;" class="image__link">
 
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;img&#x2F;2020&#x2F;vertigo.png"
     alt="Hollow Knight image processed using Vertigo"
   />
+  
 
 </a>
 
@@ -3024,10 +3140,11 @@ You'll notice that every geometry in three.js has a &quot;Buffer&quot; version (
 <p>Then I tried to see which Jekyll binary is used and realized - for some reason gems were installed using the correct ruby version, but binaries weren't linked properly.</p>
 
   <img
-    class="image image--md  "
+    class="image image--md   "
     src="&#x2F;img&#x2F;catalina-ruby-bad-interpreter.png"
     alt="Jekyll binary wasn&#x27;t coming from brew ruby installation"
   />
+  
 
 <p>So the solution was pretty easy at the end, all I had to do is to find <code>gems/bin</code> folder and add it to my path.</p>
 <pre data-lang="bash" style="background-color:#282c34;color:#dcdfe4;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#5c6370;"># Use ruby installed by brew
@@ -3073,10 +3190,11 @@ Apple made a change and switched the default shell to zsh (instead of bash). Fro
 <p>Bash is not gone and everything will work like it used to. But every time you open a terminal, you will be greeted by this message:</p>
 
   <img
-    class="image image--md  "
+    class="image image--md   "
     src="&#x2F;img&#x2F;zsh-nagging.png"
     alt="Every time I open a terminal MacOS Catalina is telling me to switch to zsh"
   />
+  
 
 <p>If you are like me, and not ready to make the switch to zsh, you can silence this warning by putting this into your <code>.bash_profile</code> (or <code>.bashrc</code>).</p>
 <pre data-lang="bash" style="background-color:#282c34;color:#dcdfe4;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#c678dd;">export </span><span style="color:#e06c75;">BASH_SILENCE_DEPRECATION_WARNING</span><span style="color:#c678dd;">=</span><span style="color:#98c379;">1
@@ -5423,10 +5541,11 @@ Although, I personally think it is pretty easy to modify it to fit custom needs.
 <p>I got my first pc when I was four, shiny 286 with a color monitor! My father (who knows nothing about programming) showed me BASIC and infamous GOTO. My first programs did nothing more than printing simple messages or adding numbers up. It was fun but playing games was even more fun.</p>
 
   <img
-    class="image image--md  "
+    class="image image--md   "
     src="&#x2F;img&#x2F;keen.png"
     alt="Commander Keen"
   />
+  
 
 <p>Following years I spent playing games, but at some point I started thinking about making one. It is the main reason why I ended up programming and still is. Few games were made, but nothing worth mentioning (I still have unfulfilled wish to make retro like games, but utilizing modern hardware to give 'em a twist).</p>
 <p>Then dialup came along and I got interested in websites. First one I made was dedicated to Pink Floyd and published on geocities. As I always had an artsy side, web seemed like a brilliant platform. Perfect combination of tech, design and interactivity. Today, I'm still doing web apps, although I had no such plans at the time.</p>
@@ -5455,10 +5574,11 @@ snuck onto me. Oh boy, I was looking forward to learning all the engineering stu
 <a href="https:&#x2F;&#x2F;www.google.rs&#x2F;maps&#x2F;@44.8193555,20.4592253,636a,35y,52.43h&#x2F;data=!3m1!1e3?hl=en" class="image__link">
 
   <img
-    class="image image--md  "
+    class="image image--md   "
     src="&#x2F;img&#x2F;matf.jpg"
     alt="My university&#x27;s building"
   />
+  
 
 </a>
 
@@ -6128,7 +6248,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1655369163878194977'
+    aria-controls='spoiler-1655627961362709811'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6152,7 +6272,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
   </button>
 
   <div
-    id='spoiler-1655369163878194977'
+    id='spoiler-1655627961362709811'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6263,7 +6383,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1655369163880591996'
+    aria-controls='spoiler-1655627961364846610'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6287,7 +6407,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
   </button>
 
   <div
-    id='spoiler-1655369163880591996'
+    id='spoiler-1655627961364846610'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6445,7 +6565,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1655369163885310035'
+    aria-controls='spoiler-1655627961371201809'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6469,7 +6589,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
   </button>
 
   <div
-    id='spoiler-1655369163885310035'
+    id='spoiler-1655627961371201809'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6592,7 +6712,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1655369163891177583'
+    aria-controls='spoiler-1655627961376099208'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6616,7 +6736,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
   </button>
 
   <div
-    id='spoiler-1655369163891177583'
+    id='spoiler-1655627961376099208'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6826,7 +6946,7 @@ next to js and html files.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1655369163918305305'
+    aria-controls='spoiler-1655627961405380901'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6850,7 +6970,7 @@ next to js and html files.</p>
   </button>
 
   <div
-    id='spoiler-1655369163918305305'
+    id='spoiler-1655627961405380901'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -7005,7 +7125,7 @@ in it.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1655369163932308520'
+    aria-controls='spoiler-1655627961415969899'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -7029,7 +7149,7 @@ in it.</p>
   </button>
 
   <div
-    id='spoiler-1655369163932308520'
+    id='spoiler-1655627961415969899'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -7336,10 +7456,11 @@ so I kept going and made a React component for all sorts of color filters.</p>
 <a href="https:&#x2F;&#x2F;muffinman.io&#x2F;react-image-filter&#x2F;" class="image__link">
 
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;img&#x2F;image-filter-1.jpg"
     alt="React filter demo"
   />
+  
 
 </a>
 
@@ -7363,10 +7484,11 @@ Changing the matrix value you can achieve all of the CSS filters.</p>
 Every value has it's own range slider. This way you can see the changes right away.</p>
 
   <img
-    class="image image--md  "
+    class="image image--md   "
     src="&#x2F;img&#x2F;image-filter-controls.png"
     alt="React filter controls"
   />
+  
 
 <p>Soon I encountered another problem.
 As applying SVG filters in CSS also doesn't work in IE and Edge, I used SVG <code>&lt;image /&gt;</code> tag.
@@ -7380,10 +7502,11 @@ This way SVG always keeps image aspect ratio.</p>
 <a href="https:&#x2F;&#x2F;muffinman.io&#x2F;react-image-filter&#x2F;" class="image__link">
 
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;img&#x2F;image-filter-2.jpg"
     alt="React filter demo"
   />
+  
 
 </a>
 
@@ -7571,10 +7694,11 @@ here, but it got accepted by development community.</p>
 <a href="https:&#x2F;&#x2F;muffinman.io&#x2F;react-plx" class="image__link">
 
   <img
-    class="image image--md  "
+    class="image image--md   "
     src="&#x2F;img&#x2F;plx-explode.png"
     alt="Make things explode! Plx demo"
   />
+  
 
 </a>
 
@@ -8107,10 +8231,11 @@ See you there!</p>
 <a href="https:&#x2F;&#x2F;www.meetup.com&#x2F;Tech-Meetup-Vol-6&#x2F;events&#x2F;239775158&#x2F;" class="image__link">
 
   <img
-    class="image image--md  "
+    class="image image--md   "
     src="&#x2F;img&#x2F;meetup-vol-6&#x2F;poster.jpg"
     alt="Work&amp;Co Meetup Tech Meetup Vol 6"
   />
+  
 
 </a>
 
@@ -8146,10 +8271,11 @@ See you there!</p>
 </h3>
 
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;img&#x2F;meetup-vol-6&#x2F;audience.jpg"
     alt="Meetup audience"
   />
+  
 
 <div
   class="dual-image  "
@@ -8159,10 +8285,11 @@ See you there!</p>
 </div>
 
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;img&#x2F;meetup-vol-6&#x2F;zeh.jpg"
     alt="React Native introduction by Zeh"
   />
+  
 
 
     </content>
@@ -8183,10 +8310,11 @@ See you there!</p>
 <p>And it looks like this:</p>
 
   <img
-    class="image image--md  "
+    class="image image--md   "
     src="&#x2F;img&#x2F;nicer-git-log.png"
     alt="Nicer git log"
   />
+  
 
 <p>Then add it to your <code>.bash_profile</code> as an alias (I'm using <code>glog</code>) and that's it.</p>
 <pre style="background-color:#282c34;color:#dcdfe4;"><code><span>alias glog=&quot;git log --graph --pretty=format:&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39;&quot;
@@ -8693,34 +8821,38 @@ And apply
 </h3>
 <p>
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;img&#x2F;winter-meetup-vol-5&#x2F;1.jpg"
     alt="Nikola Pantović"
   />
+  
 
 
 
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;img&#x2F;winter-meetup-vol-5&#x2F;2.jpg"
     alt="Tech meetup audience"
   />
+  
 
 
 
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;img&#x2F;winter-meetup-vol-5&#x2F;3.jpg"
     alt="Stanko Tadić talking about JavaScript"
   />
+  
 
 
 
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;img&#x2F;winter-meetup-vol-5&#x2F;4.jpg"
     alt="Saša Ranisavljević"
   />
+  
 
 </p>
 
@@ -10300,10 +10432,11 @@ Probably the fact that they dried for days helped.</p>
 As promised, we will keep them coming more often.</p>
 
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;img&#x2F;meetup-vol-3&#x2F;2.JPG"
     alt="Me, talking at the meetup"
   />
+  
 
 <p>Miloš spoke first about learning in tech, and keeping up with it.
 My talk was about SPAs, and how hard they are.</p>
@@ -10318,18 +10451,20 @@ We are planning charity hackatons as well and I'll keep you posted about them.</
 </ul>
 <p>
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;img&#x2F;meetup-vol-3&#x2F;1.JPG"
     alt="Miloš"
   />
+  
 
 
 
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;img&#x2F;meetup-vol-3&#x2F;3.JPG"
     alt="Audience"
   />
+  
 
 </p>
 
@@ -10468,10 +10603,11 @@ and keeping it open source.</p>
 <a href="&#x2F;blog&#x2F;null-object-tech-meetup-vol-2&#x2F;" class="image__link">
 
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;img&#x2F;meetup-vol-2&#x2F;4.jpg"
     alt="Me, live coding on a meetup"
   />
+  
 
 </a>
 
@@ -10502,26 +10638,29 @@ There were around 60 people and we hope even more people will come to the next o
 Hopefully, we are not going to make a year long pause like we did between this and the last one.</p>
 <p>
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;img&#x2F;meetup-vol-2&#x2F;1.jpg"
     alt="Null Object tech meetup atmosphere"
   />
+  
 
 
 
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;img&#x2F;meetup-vol-2&#x2F;2.jpg"
     alt="Stanko Tadić talking at the meetup"
   />
+  
 
 
 
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;img&#x2F;meetup-vol-2&#x2F;3.jpg"
     alt="Audience"
   />
+  
 
 </p>
 
@@ -10708,10 +10847,11 @@ But I did not find anything lightweight. There is a crazy trend in JavaScript wo
 <a href="https:&#x2F;&#x2F;muffinman.io&#x2F;react-slider&#x2F;" class="image__link">
 
   <img
-    class="image image--md  "
+    class="image image--md   "
     src="&#x2F;img&#x2F;projects&#x2F;react-slider.png"
     alt="Demo - React slider with touch support"
   />
+  
 
 </a>
 
@@ -10872,10 +11012,11 @@ It is fully responsive, and on touch devices, direction depends of where you tap
 <a href="https:&#x2F;&#x2F;muffinman.io&#x2F;cube-3D-rotate-grid&#x2F;" class="image__link">
 
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;img&#x2F;projects&#x2F;cube-3D-rotate-grid.png"
     alt="Demo - 3D Rotating cubes hover effect"
   />
+  
 
 </a>
 
@@ -10906,10 +11047,11 @@ and decided to make it for fun. It didn't include mobile/responsive solution, so
 <a href="https:&#x2F;&#x2F;muffinman.io&#x2F;animated-onboarding&#x2F;" class="image__link">
 
   <img
-    class="image image--lg  "
+    class="image image--lg   "
     src="&#x2F;img&#x2F;projects&#x2F;animated-onboarding.png"
     alt="Animated onboarding demo"
   />
+  
 
 </a>
 
