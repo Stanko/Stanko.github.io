@@ -131,14 +131,15 @@
   transition: all $time;
   color: var(--link-color);
   // Messy as text-decoration props support is weird
-  text-underline-offset: 2rem;
-  text-decoration: underline;
-  text-decoration: 1px underline var(--link-underline-color);
-  text-decoration-color: var(--link-underline-color);
   -webkit-text-decoration-color: var(--link-underline-color);
+  -webkit-text-decoration-line: underline;
+  text-decoration-color: var(--link-underline-color);
+  text-decoration-line: underline;
+  text-underline-offset: 2rem;
+  text-decoration-thickness: 1px;
 
   &:hover {
-    text-decoration-color: currentColor;
     -webkit-text-decoration-color: currentColor;
+    text-decoration-color: currentColor;
   }
 }

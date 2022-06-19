@@ -188,6 +188,17 @@ $container-inner-width: $container-width - (2 * $gutter-lg);
   display: block;
 }
 
+.image--caption {
+  margin-bottom: 0;
+}
+
+.image__caption {
+  display: block;
+  font-size: 0.8em;
+  margin-bottom: $spacing-md;
+  margin-top: $spacing-sm;
+}
+
 // ------ Resize div
 
 .resize {
