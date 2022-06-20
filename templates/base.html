@@ -93,7 +93,7 @@
 
   {% include "partials/menu-modal.html" %}
 
-  {% if config.mode =="Serve" %}
+  {% if config.mode == "Serve" %}
     <script>
       {% include "partials/search-data.html" %}
     </script>
@@ -105,8 +105,9 @@
 
   {% block scripts %} {% endblock %}
 
+  {% if config.mode == "Build" %}
   <script>
-    if (window.location.hostname !== 'localhost' && window.location.hostname !== 'motorhead.local' && window.location.hostname !== '0.0.0.0') {
+    if (window.location.hostname.indexOf('local') > -1 && window.location.hostname !== '0.0.0.0') {
       (function() {
         window.counter = 'https://muffinman_io.goatcounter.com/count';
         var script = document.createElement('script');
@@ -117,5 +118,6 @@
       })();
     }
   </script>
+  {% endif %}
 </body>
 </html>

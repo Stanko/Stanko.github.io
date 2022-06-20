@@ -2,7 +2,7 @@
 <div class="sharing">
   <div class="h4">Share on:</div>
   <div class="sharing__buttons">
-    {% set title = page.title | urlencode %}
+    {% set title = page.title | striptags | urlencode %}
     {% set url = page.permalink | urlencode %}
     <!-- HN -->
     <a
