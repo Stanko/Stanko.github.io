@@ -5,8 +5,195 @@
 	<link href="https://muffinman.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://muffinman.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-06-17T00:00:00+00:00</updated>
+	<updated>2022-06-20T00:00:00+00:00</updated>
 	<id>https://muffinman.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Introducing keen</title>
+		<published>2022-06-20T00:00:00+00:00</published>
+		<updated>2022-06-20T00:00:00+00:00</updated>
+		<link href="https://muffinman.io/blog/introducing-keen-npm-package-boilerplate/" type="text/html"/>
+		<id>https://muffinman.io/blog/introducing-keen-npm-package-boilerplate/</id>
+    <author>
+      <name>Stanko</name>
+    </author>
+		<content type="html"><p>As someone who maintains a couple of npm packages, I got frustrated by all of the notifications about security issues in my dev dependencies. In 99.99% I wasn't even using the vulnerable code, and usually it would be buried deep in the dependency tree.</p>
+<p>Therefore, I decided to revisit and simplify my workflow. These were the main things I wanted to have:</p>
+<ul>
+<li>Use TypeScript and generate type definitions</li>
+<li>Generate both ESM and CJS modules</li>
+<li>Reduce the number of dev dependencies</li>
+<li>Have an easy way to develop and deploy a demo page</li>
+</ul>
+<p>Less dependencies makes maintenance easier and code is less prone to the security issues.</p>
+<h2 id="keen">Keen<a
+  class="header-anchor"
+  href="#keen" aria-label="Anchor link for: keen"
+  title="Anchor link for: keen"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>So without further ado I present you <a href="https://github.com/Stanko/keen/">keen</a>, my npm package boilerplate. It does all of the things mentioned above with only two dependencies, <code>esbuild</code> and <code>typescript</code>.</p>
+
+  <img
+    class="image   image--shadow image--caption"
+    src="&#x2F;img&#x2F;keen&#x2F;dependencies.png"
+    alt="Terminal windows with keen&#x27;s node_modules folder listed"
+  />
+  <small class="image__caption">These are all dependencies keen comes with out of the box.</small>
+
+<p><a href="esbuild.github.io/">esbuild</a> handles local development and builds a demo page. TypeScript takes care of building ESM and CJS modules as well as type definitions.</p>
+<h3 id="disclaimer">Disclaimer<a
+  class="header-anchor"
+  href="#disclaimer" aria-label="Anchor link for: disclaimer"
+  title="Anchor link for: disclaimer"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h3>
+<p>Keen is minimal and opinionated on purpose, and it might now fit your workflow. If you want something more robust and don't mind having more dependencies, check tools like <a href="https://github.com/egoist/tsup">tsup</a> or <a href="https://github.com/unjs/unbuild">unbuild</a>.</p>
+<h3 id="esm-and-cjs-modules">ESM and CJS modules<a
+  class="header-anchor"
+  href="#esm-and-cjs-modules" aria-label="Anchor link for: esm-and-cjs-modules"
+  title="Anchor link for: esm-and-cjs-modules"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h3>
+<p>It helps your users to have both types of modules available. The main blocker is that you can't use ESM packages in CJS.</p>
+<p>That's why I have two builds which are using different TypeScript configurations. Both config files extend <a href="https://github.com/Stanko/keen/blob/dev/tsconfig-base.json">tsconfig-base.json</a> and they just define the appropriate module type and transpile target:</p>
+
+
+<div class="spoiler ">
+  <button
+    aria-expanded="false"
+    aria-controls='spoiler-1655721252073981968'
+    class="spoiler__toggle btn btn--sm btn--empty"
+  >
+    <span
+      class="spoiler__show"
+      
+    >
+      
+        Show tsconfig-esm.json
+      
+      + <!-- TODO add icon -->
+    </span>
+    <span
+      class="spoiler__hide"
+      style="display: none"
+    >
+      
+        Hide tsconfig-esm.json
+      
+      - <!-- TODO add icon -->
+    </span>
+  </button>
+
+  <div
+    id='spoiler-1655721252073981968'
+    class="spoiler__content"
+    aria-hidden="true"
+    style="display: none"
+  >
+    <pre data-lang="json" style="background-color:#282c34;color:#dcdfe4;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  </span><span style="color:#98c379;">&quot;extends&quot;</span><span>: </span><span style="color:#98c379;">&quot;./tsconfig-base.json&quot;</span><span>,
+</span><span>  </span><span style="color:#98c379;">&quot;compilerOptions&quot;</span><span>: {
+</span><span>    </span><span style="color:#98c379;">&quot;module&quot;</span><span>: </span><span style="color:#98c379;">&quot;ES2020&quot;</span><span>,
+</span><span>    </span><span style="color:#98c379;">&quot;outDir&quot;</span><span>: </span><span style="color:#98c379;">&quot;dist/esm&quot;</span><span>,
+</span><span>    </span><span style="color:#98c379;">&quot;target&quot;</span><span>: </span><span style="color:#98c379;">&quot;ES2015&quot;
+</span><span>  }
+</span><span>}
+</span></code></pre>
+
+  </div>
+</div>
+
+
+<div class="spoiler ">
+  <button
+    aria-expanded="false"
+    aria-controls='spoiler-1655721252074269972'
+    class="spoiler__toggle btn btn--sm btn--empty"
+  >
+    <span
+      class="spoiler__show"
+      
+    >
+      
+        Show tsconfig-cjs.json
+      
+      + <!-- TODO add icon -->
+    </span>
+    <span
+      class="spoiler__hide"
+      style="display: none"
+    >
+      
+        Hide tsconfig-cjs.json
+      
+      - <!-- TODO add icon -->
+    </span>
+  </button>
+
+  <div
+    id='spoiler-1655721252074269972'
+    class="spoiler__content"
+    aria-hidden="true"
+    style="display: none"
+  >
+    <pre data-lang="json" style="background-color:#282c34;color:#dcdfe4;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  </span><span style="color:#98c379;">&quot;extends&quot;</span><span>: </span><span style="color:#98c379;">&quot;./tsconfig-base.json&quot;</span><span>,
+</span><span>  </span><span style="color:#98c379;">&quot;compilerOptions&quot;</span><span>: {
+</span><span>    </span><span style="color:#98c379;">&quot;module&quot;</span><span>: </span><span style="color:#98c379;">&quot;commonjs&quot;</span><span>,
+</span><span>    </span><span style="color:#98c379;">&quot;outDir&quot;</span><span>: </span><span style="color:#98c379;">&quot;dist/cjs&quot;</span><span>,
+</span><span>    </span><span style="color:#98c379;">&quot;target&quot;</span><span>: </span><span style="color:#98c379;">&quot;ES2015&quot;
+</span><span>  }
+</span><span>}
+</span></code></pre>
+
+  </div>
+</div>
+<p>I won't go into more details, but there are a couple of other things I had to setup. Code I ended up using is heavily based on these two articles. If you are interested to find out more, check them out:</p>
+<ul>
+<li><a href="https://www.sensedeep.com/blog/posts/2021/how-to-create-single-source-npm-module.html">How to Create a Hybrid NPM Module for ESM and CommonJS.</a></li>
+<li><a href="https://antfu.me/posts/publish-esm-and-cjs">Publish ESM and CJS in a single package</a></li>
+</ul>
+<h3 id="local-development-and-demo-page">Local development and demo page<a
+  class="header-anchor"
+  href="#local-development-and-demo-page" aria-label="Anchor link for: local-development-and-demo-page"
+  title="Anchor link for: local-development-and-demo-page"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h3>
+<p>In the past I used <code>webpack</code>, then switched to <code>parcel</code> and now ended up using <code>esbuild</code>. It is a super fast JavaScript bundler and it has no dependencies.</p>
+<p>It includes <a href="https://esbuild.github.io/api/#serve">serve</a> option which allows me to run a simple development server while working on the library. Just run <code>npm start</code> and you'll get <code>docs/index.html</code> page served on <a href="http://localhost:8000">localhost:8000</a>.</p>
+<p>It doesn't include HMR nor live reload, but I don't mind it.</p>
+<h4 id="github-pages">GitHub pages<a
+  class="header-anchor"
+  href="#github-pages" aria-label="Anchor link for: github-pages"
+  title="Anchor link for: github-pages"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h4>
+<p>Demo page was made with GitHub pages in mind. Once built, you should commit <code>docs/build</code> and push it to GitHub. Then in GitHub Pages settings select your branch and <code>/docs</code> folder.</p>
+<p>Here are two examples:</p>
+<ul>
+<li><a href="https://muffinman.io/react-plx/">React Plx v2</a></li>
+<li><a href="https://muffinman.io/react-animate-height/">React Animate Height v3</a>.</li>
+</ul>
+<p>Keen was actually extracted from the workflow I created for the new version of Animate Height.</p>
+<h2 id="what-keen-doesn-t-include">What keen doesn't include<a
+  class="header-anchor"
+  href="#what-keen-doesn-t-include" aria-label="Anchor link for: what-keen-doesn-t-include"
+  title="Anchor link for: what-keen-doesn-t-include"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>The main premise was to keep it as simple as possible, to make maintenance easier. So I left out some things on purpose. To name a few:</p>
+<ul>
+<li>Tests</li>
+<li>CSS pre/post processors</li>
+<li>HMR / Live reload - for the pure esbuild solution, check <a href="https://github.com/evanw/esbuild/issues/802#issuecomment-819578182">this comment</a></li>
+<li>License</li>
+</ul>
+<p>I add these features when I need them on project basis.</p>
+<p>Hopefully, you'll find keen useful and customize it to your needs. If you do, please let me know!</p>
+
+    </content>
+
+	</entry>
 	<entry xml:lang="en">
 		<title>Back to the basics</title>
 		<published>2022-06-17T00:00:00+00:00</published>
@@ -6248,7 +6435,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1655627961362709811'
+    aria-controls='spoiler-1655721251948252612'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6272,7 +6459,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
   </button>
 
   <div
-    id='spoiler-1655627961362709811'
+    id='spoiler-1655721251948252612'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6383,7 +6570,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1655627961364846610'
+    aria-controls='spoiler-1655721251949975936'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6407,7 +6594,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
   </button>
 
   <div
-    id='spoiler-1655627961364846610'
+    id='spoiler-1655721251949975936'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6565,7 +6752,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1655627961371201809'
+    aria-controls='spoiler-1655721251954185095'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6589,7 +6776,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
   </button>
 
   <div
-    id='spoiler-1655627961371201809'
+    id='spoiler-1655721251954185095'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6712,7 +6899,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1655627961376099208'
+    aria-controls='spoiler-1655721251958754959'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6736,7 +6923,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
   </button>
 
   <div
-    id='spoiler-1655627961376099208'
+    id='spoiler-1655721251958754959'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6946,7 +7133,7 @@ next to js and html files.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1655627961405380901'
+    aria-controls='spoiler-1655721251994475358'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6970,7 +7157,7 @@ next to js and html files.</p>
   </button>
 
   <div
-    id='spoiler-1655627961405380901'
+    id='spoiler-1655721251994475358'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -7125,7 +7312,7 @@ in it.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1655627961415969899'
+    aria-controls='spoiler-1655721252004801702'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -7149,7 +7336,7 @@ in it.</p>
   </button>
 
   <div
-    id='spoiler-1655627961415969899'
+    id='spoiler-1655721252004801702'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
