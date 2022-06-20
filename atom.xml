@@ -47,7 +47,7 @@
   title="Anchor link for: disclaimer"
 > <span class="sr-only" aria-hidden="true">#</span></a>
 </h3>
-<p>Keen is minimal and opinionated on purpose, and it might now fit your workflow. If you want something more robust and don't mind having more dependencies, check tools like <a href="https://github.com/egoist/tsup">tsup</a> or <a href="https://github.com/unjs/unbuild">unbuild</a>.</p>
+<p>Keen is minimal and opinionated on purpose, and it might not fit your workflow. If you want something more robust and don't mind having more dependencies, check tools like <a href="https://github.com/egoist/tsup">tsup</a> or <a href="https://github.com/unjs/unbuild">unbuild</a>.</p>
 <h3 id="esm-and-cjs-modules">ESM and CJS modules<a
   class="header-anchor"
   href="#esm-and-cjs-modules" aria-label="Anchor link for: esm-and-cjs-modules"
@@ -61,7 +61,7 @@
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1655721252073981968'
+    aria-controls='spoiler-1655741275547695319'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -85,7 +85,7 @@
   </button>
 
   <div
-    id='spoiler-1655721252073981968'
+    id='spoiler-1655741275547695319'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -107,7 +107,7 @@
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1655721252074269972'
+    aria-controls='spoiler-1655741275548024045'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -131,7 +131,7 @@
   </button>
 
   <div
-    id='spoiler-1655721252074269972'
+    id='spoiler-1655741275548024045'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -148,7 +148,7 @@
 
   </div>
 </div>
-<p>I won't go into more details, but there are a couple of other things I had to setup. Code I ended up using is heavily based on these two articles. If you are interested to find out more, check them out:</p>
+<p>I won't go into more details, but there are a couple of other things I had to setup. The code I ended up using is heavily based on these two articles. If you are interested to find out more, check them out:</p>
 <ul>
 <li><a href="https://www.sensedeep.com/blog/posts/2021/how-to-create-single-source-npm-module.html">How to Create a Hybrid NPM Module for ESM and CommonJS.</a></li>
 <li><a href="https://antfu.me/posts/publish-esm-and-cjs">Publish ESM and CJS in a single package</a></li>
@@ -189,7 +189,7 @@
 <li>License</li>
 </ul>
 <p>I add these features when I need them on project basis.</p>
-<p>Hopefully, you'll find keen useful and customize it to your needs. If you do, please let me know!</p>
+<p>Hopefully, you'll find keen useful and customize it to your own needs. If you do, please let me know!</p>
 
     </content>
 
@@ -6435,7 +6435,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1655721251948252612'
+    aria-controls='spoiler-1655741275362567386'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6459,7 +6459,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
   </button>
 
   <div
-    id='spoiler-1655721251948252612'
+    id='spoiler-1655741275362567386'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6570,7 +6570,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1655721251949975936'
+    aria-controls='spoiler-1655741275365767136'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6594,7 +6594,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
   </button>
 
   <div
-    id='spoiler-1655721251949975936'
+    id='spoiler-1655741275365767136'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6752,7 +6752,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1655721251954185095'
+    aria-controls='spoiler-1655741275372448756'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6776,7 +6776,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
   </button>
 
   <div
-    id='spoiler-1655721251954185095'
+    id='spoiler-1655741275372448756'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6899,7 +6899,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1655721251958754959'
+    aria-controls='spoiler-1655741275378051893'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6923,7 +6923,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
   </button>
 
   <div
-    id='spoiler-1655721251958754959'
+    id='spoiler-1655741275378051893'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -7133,7 +7133,7 @@ next to js and html files.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1655721251994475358'
+    aria-controls='spoiler-1655741275426963307'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -7157,7 +7157,7 @@ next to js and html files.</p>
   </button>
 
   <div
-    id='spoiler-1655721251994475358'
+    id='spoiler-1655741275426963307'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -7312,7 +7312,7 @@ in it.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1655721252004801702'
+    aria-controls='spoiler-1655741275445587659'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -7336,7 +7336,7 @@ in it.</p>
   </button>
 
   <div
-    id='spoiler-1655721252004801702'
+    id='spoiler-1655741275445587659'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
