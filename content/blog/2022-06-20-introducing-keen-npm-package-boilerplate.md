@@ -38,7 +38,7 @@ So without further ado I present you [keen](https://github.com/Stanko/keen/), my
 
 ### Disclaimer
 
-Keen is minimal and opinionated on purpose, and it might now fit your workflow. If you want something more robust and don't mind having more dependencies, check tools like [tsup](https://github.com/egoist/tsup) or [unbuild](https://github.com/unjs/unbuild).
+Keen is minimal and opinionated on purpose, and it might not fit your workflow. If you want something more robust and don't mind having more dependencies, check tools like [tsup](https://github.com/egoist/tsup) or [unbuild](https://github.com/unjs/unbuild).
 
 ### ESM and CJS modules
 
@@ -75,7 +75,7 @@ That's why I have two builds which are using different TypeScript configurations
 ', show="Show tsconfig-cjs.json", hide="Hide tsconfig-cjs.json" )}}
 
 
-I won't go into more details, but there are a couple of other things I had to setup. Code I ended up using is heavily based on these two articles. If you are interested to find out more, check them out:
+I won't go into more details, but there are a couple of other things I had to setup. The code I ended up using is heavily based on these two articles. If you are interested to find out more, check them out:
 
 * [How to Create a Hybrid NPM Module for ESM and CommonJS.](https://www.sensedeep.com/blog/posts/2021/how-to-create-single-source-npm-module.html)
 * [Publish ESM and CJS in a single package](https://antfu.me/posts/publish-esm-and-cjs)
@@ -112,7 +112,7 @@ The main premise was to keep it as simple as possible, to make maintenance easie
 
 I add these features when I need them on project basis.
 
-Hopefully, you'll find keen useful and customize it to your needs. If you do, please let me know!
+Hopefully, you'll find keen useful and customize it to your own needs. If you do, please let me know!
 
 
 
