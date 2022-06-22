@@ -7,7 +7,6 @@ tags = ["blog", "writing", "fun", "brand"]
 
 [extra]
 intro = "One would think that my blog becoming moderately popular would inspire me to write more, but it was the opposite."
-image = "/img/muffinman-2017.png"
 
 +++
 
