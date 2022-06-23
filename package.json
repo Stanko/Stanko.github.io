@@ -9,10 +9,10 @@
   "author": "Stanko",
   "license": "SEE LICENSE IN LICENSE.md",
   "dependencies": {
-    "animated-scroll-to": "^2.2.0",
-    "esbuild": "^0.14.28",
-    "fuzzysort": "^1.2.1",
+    "animated-scroll-to": "^2.3.0",
+    "esbuild": "^0.14.47",
+    "fuzzysort": "^2.0.1",
     "micromodal": "^0.4.10",
-    "photoswipe": "^5.2.2"
+    "photoswipe": "^5.2.8"
   }
 }
