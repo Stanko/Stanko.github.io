@@ -9,8 +9,8 @@ minify_html = true
 generate_feed = true
 
 taxonomies = [
-  { name = "category", feed = true},
-  { name = "tags", feed = false},
+  { name = "category", feed = true, render = false },
+  { name = "tags", feed = false, render = false },
 ]
 
 [markdown]
