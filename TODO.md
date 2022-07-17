@@ -17,3 +17,26 @@
 * for art - custom titles for search
 * consider fixed main menu
 
+
+## ffmpeg commands
+
+```sh
+# convert
+ffmpeg -i video.mov -vcodec h264 -acodec copy video.mp4
+
+# crop
+ffmpeg -i video.mp4 -filter:v "crop=out_w:out_h:x:y" video-cropped.mp4
+
+# levels
+ffmpeg -i video.mp4 -vf pp=al video-levels.mp4
+```
+
+## Zola notes
+
+### Debug `page` variable
+
+```html
+<pre style="padding: 20px; background: #f4f4f4; color: #111; font-size: 14px; overflow: auto; max-width: 100%">
+  {{page | json_encode(pretty=true) | safe }}
+</pre>
+```

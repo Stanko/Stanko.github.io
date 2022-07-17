@@ -7,7 +7,7 @@ size = "15x15cm"
 paper = "Fabriano Bristol 250gsm"
 pens = "Pigma Micron"
 
-iterations = 1
+iterations = 3
 image = "/art/branches-01-untitled/0.jpg"
 
 filter = ["available"]

@@ -4,8 +4,7 @@ find . -name '.DS_Store' -type f -delete
 
 cp ./node_modules/photoswipe/dist/photoswipe.css ./sass/components/_photoswipe.scss
 
-# TODO switch to brew version when it is released
-./zola-mac-0.16 build
+zola build
 
 if [ $? -eq 0 ]
 then
