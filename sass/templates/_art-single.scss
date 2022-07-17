@@ -96,6 +96,15 @@
   }
 }
 
+.art-single__video-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
 .art-single__video {
   background: var(--neutral-500);
+  pointer-events: all;
 }

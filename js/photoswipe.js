@@ -20,7 +20,9 @@ if (document.querySelector(".gallery")) {
   lightbox.addFilter("itemData", (itemData) => {
     if (itemData.element.dataset.isVideo) {
       return {
-        html: `<video class="art-single__video" src="${itemData.src}#t=0.001" controls playsinline="true" />`,
+        html: `<div class="art-single__video-wrapper">
+          <video class="art-single__video" src="${itemData.src}#t=0.001" controls playsinline="true" />
+        </div>`,
       };
     }
 
