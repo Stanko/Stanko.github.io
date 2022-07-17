@@ -5,8 +5,37 @@
 	<link href="https://muffinman.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://muffinman.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-06-20T00:00:00+00:00</updated>
+	<updated>2022-07-13T00:00:00+00:00</updated>
 	<id>https://muffinman.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Core</title>
+		<published>2022-07-13T00:00:00+00:00</published>
+		<updated>2022-07-13T00:00:00+00:00</updated>
+		<link href="https://muffinman.io/art/core/" type="text/html"/>
+		<id>https://muffinman.io/art/core/</id>
+    <author>
+      <name>Stanko</name>
+    </author>
+		<content type="html"><p>I'll be honest, this one came out as an accident. I forgot to revert some old code and it just happened. To me, it resembles atmosphere or a cell. My favorite from the series so far.</p>
+<p>It is plotted with pens of two different width, which gives it more depth, especially when you see it in person.</p>
+
+    </content>
+
+	</entry>
+	<entry xml:lang="en">
+		<title>Untitled</title>
+		<published>2022-07-03T00:00:00+00:00</published>
+		<updated>2022-07-03T00:00:00+00:00</updated>
+		<link href="https://muffinman.io/art/branches-02-untitled/" type="text/html"/>
+		<id>https://muffinman.io/art/branches-02-untitled/</id>
+    <author>
+      <name>Stanko</name>
+    </author>
+		<content type="html"><p>The second plot from the series. Polygons instead of the circle, to get this cube like shape.</p>
+
+    </content>
+
+	</entry>
 	<entry xml:lang="en">
 		<title>Introducing keen</title>
 		<published>2022-06-20T00:00:00+00:00</published>
@@ -61,7 +90,7 @@
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1658047383212093737'
+    aria-controls='spoiler-1658057003090797749'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -85,7 +114,7 @@
   </button>
 
   <div
-    id='spoiler-1658047383212093737'
+    id='spoiler-1658057003090797749'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -107,7 +136,7 @@
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1658047383212789246'
+    aria-controls='spoiler-1658057003091196953'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -131,7 +160,7 @@
   </button>
 
   <div
-    id='spoiler-1658047383212789246'
+    id='spoiler-1658057003091196953'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6435,7 +6464,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1658047383257485418'
+    aria-controls='spoiler-1658057003010504173'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6459,7 +6488,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
   </button>
 
   <div
-    id='spoiler-1658047383257485418'
+    id='spoiler-1658057003010504173'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6570,7 +6599,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1658047383259360642'
+    aria-controls='spoiler-1658057003012981894'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6594,7 +6623,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
   </button>
 
   <div
-    id='spoiler-1658047383259360642'
+    id='spoiler-1658057003012981894'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6752,7 +6781,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1658047383264081602'
+    aria-controls='spoiler-1658057003033227365'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6776,7 +6805,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
   </button>
 
   <div
-    id='spoiler-1658047383264081602'
+    id='spoiler-1658057003033227365'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6899,7 +6928,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1658047383267110341'
+    aria-controls='spoiler-1658057003039787720'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6923,7 +6952,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
   </button>
 
   <div
-    id='spoiler-1658047383267110341'
+    id='spoiler-1658057003039787720'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -7133,7 +7162,7 @@ next to js and html files.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1658047383275908453'
+    aria-controls='spoiler-1658057003052634028'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -7157,7 +7186,7 @@ next to js and html files.</p>
   </button>
 
   <div
-    id='spoiler-1658047383275908453'
+    id='spoiler-1658057003052634028'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -7312,7 +7341,7 @@ in it.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1658047383281671927'
+    aria-controls='spoiler-1658057003071622988'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -7336,7 +7365,7 @@ in it.</p>
   </button>
 
   <div
-    id='spoiler-1658047383281671927'
+    id='spoiler-1658057003071622988'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
