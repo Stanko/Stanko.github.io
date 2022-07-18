@@ -77,6 +77,7 @@
   border-radius: $radius-xs;
   background-color: var(--neutral-50);
   transition: background $time;
+  margin-top: auto;
 }
 
 .art__single-image {
@@ -94,6 +95,6 @@
   }
 
   @include lg {
-    padding: 25rem;
+    padding: 20rem;
   }
 }

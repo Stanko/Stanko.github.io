@@ -3,7 +3,7 @@ title = "Libraries I use for generative art"
 
 [taxonomies]
 category = ["Generative"]
-tags = ["js", "svg", "spiral"]
+tags = ["js", "svg", "math", "plotting"]
 
 [extra]
 image = "/img/js-libs/belgrade.jpg"
