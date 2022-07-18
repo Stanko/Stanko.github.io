@@ -15,7 +15,11 @@
 </div>
 
 <div class="container">
-  <h2 class="home__section-title">Generative Art</h2>
+  <h2 class="home__section-title">
+    <a href="/art">
+      Generative Art{% include "partials/svg-post-arrow.html" %}
+    </a>
+  </h2>
 </div>
 
 {% set drawings = get_section(path="art/_index.md") -%}
@@ -31,7 +35,11 @@
 </div>
 
 <div class="container">
-  <h2 class="home__section-title">Blog Posts</h2>
+  <h2 class="home__section-title">
+    <a href="/blog">
+      Blog Posts{% include "partials/svg-post-arrow.html" %}
+    </a>
+  </h2>
 </div>
 
 {% set blog_posts = get_section(path="blog/_index.md") -%}

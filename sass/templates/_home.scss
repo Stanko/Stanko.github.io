@@ -21,6 +21,10 @@
   @include md {
     margin-bottom: 20rem;
   }
+
+  a {
+    color: var(--text-color);
+  }
 }
 
 .home__see-more {
