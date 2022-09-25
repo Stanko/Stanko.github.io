@@ -44,9 +44,9 @@ In generative programming it is super important to be able to repeat the same ou
 
 For random number generator seeds, I like to use real words instead of randomly generated strings. This library is a simple dictionary of couple of thousands english words.
 
-##### [asm-noise](https://github.com/WesleyClements/asm-noise)
+##### [simplex-noise](https://github.com/jwagner/simplex-noise.js)
 
-Fast implementation of Open Simplex and Perlin noise.
+Fast implementation of Open Simplex noise.
 
 ##### [poisson-disk-sampling](https://github.com/kchapelier/poisson-disk-sampling)
 
