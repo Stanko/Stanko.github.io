@@ -90,7 +90,7 @@
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1662218946107016178'
+    aria-controls='spoiler-1664131825813382028'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -114,7 +114,7 @@
   </button>
 
   <div
-    id='spoiler-1662218946107016178'
+    id='spoiler-1664131825813382028'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -136,7 +136,7 @@
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1662218946107267681'
+    aria-controls='spoiler-1664131825813693349'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -160,7 +160,7 @@
   </button>
 
   <div
-    id='spoiler-1662218946107267681'
+    id='spoiler-1664131825813693349'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -1006,13 +1006,13 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 > <span class="sr-only" aria-hidden="true">#</span></a>
 </h5>
 <p>For random number generator seeds, I like to use real words instead of randomly generated strings. This library is a simple dictionary of couple of thousands english words.</p>
-<h5 id="asm-noise"><a href="https://github.com/WesleyClements/asm-noise">asm-noise</a><a
+<h5 id="simplex-noise"><a href="https://github.com/jwagner/simplex-noise.js">simplex-noise</a><a
   class="header-anchor"
-  href="#asm-noise" aria-label="Anchor link for: asm-noise"
-  title="Anchor link for: asm-noise"
+  href="#simplex-noise" aria-label="Anchor link for: simplex-noise"
+  title="Anchor link for: simplex-noise"
 > <span class="sr-only" aria-hidden="true">#</span></a>
 </h5>
-<p>Fast implementation of Open Simplex and Perlin noise.</p>
+<p>Fast implementation of Open Simplex noise.</p>
 <h5 id="poisson-disk-sampling"><a href="https://github.com/kchapelier/poisson-disk-sampling">poisson-disk-sampling</a><a
   class="header-anchor"
   href="#poisson-disk-sampling" aria-label="Anchor link for: poisson-disk-sampling"
@@ -6464,7 +6464,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1662218946000366870'
+    aria-controls='spoiler-1664131825710347716'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6488,7 +6488,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
   </button>
 
   <div
-    id='spoiler-1662218946000366870'
+    id='spoiler-1664131825710347716'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6599,7 +6599,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1662218946038435673'
+    aria-controls='spoiler-1664131825712729076'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6623,7 +6623,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
   </button>
 
   <div
-    id='spoiler-1662218946038435673'
+    id='spoiler-1664131825712729076'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6781,7 +6781,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1662218946049146914'
+    aria-controls='spoiler-1664131825719897757'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6805,7 +6805,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
   </button>
 
   <div
-    id='spoiler-1662218946049146914'
+    id='spoiler-1664131825719897757'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6928,7 +6928,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1662218946053118367'
+    aria-controls='spoiler-1664131825723486797'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6952,7 +6952,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
   </button>
 
   <div
-    id='spoiler-1662218946053118367'
+    id='spoiler-1664131825723486797'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -7162,7 +7162,7 @@ next to js and html files.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1662218946077713591'
+    aria-controls='spoiler-1664131825749410436'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -7186,7 +7186,7 @@ next to js and html files.</p>
   </button>
 
   <div
-    id='spoiler-1662218946077713591'
+    id='spoiler-1664131825749410436'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -7341,7 +7341,7 @@ in it.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1662218946083483267'
+    aria-controls='spoiler-1664131825756402005'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -7365,7 +7365,7 @@ in it.</p>
   </button>
 
   <div
-    id='spoiler-1662218946083483267'
+    id='spoiler-1664131825756402005'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
