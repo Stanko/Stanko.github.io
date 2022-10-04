@@ -14,9 +14,6 @@
 * parallax
 * clean up gallery/art-single SCSS (tall/wide)
 * custom icons for photoswipe
-* for art - custom titles for search
-* consider switching to https://github.com/leeoniya/uFuzzy
-
 
 ## ffmpeg commands
 
