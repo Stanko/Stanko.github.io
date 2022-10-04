@@ -6,6 +6,7 @@ intro = "Finely tuned vector field. Myself for scale."
 size = "70x40cm"
 paper = "200gsm"
 pens = "Uni-ball Signo UM-153"
+searchTitle = "Black Holes (black and white version)"
 
 iterations = 1
 image = "/art/black-holes/0.jpg"

@@ -6,6 +6,7 @@ intro = "The best photo I had is this one that I took while plotting was still i
 size = "42x23cm"
 paper = "Fabriano Bristol 250gsm"
 pens = "Pigma Micron, Sakura Gelly Rolls"
+searchTitle = "Stranded (red and blue version)"
 
 iterations = 3
 image = "/art/stranded-blue-red/thumb.jpg"

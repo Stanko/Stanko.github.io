@@ -15,7 +15,7 @@
 * clean up gallery/art-single SCSS (tall/wide)
 * custom icons for photoswipe
 * for art - custom titles for search
-* consider fixed main menu
+* consider switching to https://github.com/leeoniya/uFuzzy
 
 
 ## ffmpeg commands

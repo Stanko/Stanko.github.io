@@ -10,7 +10,7 @@ var searchData = [
 {% endfor -%}
 {#- drawings -#}
 {% for item in art_pieces.pages -%}
-{ t: "{{ item.title | striptags | safe }}", u: "{{ item.path }}", e: "Art" },
+{ t: "{% if item.extra.searchTitle %}{{ item.extra.searchTitle | striptags | safe }}{% else %}{{ item.title | striptags | safe }}{% endif %}", u: "{{ item.path }}", e: "Art" },
 {% endfor -%}
 {#- pages -#}
 { t: "Generative Art", u: "/art/", e: "Page" },

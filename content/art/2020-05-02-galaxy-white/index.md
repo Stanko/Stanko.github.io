@@ -6,6 +6,7 @@ intro = "Super wide, plotted on two separate papers. Pen for scale."
 size = "83x30cm (2 x A3)"
 paper = "Fabriano Bristol 250gsm"
 pens = "Pigma Micron"
+searchTitle = "Galaxy (white version)"
 
 iterations = 2
 image = "/art/galaxy-white/0.jpg"

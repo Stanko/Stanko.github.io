@@ -93,7 +93,7 @@
 
   {% include "partials/menu-modal.html" %}
 
-  {% if config.mode == "Serve" %}
+  {% if config.mode == "serve" %}
     <script>
       {% include "partials/search-data.html" %}
     </script>
@@ -105,7 +105,7 @@
 
   {% block scripts %} {% endblock %}
 
-  {% if config.mode == "Build" %}
+  {% if config.mode == "build" %}
     <script data-goatcounter="https://muffinman_io.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   {% endif %}
 </body>

@@ -6,6 +6,7 @@ intro = ""
 size = "30x30cm"
 paper = "Fabriano Black Black 300gsm"
 pens = "Uni-ball Signo UM-153"
+searchTitle = "Untitled (3D boxes)"
 
 iterations = 2
 image = "/art/boxes-untitled/0.jpg"

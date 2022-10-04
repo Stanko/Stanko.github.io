@@ -1,4 +1,5 @@
-import fuzzysort from "fuzzysort";
+// TODO consider switching to https://github.com/leeoniya/uFuzzy
+import uFuzzy from "@leeoniya/ufuzzy";
 
 const searchInput = document.querySelector(".search__input");
 const searchResults = document.querySelector(".search__results");
@@ -9,6 +10,13 @@ let previousSearchTerm;
 const MIN_CHARACTERS = 1;
 const RESULT_FOCUS_CLASS = "search__result--focused";
 const MAX_RESULTS = 15;
+
+const fuzzy = new uFuzzy({
+  intraIns: Infinity,
+});
+
+// uFuzzy works only with arrays of strings and returns indexes
+const titles = searchData.map((item) => item.t);
 
 // Clean search input on page refresh
 searchInput.value = "";
@@ -32,26 +40,35 @@ export function search() {
   modalNav.style.display = "none";
   previousSearchTerm = searchTerm;
 
-  const results = fuzzysort.go(searchTerm, searchData, {
-    key: "t", // title
-    limit: MAX_RESULTS,
-    threshold: -50000, // don't return bad results
-  });
+  const indexes = fuzzy.filter(titles, searchTerm).slice(0, MAX_RESULTS);
 
-  if (results.length === 0) {
+  if (indexes.length === 0) {
     searchResults.innerHTML = `<div class="search__no-results"><div class="container">No results found for "${searchTerm}"</div></div>`;
   } else {
+    const info = fuzzy.info(indexes, titles, searchTerm);
+    const order = fuzzy.sort(info, titles, searchTerm);
+    const results = order.map((sortIndex) => {
+      const index = indexes[sortIndex];
+      const item = searchData[index];
+
+      return {
+        url: item.u,
+        title: uFuzzy.highlight(item.t, info.ranges[sortIndex]),
+        eyebrow: item.e,
+      };
+    });
+
     const html = results
       .map((result, index) => {
         return `<a class="search__result ${
           index === 0 ? RESULT_FOCUS_CLASS : ""
-        }" href="${result.obj.u}">
+        }" href="${result.url}">
         <div class="container">
-        <div class="search__result-eyebrow">${result.obj.e}</div>
+        <div class="search__result-eyebrow">${result.eyebrow}</div>
         <div class="search__result-title">
-        ${fuzzysort.highlight(
-          result
-        )}<svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" class="post-arrow" aria-hidden="true">
+        ${
+          result.title
+        }<svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" class="post-arrow" aria-hidden="true">
           <path d="M 0 10 30 10 20 0 30 10 20 20" />
         </svg>
         </div>
@@ -59,7 +76,6 @@ export function search() {
         </a>`;
       })
       .join("\n");
-
     searchResults.innerHTML = html;
   }
 }

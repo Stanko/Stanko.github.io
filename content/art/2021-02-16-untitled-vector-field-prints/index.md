@@ -6,6 +6,7 @@ intro = "Colorful blobs following a vector field."
 size = "85x20cm each"
 paper = "Farbiano Cotton Paper 300gsm"
 print = true
+searchTitle = "Untitled (vector field, color prints)"
 
 iterations = 5
 image = "/art/untitled-vector-field-prints/0.jpg"

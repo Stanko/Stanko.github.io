@@ -6,6 +6,7 @@ intro = "I tried adding some depth by plotting on multiple layers, using tracing
 size = "42x30cm"
 paper = "Fabriano Bristol 250gsm, Tracing Paper"
 pens = "Pigma Micron"
+searchTitle = "Untitled (layers with tracing paper)"
 
 iterations = 1
 image = "/art/untitled-tracing-paper/0.jpg"

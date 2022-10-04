@@ -6,6 +6,7 @@ intro = "First plot from the Metaballs series."
 size = "42x30cm"
 paper = "Fabriano Black Black 300gsm"
 pens = "Uni-ball Signo UM-153"
+searchTitle = "Perspective (Metaballs)"
 
 iterations = 1
 image = "/art/metaballs-perspective/0.jpg"

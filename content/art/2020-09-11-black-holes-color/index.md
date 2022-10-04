@@ -6,6 +6,7 @@ intro = "In full neon."
 size = "42x30cm"
 paper = "Fabriano Black Black 300gsm"
 pens = "Gelly Roll Moonlight"
+searchTitle = "Black Holes (color version)"
 
 iterations = 1
 image = "/art/black-holes-color/0.jpg"
