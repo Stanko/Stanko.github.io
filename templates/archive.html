@@ -2,6 +2,13 @@
 
 {% block content %}
 
+<noscript>
+<style>
+/* Open accordion if there is no javascript*/
+:target + .archive__posts { display: block; }
+</style>
+</noscript>
+
 <div class="page__top">
   <div class="container">
     <h1 class="page__title">
