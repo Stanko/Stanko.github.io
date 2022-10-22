@@ -88,19 +88,25 @@
 }
 
 .menu__toggle-fixed-wrapper {
-  border-radius: 50%;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: $radius-sm * 3; // 12px
   padding: 0;
   position: fixed;
   right: 10rem;
   top: 10rem;
   transition: transform $time, opacity $time;
 
+  span {
+    background: var(--neutral-700);
+  }
+
   @include md {
     right: 30rem;
   }
 
   @include lg {
-    background-color: none;
+    // background-color: none;
     top: 20rem;
     right: 80rem;
   }

@@ -27,7 +27,7 @@ MicroModal.init({
     timeout = setTimeout(() => {
       // Disable scroll
       document.documentElement.classList.add("html--overflow-hidden");
-      page.style.marginTop = `-${y}px`;
+      // page.style.marginTop = `-${y}px`;
 
       // Don't auto focus the input on mobile phones
       if (!isTouch || window.innerWidth > 768) {
@@ -41,7 +41,7 @@ MicroModal.init({
   onClose: () => {
     // Enable scroll and reset scroll position
     document.documentElement.classList.remove("html--overflow-hidden");
-    page.style.marginTop = "";
+    // page.style.marginTop = "";
 
     window.scrollTo({
       top: y,

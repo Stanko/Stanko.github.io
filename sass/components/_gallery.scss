@@ -8,7 +8,6 @@ $col-gap-sm: 20rem;
   -webkit-overflow-scrolling: touch;
   margin: 0 #{-$gutter};
   overflow-x: auto;
-  width: 100vw;
   white-space: nowrap;
   padding: 0;
   padding-left: $gutter;
@@ -28,7 +27,10 @@ $col-gap-sm: 20rem;
     }
   }
 
-  // TODO - fix horizontal scrollbars for desktops
+  @include lg {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .gallery__item {

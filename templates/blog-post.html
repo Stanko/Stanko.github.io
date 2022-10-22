@@ -41,6 +41,8 @@
   </div>
 </div>
 
+{% include "partials/svg-keyboard.html" %}
+
 <div class="container post__container">
   {% if page.taxonomies.category is containing("Jekyll") %}
     <div class="notice">
@@ -49,8 +51,6 @@
   {% endif %}
 
   {% include "partials/content.html" %}
-  {% include "partials/svg-keyboard.html" %}
-
   {% include "partials/sharing.html" %}
 </div>
 
