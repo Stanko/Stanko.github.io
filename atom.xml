@@ -112,7 +112,7 @@ scrubVideos();
   title="Anchor link for: browser-support"
 > <span class="sr-only" aria-hidden="true">#</span></a>
 </h2>
-<p>Browsers behave radically differently. But if you provide them a correct video format with enough keyframes, you should be pretty well covered. You'll have to provide the video in at least two formats - <code>mp4</code> and <code>webm</code>.</p>
+<p>Browsers behave radically different. But if you provide them a correct video format with enough keyframes, you should be pretty well covered. You'll have to provide the video in at least two formats - <code>mp4</code> and <code>webm</code>.</p>
 <p>On desktop, Safari seems to have the best support, followed by Chrome and Firefox in third place. I guess Edge will behave the same as Chrome, but I haven't tested it. Safari even works great with a low number of keyframes. It seems like it recreates all of the delta frames on the fly.</p>
 <p>The left video works slightly smoother in Chrome than in Firefox, but the right one is choppy in both. For Firefox you'll have to provide <code>webm</code> because <code>mp4</code> is choppy even with an increased number of keyframes.</p>
 <p>On mobile, Safari again works the best and it recreates the delta frames, although the right video is not as smooth on my iPhone mini. Chrome on Android works as expected, but please bear in mind that older devices might struggle, not because of the number of keyframes, but because of lack of CPU power.</p>
@@ -238,7 +238,7 @@ ffmpeg -i input-video.mp4 -vcodec libx264 <span style="color: var(--theme-color)
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1666452810440752072'
+    aria-controls='spoiler-1666462989619397887'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -262,7 +262,7 @@ ffmpeg -i input-video.mp4 -vcodec libx264 <span style="color: var(--theme-color)
   </button>
 
   <div
-    id='spoiler-1666452810440752072'
+    id='spoiler-1666462989619397887'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -284,7 +284,7 @@ ffmpeg -i input-video.mp4 -vcodec libx264 <span style="color: var(--theme-color)
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1666452810441324219'
+    aria-controls='spoiler-1666462989619778089'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -308,7 +308,7 @@ ffmpeg -i input-video.mp4 -vcodec libx264 <span style="color: var(--theme-color)
   </button>
 
   <div
-    id='spoiler-1666452810441324219'
+    id='spoiler-1666462989619778089'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6612,7 +6612,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1666452810522961504'
+    aria-controls='spoiler-1666462989666884161'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6636,7 +6636,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
   </button>
 
   <div
-    id='spoiler-1666452810522961504'
+    id='spoiler-1666462989666884161'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6747,7 +6747,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1666452810525340799'
+    aria-controls='spoiler-1666462989669061374'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6771,7 +6771,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
   </button>
 
   <div
-    id='spoiler-1666452810525340799'
+    id='spoiler-1666462989669061374'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6929,7 +6929,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1666452810531454800'
+    aria-controls='spoiler-1666462989674557406'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6953,7 +6953,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
   </button>
 
   <div
-    id='spoiler-1666452810531454800'
+    id='spoiler-1666462989674557406'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -7076,7 +7076,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1666452810535357019'
+    aria-controls='spoiler-1666462989678219927'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -7100,7 +7100,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
   </button>
 
   <div
-    id='spoiler-1666452810535357019'
+    id='spoiler-1666462989678219927'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -7310,7 +7310,7 @@ next to js and html files.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1666452810548094962'
+    aria-controls='spoiler-1666462989687469180'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -7334,7 +7334,7 @@ next to js and html files.</p>
   </button>
 
   <div
-    id='spoiler-1666452810548094962'
+    id='spoiler-1666462989687469180'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -7489,7 +7489,7 @@ in it.</p>
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1666452810555113237'
+    aria-controls='spoiler-1666462989694401420'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -7513,7 +7513,7 @@ in it.</p>
   </button>
 
   <div
-    id='spoiler-1666452810555113237'
+    id='spoiler-1666462989694401420'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
