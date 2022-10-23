@@ -51,7 +51,7 @@ animate();
 {{ codepen(
   id="GxjLmE",
   title="JavaScript animation loop - step 1",
-  height=250
+  height=280
 ) }}
 
 
@@ -71,7 +71,7 @@ In that case our box will be moved by 1px every 100ms, ending up on 10px per sec
 {{ codepen(
   id="ZxpZyZ",
   title="JavaScript animation loop - step 2",
-  height=250
+  height=280
 ) }}
 
 This means our animation speed is relative to how many times `requestAnimationFrame` is called per second.
@@ -140,7 +140,7 @@ animate();
 {{ codepen(
   id="zWKXRY",
   title="JavaScript animation loop - step 3",
-  height=250
+  height=280
 ) }}
 
 We fixed the timing problem, and our box is moving 60px per second.

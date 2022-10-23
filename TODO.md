@@ -1,8 +1,6 @@
 ## Must have
 
-* use images from art, when displaying pieces in posts
 * real breadcrumbs (instead of "back to art"), add on blog as well
-* gallery - fix horizontal scrollbars for desktops
 
 ## Maybe / nice to have
 
@@ -30,10 +28,12 @@ ffmpeg -i video.mp4 -vf pp=al video-levels.mp4
 
 ## Zola notes
 
-### Debug `page` variable
+### Debug `page` and `__tera_context` variables
 
 ```html
 <pre style="padding: 20px; background: #f4f4f4; color: #111; font-size: 14px; overflow: auto; max-width: 100%">
   {{page | json_encode(pretty=true) | safe }}
 </pre>
+
+<pre>{{ __tera_context }}  </pre>
 ```

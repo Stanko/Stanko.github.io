@@ -1,5 +1,5 @@
 +++
-title = "Making <span>a platform game</span> - controls"
+title = "Making <span>2D platformer controls</span>"
 
 draft = true
 
@@ -8,26 +8,30 @@ category = ["JavaScript"]
 tags = ["js", "games", "animation", "2d", "platform", "controls"]
 
 [extra]
-intro = "I played with creating tight 2D platforms controls from scratch. This post covers animation loop, horizontal movement, jumping and naive rendering."
-# image = "/img/platform-game/cover.png"
-
-# Add demo at the start
+intro = "Me trying to create 2D platform game controls from scratch."
+image = "/img/2d-controls/cover.png"
 
 +++
 
-At my office, we started doing some fun [code challenges](/blog/weekly-code-challenge-spring-2021/) again. The latest challenge is to make a game. Any game you want, in any technology you want.
-
-I'm in love with games like Hollow Knight, Dead Cells and Celeste. I always tell people how these games have really tight controls. But what does _tight_ really mean?
-
-I would dare to say, that tight controls, like all good user experience, are invisible. You'll forget about them as character in the game controls exactly like you expect. Therefore, they are responsive and precise, but forgiving.
-
-I'll stop here, as this subject could be a separate post. I suggest you check [Mark Brown's video](https://www.youtube.com/watch?v=yorTG9at90g) on Celeste's controls, where he breaks down what it means for a game to have tight controls.
+This is something I have written couple of months ago, expecting it to be a part of the series about making a 2D platformer. Unfortunately, I lost the motivation and never made a game, so the series never happened. But I found this draft, polished it a little bit and decided to publish it in the end.
 
 ## Summary
 
-For this challenge, I decided to create these tight platform controls, from scratch, in TypeScript. Doing a write up seemed like a nice thing to do, but I quickly realized it is not going to be a single post. So this is only a part one. At the bottom you can check [the demo](#demo) of what we are going to build in this post.
+It started with [code challenges](/blog/weekly-code-challenge-spring-2021/) we have been doing in our office. One specific challenge was to make a game. Any game you want, in any technology you want.
 
-I feel like I have to add a disclaimer here - I have never built a real game myself. That's exactly why I decided to implement everything from scratch. This way, I'll go through the whole process. While this is a great way for me to learn, I may reinvent the wheel here and there, or do things in a non-standard way.
+Because I'm a big sucker for 2D platformers, I decided to make one completely from scratch. Game was never finished, but I ended up with a elementary implementation of 2D platforming controls.
+
+Here is the demo of it:
+
+{{ codepen(
+  id="XWYrXvJ",
+  title="Example of customizing webkit scrollbars using CSS",
+  height=400
+  htmlId="demo"
+) }}
+
+
+I feel like I have to add a disclaimer here - I have never built a real game myself. That's exactly why I decided to implement everything from scratch. Doing it that way, I'll have to go through the whole process. While this is a great way for me to learn, I may reinvent the wheel here and there, or do things in a non-standard way.
 
 Here is a short list of topics we are going to cover in this post:
 
@@ -45,7 +49,7 @@ Here is a short list of topics we are going to cover in this post:
 
 First, we'll need an animation loop. I already covered it [in this post](/blog/javascript-animation-loop/), so I won't repeat myself, I'll just reuse that code.
 
-Starting code looks like this. It is missing two things - game state updates and rendering.
+Starting code looks like this. We need to implement two things missing - game state updates and rendering.
 
 ```tsx
 // ----- Game loop
@@ -71,11 +75,13 @@ function gameLoop() {
 gameLoop();
 ```
 
-Let's start with updating game state, by reacting to keyboard input.
+Let's start updating our game state, by reacting to keyboard input.
 
 ## Keyboard input
 
-Because we have a running animation loop, it is not enough to listen `keydown` event. We need to create a simple data structure that will tell us which keys are pressed in each frame. It is a simple object, with keyboard key name as object keys and a boolean value. If it is true, key is pressed.
+// ------- TODO
+Because we have a running animation loop, just listening to the `keydown` event doesn't really work.
+it is not enough to listen `keydown` event. We need to create a simple data structure that will tell us which keys are pressed in each frame. It is a simple object, with keyboard key name as object keys and a boolean value. If it is true, key is pressed.
 
 To maintain this state, we just need to set key's value to true on `keydown` and remove it's value on `keyup`.
 
@@ -93,7 +99,7 @@ window.addEventListener('keyup', (e) => {
 });
 ```
 
-Now when we have our `activeKeys`, we can use them in our animation loop. To make sure I'm not making any typos when typing key names, I created a simple mapper:
+Now when we have our `activeKeys`, we can use them in our animation loop. To make sure I'm not making any typos when typing key names, I created a simple enum:
 
 {{spoiler(text="
 ```tsx
@@ -105,12 +111,12 @@ const keys = {
   DOWN: 'ArrowDown',
 };
 ```
-", show="Show key mapper", hide="Hide key mapper" )}}
+", show="Show enum", hide="Hide enum" )}}
 
 
 ## Game state
 
-The bare minimum we need is player's position and it's velocity. Both of these values are two dimensional vectors.
+The bare minimum we need is player's position and velocity. Both of these values are two dimensional vectors.
 
 ```tsx
 // ----- Types
@@ -133,21 +139,21 @@ const position: Vector = {
 };
 ```
 
-In order to move the player, we'll increase the velocity and add the velocity to it's current position. Let's define some constants for the maximum speed, acceleration and deceleration of the player. Tight controls usually have high acceleration and deceleration. To make things easier to debug, I like to add `speed` variable, so I can slow everything down by reducing it's value.
+In order to move the player, we'll increase the velocity and add the velocity to it's current position. Let's define some constants for the maximum speed, acceleration and deceleration of the player.
 
 ```tsx
-const speed: number = 1;
-
-const acceleration: number = 1 * speed;
-const deceleration: number = 2 * speed;
-const maxSpeed: number = 5 * speed;
+const acceleration: number = 1;
+const deceleration: number = 2;
+const maxSpeed: number = 5;
 ```
 
-One of the aspects of the tight controls is high acceleration and speed, which gives the player the feeling of control, and makes the character more acrobatic and agile. Later on, we'll spend some time to tweak these values.
+One of the aspects of the tight controls is high acceleration and speed, which gives the player the feeling of control, and makes the character more acrobatic and agile. Later on, we can spend some time to tweak these values.
+
+I suggest you check [Mark Brown's video](https://www.youtube.com/watch?v=yorTG9at90g) on Celeste's controls, where he breaks down what it means for a game to have tight controls.
 
 ## Render
 
-I know it is tempting, but let's keep things super simple at the start. For now, we'll just show game state values directly in HTML. A single `pre` element:
+I know it is tempting, but let's keep things super simple at the start. For now, we'll just show the game state's values directly in HTML. A single `pre` element:
 
 ```html
 <pre class="status"></pre>
@@ -169,12 +175,12 @@ At the moment, nothing changes, but it will, as soon as we implement player move
 
 ## Update player's (horizontal) position
 
-Now we can start implementing moving our player around based on keyboard input. Again, we'll start simple and focus on horizontal movement only. It is a straightforward task, but there is a few  cases we need to care about:
+Now, let's use keyboard input to move our player. Again, we'll start simple and focus on horizontal movement only. It is a straightforward task, but there is a few things we need to care about:
 
 * Player should accelerate only when left or right arrow is pressed.
 * Velocity should be capped at defined maximum speed.
 * When player is moving in one direction and key is not pressed anymore (or both arrows are pressed), it should decelerate and stop.
-* When player is moving in one direction and opposite arrow is pressed, it should decelerate and start accelerating in the opposite direction.
+* When an arrow is pressed and player is already moving in the opposite direction, player should decelerate and start accelerating in the direction of the pressed arrow.
 
 I'll create `updateHorizontalMovement` function and call it in the game loop. Param `delta` tells us how many frames have passed since the last update. If you are not sure what this means, please check [my animation loop post](/blog/javascript-animation-loop/).
 
@@ -192,7 +198,7 @@ function updateHorizontalMovement(delta: number) {
   const isMovingLeft = velocity.x < 0;
 
   if (isExclusivelyLeft) {
-    // Left arrow is pressed
+    // Only left arrow is pressed
     if (isMovingRight) {
       // Slow down if player is already moving right
       velocity.x -= deceleration * delta;
@@ -201,7 +207,7 @@ function updateHorizontalMovement(delta: number) {
       velocity.x -= acceleration * delta;
     }
   } else if (isExclusivelyRight) {
-    // Right arrow is pressed
+    // Only right arrow is pressed
     if (isMovingLeft) {
       // Slow down if player is already moving left
       velocity.x += deceleration * delta;
@@ -247,14 +253,14 @@ function updateHorizontalMovement(delta: number) {
 Now we have a small system for updating player's position and velocity. After adding it to the game loop, you should see our render method updating, something like this:
 
 {{ image(
-  src="/img/platform-game/status.gif",
+  src="/img/2d-controls/game-state.gif",
   alt="",
   size="xs"
 ) }}
 
 ## Render, again
 
-While the game I plan to make is going to be rendered on the canvas, for now I'll keep things simple, again. Instead of introducing canvas at this point, I'll just use a simple div element and CSS transforms.
+While we should probably be using canvas, for now we'll keep things simple. Instead of introducing canvas at this point, let's just use a simple div element and CSS transforms.
 
 Basic setup:
 
@@ -266,16 +272,17 @@ Basic setup:
 
 ```css
 .game {
+  height: 120px;
   position: relative;
 }
 
 .player {
   position: absolute;
   width: 20px;
-  height: 20px;
-  background: rgb(0, 115, 255);
-  /* center our blocky player to the coordinate's system origin */
-  top: -10px;
+  height: 30px;
+  background: #3171f6;
+  /* move our blocky player to the coordinate's system origin */
+  bottom: 0;
   left: -10px;
 }
 ```
@@ -301,9 +308,10 @@ Note that I'm using a negative value for `y` axis, as in CSS `y` value increases
 
 ## Movement trail
 
-For easier debugging and figuring out what is going on, I added a movement trail. I rendered last fifty points and color acceleration green and deceleration red. This already helped me to catch a few minor bugs I had with acceleration when player is already moving in the opposite direction.
+// ------------ TODO
+For easier debugging and figuring out what is going on, let's add a movement trail. We can save and render the history of player's positions and color code them. Horizontal acceleration is green and deceleration red. Trail immediately helped me to catch a few minor bugs I had with acceleration when player is already moving in the opposite direction.
 
-I don't think the code is crucial or interesting, so I won't go through it in details, but you can check it below and on [GitHub](https://github.com/Stanko/2d-platform-controls).
+I don't think the code is crucial or interesting, so I won't go through it in details, but you can check it below and on [CodePen](https://codepen.io/stanko/pen/XWYrXvJ?editors=0100).
 
 {{spoiler(text="
 ```tsx
@@ -350,18 +358,15 @@ function renderTrail() {
 ```
 ", show="Show trail related code", hide="Hide trail related code")}}
 
-## Demo
+## Jumping
 
-I think I'll stop now. There is still a lot to be done, but this is it for the part one.
+// ---------- TODO
 
-Click on the iframe below and try moving by using left and right arrows. Please note that this demo is for devices with keyboard.
-
-<iframe
-  src="https://muffinman.io/2d-platform-controls/part-one.html"
-  style="border-radius: 2px; height: 220px;"
-></iframe>
+// TODO ---------- Color code trail for vertical velocity
 
 ## What's next
 
-We are already stretching what HTML should do, so the first thing is to start rendering on canvas instead. Then we can add platforms, collisions, wall jumps, dash... But that is something we'll cover in future posts.
+There is still a lot to be done, but this is it for now.
+
+We are already stretching what HTML should do, so the first thing would be to start rendering on canvas instead. Then we could continue to add more stuff like platforms, collisions, wall jumps, dash... Alas, like I mentioned at the start, I won't be covering anything more in this post.
 

@@ -1,9 +1,10 @@
-{% set timestamp = now() | date(format="%s%f") %}
+{# https://www.getzola.org/documentation/content/shortcodes/#shortcode-context #}
+{% set spoiler_id = nth %}
 
 <div class="spoiler {% if class %}{{class}}{% endif %}">
   <button
     aria-expanded="{% if isExpanded %}true{% else %}false{% endif %}"
-    aria-controls='spoiler-{{timestamp}}'
+    aria-controls='spoiler-{{spoiler_id}}'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -31,7 +32,7 @@
   </button>
 
   <div
-    id='spoiler-{{timestamp}}'
+    id='spoiler-{{spoiler_id}}'
     class="spoiler__content"
     aria-hidden="{% if isExpanded %}false{% else %}true{% endif %}"
     {% if isExpanded is undefined %}style="display: none"{% endif %}

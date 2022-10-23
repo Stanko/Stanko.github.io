@@ -5,3 +5,4 @@ static/js/*.js.map
 static/processed_images/
 drafts
 zola-mac-*
+line-animation/out

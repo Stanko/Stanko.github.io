@@ -1,0 +1,10 @@
+{
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": false,
+    "source.fixAll": true
+  },
+  "typescript.enablePromptUseWorkspaceTsdk": true
+}

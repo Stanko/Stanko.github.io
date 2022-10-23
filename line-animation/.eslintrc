@@ -1,0 +1,6 @@
+{
+  "extends": "@remotion",
+  "rules": {
+    "capitalized-comments": 0
+  }
+}

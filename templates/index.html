@@ -16,26 +16,6 @@
 
 <div class="container">
   <h2 class="home__section-title">
-    <a href="/art">
-      Generative Art{% include "partials/svg-post-arrow.html" %}
-    </a>
-  </h2>
-</div>
-
-{% set drawings = get_section(path="art/_index.md") -%}
-
-<div class="home__drawings art__list">
-  {% for drawing in drawings.pages | slice(start=0, end=4) %}
-  {% include "partials/art-list-drawing.html" %}
-  {% endfor %}
-</div>
-
-<div class="container">
-  <a class="btn btn--main home__see-more" href="/art/">See all drawings</a>
-</div>
-
-<div class="container">
-  <h2 class="home__section-title">
     <a href="/blog">
       Blog Posts{% include "partials/svg-post-arrow.html" %}
     </a>
@@ -56,6 +36,26 @@
 
 <div class="container">
   <a class="btn btn--main home__see-more" href="/archive/">Browse all posts</a>
+</div>
+
+<div class="container">
+  <h2 class="home__section-title">
+    <a href="/art">
+      Generative Art{% include "partials/svg-post-arrow.html" %}
+    </a>
+  </h2>
+</div>
+
+{% set drawings = get_section(path="art/_index.md") -%}
+
+<div class="home__drawings art__list">
+  {% for drawing in drawings.pages | slice(start=0, end=4) %}
+  {% include "partials/art-list-drawing.html" %}
+  {% endfor %}
+</div>
+
+<div class="container">
+  <a class="btn btn--main home__see-more" href="/art/">See all drawings</a>
 </div>
 
 {% endblock content %}
