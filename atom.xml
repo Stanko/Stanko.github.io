@@ -112,7 +112,7 @@ scrubVideos();
   title="Anchor link for: browser-support"
 > <span class="sr-only" aria-hidden="true">#</span></a>
 </h2>
-<p>Browsers behave radically different. But if you provide them a correct video format with enough keyframes, you should be pretty well covered. You'll have to provide the video in at least two formats - <code>mp4</code> and <code>webm</code>.</p>
+<p>Browsers behave radically differently. But if you provide them a correct video format with enough keyframes, you should be pretty well covered. You'll have to provide the video in at least two formats - <code>mp4</code> and <code>webm</code>.</p>
 <p>On desktop, Safari seems to have the best support, followed by Chrome and Firefox in third place. I guess Edge will behave the same as Chrome, but I haven't tested it. Safari even works great with a low number of keyframes. It seems like it recreates all of the delta frames on the fly.</p>
 <p>The left video works slightly smoother in Chrome than in Firefox, but the right one is choppy in both. For Firefox you'll have to provide <code>webm</code> because <code>mp4</code> is choppy even with an increased number of keyframes.</p>
 <p>On mobile, Safari again works the best and it recreates the delta frames, although the right video is not as smooth on my iPhone mini. Chrome on Android works as expected, but please bear in mind that older devices might struggle, not because of the number of keyframes, but because of lack of CPU power.</p>
@@ -235,10 +235,11 @@ ffmpeg -i input-video.mp4 -vcodec libx264 <span style="color: var(--theme-color)
 <p>That's why I have two builds which are using different TypeScript configurations. Both config files extend <a href="https://github.com/Stanko/keen/blob/dev/tsconfig-base.json">tsconfig-base.json</a> and they just define the appropriate module type and transpile target:</p>
 
 
+
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1666462989619397887'
+    aria-controls='spoiler-1'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -262,7 +263,7 @@ ffmpeg -i input-video.mp4 -vcodec libx264 <span style="color: var(--theme-color)
   </button>
 
   <div
-    id='spoiler-1666462989619397887'
+    id='spoiler-1'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -281,10 +282,11 @@ ffmpeg -i input-video.mp4 -vcodec libx264 <span style="color: var(--theme-color)
 </div>
 
 
+
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1666462989619778089'
+    aria-controls='spoiler-2'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -308,7 +310,7 @@ ffmpeg -i input-video.mp4 -vcodec libx264 <span style="color: var(--theme-color)
   </button>
 
   <div
-    id='spoiler-1666462989619778089'
+    id='spoiler-2'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -1532,9 +1534,10 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 <p>To see it live check the demo on Codepen:</p>
 <iframe
   height="380"
+  "
   scrolling="no"
   title="React, blur on an element and its children"
-  src="https://codepen.io/stanko/embed/NWgvOXp?default-tab=result&amp;theme-id=light"
+  src="https://codepen.io/stanko/embed/NWgvOXp?default-tab=result"
   frameborder="no"
   loading="lazy"
   allowtransparency="true"
@@ -1957,9 +1960,10 @@ and a buffering loader. It is not hard to detect the buffering state, but it can
 <p>Here you can see the final version (it might be easier to see the functionality if you <a href="https://codepen.io/stanko/pen/WNxwreJ" target="_blank">open it in a separate tab</a>).</p>
 <iframe
   height="550"
+  "
   scrolling="no"
   title="React - Simple video buffering loader"
-  src="https://codepen.io/stanko/embed/WNxwreJ?default-tab=result&amp;theme-id=light"
+  src="https://codepen.io/stanko/embed/WNxwreJ?default-tab=result"
   frameborder="no"
   loading="lazy"
   allowtransparency="true"
@@ -2883,9 +2887,10 @@ through these points.</p>
 <p>I created a live example for you to try it out:</p>
 <iframe
   height="420"
+  "
   scrolling="no"
   title="2d vector field"
-  src="https://codepen.io/stanko/embed/rNavBvN?default-tab=result&amp;theme-id=light"
+  src="https://codepen.io/stanko/embed/rNavBvN?default-tab=result"
   frameborder="no"
   loading="lazy"
   allowtransparency="true"
@@ -3446,9 +3451,10 @@ You'll notice that every geometry in three.js has a &quot;Buffer&quot; version (
 </h3>
 <iframe
   height="420"
+  "
   scrolling="no"
   title="three.js extrude SVG path"
-  src="https://codepen.io/stanko/embed/gObMepb?default-tab=result&amp;theme-id=light"
+  src="https://codepen.io/stanko/embed/gObMepb?default-tab=result"
   frameborder="no"
   loading="lazy"
   allowtransparency="true"
@@ -3713,9 +3719,10 @@ We are going to use this property to map physical key presses to keys in our ima
 <p>And for the end, to see how everything fits together, I created a demo for you to play with:</p>
 <iframe
   height="450"
+  "
   scrolling="no"
   title="Keyboard easter egg"
-  src="https://codepen.io/stanko/embed/KKwPJvL?default-tab=result&amp;theme-id=light"
+  src="https://codepen.io/stanko/embed/KKwPJvL?default-tab=result"
   frameborder="no"
   loading="lazy"
   allowtransparency="true"
@@ -4062,9 +4069,10 @@ text only loader. It is a very simple animation swapping between four text chara
 <p>Retro loader I tried to replicate in the first place:</p>
 <iframe
   height="300"
+  "
   scrolling="no"
   title="CSS only retro CLI loader"
-  src="https://codepen.io/stanko/embed/XLYRQV?default-tab=result&amp;theme-id=light"
+  src="https://codepen.io/stanko/embed/XLYRQV?default-tab=result"
   frameborder="no"
   loading="lazy"
   allowtransparency="true"
@@ -4090,9 +4098,10 @@ text only loader. It is a very simple animation swapping between four text chara
 So I found this nifty <a href="https://www.artstation.com/artwork/YEJeY">Rick and Morty animation</a> and animated it in CSS.</p>
 <iframe
   height="500"
+  "
   scrolling="no"
   title="CSS Frame animation (Rick and Morty)"
-  src="https://codepen.io/stanko/embed/GbBqwZ?default-tab=result&amp;theme-id=light"
+  src="https://codepen.io/stanko/embed/GbBqwZ?default-tab=result"
   frameborder="no"
   loading="lazy"
   allowtransparency="true"
@@ -4649,9 +4658,10 @@ is <a href="https://caniuse.com/#search=space-evenly">not supported in IE and Ed
 <p>You can see it in the action below:</p>
 <iframe
   height="400"
+  "
   scrolling="no"
   title="Flex items equally distanced from each other, as well from the parent&#x27;s edge"
-  src="https://codepen.io/stanko/embed/XPzmqg?default-tab=result&amp;theme-id=light"
+  src="https://codepen.io/stanko/embed/XPzmqg?default-tab=result"
   frameborder="no"
   loading="lazy"
   allowtransparency="true"
@@ -4678,9 +4688,10 @@ is <a href="https://caniuse.com/#search=space-evenly">not supported in IE and Ed
 <p>Here are the results:</p>
 <iframe
   height="300"
+  "
   scrolling="no"
   title="Fancy input, CSS animation"
-  src="https://codepen.io/stanko/embed/PdwGEy?default-tab=result&amp;theme-id=light"
+  src="https://codepen.io/stanko/embed/PdwGEy?default-tab=result"
   frameborder="no"
   loading="lazy"
   allowtransparency="true"
@@ -4692,9 +4703,10 @@ is <a href="https://caniuse.com/#search=space-evenly">not supported in IE and Ed
 </iframe>
 <iframe
   height="300"
+  "
   scrolling="no"
   title="Kick input, SVG animation"
-  src="https://codepen.io/stanko/embed/KxwLpd?default-tab=result&amp;theme-id=light"
+  src="https://codepen.io/stanko/embed/KxwLpd?default-tab=result"
   frameborder="no"
   loading="lazy"
   allowtransparency="true"
@@ -5101,9 +5113,10 @@ Each one was using SVG morphing, which is fine, but I was wondering how hard wou
 <p>It ended up up being pretty easy.</p>
 <iframe
   height="500"
+  "
   scrolling="no"
   title="Elastic hover effect (CSS only)"
-  src="https://codepen.io/stanko/embed/VXPeoP?default-tab=result&amp;theme-id=light"
+  src="https://codepen.io/stanko/embed/VXPeoP?default-tab=result"
   frameborder="no"
   loading="lazy"
   allowtransparency="true"
@@ -5279,10 +5292,11 @@ My first attempt ended up being naive and it looked something like this:</p>
 </span><span style="color:#61afef;">animate</span><span>();
 </span></code></pre>
 <iframe
-  height="250"
+  height="280"
+  "
   scrolling="no"
   title="JavaScript animation loop - step 1"
-  src="https://codepen.io/stanko/embed/GxjLmE?default-tab=result&amp;theme-id=light"
+  src="https://codepen.io/stanko/embed/GxjLmE?default-tab=result"
   frameborder="no"
   loading="lazy"
   allowtransparency="true"
@@ -5311,10 +5325,11 @@ Busy (or low-end) CPU will also slow it down.</p>
 
 In that case our box will be moved by 1px every 100ms, ending up on 10px per second.</p>
 <iframe
-  height="250"
+  height="280"
+  "
   scrolling="no"
   title="JavaScript animation loop - step 2"
-  src="https://codepen.io/stanko/embed/ZxpZyZ?default-tab=result&amp;theme-id=light"
+  src="https://codepen.io/stanko/embed/ZxpZyZ?default-tab=result"
   frameborder="no"
   loading="lazy"
   allowtransparency="true"
@@ -5384,10 +5399,11 @@ which is the exactly what we are trying to achieve (60px per second).</p>
 </span><span style="color:#61afef;">animate</span><span>();
 </span></code></pre>
 <iframe
-  height="250"
+  height="280"
+  "
   scrolling="no"
   title="JavaScript animation loop - step 3"
-  src="https://codepen.io/stanko/embed/zWKXRY?default-tab=result&amp;theme-id=light"
+  src="https://codepen.io/stanko/embed/zWKXRY?default-tab=result"
   frameborder="no"
   loading="lazy"
   allowtransparency="true"
@@ -5403,9 +5419,10 @@ and we will get smooth animation without timing problems.</p>
 <p>Check all examples side by side comparison:</p>
 <iframe
   height="500"
+  "
   scrolling="no"
   title="JavaScript animation loop - step 4 (all examples combined)"
-  src="https://codepen.io/stanko/embed/pLEYEw?default-tab=result&amp;theme-id=light"
+  src="https://codepen.io/stanko/embed/pLEYEw?default-tab=result"
   frameborder="no"
   loading="lazy"
   allowtransparency="true"
@@ -6231,9 +6248,10 @@ they will return a Promise, so you need to define <code>then</code> (and <code>c
 <p>I've cooked a small demo to show it in practice, in which I used free <a href="https://swapi.co">Star Wars API</a>.</p>
 <iframe
   height="500"
+  "
   scrolling="no"
   title="Simple JavaScript API wrapper demo"
-  src="https://codepen.io/stanko/embed/LOoPQp?default-tab=result&amp;theme-id=light"
+  src="https://codepen.io/stanko/embed/LOoPQp?default-tab=result"
   frameborder="no"
   loading="lazy"
   allowtransparency="true"
@@ -6510,9 +6528,10 @@ Hopefully, these links will help you in that regard.</p>
 It animates height (of the parent) and fades components into each other.</p>
 <iframe
   height="500"
+  "
   scrolling="no"
   title="React transition between two components"
-  src="https://codepen.io/stanko/embed/eGwNZd?default-tab=result&amp;theme-id=light"
+  src="https://codepen.io/stanko/embed/eGwNZd?default-tab=result"
   frameborder="no"
   loading="lazy"
   allowtransparency="true"
@@ -6609,10 +6628,11 @@ and what I'm trying to teach you is directly based on my experience on these pro
 <p>Of course you can replace &quot;webpack-babel-react-revisited&quot; with your project name.</p>
 
 
+
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1666462989666884161'
+    aria-controls='spoiler-1'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6636,7 +6656,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
   </button>
 
   <div
-    id='spoiler-1666462989666884161'
+    id='spoiler-1'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6744,10 +6764,11 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
 <p>Now we have our simple <code>build</code> process, so we can proceed with development setup.</p>
 
 
+
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1666462989669061374'
+    aria-controls='spoiler-2'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6771,7 +6792,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
   </button>
 
   <div
-    id='spoiler-1666462989669061374'
+    id='spoiler-2'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -6926,10 +6947,11 @@ So we'll remove whole <code>devServer</code> configuration object for now.<span 
 Now we are talking! We can start adding some modern JavaScript.</p>
 
 
+
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1666462989674557406'
+    aria-controls='spoiler-3'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -6953,7 +6975,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
   </button>
 
   <div
-    id='spoiler-1666462989674557406'
+    id='spoiler-3'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -7073,10 +7095,11 @@ and if you used any of the modern JavaScript features, those would be transpiled
 <p>Finally let's add React.</p>
 
 
+
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1666462989678219927'
+    aria-controls='spoiler-4'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -7100,7 +7123,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
   </button>
 
   <div
-    id='spoiler-1666462989678219927'
+    id='spoiler-4'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -7307,10 +7330,11 @@ created in the <code>dist</code> folder,
 next to js and html files.</p>
 
 
+
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1666462989687469180'
+    aria-controls='spoiler-5'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -7334,7 +7358,7 @@ next to js and html files.</p>
   </button>
 
   <div
-    id='spoiler-1666462989687469180'
+    id='spoiler-5'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -7486,10 +7510,11 @@ in it.</p>
 <code>npm run build</code> will create image in the <code>dist</code> folder.</p>
 
 
+
 <div class="spoiler ">
   <button
     aria-expanded="false"
-    aria-controls='spoiler-1666462989694401420'
+    aria-controls='spoiler-6'
     class="spoiler__toggle btn btn--sm btn--empty"
   >
     <span
@@ -7513,7 +7538,7 @@ in it.</p>
   </button>
 
   <div
-    id='spoiler-1666462989694401420'
+    id='spoiler-6'
     class="spoiler__content"
     aria-hidden="true"
     style="display: none"
@@ -8256,9 +8281,10 @@ and render only the end result. This way our element immediately gets height of 
 </span></code></pre>
 <iframe
   height="400"
+  "
   scrolling="no"
   title="Rerender React component in componentDidMount - Step 1"
-  src="https://codepen.io/stanko/embed/XgaNyq?default-tab=result&amp;theme-id=light"
+  src="https://codepen.io/stanko/embed/XgaNyq?default-tab=result"
   frameborder="no"
   loading="lazy"
   allowtransparency="true"
@@ -8290,9 +8316,10 @@ and render only the end result. This way our element immediately gets height of 
 </span></code></pre>
 <iframe
   height="400"
+  "
   scrolling="no"
   title="Rerender React component in componentDidMount - Step 2"
-  src="https://codepen.io/stanko/embed/WOERrE?default-tab=result&amp;theme-id=light"
+  src="https://codepen.io/stanko/embed/WOERrE?default-tab=result"
   frameborder="no"
   loading="lazy"
   allowtransparency="true"
@@ -8332,9 +8359,10 @@ But you might want to stick with it for some time, to make sure all of your user
 </span></code></pre>
 <iframe
   height="400"
+  "
   scrolling="no"
   title="Rerender React component in componentDidMount - Step 3"
-  src="https://codepen.io/stanko/embed/JJyEoz?default-tab=result&amp;theme-id=light"
+  src="https://codepen.io/stanko/embed/JJyEoz?default-tab=result"
   frameborder="no"
   loading="lazy"
   allowtransparency="true"
@@ -8373,9 +8401,10 @@ value for timeout, just use native methods that browsers provide.</p>
 </span></code></pre>
 <iframe
   height="400"
+  "
   scrolling="no"
   title="Rerender React component in componentDidMount - Step 4"
-  src="https://codepen.io/stanko/embed/JJyEXq?default-tab=result&amp;theme-id=light"
+  src="https://codepen.io/stanko/embed/JJyEXq?default-tab=result"
   frameborder="no"
   loading="lazy"
   allowtransparency="true"
@@ -9237,9 +9266,10 @@ I got this idea while I was sick in bed, and had nothing smarter to do.
 Pure CSS, no JavaScript at all. Hope you like it, I may add some more details.</p>
 <iframe
   height="400"
+  "
   scrolling="no"
   title="Counting sheep"
-  src="https://codepen.io/stanko/embed/BQgZda?default-tab=result&amp;theme-id=light"
+  src="https://codepen.io/stanko/embed/BQgZda?default-tab=result"
   frameborder="no"
   loading="lazy"
   allowtransparency="true"
@@ -10051,9 +10081,10 @@ Original CodePen is included at the end.</p>
 </h4>
 <iframe
   height="300"
+  "
   scrolling="no"
   title="Fix for button display:flex"
-  src="https://codepen.io/stanko/embed/ALjvYj?default-tab=result&amp;theme-id=light"
+  src="https://codepen.io/stanko/embed/ALjvYj?default-tab=result"
   frameborder="no"
   loading="lazy"
   allowtransparency="true"
@@ -10083,9 +10114,10 @@ as a part of it's redesign.</p>
 And you can see the usage of SASS <code>random()</code> function.</p>
 <span id="continue-reading"></span><iframe
   height="400"
+  "
   scrolling="no"
   title="Circle Logo Animation"
-  src="https://codepen.io/stanko/embed/VKkaJB?default-tab=result&amp;theme-id=light"
+  src="https://codepen.io/stanko/embed/VKkaJB?default-tab=result"
   frameborder="no"
   loading="lazy"
   allowtransparency="true"
@@ -11110,9 +11142,10 @@ CSS tricks has a <a href="https://css-tricks.com/custom-scrollbars-in-webkit/">g
 <p>Check jsfiddle demo with green-ish scrollbars <i>webkit only</i>.</p>
 <iframe
   height="300"
+  "
   scrolling="no"
   title="Example of customizing webkit scrollbars using CSS"
-  src="https://codepen.io/stanko/embed/jpLJbQ?default-tab=result&amp;theme-id=light"
+  src="https://codepen.io/stanko/embed/jpLJbQ?default-tab=result"
   frameborder="no"
   loading="lazy"
   allowtransparency="true"
@@ -11179,9 +11212,10 @@ Scrolling on touch devices is already nice and smooth.</p>
 <p>Check demo on CodePen (please note that demo was updated to work without modernizr).</p>
 <iframe
   height="420"
+  "
   scrolling="no"
   title="Show scrollbars on hover only"
-  src="https://codepen.io/stanko/embed/BaBEQQG?default-tab=result&amp;theme-id=light"
+  src="https://codepen.io/stanko/embed/BaBEQQG?default-tab=result"
   frameborder="no"
   loading="lazy"
   allowtransparency="true"
