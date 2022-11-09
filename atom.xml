@@ -1240,7 +1240,7 @@ I wrote a separate post about the creative process behind the last drawing - <a 
   />
   
 
-<p>When I was making <a href="/blog/neon-generative-art-piece-made-using-2d-vector-field/">Neon</a> I stumbled on <a href="https://web.cs.ucdavis.edu/%7Ema/SIGGRAPH02/course23/notes/papers/Jobard.pdf">this paper</a>. Before even trying to implement it myself, I searched for a good soul who already did it. Luckily I found Andrei's repo.</p>
+<p>When I was making <a href="/blog/neon-generative-art-piece-made-using-2d-vector-field/">Neon</a> I stumbled on <a href="https://web.cs.ucdavis.edu/~ma/SIGGRAPH02/course23/notes/papers/Jobard.pdf">this paper</a>. Before even trying to implement it myself, I searched for a good soul who already did it. Luckily I found Andrei's repo.</p>
 <h3 id="3d-vector-line-engines">3D vector line engines<a
   class="header-anchor"
   href="#3d-vector-line-engines" aria-label="Anchor link for: 3d-vector-line-engines"
