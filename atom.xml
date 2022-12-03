@@ -5,8 +5,524 @@
 	<link href="https://muffinman.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://muffinman.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-10-21T00:00:00+00:00</updated>
+	<updated>2022-11-10T00:00:00+00:00</updated>
 	<id>https://muffinman.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>CSS blocky people making waves</title>
+		<published>2022-11-10T00:00:00+00:00</published>
+		<updated>2022-11-10T00:00:00+00:00</updated>
+		<link href="https://muffinman.io/blog/css-blocky-people-making-waves/" type="text/html"/>
+		<id>https://muffinman.io/blog/css-blocky-people-making-waves/</id>
+    <author>
+      <name>Stanko</name>
+    </author>
+		<content type="html"><link rel="stylesheet" href="/posts/blocky-people.css" />
+<p>It all started with <a href="/blog/weekly-code-challenge-spring-2021/">the code challenge</a> in our office. The weekly theme was <strong>waves</strong>, and I tried to think outside of the box. After dropping a few ideas, I remembered <span
+  class="sidenote__trigger "
+  tabindex="0"
+  role="button"
+>
+  the waves people do on stadiums
+</span>
+
+<span
+  class="sidenote__note "
+><span class="sidenote__bracket">(</span>According to <a href="https://en.wikipedia.org/wiki/Wave_(audience)">Wikipedia</a> these are known as Mexican or stadium waves<span class="sidenote__bracket">)</span></span>
+.</p>
+<p>So I made waves using CSS only (code is available on <a href="https://codepen.io/stanko/pen/JjZKaWX">CodePen</a>):</p>
+<div class="people-wrapper is-in-viewport">
+  <div class="row">
+    <css-person></css-person>
+    <css-person></css-person>
+    <css-person></css-person>
+    <css-person></css-person>
+    <css-person></css-person>
+    <css-person></css-person>
+  </div>
+</div>
+<p>I started without a real idea on how to do it. Obviously, I needed to create some people and animate them. 3D people would be nice, but as this was a weekly code challenge, I had to keep it simple. Blocky people, similar to characters in Minecraft, seemed like a good idea. Making them using Three.js felt too obvious, as I wanted something a little bit more unconventional and fun.</p>
+<p>CSS was definitely not made for something like this, which is why I wanted to try it out.</p>
+<h2 id="box">Box<a
+  class="header-anchor"
+  href="#box" aria-label="Anchor link for: box"
+  title="Anchor link for: box"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>Blocky people are obviously made of blocks, so I needed to build some 3D boxes in CSS. There are many tutorials on creating a 3D box in CSS, so I'll try to keep this short.</p>
+<p>We'll need six elements to use as sides of the box. Each side needs to be appropriately sized, rotated and translated into its place.</p>
+
+
+
+<div class="spoiler ">
+  <button
+    aria-expanded="false"
+    aria-controls='spoiler-1'
+    class="spoiler__toggle btn btn--sm btn--empty"
+  >
+    <span
+      class="spoiler__show"
+      
+    >
+      
+        Show HTML
+      
+      <span aria-hidden="true">+</span> <!-- TODO add icon -->
+    </span>
+    <span
+      class="spoiler__hide"
+      style="display: none"
+    >
+      
+        Hide HTML
+      
+      <span aria-hidden="true">-</span> <!-- TODO add icon -->
+    </span>
+  </button>
+
+  <div
+    id='spoiler-1'
+    class="spoiler__content"
+    aria-hidden="true"
+    style="display: none"
+  >
+    <pre data-lang="html" style="background-color:#282c34;color:#dcdfe4;" class="language-html "><code class="language-html" data-lang="html"><span>&lt;</span><span style="color:#e06c75;">div </span><span style="color:#e5c07b;">class</span><span>=</span><span style="color:#98c379;">&quot;box&quot;</span><span>&gt;
+</span><span>  &lt;</span><span style="color:#e06c75;">div </span><span style="color:#e5c07b;">class</span><span>=</span><span style="color:#98c379;">&quot;front&quot;</span><span>&gt;&lt;/</span><span style="color:#e06c75;">div</span><span>&gt;
+</span><span>  &lt;</span><span style="color:#e06c75;">div </span><span style="color:#e5c07b;">class</span><span>=</span><span style="color:#98c379;">&quot;back&quot;</span><span>&gt;&lt;/</span><span style="color:#e06c75;">div</span><span>&gt;
+</span><span>  &lt;</span><span style="color:#e06c75;">div </span><span style="color:#e5c07b;">class</span><span>=</span><span style="color:#98c379;">&quot;right&quot;</span><span>&gt;&lt;/</span><span style="color:#e06c75;">div</span><span>&gt;
+</span><span>  &lt;</span><span style="color:#e06c75;">div </span><span style="color:#e5c07b;">class</span><span>=</span><span style="color:#98c379;">&quot;left&quot;</span><span>&gt;&lt;/</span><span style="color:#e06c75;">div</span><span>&gt;
+</span><span>  &lt;</span><span style="color:#e06c75;">div </span><span style="color:#e5c07b;">class</span><span>=</span><span style="color:#98c379;">&quot;bottom&quot;</span><span>&gt;&lt;/</span><span style="color:#e06c75;">div</span><span>&gt;
+</span><span>  &lt;</span><span style="color:#e06c75;">div </span><span style="color:#e5c07b;">class</span><span>=</span><span style="color:#98c379;">&quot;top&quot;</span><span>&gt;&lt;/</span><span style="color:#e06c75;">div</span><span>&gt;
+</span><span>&lt;/</span><span style="color:#e06c75;">div</span><span>&gt;
+</span></code></pre>
+
+  </div>
+</div>
+<p>Here you can see the three steps in creating a CSS box:</p>
+<ul>
+<li>Size the sides appropriately</li>
+<li>Translate them into position</li>
+<li>Rotate them</li>
+</ul>
+<div class="boxes-wrapper is-in-viewport">
+  <css-box class="box no-transform"></css-box>
+  <css-box class="box no-rotation"></css-box>
+  <css-box class="box"></css-box>
+</div>
+<p>The box wrapper element is outlined in <span style="color: #e53f73">red</span> and sides are outlined in <span style="color: #356cde">blue</span>.</p>
+<p>If you want to play with it, I created <a href="https://codepen.io/stanko/pen/BaWzLoE">a standalone CodePen</a>. As a bonus, here is <a href="https://codepen.io/stanko/pen/gOmWLNE">a three-sided prism</a> as well.</p>
+<h2 id="webcomponents">WebComponents<a
+  class="header-anchor"
+  href="#webcomponents" aria-label="Anchor link for: webcomponents"
+  title="Anchor link for: webcomponents"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>Each box consists of seven HTML elements (a wrapper and six sides). And each person ended up being built from twelve boxes and some additional wrappers. That means that each person requires a lot of HTML to be written.</p>
+<p>To simplify things, we can use <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">WebComponents</a>. Web components are a pretty powerful tool, but in this case, we will only use their template capability.</p>
+<p>To do so, we need to extend <code>HTMLElement</code> and set its <code>innerHTML</code> to include our box boilerplate code:</p>
+<pre data-lang="js" style="background-color:#282c34;color:#dcdfe4;" class="language-js "><code class="language-js" data-lang="js"><span style="color:#5c6370;">// Box WebComponent
+</span><span style="color:#c678dd;">class </span><span style="color:#e5c07b;">Box </span><span style="color:#c678dd;">extends </span><span style="color:#e5c07b;">HTMLElement {
+</span><span style="color:#e5c07b;">  </span><span style="color:#c678dd;">constructor</span><span style="color:#e5c07b;">() {
+</span><span style="color:#e5c07b;">    </span><span style="color:#e06c75;">super</span><span style="color:#e5c07b;">();
+</span><span style="color:#e5c07b;">
+</span><span style="color:#e5c07b;">    </span><span style="color:#e06c75;">this</span><span style="color:#e5c07b;">.</span><span style="color:#e06c75;">innerHTML </span><span style="color:#c678dd;">=
+</span><span style="color:#e5c07b;">      </span><span style="color:#98c379;">`&lt;div class=&quot;front&quot;&gt;&lt;/div&gt;
+</span><span style="color:#98c379;">      &lt;div class=&quot;back&quot;&gt;&lt;/div&gt;
+</span><span style="color:#98c379;">      &lt;div class=&quot;right&quot;&gt;&lt;/div&gt;
+</span><span style="color:#98c379;">      &lt;div class=&quot;left&quot;&gt;&lt;/div&gt;
+</span><span style="color:#98c379;">      &lt;div class=&quot;bottom&quot;&gt;&lt;/div&gt;
+</span><span style="color:#98c379;">      &lt;div class=&quot;top&quot;&gt;&lt;/div&gt;`</span><span style="color:#e5c07b;">;
+</span><span style="color:#e5c07b;">  }
+</span><span style="color:#e5c07b;">}
+</span><span>
+</span><span style="color:#5c6370;">// Register out web component so we can use it as a &lt;css-box&gt; tag
+</span><span>window.</span><span style="color:#e06c75;">customElements</span><span>.</span><span style="color:#61afef;">define</span><span>(</span><span style="color:#98c379;">&quot;css-box&quot;</span><span>, </span><span style="color:#e06c75;">Box</span><span>);
+</span></code></pre>
+<p>Once we create our web component, we can simply use it like this:</p>
+<pre data-lang="html" style="background-color:#282c34;color:#dcdfe4;" class="language-html "><code class="language-html" data-lang="html"><span>&lt;</span><span style="color:#e06c75;">css-box </span><span style="color:#e5c07b;">class</span><span>=</span><span style="color:#98c379;">&quot;head&quot;</span><span>&gt;&lt;/</span><span style="color:#e06c75;">css-box</span><span>&gt;
+</span></code></pre>
+<p>Very nifty, ain't it? If you inspect it, you'll see it contains six div elements we created.</p>
+<h2 id="person">Person<a
+  class="header-anchor"
+  href="#person" aria-label="Anchor link for: person"
+  title="Anchor link for: person"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>Now we can finally build our first person! I already mentioned that it would consist of twelve boxes and some wrapper elements. The boxes are:</p>
+<ul>
+<li>Head</li>
+<li>Torso</li>
+<li>Arms, two segments each x2</li>
+<li>Legs, two segments each x2</li>
+<li>Feet x2</li>
+</ul>
+<p>As with the box, we'll create <code>&lt;css-person&gt;</code> web component to reduce the HTML boilerplate.</p>
+
+
+
+<div class="spoiler ">
+  <button
+    aria-expanded="false"
+    aria-controls='spoiler-2'
+    class="spoiler__toggle btn btn--sm btn--empty"
+  >
+    <span
+      class="spoiler__show"
+      
+    >
+      
+        Show css-person web component
+      
+      <span aria-hidden="true">+</span> <!-- TODO add icon -->
+    </span>
+    <span
+      class="spoiler__hide"
+      style="display: none"
+    >
+      
+        Hide css-person web component
+      
+      <span aria-hidden="true">-</span> <!-- TODO add icon -->
+    </span>
+  </button>
+
+  <div
+    id='spoiler-2'
+    class="spoiler__content"
+    aria-hidden="true"
+    style="display: none"
+  >
+    <pre data-lang="js" style="background-color:#282c34;color:#dcdfe4;" class="language-js "><code class="language-js" data-lang="js"><span style="color:#c678dd;">class </span><span style="color:#e5c07b;">Person </span><span style="color:#c678dd;">extends </span><span style="color:#e5c07b;">HTMLElement {
+</span><span style="color:#e5c07b;">  </span><span style="color:#c678dd;">constructor</span><span style="color:#e5c07b;">() {
+</span><span style="color:#e5c07b;">    </span><span style="color:#e06c75;">super</span><span style="color:#e5c07b;">();
+</span><span style="color:#e5c07b;">
+</span><span style="color:#e5c07b;">    </span><span style="color:#e06c75;">this</span><span style="color:#e5c07b;">.</span><span style="color:#e06c75;">innerHTML </span><span style="color:#c678dd;">=
+</span><span style="color:#e5c07b;">      </span><span style="color:#98c379;">`&lt;div class=&quot;person-top&quot;&gt;
+</span><span style="color:#98c379;">        &lt;div class=&quot;head-wrapper&quot;&gt;
+</span><span style="color:#98c379;">          &lt;css-box class=&quot;head&quot;&gt;&lt;/css-box&gt;
+</span><span style="color:#98c379;">        &lt;/div&gt;
+</span><span style="color:#98c379;">        &lt;div class=&quot;arm&quot;&gt;
+</span><span style="color:#98c379;">          &lt;css-box class=&quot;arm-top&quot;&gt;&lt;/css-box&gt;
+</span><span style="color:#98c379;">          &lt;css-box class=&quot;arm-bottom&quot;&gt;&lt;/css-box&gt;
+</span><span style="color:#98c379;">        &lt;/div&gt;
+</span><span style="color:#98c379;">        &lt;css-box class=&quot;torso&quot;&gt;&lt;/css-box&gt;
+</span><span style="color:#98c379;">        &lt;div class=&quot;arm arm-right&quot;&gt;
+</span><span style="color:#98c379;">          &lt;css-box class=&quot;arm-top&quot;&gt;&lt;/css-box&gt;
+</span><span style="color:#98c379;">          &lt;css-box class=&quot;arm-bottom&quot;&gt;&lt;/css-box&gt;
+</span><span style="color:#98c379;">        &lt;/div&gt;
+</span><span style="color:#98c379;">      &lt;/div&gt;
+</span><span style="color:#98c379;">      &lt;div class=&quot;legs&quot;&gt;
+</span><span style="color:#98c379;">        &lt;div class=&quot;leg leg-left&quot;&gt;
+</span><span style="color:#98c379;">          &lt;css-box class=&quot;leg-top&quot;&gt;&lt;/css-box&gt;
+</span><span style="color:#98c379;">          &lt;css-box class=&quot;leg-bottom&quot;&gt;&lt;/css-box&gt;
+</span><span style="color:#98c379;">          &lt;css-box class=&quot;leg-shoe&quot;&gt;&lt;/css-box&gt;
+</span><span style="color:#98c379;">        &lt;/div&gt;
+</span><span style="color:#98c379;">        &lt;div class=&quot;leg leg-right&quot;&gt;
+</span><span style="color:#98c379;">          &lt;css-box class=&quot;leg-top&quot;&gt;&lt;/css-box&gt;
+</span><span style="color:#98c379;">          &lt;css-box class=&quot;leg-bottom&quot;&gt;&lt;/css-box&gt;
+</span><span style="color:#98c379;">          &lt;css-box class=&quot;leg-shoe&quot;&gt;&lt;/css-box&gt;
+</span><span style="color:#98c379;">        &lt;/div&gt;
+</span><span style="color:#98c379;">      &lt;/div&gt;`</span><span style="color:#e5c07b;">;
+</span><span style="color:#e5c07b;">  }
+</span><span style="color:#e5c07b;">}
+</span><span>
+</span><span>window.</span><span style="color:#e06c75;">customElements</span><span>.</span><span style="color:#61afef;">define</span><span>(</span><span style="color:#98c379;">&quot;css-person&quot;</span><span>, </span><span style="color:#e06c75;">Person</span><span>);
+</span></code></pre>
+
+  </div>
+</div>
+<p>After rotating and putting all of the boxes in place, we end up with a sitting person:</p>
+<div class="people-wrapper people-wrapper-single">
+  <css-person class="no-animation no-colors"></css-person>
+</div>
+<div class="rotation">
+  <label for="r1">Rotation:</label>
+  <input id="r1" value="60" min="0" max="360" type="range" class="rotation-input">
+</div>
+<h2 id="colors">Colors<a
+  class="header-anchor"
+  href="#colors" aria-label="Anchor link for: colors"
+  title="Anchor link for: colors"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>I wanted to automate coloring instead of manually choosing colors for each person. For that, I reached out for SASS' <code>random</code> function. The function will return an integer between zero and the limit given.</p>
+<p>We can use it to get a random index from an array like this:</p>
+<pre data-lang="scss" style="background-color:#282c34;color:#dcdfe4;" class="language-scss "><code class="language-scss" data-lang="scss"><span style="color:#5c6370;">// A list of colors
+</span><span style="color:#e06c75;">$colors</span><span>: red, blue, yellow, green;
+</span><span>
+</span><span style="color:#5c6370;">// Pick a random index between 0 and 3
+</span><span style="color:#e06c75;">$random-index</span><span>: </span><span style="color:#61afef;">random</span><span>(</span><span style="color:#61afef;">length</span><span>(</span><span style="color:#e06c75;">$colors</span><span>));
+</span></code></pre>
+<p>But that gives us an index and not the color. To pick a color value, we'll use <code>nth</code> function, which returns the nth item from the array. Putting it all together, it looks like this:</p>
+<pre data-lang="scss" style="background-color:#282c34;color:#dcdfe4;" class="language-scss "><code class="language-scss" data-lang="scss"><span style="color:#5c6370;">// A list of colors
+</span><span style="color:#e06c75;">$colors</span><span>: red, blue, yellow, green;
+</span><span>
+</span><span style="color:#5c6370;">// Picking one random color from the list
+</span><span style="color:#e06c75;">$color</span><span>: </span><span style="color:#61afef;">nth</span><span>(</span><span style="color:#e06c75;">$colors</span><span>, </span><span style="color:#61afef;">random</span><span>(</span><span style="color:#61afef;">length</span><span>(</span><span style="color:#e06c75;">$colors</span><span>)));
+</span></code></pre>
+<p>Actual code used looks like this:</p>
+
+
+
+<div class="spoiler ">
+  <button
+    aria-expanded="false"
+    aria-controls='spoiler-3'
+    class="spoiler__toggle btn btn--sm btn--empty"
+  >
+    <span
+      class="spoiler__show"
+      
+    >
+      
+        Show SCSS
+      
+      <span aria-hidden="true">+</span> <!-- TODO add icon -->
+    </span>
+    <span
+      class="spoiler__hide"
+      style="display: none"
+    >
+      
+        Hide SCSS
+      
+      <span aria-hidden="true">-</span> <!-- TODO add icon -->
+    </span>
+  </button>
+
+  <div
+    id='spoiler-3'
+    class="spoiler__content"
+    aria-hidden="true"
+    style="display: none"
+  >
+    <pre data-lang="scss" style="background-color:#282c34;color:#dcdfe4;" class="language-scss "><code class="language-scss" data-lang="scss"><span style="color:#e06c75;">$tshirt-colors</span><span>: </span><span style="color:#e5c07b;">#9b59b7</span><span>, </span><span style="color:#e5c07b;">#1abc9d</span><span>, </span><span style="color:#e5c07b;">#e74c3c</span><span>, </span><span style="color:#e5c07b;">#f1c40f</span><span>, </span><span style="color:#e5c07b;">#3498db</span><span>, </span><span style="color:#e5c07b;">#e67e22</span><span>, </span><span style="color:#e5c07b;">#34495e</span><span>;
+</span><span style="color:#e06c75;">$shoes-colors</span><span>: </span><span style="color:#e5c07b;">#2b071f</span><span>, </span><span style="color:#e5c07b;">#ffe600</span><span>, </span><span style="color:#e5c07b;">#345</span><span>, </span><span style="color:#e5c07b;">#ecf0f1</span><span>, </span><span style="color:#e5c07b;">#0abde3</span><span>, </span><span style="color:#e5c07b;">#6c5ce7</span><span>;
+</span><span style="color:#e06c75;">$pants-colors</span><span>: </span><span style="color:#e5c07b;">#1e3799</span><span>, </span><span style="color:#e5c07b;">#198066</span><span>, </span><span style="color:#e5c07b;">#510b6d</span><span>, </span><span style="color:#e5c07b;">#2c3e50</span><span>, </span><span style="color:#e5c07b;">#d35400</span><span>, </span><span style="color:#e5c07b;">#95a5a6</span><span>;
+</span><span style="color:#e06c75;">$skin-colors</span><span>: </span><span style="color:#e5c07b;">#d8b997</span><span>, </span><span style="color:#e5c07b;">#bb9472</span><span>, </span><span style="color:#e5c07b;">#866946</span><span>, </span><span style="color:#e5c07b;">#473a30</span><span>;
+</span><span>
+</span><span style="color:#c678dd;">@for </span><span style="color:#e06c75;">$i </span><span style="color:#c678dd;">from </span><span style="color:#e5c07b;">1 </span><span style="color:#c678dd;">through </span><span style="color:#e5c07b;">10 </span><span>{
+</span><span style="color:#c678dd;">  </span><span style="color:#e06c75;">css-person</span><span style="color:#e5c07b;">:</span><span style="color:#c678dd;">nth-child(#{$i}) </span><span>{
+</span><span>    </span><span style="color:#5c6370;">// For each person we select a random set of colors:
+</span><span>    </span><span style="color:#e06c75;">$tshirt-color</span><span>: </span><span style="color:#61afef;">nth</span><span>(</span><span style="color:#e06c75;">$tshirt-colors</span><span>, </span><span style="color:#61afef;">random</span><span>(</span><span style="color:#61afef;">length</span><span>(</span><span style="color:#e06c75;">$tshirt-colors</span><span>)));
+</span><span>    </span><span style="color:#e06c75;">$shoes-color</span><span>: </span><span style="color:#61afef;">nth</span><span>(</span><span style="color:#e06c75;">$shoes-colors</span><span>, </span><span style="color:#61afef;">random</span><span>(</span><span style="color:#61afef;">length</span><span>(</span><span style="color:#e06c75;">$shoes-colors</span><span>)));
+</span><span>    </span><span style="color:#e06c75;">$pants-color</span><span>: </span><span style="color:#61afef;">nth</span><span>(</span><span style="color:#e06c75;">$pants-colors</span><span>, </span><span style="color:#61afef;">random</span><span>(</span><span style="color:#61afef;">length</span><span>(</span><span style="color:#e06c75;">$pants-colors</span><span>)));
+</span><span>    </span><span style="color:#e06c75;">$skin-color</span><span>: </span><span style="color:#61afef;">nth</span><span>(</span><span style="color:#e06c75;">$skin-colors</span><span>, </span><span style="color:#61afef;">random</span><span>(</span><span style="color:#61afef;">length</span><span>(</span><span style="color:#e06c75;">$skin-colors</span><span>)));
+</span><span>  }
+</span><span>}
+</span></code></pre>
+
+  </div>
+</div>
+<p>Unfortunately, SASS is not dynamic and all the randomness is executed once on the build time. When we refresh the page, the colors will stay the same. But if we compile SASS again, we will get a new set of color combinations. That's why I'm using a <code>@for</code> loop to generate a bunch of different color combinations.</p>
+<p>You can see the result and loop through the generated combinations below:</p>
+<div class="people-wrapper people-wrapper-single">
+  <css-person class="no-animation color-person person-1"></css-person>
+</div>
+<div class="rotation">
+  <label for="r2">Rotation:</label>
+  <input id="r2" value="60" min="0" max="360" type="range" class="rotation-input">
+</div>
+<button class="btn btn--sm btn--empty next-color" style="margin-top: 10rem">Next color combination</button>
+<h2 id="animation">Animation<a
+  class="header-anchor"
+  href="#animation" aria-label="Anchor link for: animation"
+  title="Anchor link for: animation"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>To figure out the moves, I looked at a video of people doing stadium waves.</p>
+<p>At first glance, it might not look so, but animation code is reasonably simple. It is just a bunch of CSS transforms. To give you an idea, here is how arm segments are animated:</p>
+<pre data-lang="scss" style="background-color:#282c34;color:#dcdfe4;" class="language-scss "><code class="language-scss" data-lang="scss"><span style="color:#c678dd;">@keyframes </span><span>arm-top {
+</span><span>  </span><span style="color:#e5c07b;">0</span><span style="color:#c678dd;">% </span><span>{
+</span><span>    transform: </span><span style="color:#61afef;">rotateX</span><span>(</span><span style="color:#e5c07b;">-40</span><span style="color:#c678dd;">deg</span><span>);
+</span><span>  }
+</span><span>  </span><span style="color:#e5c07b;">50</span><span style="color:#c678dd;">% </span><span>{
+</span><span>    transform: </span><span style="color:#61afef;">rotateX</span><span>(</span><span style="color:#e5c07b;">0</span><span style="color:#c678dd;">deg</span><span>);
+</span><span>  }
+</span><span>}
+</span><span>
+</span><span style="color:#c678dd;">@keyframes </span><span>arm-bottom {
+</span><span>  </span><span style="color:#e5c07b;">0</span><span style="color:#c678dd;">% </span><span>{
+</span><span>    transform: </span><span style="color:#61afef;">rotateX</span><span>(</span><span style="color:#e5c07b;">40</span><span style="color:#c678dd;">deg</span><span>);
+</span><span>  }
+</span><span>  </span><span style="color:#e5c07b;">50</span><span style="color:#c678dd;">% </span><span>{
+</span><span>    transform: </span><span style="color:#61afef;">rotateX</span><span>(</span><span style="color:#e5c07b;">0</span><span style="color:#c678dd;">deg</span><span>) </span><span style="color:#61afef;">translateZ</span><span>(</span><span style="color:#e5c07b;">0</span><span style="color:#c678dd;">em</span><span>);
+</span><span>  }
+</span><span>}
+</span></code></pre>
+<p>All of the animations last for the same time, and they are looping indefinitely:</p>
+<div class="people-wrapper people-wrapper-single is-in-viewport">
+  <css-person></css-person>
+</div>
+<div class="rotation">
+  <label for="r3">Rotation:</label>
+  <input id="r3" value="60" min="0" max="360" type="range" class="rotation-input">
+</div>
+<h2 id="putting-it-all-together">Putting it all together<a
+  class="header-anchor"
+  href="#putting-it-all-together" aria-label="Anchor link for: putting-it-all-together"
+  title="Anchor link for: putting-it-all-together"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>We created a 3D box, assembled a person from a bunch of them, colored them and animated everything. All that is left to do is add more people and create wave delay animations for each subsequent person.</p>
+<p>And here they are, behold the CSS people making waves:</p>
+<div class="people-wrapper is-in-viewport">
+  <div class="row">
+    <css-person></css-person>
+    <css-person></css-person>
+    <css-person></css-person>
+    <css-person></css-person>
+    <css-person></css-person>
+    <css-person></css-person>
+  </div>
+</div>
+<div class="rotation">
+  <label for="r4">Rotation:</label>
+  <input id="r4" value="60" min="0" max="360" type="range" class="rotation-input">
+</div>
+<h3 id="bonus-for-the-world-cup">Bonus for the World Cup<a
+  class="header-anchor"
+  href="#bonus-for-the-world-cup" aria-label="Anchor link for: bonus-for-the-world-cup"
+  title="Anchor link for: bonus-for-the-world-cup"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h3>
+<p>This idea comes from a colleague of mine. When I shared it with him, he responded with this:</p>
+<blockquote>
+<p>Awesome!!<br/>
+This is great for the upcoming world cup!!<br/>
+You could integrate a live score and have two sides of fans - the one in the lead does the wave 😂</p>
+</blockquote>
+<p>I didn't go that far with the live score, but I did some color theming to create international fans:</p>
+<div class="people-wrapper is-in-viewport">
+  <div class="row">
+    <css-person class="fan serbia"></css-person>
+    <css-person class="fan serbia"></css-person>
+    <css-person class="fan serbia"></css-person>
+    <css-person class="fan serbia"></css-person>
+    <css-person class="fan serbia"></css-person>
+    <css-person class="fan serbia"></css-person>
+  </div>
+</div>
+<div class="country-select">
+  <div>Select a country to root for:</div>
+  <label>
+    <input type="radio" name="country" value="brazil"> Brazil
+  </label>
+  <label>
+    <input type="radio" name="country" value="denmark"> Denmark
+  </label>
+  <label>
+    <input type="radio" name="country" value="netherlands"> Netherlands
+  </label>
+  <label>
+    <input type="radio" name="country" value="serbia" checked> Serbia
+  </label>
+  <label>
+    <input type="radio" name="country" value="usa"> USA
+  </label>
+</div>
+<h2 id="final-thoughts">Final thoughts<a
+  class="header-anchor"
+  href="#final-thoughts" aria-label="Anchor link for: final-thoughts"
+  title="Anchor link for: final-thoughts"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>One note of performance - I limited demos to six people because if more are added, animations can get very choppy on older hardware and some browsers. Safari behaves the best, and it can handle the most people. That's why on the CodePen, I check for it and add more people on Safari for a better effect. Also, in the post, animations are paused when not in the viewport.</p>
+<p>I made it year and a half ago and kind of forgot about it. So I owe big thanks to my colleague Stefan who inspired me to do the World Cup version and write this blog post.</p>
+<p>It was super fun to make waves and write this blog post. This is the first time I tried making a more interactive article with multiple demos and controls. I really hope you like it!</p>
+<script>
+class Box extends HTMLElement {
+  constructor() {
+    super();
+
+    this.innerHTML =
+      `<div class="front"></div>
+      <div class="back"></div>
+      <div class="right"></div>
+      <div class="left"></div>
+      <div class="bottom"></div>
+      <div class="top"></div>`;
+  }
+}
+
+window.customElements.define("css-box", Box);
+
+class Person extends HTMLElement {
+  constructor() {
+    super();
+
+    this.innerHTML = `<div class="person-top">
+      <div class="head-wrapper">
+        <css-box class="head"></css-box>
+      </div>
+      <div class="arm">
+        <css-box class="arm-top"></css-box>
+        <css-box class="arm-bottom"></css-box>
+      </div>
+      <css-box class="torso"></css-box>
+      <div class="arm arm-right">
+        <css-box class="arm-top"></css-box>
+        <css-box class="arm-bottom"></css-box>
+      </div>
+    </div>
+    <div class="legs">
+      <div class="leg leg-left">
+        <css-box class="leg-top"></css-box>
+        <css-box class="leg-bottom"></css-box>
+        <css-box class="leg-shoe"></css-box>
+      </div>
+      <div class="leg leg-right">
+        <css-box class="leg-top"></css-box>
+        <css-box class="leg-bottom"></css-box>
+        <css-box class="leg-shoe"></css-box>
+      </div>
+    </div>`;
+  }
+}
+
+window.customElements.define("css-person", Person);
+
+document.querySelectorAll(".rotation-input").forEach(function (input) {
+  var peopleWrapper = input.parentElement.previousSibling;
+  peopleWrapper.style.transform = `rotateY(${input.value}deg) rotateX(5deg)`;
+  input.addEventListener("input", () => {
+    peopleWrapper.style.transform = `rotateY(${input.value}deg) rotateX(5deg)`;
+  });
+});
+
+var colorSetIndex = 1;
+var colorPerson = document.querySelector('.color-person');
+var colorButton = document.querySelector('.next-color');
+
+colorButton.addEventListener('click', function() {
+  colorPerson.classList.remove('person-' + colorSetIndex);
+  colorSetIndex++;
+  if (colorSetIndex === 11) {
+    colorSetIndex = 1;
+  }
+  colorPerson.classList.add('person-' + colorSetIndex);
+});
+
+var fans = document.querySelectorAll('.fan');
+var countryInputs = document.querySelectorAll('input[name=country]');
+var selectedCountry = document.querySelector('input[name=country]:checked').value;
+
+fans.forEach(function (fan) {
+  fan.className = selectedCountry;
+});
+
+countryInputs.forEach(function(input) {
+  input.addEventListener('change', function(e) {
+    fans.forEach(function (fan) {
+      fan.className = e.target.value;
+    });
+  });
+});
+
+</script>
+
+    </content>
+
+	</entry>
 	<entry xml:lang="en">
 		<title>Scrubbing videos using JavaScript</title>
 		<published>2022-10-21T00:00:00+00:00</published>
@@ -249,7 +765,7 @@ ffmpeg -i input-video.mp4 -vcodec libx264 <span style="color: var(--theme-color)
       
         Show tsconfig-esm.json
       
-      + <!-- TODO add icon -->
+      <span aria-hidden="true">+</span> <!-- TODO add icon -->
     </span>
     <span
       class="spoiler__hide"
@@ -258,7 +774,7 @@ ffmpeg -i input-video.mp4 -vcodec libx264 <span style="color: var(--theme-color)
       
         Hide tsconfig-esm.json
       
-      - <!-- TODO add icon -->
+      <span aria-hidden="true">-</span> <!-- TODO add icon -->
     </span>
   </button>
 
@@ -296,7 +812,7 @@ ffmpeg -i input-video.mp4 -vcodec libx264 <span style="color: var(--theme-color)
       
         Show tsconfig-cjs.json
       
-      + <!-- TODO add icon -->
+      <span aria-hidden="true">+</span> <!-- TODO add icon -->
     </span>
     <span
       class="spoiler__hide"
@@ -305,7 +821,7 @@ ffmpeg -i input-video.mp4 -vcodec libx264 <span style="color: var(--theme-color)
       
         Hide tsconfig-cjs.json
       
-      - <!-- TODO add icon -->
+      <span aria-hidden="true">-</span> <!-- TODO add icon -->
     </span>
   </button>
 
@@ -6642,7 +7158,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
       
         Show file structure after this step
       
-      + <!-- TODO add icon -->
+      <span aria-hidden="true">+</span> <!-- TODO add icon -->
     </span>
     <span
       class="spoiler__hide"
@@ -6651,7 +7167,7 @@ and what I'm trying to teach you is directly based on my experience on these pro
       
         Hide file structure after this step
       
-      - <!-- TODO add icon -->
+      <span aria-hidden="true">-</span> <!-- TODO add icon -->
     </span>
   </button>
 
@@ -6778,7 +7294,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
       
         Show file structure after this step
       
-      + <!-- TODO add icon -->
+      <span aria-hidden="true">+</span> <!-- TODO add icon -->
     </span>
     <span
       class="spoiler__hide"
@@ -6787,7 +7303,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
       
         Hide file structure after this step
       
-      - <!-- TODO add icon -->
+      <span aria-hidden="true">-</span> <!-- TODO add icon -->
     </span>
   </button>
 
@@ -6961,7 +7477,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
       
         Show file structure after this step
       
-      + <!-- TODO add icon -->
+      <span aria-hidden="true">+</span> <!-- TODO add icon -->
     </span>
     <span
       class="spoiler__hide"
@@ -6970,7 +7486,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
       
         Hide file structure after this step
       
-      - <!-- TODO add icon -->
+      <span aria-hidden="true">-</span> <!-- TODO add icon -->
     </span>
   </button>
 
@@ -7109,7 +7625,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
       
         Show file structure after this step
       
-      + <!-- TODO add icon -->
+      <span aria-hidden="true">+</span> <!-- TODO add icon -->
     </span>
     <span
       class="spoiler__hide"
@@ -7118,7 +7634,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
       
         Hide file structure after this step
       
-      - <!-- TODO add icon -->
+      <span aria-hidden="true">-</span> <!-- TODO add icon -->
     </span>
   </button>
 
@@ -7344,7 +7860,7 @@ next to js and html files.</p>
       
         Show file structure after this step
       
-      + <!-- TODO add icon -->
+      <span aria-hidden="true">+</span> <!-- TODO add icon -->
     </span>
     <span
       class="spoiler__hide"
@@ -7353,7 +7869,7 @@ next to js and html files.</p>
       
         Hide file structure after this step
       
-      - <!-- TODO add icon -->
+      <span aria-hidden="true">-</span> <!-- TODO add icon -->
     </span>
   </button>
 
@@ -7524,7 +8040,7 @@ in it.</p>
       
         Show file structure after this step
       
-      + <!-- TODO add icon -->
+      <span aria-hidden="true">+</span> <!-- TODO add icon -->
     </span>
     <span
       class="spoiler__hide"
@@ -7533,7 +8049,7 @@ in it.</p>
       
         Hide file structure after this step
       
-      - <!-- TODO add icon -->
+      <span aria-hidden="true">-</span> <!-- TODO add icon -->
     </span>
   </button>
 
