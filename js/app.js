@@ -1,10 +1,11 @@
 import "./debug";
 
 import "./archive";
+import "./color-scheme-switcher";
 import "./comments";
+import "./in-viewport";
 import "./keyboard";
 import "./menu";
-import "./color-scheme-switcher";
 import "./scroll-to";
 import "./search";
 import "./sidenote";

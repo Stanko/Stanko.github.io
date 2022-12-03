@@ -106,24 +106,24 @@ h3,
   font-size: 24rem;
 
   @include md {
-    font-size: 28rem;
+    font-size: 26rem;
   }
 
   @include lg {
-    font-size: 34rem;
+    font-size: 30rem;
   }
 }
 
 h4,
 .h4 {
-  font-size: 22rem;
+  font-size: 20rem;
 
   @include md {
-    font-size: 24rem;
+    font-size: 22rem;
   }
 
   @include lg {
-    font-size: 26rem;
+    font-size: 24rem;
   }
 }
 
