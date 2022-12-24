@@ -20,15 +20,27 @@
   {% endif %}
 {% endfor %}
 
-{# I started writing in february 2016. #}
+{# I started writing in February 2016. #}
 {% set start_year = 2016 %}
 {% set current_year = now() | date(format='%Y') | int %}
+{# Minus one as I started writing in February which means I wrote for 10 months in 2016 #}
+{% set full_years_passed = (current_year - start_year - 1) %}
 {% set current_year_months = now() | date(format='%m') | int %}
+{# Adding 10 as I started writing in February and there was 10 months left in 2016 #}
+{% set months = current_year_months + 10 %}
+
+{% if months >= 12 %}
+  {% set full_years_passed = full_years_passed + 1 %}
+  {% set months = months - 12 %}
+{% endif %}
 
 <div class="blog-stats__row">
   <div class="blog-stats__row-left">Writing for</div>
   <div class="blog-stats__row-right">
-    {{ current_year - start_year }} years {{ current_year_months }} month{{ current_year_months | pluralize }}
+    {{ full_years_passed }} years
+    {% if months > 0 %}
+      {{ months }} month{{ months | pluralize }}
+    {% endif %}
   </div>
 </div>
 <div class="blog-stats__row">
