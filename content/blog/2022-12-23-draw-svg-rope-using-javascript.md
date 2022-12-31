@@ -187,7 +187,7 @@ function getPathPoints(d, step = 10) {
       <label for="chaikin-show-points">
         Show points
       </label>
-      <input id="chaikin-show-points" class="chaikin-show-points" type="checkbox" checked />
+      <input id="chaikin-show-points" class="chaikin-show-points" type="checkbox" checked="checked" />
     </div>
   </div>
 
@@ -349,7 +349,7 @@ Before you go, don't forget to:
     <div class="demo-controls-column">
       <div class="demo-title">Options</div>
       <label class="demo-checkbox-label">
-        <input class="demo-checkbox-animate" type="checkbox" checked />
+        <input class="demo-checkbox-animate" type="checkbox" checked="checked" />
         Animate
       </label>
       <div class="demo-control">
@@ -389,7 +389,7 @@ Before you go, don't forget to:
         <input data-key="segments" class="demo-checkbox" type="checkbox" />Segments
       </label>
       <label class="demo-checkbox-label">
-        <input data-key="rope" class="demo-checkbox" type="checkbox" checked />Rounded segments
+        <input data-key="rope" class="demo-checkbox" type="checkbox" checked="checked" />Rounded segments
       </label>
     </div>
     <div class="demo-controls-column">
@@ -403,7 +403,7 @@ Before you go, don't forget to:
         White
       </label>
       <label class="demo-radio-label">
-        <input class="demo-radio" type="radio" checked name="demo-colors" value="natural" />
+        <input class="demo-radio" type="radio" checked="checked" name="demo-colors" value="natural" />
         Natural
       </label>
       <label class="demo-radio-label">

@@ -36,7 +36,7 @@ Otherwise, let's start scrolling down to see these two videos scrubbing:
       style="border-radius: 4px; background: #f7f7f7;"
       id="line-video-5"
       playsinline="true"
-      muted
+      muted="muted"
     >
       <source src="/videos/line-5.webm#t=0.001"></source>
       <source src="/videos/line-5.mp4#t=0.001"></source>
@@ -49,7 +49,7 @@ Otherwise, let's start scrolling down to see these two videos scrubbing:
       style="border-radius: 4px; background: #f7f7f7;"
       id="line-video-100"
       playsinline="true"
-      muted
+      muted="muted"
     >
       <source src="/videos/line-100.webm#t=0.001"></source>
       <source src="/videos/line-100.mp4#t=0.001"></source>

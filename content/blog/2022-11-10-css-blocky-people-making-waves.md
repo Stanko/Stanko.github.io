@@ -164,7 +164,7 @@ After rotating and putting all of the boxes in place, we end up with a sitting p
 </div>
 <div class="rotation">
   <label for="r1">Rotation:</label>
-  <input id="r1" value="60" min="0" max="360" type="range" class="rotation-input">
+  <input id="r1" value="60" min="0" max="360" type="range" class="rotation-input" />
 </div>
 
 ## Colors
@@ -221,7 +221,7 @@ You can see the result and loop through the generated combinations below:
 </div>
 <div class="rotation">
   <label for="r2">Rotation:</label>
-  <input id="r2" value="60" min="0" max="360" type="range" class="rotation-input">
+  <input id="r2" value="60" min="0" max="360" type="range" class="rotation-input" />
 </div>
 <button class="btn btn--sm btn--empty next-color" style="margin-top: 10rem">Next color combination</button>
 
@@ -258,7 +258,7 @@ All of the animations last for the same time, and they are looping indefinitely:
 </div>
 <div class="rotation">
   <label for="r3">Rotation:</label>
-  <input id="r3" value="60" min="0" max="360" type="range" class="rotation-input">
+  <input id="r3" value="60" min="0" max="360" type="range" class="rotation-input" />
 </div>
 
 ## Putting it all together
@@ -279,7 +279,7 @@ And here they are, behold the CSS people making waves:
 </div>
 <div class="rotation">
   <label for="r4">Rotation:</label>
-  <input id="r4" value="60" min="0" max="360" type="range" class="rotation-input">
+  <input id="r4" value="60" min="0" max="360" type="range" class="rotation-input" />
 </div>
 
 ### Bonus for the World Cup
@@ -306,19 +306,19 @@ I didn't go that far with the live score, but I did some color theming to create
 <div class="country-select">
   <div>Select a country to root for:</div>
   <label>
-    <input type="radio" name="country" value="brazil"> Brazil
+    <input type="radio" name="country" value="brazil" /> Brazil
   </label>
   <label>
-    <input type="radio" name="country" value="denmark"> Denmark
+    <input type="radio" name="country" value="denmark" /> Denmark
   </label>
   <label>
-    <input type="radio" name="country" value="netherlands"> Netherlands
+    <input type="radio" name="country" value="netherlands" /> Netherlands
   </label>
   <label>
-    <input type="radio" name="country" value="serbia" checked> Serbia
+    <input type="radio" name="country" value="serbia" checked="checked" /> Serbia
   </label>
   <label>
-    <input type="radio" name="country" value="usa"> USA
+    <input type="radio" name="country" value="usa" /> USA
   </label>
 </div>
 
