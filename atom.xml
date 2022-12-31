@@ -5,8 +5,515 @@
 	<link href="https://muffinman.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://muffinman.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-12-22T00:00:00+00:00</updated>
+	<updated>2022-12-23T00:00:00+00:00</updated>
 	<id>https://muffinman.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Draw SVG rope using JavaScript</title>
+		<published>2022-12-23T00:00:00+00:00</published>
+		<updated>2022-12-23T00:00:00+00:00</updated>
+		<link href="https://muffinman.io/blog/draw-svg-rope-using-javascript/" type="text/html"/>
+		<id>https://muffinman.io/blog/draw-svg-rope-using-javascript/</id>
+    <author>
+      <name>Stanko</name>
+    </author>
+		<content type="html"><link rel="stylesheet" href="/posts/rope.css" />
+<noscript>
+<p>This is an interactive article. To fully experience it, you'll need to turn JavaScript on.</p>
+</noscript>
+<p>Today, I'll take you through the process I came up with to transform an SVG path into a vector rope drawing.</p>
+<p>We'll learn how to turn the path on the left into the rope on the right:
+
+  <img
+    class="image image--lg   "
+    src="&#x2F;img&#x2F;rope&#x2F;path-to-rope.png"
+    alt="SVG path and a rope drawing created from it"
+  />
+  
+
+</p>
+<p>The problem popped up on a project my colleagues were working on, and it stuck with me. I thought about it and started playing with it as soon as I got some free time. I had a lot of fun. Therefore I want to share the process with you.</p>
+<p>Please note that this is not a coding tutorial but a detailed overview of each step. But don't worry, the code is fully available.</p>
+<p>If you feel impatient, you can jump to the <a href="https://muffinman.io/blog/draw-svg-rope-using-javascript/#demo">interactive demo</a> or check the code <a href="https://codepen.io/stanko/pen/vYaEMKX">on CodePen</a>. But I heartily recommend you read the whole thing first.</p>
+<h2 id="idea">Idea<a
+  class="header-anchor"
+  href="#idea" aria-label="Anchor link for: idea"
+  title="Anchor link for: idea"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>Looking at this close-up photo of a rope, we can see it consists of multiple strands twisted around each other. Visually, they split the rope into segments. Each segment's 2D projection resembles a curved polygon.</p>
+<p>Our goal will be to create these polygons using JavaScript.</p>
+<p>We'll start by generating simple rectangular polygons. Then we'll fine-tune them to make them look like actual rope segments.</p>
+<p><img src="/img/rope/close-up.jpg" alt="Close-up photo of a rope" /></p>
+<h3 id="how-to-approach-problems-like-this">How to approach problems like this<a
+  class="header-anchor"
+  href="#how-to-approach-problems-like-this" aria-label="Anchor link for: how-to-approach-problems-like-this"
+  title="Anchor link for: how-to-approach-problems-like-this"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h3>
+<p>I think this is one of the problems a child can solve and draw on paper. But at the same time, breaking it down and turning it into code is hard.</p>
+<p>I've seen many junior developers struggle with similar problems. Usually, it starts with them diving into coding right away. Then they entangle themselves in their code and get stuck. And that is why it is so important to
+<span
+  class="sidenote__trigger "
+  tabindex="0"
+  role="button"
+>
+  solve the problem first.
+</span>
+
+<span
+  class="sidenote__note "
+><span class="sidenote__bracket">(</span>I bore my mentees to death by repeating that programming is problem-solving, while code is just a tool to implement those solutions.<span class="sidenote__bracket">)</span></span>
+</p>
+<p>I'm a visual thinker. For me drawing things on paper makes a problem easier to solve. I would suggest you try the same. Keep a pen and paper near your computer and reach out for them before you start typing code.</p>
+<p>After doodling ropes for a while, I was satisfied with the image you can see in the bottom right on the left page:</p>
+
+  <img
+    class="image image--md   "
+    src="&#x2F;img&#x2F;rope&#x2F;notebook.jpg"
+    alt="My notebook with sketches I draw while solving the problem"
+  />
+  
+
+<p>It is not perfect, but it is straightforward and easy to code. That's why I selected it as a starting point, and only then I started coding.</p>
+<h2 id="the-process">The process<a
+  class="header-anchor"
+  href="#the-process" aria-label="Anchor link for: the-process"
+  title="Anchor link for: the-process"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p><small>The image below will stay in the viewport and update as you scroll.</small></p>
+<div class="steps-wrapper">
+<div class="rope-steps image--md is-in-viewport">
+  <svg class="rope-svg" viewBox="0 0 500 200"></svg>
+</div>
+<div class="step-section step-section--path">
+<h3 id="start-with-an-svg-path">Start with an SVG path<a
+  class="header-anchor"
+  href="#start-with-an-svg-path" aria-label="Anchor link for: start-with-an-svg-path"
+  title="Anchor link for: start-with-an-svg-path"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h3>
+<p>Our goal is to make a program that turns any SVG path into a rope. The program will have to support straight line segments (polylines) and bezier curves.</p>
+<p>Let's start with a simple curved path shown above.</p>
+
+
+
+<div class="spoiler ">
+  <button
+    aria-expanded="false"
+    aria-controls='spoiler-1'
+    class="spoiler__toggle btn btn--sm btn--empty"
+  >
+    <span
+      class="spoiler__show"
+      
+    >
+      
+        Show path&#x27;s code
+      
+      <span aria-hidden="true">+</span> <!-- TODO add icon -->
+    </span>
+    <span
+      class="spoiler__hide"
+      style="display: none"
+    >
+      
+        Hide path&#x27;s code
+      
+      <span aria-hidden="true">-</span> <!-- TODO add icon -->
+    </span>
+  </button>
+
+  <div
+    id='spoiler-1'
+    class="spoiler__content"
+    aria-hidden="true"
+    style="display: none"
+  >
+    <pre data-lang="html" style="background-color:#282c34;color:#dcdfe4;" class="language-html "><code class="language-html" data-lang="html"><span>&lt;</span><span style="color:#e06c75;">path
+</span><span>  </span><span style="color:#e5c07b;">d</span><span>=</span><span style="color:#98c379;">&quot;M 50 150
+</span><span style="color:#98c379;">     C 150 150, 150  50, 250  50
+</span><span style="color:#98c379;">     C 350  50, 350 150, 450 150&quot;
+</span><span>/&gt;
+</span></code></pre>
+
+  </div>
+</div>
+<p><span id="path" class="step-title"></span></p>
+</div>
+<div class="step-section step-section--points">
+<h3 id="split-the-path-into-equal-parts">Split the path into equal parts<a
+  class="header-anchor"
+  href="#split-the-path-into-equal-parts" aria-label="Anchor link for: split-the-path-into-equal-parts"
+  title="Anchor link for: split-the-path-into-equal-parts"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h3>
+<p>If we split the path into parts, we can use each piece for one rope segment. To chop the path up, we'll have to go along it and calculate a point on every <code>n</code> pixels.</p>
+<p>To do so, we'll need a way to get the total length of the path so we know when to stop iterating, as well as the function to get the point at the specific length.</p>
+<p>Luckily, browsers natively provide us with the methods we need:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGeometryElement/getTotalLength">getTotalLength</a> which returns the length of the path.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGeometryElement/getPointAtLength">getPointAtLength</a> which returns the point at a given distance along the path.</li>
+</ul>
+<p>The nice thing is that we don't need to render the path on the page. Both methods work with the path being in memory only.</p>
+<p>Below is the function I used to calculate these points:</p>
+
+
+
+<div class="spoiler ">
+  <button
+    aria-expanded="false"
+    aria-controls='spoiler-2'
+    class="spoiler__toggle btn btn--sm btn--empty"
+  >
+    <span
+      class="spoiler__show"
+      
+    >
+      
+        Show code
+      
+      <span aria-hidden="true">+</span> <!-- TODO add icon -->
+    </span>
+    <span
+      class="spoiler__hide"
+      style="display: none"
+    >
+      
+        Hide code
+      
+      <span aria-hidden="true">-</span> <!-- TODO add icon -->
+    </span>
+  </button>
+
+  <div
+    id='spoiler-2'
+    class="spoiler__content"
+    aria-hidden="true"
+    style="display: none"
+  >
+    <pre data-lang="js" style="background-color:#282c34;color:#dcdfe4;" class="language-js "><code class="language-js" data-lang="js"><span style="color:#c678dd;">function </span><span style="color:#61afef;">getPathPoints</span><span>(</span><span style="color:#e06c75;">d</span><span>, </span><span style="color:#e06c75;">step </span><span style="color:#c678dd;">= </span><span style="color:#e5c07b;">10</span><span>) {
+</span><span>  </span><span style="color:#c678dd;">const </span><span style="color:#e06c75;">path </span><span style="color:#c678dd;">= </span><span>document.</span><span style="color:#61afef;">createElementNS</span><span>(</span><span style="color:#98c379;">&quot;http://www.w3.org/2000/svg&quot;</span><span>, </span><span style="color:#98c379;">&quot;path&quot;</span><span>);
+</span><span>  </span><span style="color:#e06c75;">path</span><span>.</span><span style="color:#61afef;">setAttribute</span><span>(</span><span style="color:#98c379;">&quot;d&quot;</span><span>, </span><span style="color:#e06c75;">d</span><span>);
+</span><span>
+</span><span>  </span><span style="color:#c678dd;">const </span><span style="color:#e06c75;">length </span><span style="color:#c678dd;">= </span><span style="color:#e06c75;">path</span><span>.</span><span style="color:#61afef;">getTotalLength</span><span>();
+</span><span>
+</span><span>  </span><span style="color:#c678dd;">const </span><span style="color:#e06c75;">count </span><span style="color:#c678dd;">= </span><span style="color:#e06c75;">length </span><span style="color:#c678dd;">/ </span><span style="color:#e06c75;">step</span><span>;
+</span><span>
+</span><span>  </span><span style="color:#c678dd;">const </span><span style="color:#e06c75;">points </span><span style="color:#c678dd;">= </span><span>[];
+</span><span>
+</span><span>  </span><span style="color:#c678dd;">for </span><span>(</span><span style="color:#c678dd;">let </span><span style="color:#e06c75;">i </span><span style="color:#c678dd;">= </span><span style="color:#e5c07b;">0</span><span>; </span><span style="color:#e06c75;">i </span><span style="color:#c678dd;">&lt; </span><span style="color:#e06c75;">count </span><span style="color:#c678dd;">+ </span><span style="color:#e5c07b;">1</span><span>; </span><span style="color:#e06c75;">i</span><span style="color:#c678dd;">++</span><span>) {
+</span><span>    </span><span style="color:#c678dd;">const </span><span style="color:#e06c75;">n </span><span style="color:#c678dd;">= </span><span style="color:#e06c75;">i </span><span style="color:#c678dd;">* </span><span style="color:#e06c75;">step</span><span>;
+</span><span>    </span><span style="color:#e06c75;">points</span><span>.</span><span style="color:#61afef;">push</span><span>(</span><span style="color:#e06c75;">path</span><span>.</span><span style="color:#61afef;">getPointAtLength</span><span>(</span><span style="color:#e06c75;">n</span><span>));
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#c678dd;">return </span><span style="color:#e06c75;">lines</span><span>;
+</span><span>}
+</span></code></pre>
+
+  </div>
+</div>
+<p>You'll notice two extra points in the image above at the start and end. Those are not included in the code snippet above. Just ignore them for now, we'll use them later.</p>
+<p><strong>Note on server-side rendering</strong></p>
+<p>These methods don't work on the server. However, I checked a few server-side languages, and almost all of them have variations of these two methods. For NodeJS you could probably use <a href="https://www.npmjs.com/package/svg-path-properties">svg-path-properties</a> library.</p>
+<p><span id="points" class="step-title"></span></p>
+</div>
+<div class="step-section step-section--normals">
+<h3 id="add-some-thickness">Add some thickness<a
+  class="header-anchor"
+  href="#add-some-thickness" aria-label="Anchor link for: add-some-thickness"
+  title="Anchor link for: add-some-thickness"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h3>
+<p>Now that the path is split, we need to give each segment some thickness. We'll do it by drawing a normal line through each point.</p>
+<p>For our use case, normals don't have to be mathematically exact, approximation will do. There is an easy way to approximate a normal on a curve, and it requires three consecutive points.</p>
+
+  <img
+    class="image image--sm   "
+    src="&#x2F;img&#x2F;rope&#x2F;bisector.png"
+    alt="Normal line is defined by the bisector of the angle between three points"
+  />
+  
+
+<p>In the figure above, you can see the normal drawn through the point <strong>P</strong>. It is defined by the bisector of the angle <strong>α</strong> between points <strong>Pp</strong>, <strong>P</strong> and <strong>Pn</strong>. Points <strong>Pp</strong> and <strong>Pn</strong> are helper points. We are going to use the previous and next points as helper points.</p>
+<p>If you thought, &quot;oh, that's why he added those extra points in the previous step&quot;, you are correct! Those are added to ensure the first and the last point also have neighbors on both sides.</p>
+<p>Lucky me, I already had code, as I solved the same problem for my <a href="https://muffinman.io/vertigo/">Vertigo</a> project.</p>
+<p><span id="normals" class="step-title"></span></p>
+</div>
+<div class="step-section step-section--polygons">
+<h3 id="connect-normals-into-segments">Connect normals into segments<a
+  class="header-anchor"
+  href="#connect-normals-into-segments" aria-label="Anchor link for: connect-normals-into-segments"
+  title="Anchor link for: connect-normals-into-segments"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h3>
+<p>Not much to say about this step. We just need to connect pairs of neighboring normals, which will give us blocky segments. Let's try rounding their corners to make them more interesting.</p>
+<p><span id="polygons" class="step-title"></span></p>
+</div>
+<div class="step-section step-section--round-polygons">
+<h3 id="rounding-segment-corners">Rounding segment corners<a
+  class="header-anchor"
+  href="#rounding-segment-corners" aria-label="Anchor link for: rounding-segment-corners"
+  title="Anchor link for: rounding-segment-corners"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h3>
+<p>To round segments, we will use Chaikin's method, which is a recursive subdivision algorithm for curve generation. The algorithm takes each line of the polygon and finds two points at a defined ratio (0.25 usually works best) on both sides. Then it replaces the original point with two newly created ones. Finally, we repeat the whole process recursively until we are satisfied with the result.</p>
+<p>It sounds more complicated than it actually is, and I think the interactive example below will help things click into place:</p>
+<div class="chaikin">
+    <svg class="chaikin-svg" viewBox="0 0 200 200"></svg>
+    <div class="chaikin-control">
+      <label for="chaikin-iterations">Iterations</label>
+      <span class="chaikin-iterations-value"></span>
+      <input type="range" min="0" max="6" step="1" value="0" id="chaikin-iterations" class="chaikin-iterations" />
+    </div>
+    <div class="chaikin-control">
+      <label for="chaikin-ratio">Ratio</label>
+      <span class="chaikin-ratio-value"></span>
+      <input type="range" min="0.1" max="0.3" step="0.05" value="0.25" id="chaikin-ratio" class="chaikin-ratio" />
+    </div>
+    <div class="chaikin-control">
+      <label for="chaikin-show-points">
+        Show points
+      </label>
+      <input id="chaikin-show-points" class="chaikin-show-points" type="checkbox" checked />
+    </div>
+  </div>
+<p>This rounding method doesn't return bezier curves but a polyline. In many cases, that is good, as geometrical operations are easier to do with polylines than with bezier curves. With enough iterations, the human eye can't tell the difference anyway.</p>
+<p><span id="round-polygons" class="step-title"></span></p>
+</div>
+<div class="step-section step-section--angle-polygons">
+<h3 id="skew-segments">Skew segments<a
+  class="header-anchor"
+  href="#skew-segments" aria-label="Anchor link for: skew-segments"
+  title="Anchor link for: skew-segments"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h3>
+<p>The physical rope is created by twisting multiple threads together. To mimic the twisting, we need to skew our segments. We can easily do that by rotating the bisector for a fixed angle.</p>
+<p><span id="angle-polygons" class="step-title"></span></p>
+</div>
+<div class="step-section step-section--angle-polygons-thin">
+<h3 id="call-it-a-day">Call it a day?<a
+  class="header-anchor"
+  href="#call-it-a-day" aria-label="Anchor link for: call-it-a-day"
+  title="Anchor link for: call-it-a-day"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h3>
+<p>If we remove helper elements and make the whole thing thinner, it resembles a rope. Depending on your needs, you could stop right here.</p>
+<p>But if we look at the photo of a rope above, we can see that our polygons are not fully resembling it. They are almost regular, while in the photo, segments overlap and go under each other.</p>
+<p>So let's continue and try to make our segments look more like ones in a physical rope.</p>
+<p><span id="angle-polygons-thin" class="step-title"></span></p>
+</div>
+<div class="step-section step-section--segments">
+<h3 id="improve-segments">Improve segments<a
+  class="header-anchor"
+  href="#improve-segments" aria-label="Anchor link for: improve-segments"
+  title="Anchor link for: improve-segments"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h3>
+<p>We need to go back to the sketch I showed you at the start. We'll un-skew segments, for now, to make things easier to see.</p>
+
+  <img
+    class="image image--sm   "
+    src="&#x2F;img&#x2F;rope&#x2F;notebook-close-up.jpg"
+    alt="Sketch on my notebook"
+  />
+  
+
+<p>We need to cut off two segment corners and add two tips defined by points 3 and 8 in the sketch.</p>
+<p>After implementing it, segments felt
+<span
+  class="sidenote__trigger "
+  tabindex="0"
+  role="button"
+>
+  too blocky and mathematical
+</span>
+
+<span
+  class="sidenote__note "
+><span class="sidenote__bracket">(</span>Sorry, but I didn't keep the code for it, so I don't have an example to show you.<span class="sidenote__bracket">)</span></span>
+, but I knew I was going in the right direction. Then I started fine- tuning it by moving points around. You can see the result in the image above, and I think segments now look a lot more natural and curvy.</p>
+<p>Before moving on, notice that the first and the last segments are slightly different as they are not sandwiched between two other segments. That's why they have different treatment in the code than all other segments.</p>
+<p><span id="segments" class="step-title"></span></p>
+</div>
+<div class="step-section step-section--segments-rounded">
+<h3 id="round-segments-again">Round segments again<a
+  class="header-anchor"
+  href="#round-segments-again" aria-label="Anchor link for: round-segments-again"
+  title="Anchor link for: round-segments-again"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h3>
+<p>If we apply Chaikin's algorithm to new segments as a closed polyline, we will get this:</p>
+<p><img src="/img/rope/full-chaikin.png" alt="Rounding applied to the segment polyline as a whole" /></p>
+<p>It is nice and round, but it feels weird, and takes away from the illusion of twisting. It would look better if we kept two sharp corners.</p>
+<p>To keep the corners, we'll split the segment line into two lines and then apply the rounding algorithm on each one separately. This will give us a better illusion of threads going behind each other.</p>
+<p><span id="segments-rounded" class="step-title"></span></p>
+</div>
+<div class="step-section step-section--segments-rounded-fix-gaps">
+<h3 id="fix-gaps-optional">Fix gaps (optional)<a
+  class="header-anchor"
+  href="#fix-gaps-optional" aria-label="Anchor link for: fix-gaps-optional"
+  title="Anchor link for: fix-gaps-optional"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h3>
+<p>There is a minor issue that is noticeable after the rounding step. Small gaps appear because points are removed in the process.</p>
+<p><img src="/img/rope/gaps.png" alt="Small gaps that appear after using rounding polylines" /></p>
+<p>I don't mind it, as it is only visible if the outlines are really thin. Thicker outlines will cover everything nicely.</p>
+<p>I did fix it, but only for the challenge of it. There is a hacky technique to save a point from removing when using Chaikin's algorithm - triple that point. That way, we are creating two edges with zero width. No matter how many times we do the recursive subdivision, any ratio of zero is still zero.</p>
+<p>However, this hack has a drawback. It will duplicate all three points in each iteration. So if you end up using this fix, you might want to clean up the duplicated points.</p>
+<p>As I already said, I don't mind, so I disabled the fix in the following steps.</p>
+<p><span id="segments-rounded-fix-gaps" class="step-title"></span></p>
+</div>
+<div class="step-section step-section--angle-segments">
+<h3 id="skew-segments-again">Skew segments again<a
+  class="header-anchor"
+  href="#skew-segments-again" aria-label="Anchor link for: skew-segments-again"
+  title="Anchor link for: skew-segments-again"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h3>
+<p>Let's skew everything again. As in the step above, we'll just rotate the bisector by a fixed angle.</p>
+<p><span id="angle-segments" class="step-title"></span></p>
+</div>
+<div class="step-section step-section--colors">
+<h3 id="add-some-color">Add some color<a
+  class="header-anchor"
+  href="#add-some-color" aria-label="Anchor link for: add-some-color"
+  title="Anchor link for: add-some-color"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h3>
+<p>Let's remove the helper elements and add some color. I would say that now it really looks like a rope! But we are not entirely done yet.</p>
+<p><span id="colors" class="step-title"></span></p>
+</div>
+<div class="step-section step-section--animate">
+<h3 id="animate-it">Animate it<a
+  class="header-anchor"
+  href="#animate-it" aria-label="Anchor link for: animate-it"
+  title="Anchor link for: animate-it"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h3>
+<p>We can even animate our rope. Animating it can come in handy for charts. But honestly, I just wanted to have some fun with it.</p>
+<p>We'll keep it simple. We'll update the path in each frame, regenerate the whole rope and rerender it. To do that, we'll need an animation loop and a way to update the path. If you are unfamiliar with the animation loop, I already <a href="/blog/javascript-animation-loop/">wrote about it here</a>.</p>
+<p>To move the path, I wrote a function to update the <code>y</code> coordinate for each point on the path:</p>
+<pre data-lang="js" style="background-color:#282c34;color:#dcdfe4;" class="language-js "><code class="language-js" data-lang="js"><span style="color:#c678dd;">function </span><span style="color:#61afef;">getStepPath</span><span>() {
+</span><span>  </span><span style="color:#c678dd;">const </span><span style="color:#e06c75;">y </span><span style="color:#c678dd;">= </span><span style="color:#61afef;">easing</span><span>(</span><span style="color:#e06c75;">t</span><span>) </span><span style="color:#c678dd;">* </span><span style="color:#e5c07b;">100 </span><span style="color:#c678dd;">+ </span><span style="color:#e5c07b;">50</span><span>;
+</span><span>  </span><span style="color:#c678dd;">const </span><span style="color:#e06c75;">y1 </span><span style="color:#c678dd;">= </span><span style="color:#e06c75;">y</span><span>;
+</span><span>  </span><span style="color:#c678dd;">const </span><span style="color:#e06c75;">y2 </span><span style="color:#c678dd;">= </span><span style="color:#e5c07b;">200 </span><span style="color:#c678dd;">- </span><span style="color:#e06c75;">y</span><span>;
+</span><span>
+</span><span>  </span><span style="color:#c678dd;">return </span><span style="color:#98c379;">`M  50 ${</span><span style="color:#e06c75;">y2</span><span style="color:#98c379;">}
+</span><span style="color:#98c379;">          C 150 ${</span><span style="color:#e06c75;">y2</span><span style="color:#98c379;">}, 150 ${</span><span style="color:#e06c75;">y1</span><span style="color:#98c379;">}, 250 ${</span><span style="color:#e06c75;">y1</span><span style="color:#98c379;">}
+</span><span style="color:#98c379;">          C 350 ${</span><span style="color:#e06c75;">y1</span><span style="color:#98c379;">}, 350 ${</span><span style="color:#e06c75;">y2</span><span style="color:#98c379;">}, 450 ${</span><span style="color:#e06c75;">y2</span><span style="color:#98c379;">}`</span><span>;
+</span><span>}
+</span></code></pre>
+<p><code>t</code> is the value that bounces between 0 and 1 over time. Then we can apply easing to the <code>t</code> value and calculate all of the <code>y</code> values.</p>
+<p>To make our rope dance, we need to plug this logic into the animation loop.</p>
+<p>I won't go any deeper into the implementation here. I recommend you check the code and play with it.</p>
+<p><span id="animate" class="step-title"></span></p>
+</div>
+<div class="step-section step-section--animate-thin">
+<h3 id="call-it-a-day-1">Call it a day!<a
+  class="header-anchor"
+  href="#call-it-a-day-1" aria-label="Anchor link for: call-it-a-day-1"
+  title="Anchor link for: call-it-a-day-1"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h3>
+<p>Finally, our rope is complete! Thank you very much for sticking with me. Grab a beverage of your choice; you earned it!</p>
+<p><span id="animate-thin" class="step-title"></span></p>
+</div>
+</div>
+<h2 id="final-thoughts">Final thoughts<a
+  class="header-anchor"
+  href="#final-thoughts" aria-label="Anchor link for: final-thoughts"
+  title="Anchor link for: final-thoughts"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>This post took way longer to write than I expected, and I hope you enjoyed it cause I did. Making interactive examples is pretty time-consuming, but it is rewarding and fun to do.</p>
+<p>Before you go, don't forget to:</p>
+<ul>
+<li>play with <a href="https://muffinman.io/blog/draw-svg-rope-using-javascript/#demo">the interactive demo</a> below</li>
+<li>check the code <a href="https://codepen.io/stanko/pen/vYaEMKX">on CodePen</a></li>
+<li>dig around interactive examples <a href="/js/posts/rope.js">used on this page</a> (the code is a little messy).</li>
+</ul>
+<h2 id="demo">Demo<a
+  class="header-anchor"
+  href="#demo" aria-label="Anchor link for: demo"
+  title="Anchor link for: demo"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<div class="demo">
+  <svg class="demo-svg image--lg is-in-viewport" viewBox="0 0 500 200"></svg>
+<div class="demo-controls">
+    <div class="demo-controls-column">
+      <div class="demo-title">Options</div>
+      <label class="demo-checkbox-label">
+        <input class="demo-checkbox-animate" type="checkbox" checked />
+        Animate
+      </label>
+      <div class="demo-control">
+        <label for="demo-step">Segment width</label>
+        <span class="demo-value"></span>
+        <input data-key="step" type="range" min="3" max="50" step="1" value="20" id="demo-step" />
+      </div>
+      <div class="demo-control">
+        <label for="demo-thickness">Rope thickness</label>
+        <span class="demo-value"></span>
+        <input data-key="thickness" type="range" min="3" max="50" step="1" value="40" id="demo-thickness" />
+      </div>
+      <div class="demo-control">
+        <label for="demo-angle">Skew angle</label>
+        <span class="demo-value"></span>
+        <input data-key="angle" type="range" min="0" max="90" step="1" value="45" id="demo-angle" />
+      </div>
+    </div>
+    <div class="demo-controls-column">
+      <div class="demo-title">Render</div>
+      <label class="demo-checkbox-label">
+        <input data-key="path" class="demo-checkbox" type="checkbox" />Path
+      </label>
+      <label class="demo-checkbox-label">
+        <input data-key="points" class="demo-checkbox" type="checkbox" />Points
+      </label>
+      <label class="demo-checkbox-label">
+        <input data-key="normals" class="demo-checkbox" type="checkbox" />Normals
+      </label>
+      <label class="demo-checkbox-label">
+        <input data-key="polygons" class="demo-checkbox" type="checkbox" />Square-ish segments
+      </label>
+      <label class="demo-checkbox-label">
+        <input data-key="polygonsRounded" class="demo-checkbox" type="checkbox" />Rounded square-ish segments
+      </label>
+      <label class="demo-checkbox-label">
+        <input data-key="segments" class="demo-checkbox" type="checkbox" />Segments
+      </label>
+      <label class="demo-checkbox-label">
+        <input data-key="rope" class="demo-checkbox" type="checkbox" checked />Rounded segments
+      </label>
+    </div>
+    <div class="demo-controls-column">
+      <div class="demo-title">Colors</div>
+      <label class="demo-radio-label">
+        <input class="demo-radio" type="radio" name="demo-colors" value="transparent" />
+        Transparent
+      </label>
+      <label class="demo-radio-label">
+        <input class="demo-radio" type="radio" name="demo-colors" value="white" />
+        White
+      </label>
+      <label class="demo-radio-label">
+        <input class="demo-radio" type="radio" checked name="demo-colors" value="natural" />
+        Natural
+      </label>
+      <label class="demo-radio-label">
+        <input class="demo-radio" type="radio" name="demo-colors" value="rainbow" />
+        Rainbow
+      </label>
+    </div>
+  </div>
+</div>
+<script src="/js/posts/rope.js"></script>
+
+    </content>
+
+	</entry>
 	<entry xml:lang="en">
 		<title>Get lines of text from an HTML element</title>
 		<published>2022-12-22T00:00:00+00:00</published>
