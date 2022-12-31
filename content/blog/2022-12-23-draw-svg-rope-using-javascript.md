@@ -48,7 +48,7 @@ I've seen many junior developers struggle with similar problems. Usually, it sta
   note="I bore my mentees to death by repeating that programming is problem-solving, while code is just a tool to implement those solutions."
 )}}
 
-I'm a visual thinker. For me drawing things on paper makes a problem easier to solve. I would suggest you try the same. Keep a pen and paper near your computer and reach out for them before you start typing code.
+I'm a visual thinker. For me drawing things on paper makes any problem easier to solve. I would suggest you try the same. Keep a pen and paper near your computer and reach out for them before you start typing code.
 
 After doodling ropes for a while, I was satisfied with the image you can see in the bottom right on the left page:
 
