@@ -25,6 +25,12 @@ $blue: #4394e5;
   }
 }
 
+svg,
+g,
+path {
+  overflow: visible;
+}
+
 .rope-svg path {
   stroke-width: 1.5;
 }
@@ -154,6 +160,7 @@ $blue: #4394e5;
   font-size: 0.9em;
   font-weight: bold;
   margin-bottom: 6rem;
+  align-items: center;
 
   input {
     margin-right: 10rem;

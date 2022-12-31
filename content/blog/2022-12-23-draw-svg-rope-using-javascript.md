@@ -343,7 +343,7 @@ Before you go, don't forget to:
 ## Demo
 
 <div class="demo">
-  <svg class="demo-svg image--lg is-in-viewport" viewBox="0 0 500 200"></svg>
+  <svg class="demo-svg image--lg is-in-viewport" viewBox="-40 -30 580 230"></svg>
 
   <div class="demo-controls">
     <div class="demo-controls-column">
