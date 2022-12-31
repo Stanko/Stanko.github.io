@@ -20,7 +20,7 @@
 <noscript>
 <p>This is an interactive article. To fully experience it, you'll need to turn JavaScript on.</p>
 </noscript>
-<p>Today, I'll take you through the process I came up with to transform an SVG path into a vector rope drawing.</p>
+<p>Today, I'll take you through the process I came up with in regard to transforming an SVG path into a vector rope drawing.</p>
 <p>We'll learn how to turn the path on the left into the rope on the right:
 
   <img
@@ -33,7 +33,7 @@
 </p>
 <p>The problem popped up on a project my colleagues were working on, and it stuck with me. I thought about it and started playing with it as soon as I got some free time. I had a lot of fun. Therefore I want to share the process with you.</p>
 <p>Please note that this is not a coding tutorial but a detailed overview of each step. But don't worry, the code is fully available.</p>
-<p>If you feel impatient, you can jump to the <a href="https://muffinman.io/blog/draw-svg-rope-using-javascript/#demo">interactive demo</a> or check the code <a href="https://codepen.io/stanko/pen/vYaEMKX">on CodePen</a>. But I heartily recommend you read the whole thing first.</p>
+<p>If you feel impatient, you can jump to the <a href="https://muffinman.io/blog/draw-svg-rope-using-javascript/#demo">interactive demo</a> or check the code <a href="https://codepen.io/stanko/pen/vYaEMKX">on CodePen</a>. But I wholeheartedly recommend you read the whole thing first.</p>
 <h2 id="idea">Idea<a
   class="header-anchor"
   href="#idea" aria-label="Anchor link for: idea"
@@ -148,7 +148,7 @@
   title="Anchor link for: split-the-path-into-equal-parts"
 > <span class="sr-only" aria-hidden="true">#</span></a>
 </h3>
-<p>If we split the path into parts, we can use each piece for one rope segment. To chop the path up, we'll have to go along it and calculate a point on every <code>n</code> pixels.</p>
+<p>If we split the path into parts, we can use each piece for one rope segment. To chop the path up, we'll have to track along it and calculate a point on every <code>n</code> pixels.</p>
 <p>To do so, we'll need a way to get the total length of the path so we know when to stop iterating, as well as the function to get the point at the specific length.</p>
 <p>Luckily, browsers natively provide us with the methods we need:</p>
 <ul>
@@ -213,7 +213,7 @@
 
   </div>
 </div>
-<p>You'll notice two extra points in the image above at the start and end. Those are not included in the code snippet above. Just ignore them for now, we'll use them later.</p>
+<p>You'll notice two extra points in the image above at the start and the end. Those are not included in the code snippet above. Just ignore them for now, we'll use them later.</p>
 <p><strong>Note on server-side rendering</strong></p>
 <p>These methods don't work on the server. However, I checked a few server-side languages, and almost all of them have variations of these two methods. For NodeJS you could probably use <a href="https://www.npmjs.com/package/svg-path-properties">svg-path-properties</a> library.</p>
 <p><span id="points" class="step-title"></span></p>
@@ -258,7 +258,7 @@
 > <span class="sr-only" aria-hidden="true">#</span></a>
 </h3>
 <p>To round segments, we will use Chaikin's method, which is a recursive subdivision algorithm for curve generation. The algorithm takes each line of the polygon and finds two points at a defined ratio (0.25 usually works best) on both sides. Then it replaces the original point with two newly created ones. Finally, we repeat the whole process recursively until we are satisfied with the result.</p>
-<p>It sounds more complicated than it actually is, and I think the interactive example below will help things click into place:</p>
+<p>It sounds more complicated than it actually is, and I think the interactive example below will help things fall into place:</p>
 <div class="chaikin">
     <svg class="chaikin-svg" viewBox="0 0 200 200"></svg>
     <div class="chaikin-control">
@@ -371,7 +371,7 @@
   title="Anchor link for: skew-segments-again"
 > <span class="sr-only" aria-hidden="true">#</span></a>
 </h3>
-<p>Let's skew everything again. As in the step above, we'll just rotate the bisector by a fixed angle.</p>
+<p>Let's skew everything again. Same as in the previous step, we'll just rotate the bisector by a fixed angle.</p>
 <p><span id="angle-segments" class="step-title"></span></p>
 </div>
 <div class="step-section step-section--colors">
