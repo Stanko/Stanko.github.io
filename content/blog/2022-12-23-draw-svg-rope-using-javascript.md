@@ -16,7 +16,7 @@ image = "/img/rope/cover.png"
 <p>This is an interactive article. To fully experience it, you'll need to turn JavaScript on.</p>
 </noscript>
 
-Today, I'll take you through the process I came up with to transform an SVG path into a vector rope drawing.
+Today, I'll take you through the process I came up with in regard to transforming an SVG path into a vector rope drawing.
 
 We'll learn how to turn the path on the left into the rope on the right:
 {{image(src="/img/rope/path-to-rope.png", alt="SVG path and a rope drawing created from it",size="lg")}}
@@ -25,7 +25,7 @@ The problem popped up on a project my colleagues were working on, and it stuck w
 
 Please note that this is not a coding tutorial but a detailed overview of each step. But don't worry, the code is fully available.
 
-If you feel impatient, you can jump to the [interactive demo](#demo) or check the code [on CodePen](https://codepen.io/stanko/pen/vYaEMKX). But I heartily recommend you read the whole thing first.
+If you feel impatient, you can jump to the [interactive demo](#demo) or check the code [on CodePen](https://codepen.io/stanko/pen/vYaEMKX). But I wholeheartedly recommend you read the whole thing first.
 
 ## Idea
 
@@ -91,7 +91,7 @@ It is not perfect, but it is straightforward and easy to code. That's why I sele
 
   ### Split the path into equal parts
 
-  If we split the path into parts, we can use each piece for one rope segment. To chop the path up, we'll have to go along it and calculate a point on every `n` pixels.
+  If we split the path into parts, we can use each piece for one rope segment. To chop the path up, we'll have to track along it and calculate a point on every `n` pixels.
 
   To do so, we'll need a way to get the total length of the path so we know when to stop iterating, as well as the function to get the point at the specific length.
 
@@ -126,7 +126,7 @@ function getPathPoints(d, step = 10) {
 ```
 ', show="Show code", hide="Hide code") }}
 
-  You'll notice two extra points in the image above at the start and end. Those are not included in the code snippet above. Just ignore them for now, we'll use them later.
+  You'll notice two extra points in the image above at the start and the end. Those are not included in the code snippet above. Just ignore them for now, we'll use them later.
 
   **Note on server-side rendering**
 
@@ -169,7 +169,7 @@ function getPathPoints(d, step = 10) {
 
   To round segments, we will use Chaikin's method, which is a recursive subdivision algorithm for curve generation. The algorithm takes each line of the polygon and finds two points at a defined ratio (0.25 usually works best) on both sides. Then it replaces the original point with two newly created ones. Finally, we repeat the whole process recursively until we are satisfied with the result.
 
-  It sounds more complicated than it actually is, and I think the interactive example below will help things click into place:
+  It sounds more complicated than it actually is, and I think the interactive example below will help things fall into place:
 
   <div class="chaikin">
     <svg class="chaikin-svg" viewBox="0 0 200 200"></svg>
@@ -274,7 +274,7 @@ function getPathPoints(d, step = 10) {
 
   ### Skew segments again
 
-  Let's skew everything again. As in the step above, we'll just rotate the bisector by a fixed angle.
+  Let's skew everything again. Same as in the previous step, we'll just rotate the bisector by a fixed angle.
 
   <span id="angle-segments" class="step-title"></span>
 </div>
