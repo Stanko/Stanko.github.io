@@ -207,7 +207,7 @@
 </span><span>    </span><span style="color:#e06c75;">points</span><span>.</span><span style="color:#61afef;">push</span><span>(</span><span style="color:#e06c75;">path</span><span>.</span><span style="color:#61afef;">getPointAtLength</span><span>(</span><span style="color:#e06c75;">n</span><span>));
 </span><span>  }
 </span><span>
-</span><span>  </span><span style="color:#c678dd;">return </span><span style="color:#e06c75;">lines</span><span>;
+</span><span>  </span><span style="color:#c678dd;">return </span><span style="color:#e06c75;">points</span><span>;
 </span><span>}
 </span></code></pre>
 
