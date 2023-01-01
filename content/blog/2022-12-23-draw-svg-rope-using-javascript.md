@@ -121,7 +121,7 @@ function getPathPoints(d, step = 10) {
     points.push(path.getPointAtLength(n));
   }
 
-  return lines;
+  return points;
 }
 ```
 ', show="Show code", hide="Hide code") }}
