@@ -11147,7 +11147,7 @@ so keep it in a mixin.</p>
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Always use &amp;lt;button&amp;gt; for clickable elements</title>
+		<title>Always use button for clickable elements</title>
 		<published>2016-09-02T00:00:00+00:00</published>
 		<updated>2016-09-02T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/blog/always-use-button-for-clickable-elements/" type="text/html"/>
@@ -11158,7 +11158,7 @@ so keep it in a mixin.</p>
 		<content type="html"><p>Always try to use <code>&lt;button&gt;</code> when  <strong>element is clickable, but it is not a link</strong>.
 Avoid <code>&lt;a&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;div&gt;</code> and other elements.</p>
 <p>Note that <code>display: flex</code> works differently on buttons in different browsers,
-but we have easy fix for that.</p>
+but we have an easy fix for that.</p>
 <span id="continue-reading"></span><h2 id="why">Why?<a
   class="header-anchor"
   href="#why" aria-label="Anchor link for: why"
