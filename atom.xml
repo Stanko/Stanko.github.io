@@ -1389,7 +1389,7 @@ ffmpeg -i input-video.mp4 -vcodec libx264 <span style="color: var(--theme-color)
   />
   <small class="image__caption">These are all dependencies keen comes with out of the box.</small>
 
-<p><a href="esbuild.github.io/">esbuild</a> handles local development and builds a demo page. TypeScript takes care of building ESM and CJS modules as well as type definitions.</p>
+<p><a href="https://muffinman.io/blog/introducing-keen-npm-package-boilerplate/esbuild.github.io/">esbuild</a> handles local development and builds a demo page. TypeScript takes care of building ESM and CJS modules as well as type definitions.</p>
 <h3 id="disclaimer">Disclaimer<a
   class="header-anchor"
   href="#disclaimer" aria-label="Anchor link for: disclaimer"
