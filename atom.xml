@@ -5,8 +5,322 @@
 	<link href="https://muffinman.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://muffinman.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2022-12-23T00:00:00+00:00</updated>
+	<updated>2023-03-22T00:00:00+00:00</updated>
 	<id>https://muffinman.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Sneak peek of Rayven</title>
+		<published>2023-03-22T00:00:00+00:00</published>
+		<updated>2023-03-22T00:00:00+00:00</updated>
+		<link href="https://muffinman.io/blog/sneak-peek-of-rayven/" type="text/html"/>
+		<id>https://muffinman.io/blog/sneak-peek-of-rayven/</id>
+    <author>
+      <name>Stanko</name>
+    </author>
+		<content type="html"><p>I would like to give you a preview of my new project that I'm really excited about - <strong>Rayven</strong>. It renders 3D scenes as if they were line-hatched by hand:</p>
+
+  <img
+    class="image image--md  image--shadow "
+    src="&#x2F;img&#x2F;rayven&#x2F;cover.png"
+    alt="Abstract 3D scene rendered by Rayven"
+  />
+  
+
+<p>I've had this idea for a while and after researching, I found three projects that became my inspiration: <a href="https://github.com/fogleman/ln">Michael Fogleman's ln</a>, <a href="https://kushiro.gumroad.com/l/SXYqZ">Kushiro's Hatch Lines Shader</a> and <a href="https://www.fxhash.xyz/article/rayhatching-evolution">Piter Pasma's Rayhatching</a>.</p>
+<p>Finally, I decided to give it a try.</p>
+<p>Although it's far from finished, I want to share my progress. Once I'm satisfied with it, I plan to open-source it and write another post to show you under the hood.</p>
+<h2 id="the-first-text-render">The first text render<a
+  class="header-anchor"
+  href="#the-first-text-render" aria-label="Anchor link for: the-first-text-render"
+  title="Anchor link for: the-first-text-render"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>The first step was to build a basic 3D renderer with objects defined as signed distance functions. It used text to render the scene and it was based entirely on <a href="https://vgel.me/posts/donut/">Theia Vogel's great article</a>.</p>
+
+  <div class="gallery gallery--post photoswipe-gallery">
+    
+        
+        
+        <a
+          class="gallery__item"
+          href="&#x2F;img&#x2F;rayven&#x2F;text-render-00.gif"
+          data-pswp-width="806"
+          data-pswp-height="806"
+          style="aspect-ratio: 1"
+          target="_blank"
+        >
+          
+          <img src="https:&#x2F;&#x2F;muffinman.io&#x2F;processed_images&#x2F;text-render-00.2388844a952b63d2.jpg" alt="Photo 1"  />
+        </a>
+  </div>
+
+<h2 id="better-ray-tracing-and-the-first-vector-renders">Better ray-tracing and the first vector renders<a
+  class="header-anchor"
+  href="#better-ray-tracing-and-the-first-vector-renders" aria-label="Anchor link for: better-ray-tracing-and-the-first-vector-renders"
+  title="Anchor link for: better-ray-tracing-and-the-first-vector-renders"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>Then, I started improving the ray-tracing part. Articles by <a href="https://iquilezles.org/articles/distfunctions/">Inigo Quilez</a> and <a href="https://jamie-wong.com/2016/07/15/ray-marching-signed-distance-functions/">Jamie Wong</a> were immensely helpful.</p>
+<p>With proper ray-tracing in place, I began figuring out how to hatch a scene using vector lines. I started simple, using only vertical lines (image on the left). Then, I gradually worked my way to using vector fields (image on the right).</p>
+
+  <div class="gallery gallery--post photoswipe-gallery">
+    
+        
+        
+        <a
+          class="gallery__item"
+          href="&#x2F;img&#x2F;rayven&#x2F;vector-00.gif"
+          data-pswp-width="588"
+          data-pswp-height="580"
+          style="aspect-ratio: 1.013793103448276"
+          target="_blank"
+        >
+          
+          <img src="https:&#x2F;&#x2F;muffinman.io&#x2F;processed_images&#x2F;vector-00.a0af804742619108.jpg" alt="Photo 1"  />
+        </a>
+        <a
+          class="gallery__item gallery__item--video"
+          href="&#x2F;img&#x2F;rayven&#x2F;vector-20_632x590.mp4"
+          data-pswp-width="632"
+          data-pswp-height="590"
+          data-is-video="true"
+          style="aspect-ratio: 632 / 590"
+          target="_blank"
+          aria-label="Plotting in progress"
+        >
+          <video
+            src="&#x2F;img&#x2F;rayven&#x2F;vector-20_632x590.mp4#t=0.001"
+            muted="true"
+            playsinline="true"
+            class="gallery__video-thumbnail"
+            aria-hidden="true"
+            tabindex="-1"
+          ></video>
+          <svg viewBox="0 0 512 512" class="gallery__play-icon" aria-hidden="true">
+            <path d="M405.2,232.9L126.8,67.2c-3.4-2-6.9-3.2-10.9-3.2c-10.9,0-19.8,9-19.8,20H96v344h0.1c0,11,8.9,20,19.8,20  c4.1,0,7.5-1.4,11.2-3.4l278.1-165.5c6.6-5.5,10.8-13.8,10.8-23.1C416,246.7,411.8,238.5,405.2,232.9z"/>
+          </svg>
+        </a>
+  </div>
+
+<h2 id="tweaking-vector-rendering">Tweaking vector rendering<a
+  class="header-anchor"
+  href="#tweaking-vector-rendering" aria-label="Anchor link for: tweaking-vector-rendering"
+  title="Anchor link for: tweaking-vector-rendering"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>Once I had basic vector rendering in place, I spent a lot of time tweaking and experimenting. Here are some examples using lights, boolean operations, displacement, and different hatching options.</p>
+<p>In the first two images you can also see the raster output I'm using for debugging.</p>
+
+  <div class="gallery gallery--post photoswipe-gallery">
+    
+        
+        
+        <a
+          class="gallery__item"
+          href="&#x2F;img&#x2F;rayven&#x2F;lights-00.png"
+          data-pswp-width="966"
+          data-pswp-height="1996"
+          style="aspect-ratio: 0.48396793587174347"
+          target="_blank"
+        >
+          
+          <img src="https:&#x2F;&#x2F;muffinman.io&#x2F;processed_images&#x2F;lights-00.88d9536ee0edb944.png" alt="Photo 1"  />
+        </a>
+        
+        
+        <a
+          class="gallery__item"
+          href="&#x2F;img&#x2F;rayven&#x2F;vector-50.png"
+          data-pswp-width="852"
+          data-pswp-height="1836"
+          style="aspect-ratio: 0.46405228758169936"
+          target="_blank"
+        >
+          
+          <img src="https:&#x2F;&#x2F;muffinman.io&#x2F;processed_images&#x2F;vector-50.f560031159f5fe0b.png" alt="Photo 1"  />
+        </a>
+        
+        
+        <a
+          class="gallery__item"
+          href="&#x2F;img&#x2F;rayven&#x2F;vector-55.png"
+          data-pswp-width="1412"
+          data-pswp-height="1554"
+          style="aspect-ratio: 0.9086229086229086"
+          target="_blank"
+        >
+          
+          <img src="https:&#x2F;&#x2F;muffinman.io&#x2F;processed_images&#x2F;vector-55.bb9ad6d7d38929ab.png" alt="Photo 1"  />
+        </a>
+        
+        
+        <a
+          class="gallery__item"
+          href="&#x2F;img&#x2F;rayven&#x2F;vector-60.png"
+          data-pswp-width="1380"
+          data-pswp-height="1226"
+          style="aspect-ratio: 1.1256117455138663"
+          target="_blank"
+        >
+          
+          <img src="https:&#x2F;&#x2F;muffinman.io&#x2F;processed_images&#x2F;vector-60.eb15667a214b57bb.png" alt="Photo 1"  />
+        </a>
+        
+        
+        <a
+          class="gallery__item"
+          href="&#x2F;img&#x2F;rayven&#x2F;vector-70.png"
+          data-pswp-width="1066"
+          data-pswp-height="1178"
+          style="aspect-ratio: 0.9049235993208828"
+          target="_blank"
+        >
+          
+          <img src="https:&#x2F;&#x2F;muffinman.io&#x2F;processed_images&#x2F;vector-70.425bf6d5d022bfd5.png" alt="Photo 1"  />
+        </a>
+        
+        
+        <a
+          class="gallery__item"
+          href="&#x2F;img&#x2F;rayven&#x2F;vector-80.png"
+          data-pswp-width="1622"
+          data-pswp-height="1638"
+          style="aspect-ratio: 0.9902319902319903"
+          target="_blank"
+        >
+          
+          <img src="https:&#x2F;&#x2F;muffinman.io&#x2F;processed_images&#x2F;vector-80.a9e50b8165aa40f3.png" alt="Photo 1"  />
+        </a>
+        
+        
+        <a
+          class="gallery__item"
+          href="&#x2F;img&#x2F;rayven&#x2F;vector-90.png"
+          data-pswp-width="1570"
+          data-pswp-height="1568"
+          style="aspect-ratio: 1.0012755102040816"
+          target="_blank"
+        >
+          
+          <img src="https:&#x2F;&#x2F;muffinman.io&#x2F;processed_images&#x2F;vector-90.06caa0aca716dd7a.png" alt="Photo 1"  />
+        </a>
+        
+        
+        <a
+          class="gallery__item"
+          href="&#x2F;img&#x2F;rayven&#x2F;vector-100.png"
+          data-pswp-width="1240"
+          data-pswp-height="1414"
+          style="aspect-ratio: 0.8769448373408769"
+          target="_blank"
+        >
+          
+          <img src="https:&#x2F;&#x2F;muffinman.io&#x2F;processed_images&#x2F;vector-100.de466a1c54f630e8.png" alt="Photo 1"  />
+        </a>
+        
+        
+        <a
+          class="gallery__item"
+          href="&#x2F;img&#x2F;rayven&#x2F;vector-110.png"
+          data-pswp-width="1572"
+          data-pswp-height="1584"
+          style="aspect-ratio: 0.9924242424242424"
+          target="_blank"
+        >
+          
+          <img src="https:&#x2F;&#x2F;muffinman.io&#x2F;processed_images&#x2F;vector-110.68480054c5aae105.png" alt="Photo 1"  />
+        </a>
+  </div>
+
+<h2 id="rust-version">Rust version<a
+  class="header-anchor"
+  href="#rust-version" aria-label="Anchor link for: rust-version"
+  title="Anchor link for: rust-version"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>As you can imagine, the JavaScript version is not very performant. To speed up rendering, I decided to learn some Rust and port Rayven to it. Here are a few screenshots in the terminal, along with the SVG render at the end.</p>
+
+  <div class="gallery gallery--post photoswipe-gallery">
+    
+        
+        
+        <a
+          class="gallery__item"
+          href="&#x2F;img&#x2F;rayven&#x2F;rust-00.jpg"
+          data-pswp-width="1840"
+          data-pswp-height="1858"
+          style="aspect-ratio: 0.9903121636167922"
+          target="_blank"
+        >
+          
+          <img src="https:&#x2F;&#x2F;muffinman.io&#x2F;processed_images&#x2F;rust-00.26e947984ba36622.jpg" alt="Photo 1"  />
+        </a>
+        <a
+          class="gallery__item gallery__item--video"
+          href="&#x2F;img&#x2F;rayven&#x2F;rust-10_690x724.mp4"
+          data-pswp-width="690"
+          data-pswp-height="724"
+          data-is-video="true"
+          style="aspect-ratio: 690 / 724"
+          target="_blank"
+          aria-label="Plotting in progress"
+        >
+          <video
+            src="&#x2F;img&#x2F;rayven&#x2F;rust-10_690x724.mp4#t=0.001"
+            muted="true"
+            playsinline="true"
+            class="gallery__video-thumbnail"
+            aria-hidden="true"
+            tabindex="-1"
+          ></video>
+          <svg viewBox="0 0 512 512" class="gallery__play-icon" aria-hidden="true">
+            <path d="M405.2,232.9L126.8,67.2c-3.4-2-6.9-3.2-10.9-3.2c-10.9,0-19.8,9-19.8,20H96v344h0.1c0,11,8.9,20,19.8,20  c4.1,0,7.5-1.4,11.2-3.4l278.1-165.5c6.6-5.5,10.8-13.8,10.8-23.1C416,246.7,411.8,238.5,405.2,232.9z"/>
+          </svg>
+        </a>
+        
+        
+        <a
+          class="gallery__item"
+          href="&#x2F;img&#x2F;rayven&#x2F;rust-20.gif"
+          data-pswp-width="780"
+          data-pswp-height="772"
+          style="aspect-ratio: 1.0103626943005182"
+          target="_blank"
+        >
+          
+          <img src="https:&#x2F;&#x2F;muffinman.io&#x2F;processed_images&#x2F;rust-20.0d62c6f92b6cb8e4.jpg" alt="Photo 1"  />
+        </a>
+        
+        
+        <a
+          class="gallery__item"
+          href="&#x2F;img&#x2F;rayven&#x2F;rust-30.png"
+          data-pswp-width="958"
+          data-pswp-height="980"
+          style="aspect-ratio: 0.9775510204081632"
+          target="_blank"
+        >
+          
+          <img src="https:&#x2F;&#x2F;muffinman.io&#x2F;processed_images&#x2F;rust-30.d9765f2201635834.png" alt="Photo 1"  />
+        </a>
+  </div>
+
+<p>Rust is fast, but it doesn't provide me with a short feedback loop, which is essential when I'm using Rayven to <em>draw</em>. On the other hand, JavaScript is slow, but being dynamic and a scripting language, it gives me a better way to iterate and experiment.</p>
+<p>Now, I want to combine the two - keep Rayven's engine in Rust, compile it to WASM, but use JavaScript to make scenes and compositions.</p>
+<h2 id="it-is-not-ready-yet">It is not ready yet<a
+  class="header-anchor"
+  href="#it-is-not-ready-yet" aria-label="Anchor link for: it-is-not-ready-yet"
+  title="Anchor link for: it-is-not-ready-yet"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>Building Rayven is a super fun process, so I really hope you liked what I showed you today. There are still a handful of features that I want to add, polish its API, but once it is ready, I plan to publish it to the world.</p>
+<p>Stay tuned!</p>
+
+<script src=/js/photoswipe.js></script>
+
+
+    </content>
+
+	</entry>
 	<entry xml:lang="en">
 		<title>Draw SVG rope using JavaScript</title>
 		<published>2022-12-23T00:00:00+00:00</published>
