@@ -1,0 +1,157 @@
+.menu {
+  background-color: var(--page-top-bg);
+  padding: 10rem 0;
+  z-index: $layer-menu;
+  transition: transform $time-long, border $time-long;
+
+  > .container {
+    display: flex;
+    align-items: center;
+  }
+
+  @include lg {
+    padding: 20rem 0;
+  }
+}
+
+.menu--hide {
+  transform: translateY(-100%);
+}
+
+.menu-stripe {
+  border-top: $top-stripe-height solid var(--theme-color);
+  position: fixed;
+  top: 0;
+  z-index: $layer-modal + 1;
+  width: 100%;
+}
+
+.menu__logo {
+  display: flex;
+  align-items: center;
+  padding: 10rem;
+  margin-left: -10rem;
+  margin-right: auto;
+  border-radius: $radius-sm;
+
+  svg {
+    height: 30rem;
+    transition: transform $time;
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+  }
+
+  &:hover svg {
+    transform: scale(1.06);
+  }
+
+  path {
+    fill: var(--theme-color);
+  }
+}
+
+.menu__logo-text {
+  @include marvin;
+  margin-left: 8rem;
+  font-size: 16rem;
+  letter-spacing: 0.5rem;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.menu__logo-big-letter {
+  font-size: 18rem;
+}
+
+.menu__toggle {
+  padding: 10rem;
+  width: 50rem;
+  height: 50rem;
+
+  span {
+    background: var(--neutral-600);
+    border-radius: 2rem;
+    display: block;
+    height: 2px; // when rem is uneven (1.1 and 1.2px) it becomes blurry
+    margin: 6rem auto;
+    transition: background $time;
+    width: 28rem;
+  }
+}
+
+.menu__toggle--static {
+  margin-right: -10rem;
+
+  @include md {
+    display: none;
+  }
+}
+
+.menu__toggle-fixed-wrapper {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: $radius-sm * 3; // 12px
+  padding: 0;
+  position: fixed;
+  right: 10rem;
+  top: 10rem;
+  transition: transform $time, opacity $time;
+
+  span {
+    background: var(--neutral-700);
+  }
+
+  @include md {
+    right: 30rem;
+  }
+
+  @include lg {
+    // background-color: none;
+    top: 20rem;
+    right: 80rem;
+  }
+
+  @include xl {
+    // 10rem is padding on the close button
+    $content-half-width: ($container-width - 2 * ($gutter-lg - 10rem)) / 2;
+    right: calc(50vw - #{$content-half-width});
+  }
+}
+
+.menu__toggle-fixed-wrapper--hidden {
+  opacity: 0;
+  transform: translateY(-30rem);
+  pointer-events: none;
+}
+
+.menu__close {
+  width: 50rem;
+  height: 50rem;
+  margin-right: -10rem;
+  position: relative;
+
+  span {
+    position: absolute;
+    background: var(--neutral-600);
+    border-radius: 2rem;
+    display: block;
+    height: 2rem;
+    transition: background $time;
+    width: 28rem;
+    left: 11rem;
+  }
+
+  span:first-child {
+    transform: rotate(45deg);
+  }
+  span:last-child {
+    transform: rotate(-45deg);
+  }
+}
+
+.menu__close:hover,
+.menu__toggle:hover {
+  span {
+    background: var(--text-color);
+  }
+}

@@ -1,0 +1,49 @@
+.container {
+  max-width: $container-width;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 $gutter;
+
+  @include md {
+    padding: 0 $gutter-md;
+  }
+
+  @include lg {
+    padding: 0 $gutter-lg;
+    // TODO check if we need this padding on posts
+    // padding-left: $gutter-lg;
+    // padding-right: $sidenote-width + $sidenote-margin;
+  }
+}
+
+.page__top {
+  padding: 40rem 0 60rem;
+  margin-bottom: 40rem;
+  background-color: var(--page-top-bg);
+  border-bottom: 1px solid var(--page-top-border-color);
+
+  @include md {
+    padding: 40rem 0 80rem;
+    margin-bottom: 60rem;
+  }
+}
+
+.page__bottom {
+  margin-bottom: 100rem;
+}
+
+.page__title {
+  @include lg {
+    max-width: 750rem;
+  }
+
+  span {
+    @include text-gradient;
+  }
+}
+
+.page__intro {
+  margin-top: 10rem;
+  color: var(--text-light);
+  max-width: 22em;
+}

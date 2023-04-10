@@ -1,0 +1,21 @@
+base_url = "https://muffinman.io"
+
+title = "Muffin Man"
+description = "Frontend & creative coding"
+
+default_language = "en"
+compile_sass = true
+minify_html = true
+generate_feed = true
+
+taxonomies = [
+  { name = "category", feed = true, render = false },
+  { name = "tags", feed = false, render = false },
+]
+
+[markdown]
+highlight_theme = "css"
+highlight_code = true
+
+[extra]
+

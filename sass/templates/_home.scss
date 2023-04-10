@@ -1,0 +1,46 @@
+.home__title {
+  @include marvin;
+  font-size: 50rem;
+
+  @include md {
+    font-size: 70rem;
+  }
+
+  @include lg {
+    font-size: 90rem;
+  }
+
+  span {
+    @include text-gradient;
+  }
+}
+
+.home__section-title {
+  margin-bottom: 10rem;
+
+  @include md {
+    margin-bottom: 20rem;
+  }
+
+  a {
+    color: var(--text-color);
+  }
+}
+
+.home__see-more {
+  margin-top: 20rem;
+  margin-bottom: 100rem;
+
+  @include md {
+    margin-top: 40rem;
+  }
+}
+
+.home__drawings {
+  @include md {
+    // Hide fourth drawing on large screens, as only three fit in a row
+    .art__single:nth-child(4) {
+      display: none;
+    }
+  }
+}

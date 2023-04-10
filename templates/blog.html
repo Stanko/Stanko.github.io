@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="page__top">
+  <div class="container">
+    <h1 class="page__title">
+      Blog
+    </h1>
+    <p class="page__intro">
+      Here are all of my posts, long and short, in chronological order.
+      For categories check <a href="/archive/">the archive</a>.
+    </p>
+  </div>
+</div>
+
+<div class="blog-list">
+  {% for post in paginator.pages %}
+    {% include "partials/blog-list-post.html" %}
+  {% endfor %}
+</div>
+
+{% include "partials/pagination.html" %}
+
+{% endblock content %}

@@ -1,0 +1,6 @@
+comment_id = "19b21400-38e4-11e8-b26d-cdd54f698020"
+slug = "webpack-babel-react-revisited"
+name = "Stanko"
+email = "13a28fac985c11eb7f40169be7da32f4"
+message = "Hey Roberto,\nThat is correct, that error happens when using Webpack v4 and this blog post was written for Webpack v3. I'll add a note there, thank you!\n\nCheers!"
+date = "2018-04-05T15:14:57.497Z"

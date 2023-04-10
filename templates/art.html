@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="page__top">
+  <div class="container">
+    <h1 class="page__title">
+      {{ section.title | safe }}
+    </h1>
+    <p class="page__intro">
+      {{ section.extra.intro | safe }}
+    </p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="content">
+    {{ section.content | safe }}
+  </div>
+</div>
+
+<div class="art__list art__list--margin">
+{% for drawing in paginator.pages %}
+  {% include "partials/art-list-drawing.html" %}
+{% endfor %}
+</div>
+
+{% endblock content %}

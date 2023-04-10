@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="page__top">
+  <div class="container">
+    <h1 class="page__title home__title">
+      Frontend &<br />
+      <span>creative</span> coding
+    </h1>
+    <p class="page__intro">
+      Hello, I'm Stanko, a software engineer in Amsterdam, making digital products and generative art.
+    </p>
+  </div>
+</div>
+
+<div class="container">
+  <h2 class="home__section-title">
+    <a href="/blog">
+      Blog Posts{% include "partials/svg-post-arrow.html" %}
+    </a>
+  </h2>
+</div>
+
+{% set blog_posts = get_section(path="blog/_index.md") -%}
+
+{% set latest_post = blog_posts.pages[0] %}
+
+{% include "partials/latest-post.html" %}
+
+<div class="blog-list">
+  {% for post in blog_posts.pages | slice(start=1, end=5) %}
+    {% include "partials/blog-list-post.html" %}
+  {% endfor %}
+</div>
+
+<div class="container">
+  <a class="btn btn--main home__see-more" href="/archive/">Browse all posts</a>
+</div>
+
+<div class="container">
+  <h2 class="home__section-title">
+    <a href="/art">
+      Generative Art{% include "partials/svg-post-arrow.html" %}
+    </a>
+  </h2>
+</div>
+
+{% set drawings = get_section(path="art/_index.md") -%}
+
+<div class="home__drawings art__list">
+  {% for drawing in drawings.pages | slice(start=0, end=4) %}
+  {% include "partials/art-list-drawing.html" %}
+  {% endfor %}
+</div>
+
+<div class="container">
+  <a class="btn btn--main home__see-more" href="/art/">See all drawings</a>
+</div>
+
+{% endblock content %}

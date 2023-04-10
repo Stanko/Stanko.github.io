@@ -1,0 +1,57 @@
+.color-scheme-switcher {
+  height: 50rem;
+  width: 50rem;
+  padding: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--neutral-600);
+  transition: color $time;
+  position: relative;
+  border-radius: 50%;
+
+  @include hover {
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 15%;
+      left: 15%;
+      width: 70%;
+      height: 70%;
+      border-radius: 50%;
+      border: 1px solid var(--theme-color);
+      opacity: 0;
+      transform: scale(0);
+      transition: transform $time, opacity $time;
+    }
+  }
+
+  &:hover {
+    color: var(--text-color);
+
+    &::after {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @include md {
+    color: var(--neutral-700);
+    margin-right: 10rem;
+  }
+}
+
+.color-scheme-switcher__to-dark {
+  @include dark-scheme {
+    display: none;
+  }
+}
+
+.color-scheme-switcher__to-light {
+  display: none;
+
+  @include dark-scheme {
+    display: block;
+  }
+}

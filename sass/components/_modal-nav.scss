@@ -1,0 +1,16 @@
+.modal-nav {
+  a {
+    display: block;
+    color: var(--text-color);
+    position: relative;
+    padding: 5rem 0;
+  }
+
+  a:hover {
+    color: var(--theme-color);
+  }
+}
+
+.modal-nav__link-margin {
+  margin-top: 10rem;
+}

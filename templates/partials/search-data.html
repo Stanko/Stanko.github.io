@@ -1,0 +1,20 @@
+{% set blog_posts = get_section(path="blog/_index.md") -%}
+{% set art_pieces = get_section(path="art/_index.md") -%}
+{#- t: title -#}
+{#- u: url -#}
+{#- e: eyebrow -#}
+var searchData = [
+{#- posts -#}
+{% for post in blog_posts.pages -%}
+{ t: "{{ post.title | striptags | safe }}", u: "{{ post.path }}", e: "{{ post.taxonomies.category[0] }}" },
+{% endfor -%}
+{#- drawings -#}
+{% for item in art_pieces.pages -%}
+{ t: "{% if item.extra.searchTitle %}{{ item.extra.searchTitle | striptags | safe }}{% else %}{{ item.title | striptags | safe }}{% endif %}", u: "{{ item.path }}", e: "Art" },
+{% endfor -%}
+{#- pages -#}
+{ t: "Generative Art", u: "/art/", e: "Page" },
+{ t: "About me", u: "/about/", e: "Page" },
+{ t: "Blog", u: "/archive/", e: "Page" },
+{ t: "RSS Feed", u: "/atom.xml", e: "RSS" }{#- no comma! -#}
+];

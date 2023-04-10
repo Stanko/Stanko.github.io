@@ -1,0 +1,6 @@
+comment_id = "527d3c70-309d-11eb-aa83-694c91bfe971"
+slug = "get-scrollbar-width-in-javascript"
+name = "Jarón"
+email = "de35789ab542b0990eb7637c15221734"
+message = "Thanks a lot! I've now implemented it like this:\n```\nfunction getScrollbarWidth(elm) {\n  if (elm === document.body) {\n    return window.innerWidth - document.documentElement.clientWidth;\n  } else {\n    return elm.offsetWidth - elm.clientWidth;\n  }\n}\n```"
+date = "2020-11-27T10:43:01.988Z"

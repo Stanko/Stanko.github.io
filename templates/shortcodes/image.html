@@ -1,0 +1,12 @@
+{% if link %}
+<a href="{{link}}" class="image__link">
+{% endif %}
+  <img
+    class="image {% if size %}image--{{size}}{% endif %} {% if class %}{{class}}{% endif %} {% if shadow %}image--shadow{% endif %} {% if caption %}image--caption{% endif %}"
+    src="{{src}}"
+    alt="{{alt}}"
+  />
+  {% if caption %}<small class="image__caption">{{ caption }}</small>{% endif %}
+{% if link %}
+</a>
+{% endif %}

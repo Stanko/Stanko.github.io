@@ -1,0 +1,66 @@
+{# 404 error page has no "current_path" variable #}
+{% set path = "" %}
+
+{% if current_path %}
+  {% set path =  current_path %}
+{% endif %}
+
+<nav class="nav {% if footer_nav %}nav--footer{% endif %}{% if header_nav %}nav--header{% endif %}">
+  {# show home link in footer only #}
+  {% if footer_nav %}
+    <a class="nav__item" href="/">Home</a>
+    <span aria-hidden="true">/</span>
+  {% endif %}
+
+  {# <a
+    class="nav__item {% if path == '/projects/'%}active{% endif %}"
+    href="/projects/"
+  >
+    Projects
+  </a>
+  <span aria-hidden="true">/</span> #}
+  <a
+    class="nav__item nav__item--with-icon {% if path == '/art/'%}active{% endif %}"
+    href="/art/"
+  >
+    Art
+  </a>
+  <span aria-hidden="true">/</span>
+  <a
+    class="nav__item {% if path == '/archive/'%}active{% endif %}"
+    href="/archive/"
+  >
+    Blog
+  </a>
+  <span aria-hidden="true">/</span>
+  <a
+    class="nav__item {% if path == '/about/'%}active{% endif %}"
+    href="/about/"
+  >
+    About
+  </a>
+  <span aria-hidden="true">/</span>
+  <a
+    class="nav__item nav__stats {% if path == '/stats/'%}active{% endif %}"
+    href="/stats/"
+  >
+    Stats
+  </a>
+  <span aria-hidden="true" class="nav__stats">/</span>
+  <button class="nav__item nav__item--with-icon" data-micromodal-trigger="modal-menu">
+    Search
+    <svg
+      class="nav__search-icon"
+      viewBox="0 0 20 32"
+      width="10"
+      height="16"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+        <circle cx="10" cy="10" r="10" />
+        <path d="M 10 20 L 10 32" />
+      </g>
+    </svg>
+  </button>
+</nav>

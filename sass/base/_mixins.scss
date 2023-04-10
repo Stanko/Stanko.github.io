@@ -1,0 +1,145 @@
+@mixin dark-scheme {
+  .dark-scheme & {
+    @content;
+  }
+}
+
+@mixin header {
+  // font-family: $headers-font-family;
+  font-weight: $headers-font-weight;
+  line-height: $headers-line-height;
+  letter-spacing: -0.02em;
+}
+
+@mixin text-sm {
+  font-size: 15rem;
+
+  @include lg {
+    font-size: 17rem;
+  }
+}
+
+@mixin text-lg {
+  font-size: 20rem;
+
+  @include lg {
+    font-size: 22rem;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    @content;
+  }
+}
+
+@mixin sr-only {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  position: absolute;
+  left: -200vw;
+  top: -500vh;
+}
+
+@mixin text-gradient(
+  $color1: var(--gradient-color-1),
+  $color2: var(--gradient-color-2)
+) {
+  color: var(--theme-color);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    background-clip: text;
+    background: linear-gradient(90deg, $color1, $color2 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@mixin backdrop-filter($amount: 10px) {
+  @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    @content;
+    -webkit-backdrop-filter: blur($amount);
+    -ms-backdrop-filter: blur($amount);
+    backdrop-filter: blur($amount);
+  }
+}
+
+@mixin link-underline($color: var(--theme-color), $width: 1px) {
+  position: relative;
+
+  &::before {
+    border-top: $width solid $color;
+    bottom: -$width;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform $time;
+    width: 100%;
+  }
+
+  &:hover {
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+}
+
+// Placeholder
+
+@mixin placeholder($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  &:-moz-placeholder {
+    // Firefox 18-
+    color: $color;
+  }
+
+  &::-moz-placeholder {
+    // Firefox 19+
+    color: $color;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+@mixin transparent-outline($color: rgba(black, 0.075)) {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: $radius-xs;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border: 1px solid $color;
+  }
+}
+
+@mixin content-link {
+  transition: all $time;
+  color: var(--link-color);
+  // Messy as text-decoration props support is weird
+  -webkit-text-decoration-color: var(--link-underline-color);
+  -webkit-text-decoration-line: underline;
+  text-decoration-color: var(--link-underline-color);
+  text-decoration-line: underline;
+  text-underline-offset: 2rem;
+  text-decoration-thickness: 1px;
+
+  &:hover {
+    -webkit-text-decoration-color: currentColor;
+    text-decoration-color: currentColor;
+  }
+}

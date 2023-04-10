@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="page__top">
+  <div class="container">
+    <h1 class="page__title">
+      {% if page.extra.headerTitle %}
+        {{ page.extra.headerTitle | safe }}
+      {% else %}
+        {{ page.title | safe }}
+      {% endif %}
+    </h1>
+
+    {% if page.extra.subheading %}
+      <div class="page__intro">{{ page.extra.subheading | markdown(inline=true) | safe }}</div>
+    {% endif %}
+  </div>
+</div>
+
+<div class="container page__bottom">
+  <div class="content">
+    {% include "partials/blog-stats.html" %}
+
+    {% include "partials/year-stats.html" %}
+  </div>
+</div>
+
+
+{% endblock content %}

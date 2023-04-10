@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<noscript>
+<style>
+/* Open accordion if there is no javascript*/
+:target + .archive__posts { display: block; }
+</style>
+</noscript>
+
+<div class="page__top">
+  <div class="container">
+    <h1 class="page__title">
+      {% if page.extra.headerTitle %}
+        {{ page.extra.headerTitle | safe }}
+      {% else %}
+        {{ page.title | safe }}
+      {% endif %}
+    </h1>
+
+    {% set all_posts = get_section(path="blog/_index.md") %}
+
+    <p class="page__intro">
+      {% set categories = get_taxonomy(kind="category") %}
+      {# I started writing in february #}
+      {% set months_to_subtract = 2 %}
+      {% set current_year_months = now() | date(format='%m') | int %}
+      {% set current_year = now() | date(format='%Y') | int %}
+      {# I started writing in february 2016. #}
+      {% set total_months = (current_year - 2016) * 12 + current_year_months %}
+      Over the last {{ total_months / 12.0 | round }} years I've written
+      {{ all_posts.pages | length }} posts and here they are sorted in
+      {{ categories.items | length }} categories.
+    </p>
+  </div>
+</div>
+
+<div class="archive__bottom">
+  {% for category in categories.items | sort(attribute="name") %}
+    {% set posts_count = category.pages | length %}
+    <div class="archive__category archive__category--{{ category.slug }}">
+      <a
+        class="archive__toggle"
+        aria-controls="posts--{{ category.slug }}"
+        aria-expanded="false"
+        href="#{{category.slug}}"
+        id="{{category.slug}}"
+      >
+        <div class="container">
+          <div class="archive__toggle-content">
+            <div class="archive__toggle-left">
+              <div class="h2">
+                {{ category.name }}
+              </div>
+              <div class="archive__count">
+                {{ posts_count }} post{{ category.pages | length | pluralize }}
+              </div>
+            </div>
+            <div class="archive__arrow">
+              <svg viewBox="0 0 20 10" width="20" height="10" aria-hidden="true">
+                <path d="M 0 0 10 10 20 0" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </a>
+      <div
+        class="archive__posts"
+        id="posts--{{ category.slug }}"
+        aria-hidden="true"
+        style="transition-duration: {{ 250 + (posts_count * 10) }}ms;"
+      >
+        <div class="archive__posts-inner">
+          {% for page in category.pages %}
+            {% include "partials/post-list-post.html" %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock content %}

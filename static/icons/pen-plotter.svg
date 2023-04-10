@@ -1,0 +1,96 @@
+<svg
+  viewBox="0 0 64 64"
+  width="64"
+  height="64"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <style>
+    .plotter {
+      transform: translateX(18px);
+    }
+    @keyframes sketch {
+      0%,
+      20%,
+      100% {
+        stroke-dasharray: 0 71.2310562133789;
+        opacity: 0;
+      }
+      21%, 89% {
+        opacity: 1;
+      }
+      60%, 90% {
+        stroke-dasharray: 71.2310562133789 71.2310562133789;
+      }
+    }
+    @keyframes x-axis {
+      20%,
+      30%,
+      60% {
+        transform: translateY(-9px);
+      }
+
+      40%, 50% {
+        transform: translateY(-29px);
+      }
+
+      70%, 100% {
+        transform: translateY(0px);
+      }
+    }
+    @keyframes y-axis {
+      0%, 30%, 70%, 100% {
+        transform: translateX(-18px);
+      }
+      20%,
+      60% {
+        transform: translateX(0px);
+      }
+      30% {
+        transform: translateX(-18px);
+      }
+    }
+    .x-axis {
+      animation: x-axis 5s infinite linear;
+    }
+    .y-axis {
+      animation: y-axis 5s infinite linear;
+    }
+    .sketch {
+      animation: sketch 5s infinite linear;
+    }
+  </style>
+  <!-- available canvas is actually 63x63 as we need 0.5 on each side for outlines -->
+  <g class="plotter">
+    <g stroke="currentColor" fill="white" transform="translate(6 0.5)">
+      <rect x="0" y="0" width="10" height="10" rx="1" />
+      <rect x="0" y="53" width="10" height="10" rx="1" />
+      <rect x="1" y="10" width="8" height="43" />
+    </g>
+
+    <path
+      class="sketch"
+      d="M 43 40 l -20 0 l 5 -20 l 10 0 l 5 20 Z"
+      transform="translate(-1 0.5)"
+      stroke-width="2"
+      stroke="#3498db"
+      fill="none"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      stroke-dasharray="71.2310562133789 71.2310562133789"
+    />
+
+    <g stroke="currentColor" fill="white" class="x-axis">
+      <g class="y-axis" transform="translate(-18 0)">
+        <rect x="1" y="46" width="35" height="6" />
+        <rect x="35" y="45" width="4" height="8" />
+        <path
+          d="M 0 0 l 6 0 l 0 6 l -2 0 l 0 -4 l -4 0 Z"
+          transform="translate(39 46)"
+        />
+        <circle cx="41" cy="50" r="2" fill="#3498db" stroke="none" />
+      </g>
+
+      <rect x="4" y="44" width="14" height="10" rx="1" />
+    </g>
+  </g>
+</svg>

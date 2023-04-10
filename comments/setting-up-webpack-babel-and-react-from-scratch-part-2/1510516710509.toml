@@ -1,0 +1,6 @@
+comment_id = "dacf93f0-c7e3-11e7-ba4c-e73d86b6e735"
+slug = "setting-up-webpack-babel-and-react-from-scratch-part-2"
+name = "Tommy C"
+email = "6197f1340654cf81272f6f3758176232"
+message = "Hello! These are wonderful tutorials; really digging them and learning a lot about the 'magic' behind boilerplates.\n\nAs of 11/12/2017 using\n\n<pre>{\n  test: /\\.scss$/,\n  loader: 'style!css!sass'\n}</pre>\n\nwill result in the application failing to compile (at least it did for me anyway) and in order to fix it I had to add -loader to the 'loaders'\n\nex:\n\n<pre> {\n  test: /\\.scss$/,\n  loader: 'style-loader!css-loader!sass-loader'\n} </pre>\n\nAgain, thanks for taking the time for these greate tutorials"
+date = "2017-11-12T19:58:30.505Z"

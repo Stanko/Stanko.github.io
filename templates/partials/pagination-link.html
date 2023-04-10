@@ -1,0 +1,17 @@
+{% if paginator_index == 1 %}
+  {% set href = "/blog/" %}
+{% else %}
+  {% set href = paginator.base_url ~ paginator_index %}
+{% endif %}
+
+{% if paginator_index == paginator.current_index %}
+  <span class="pagination__item pagination__item--active" aria-label="Current page {{ paginator_index }}">
+    {{ paginator_index }}
+  </span>
+{% else %}
+  <a href="{{ href }}" class="pagination__item pagination__item--number" aria-label="Page {{ paginator_index }}">
+    {{ paginator_index }}
+  </a>
+{% endif %}
+
+

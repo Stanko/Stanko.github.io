@@ -1,0 +1,13 @@
+<span
+  class="sidenote__trigger {% if class %}{{class}}{% endif %}"
+  tabindex="0"
+  role="button"
+>
+  {{text | markdown(inline=true) | safe}}
+</span>
+
+<span
+  class="sidenote__note {% if class %}{{class}}{% endif %}"
+><span class="sidenote__bracket">(</span>{{
+  note | markdown(inline=true) | safe
+}}<span class="sidenote__bracket">)</span></span>

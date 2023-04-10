@@ -1,0 +1,108 @@
+.modal {
+  display: none;
+  touch-action: all;
+  z-index: $layer-modal;
+  position: fixed;
+}
+
+.modal.is-open {
+  display: block;
+}
+
+.modal__top {
+  background-color: var(--neutral-100);
+  position: relative;
+  z-index: $layer-modal;
+}
+
+.html--overflow-hidden .modal__top {
+  top: $top-stripe-height;
+  position: sticky;
+}
+
+.modal__bottom {
+  padding: 20rem 0;
+}
+
+.modal__shadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  will-change: opacity;
+}
+
+.modal__container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  bottom: 0;
+  background-color: var(--neutral-100);
+  overflow-y: hidden;
+  will-change: transform, opacity;
+}
+
+.html--overflow-hidden .modal__container {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+@keyframes shadow-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shadow-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes container-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes container-out {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.modal[aria-hidden="false"] .modal__shadow {
+  animation: shadow-in $time-long;
+}
+
+.modal[aria-hidden="true"] .modal__shadow {
+  animation: shadow-out $time-long;
+}
+
+.modal[aria-hidden="false"] .modal__container {
+  animation: container-in $time-long;
+}
+
+.modal[aria-hidden="true"] .modal__container {
+  animation: container-out $time-long;
+}

@@ -1,0 +1,6 @@
+comment_id = "6142c8d0-fe59-11e6-a00e-130e44be5698"
+slug = "setting-up-webpack-babel-and-react-from-scratch"
+name = "Stanko"
+email = "13a28fac985c11eb7f40169be7da32f4"
+message = "Elvan,\n\nCan't really tell what is wrong from the stack you pasted. It seems that you are probably missing node modules.\n\nTry running <code>webpack --display-error-details</code>, it may give you more details about the error.\n\nIn the end, clone <a href=\"https://github.com/Stanko/react-tutorial\">this repository</a>, I created for this tutorial, and compare it to your code."
+date = "2017-03-01T08:30:52.274Z"

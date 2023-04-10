@@ -1,0 +1,18 @@
+{
+  "name": "muffinman.io",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "esbuild js/app.js js/photoswipe.js --bundle --sourcemap --minify --watch --outdir=static/js",
+    "build": "esbuild js/app.js js/photoswipe.js --bundle --sourcemap --minify --outdir=static/js"
+  },
+  "author": "Stanko",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "dependencies": {
+    "@leeoniya/ufuzzy": "^1.0.6",
+    "animated-scroll-to": "^2.3.0",
+    "esbuild": "^0.17.13",
+    "micromodal": "^0.4.10",
+    "photoswipe": "^5.3.6"
+  }
+}
