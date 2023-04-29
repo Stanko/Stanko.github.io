@@ -385,7 +385,7 @@
 <p>Building Rayven is a super fun process, so I really hope you liked what I showed you today. There are still a handful of features that I want to add, polish its API, but once it is ready, I plan to publish it to the world.</p>
 <p>Stay tuned!</p>
 
-<script src=/js/photoswipe.js></script>
+<script src="/js/photoswipe.js"></script>
 
 
     </content>
