@@ -5,8 +5,36 @@
 	<link href="https://muffinman.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://muffinman.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-04-08T00:00:00+00:00</updated>
+	<updated>2023-04-30T00:00:00+00:00</updated>
 	<id>https://muffinman.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>10 years of Work&amp;Co, version 2</title>
+		<published>2023-04-30T00:00:00+00:00</published>
+		<updated>2023-04-30T00:00:00+00:00</updated>
+		<link href="https://muffinman.io/art/ten-years-of-work-and-co-v2/" type="text/html"/>
+		<id>https://muffinman.io/art/ten-years-of-work-and-co-v2/</id>
+    <author>
+      <name>Stanko</name>
+    </author>
+		<content type="html"><p>The second plot for <a href="https://work.co">Work&amp;Co</a>'s anniversary, and my personal favorite. The bumpy sphere is an allusion to the challenging period we've all experienced due to COVID-19.</p>
+
+    </content>
+
+	</entry>
+	<entry xml:lang="en">
+		<title>10 years of Work&amp;Co</title>
+		<published>2023-04-30T00:00:00+00:00</published>
+		<updated>2023-04-30T00:00:00+00:00</updated>
+		<link href="https://muffinman.io/art/ten-years-of-work-and-co/" type="text/html"/>
+		<id>https://muffinman.io/art/ten-years-of-work-and-co/</id>
+    <author>
+      <name>Stanko</name>
+    </author>
+		<content type="html"><p>To celebrate <a href="https://work.co">Work&amp;Co</a>'s tenth anniversary, I'm excited to share this two-piece series. Both drawings are 3d scenes, hatched by my vector raytracer, Rayven, to get a hand drawn feel.</p>
+
+    </content>
+
+	</entry>
 	<entry xml:lang="en">
 		<title>Simple colorful logging in Node.js</title>
 		<published>2023-04-08T00:00:00+00:00</published>
