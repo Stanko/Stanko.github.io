@@ -8,7 +8,7 @@ paper = "Fabriano Bristol 250gsm"
 pens = "Molotow Blackliner"
 
 iterations = 3
-image = "/art/ten-years-of-work-and-co/0.jpg"
+image = "/art/ten-years-of-work-and-co-v2/0.jpg"
 
 filter = ["available"]
 +++
