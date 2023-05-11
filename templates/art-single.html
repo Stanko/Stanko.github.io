@@ -13,7 +13,7 @@
     </a>
 
     {% if page.extra.intro %}
-      <div class="page__intro">{{ page.extra.intro }}</div>
+      <div class="page__intro">{{ page.extra.intro | markdown(inline=true) | safe}}</div>
     {% endif %}
   </div>
 </div>
