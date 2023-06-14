@@ -5,13 +5,13 @@
 
 photoswipe/dist/photoswipe-lightbox.esm.js:
   (*!
-    * PhotoSwipe Lightbox 5.3.6 - https://photoswipe.com
+    * PhotoSwipe Lightbox 5.3.7 - https://photoswipe.com
     * (c) 2023 Dmytro Semenov
     *)
 
 photoswipe/dist/photoswipe.esm.js:
   (*!
-    * PhotoSwipe 5.3.6 - https://photoswipe.com
+    * PhotoSwipe 5.3.7 - https://photoswipe.com
     * (c) 2023 Dmytro Semenov
     *)
 */
