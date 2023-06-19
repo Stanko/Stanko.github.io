@@ -5,8 +5,192 @@
 	<link href="https://muffinman.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://muffinman.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-04-30T00:00:00+00:00</updated>
+	<updated>2023-06-19T00:00:00+00:00</updated>
 	<id>https://muffinman.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Scrollbar width custom event</title>
+		<published>2023-06-19T00:00:00+00:00</published>
+		<updated>2023-06-19T00:00:00+00:00</updated>
+		<link href="https://muffinman.io/blog/scrollbar-size-observer/" type="text/html"/>
+		<id>https://muffinman.io/blog/scrollbar-size-observer/</id>
+    <author>
+      <name>Stanko</name>
+    </author>
+		<content type="html"><p>Some operating systems and browsers are not showing scrollbars by default. That often results in developers forgetting about these pesky gray bars and the issues they can cause.</p>
+<p>I'll give you two quick examples:</p>
+<p>When setting <code>overflow: hidden</code> on the body element, if there was a scrollbar visible, content will jump a little as it now has more space. If you ever implemented scroll locking for modals, you've probably encountered this issue.</p>
+<p>Another thing is that <code>width: 100vw</code> and <code>width: 100%</code> on the body element don't match if there is a scrollbar visible:</p>
+<ul>
+<li><code>100vw</code> is the width of the viewport <strong>including</strong> the scrollbar.</li>
+<li><code>100%</code> is the width of the viewport <strong>excluding</strong> the scrollbar.</li>
+</ul>
+<p>This becomes obvious if you have a fixed element like a header. It will be a little bit wider than the rest of the content when scrollbar is visible.</p>
+<p>I'm sure there are more issues, but these are the two I remembered on top of my head. Anyhow, let's see how to solve this.</p>
+<h2 id="javascript-solution">JavaScript solution<a
+  class="header-anchor"
+  href="#javascript-solution" aria-label="Anchor link for: javascript-solution"
+  title="Anchor link for: javascript-solution"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>Ideally we would like to have a <code>scrollbar-width</code> event. It doesn't exist, so we'll have to create a custom event ourselves, and trigger it when scrollbar width changes.</p>
+<p>To catch the width changing, we can't use the <code>resize</code> event because viewport size don't change when scrollbar is toggled.</p>
+<p>However, if we set the <a href="https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver">ResizeObserver</a> on the <code>html</code> element, it will trigger when the scrollbar is toggled.</p>
+<h3 id="code">Code<a
+  class="header-anchor"
+  href="#code" aria-label="Anchor link for: code"
+  title="Anchor link for: code"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h3>
+<p>After setting the observer we need to fire our custom event when width has changed. Code looks something like this:</p>
+<pre data-lang="js" class="language-js z-code"><code class="language-js" data-lang="js"><span class="z-source z-ts"><span class="z-meta z-var z-expr z-ts"><span class="z-storage z-type z-ts">const</span> <span class="z-meta z-var-single-variable z-expr z-ts"><span class="z-meta z-definition z-variable z-ts"><span class="z-variable z-other z-constant z-ts"><span class="z-entity z-name z-function z-ts">initScrollbarWidthEvent</span></span></span> </span><span class="z-keyword z-operator z-assignment z-ts">=</span><span class="z-meta z-arrow z-ts"> <span class="z-meta z-parameters z-ts"><span class="z-punctuation z-definition z-parameters z-begin z-ts">(</span><span class="z-punctuation z-definition z-parameters z-end z-ts">)</span></span> </span><span class="z-meta z-arrow z-ts"><span class="z-storage z-type z-function z-arrow z-ts">=&gt;</span> <span class="z-meta z-block z-ts"><span class="z-punctuation z-definition z-block z-ts">{</span>
+<span class="z-punctuation z-whitespace z-comment z-leading z-ts">  </span><span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> Custom event</span>
+  <span class="z-meta z-var z-expr z-ts"><span class="z-storage z-type z-ts">const</span> <span class="z-meta z-var-single-variable z-expr z-ts"><span class="z-meta z-definition z-variable z-ts"><span class="z-variable z-other z-constant z-ts">scrollbarEvent</span></span> </span><span class="z-keyword z-operator z-assignment z-ts">=</span> <span class="z-new z-expr z-ts"><span class="z-keyword z-operator z-new z-ts">new</span> <span class="z-entity z-name z-type z-ts">Event</span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-string z-quoted z-double z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&quot;</span>scrollbar-width<span class="z-punctuation z-definition z-string z-end z-ts">&quot;</span></span><span class="z-meta z-brace z-round z-ts">)</span></span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-punctuation z-whitespace z-comment z-leading z-ts">  </span><span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> Initial state</span>
+  <span class="z-meta z-var z-expr z-ts"><span class="z-storage z-type z-ts">let</span> <span class="z-meta z-var-single-variable z-expr z-ts"><span class="z-meta z-definition z-variable z-ts"><span class="z-variable z-other z-readwrite z-ts">currentWidth</span></span> </span><span class="z-keyword z-operator z-assignment z-ts">=</span> <span class="z-support z-variable z-dom z-ts">window</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-variable z-property z-dom z-ts">innerWidth</span> <span class="z-keyword z-operator z-arithmetic z-ts">-</span> <span class="z-support z-variable z-dom z-ts">document</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-variable z-property z-dom z-ts">documentElement</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-property z-ts">clientWidth</span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+
+  <span class="z-meta z-var z-expr z-ts"><span class="z-storage z-type z-ts">const</span> <span class="z-meta z-var-single-variable z-expr z-ts"><span class="z-meta z-definition z-variable z-ts"><span class="z-variable z-other z-constant z-ts">observer</span></span> </span><span class="z-keyword z-operator z-assignment z-ts">=</span> <span class="z-new z-expr z-ts"><span class="z-keyword z-operator z-new z-ts">new</span> <span class="z-entity z-name z-type z-ts">ResizeObserver</span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-meta z-arrow z-ts"><span class="z-meta z-parameters z-ts"><span class="z-punctuation z-definition z-parameters z-begin z-ts">(</span><span class="z-punctuation z-definition z-parameters z-end z-ts">)</span></span> </span><span class="z-meta z-arrow z-ts"><span class="z-storage z-type z-function z-arrow z-ts">=&gt;</span> <span class="z-meta z-block z-ts"><span class="z-punctuation z-definition z-block z-ts">{</span>
+    <span class="z-meta z-var z-expr z-ts"><span class="z-storage z-type z-ts">const</span> <span class="z-meta z-var-single-variable z-expr z-ts"><span class="z-meta z-definition z-variable z-ts"><span class="z-variable z-other z-constant z-ts">newWidth</span></span> </span><span class="z-keyword z-operator z-assignment z-ts">=</span> <span class="z-support z-variable z-dom z-ts">window</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-variable z-property z-dom z-ts">innerWidth</span> <span class="z-keyword z-operator z-arithmetic z-ts">-</span> <span class="z-support z-variable z-dom z-ts">document</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-variable z-property z-dom z-ts">documentElement</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-property z-ts">clientWidth</span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+
+<span class="z-punctuation z-whitespace z-comment z-leading z-ts">    </span><span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> Check if the scrollbar width has changed and trigger the custom event</span>
+    <span class="z-keyword z-control z-conditional z-ts">if</span> <span class="z-meta z-brace z-round z-ts">(</span><span class="z-variable z-other z-readwrite z-ts">newWidth</span> <span class="z-keyword z-operator z-comparison z-ts">!==</span> <span class="z-variable z-other z-readwrite z-ts">currentWidth</span><span class="z-meta z-brace z-round z-ts">)</span> <span class="z-meta z-block z-ts"><span class="z-punctuation z-definition z-block z-ts">{</span>
+<span class="z-punctuation z-whitespace z-comment z-leading z-ts">      </span><span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> Update event data</span>
+<span class="z-punctuation z-whitespace z-comment z-leading z-ts">      </span><span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> We are passing both previous and current width,</span>
+<span class="z-punctuation z-whitespace z-comment z-leading z-ts">      </span><span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> because having the previous value can get handy</span>
+      <span class="z-variable z-other z-object z-ts">scrollbarEvent</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-property z-ts">detail</span> <span class="z-keyword z-operator z-assignment z-ts">=</span><span class="z-meta z-objectliteral z-ts"> <span class="z-punctuation z-definition z-block z-ts">{</span>
+        <span class="z-meta z-object z-member z-ts"><span class="z-meta z-object-literal z-key z-ts">previous</span></span><span class="z-meta z-object z-member z-ts"><span class="z-meta z-object-literal z-key z-ts"><span class="z-punctuation z-separator z-key-value z-ts">:</span></span> <span class="z-variable z-other z-readwrite z-ts">currentWidth</span></span><span class="z-punctuation z-separator z-comma z-ts">,</span>
+        <span class="z-meta z-object z-member z-ts"><span class="z-meta z-object-literal z-key z-ts">current</span></span><span class="z-meta z-object z-member z-ts"><span class="z-meta z-object-literal z-key z-ts"><span class="z-punctuation z-separator z-key-value z-ts">:</span></span> <span class="z-variable z-other z-readwrite z-ts">newWidth</span></span><span class="z-punctuation z-separator z-comma z-ts">,</span>
+      <span class="z-punctuation z-definition z-block z-ts">}</span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-punctuation z-whitespace z-comment z-leading z-ts">      </span><span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> Update the state</span>
+      <span class="z-variable z-other z-readwrite z-ts">currentWidth</span> <span class="z-keyword z-operator z-assignment z-ts">=</span> <span class="z-variable z-other z-readwrite z-ts">newWidth</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-punctuation z-whitespace z-comment z-leading z-ts">      </span><span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> Trigger the custom event</span>
+      <span class="z-meta z-function-call z-ts"><span class="z-support z-variable z-dom z-ts">window</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-function z-dom z-ts">dispatchEvent</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-variable z-other z-readwrite z-ts">scrollbarEvent</span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+    <span class="z-punctuation z-definition z-block z-ts">}</span></span>
+  <span class="z-punctuation z-definition z-block z-ts">}</span></span></span><span class="z-meta z-brace z-round z-ts">)</span></span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+
+<span class="z-punctuation z-whitespace z-comment z-leading z-ts">  </span><span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> Start observing</span>
+  <span class="z-meta z-function-call z-ts"><span class="z-variable z-other z-object z-ts">observer</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-function z-dom z-ts">observe</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-support z-variable z-dom z-ts">document</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-variable z-property z-dom z-ts">documentElement</span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+
+<span class="z-punctuation z-whitespace z-comment z-leading z-ts">  </span><span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> Returning observer instance if we ever need to disconnect manually</span>
+  <span class="z-keyword z-control z-flow z-ts">return</span> <span class="z-variable z-other z-readwrite z-ts">observer</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-punctuation z-definition z-block z-ts">}</span></span></span></span>
+</span></code></pre>
+<h3 id="example-usage">Example usage<a
+  class="header-anchor"
+  href="#example-usage" aria-label="Anchor link for: example-usage"
+  title="Anchor link for: example-usage"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h3>
+<p>Here is an example of how to use it to update <code>--scrollbar-width</code> CSS variable:</p>
+<pre data-lang="js" class="language-js z-code"><code class="language-js" data-lang="js"><span class="z-source z-ts"><span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> Initialize our custom event stuff</span>
+<span class="z-meta z-function-call z-ts"><span class="z-entity z-name z-function z-ts">initScrollbarWidthEvent</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+
+<span class="z-meta z-var z-expr z-ts"><span class="z-storage z-type z-ts">const</span> <span class="z-meta z-var-single-variable z-expr z-ts"><span class="z-meta z-definition z-variable z-ts"><span class="z-variable z-other z-constant z-ts"><span class="z-entity z-name z-function z-ts">updateCssVariable</span></span></span> </span><span class="z-keyword z-operator z-assignment z-ts">=</span><span class="z-meta z-arrow z-ts"> <span class="z-meta z-parameters z-ts"><span class="z-punctuation z-definition z-parameters z-begin z-ts">(</span><span class="z-variable z-parameter z-ts">width</span><span class="z-punctuation z-definition z-parameters z-end z-ts">)</span></span> </span><span class="z-meta z-arrow z-ts"><span class="z-storage z-type z-function z-arrow z-ts">=&gt;</span> <span class="z-meta z-block z-ts"><span class="z-punctuation z-definition z-block z-ts">{</span>
+<span class="z-punctuation z-whitespace z-comment z-leading z-ts">  </span><span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> Update CSS variable</span>
+  <span class="z-meta z-function-call z-ts"><span class="z-support z-variable z-dom z-ts">document</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-variable z-property z-dom z-ts">documentElement</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-variable z-property z-dom z-ts">style</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-entity z-name z-function z-ts">setProperty</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-string z-quoted z-double z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&quot;</span>--scrollbar-width<span class="z-punctuation z-definition z-string z-end z-ts">&quot;</span></span><span class="z-punctuation z-separator z-comma z-ts">,</span> <span class="z-variable z-other z-readwrite z-ts">width</span> <span class="z-keyword z-operator z-arithmetic z-ts">+</span> <span class="z-string z-quoted z-double z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&quot;</span>px<span class="z-punctuation z-definition z-string z-end z-ts">&quot;</span></span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-punctuation z-definition z-block z-ts">}</span></span></span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+
+<span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> Update the variable on the first load</span>
+<span class="z-meta z-var z-expr z-ts"><span class="z-storage z-type z-ts">const</span> <span class="z-meta z-var-single-variable z-expr z-ts"><span class="z-meta z-definition z-variable z-ts"><span class="z-variable z-other z-constant z-ts">initialWidth</span></span> </span><span class="z-keyword z-operator z-assignment z-ts">=</span> <span class="z-support z-variable z-dom z-ts">window</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-variable z-property z-dom z-ts">innerWidth</span> <span class="z-keyword z-operator z-arithmetic z-ts">-</span> <span class="z-support z-variable z-dom z-ts">document</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-variable z-property z-dom z-ts">documentElement</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-property z-ts">clientWidth</span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-meta z-function-call z-ts"><span class="z-entity z-name z-function z-ts">updateCssVariable</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-variable z-other z-readwrite z-ts">initialWidth</span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+
+<span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> Start listening for changes</span>
+<span class="z-meta z-function-call z-ts"><span class="z-support z-variable z-dom z-ts">window</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-function z-dom z-ts">addEventListener</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-string z-quoted z-double z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&quot;</span>scrollbar-width<span class="z-punctuation z-definition z-string z-end z-ts">&quot;</span></span><span class="z-punctuation z-separator z-comma z-ts">,</span><span class="z-meta z-arrow z-ts"> <span class="z-meta z-parameters z-ts"><span class="z-punctuation z-definition z-parameters z-begin z-ts">(</span><span class="z-variable z-parameter z-ts">e</span><span class="z-punctuation z-definition z-parameters z-end z-ts">)</span></span> </span><span class="z-meta z-arrow z-ts"><span class="z-storage z-type z-function z-arrow z-ts">=&gt;</span> <span class="z-meta z-block z-ts"><span class="z-punctuation z-definition z-block z-ts">{</span>
+  <span class="z-meta z-function-call z-ts"><span class="z-entity z-name z-function z-ts">updateCssVariable</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-variable z-other z-object z-ts">e</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-object z-property z-ts">detail</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-variable z-property z-dom z-ts">current</span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-punctuation z-definition z-block z-ts">}</span></span></span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+</span></code></pre>
+<p>Similarly to when we track the scroll position (or window size), we'll have to set the initial state on load. Then, we can add a listener and make sure that the local state is up to date.</p>
+<h3 id="initial-value-of-the-css-variable">Initial value of the CSS variable<a
+  class="header-anchor"
+  href="#initial-value-of-the-css-variable" aria-label="Anchor link for: initial-value-of-the-css-variable"
+  title="Anchor link for: initial-value-of-the-css-variable"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h3>
+<p>This all happens on the client. Which means that <code>--scrollbar-width</code> won't be calculated before our JavaScript code executes. To be sure we'll give it a default value:</p>
+<pre data-lang="css" class="language-css z-code"><code class="language-css" data-lang="css"><span class="z-source z-css"><span class="z-meta z-selector z-css"><span class="z-entity z-other z-pseudo-class z-css"><span class="z-punctuation z-definition z-entity z-css">:</span>root</span> </span><span class="z-meta z-property-list z-css"><span class="z-punctuation z-section z-property-list z-css">{</span>
+  <span class="z-meta z-property-name z-css"><span class="z-support z-type z-custom-property z-css"><span class="z-punctuation z-definition z-custom-property z-css">--</span><span class="z-support z-type z-custom-property z-name z-css">scrollbar-width</span></span></span><span class="z-punctuation z-separator z-key-value z-css">:</span><span class="z-meta z-property-value z-css"> </span><span class="z-meta z-property-value z-css"><span class="z-constant z-numeric z-integer z-decimal z-css">0<span class="z-keyword z-other z-unit z-css">px</span></span></span><span class="z-punctuation z-terminator z-rule z-css">;</span>
+</span><span class="z-punctuation z-section z-property-list z-css">}</span>
+</span></code></pre>
+<p>Because JavaScript is interpreted in the order it is defined, we can put our initialization code in the head element to make it more resilient. This way it will execute early and prevent the layout shift.</p>
+<h2 id="demo">Demo<a
+  class="header-anchor"
+  href="#demo" aria-label="Anchor link for: demo"
+  title="Anchor link for: demo"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>Here is a live demonstration. Click on the button below to toggle the vertical scrollbar.</p>
+<pre class="scrollbar-size z-code"></pre>
+<p><button class="btn btn--sm btn--main toggle-scrollbar">Toggle scrollbar</button></p>
+<p>Please note that if your browser doesn't show scrollbars, width will always be zero.</p>
+<hr />
+<p>It is worth mentioning that there is also a CSS solution, but I prefer the JavaScript version as I find it more reliable. But if you want to find out more on CSS one, check <a href="https://stackoverflow.com/a/34884924">this answer on Stack Overflow</a>.</p>
+<script>
+// ----- OBSERVER and CUSTOM EVENT ----- //
+
+// Initial width
+let currentWidth = window.innerWidth - document.documentElement.clientWidth;
+const scrollbarEvent = new Event("scrollbar-width");
+
+// Check if the scrollbar width has changed and trigger the custom event
+const updateScrollbarWidth = () => {
+  const newWidth = window.innerWidth - document.documentElement.clientWidth;
+
+  if (newWidth !== currentWidth) {
+    scrollbarEvent.detail = {
+      previous: currentWidth,
+      current: newWidth,
+    };
+    currentWidth = newWidth;
+    window.dispatchEvent(scrollbarEvent);
+  }
+};
+
+updateScrollbarWidth();
+
+const observer = new ResizeObserver(updateScrollbarWidth);
+observer.observe(document.documentElement);
+
+// ----- DEMO ----- //
+
+const pre = document.querySelector(".scrollbar-size");
+const toggle = document.querySelector(".toggle-scrollbar");
+
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("scrollbar-width-test");
+});
+
+// ----- USAGE ----- //
+
+const handleScrollbarWidth = (width) => {
+  document.documentElement.style.setProperty("--scrollbar-width", width + "px");
+
+  if (width > 0) {
+    document.documentElement.classList.add("has-scrollbar");
+  } else {
+    document.documentElement.classList.remove("has-scrollbar");
+  }
+
+  pre.innerHTML = `--scrollbar-width: ${width}px;`;
+};
+
+// Add event listener
+window.addEventListener("scrollbar-width", (e) => {
+  console.log("Scrollbar width changed:", e.detail);
+  handleScrollbarWidth(e.detail.current);
+});
+
+// Handle initial state
+handleScrollbarWidth(window.innerWidth - document.documentElement.clientWidth);
+</script>
+<style>
+  body.scrollbar-width-test {
+    overflow: hidden;
+    padding-right: var(--scrollbar-width);
+  }
+</style>
+
+    </content>
+
+	</entry>
 	<entry xml:lang="en">
 		<title>10 years of Work&amp;Co, version 2</title>
 		<published>2023-04-30T00:00:00+00:00</published>
@@ -3790,7 +3974,7 @@ and was used by thousands of people.</p>
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html"><p>My first real attempt at generative drawings.</p><p>You can play with algorithm <a href="https://neon.muffinman.io/">here</a> and download images. It took me ages to find appropriate pens to plot this one. Also check <a href="http://motorhead.local:1234/blog/neon-generative-art-piece-made-using-2d-vector-field/">the blog post</a> about how it is made.</p>
+		<content type="html"><p>My first real attempt at generative drawings.</p><p>You can play with algorithm <a href="https://neon.muffinman.io/">here</a> and download images. It took me ages to find appropriate pens to plot this one. Also check <a href="/blog/neon-generative-art-piece-made-using-2d-vector-field/">the blog post</a> about how it is made.</p>
 <p>On the images below you can see two different drawings.</p>
 
     </content>
@@ -4115,7 +4299,7 @@ And of course, big thanks to <a href="https://www.instagram.com/dutchplottr/">@d
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html"><p>First plot from the Metaballs series.</p><p>Check more drawings on <a href="/metaballs">the mini site</a>. I also did a <a href="http://motorhead.local:1234/blog/metaballs-generative-art/">write up</a> on how it is made.</p>
+		<content type="html"><p>First plot from the Metaballs series.</p><p>Check more drawings on <a href="/metaballs">the mini site</a>. I also did a <a href="/blog/metaballs-generative-art/">write up</a> on how it is made.</p>
 <p>I really need to plot a couple more of these.</p>
 
     </content>
@@ -7588,7 +7772,7 @@ If scrollbar is not shown it will return zero (including mobile devices).</p>
 <span class="z-punctuation z-definition z-block z-ts">}</span></span></span>
 </span></code></pre>
 <p>Click on the button to try it yourself:</p>
-<p><button style="margin-top: 0" class="Post-readmore" onclick="alert('Scroll bar width is ' + (window.innerWidth - document.documentElement.clientWidth) + 'px')">Get scrollbar width!</button></p>
+<p><button class="btn btn--main btn--sm" onclick="alert('Scroll bar width is ' + (window.innerWidth - document.documentElement.clientWidth) + 'px')">Get scrollbar width!</button></p>
 <h2 id="browser-support">Browser support<a
   class="header-anchor"
   href="#browser-support" aria-label="Anchor link for: browser-support"
