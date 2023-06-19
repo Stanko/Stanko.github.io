@@ -108,6 +108,7 @@ const colors = {
   red: "#d62940",
   gray: "#304f6e",
   purple: "#8854d0",
+  orange: "#ec6b00",
 };
 
 for (colorName in colors) {

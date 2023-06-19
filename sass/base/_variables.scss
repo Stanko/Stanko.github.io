@@ -101,6 +101,10 @@ $red-theme-color: #d62940;
 $red-theme-gradient-color-2: #f86945;
 $red-theme-gradient-color-1: #d62940;
 
+$orange-theme-color: #f87f1c;
+$orange-theme-gradient-color-2: #ffae00;
+$orange-theme-gradient-color-1: #e96c0d;
+
 $gray-theme-color: #4b5563;
 $gray-gradient-color-1: #374151;
 $gray-gradient-color-2: #6b7280;
@@ -128,6 +132,16 @@ $purple-gradient-color-2: #be2cd8;
   --theme-color-darken-20: #{darken($red-theme-color, 20)};
   --gradient-color-1: #{$red-theme-gradient-color-1};
   --gradient-color-2: #{$red-theme-gradient-color-2};
+}
+
+.orange {
+  --theme-color: #{$orange-theme-color};
+  --theme-color-darken-5: #{darken($orange-theme-color, 5)};
+  --theme-color-darken-10: #{darken($orange-theme-color, 10)};
+  --theme-color-darken-15: #{darken($orange-theme-color, 15)};
+  --theme-color-darken-20: #{darken($orange-theme-color, 20)};
+  --gradient-color-1: #{$orange-theme-gradient-color-1};
+  --gradient-color-2: #{$orange-theme-gradient-color-2};
 }
 
 .gray {

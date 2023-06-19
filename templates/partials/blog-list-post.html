@@ -10,6 +10,9 @@
       <img src="{{ post.extra.icon }}" alt="" aria-hidden="true" class="blog-list__icon" />
     {% endif %}
   </div>
+  {% if post.extra.intro %}
+  <p>{{post.extra.intro}}</p>
+  {% endif %}
   <div class="blog-list__date">
     {{ post.date | date(format="%d. %b %Y") }}
   </div>
