@@ -105,7 +105,7 @@
 
   {% block scripts %} {% endblock %}
 
-  {% if config.mode == "build" and config.base_url != "http://beg-tadic-stanko.local:1234" %}
+  {% if config.mode == "build" and config.base_url is ending_with(":1234") %}
     <script data-goatcounter="https://muffinman_io.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   {% endif %}
 </body>

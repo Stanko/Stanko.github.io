@@ -4,7 +4,7 @@ aliases = ["/get-scrollbar-width-in-javascript/"]
 
 [taxonomies]
 category = ["JavaScript"]
-tags = ["js"]
+tags = ["js", "scrollbar"]
 
 [extra]
 comments = [
@@ -28,7 +28,7 @@ function getScrollbarWidth() {
 
 Click on the button to try it yourself:
 
-<button style="margin-top: 0" class="Post-readmore" onclick="alert('Scroll bar width is ' + (window.innerWidth - document.documentElement.clientWidth) + 'px')">Get scrollbar width!</button>
+<button class="btn btn--main btn--sm" onclick="alert('Scroll bar width is ' + (window.innerWidth - document.documentElement.clientWidth) + 'px')">Get scrollbar width!</button>
 
 ## Browser support
 

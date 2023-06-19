@@ -14,7 +14,7 @@ image = "/art/metaballs-perspective/0.jpg"
 wide = true
 +++
 
-Check more drawings on [the mini site](/metaballs). I also did a [write up](http://motorhead.local:1234/blog/metaballs-generative-art/) on how it is made.
+Check more drawings on [the mini site](/metaballs). I also did a [write up](/blog/metaballs-generative-art/) on how it is made.
 
 I really need to plot a couple more of these.
 
