@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/atom.xsl" type="text/xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 	<title>Muffin Man</title>
 	<subtitle>Frontend &amp; creative coding</subtitle>
@@ -192,7 +193,7 @@ handleScrollbarWidth(window.innerWidth - document.documentElement.clientWidth);
 
 	</entry>
 	<entry xml:lang="en">
-		<title>10 years of Work&amp;Co, version 2</title>
+		<title>10 years of Work&amp;Co, version 2 • Generative drawing</title>
 		<published>2023-04-30T00:00:00+00:00</published>
 		<updated>2023-04-30T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/ten-years-of-work-and-co-v2/" type="text/html"/>
@@ -206,7 +207,7 @@ handleScrollbarWidth(window.innerWidth - document.documentElement.clientWidth);
 
 	</entry>
 	<entry xml:lang="en">
-		<title>10 years of Work&amp;Co</title>
+		<title>10 years of Work&amp;Co • Generative drawing</title>
 		<published>2023-04-30T00:00:00+00:00</published>
 		<updated>2023-04-30T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/ten-years-of-work-and-co/" type="text/html"/>
@@ -1924,7 +1925,7 @@ ffmpeg -i input-video.mp4 -vcodec libx264 <span style="color: var(--theme-color)
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Core</title>
+		<title>Core • Generative drawing</title>
 		<published>2022-07-13T00:00:00+00:00</published>
 		<updated>2022-07-13T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/core/" type="text/html"/>
@@ -1939,7 +1940,7 @@ ffmpeg -i input-video.mp4 -vcodec libx264 <span style="color: var(--theme-color)
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Untitled</title>
+		<title>Untitled • Generative drawing</title>
 		<published>2022-07-03T00:00:00+00:00</published>
 		<updated>2022-07-03T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/branches-02-untitled/" type="text/html"/>
@@ -3097,7 +3098,7 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Untitled</title>
+		<title>Untitled • Generative drawing</title>
 		<published>2022-02-24T00:00:00+00:00</published>
 		<updated>2022-02-24T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/branches-01-untitled/" type="text/html"/>
@@ -3110,7 +3111,7 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Bunny</title>
+		<title>Bunny • Generative drawing</title>
 		<published>2022-02-20T00:00:00+00:00</published>
 		<updated>2022-02-20T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/bunny/" type="text/html"/>
@@ -3322,7 +3323,7 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Stranded</title>
+		<title>Stranded • Generative drawing</title>
 		<published>2021-08-23T00:00:00+00:00</published>
 		<updated>2021-08-23T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/stranded-green-purple/" type="text/html"/>
@@ -3335,7 +3336,7 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Untitled</title>
+		<title>Untitled • Generative drawing</title>
 		<published>2021-07-27T00:00:00+00:00</published>
 		<updated>2021-07-27T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/boxes-untitled/" type="text/html"/>
@@ -3349,7 +3350,7 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Space Invader</title>
+		<title>Space Invader • Generative drawing</title>
 		<published>2021-07-04T00:00:00+00:00</published>
 		<updated>2021-07-04T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/space-invader/" type="text/html"/>
@@ -3362,7 +3363,7 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Beach (print)</title>
+		<title>Beach (print) • Generative drawing</title>
 		<published>2021-04-11T00:00:00+00:00</published>
 		<updated>2021-04-11T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/beach-print/" type="text/html"/>
@@ -3375,7 +3376,7 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Krypton</title>
+		<title>Krypton • Generative drawing</title>
 		<published>2021-03-27T00:00:00+00:00</published>
 		<updated>2021-03-27T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/krypton/" type="text/html"/>
@@ -3389,7 +3390,7 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Space Armadillo</title>
+		<title>Space Armadillo • Generative drawing</title>
 		<published>2021-03-14T00:00:00+00:00</published>
 		<updated>2021-03-14T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/armadillo/" type="text/html"/>
@@ -3403,7 +3404,7 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Pokeball</title>
+		<title>Pokeball • Generative drawing</title>
 		<published>2021-03-14T00:00:00+00:00</published>
 		<updated>2021-03-14T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/pokeball/" type="text/html"/>
@@ -3417,7 +3418,7 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Untitled (five prints)</title>
+		<title>Untitled (five prints) • Generative drawing</title>
 		<published>2021-02-16T00:00:00+00:00</published>
 		<updated>2021-02-16T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/untitled-vector-field-prints/" type="text/html"/>
@@ -3592,7 +3593,7 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Beach</title>
+		<title>Beach • Generative drawing</title>
 		<published>2020-12-06T00:00:00+00:00</published>
 		<updated>2020-12-06T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/beach/" type="text/html"/>
@@ -3607,7 +3608,7 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Contact Lost</title>
+		<title>Contact Lost • Generative drawing</title>
 		<published>2020-12-03T00:00:00+00:00</published>
 		<updated>2020-12-03T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/contact-lost/" type="text/html"/>
@@ -3621,7 +3622,7 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Stranded</title>
+		<title>Stranded • Generative drawing</title>
 		<published>2020-11-07T00:00:00+00:00</published>
 		<updated>2020-11-07T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/stranded-blue-red/" type="text/html"/>
@@ -3634,7 +3635,7 @@ I wrote a separate post about the creative process behind the last drawing - <a 
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Stranded</title>
+		<title>Stranded • Generative drawing</title>
 		<published>2020-11-07T00:00:00+00:00</published>
 		<updated>2020-11-07T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/stranded-silver/" type="text/html"/>
@@ -3867,7 +3868,7 @@ Now, if buffering happens, we'll get these events fired:</p>
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Untitled</title>
+		<title>Untitled • Generative drawing</title>
 		<published>2020-10-12T00:00:00+00:00</published>
 		<updated>2020-10-12T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/3d-cubes-untitled/" type="text/html"/>
@@ -3881,7 +3882,7 @@ Now, if buffering happens, we'll get these events fired:</p>
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Alien Machinery</title>
+		<title>Alien Machinery • Generative drawing</title>
 		<published>2020-10-02T00:00:00+00:00</published>
 		<updated>2020-10-02T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/alien-machinery/" type="text/html"/>
@@ -3895,7 +3896,7 @@ Now, if buffering happens, we'll get these events fired:</p>
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Untitled</title>
+		<title>Untitled • Generative drawing</title>
 		<published>2020-09-30T00:00:00+00:00</published>
 		<updated>2020-09-30T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/hex-truchet-untitled/" type="text/html"/>
@@ -3952,7 +3953,7 @@ and was used by thousands of people.</p>
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Black Holes</title>
+		<title>Black Holes • Generative drawing</title>
 		<published>2020-09-11T00:00:00+00:00</published>
 		<updated>2020-09-11T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/black-holes-color/" type="text/html"/>
@@ -3966,7 +3967,7 @@ and was used by thousands of people.</p>
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Neon</title>
+		<title>Neon • Generative drawing</title>
 		<published>2020-08-02T00:00:00+00:00</published>
 		<updated>2020-08-02T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/neon/" type="text/html"/>
@@ -3981,7 +3982,7 @@ and was used by thousands of people.</p>
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Waves (prints)</title>
+		<title>Waves (prints) • Generative drawing</title>
 		<published>2020-07-20T00:00:00+00:00</published>
 		<updated>2020-07-20T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/waves-prints/" type="text/html"/>
@@ -3995,7 +3996,7 @@ and was used by thousands of people.</p>
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Black Holes</title>
+		<title>Black Holes • Generative drawing</title>
 		<published>2020-07-11T00:00:00+00:00</published>
 		<updated>2020-07-11T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/black-holes/" type="text/html"/>
@@ -4049,7 +4050,7 @@ and was used by thousands of people.</p>
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Over the Garden Wall</title>
+		<title>Over the Garden Wall • Generative drawing</title>
 		<published>2020-05-27T00:00:00+00:00</published>
 		<updated>2020-05-27T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/over-the-garden-wall/" type="text/html"/>
@@ -4063,7 +4064,7 @@ and was used by thousands of people.</p>
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Belgrade</title>
+		<title>Belgrade • Generative drawing</title>
 		<published>2020-05-17T00:00:00+00:00</published>
 		<updated>2020-05-17T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/belgrade/" type="text/html"/>
@@ -4194,7 +4195,7 @@ And of course, big thanks to <a href="https://www.instagram.com/dutchplottr/">@d
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Galaxy</title>
+		<title>Galaxy • Generative drawing</title>
 		<published>2020-05-02T00:00:00+00:00</published>
 		<updated>2020-05-02T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/galaxy-black/" type="text/html"/>
@@ -4207,7 +4208,7 @@ And of course, big thanks to <a href="https://www.instagram.com/dutchplottr/">@d
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Galaxy</title>
+		<title>Galaxy • Generative drawing</title>
 		<published>2020-05-02T00:00:00+00:00</published>
 		<updated>2020-05-02T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/galaxy-white/" type="text/html"/>
@@ -4221,7 +4222,7 @@ And of course, big thanks to <a href="https://www.instagram.com/dutchplottr/">@d
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Untitled</title>
+		<title>Untitled • Generative drawing</title>
 		<published>2020-04-24T00:00:00+00:00</published>
 		<updated>2020-04-24T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/untitled-tracing-paper/" type="text/html"/>
@@ -4236,7 +4237,7 @@ And of course, big thanks to <a href="https://www.instagram.com/dutchplottr/">@d
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Pillars</title>
+		<title>Pillars • Generative drawing</title>
 		<published>2020-04-18T00:00:00+00:00</published>
 		<updated>2020-04-18T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/pillars/" type="text/html"/>
@@ -4250,7 +4251,7 @@ And of course, big thanks to <a href="https://www.instagram.com/dutchplottr/">@d
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Zappa</title>
+		<title>Zappa • Generative drawing</title>
 		<published>2020-04-11T00:00:00+00:00</published>
 		<updated>2020-04-11T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/zappa-spiral/" type="text/html"/>
@@ -4264,7 +4265,7 @@ And of course, big thanks to <a href="https://www.instagram.com/dutchplottr/">@d
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Attractions</title>
+		<title>Attractions • Generative drawing</title>
 		<published>2020-04-04T00:00:00+00:00</published>
 		<updated>2020-04-04T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/attractions/" type="text/html"/>
@@ -4277,7 +4278,7 @@ And of course, big thanks to <a href="https://www.instagram.com/dutchplottr/">@d
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Waves</title>
+		<title>Waves • Generative drawing</title>
 		<published>2020-04-03T00:00:00+00:00</published>
 		<updated>2020-04-03T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/waves/" type="text/html"/>
@@ -4291,7 +4292,7 @@ And of course, big thanks to <a href="https://www.instagram.com/dutchplottr/">@d
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Perspective</title>
+		<title>Perspective • Generative drawing</title>
 		<published>2020-03-31T00:00:00+00:00</published>
 		<updated>2020-03-31T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/metaballs-perspective/" type="text/html"/>
@@ -4306,7 +4307,7 @@ And of course, big thanks to <a href="https://www.instagram.com/dutchplottr/">@d
 
 	</entry>
 	<entry xml:lang="en">
-		<title>Zappa</title>
+		<title>Zappa • Generative drawing</title>
 		<published>2020-03-28T00:00:00+00:00</published>
 		<updated>2020-03-28T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/art/zappa/" type="text/html"/>
