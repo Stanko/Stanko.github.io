@@ -11,7 +11,7 @@
     {% endif %}
   </div>
   {% if post.extra.intro %}
-  <p>{{post.extra.intro}}</p>
+  <p>{{post.extra.intro | markdown(inline=true) | safe}}</p>
   {% endif %}
   <div class="blog-list__date">
     {{ post.date | date(format="%d. %b %Y") }}
