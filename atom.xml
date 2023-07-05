@@ -6,8 +6,155 @@
 	<link href="https://muffinman.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://muffinman.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-06-20T00:00:00+00:00</updated>
+	<updated>2023-07-05T00:00:00+00:00</updated>
 	<id>https://muffinman.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>CSS only floating labels</title>
+		<published>2023-07-05T00:00:00+00:00</published>
+		<updated>2023-07-05T00:00:00+00:00</updated>
+		<link href="https://muffinman.io/blog/css-only-floating-input-labels/" type="text/html"/>
+		<id>https://muffinman.io/blog/css-only-floating-input-labels/</id>
+    <author>
+      <name>Stanko</name>
+    </author>
+		<content type="html"><link rel="stylesheet" href="/posts/floating-labels.css" />
+<p>I recently learned about the pseudo CSS class <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:placeholder-shown">:placeholder-shown</a>. Obviously, it is a class that is added only when input placeholder is shown. But what that also means is that <strong>the input is empty</strong>:</p>
+<pre data-lang="css" class="language-css z-code"><code class="language-css" data-lang="css"><span class="z-source z-css"><span class="z-comment z-block z-css"><span class="z-punctuation z-definition z-comment z-css">/*</span> Input is empty <span class="z-punctuation z-definition z-comment z-css">*/</span></span>
+<span class="z-meta z-selector z-css"><span class="z-entity z-name z-tag z-css">input</span><span class="z-entity z-other z-pseudo-class z-css"><span class="z-punctuation z-definition z-entity z-css">:</span>placeholder-shown</span>
+</span></span></code></pre>
+<p>By negating it with <code>:not()</code> we can detect if <strong>the input has value</strong>:</p>
+<pre data-lang="css" class="language-css z-code"><code class="language-css" data-lang="css"><span class="z-source z-css"><span class="z-comment z-block z-css"><span class="z-punctuation z-definition z-comment z-css">/*</span> Input has value <span class="z-punctuation z-definition z-comment z-css">*/</span></span>
+<span class="z-meta z-selector z-css"><span class="z-entity z-name z-tag z-css">input</span><span class="z-meta z-function-call z-css"><span class="z-entity z-other z-pseudo-class z-css"><span class="z-punctuation z-definition z-entity z-css">:</span>not</span><span class="z-meta z-group z-css"><span class="z-punctuation z-definition z-group z-begin z-css">(</span><span class="z-meta z-selector z-css"><span class="z-entity z-other z-pseudo-class z-css"><span class="z-punctuation z-definition z-entity z-css">:</span>placeholder-shown</span></span></span><span class="z-meta z-group z-css"><span class="z-punctuation z-definition z-group z-end z-css">)</span></span></span>
+</span></span></code></pre>
+<p>I created a demo that uses these two CSS snippets to highlight input's current state. There is no JavaScript involved.</p>
+<div class="basic-demo">
+  <input class="basic-input" placeholder="Placeholder" />
+  <div class="basic-states">
+    <div class="has-value">Input has value</div>
+    <div class="is-empty">Input is empty</div>
+    <div class="focused">Focused</div>
+  </div>
+</div>
+<h2 id="real-world-use-cases">Real world use cases<a
+  class="header-anchor"
+  href="#real-world-use-cases" aria-label="Anchor link for: real-world-use-cases"
+  title="Anchor link for: real-world-use-cases"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>I recently used this to conditionally display a clear button next to an input.
+But it can also be used to create floating labels.</p>
+<p>However, it's important to note that anything you want to style based on the input's state needs to be positioned after the input element.</p>
+<h4 id="floating-labels">Floating labels<a
+  class="header-anchor"
+  href="#floating-labels" aria-label="Anchor link for: floating-labels"
+  title="Anchor link for: floating-labels"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h4>
+<p>For a floating label, the HTML structure should look something like this:</p>
+<pre data-lang="html" class="language-html z-code"><code class="language-html" data-lang="html"><span class="z-text z-html z-basic"><span class="z-meta z-tag z-inline z-form z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-form z-html">input</span> <span class="z-punctuation z-definition z-tag z-end z-html">/&gt;</span></span>
+<span class="z-meta z-tag z-inline z-form z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-form z-html">label</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>Floating label<span class="z-meta z-tag z-inline z-form z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-inline z-form z-html">label</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span></code></pre>
+<p>The floating label needs to be repositioned in two scenarios: when the input is focused and when it has a value.</p>
+<pre data-lang="css" class="language-css z-code"><code class="language-css" data-lang="css"><span class="z-source z-css"><span class="z-comment z-block z-css"><span class="z-punctuation z-definition z-comment z-css">/*</span> Input has value <span class="z-punctuation z-definition z-comment z-css">*/</span></span>
+<span class="z-meta z-selector z-css"><span class="z-entity z-name z-tag z-css">input</span><span class="z-entity z-other z-pseudo-class z-css"><span class="z-punctuation z-definition z-entity z-css">:</span>focus</span> <span class="z-punctuation z-separator z-combinator z-css">+</span> <span class="z-entity z-name z-tag z-css">label</span><span class="z-punctuation z-separator z-sequence z-css">,</span>
+<span class="z-entity z-name z-tag z-css">input</span><span class="z-meta z-function-call z-css"><span class="z-entity z-other z-pseudo-class z-css"><span class="z-punctuation z-definition z-entity z-css">:</span>not</span><span class="z-meta z-group z-css"><span class="z-punctuation z-definition z-group z-begin z-css">(</span><span class="z-meta z-selector z-css"><span class="z-entity z-other z-pseudo-class z-css"><span class="z-punctuation z-definition z-entity z-css">:</span>placeholder-shown</span></span></span><span class="z-meta z-group z-css"><span class="z-punctuation z-definition z-group z-end z-css">)</span></span></span> <span class="z-punctuation z-separator z-combinator z-css">+</span> <span class="z-entity z-name z-tag z-css">label</span> </span><span class="z-meta z-property-list z-css"><span class="z-punctuation z-section z-property-list z-css">{</span>
+  <span class="z-comment z-block z-css"><span class="z-punctuation z-definition z-comment z-css">/*</span> Move the label above the button and scale it down <span class="z-punctuation z-definition z-comment z-css">*/</span></span>
+  <span class="z-meta z-property-name z-css"><span class="z-support z-type z-property-name z-css">transform</span></span><span class="z-punctuation z-separator z-key-value z-css">:</span><span class="z-meta z-property-value z-css"> </span><span class="z-meta z-property-value z-css"><span class="z-meta z-function-call z-css"><span class="z-support z-function z-transform z-css">translateY</span><span class="z-meta z-group z-css"><span class="z-punctuation z-definition z-group z-begin z-css">(</span><span class="z-constant z-numeric z-integer z-decimal z-css">-100<span class="z-keyword z-other z-unit z-css">%</span></span></span><span class="z-meta z-group z-css"><span class="z-punctuation z-definition z-group z-end z-css">)</span></span></span> <span class="z-meta z-function-call z-css"><span class="z-support z-function z-transform z-css">scale</span><span class="z-meta z-group z-css"><span class="z-punctuation z-definition z-group z-begin z-css">(</span><span class="z-constant z-numeric z-float z-decimal z-css">0<span class="z-punctuation z-separator z-decimal z-css">.</span>75</span></span><span class="z-meta z-group z-css"><span class="z-punctuation z-definition z-group z-end z-css">)</span></span></span></span><span class="z-punctuation z-terminator z-rule z-css">;</span>
+</span><span class="z-punctuation z-section z-property-list z-css">}</span>
+</span></code></pre>
+<h4 id="clear-button">Clear button<a
+  class="header-anchor"
+  href="#clear-button" aria-label="Anchor link for: clear-button"
+  title="Anchor link for: clear-button"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h4>
+<p>Similarly, we'll put the clear button after the input:</p>
+<pre data-lang="html" class="language-html z-code"><code class="language-html" data-lang="html"><span class="z-text z-html z-basic"><span class="z-meta z-tag z-inline z-form z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-form z-html">input</span> <span class="z-punctuation z-definition z-tag z-end z-html">/&gt;</span></span>
+<span class="z-meta z-tag z-inline z-form z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-form z-html">button</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>Clear<span class="z-meta z-tag z-inline z-form z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-inline z-form z-html">button</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span></code></pre>
+<p>and hide it when input is empty:</p>
+<pre data-lang="css" class="language-css z-code"><code class="language-css" data-lang="css"><span class="z-source z-css"><span class="z-comment z-block z-css"><span class="z-punctuation z-definition z-comment z-css">/*</span> Input is empty <span class="z-punctuation z-definition z-comment z-css">*/</span></span>
+<span class="z-meta z-selector z-css"><span class="z-entity z-name z-tag z-css">input</span><span class="z-entity z-other z-pseudo-class z-css"><span class="z-punctuation z-definition z-entity z-css">:</span>placeholder-shown</span> <span class="z-punctuation z-separator z-combinator z-css">+</span> <span class="z-entity z-name z-tag z-css">button</span> </span><span class="z-meta z-property-list z-css"><span class="z-punctuation z-section z-property-list z-css">{</span>
+  <span class="z-comment z-block z-css"><span class="z-punctuation z-definition z-comment z-css">/*</span> Hide the clear button <span class="z-punctuation z-definition z-comment z-css">*/</span></span>
+  <span class="z-meta z-property-name z-css"><span class="z-support z-type z-property-name z-css">display</span></span><span class="z-punctuation z-separator z-key-value z-css">:</span><span class="z-meta z-property-value z-css"> </span><span class="z-meta z-property-value z-css"><span class="z-support z-constant z-property-value z-css">none</span></span><span class="z-punctuation z-terminator z-rule z-css">;</span>
+</span><span class="z-punctuation z-section z-property-list z-css">}</span>
+</span></code></pre>
+<h2 id="demo">Demo<a
+  class="header-anchor"
+  href="#demo" aria-label="Anchor link for: demo"
+  title="Anchor link for: demo"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>Focus an input to make its label float, and type something to make the clear button appear.</p>
+<div class="input-wrapper">
+  <input
+    autocomplete="off"
+    class="input"
+    type="text"
+    id="name"
+    placeholder="Name"
+  ></input>
+  <label
+    class="label"
+    for="name"
+  >
+    Name
+  </label>
+  <button class="clear" aria-label="Clear input">
+    <svg viewBox="0 0 16 16" width="12" height="12">
+      <path d="M 1 1 L 15 15 M 1 15 L 15 1" fill="none" stroke-width="2" stroke="currentColor">
+      </path>
+    </svg>
+  </button>
+</div>
+<div class="input-wrapper">
+  <input
+    autocomplete="off"
+    class="input"
+    type="email"
+    id="email"
+    placeholder="Email"
+  ></input>
+  <label
+    class="label"
+    for="email"
+  >
+    Email
+  </label>
+  <button class="clear" aria-label="Clear input">
+    <svg viewBox="0 0 16 16" width="12" height="12">
+      <path d="M 1 1 L 15 15 M 1 15 L 15 1" fill="none" stroke-width="2" stroke="currentColor">
+      </path>
+    </svg>
+  </button>
+</div>
+<p>You can also play with the code on <a href="https://codepen.io/stanko/pen/wvQoWdj?editors=1100">CodePen</a>.</p>
+<h2 id="safari-gotcha">Safari gotcha<a
+  class="header-anchor"
+  href="#safari-gotcha" aria-label="Anchor link for: safari-gotcha"
+  title="Anchor link for: safari-gotcha"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>Be aware that in Safari the <code>:placeholder-shown</code> pseudo class will only be added if the input has the placeholder attribute explicitly defined.</p>
+<p>Which means that we have to define it, but if we don't need the placeholder, we can easily hide it using CSS:</p>
+<pre data-lang="css" class="language-css z-code"><code class="language-css" data-lang="css"><span class="z-source z-css"><span class="z-meta z-selector z-css"><span class="z-entity z-name z-tag z-css">input</span><span class="z-entity z-other z-pseudo-element z-css"><span class="z-punctuation z-definition z-entity z-css">::</span>placeholder</span> </span><span class="z-meta z-property-list z-css"><span class="z-punctuation z-section z-property-list z-css">{</span>
+  <span class="z-meta z-property-name z-css"><span class="z-support z-type z-property-name z-css">color</span></span><span class="z-punctuation z-separator z-key-value z-css">:</span><span class="z-meta z-property-value z-css"> </span><span class="z-meta z-property-value z-css"><span class="z-support z-constant z-color z-w3c-special-color-keyword z-css">transparent</span></span><span class="z-punctuation z-terminator z-rule z-css">;</span>
+</span><span class="z-punctuation z-section z-property-list z-css">}</span>
+</span></code></pre>
+<script>
+  [...document.querySelectorAll('.clear')].forEach($clearButton => {
+    const $searchInput = $clearButton.parentElement.querySelector('.input');
+
+    $clearButton.addEventListener('click', () => {
+      $searchInput.value = '';
+      $searchInput.focus();
+    });
+  });
+</script>
+
+    </content>
+
+	</entry>
 	<entry xml:lang="en">
 		<title>Custom giraffe caret</title>
 		<published>2023-06-20T00:00:00+00:00</published>
