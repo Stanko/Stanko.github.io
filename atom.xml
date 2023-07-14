@@ -6,8 +6,23 @@
 	<link href="https://muffinman.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://muffinman.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-07-05T00:00:00+00:00</updated>
+	<updated>2023-07-10T00:00:00+00:00</updated>
 	<id>https://muffinman.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Dreamy little towns • Generative drawing</title>
+		<published>2023-07-10T00:00:00+00:00</published>
+		<updated>2023-07-10T00:00:00+00:00</updated>
+		<link href="https://muffinman.io/art/dreamy-little-towns-postcards/" type="text/html"/>
+		<id>https://muffinman.io/art/dreamy-little-towns-postcards/</id>
+    <author>
+      <name>Stanko</name>
+    </author>
+		<content type="html"><p>Postcards for Plot Party postcard exchange</p><p>I started drawing these little houses a while ago, but never finished the project. Meanwhile, I decided to participate in <a href="https://penplotterartwork.com/plotparty/">Plot Party postcard exchange</a>. So, I came back to my houses and used them to generate little towns as postcards.</p>
+<p>At the moment, they are on their way to five different countries, and I'll probably plot a few more.</p>
+
+    </content>
+
+	</entry>
 	<entry xml:lang="en">
 		<title>CSS only floating labels</title>
 		<published>2023-07-05T00:00:00+00:00</published>
