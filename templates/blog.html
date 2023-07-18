@@ -7,19 +7,58 @@
     <h1 class="page__title">
       Blog
     </h1>
+
+    {% set all_posts = get_section(path="blog/_index.md") %}
+
     <p class="page__intro">
-      Here are all of my posts, long and short, in chronological order.
+      Here are all {{ all_posts.pages | length }} of my posts, in chronological order.
       For categories check <a href="/archive/">the archive</a>.
     </p>
   </div>
 </div>
 
-<div class="blog-list">
-  {% for post in paginator.pages %}
-    {% include "partials/blog-list-post.html" %}
-  {% endfor %}
-</div>
+{% set month = '' %}
+{% set year = '' %}
+<div class="blog-years">
 
-{% include "partials/pagination.html" %}
+{% for post in paginator.pages %}
+  {% set current_month = post.date | date(format="%B") %}
+  {% set current_year = post.date | date(format="%Y") %}
+
+  {% if current_year != year %}
+    {% if year != '' %}
+          </div><!-- blog-years__month-posts -->
+        </div><!-- blog-years__month-wrapper -->
+      </div><!-- blog-years__year -->
+    {% endif %}
+
+    {% set_global year = current_year %}
+    {% set_global month = '' %}
+
+    <div class="blog-years__year">
+      <h2 class="blog-years__year-title">{{ year }}</h2>
+  {% endif %}
+
+  {% if current_month != month %}
+    {% if month != '' %}
+        </div><!-- blog-years__month-posts -->
+      </div><!-- blog-years__month-wrapper -->
+    {% endif %}
+
+    {% set_global month = current_month %}
+    <div class="blog-years__month-wrapper">
+      <h3 class="blog-years__month-title">{{ month }}</h3>
+      <div class="blog-years__month-posts">
+  {% endif %}
+
+  <a href="{{ post.permalink }}" class="blog-years__post {% if post.extra.theme %}{{ post.extra.theme }}{% endif %}">
+    {{ post.title | safe }}{% include "partials/svg-post-arrow.html" %}
+  </a>
+
+{% endfor %}
+      </div><!-- blog-years__month-posts -->
+    </div><!-- blog-years__month-wrapper -->
+  </div><!-- blog-years__year -->
+</div>
 
 {% endblock content %}
