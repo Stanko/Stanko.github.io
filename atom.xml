@@ -2458,7 +2458,7 @@ ffmpeg -i input-video.mp4 -vcodec libx264 <span style="color: var(--theme-color)
 <ul>
 <li>Tests</li>
 <li>CSS pre/post processors</li>
-<li>HMR / Live reload - for the pure esbuild solution, check <a href="https://github.com/evanw/esbuild/issues/802#issuecomment-819578182">this comment</a></li>
+<li>Update - esbuild added support for <a href="https://esbuild.github.io/api/#live-reload">live reload</a>. Keen has it enabled for JavaScript by default. ~HMR / Live reload - for the pure esbuild solution, check <a href="https://github.com/evanw/esbuild/issues/802#issuecomment-819578182">this comment</a>~.</li>
 <li>License</li>
 </ul>
 <p>I add these features when I need them on project basis.</p>
