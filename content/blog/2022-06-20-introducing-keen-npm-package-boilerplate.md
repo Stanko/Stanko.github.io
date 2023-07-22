@@ -107,7 +107,7 @@ The main premise was to keep it as simple as possible, to make maintenance easie
 
 * Tests
 * CSS pre/post processors
-* HMR / Live reload - for the pure esbuild solution, check [this comment](https://github.com/evanw/esbuild/issues/802#issuecomment-819578182)
+* Update - esbuild added support for [live reload](https://esbuild.github.io/api/#live-reload). Keen has it enabled for JavaScript by default. ~HMR / Live reload - for the pure esbuild solution, check [this comment](https://github.com/evanw/esbuild/issues/802#issuecomment-819578182)~.
 * License
 
 I add these features when I need them on project basis.
