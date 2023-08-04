@@ -1,0 +1,94 @@
+@import "../base/_variables.scss";
+@import "../base/_reset.scss";
+@import "../base/_breakpoints.scss";
+@import "../base/_mixins.scss";
+
+// ----- Timer global styles ----- //
+
+.timer--running .timer-progress {
+  animation-timing-function: linear;
+  animation-duration: 3000ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+// In Firefox we can use non-standard selector to pause when window is inactive:
+// :-moz-window-inactive &,
+.timer--paused .timer-progress {
+  animation-play-state: paused;
+}
+
+.timer-log {
+  @include text-sm;
+}
+
+// ----- Linear timer ----- //
+
+@keyframes linear-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.timer--linear {
+  background: var(--neutral-200);
+  border-radius: 100rem;
+  height: 10rem;
+  margin: 20rem 0;
+  overflow: hidden;
+}
+
+.timer--linear .timer-progress {
+  background: var(--theme-color);
+  flex: auto;
+  height: 100%;
+  transform-origin: center left;
+  transform: scaleX(0);
+}
+
+.timer--linear.timer--running .timer-progress {
+  animation-name: linear-progress;
+}
+
+.timer--linear.timer--done .timer-progress {
+  transform: scaleX(1);
+}
+
+// ----- Radial timer ----- //
+
+@keyframes radial-progress {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.timer--radial {
+  background: var(--neutral-100);
+  border: 1px solid var(--neutral-200);
+  border-radius: 100rem;
+  height: 60rem;
+  width: 60rem;
+  margin: 20rem 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.timer--radial .timer-progress {
+  background: var(--theme-color);
+  flex: 5rem 0 0;
+  height: 27.5rem;
+  border-radius: 100rem;
+  margin-top: 5rem;
+  transform-origin: center 25rem;
+}
+
+.timer--radial.timer--running .timer-progress {
+  animation-name: radial-progress;
+}
