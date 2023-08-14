@@ -5,21 +5,42 @@
 
 // ----- Timer global styles ----- //
 
-.timer--running .timer-progress {
-  animation-timing-function: linear;
+.timer-wrapper {
+  flex: auto;
+}
+
+.timer {
   animation-duration: 3000ms;
-  animation-fill-mode: forwards;
   animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+.timer--paused {
+  animation-play-state: paused;
 }
 
 // In Firefox we can use non-standard selector to pause when window is inactive:
-// :-moz-window-inactive &,
-.timer--paused .timer-progress {
-  animation-play-state: paused;
+// :-moz-window-inactive .timer--paused {
+//   animation-play-state: paused;
+// }
+
+.timer--steps {
+  animation-timing-function: steps(10);
+}
+
+.timer--short {
+  animation-duration: 1500ms;
 }
 
 .timer-log {
   @include text-sm;
+}
+
+// ----- Chaining timer ----- //
+
+.timer-chaining-demo-timers {
+  display: flex;
+  gap: 10rem;
 }
 
 // ----- Linear timer ----- //
@@ -33,15 +54,15 @@
   }
 }
 
-.timer--linear {
+.timer-wrapper--linear {
   background: var(--neutral-200);
   border-radius: 100rem;
-  height: 10rem;
+  height: 8rem;
   margin: 20rem 0;
   overflow: hidden;
 }
 
-.timer--linear .timer-progress {
+.timer--linear {
   background: var(--theme-color);
   flex: auto;
   height: 100%;
@@ -49,11 +70,11 @@
   transform: scaleX(0);
 }
 
-.timer--linear.timer--running .timer-progress {
+.timer--linear.timer--running {
   animation-name: linear-progress;
 }
 
-.timer--linear.timer--done .timer-progress {
+.timer--linear.timer--done {
   transform: scaleX(1);
 }
 
@@ -68,7 +89,7 @@
   }
 }
 
-.timer--radial {
+.timer-wrapper--radial {
   background: var(--neutral-100);
   border: 1px solid var(--neutral-200);
   border-radius: 100rem;
@@ -80,15 +101,16 @@
   justify-content: center;
 }
 
-.timer--radial .timer-progress {
+.timer--radial {
   background: var(--theme-color);
   flex: 5rem 0 0;
   height: 27.5rem;
   border-radius: 100rem;
   margin-top: 5rem;
   transform-origin: center 25rem;
+  animation-iteration-count: infinite;
 }
 
-.timer--radial.timer--running .timer-progress {
+.timer--radial.timer--running {
   animation-name: radial-progress;
 }
