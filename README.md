@@ -8,7 +8,7 @@ Frontend development & rants.
 
 # Licensing
 
-Copyright (c) Stanko Tadić
+Copyright © Stanko Tadić
 
 [All rights reserved.](LICENSE.md)
 
