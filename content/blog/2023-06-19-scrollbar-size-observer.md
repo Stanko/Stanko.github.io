@@ -6,7 +6,7 @@ category = ["JavaScript"]
 tags = ["js", "scrollbar", "observer", "event"]
 
 [extra]
-intro = "An event that tracks those pesky gray bars"
+intro = "An event that tracks those pesky gray bars."
 # image = "/img/log-colors/chameleon.png"
 
 +++
