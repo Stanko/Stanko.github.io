@@ -6,8 +6,175 @@
 	<link href="https://muffinman.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://muffinman.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-07-10T00:00:00+00:00</updated>
+	<updated>2023-08-04T00:00:00+00:00</updated>
 	<id>https://muffinman.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Using CSS animations instead of JavaScript timers</title>
+		<published>2023-08-04T00:00:00+00:00</published>
+		<updated>2023-08-04T00:00:00+00:00</updated>
+		<link href="https://muffinman.io/blog/css-animations-instead-of-js-timers/" type="text/html"/>
+		<id>https://muffinman.io/blog/css-animations-instead-of-js-timers/</id>
+    <author>
+      <name>Stanko</name>
+    </author>
+		<content type="html"><link rel="stylesheet" href="/posts/css-timers.css" />
+<p>What if I told you that we can make a timer without using <code>setTimeout</code>, <code>setInterval</code> or <code>requestAnimationFrame</code>? JavaScript is still necessary, but we can create the timer just by toggling some CSS classes.</p>
+<p>While I was working on an autoplay feature for a carousel, I thought to  myself - CSS animations are kinda like timers. They have <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/animationstart_event">animationstart</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/animationend_event">animationend</a> events and an ability to pause them. On top of that, we get <a href="/blog/javascript-animation-loop/">the animation loop</a> for free, which we would have to implement manually in JavaScript.</p>
+<h2 id="implementation">Implementation<a
+  class="header-anchor"
+  href="#implementation" aria-label="Anchor link for: implementation"
+  title="Anchor link for: implementation"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>To make the timer, we'll need <span
+  class="sidenote__trigger "
+  tabindex="0"
+  role="button"
+>
+  four CSS classes
+</span>
+
+<span
+  class="sidenote__note "
+><span class="sidenote__bracket">(</span>Please note that we could create a minimal example with only two classes (<code>.timer</code> and <code>.timer--running</code>), but it is pretty limiting and therefore we are going to skip it.<span class="sidenote__bracket">)</span></span>
+:</p>
+<ul>
+<li><code>.timer</code> - initial styles</li>
+<li><code>.timer--running</code> - starts the animation</li>
+<li><code>.timer--paused</code> - pauses the animation (can only be used in combination with <code>.timer--running</code>)</li>
+<li><code>.timer--done</code> - final state of the animation</li>
+</ul>
+<hr />
+<p>We'll <strong>start</strong> a timer by adding a <code>.timer--running</code> class. In the case that we are <strong>restarting</strong> it, we also need to remove the <code>.timer--done</code> class.</p>
+<pre data-lang="js" class="language-js z-code"><code class="language-js" data-lang="js"><span class="z-source z-ts"><span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> Start the timer</span>
+<span class="z-meta z-function-call z-ts"><span class="z-variable z-other z-object z-ts">$timer</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-object z-property z-ts">classList</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-function z-dom z-ts">add</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-string z-quoted z-single z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&#39;</span>timer--running<span class="z-punctuation z-definition z-string z-end z-ts">&#39;</span></span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-punctuation z-terminator z-statement z-ts">;</span> <span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> $timer is a reference to the timer&#39;s DOM element</span>
+<span class="z-meta z-function-call z-ts"><span class="z-variable z-other z-object z-ts">$timer</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-object z-property z-ts">classList</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-function z-dom z-ts">remove</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-string z-quoted z-single z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&#39;</span>timer--done<span class="z-punctuation z-definition z-string z-end z-ts">&#39;</span></span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+</span></code></pre>
+<p>To <strong>pause</strong> it we'll add <code>.timer--paused</code> class. <strong>Resume</strong> it by removing the class.</p>
+<pre data-lang="js" class="language-js z-code"><code class="language-js" data-lang="js"><span class="z-source z-ts"><span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> Toggle the pause class</span>
+<span class="z-meta z-function-call z-ts"><span class="z-variable z-other z-object z-ts">$timer</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-object z-property z-ts">classList</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-function z-dom z-ts">toggle</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-string z-quoted z-single z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&#39;</span>timer--pause<span class="z-punctuation z-definition z-string z-end z-ts">&#39;</span></span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+</span></code></pre>
+<p>Once <code>animationend</code> event is triggered, we know the animation is <strong>done</strong>, so we need to add <code>.timer--done</code> and to remove <code>.timer--running</code> class.</p>
+<pre data-lang="js" class="language-js z-code"><code class="language-js" data-lang="js"><span class="z-source z-ts"><span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> Update classes so the timer can be restarted</span>
+<span class="z-meta z-function-call z-ts"><span class="z-variable z-other z-object z-ts">$timer</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-object z-property z-ts">classList</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-function z-dom z-ts">add</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-string z-quoted z-single z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&#39;</span>timer--done<span class="z-punctuation z-definition z-string z-end z-ts">&#39;</span></span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-meta z-function-call z-ts"><span class="z-variable z-other z-object z-ts">$timer</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-object z-property z-ts">classList</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-function z-dom z-ts">remove</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-string z-quoted z-single z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&#39;</span>timer--running<span class="z-punctuation z-definition z-string z-end z-ts">&#39;</span></span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+</span></code></pre>
+<p>When we put it all together, we get a minimal working example:</p>
+<div class="timer-demo">
+  <div class="timer-wrapper timer-wrapper--linear">
+    <div class="timer timer--linear"></div>
+  </div>
+<p><button class="btn btn--sm btn--main timer-toggle">Start / stop</button></p>
+<p class="timer-log small"></p>
+</div>
+<p>Code is also available on <a href="https://codepen.io/stanko/pen/rNoaBMo">CodePen</a> for you to play with.</p>
+<p>This timer works similarly to <code>setTimeout</code>, but it comes with it's own animation loop and an easy way to pause it.</p>
+<h3 id="animationiteration">animationiteration<a
+  class="header-anchor"
+  href="#animationiteration" aria-label="Anchor link for: animationiteration"
+  title="Anchor link for: animationiteration"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h3>
+<p>To get a behavior similar to <code>setInterval</code> we are going to switch to <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/animationiteration_event">animationiteration</a> instead of <code>animationend</code>.</p>
+<p>For this demo, we'll change our CSS to create a small stopwatch:</p>
+<div class="timer-demo red">
+  <div class="timer-wrapper timer-wrapper--radial">
+    <div class="timer timer--radial"></div>
+  </div>
+<p><button class="btn btn--sm btn--main timer-toggle">Start / stop</button></p>
+<p class="timer-log small"></p>
+</div>
+<p>Again, code is available on <a href="https://codepen.io/stanko/pen/MWZYgpP">CodePen</a>.</p>
+<h2 id="chaining">Chaining<a
+  class="header-anchor"
+  href="#chaining" aria-label="Anchor link for: chaining"
+  title="Anchor link for: chaining"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>If we need multiple timers, we can chain them. When a timer finishes, we need to trigger the next one:</p>
+<div class="timer-chaining-demo">
+  <div class="timer-chaining-demo-timers">
+    <div class="timer-wrapper timer-wrapper--linear">
+      <div class="timer timer--linear timer--short"></div>
+    </div>
+    <div class="timer-wrapper timer-wrapper--linear">
+      <div class="timer timer--linear timer--short"></div>
+    </div>
+    <div class="timer-wrapper timer-wrapper--linear">
+      <div class="timer timer--linear timer--short"></div>
+    </div>
+    <div class="timer-wrapper timer-wrapper--linear">
+      <div class="timer timer--linear timer--short"></div>
+    </div>
+    <div class="timer-wrapper timer-wrapper--linear">
+      <div class="timer timer--linear timer--short"></div>
+    </div>
+  </div>
+<p><button class="btn btn--sm btn--main timer-toggle">Start / stop</button></p>
+<p class="timer-log small"></p>
+</div>
+<p>The mandatory demo on <a href="https://codepen.io/stanko/pen/poqvzXY">CodePen</a>.</p>
+<h2 id="autoplaying-carousel">Autoplaying carousel<a
+  class="header-anchor"
+  href="#autoplaying-carousel" aria-label="Anchor link for: autoplaying-carousel"
+  title="Anchor link for: autoplaying-carousel"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>The example above looks like a pagination for an autoplaying carousel, but we still need to add a way to jump to a certain timer/slide.</p>
+<p>The main thing is that once we jump to a timer, we need to make sure that all of the previous timers in the pagination are set to the end state, while the next timers are set to the init state.</p>
+<p>Once we do that, we get an autoplaying carousel:</p>
+<iframe
+  height="370"
+  
+  scrolling="no"
+  title="Autoplay carousel using CSS animations"
+  src="https://codepen.io/stanko/embed/dyQrOeB?default-tab=result"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/dyQrOeB">
+  Autoplay carousel using CSS animations</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+<p>This CodePen was my initial playground, so it may contain some leftovers and it might not be the cleanest code you have ever read. Sorry for that. I hope it is still fairly easy to follow.</p>
+<h2 id="limitations">Limitations<a
+  class="header-anchor"
+  href="#limitations" aria-label="Anchor link for: limitations"
+  title="Anchor link for: limitations"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>It wasn't necessary for the carousel example, but the main limitation is the inability to precisely track the timer's progress.</p>
+<p>In situations when we need the timers's progress, we can track it using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>. This API allows us to create and control animations in JavaScript. And it has a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/currentTime">currentTime</a> property for tracking animation progress.</p>
+<p>But please be aware that some older browsers do not support Web Animations API. For example, Safari added support in 2020, so if you need to support older browsers using animations with CSS classes might be better as they are supported since IE10.</p>
+<h2 id="conclusion">Conclusion<a
+  class="header-anchor"
+  href="#conclusion" aria-label="Anchor link for: conclusion"
+  title="Anchor link for: conclusion"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>There you have it, timers using CSS animations.</p>
+<p>CSS animations weren't made for this use case, but if you ask me, it is a great little hack and for certain problems they offer a very elegant solution.</p>
+<h2 id="bonus-animation-steps">Bonus, animation steps<a
+  class="header-anchor"
+  href="#bonus-animation-steps" aria-label="Anchor link for: bonus-animation-steps"
+  title="Anchor link for: bonus-animation-steps"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>When can even use <code>animation-timing-function: steps(n)</code> to add discrete steps to our timer:</p>
+<div class="timer-demo purple">
+  <div class="timer-wrapper timer-wrapper--linear">
+    <div class="timer timer--linear timer--steps"></div>
+  </div>
+<p><button class="btn btn--sm btn--main timer-toggle">Start / stop</button></p>
+<p class="timer-log small"></p>
+</div>
+<script src="/js/posts/css-timers.js"></script>
+
+    </content>
+
+	</entry>
 	<entry xml:lang="en">
 		<title>Dreamy little towns • Generative drawing</title>
 		<published>2023-07-10T00:00:00+00:00</published>
