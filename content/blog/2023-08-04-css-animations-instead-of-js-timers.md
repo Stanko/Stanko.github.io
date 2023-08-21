@@ -151,7 +151,7 @@ CSS animations weren't made for this use case, but if you ask me, it is a great 
 
 ## Bonus, animation steps
 
-When can even use `animation-timing-function: steps(n)` to add discrete steps to our timer:
+We can even use `animation-timing-function: steps(n)` to add discrete steps to our timer:
 
 <div class="timer-demo purple">
   <div class="timer-wrapper timer-wrapper--linear">
