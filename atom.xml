@@ -162,7 +162,7 @@
   title="Anchor link for: bonus-animation-steps"
 > <span class="sr-only" aria-hidden="true">#</span></a>
 </h2>
-<p>When can even use <code>animation-timing-function: steps(n)</code> to add discrete steps to our timer:</p>
+<p>We can even use <code>animation-timing-function: steps(n)</code> to add discrete steps to our timer:</p>
 <div class="timer-demo purple">
   <div class="timer-wrapper timer-wrapper--linear">
     <div class="timer timer--linear timer--steps"></div>
