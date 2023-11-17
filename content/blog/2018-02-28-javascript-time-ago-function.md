@@ -119,6 +119,6 @@ function timeAgo(dateParam) {
 
 {{ codepen(
   id="rNeWbje",
-  title="Javascript "time ago" function",
+  title='Javascript "time ago\" function',
   height=400
 ) }}
