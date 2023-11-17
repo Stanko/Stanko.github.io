@@ -7807,11 +7807,21 @@ To keep it easily customizable to your needs, I haven't packaged it up.</p>
 > <span class="sr-only" aria-hidden="true">#</span></a>
 </h2>
 <p><em>Update, August 2020</em></p>
-<p>{{ codepen(
-id=&quot;rNeWbje&quot;,
-title=&quot;Javascript &quot;time ago&quot; function&quot;,
-height=400
-) }}</p>
+<iframe
+  height="400"
+  
+  scrolling="no"
+  title="Javascript &quot;time ago\&quot; function"
+  src="https://codepen.io/stanko/embed/rNeWbje?default-tab=result"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href="https://codepen.io/stanko/pen/rNeWbje">
+  Javascript &quot;time ago\&quot; function</a> by Stanko (<a href="https://codepen.io/stanko">@stanko</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
     </content>
 
