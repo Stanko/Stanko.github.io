@@ -1,20 +1,10 @@
 .dual-image {
-  width: 100vw;
-  max-width: 100vw;
-  margin-left: -$gutter;
+  @include post-content-lg;
 
   @include md {
-    margin-left: -$gutter-md;
     display: flex;
     justify-content: space-between;
-    margin-bottom: $spacing-md;
     align-items: flex-start;
-  }
-
-  @include lg {
-    margin: 40rem 0;
-    width: $container-inner-width;
-    max-width: calc(100vw - #{2 * $gutter-lg});
   }
 }
 

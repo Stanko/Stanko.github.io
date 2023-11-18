@@ -16,6 +16,8 @@ $gutter: 20rem;
 $gutter-md: 40rem;
 $gutter-lg: 90rem;
 
+$container-inner-width: $container-width - (2 * $gutter-lg);
+
 $sidenote-width: 250rem;
 $sidenote-margin: 20rem;
 
@@ -43,6 +45,8 @@ $body-font-weight: 400;
 // --- Colors
 
 :root {
+  --scrollbar-width: 0px;
+
   --true-black: #000;
   --black: #111112;
   --true-white: #fff;

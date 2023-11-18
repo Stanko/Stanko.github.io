@@ -31,7 +31,6 @@
   ul,
   ol,
   pre,
-  iframe,
   blockquote {
     margin-bottom: $spacing-md;
   }
@@ -44,17 +43,13 @@
   }
 
   pre {
+    @include post-content-md;
     overflow: auto;
     font-size: 16rem;
     padding: $spacing-md;
-    margin-left: -$gutter;
-    margin-right: -$gutter;
 
     @include md {
-      padding: $spacing-md $spacing-lg;
       border-radius: $radius-xs;
-      margin-left: -$gutter-md;
-      margin-right: -$gutter-md;
     }
   }
 
@@ -77,15 +72,10 @@
   }
 
   iframe {
-    @include lg {
-      width: 100vw;
-      margin-left: -$gutter-md;
-      margin-right: -$gutter-md;
-      max-width: calc(100% + #{2 * $gutter-md});
-    }
+    @include post-content-md;
   }
 
-  iframe[src^="//codepen.io"]
+  iframe[src*="//codepen.io"]
   {
     height: 300rem;
 
@@ -103,10 +93,6 @@
     font-style: italic;
     padding: 5rem 0 5rem 20rem;
 
-    @include md {
-      // padding-right: 30rem;
-    }
-
     *:last-child {
       margin-bottom: 0;
     }
@@ -118,7 +104,7 @@
   padding-bottom: 140rem;
 }
 
-// ------ Images
+// ------ Media
 
 $container-inner-width: $container-width - (2 * $gutter-lg);
 
@@ -126,30 +112,9 @@ $container-inner-width: $container-width - (2 * $gutter-lg);
 .image {
   margin-bottom: $spacing-md;
   border-radius: $radius-xs;
-}
-
-.video--lg,
-.video--md,
-.image--lg,
-.image--md {
-  width: 100vw;
-  max-width: 100vw;
-  margin-left: -$gutter;
-
-  @include md {
-    margin-left: -$gutter-md;
-  }
 
   @include lg {
-    margin: 40rem 0;
-  }
-}
-
-.video--md,
-.image--md {
-  @include lg {
-    width: 700rem;
-    margin: 40rem 0;
+    margin-block: $spacing-lg;
   }
 }
 
@@ -167,12 +132,14 @@ $container-inner-width: $container-width - (2 * $gutter-lg);
   }
 }
 
+.video--md,
+.image--md {
+  @include post-content-md;
+}
+
 .video--lg,
 .image--lg {
-  @include lg {
-    width: $container-inner-width;
-    max-width: calc(100vw - #{2 * $gutter-lg});
-  }
+  @include post-content-lg;
 }
 
 .video--shadow,

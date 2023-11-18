@@ -143,3 +143,36 @@
     text-decoration-color: currentColor;
   }
 }
+
+@mixin post-content {
+  margin-block: $spacing-md;
+  margin-inline: -$gutter;
+  width: calc(100% + #{2 * $gutter});
+  max-width: calc(100% + #{2 * $gutter});
+
+  @include md {
+    margin-inline: -$gutter-md;
+    width: calc(100vw - var(--scrollbar-width));
+    max-width: calc(100vw - var(--scrollbar-width));
+  }
+}
+
+@mixin post-content-md {
+  @include post-content;
+
+  @include lg {
+    margin: $spacing-lg 0;
+    width: 700rem;
+    max-width: 700rem;
+  }
+}
+
+@mixin post-content-lg {
+  @include post-content;
+
+  @include lg {
+    margin: $spacing-lg 0;
+    width: $container-inner-width;
+    max-width: calc(100vw - #{2 * $gutter-lg} - var(--scrollbar-width));
+  }
+}
