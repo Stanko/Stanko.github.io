@@ -9,10 +9,10 @@
   "author": "Stanko",
   "license": "SEE LICENSE IN LICENSE.md",
   "dependencies": {
-    "@leeoniya/ufuzzy": "^1.0.9",
+    "@leeoniya/ufuzzy": "^1.0.13",
     "animated-scroll-to": "^2.3.0",
-    "esbuild": "^0.19.2",
+    "esbuild": "^0.19.10",
     "micromodal": "^0.4.10",
-    "photoswipe": "^5.4.0"
+    "photoswipe": "^5.4.3"
   }
 }
