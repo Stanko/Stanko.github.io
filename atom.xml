@@ -6,8 +6,172 @@
 	<link href="https://muffinman.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://muffinman.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2023-08-04T00:00:00+00:00</updated>
+	<updated>2023-12-21T00:00:00+00:00</updated>
 	<id>https://muffinman.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>HTML inert property and React fallback</title>
+		<published>2023-12-21T00:00:00+00:00</published>
+		<updated>2023-12-21T00:00:00+00:00</updated>
+		<link href="https://muffinman.io/blog/html-inert-property/" type="text/html"/>
+		<id>https://muffinman.io/blog/html-inert-property/</id>
+    <author>
+      <name>Stanko</name>
+    </author>
+		<content type="html"><p>HTML <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert">inert</a> is a relatively new property, but it is supported in <a href="https://caniuse.com/mdn-api_htmlelement_inert">all major browsers</a> since April this year.</p>
+<p>When you set <code>inert</code> on an element, the browser will ignore all user events on it, including tabbing into elements. It will also hide it from screen readers. I like to think of it as a &quot;reversed focus trap&quot;. But we can use it to create focus traps for modals by setting <code>inert</code> on the main content.</p>
+<div
+  inert
+  style="
+    background: var(--neutral-50);
+    color: var(--neutral-text);
+    border-radius: 4px;
+    padding: 20rem;
+    padding-bottom: 25rem;
+    font-size: 0.8em;
+    border: 1px solid var(--neutral-100);
+  "
+>
+  <p>
+  This div has <code>inert</code> property set and if your browser supports it, you won't be able to interact with the button and link below.
+  </p>
+<div>
+  <button class="btn btn--sm btn--main">You can't click me</button>
+  <a href="/" style="margin-left: 20px">Nor me!</a>
+  </div>
+</div>
+<h2 id="react-fallback-component">React fallback component<a
+  class="header-anchor"
+  href="#react-fallback-component" aria-label="Anchor link for: react-fallback-component"
+  title="Anchor link for: react-fallback-component"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h2>
+<p>Before I learned about <code>inert</code>, I built a relatively simple component to achieve the same result.</p>
+<p>Now I prefer to use the native solution, but on most projects, we still have to support older browsers. My approach is to handle it in the wrapper component, which finds all focusable elements and sets <code>tabindex=&quot;-1&quot;</code>. After mounting, the mutation observer starts listening and re-sets the tabindex when content is changed.</p>
+<p>The wrapper itself has <code>aria-hidden=&quot;true&quot;</code>, which hides it from screen readers.</p>
+<p>You can try it out on <a href="https://codepen.io/stanko/pen/VwRZeVN">CodePen</a> and see the source code below:</p>
+
+
+
+<div class="spoiler ">
+  <button
+    aria-expanded="false"
+    aria-controls='spoiler-1'
+    class="spoiler__toggle btn btn--sm btn--empty"
+  >
+    <span
+      class="spoiler__show"
+      
+    >
+      
+        Show source code
+      
+      <span aria-hidden="true">+</span> <!-- TODO add icon -->
+    </span>
+    <span
+      class="spoiler__hide"
+      style="display: none"
+    >
+      
+        Hide source code
+      
+      <span aria-hidden="true">-</span> <!-- TODO add icon -->
+    </span>
+  </button>
+
+  <div
+    id='spoiler-1'
+    class="spoiler__content"
+    aria-hidden="true"
+    style="display: none"
+  >
+    <pre data-lang="tsx" class="language-tsx z-code"><code class="language-tsx" data-lang="tsx"><span class="z-source z-tsx"><span class="z-meta z-var z-expr z-tsx"><span class="z-storage z-type z-tsx">const</span> <span class="z-meta z-var-single-variable z-expr z-tsx"><span class="z-meta z-definition z-variable z-tsx"><span class="z-variable z-other z-constant z-tsx">focusableElementsSelector</span></span> </span><span class="z-keyword z-operator z-assignment z-tsx">=</span><span class="z-meta z-array z-literal z-tsx"> <span class="z-meta z-brace z-square z-tsx">[</span>
+  <span class="z-string z-quoted z-double z-tsx"><span class="z-punctuation z-definition z-string z-begin z-tsx">&quot;</span>a[href]<span class="z-punctuation z-definition z-string z-end z-tsx">&quot;</span></span><span class="z-punctuation z-separator z-comma z-tsx">,</span>
+  <span class="z-string z-quoted z-double z-tsx"><span class="z-punctuation z-definition z-string z-begin z-tsx">&quot;</span>input<span class="z-punctuation z-definition z-string z-end z-tsx">&quot;</span></span><span class="z-punctuation z-separator z-comma z-tsx">,</span>
+  <span class="z-string z-quoted z-double z-tsx"><span class="z-punctuation z-definition z-string z-begin z-tsx">&quot;</span>select<span class="z-punctuation z-definition z-string z-end z-tsx">&quot;</span></span><span class="z-punctuation z-separator z-comma z-tsx">,</span>
+  <span class="z-string z-quoted z-double z-tsx"><span class="z-punctuation z-definition z-string z-begin z-tsx">&quot;</span>textarea<span class="z-punctuation z-definition z-string z-end z-tsx">&quot;</span></span><span class="z-punctuation z-separator z-comma z-tsx">,</span>
+  <span class="z-string z-quoted z-double z-tsx"><span class="z-punctuation z-definition z-string z-begin z-tsx">&quot;</span>button<span class="z-punctuation z-definition z-string z-end z-tsx">&quot;</span></span><span class="z-punctuation z-separator z-comma z-tsx">,</span>
+  <span class="z-string z-quoted z-double z-tsx"><span class="z-punctuation z-definition z-string z-begin z-tsx">&quot;</span>audio[controls]<span class="z-punctuation z-definition z-string z-end z-tsx">&quot;</span></span><span class="z-punctuation z-separator z-comma z-tsx">,</span>
+  <span class="z-string z-quoted z-double z-tsx"><span class="z-punctuation z-definition z-string z-begin z-tsx">&quot;</span>video[controls]<span class="z-punctuation z-definition z-string z-end z-tsx">&quot;</span></span><span class="z-punctuation z-separator z-comma z-tsx">,</span>
+  <span class="z-string z-quoted z-double z-tsx"><span class="z-punctuation z-definition z-string z-begin z-tsx">&quot;</span>details &gt; summary:first-of-type<span class="z-punctuation z-definition z-string z-end z-tsx">&quot;</span></span><span class="z-punctuation z-separator z-comma z-tsx">,</span>
+  <span class="z-string z-quoted z-double z-tsx"><span class="z-punctuation z-definition z-string z-begin z-tsx">&quot;</span>details<span class="z-punctuation z-definition z-string z-end z-tsx">&quot;</span></span><span class="z-punctuation z-separator z-comma z-tsx">,</span>
+  <span class="z-string z-quoted z-double z-tsx"><span class="z-punctuation z-definition z-string z-begin z-tsx">&quot;</span>[contenteditable]:not([contenteditable=<span class="z-constant z-character z-escape z-tsx">\&quot;</span>false<span class="z-constant z-character z-escape z-tsx">\&quot;</span>])<span class="z-punctuation z-definition z-string z-end z-tsx">&quot;</span></span><span class="z-punctuation z-separator z-comma z-tsx">,</span>
+  <span class="z-string z-quoted z-double z-tsx"><span class="z-punctuation z-definition z-string z-begin z-tsx">&quot;</span>[tabindex]:not([tabindex=<span class="z-constant z-character z-escape z-tsx">\&quot;</span>-1<span class="z-constant z-character z-escape z-tsx">\&quot;</span>])<span class="z-punctuation z-definition z-string z-end z-tsx">&quot;</span></span>
+<span class="z-meta z-brace z-square z-tsx">]</span></span><span class="z-meta z-function-call z-tsx"><span class="z-punctuation z-accessor z-tsx">.</span><span class="z-support z-function z-tsx">join</span></span><span class="z-meta z-brace z-round z-tsx">(</span><span class="z-string z-quoted z-double z-tsx"><span class="z-punctuation z-definition z-string z-begin z-tsx">&quot;</span>, <span class="z-punctuation z-definition z-string z-end z-tsx">&quot;</span></span><span class="z-meta z-brace z-round z-tsx">)</span></span><span class="z-punctuation z-terminator z-statement z-tsx">;</span>
+
+<span class="z-meta z-var z-expr z-tsx"><span class="z-storage z-type z-tsx">const</span> <span class="z-meta z-var-single-variable z-expr z-tsx"><span class="z-meta z-definition z-variable z-tsx"><span class="z-variable z-other z-constant z-tsx"><span class="z-entity z-name z-function z-tsx">addTabIndex</span></span></span> </span><span class="z-keyword z-operator z-assignment z-tsx">=</span><span class="z-meta z-arrow z-tsx"> <span class="z-meta z-parameters z-tsx"><span class="z-punctuation z-definition z-parameters z-begin z-tsx">(</span><span class="z-variable z-parameter z-tsx">$wrapper</span><span class="z-punctuation z-definition z-parameters z-end z-tsx">)</span></span> </span><span class="z-meta z-arrow z-tsx"><span class="z-storage z-type z-function z-arrow z-tsx">=&gt;</span> <span class="z-meta z-block z-tsx"><span class="z-punctuation z-definition z-block z-tsx">{</span>
+  <span class="z-meta z-function-call z-tsx"><span class="z-variable z-other z-object z-tsx">$wrapper</span><span class="z-punctuation z-accessor z-tsx">.</span><span class="z-support z-function z-dom z-tsx">querySelectorAll</span></span><span class="z-meta z-brace z-round z-tsx">(</span><span class="z-variable z-other z-readwrite z-tsx">focusableElementsSelector</span><span class="z-meta z-brace z-round z-tsx">)</span><span class="z-meta z-function-call z-tsx"><span class="z-punctuation z-accessor z-tsx">.</span><span class="z-support z-function z-dom z-tsx">forEach</span></span><span class="z-meta z-brace z-round z-tsx">(</span><span class="z-meta z-arrow z-tsx"><span class="z-meta z-parameters z-tsx"><span class="z-punctuation z-definition z-parameters z-begin z-tsx">(</span><span class="z-variable z-parameter z-tsx">$element</span><span class="z-punctuation z-definition z-parameters z-end z-tsx">)</span></span> </span><span class="z-meta z-arrow z-tsx"><span class="z-storage z-type z-function z-arrow z-tsx">=&gt;</span> <span class="z-meta z-block z-tsx"><span class="z-punctuation z-definition z-block z-tsx">{</span>
+    <span class="z-meta z-function-call z-tsx"><span class="z-variable z-other z-object z-tsx">$element</span><span class="z-punctuation z-accessor z-tsx">.</span><span class="z-support z-function z-dom z-tsx">setAttribute</span></span><span class="z-meta z-brace z-round z-tsx">(</span><span class="z-string z-quoted z-double z-tsx"><span class="z-punctuation z-definition z-string z-begin z-tsx">&quot;</span>tabindex<span class="z-punctuation z-definition z-string z-end z-tsx">&quot;</span></span><span class="z-punctuation z-separator z-comma z-tsx">,</span> <span class="z-keyword z-operator z-arithmetic z-tsx">-</span><span class="z-constant z-numeric z-decimal z-tsx">1</span><span class="z-meta z-brace z-round z-tsx">)</span><span class="z-punctuation z-terminator z-statement z-tsx">;</span>
+  <span class="z-punctuation z-definition z-block z-tsx">}</span></span></span><span class="z-meta z-brace z-round z-tsx">)</span><span class="z-punctuation z-terminator z-statement z-tsx">;</span>
+<span class="z-punctuation z-definition z-block z-tsx">}</span></span></span></span><span class="z-punctuation z-terminator z-statement z-tsx">;</span>
+<span class="z-meta z-var z-expr z-tsx"><span class="z-storage z-type z-tsx">const</span> <span class="z-meta z-var-single-variable z-expr z-tsx"><span class="z-meta z-definition z-variable z-tsx"><span class="z-variable z-other z-constant z-tsx"><span class="z-entity z-name z-function z-tsx">removeTabIndex</span></span></span> </span><span class="z-keyword z-operator z-assignment z-tsx">=</span><span class="z-meta z-arrow z-tsx"> <span class="z-meta z-parameters z-tsx"><span class="z-punctuation z-definition z-parameters z-begin z-tsx">(</span><span class="z-variable z-parameter z-tsx">$wrapper</span><span class="z-punctuation z-definition z-parameters z-end z-tsx">)</span></span> </span><span class="z-meta z-arrow z-tsx"><span class="z-storage z-type z-function z-arrow z-tsx">=&gt;</span> <span class="z-meta z-block z-tsx"><span class="z-punctuation z-definition z-block z-tsx">{</span>
+  <span class="z-meta z-function-call z-tsx"><span class="z-variable z-other z-object z-tsx">$wrapper</span><span class="z-punctuation z-accessor z-tsx">.</span><span class="z-support z-function z-dom z-tsx">querySelectorAll</span></span><span class="z-meta z-brace z-round z-tsx">(</span><span class="z-variable z-other z-readwrite z-tsx">focusableElementsSelector</span><span class="z-meta z-brace z-round z-tsx">)</span><span class="z-meta z-function-call z-tsx"><span class="z-punctuation z-accessor z-tsx">.</span><span class="z-support z-function z-dom z-tsx">forEach</span></span><span class="z-meta z-brace z-round z-tsx">(</span><span class="z-meta z-arrow z-tsx"><span class="z-meta z-parameters z-tsx"><span class="z-punctuation z-definition z-parameters z-begin z-tsx">(</span><span class="z-variable z-parameter z-tsx">$element</span><span class="z-punctuation z-definition z-parameters z-end z-tsx">)</span></span> </span><span class="z-meta z-arrow z-tsx"><span class="z-storage z-type z-function z-arrow z-tsx">=&gt;</span> <span class="z-meta z-block z-tsx"><span class="z-punctuation z-definition z-block z-tsx">{</span>
+    <span class="z-meta z-function-call z-tsx"><span class="z-variable z-other z-object z-tsx">$element</span><span class="z-punctuation z-accessor z-tsx">.</span><span class="z-support z-function z-dom z-tsx">removeAttribute</span></span><span class="z-meta z-brace z-round z-tsx">(</span><span class="z-string z-quoted z-double z-tsx"><span class="z-punctuation z-definition z-string z-begin z-tsx">&quot;</span>tabindex<span class="z-punctuation z-definition z-string z-end z-tsx">&quot;</span></span><span class="z-meta z-brace z-round z-tsx">)</span><span class="z-punctuation z-terminator z-statement z-tsx">;</span>
+  <span class="z-punctuation z-definition z-block z-tsx">}</span></span></span><span class="z-meta z-brace z-round z-tsx">)</span><span class="z-punctuation z-terminator z-statement z-tsx">;</span>
+<span class="z-punctuation z-definition z-block z-tsx">}</span></span></span></span><span class="z-punctuation z-terminator z-statement z-tsx">;</span>
+
+<span class="z-meta z-var z-expr z-tsx"><span class="z-storage z-type z-tsx">const</span> <span class="z-meta z-var-single-variable z-expr z-tsx"><span class="z-meta z-definition z-variable z-tsx"><span class="z-variable z-other z-constant z-tsx"><span class="z-entity z-name z-function z-tsx">Inert</span></span></span> </span><span class="z-keyword z-operator z-assignment z-tsx">=</span><span class="z-meta z-arrow z-tsx"> <span class="z-meta z-parameters z-tsx"><span class="z-punctuation z-definition z-parameters z-begin z-tsx">(</span><span class="z-meta z-parameter z-object-binding-pattern z-tsx"><span class="z-punctuation z-definition z-binding-pattern z-object z-tsx">{</span> <span class="z-variable z-parameter z-tsx">enabled</span><span class="z-punctuation z-separator z-comma z-tsx">,</span> <span class="z-variable z-parameter z-tsx">children</span><span class="z-punctuation z-separator z-comma z-tsx">,</span> <span class="z-keyword z-operator z-rest z-tsx">...</span><span class="z-variable z-parameter z-tsx">props</span> <span class="z-punctuation z-definition z-binding-pattern z-object z-tsx">}</span></span><span class="z-punctuation z-definition z-parameters z-end z-tsx">)</span></span> </span><span class="z-meta z-arrow z-tsx"><span class="z-storage z-type z-function z-arrow z-tsx">=&gt;</span> <span class="z-meta z-block z-tsx"><span class="z-punctuation z-definition z-block z-tsx">{</span>
+  <span class="z-meta z-var z-expr z-tsx"><span class="z-storage z-type z-tsx">const</span> <span class="z-meta z-var-single-variable z-expr z-tsx"><span class="z-meta z-definition z-variable z-tsx"><span class="z-variable z-other z-constant z-tsx">wrapperRef</span></span> </span><span class="z-keyword z-operator z-assignment z-tsx">=</span> <span class="z-meta z-function-call z-tsx"><span class="z-entity z-name z-function z-tsx">useRef</span></span><span class="z-meta z-brace z-round z-tsx">(</span><span class="z-constant z-language z-null z-tsx">null</span><span class="z-meta z-brace z-round z-tsx">)</span></span><span class="z-punctuation z-terminator z-statement z-tsx">;</span>
+
+  <span class="z-meta z-var z-expr z-tsx"><span class="z-storage z-type z-tsx">const</span> <span class="z-meta z-var-single-variable z-expr z-tsx"><span class="z-meta z-definition z-variable z-tsx"><span class="z-variable z-other z-constant z-tsx">observerRef</span></span> </span><span class="z-keyword z-operator z-assignment z-tsx">=</span> <span class="z-meta z-function-call z-tsx"><span class="z-entity z-name z-function z-tsx">useRef</span></span><span class="z-meta z-brace z-round z-tsx">(</span>
+    <span class="z-new z-expr z-tsx"><span class="z-keyword z-operator z-new z-tsx">new</span> <span class="z-entity z-name z-type z-tsx">MutationObserver</span><span class="z-meta z-brace z-round z-tsx">(</span><span class="z-meta z-arrow z-tsx"><span class="z-meta z-parameters z-tsx"><span class="z-punctuation z-definition z-parameters z-begin z-tsx">(</span><span class="z-punctuation z-definition z-parameters z-end z-tsx">)</span></span> </span><span class="z-meta z-arrow z-tsx"><span class="z-storage z-type z-function z-arrow z-tsx">=&gt;</span> </span><span class="z-meta z-function-call z-tsx"><span class="z-entity z-name z-function z-tsx">addTabIndex</span></span><span class="z-meta z-brace z-round z-tsx">(</span><span class="z-variable z-other z-object z-tsx">wrapper</span><span class="z-punctuation z-accessor z-tsx">.</span><span class="z-support z-variable z-property z-dom z-tsx">current</span><span class="z-meta z-brace z-round z-tsx">)</span><span class="z-meta z-brace z-round z-tsx">)</span></span>
+  <span class="z-meta z-brace z-round z-tsx">)</span></span><span class="z-punctuation z-terminator z-statement z-tsx">;</span>
+
+  <span class="z-meta z-function-call z-tsx"><span class="z-entity z-name z-function z-tsx">useEffect</span></span><span class="z-meta z-brace z-round z-tsx">(</span><span class="z-meta z-arrow z-tsx"><span class="z-meta z-parameters z-tsx"><span class="z-punctuation z-definition z-parameters z-begin z-tsx">(</span><span class="z-punctuation z-definition z-parameters z-end z-tsx">)</span></span> </span><span class="z-meta z-arrow z-tsx"><span class="z-storage z-type z-function z-arrow z-tsx">=&gt;</span> <span class="z-meta z-block z-tsx"><span class="z-punctuation z-definition z-block z-tsx">{</span>
+    <span class="z-keyword z-control z-conditional z-tsx">if</span> <span class="z-meta z-brace z-round z-tsx">(</span><span class="z-variable z-other z-readwrite z-tsx">enabled</span><span class="z-meta z-brace z-round z-tsx">)</span> <span class="z-meta z-block z-tsx"><span class="z-punctuation z-definition z-block z-tsx">{</span>
+      <span class="z-keyword z-control z-conditional z-tsx">if</span> <span class="z-meta z-brace z-round z-tsx">(</span><span class="z-variable z-other z-object z-tsx">wrapperRef</span><span class="z-punctuation z-accessor z-tsx">.</span><span class="z-support z-variable z-property z-dom z-tsx">current</span><span class="z-meta z-brace z-round z-tsx">)</span> <span class="z-meta z-block z-tsx"><span class="z-punctuation z-definition z-block z-tsx">{</span>
+<span class="z-punctuation z-whitespace z-comment z-leading z-tsx">        </span><span class="z-comment z-line z-double-slash z-tsx"><span class="z-punctuation z-definition z-comment z-tsx">//</span></span><span class="z-comment z-line z-double-slash z-tsx"> Add tabindex</span>
+        <span class="z-meta z-function-call z-tsx"><span class="z-entity z-name z-function z-tsx">addTabIndex</span></span><span class="z-meta z-brace z-round z-tsx">(</span><span class="z-variable z-other z-object z-tsx">wrapperRef</span><span class="z-punctuation z-accessor z-tsx">.</span><span class="z-support z-variable z-property z-dom z-tsx">current</span><span class="z-meta z-brace z-round z-tsx">)</span><span class="z-punctuation z-terminator z-statement z-tsx">;</span>
+<span class="z-punctuation z-whitespace z-comment z-leading z-tsx">        </span><span class="z-comment z-line z-double-slash z-tsx"><span class="z-punctuation z-definition z-comment z-tsx">//</span></span><span class="z-comment z-line z-double-slash z-tsx"> Start observing</span>
+        <span class="z-meta z-function-call z-tsx"><span class="z-variable z-other z-object z-tsx">observerRef</span><span class="z-punctuation z-accessor z-tsx">.</span><span class="z-support z-variable z-property z-dom z-tsx">current</span><span class="z-punctuation z-accessor z-tsx">.</span><span class="z-support z-function z-dom z-tsx">observe</span></span><span class="z-meta z-brace z-round z-tsx">(</span><span class="z-variable z-other z-object z-tsx">wrapperRef</span><span class="z-punctuation z-accessor z-tsx">.</span><span class="z-support z-variable z-property z-dom z-tsx">current</span><span class="z-punctuation z-separator z-comma z-tsx">,</span> <span class="z-meta z-objectliteral z-tsx"><span class="z-punctuation z-definition z-block z-tsx">{</span>
+          <span class="z-meta z-object z-member z-tsx"><span class="z-meta z-object-literal z-key z-tsx">childList</span></span><span class="z-meta z-object z-member z-tsx"><span class="z-meta z-object-literal z-key z-tsx"><span class="z-punctuation z-separator z-key-value z-tsx">:</span></span> <span class="z-constant z-language z-boolean z-true z-tsx">true</span></span><span class="z-punctuation z-separator z-comma z-tsx">,</span>
+          <span class="z-meta z-object z-member z-tsx"><span class="z-meta z-object-literal z-key z-tsx">subtree</span></span><span class="z-meta z-object z-member z-tsx"><span class="z-meta z-object-literal z-key z-tsx"><span class="z-punctuation z-separator z-key-value z-tsx">:</span></span> <span class="z-constant z-language z-boolean z-true z-tsx">true</span>
+        </span><span class="z-punctuation z-definition z-block z-tsx">}</span></span><span class="z-meta z-brace z-round z-tsx">)</span><span class="z-punctuation z-terminator z-statement z-tsx">;</span>
+      <span class="z-punctuation z-definition z-block z-tsx">}</span></span>
+    <span class="z-punctuation z-definition z-block z-tsx">}</span></span> <span class="z-keyword z-control z-conditional z-tsx">else</span> <span class="z-meta z-block z-tsx"><span class="z-punctuation z-definition z-block z-tsx">{</span>
+<span class="z-punctuation z-whitespace z-comment z-leading z-tsx">      </span><span class="z-comment z-line z-double-slash z-tsx"><span class="z-punctuation z-definition z-comment z-tsx">//</span></span><span class="z-comment z-line z-double-slash z-tsx"> Disconnect the mutation observer</span>
+      <span class="z-meta z-function-call z-tsx"><span class="z-variable z-other z-object z-tsx">observerRef</span><span class="z-punctuation z-accessor z-tsx">.</span><span class="z-support z-variable z-property z-dom z-tsx">current</span><span class="z-punctuation z-accessor z-tsx">.</span><span class="z-support z-function z-dom z-tsx">disconnect</span></span><span class="z-meta z-brace z-round z-tsx">(</span><span class="z-meta z-brace z-round z-tsx">)</span><span class="z-punctuation z-terminator z-statement z-tsx">;</span>
+<span class="z-punctuation z-whitespace z-comment z-leading z-tsx">      </span><span class="z-comment z-line z-double-slash z-tsx"><span class="z-punctuation z-definition z-comment z-tsx">//</span></span><span class="z-comment z-line z-double-slash z-tsx"> And remove the attributes which we added</span>
+      <span class="z-meta z-function-call z-tsx"><span class="z-entity z-name z-function z-tsx">removeTabIndex</span></span><span class="z-meta z-brace z-round z-tsx">(</span><span class="z-variable z-other z-object z-tsx">wrapperRef</span><span class="z-punctuation z-accessor z-tsx">.</span><span class="z-support z-variable z-property z-dom z-tsx">current</span><span class="z-meta z-brace z-round z-tsx">)</span><span class="z-punctuation z-terminator z-statement z-tsx">;</span>
+    <span class="z-punctuation z-definition z-block z-tsx">}</span></span>
+  <span class="z-punctuation z-definition z-block z-tsx">}</span></span></span><span class="z-punctuation z-separator z-comma z-tsx">,</span><span class="z-meta z-array z-literal z-tsx"> <span class="z-meta z-brace z-square z-tsx">[</span><span class="z-variable z-other z-readwrite z-tsx">enabled</span><span class="z-punctuation z-separator z-comma z-tsx">,</span> <span class="z-variable z-other z-object z-tsx">wrapperRef</span><span class="z-punctuation z-accessor z-tsx">.</span><span class="z-support z-variable z-property z-dom z-tsx">current</span><span class="z-meta z-brace z-square z-tsx">]</span></span><span class="z-meta z-brace z-round z-tsx">)</span><span class="z-punctuation z-terminator z-statement z-tsx">;</span>
+
+  <span class="z-keyword z-control z-flow z-tsx">return</span> <span class="z-meta z-brace z-round z-tsx">(</span>
+    <span class="z-meta z-tag z-tsx"><span class="z-punctuation z-definition z-tag z-begin z-tsx">&lt;</span><span class="z-entity z-name z-tag z-tsx">div</span><span class="z-meta z-tag z-attributes z-tsx">
+      <span class="z-punctuation z-section z-embedded z-begin z-tsx">{</span><span class="z-meta z-embedded z-expression z-tsx"><span class="z-keyword z-operator z-spread z-tsx">...</span><span class="z-variable z-other z-readwrite z-tsx">props</span></span><span class="z-punctuation z-section z-embedded z-end z-tsx">}</span>
+      <span class="z-entity z-other z-attribute-name z-tsx">ref</span><span class="z-keyword z-operator z-assignment z-tsx">=</span><span class="z-punctuation z-section z-embedded z-begin z-tsx">{</span><span class="z-meta z-embedded z-expression z-tsx"><span class="z-variable z-other z-readwrite z-tsx">wrapperRef</span></span><span class="z-punctuation z-section z-embedded z-end z-tsx">}</span>
+      <span class="z-entity z-other z-attribute-name z-tsx">inert</span><span class="z-keyword z-operator z-assignment z-tsx">=</span><span class="z-punctuation z-section z-embedded z-begin z-tsx">{</span><span class="z-meta z-embedded z-expression z-tsx"><span class="z-variable z-other z-readwrite z-tsx">enabled</span> <span class="z-keyword z-operator z-ternary z-tsx">?</span> <span class="z-string z-quoted z-double z-tsx"><span class="z-punctuation z-definition z-string z-begin z-tsx">&quot;</span><span class="z-punctuation z-definition z-string z-end z-tsx">&quot;</span></span> <span class="z-keyword z-operator z-ternary z-tsx">:</span> <span class="z-constant z-language z-null z-tsx">null</span></span><span class="z-punctuation z-section z-embedded z-end z-tsx">}</span>
+      <span class="z-entity z-other z-attribute-name z-tsx">tabindex</span><span class="z-keyword z-operator z-assignment z-tsx">=</span><span class="z-punctuation z-section z-embedded z-begin z-tsx">{</span><span class="z-meta z-embedded z-expression z-tsx"><span class="z-variable z-other z-readwrite z-tsx">enabled</span> <span class="z-keyword z-operator z-ternary z-tsx">?</span> <span class="z-keyword z-operator z-arithmetic z-tsx">-</span><span class="z-constant z-numeric z-decimal z-tsx">1</span> <span class="z-keyword z-operator z-ternary z-tsx">:</span> <span class="z-constant z-language z-null z-tsx">null</span></span><span class="z-punctuation z-section z-embedded z-end z-tsx">}</span>
+      <span class="z-entity z-other z-attribute-name z-tsx">aria-hidden</span><span class="z-keyword z-operator z-assignment z-tsx">=</span><span class="z-punctuation z-section z-embedded z-begin z-tsx">{</span><span class="z-meta z-embedded z-expression z-tsx"><span class="z-variable z-other z-readwrite z-tsx">enabled</span></span><span class="z-punctuation z-section z-embedded z-end z-tsx">}</span>
+      <span class="z-entity z-other z-attribute-name z-tsx">style</span><span class="z-keyword z-operator z-assignment z-tsx">=</span><span class="z-punctuation z-section z-embedded z-begin z-tsx">{</span><span class="z-meta z-embedded z-expression z-tsx"><span class="z-meta z-objectliteral z-tsx"><span class="z-punctuation z-definition z-block z-tsx">{</span>
+        <span class="z-meta z-object z-member z-tsx"><span class="z-meta z-object-literal z-key z-tsx">pointerEvents</span></span><span class="z-meta z-object z-member z-tsx"><span class="z-meta z-object-literal z-key z-tsx"><span class="z-punctuation z-separator z-key-value z-tsx">:</span></span> <span class="z-variable z-other z-readwrite z-tsx">enabled</span> <span class="z-keyword z-operator z-ternary z-tsx">?</span> <span class="z-string z-quoted z-double z-tsx"><span class="z-punctuation z-definition z-string z-begin z-tsx">&quot;</span>none<span class="z-punctuation z-definition z-string z-end z-tsx">&quot;</span></span> <span class="z-keyword z-operator z-ternary z-tsx">:</span> <span class="z-constant z-language z-null z-tsx">null</span>
+      </span><span class="z-punctuation z-definition z-block z-tsx">}</span></span></span><span class="z-punctuation z-section z-embedded z-end z-tsx">}</span>
+    </span><span class="z-punctuation z-definition z-tag z-end z-tsx">&gt;</span><span class="z-meta z-jsx z-children z-tsx">
+      <span class="z-punctuation z-section z-embedded z-begin z-tsx">{</span><span class="z-meta z-embedded z-expression z-tsx"><span class="z-variable z-other z-readwrite z-tsx">children</span></span><span class="z-punctuation z-section z-embedded z-end z-tsx">}</span>
+    </span><span class="z-punctuation z-definition z-tag z-begin z-tsx">&lt;/</span><span class="z-entity z-name z-tag z-tsx">div</span><span class="z-punctuation z-definition z-tag z-end z-tsx">&gt;</span></span>
+  <span class="z-meta z-brace z-round z-tsx">)</span><span class="z-punctuation z-terminator z-statement z-tsx">;</span>
+<span class="z-punctuation z-definition z-block z-tsx">}</span></span></span></span><span class="z-punctuation z-terminator z-statement z-tsx">;</span>
+</span></code></pre>
+
+  </div>
+</div>
+<h3 id="drawbacks-edge-cases">Drawbacks / edge cases<a
+  class="header-anchor"
+  href="#drawbacks-edge-cases" aria-label="Anchor link for: drawbacks-edge-cases"
+  title="Anchor link for: drawbacks-edge-cases"
+> <span class="sr-only" aria-hidden="true">#</span></a>
+</h3>
+<p>The component uses a pretty simple approach, and it doesn't handle some edge cases:</p>
+<ul>
+<li>The component doesn't check if elements already have the <code>tabindex</code> explicitly set.</li>
+<li>When the mutation observer triggers, it goes through all of the elements again.</li>
+<li>Depending on your needs, you might need to update <code>focusableElementsSelector</code>.</li>
+</ul>
+<p>All of that is by design. I wanted to keep it simple to make maintenance easier. I think it is easier to alter specific details on a per-project basis.</p>
+<p>For the same reasons, I won't publish it as a npm package. Releasing it as a package would require covering all of these cases and figuring out a flexible public API. I just don't think it is worth the effort. But I do hope you will it useful!</p>
+
+    </content>
+
+	</entry>
 	<entry xml:lang="en">
 		<title>Using CSS animations instead of JavaScript timers</title>
 		<published>2023-08-04T00:00:00+00:00</published>
