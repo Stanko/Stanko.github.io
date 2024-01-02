@@ -15,25 +15,13 @@ HTML [inert](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert)
 
 When you set `inert` on an element, the browser will ignore all user events on it, including tabbing into elements. It will also hide it from screen readers. I like to think of it as a "reversed focus trap". But we can use it to create focus traps for modals by setting `inert` on the main content.
 
-<div
-  inert
-  style="
-    background: var(--neutral-50);
-    color: var(--neutral-text);
-    border-radius: 4px;
-    padding: 20rem;
-    padding-bottom: 25rem;
-    font-size: 0.8em;
-    border: 1px solid var(--neutral-100);
-  "
->
+<div inert style="background: var(--neutral-50); color: var(--neutral-text); border-radius: 4px; padding: 20rem; padding-bottom: 25rem; font-size: 0.8em; border: 1px solid var(--neutral-100);">
   <p>
   This div has <code>inert</code> property set and if your browser supports it, you won't be able to interact with the button and link below.
   </p>
-
   <div>
-  <button class="btn btn--sm btn--main">You can't click me</button>
-  <a href="/" style="margin-left: 20px">Nor me!</a>
+    <button class="btn btn--sm btn--main">You can't click me</button>
+    <a href="/" style="margin-left: 20px">Nor me!</a>
   </div>
 </div>
 

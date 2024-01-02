@@ -13,6 +13,20 @@
 * clean up gallery/art-single SCSS (tall/wide)
 * custom icons for photoswipe
 
+## Projects
+
+* Vertigo
+* Retro frame
+* Pulsar
+* linea
+* Plx
+* Animate Height
+* Keen
+* Skyblue
+* Neon
+* Letters from Sarajevo
+
+
 ## ffmpeg commands
 
 ```sh
