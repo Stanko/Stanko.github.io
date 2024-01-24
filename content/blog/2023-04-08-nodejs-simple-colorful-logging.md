@@ -43,29 +43,25 @@ Once executed, it looks like this:
 
 The script uses something called [ANSI escape codes](https://en.wikipedia.org/wiki/ANSI_escape_code). It is a way to give commands to a terminal by passing sequences of bytes, usually starting with an ASCII escape character `\x1b`. They are mostly used to move the cursor and to change the color or styling of the text. They are standardized, and they should work on any platform.
 
-For example, `\x1b[31m` is an escape sequence that tells our terminal to switch color to red. All text after it will be red, until we pass the *reset* sequence `\x1b[0m`, which will revert text to the default color.
+For example, `\x1b[31m` is an escape sequence that tells our terminal to switch color to red. All text after it will be red, until we pass the _reset_ sequence `\x1b[0m`, which will revert text to the default color.
 
 ## More robust version
 
 If you need more features, I suggest using an existing library. I usually recommend picking one of these two:
 
-* [picocolors](https://github.com/alexeyraspopov/picocolors) - when I need more robust but still lightweight library
-* [Chalk](https://github.com/chalk/chalk) - when I need a fully featured coloring library
+- [picocolors](https://github.com/alexeyraspopov/picocolors) - when I need more robust but still lightweight library
+- [Chalk](https://github.com/chalk/chalk) - when I need a fully featured coloring library
 
-But for the sake of learning, I added a few more features and copied code to [CodeSandbox](https://codesandbox.io/p/sandbox/simple-colorful-logging-in-node-js-4nxtqn). This version allows you to pass multiple parameters, keeps native coloring for objects, and exposes a `paint` method which only colors parts of the string.
+But for the sake of learning, I added a few more features and copied code to [CodeSandbox](https://codesandbox.io/p/devbox/simple-colorful-loggin-in-node-js-856gly). This version allows you to pass multiple parameters, keeps native coloring for objects, and exposes a `paint` method which only colors parts of the string.
 
 ![Colorful output in terminal](/img/log-colors/chameleon.png)
-
 
 ## Browser
 
 As a bonus, let's see how we can use color in a browser's console. Escape sequences are not going to work, but we can actually [use CSS](https://developer.mozilla.org/en-US/docs/Web/API/console#styling_console_output).
 
 ```js
-console.log(
-  "%c🍋 Lemon",
-  "background: black; color: yellow;"
-);
+console.log("%c🍋 Lemon", "background: black; color: yellow;");
 ```
 
 Everything after `%c` will be styled using CSS defined in the parameter after it.

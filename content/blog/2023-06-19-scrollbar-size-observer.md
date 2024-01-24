@@ -7,7 +7,6 @@ tags = ["js", "scrollbar", "observer", "event"]
 
 [extra]
 intro = "An event that tracks those pesky gray bars."
-# image = "/img/log-colors/chameleon.png"
 
 +++
 
@@ -69,7 +68,7 @@ const initScrollbarWidthEvent = () => {
 
   // Returning observer instance if we ever need to disconnect manually
   return observer;
-}
+};
 ```
 
 ### Example usage
@@ -97,7 +96,6 @@ window.addEventListener("scrollbar-width", (e) => {
 
 Similarly to when we track the scroll position (or window size), we'll have to set the initial state on load. Then, we can add a listener and make sure that the local state is up to date.
 
-
 ### Initial value of the CSS variable
 
 This all happens on the client. Which means that `--scrollbar-width` won't be calculated before our JavaScript code executes. To be sure we'll give it a default value:
@@ -115,6 +113,7 @@ Because JavaScript is interpreted in the order it is defined, we can put our ini
 Here is a live demonstration. Click on the button below to toggle the vertical scrollbar.
 
 <pre class="scrollbar-size z-code"></pre>
+
 <button class="btn btn--sm btn--main toggle-scrollbar">Toggle scrollbar</button>
 
 Please note that if your browser doesn't show scrollbars, width will always be zero.
