@@ -1,0 +1,143 @@
+@import "../base/_variables.scss";
+@import "../base/_reset.scss";
+@import "../base/_breakpoints.scss";
+@import "../base/_mixins.scss";
+
+.example-wrapper {
+  position: relative;
+  display: flex;
+  gap: 2%;
+  margin-bottom: $spacing-md;
+
+  video,
+  svg {
+    max-width: 49%;
+    flex: 49% 0 0;
+  }
+
+  @include post-content-lg;
+}
+
+// ----- SVG EXAMPLES ----- //
+
+.svg-wrapper {
+  background: #142230;
+  display: block;
+  width: 360px;
+  max-width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.svg-wrapper {
+  circle,
+  path,
+  polygon {
+    transform-box: fill-box;
+    transform-origin: center center;
+    will-change: transform;
+    fill: #fe2c55;
+    opacity: 0.8;
+  }
+
+  .svg-play {
+    fill: rgba(0, 0, 0, 0.5);
+    transition: opacity 300ms;
+    opacity: 0.8;
+  }
+
+  .svg-play-triangle {
+    transition: opacity 300ms;
+    stroke: white;
+    fill: white;
+    stroke-linejoin: round;
+  }
+
+  &:hover {
+    .svg-play,
+    .svg-play-triangle {
+      opacity: 1;
+    }
+  }
+
+  &.is-playing {
+    .svg-play,
+    .svg-play-triangle {
+      opacity: 0;
+    }
+  }
+}
+
+// ----- TRANSLATE Z GRID ----- //
+
+.translate-z-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-block: 40rem;
+
+  @include post-content-lg;
+}
+
+.translate-z-grid-item {
+  display: flex;
+  align-items: center;
+  max-width: 50%;
+  padding-block: 10px;
+  position: relative;
+
+  div {
+    flex-shrink: 0;
+    width: 50px;
+    margin-right: 5px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--neutral-700);
+  }
+
+  code {
+    font-size: 0.75em;
+    display: block;
+    width: 8em;
+  }
+
+  svg {
+    width: 80px;
+    left: 15px;
+    top: 40px;
+    position: absolute;
+    color: var(--theme-color);
+  }
+}
+
+.canvas-wrapper {
+  margin-bottom: $spacing-md;
+  width: 400px;
+  padding: 20px;
+  background: #142230;
+  position: relative;
+  cursor: pointer;
+}
+
+.play-button {
+  width: 50px;
+  height: 50px;
+  display: block;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='-10 -10 20 20' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3E%3Ccircle fill='rgba(0,0,0,0.5)' r='10'%3E%3C/circle%3E%3Cpath fill='white' stroke='white' stroke-linejoin='round' d='M -1.715 -2.59 v 6 l 5.2 -3 Z' stroke-width='2'%3E%3C/path%3E%3C/svg%3E");
+  background-size: 100%;
+  opacity: 0.8;
+  pointer-events: none;
+  transition: opacity 300ms;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+*:hover + .play-button {
+  opacity: 1;
+}
+
+.is-playing + .play-button {
+  opacity: 0;
+}
