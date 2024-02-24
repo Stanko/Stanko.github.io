@@ -68,6 +68,10 @@ $body-font-weight: 400;
 
   --bg-color: var(--white);
 
+  // TODO remove there and use plain header
+  // Reduce the margin
+  // Add a simple background, ideally generative
+  // Hover color on home-page should be less "gray" or lighter
   --page-top-bg: var(--neutral-100);
   --page-top-border-color: var(--neutral-200);
 
