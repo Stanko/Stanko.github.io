@@ -199,3 +199,29 @@ svg {
 .pixel-art {
   image-rendering: crisp-edges;
 }
+
+.wave {
+  max-width: 1500rem;
+  margin-inline: auto;
+  margin-bottom: 40rem;
+  margin-top: -1px;
+  display: block;
+  overflow: visible;
+
+  @include md {
+    margin-bottom: 60rem;
+  }
+
+  @include lg {
+    margin-bottom: 80rem;
+  }
+}
+
+.wave__fill {
+  fill: var(--page-top-bg);
+}
+
+.wave__border {
+  stroke: var(--page-top-border-color);
+  stroke-linecap: round;
+}

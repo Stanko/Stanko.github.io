@@ -102,6 +102,10 @@
 .content--404 {
   min-height: 50vh;
   padding-bottom: 140rem;
+
+  button {
+    @include content-link;
+  }
 }
 
 // ------ Media

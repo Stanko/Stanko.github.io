@@ -14,19 +14,20 @@
 }
 
 .post__top {
-  padding: 20rem 0 30rem;
-  margin-bottom: 40rem;
+  padding: 20rem 0 40rem;
+  // margin-bottom: 40rem;
   background-color: var(--page-top-bg);
+  background-image: linear-gradient(var(--bg-color), var(--page-top-bg));
   border-bottom: 1px solid var(--page-top-border-color);
 
   @include md {
     padding: 40rem 0 60rem;
-    margin-bottom: 60rem;
+    // margin-bottom: 60rem;
   }
 
   @include lg {
     padding-bottom: 80rem;
-    margin-bottom: 80rem;
+    // margin-bottom: 80rem;
   }
 }
 

@@ -130,6 +130,9 @@ $purple-gradient-color-2: #be2cd8;
   --theme-color-darken-20: #{darken($blue-theme-color, 20)};
   --gradient-color-1: #{$blue-theme-gradient-color-1};
   --gradient-color-2: #{$blue-theme-gradient-color-2};
+
+  --page-top-bg: #{lighten($blue-theme-color, 46)};
+  --page-top-border-color: #{lighten($blue-theme-color, 38)};
 }
 
 .red {
@@ -140,6 +143,9 @@ $purple-gradient-color-2: #be2cd8;
   --theme-color-darken-20: #{darken($red-theme-color, 20)};
   --gradient-color-1: #{$red-theme-gradient-color-1};
   --gradient-color-2: #{$red-theme-gradient-color-2};
+
+  --page-top-bg: #{lighten($red-theme-color, 48)};
+  --page-top-border-color: #{lighten($red-theme-color, 40)};
 }
 
 .orange {
@@ -150,6 +156,9 @@ $purple-gradient-color-2: #be2cd8;
   --theme-color-darken-20: #{darken($orange-theme-color, 20)};
   --gradient-color-1: #{$orange-theme-gradient-color-1};
   --gradient-color-2: #{$orange-theme-gradient-color-2};
+
+  --page-top-bg: #{lighten($orange-theme-color, 42)};
+  --page-top-border-color: #{lighten($orange-theme-color, 35)};
 }
 
 .gray {
@@ -160,6 +169,9 @@ $purple-gradient-color-2: #be2cd8;
   --theme-color-darken-20: #{darken($gray-theme-color, 20)};
   --gradient-color-1: #{$gray-gradient-color-1};
   --gradient-color-2: #{$gray-gradient-color-2};
+
+  --page-top-bg: #{lighten($gray-theme-color, 60)};
+  --page-top-border-color: #{lighten($gray-theme-color, 52)};
 }
 
 .purple {
@@ -170,13 +182,16 @@ $purple-gradient-color-2: #be2cd8;
   --theme-color-darken-20: #{darken($purple-theme-color, 20)};
   --gradient-color-1: #{$purple-gradient-color-1};
   --gradient-color-2: #{$purple-gradient-color-2};
+
+  --page-top-bg: #{lighten($purple-theme-color, 40)};
+  --page-top-border-color: #{lighten($purple-theme-color, 32)};
 }
 
 .dark-scheme {
   --text-color: var(--neutral-800);
   --text-light: var(--neutral-600);
 
-  --bg-color: var(--black);
+  --bg-color: #131314;
 
   --neutral-900: #f3f4f6;
   --neutral-800: #e5e7ea;
@@ -206,6 +221,23 @@ $purple-gradient-color-2: #be2cd8;
 
     --gradient-color-1: #3257cf;
     --gradient-color-2: #0083ef;
+
+    --page-top-bg: #{darken($blue-theme-color, 40)};
+    --page-top-border-color: #{darken($blue-theme-color, 28)};
+  }
+
+  &.red,
+  .red {
+    --link-color: #ff475f;
+
+    --page-top-bg: #{darken($red-theme-color, 42)};
+    --page-top-border-color: #{darken($red-theme-color, 32)};
+  }
+
+  &.orange,
+  .orange {
+    --page-top-bg: #{darken($orange-theme-color, 45)};
+    --page-top-border-color: #{darken($orange-theme-color, 35)};
   }
 
   &.gray,
@@ -213,16 +245,17 @@ $purple-gradient-color-2: #be2cd8;
     --theme-color: #9ca3af;
     --gradient-color-1: #6b7280;
     --gradient-color-2: #89909c;
-  }
 
-  &.red,
-  .red {
-    --link-color: #ff475f;
+    --page-top-bg: #{darken($gray-theme-color, 21)};
+    --page-top-border-color: #{darken($gray-theme-color, 10)};
   }
 
   &.purple,
   .purple {
     --link-color: #a05dff;
+
+    --page-top-bg: #{darken($purple-theme-color, 45)};
+    --page-top-border-color: #{darken($purple-theme-color, 35)};
   }
 }
 

@@ -10,7 +10,6 @@
 }
 
 .modal__top {
-  background-color: var(--neutral-100);
   position: relative;
   z-index: $layer-modal;
 }
@@ -41,7 +40,7 @@
   right: 0;
   width: 100%;
   bottom: 0;
-  background-color: var(--neutral-100);
+  background-color: var(--neutral-50);
   overflow-y: hidden;
   will-change: transform, opacity;
 }
