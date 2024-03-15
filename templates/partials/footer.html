@@ -14,7 +14,7 @@
       <a href="/" aria-label="Home" class="footer__logo-link">
         {% include "partials/svg-logo.html" %}
       </a>
-      <p>© 2016-2022. All rights reserved.</p>
+      <p>© 2016-{{ now() | date(format='%Y') }}. All rights reserved.</p>
       <p>Written with ♡ by Stanko Tadić.</p>
     </div>
     {% set footer_nav = true %}
