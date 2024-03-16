@@ -1,6 +1,6 @@
 #!/bin/sh
 
-./zola-linux-0.17.2 build
+./zola-linux-0.18.0 build
 
 if [ $? -eq 0 ]
 then
