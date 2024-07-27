@@ -1,0 +1,10 @@
+_id: 9163bab0-3f70-11e9-bf1e-1f0cfd7e6c9f
+slug: react-router-subfolder-on-server
+name: Keyra
+email: 3258dfc753bce47935a93a591701f6f0
+message: >-
+  Thanks for this useful post! I have a question, what if I don't want to have #
+  in my URLs, but I don't know the path on coding / compilation time? I need to
+  have a package, that then can be deployed at any server (root, subfolder,
+  whatever)
+date: '2019-03-05T18:00:32.435Z'

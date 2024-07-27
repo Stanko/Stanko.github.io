@@ -1,0 +1,11 @@
+_id: be87db50-715a-11e8-9910-8fe24f4e3f6a
+slug: react-rerender-in-component-did-mount
+name: Aswin
+email: bc6dfd1a2e713cd6a93c46e485294b8a
+message: |-
+  Hi Stanko,
+     Nice and clear write up.
+     I have described my problem in the below "so" post.
+     https://stackoverflow.com/questions/50881720/making-dom-updates-in-millisecond-intervals. 
+    Is rAF the way forward for websocket data too ?
+date: '2018-06-16T11:45:19.631Z'

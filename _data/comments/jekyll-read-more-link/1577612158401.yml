@@ -1,0 +1,16 @@
+_id: 9e5afcd0-2a1e-11ea-909a-5d67ef609cb0
+slug: jekyll-read-more-link
+name: Stanko
+email: 13a28fac985c11eb7f40169be7da32f4
+message: >-
+  Hey Andrew,
+
+
+  Not sure what you have done wrong. Are you missing <a
+  href="https://jekyllrb.com/docs/front-matter/">Front Matter</a> section in
+  your post? This tells Jekyll which layout to use, and without it, it will
+  render unstyled HTML.
+
+
+  Cheers!
+date: '2019-12-29T09:35:58.395Z'

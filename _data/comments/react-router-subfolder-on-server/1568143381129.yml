@@ -1,0 +1,10 @@
+_id: 66d16c00-d400-11e9-985e-d7733b393af6
+slug: react-router-subfolder-on-server
+name: Dave
+email: 0d336ad885ca31a394e73a1f8db3774a
+message: |-
+  Maybe this changed in a newer version of ReactRouter? I get:
+  Failed to compile
+  ./src/App.js
+    Line 45:  'hashHistory' is not defined  no-undef
+date: '2019-09-10T19:23:01.128Z'

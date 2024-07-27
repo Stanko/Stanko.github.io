@@ -1,0 +1,79 @@
+// --- Landscape
+@mixin landscape() {
+  @media (orientation: landscape) {
+    @content;
+  }
+}
+
+// --- Portrait
+@mixin portrait() {
+  @media (orientation: portrait) {
+    @content;
+  }
+}
+
+// --- Small
+@mixin sm-only() {
+  @media (max-width: $breakpoint-md - 1) {
+    @content;
+  }
+}
+
+// --- Medium breakpoint
+@mixin md() {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin md-and-lower() {
+  @media (max-width: $breakpoint-lg - 1) {
+    @content;
+  }
+}
+
+// --- Large breakpoint
+@mixin lg() {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin lg-and-lower() {
+  @media (max-width: $breakpoint-xl - 1) {
+    @content;
+  }
+}
+
+// --- XLarge breakpoint
+@mixin xl() {
+  @media (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+@mixin xl-and-lower() {
+  @media (max-width: $breakpoint-xxl - 1) {
+    @content;
+  }
+}
+
+// --- XXLarge breakpoint
+@mixin xxl() {
+  @media (min-width: $breakpoint-xxl) {
+    @content;
+  }
+}
+
+@mixin xxl-and-lower() {
+  @media (max-width: $breakpoint-xxxl - 1) {
+    @content;
+  }
+}
+
+// --- XXXLarge breakpoint
+@mixin xxxl() {
+  @media (min-width: $breakpoint-xxxl) {
+    @content;
+  }
+}

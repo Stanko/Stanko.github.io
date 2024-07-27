@@ -1,0 +1,8 @@
+_id: f2f13b80-8706-11e9-b120-eb4c94149cf6
+slug: uploading-files-using-fetch-multipart-form-data
+name: Stanko
+email: 13a28fac985c11eb7f40169be7da32f4
+message: >-
+  There is a code sample in the first part of the post. You just need to remove
+  "Content-Type" from options that you pass to fetch. Hope that helps!
+date: '2019-06-04T20:25:52.960Z'

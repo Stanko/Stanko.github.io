@@ -1,0 +1,9 @@
+_id: 6cb2b2f0-158e-11e8-968d-8b90fd88d642
+slug: jekyll-gulp-workflow
+name: Stanko
+email: 13a28fac985c11eb7f40169be7da32f4
+message: >-
+  Hey there, I can do a short blog post about it. I replaced all plugins not
+  supported by GitHub pages with plain Liquid ones. And wrote a simple webpack
+  script to compile ES6 and SASS. Code is available on GitHub.
+date: '2018-02-19T16:03:29.135Z'

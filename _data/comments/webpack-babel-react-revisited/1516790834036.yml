@@ -1,0 +1,11 @@
+_id: efd6e110-00f3-11e8-b731-f32ae56c4cea
+slug: webpack-babel-react-revisited
+name: Patrick
+email: f0780e7c6c84264a3a114340434aa77d
+message: >-
+  Hey Stanko,
+
+  Could you provide us with an example of how to load and use Mocha with
+  webpack? Should I do a different webpack config files just for Mocha? My aim
+  is to run mocha tests in the browser with React, using webpack. Thanks!
+date: '2018-01-24T10:47:14.030Z'
