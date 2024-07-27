@@ -1,0 +1,54 @@
+{% set tall_class="" %}
+{% if page.lower and page.lower.extra.tall or page.higher and page.higher.extra.tall %}
+  {% set tall_class="related-items--tall" %}
+{% endif %}
+
+<div class="related-items {{ tall_class }}">
+  <div class="container">
+    <h2 class="h4 related-items__title">
+      More generative drawings
+    </h2>
+
+    <div class="related-items__links">
+      {% if page.lower %}
+        <a
+          href="{{ page.lower.permalink }}"
+          class="related-items__item related-items__item--prev {% if page.lower.extra.tall %}related-items__item--tall{% endif %}"
+        >
+          {%- set date_string = "/art/" ~ page.lower.date ~ "-" %}
+          {%- set image_path = page.lower.extra.image | replace(from="/art/", to=date_string) %}
+          {%- set image = resize_image(path=image_path, width=700, height=700, op="fit", quality=90) %}
+          <div class="related-items__item-eyebrow">
+            Previous
+          </div>
+          <div class="related-items__item-title">{{ page.lower.title | safe }}</div>
+          <div class="related-items__height-fix">
+            <div class="related-items__image-wrapper">
+              <img src="{{ image.url }}" alt="" aria-hidden="true"  />
+            </div>
+          </div>
+        </a>
+      {% endif %}
+
+      {% if page.higher %}
+        <a
+          href="{{ page.higher.permalink }}"
+          class="related-items__item related-items__item--next {% if page.higher.extra.tall %}related-items__item--tall{% endif %}"
+        >
+          {%- set date_string = "/art/" ~ page.higher.date ~ "-" %}
+          {%- set image_path = page.higher.extra.image | replace(from="/art/", to=date_string) %}
+          {%- set image = resize_image(path=image_path, width=700, height=700, op="fit", quality=90) %}
+          <div class="related-items__item-eyebrow">
+            Next
+          </div>
+          <div class="related-items__item-title">{{ page.higher.title | safe }}</div>
+          <div class="related-items__height-fix">
+            <div class="related-items__image-wrapper">
+              <img src="{{ image.url }}" alt="" aria-hidden="true"  />
+            </div>
+          </div>
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>

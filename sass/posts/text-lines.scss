@@ -1,0 +1,133 @@
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.example {
+  margin-bottom: 20rem;
+  position: relative;
+}
+
+.example--debug {
+  border: 1px dashed #ccc;
+
+  .line:nth-child(5n + 1) {
+    color: hsl(350, 90%, 40%);
+  }
+  .line:nth-child(5n + 2) {
+    color: hsl(45, 100%, 60%);
+  }
+  .line:nth-child(5n + 3) {
+    color: hsl(130, 90%, 40%);
+  }
+  .line:nth-child(5n + 4) {
+    color: hsl(200, 90%, 40%);
+  }
+  .line:nth-child(5n) {
+    color: hsl(270, 90%, 40%);
+  }
+
+  .dark-scheme & {
+    border: 1px dashed #666;
+
+    .line:nth-child(5n + 1) {
+      color: hsl(350, 90%, 70%);
+    }
+    .line:nth-child(5n + 2) {
+      color: hsl(60, 90%, 70%);
+    }
+    .line:nth-child(5n + 3) {
+      color: hsl(130, 90%, 70%);
+    }
+    .line:nth-child(5n + 4) {
+      color: hsl(200, 90%, 70%);
+    }
+    .line:nth-child(5n) {
+      color: hsl(270, 90%, 70%);
+    }
+  }
+}
+
+.example-text {
+  font-weight: bold;
+  overflow: hidden;
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
+
+.example-handle {
+  width: 16rem;
+  height: calc(100% + 2px);
+  cursor: ew-resize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 0;
+  position: absolute;
+  top: -1px;
+  right: -16rem;
+  background: #fff;
+  color: #ccc;
+  border: 1px solid currentColor;
+  transition: color 250ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &:hover {
+    color: #555;
+  }
+
+  .dark-scheme & {
+    background: #111;
+    color: #666;
+  }
+
+  .dark-scheme &:hover {
+    color: #ddd;
+  }
+}
+
+.example-handle span {
+  width: 3rem;
+  height: 100%;
+  max-height: 40rem;
+  border-radius: 100rem;
+  background: currentColor;
+}
+
+// --- DEMO
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.line {
+  white-space: nowrap;
+}
+
+.example--demo {
+  .line {
+    color: var(--theme-color);
+    opacity: 0;
+    display: inline;
+  }
+
+  &.is-in-viewport .line {
+    animation: fade-in 500ms forwards;
+  }
+
+  @for $i from 1 to 30 {
+    .line:nth-child(30n + #{$i}) {
+      animation-delay: ($i - 1) * 200ms;
+    }
+  }
+}

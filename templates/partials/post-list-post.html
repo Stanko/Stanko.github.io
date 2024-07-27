@@ -1,0 +1,21 @@
+<a href="{{ page.permalink }}" class="post-list__post {% if page.extra.theme %}{{ page.extra.theme }}{% endif %}">
+  <div class="container">
+    <div class="post-list__content">
+      <div class="post-list__info">
+        <div class="post-list__title">
+          {{ page.title | safe }}{% include "partials/svg-post-arrow.html" %}
+        </div>
+        <div class="post-list__date">
+          {{ page.date | date(format="%d. %b %Y") }}
+          <div class="post-list__category"> &bull; {{ page.taxonomies.category[0] }}</div>
+        </div>
+      </div>
+      {% if page.extra.vertigo %}
+        {% include "partials/svg-vertigo.html" %}
+      {% endif %}
+      {% if page.extra.icon %}
+        <img src="{{ page.extra.icon }}" alt="" aria-hidden="true" class="post-list__icon" />
+      {% endif %}
+    </div>
+  </div>
+</a>

@@ -1,0 +1,153 @@
+$col-count-sm: 2;
+$col-count-md: 3;
+$col-count-lg: 4;
+
+.gallery {
+  display: flex;
+  gap: 20rem;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 #{-$gutter};
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 0 $gutter;
+
+  @include md {
+    margin: 0 #{-$gutter-md};
+    padding: 0 $gutter-md;
+  }
+
+  @include lg {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.gallery--post {
+  white-space: normal;
+  flex-wrap: wrap;
+  gap: 5rem;
+  align-items: flex-start;
+  margin: 20rem 0;
+  padding: 0;
+
+  .gallery__item {
+    video,
+    img {
+      height: 120rem;
+    }
+  }
+
+  @include md {
+    gap: 10rem;
+
+    .gallery__item {
+      video,
+      img {
+        height: 150rem;
+      }
+    }
+  }
+
+  @include lg {
+    width: 700rem;
+    margin: 40rem 0;
+  }
+
+  // @include lg {
+  //   margin-left: 0;
+  //   margin-right: 0;
+  //   padding-left: 0;
+  //   padding-right: 0;
+  // }
+}
+
+.gallery__item {
+  @include transparent-outline;
+  min-height: 0;
+  border-radius: $radius-xs;
+  background-color: var(--neutral-100);
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+  transition: opacity $time;
+  outline-offset: -2px;
+
+  &:hover {
+    opacity: 0.8;
+    cursor: zoom-in;
+  }
+
+  video,
+  img {
+    height: 150rem;
+  }
+}
+
+@include lg {
+  .art-single__images--tall {
+    .gallery {
+      margin: 0;
+      padding: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      width: auto;
+      flex-shrink: 0;
+      margin-left: 20rem;
+    }
+
+    .gallery__item {
+      width: 200rem;
+    }
+
+    video,
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+.gallery__item--video:hover {
+  cursor: pointer;
+}
+
+.gallery__video-thumbnail {
+  pointer-events: none;
+}
+
+.gallery__play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 40rem;
+  paint-order: stroke;
+
+  @include lg {
+    width: 50rem;
+  }
+
+  path {
+    fill: var(--white);
+    stroke: rgba(0, 0, 0, 0.5);
+    stroke-width: 10rem;
+    opacity: 0.95;
+  }
+}
+
+// ----- Photoswipe blur background
+
+.pswp {
+  // 333 is a default PhotoSwipe animation duration
+  transition: all 333ms;
+}
+
+.pswp--open {
+  @include backdrop-filter(10px);
+}
+
+.pwsp--no-backdrop-filter {
+  backdrop-filter: none !important;
+  -ms-backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}

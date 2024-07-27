@@ -1,0 +1,6 @@
+comment_id = "14b322e0-feb5-11e8-80ee-afb5785ff3ad"
+slug = "uploading-files-using-fetch-multipart-form-data"
+name = "Stanko"
+email = "13a28fac985c11eb7f40169be7da32f4"
+message = "Hello Jorge,\nIt is really hard to help you with almost no information on the problem. Try searching for the exact error you are getting. To me, it sounds like a CORS issue, or maybe you are sending wrong headers.\nGood luck!"
+date = "2018-12-13T08:57:12.808Z"

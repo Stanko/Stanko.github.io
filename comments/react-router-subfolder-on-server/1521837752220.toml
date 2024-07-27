@@ -1,0 +1,6 @@
+comment_id = "b581efe0-2eda-11e8-9e1a-170dcccd3685"
+slug = "react-router-subfolder-on-server"
+name = "Davis Cabral"
+email = "8fdec6fbaee7217ed882221f23f5e3ee"
+message = "You can use the `Router` prop `basename` for this.\n\n<pre>&lt;Router basename={ '/subdir' } history={ history }&gt;\n&lt;/Router&gt;</pre>"
+date = "2018-03-23T20:42:32.220Z"

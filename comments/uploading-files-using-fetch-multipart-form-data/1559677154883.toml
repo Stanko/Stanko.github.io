@@ -1,0 +1,6 @@
+comment_id = "6f2d4ba0-8700-11e9-b120-eb4c94149cf6"
+slug = "uploading-files-using-fetch-multipart-form-data"
+name = "Phil"
+email = "06829de84b52f5d13d547002cc57e88d"
+message = "delete options.headers['Content-Type'];\n\nwhere do we put this?"
+date = "2019-06-04T19:39:14.883Z"

@@ -1,0 +1,45 @@
+.related-posts {
+  max-width: $container-width-narrow;
+}
+
+.related-posts__title {
+  margin-bottom: 40rem;
+}
+
+.related-posts__archive {
+  @include link-underline;
+}
+
+.related-posts__post {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  margin-bottom: 20rem;
+
+  &:hover {
+    color: var(--text-color);
+    text-underline-offset: 3rem;
+
+    .related-posts__post-title {
+      -webkit-text-decoration-color: var(--neutral-300);
+      text-decoration-color: var(--neutral-300);
+    }
+  }
+}
+
+.related-posts__date {
+  @include text-sm;
+  color: var(--text-light);
+}
+
+.related-posts__post-title {
+  @include header;
+  transition: all $time;
+  display: inline-block;
+  // Messy as text-decoration props support is weird
+  text-decoration: underline;
+  text-decoration: 1px underline transparent;
+  text-decoration-color: transparent;
+  text-underline-offset: 2rem;
+  -webkit-text-decoration-color: transparent;
+}

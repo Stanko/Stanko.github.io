@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "MarvinVisions";
+  src: url("/fonts/MarvinVisions-Bold.eot");
+  src: url("/fonts/MarvinVisions-Bold.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/MarvinVisions-Bold.woff2") format("woff2"),
+    url("/fonts/MarvinVisions-Bold.woff") format("woff");
+  font-weight: bold;
+}
+
+@mixin marvin {
+  font-family: MarvinVisions, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  line-height: 0.9em;
+  letter-spacing: 0.01em;
+}
+
+@font-face {
+  font-family: "Salsa";
+  src: url("/fonts/Salsa-Regular.ttf");
+  font-weight: 400;
+}

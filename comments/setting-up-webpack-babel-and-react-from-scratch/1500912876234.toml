@@ -1,0 +1,6 @@
+comment_id = "3e4bf240-160d-11e7-951e-15ced69e6d89"
+slug = "setting-up-webpack-babel-and-react-from-scratch"
+name = "Stanko"
+email = "13a28fac985c11eb7f40169be7da32f4"
+message = "@Stuart I'm pretty sure that is happening because you are using webpack 2 or 3, and this tutorial was written for webpack one. You can install webpack 1, but I wouldn't recommend downgrading.\n\nI already written <a href=\"https://muffinman.io/webpack-2-react-redux/\">boilerplate for webpack 2</a> (which should be soon updated to use webpack 3). So you can use that or Facebook's offical <a href=\"https://github.com/facebookincubator/create-react-app\">create-react-app</a>.\n\nI won't be updating this tutorial, but I might write another one in the future.\n\nCheers!\n\n@Ram you are welcome mate!"
+date = "2017-07-24T18:16:46.651Z"

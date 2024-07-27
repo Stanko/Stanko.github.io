@@ -1,0 +1,33 @@
+<header class="menu">
+  <div class="container">
+    <a href="/" class="menu__logo" aria-label="Home">
+      {% include "partials/svg-logo.html" %}
+      {% if current_path and current_path == '/' %}
+        <span aria-hidden="true" class="menu__logo-text">
+          <span class="menu__logo-big-letter">M</span>uffin<span class="menu__logo-big-letter">M</span>an
+        </span>
+      {% endif %}
+    </a>
+
+    {% include "partials/color-scheme-switcher.html" %}
+
+    {% set header_nav = true %}
+    {% include "partials/nav.html" %}
+
+    <button class="menu__toggle menu__toggle--static" data-micromodal-trigger="modal-menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div class="menu__toggle-fixed-wrapper menu__toggle-fixed-wrapper--hidden">
+    <button class="menu__toggle menu__toggle--fixed" data-micromodal-trigger="modal-menu" aria-label="Menu" tabindex="-1">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<div class="menu-stripe"></div>

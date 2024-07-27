@@ -1,0 +1,123 @@
+{% set all_posts = get_section(path="blog/_index.md") %}
+{% set posts_by_year = all_posts.pages | reverse | group_by(attribute="year") %}
+
+{% set years_count = posts_by_year | length %}
+{% set max_posts = 0 %}
+{% set post_height = 6 %}
+{% set year_width = 100 %}
+
+{% for key, value in posts_by_year %}
+  {% if value | length > max_posts %}
+    {% set_global max_posts = value | length %}
+  {% endif %}
+{% endfor %}
+
+{% if max_posts is divisibleby(10) %}
+  {% set max_posts = max_posts + 10 %}
+{% else %}
+  {% set max_posts = max_posts + 10 - (max_posts % 10) %}
+{% endif %}
+
+{% set height = post_height * max_posts %}
+{% set width = year_width * years_count %}
+{% set lines_max = max_posts / 10 | int %}
+{% set lines_count = range(end = lines_max) %}
+
+
+<h2 class="h4" id="posts-per-year">Posts per year</h2>
+
+<div class="year-stats" aria-label="Blog posts per year chart">
+  <div class="year-stats__left" aria-hidden="true">
+    {% for value in lines_count | reverse %}
+      <div class="year-stats__count-label">
+        {{(value + 1) * 10}}
+      </div>
+    {% endfor %}
+  </div>
+  <div class="year-stats__svg-wrapper">
+    <svg
+      viewBox="0 0 {{ width }} {{ height }}"
+      class="year-stats__svg"
+      preserveAspectRatio="none"
+      aria-hidden="true"
+    >
+      <g
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+      >
+        {% for value in lines_count %}
+          <path
+            d="M 0 {{ height - (10 * post_height * loop.index) }} l {{ width }} 0"
+            class="year-stats__label-lines"
+            vector-effect="non-scaling-stroke"
+          />
+        {% endfor %}
+
+        {% for key, value in posts_by_year %}
+          {% set post_count = value | length %}
+          <path
+            d="M {{ loop.index * year_width }} 0 l 0 {{ height }}"
+            class="year-stats__label-lines"
+            vector-effect="non-scaling-stroke"
+          />
+        {% endfor %}
+
+        <path
+          d="M 0 0 l 0 {{ height }} l {{ width }} 0"
+          class="year-stats__coord-lines"
+          vector-effect="non-scaling-stroke"
+        />
+
+        <path
+          d="M
+          {% for key, value in posts_by_year %}
+            {% set post_count = value | length %}
+            {{ loop.index0 * year_width }} {{ height - (post_count * post_height) }} L
+          {% endfor %}
+          "
+          stroke-width="2"
+          vector-effect="non-scaling-stroke"
+          class="year-stats__graph"
+        />
+        {% for key, value in posts_by_year %}
+          {% set post_count = value | length %}
+          <path
+            d="M {{ loop.index0 * year_width }} {{ height - (post_count * post_height) }} l 0.001 0"
+            stroke-width="8"
+            vector-effect="non-scaling-stroke"
+            class="year-stats__graph"
+          />
+        {% endfor %}
+      </g>
+    </svg>
+    <div
+      class="year-stats__columns"
+      style="left: -{{ 100 / years_count / 2 }}%"
+    >
+      {% for key, value in posts_by_year %}
+        {% set post_count = value | length %}
+        {% set y = (post_count * post_height) / height %}
+
+        <div
+          class="year-stats__column"
+          style="flex: 0 0 {{ 100 / (years_count) }}%"
+          aria-label="Year {{ key }}, {{ post_count }} posts"
+        >
+          <span style="top: {{100 - y * 100}}%" aria-hidden="true">{{ post_count }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="year-stats__bottom" aria-hidden="true">
+    {% for key, value in posts_by_year %}
+      <div class="year-stats__year-label">
+        <span>{{key}}</span>
+      </div>
+    {% endfor %}
+
+    <div class="year-stats__year-label">
+      <span>{{ all_posts.pages[0].date | date(format="%Y") | int + 1 }}</span>
+    </div>
+  </div>
+</div>

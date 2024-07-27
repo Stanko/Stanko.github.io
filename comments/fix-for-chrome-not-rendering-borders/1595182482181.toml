@@ -1,0 +1,6 @@
+comment_id = "b76be320-c9eb-11ea-b82f-9f3e94095ad5"
+slug = "fix-for-chrome-not-rendering-borders"
+name = "Levi"
+email = "5d15202ca12aaee8a472f9ddb3d167f2"
+message = "Annnnd chrome just \"fixed\" this bug too in Chrome 42, so now thin = 1px and borders are uneven once again at anything other than 100% native zoom :("
+date = "2020-07-19T18:14:42.176Z"

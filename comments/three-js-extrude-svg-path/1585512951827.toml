@@ -1,0 +1,6 @@
+comment_id = "162a1200-71fa-11ea-8794-b3f677008c8f"
+slug = "three-js-extrude-svg-path"
+name = "Stanko"
+email = "13a28fac985c11eb7f40169be7da32f4"
+message = "Hey Victor,\nYou can apply this method to all of the paths in the SVG file. But you need to color them by hand using <code>MeshStandardMaterial</code> or other ThreeJS material.\n\nCheers!"
+date = "2020-03-29T20:15:51.820Z"

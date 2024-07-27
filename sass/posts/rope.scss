@@ -1,0 +1,195 @@
+@import "../base/_variables.scss";
+@import "../base/_breakpoints.scss";
+@import "../base/_mixins.scss";
+
+$blue: #4394e5;
+
+.rope-steps {
+  background-color: #f8fbfe;
+  position: sticky;
+  z-index: 11;
+  top: 0rem;
+  padding: 5rem 0;
+  transition: opacity 250ms;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+  @include lg {
+    width: auto;
+    margin: 0 -50rem;
+    border-radius: 8px;
+    border-bottom-color: rgba(0, 0, 0, 0.03);
+  }
+
+  @include xxl {
+    margin: 0 -120rem;
+  }
+}
+
+svg,
+g,
+path {
+  overflow: visible;
+}
+
+.rope-svg path {
+  stroke-width: 1.5;
+}
+
+.path {
+  stroke: $blue;
+}
+
+.normals path {
+  stroke: $blue;
+}
+
+.points {
+  stroke: none;
+  fill: $blue;
+}
+
+.polygons path {
+  stroke: $blue;
+}
+
+.polygons-rounded path {
+}
+
+.segments {
+}
+
+.segment:nth-child(odd) {
+}
+
+.rope {
+}
+
+.step-section {
+  opacity: 0.5;
+  transition: opacity 250ms;
+
+  h3 {
+    transition: color 250ms;
+  }
+}
+
+.active-section--path .step-section--path,
+.active-section--points .step-section--points,
+.active-section--normals .step-section--normals,
+.active-section--polygons .step-section--polygons,
+.active-section--round-polygons .step-section--round-polygons,
+.active-section--angle-polygons .step-section--angle-polygons,
+.active-section--angle-polygons-thin .step-section--angle-polygons-thin,
+.active-section--segments .step-section--segments,
+.active-section--segments-rounded .step-section--segments-rounded,
+.active-section--segments-rounded-fix-gaps
+  .step-section--segments-rounded-fix-gaps,
+.active-section--angle-segments .step-section--angle-segments,
+.active-section--colors .step-section--colors,
+.active-section--animate .step-section--animate,
+.active-section--animate-thin .step-section--animate-thin {
+  opacity: 1;
+
+  h3 {
+    color: var(--theme-color);
+  }
+}
+
+.chaikin {
+  margin-bottom: 20rem;
+}
+
+.chaikin-svg {
+  max-width: 300px;
+  background: white;
+  border-radius: 2px;
+
+  .original {
+    fill: none;
+    stroke: black;
+    stroke-dasharray: 1 2;
+    stroke-width: 0.9;
+  }
+
+  .rounded {
+    stroke-width: 1.1;
+    fill: none;
+    stroke: $blue;
+  }
+}
+
+.demo-svg {
+  background-color: white;
+  border-radius: 2px;
+}
+
+.demo-control,
+.chaikin-control {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 250px;
+  font-size: 0.9em;
+
+  label {
+    font-weight: bold;
+    margin-right: 6rem;
+  }
+
+  input[type="range"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 6rem;
+  }
+
+  input[type="checkbox"] {
+    margin-left: auto;
+  }
+}
+
+.demo-render-controls {
+  @include md {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.demo-radio-label,
+.demo-checkbox-label {
+  display: flex;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin-bottom: 6rem;
+  align-items: center;
+
+  input {
+    margin-right: 10rem;
+  }
+}
+
+.demo-controls {
+  @include md {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  @include lg {
+    margin-right: -200rem;
+  }
+}
+
+.demo-controls-column {
+  margin-bottom: 10rem;
+
+  @include md {
+    flex: auto 0 0;
+  }
+}
+
+.demo-title {
+  font-weight: bold;
+  margin-bottom: 10rem;
+  color: var(--theme-color);
+}

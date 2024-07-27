@@ -1,0 +1,34 @@
+<h3 id="{{ title | slugify }}" class="project-list__title">{{title}}
+
+  <a
+    class="header-anchor"
+    href="#{{ title | slugify }}" aria-label="Anchor link for: {{ title | slugify }}"
+    title="Anchor link for: {{ title | slugify }}"
+  > <span class="sr-only" aria-hidden="true">#</span></a>
+
+</h3>
+
+<div class="project-list">
+{% for project in projects %}
+  <a href="{{project.link}}" class="project-list__project {% if project.theme %}{{ project.theme }}{% endif %}">
+    <div class="project-list__project-image-wrapper" aria-hidden="true">
+      {% if project.vertigo %}
+        {% include "partials/svg-vertigo.html" %}
+      {% elif project.rah %}
+        {% include "partials/rah-icon.html" %}
+      {% elif project.image %}
+        <img class="project-list__project-image" src="{{project.image}}" alt="" />
+      {% else %}
+        <div class="project-list__project-initial">{{ project.name | truncate(start=0, length=1, end="") }}</div>
+      {% endif %}
+    </div>
+    <div>
+      <div class="project-list__project-title h4">
+        {{ project.name | safe }}{% include "partials/svg-post-arrow.html" %}
+      </div>
+      <p>{{project.description | markdown(inline=true) | safe}}</p>
+    </div>
+  </a>
+{% endfor %}
+</div>
+

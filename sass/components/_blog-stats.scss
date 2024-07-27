@@ -1,0 +1,20 @@
+.blog-stats__row {
+  margin-bottom: $spacing-sm;
+
+  @include lg {
+    margin-bottom: $spacing-md;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.blog-stats__row-left {
+  font-weight: bold;
+}
+
+.blog-stats__row-right {
+  @include lg {
+    text-align: right;
+    max-width: 60%;
+  }
+}

@@ -1,0 +1,39 @@
+<style>
+@keyframes rah {
+  0%,
+  30%{
+    height: 10rem;
+  }
+
+  10%,
+  20%{
+    height: 45rem;
+  }
+}
+
+.rah {
+  flex: 70% 0 0;
+}
+
+.rah-item {
+  border-radius: 3rem;
+  border: 2rem solid var(--neutral-700);
+  height: 10rem;
+  margin-bottom: 2rem;
+  animation: rah infinite 5000ms;
+}
+
+.rah-item:nth-child(1) {
+  animation-delay: 2500ms;
+}
+
+.rah-item:nth-child(3) {
+  animation-delay: 3500ms;
+}
+</style>
+
+<div class="rah">
+  <div class="rah-item"></div>
+  <div class="rah-item"></div>
+  <div class="rah-item"></div>
+</div>

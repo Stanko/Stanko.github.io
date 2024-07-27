@@ -1,0 +1,6 @@
+comment_id = "3c8084c0-6f28-11e7-921d-c72d9aac98c1"
+slug = "setting-up-webpack-babel-and-react-from-scratch"
+name = "Stuart"
+email = "94f0fed6e9871789f7ff19e2b9072dc6"
+message = "Thanks for the article.\n\nHowever, when I try to run\n\n<pre>node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js</pre>\n\nI get the following error:\n\n<pre>Invalid configuration object. Webpack has been initialised using a configuration object that does not match the API schema.\n - configuration.resolve.extensions[0] should not be empty.\n</pre>\n\nnot sure how to resolve."
+date = "2017-07-22T21:53:46.651Z"

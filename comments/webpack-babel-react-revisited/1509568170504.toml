@@ -1,0 +1,6 @@
+comment_id = "5cdcfcb0-bf43-11e7-9c26-335bfbd926db"
+slug = "webpack-babel-react-revisited"
+name = "Koyot"
+email = "35922c878a28bb7d961fe07073967a9c"
+message = "Wait, do I really have to use Babel to utilize es2015 features? I thought it's already a standard and adding Babel will unnecessarily bloat the code"
+date = "2017-11-01T20:29:30.501Z"

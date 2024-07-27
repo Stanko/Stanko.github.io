@@ -1,0 +1,116 @@
+body {
+  counter-reset: sidenote;
+}
+
+.sidenote__trigger {
+  display: inline;
+  text-align: inherit;
+  white-space: normal;
+  transition: all $time;
+  // Messy as text-decoration props support is weird
+  -webkit-text-decoration-color: var(--neutral-500);
+  -webkit-text-decoration-line: underline;
+  -webkit-text-decoration-style: dotted;
+  text-decoration-color: var(--neutral-500);
+  text-underline-offset: 2rem;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-style: dotted;
+
+  &::after {
+    content: counter(sidenote);
+    counter-increment: sidenote;
+    font-size: 12rem;
+    line-height: 1;
+    vertical-align: super;
+  }
+
+  &:hover,
+  &.sidenote__trigger--hover {
+    cursor: help;
+    text-decoration-style: solid;
+    -webkit-text-decoration-style: solid;
+  }
+
+  &:focus {
+    text-decoration-color: var(--neutral-700);
+    -webkit-text-decoration-color: var(--neutral-700);
+    text-decoration-style: solid;
+    -webkit-text-decoration-style: solid;
+  }
+}
+
+.sidenote__trigger:hover + .sidenote__note,
+.sidenote__trigger:focus + .sidenote__note,
+.sidenote__trigger--hover + .sidenote__note {
+  @include dark-scheme {
+    border-color: var(--neutral-100);
+  }
+}
+
+.sidenote__note {
+  display: none;
+  padding: 6rem 10rem;
+  font-size: 16rem;
+  margin: 5rem 0;
+  border: 1px solid transparent;
+  transition: box-shadow $time, transform $time, border $time;
+
+  @include md-and-lower {
+    border-left: 2px solid var(--neutral-300);
+    background-color: var(--neutral-50);
+  }
+
+  .sidenote__trigger--expanded + & {
+    display: block;
+  }
+
+  @include lg {
+    .sidenote__trigger:hover + &,
+    .sidenote__trigger:focus + & {
+      box-shadow: var(--image-shadow);
+      transform: translateY(-2px);
+    }
+
+    .sidenote__trigger--hover + & {
+      box-shadow: var(--image-shadow);
+    }
+  }
+
+  @include lg {
+    background-color: var(--bg-color);
+    font-size: 14rem;
+    display: block !important;
+    clear: right;
+    float: right;
+    margin: -2rem #{-$sidenote-width - $sidenote-margin} 0 0;
+    width: $sidenote-width;
+    border-radius: $radius-sm;
+    padding: 7rem 10rem 8rem;
+    position: relative;
+    z-index: $layer-sidenote;
+
+    &::before {
+      content: counter(sidenote);
+      font-size: 12rem;
+      line-height: 1;
+      padding-right: 4rem;
+      vertical-align: super;
+    }
+  }
+
+  code {
+    font-size: 15rem !important;
+    background: none !important;
+    padding: 0 !important;
+    color: var(--neutral-800) !important;
+
+    @include lg {
+      font-size: 13rem !important;
+    }
+  }
+}
+
+.sidenote__bracket {
+  @include sr-only;
+}

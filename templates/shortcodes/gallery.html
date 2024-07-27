@@ -1,0 +1,61 @@
+{% if images | length > 0 %}
+  <div class="gallery gallery--post photoswipe-gallery">
+    {% set photo_index = 0 %}
+    {%- for asset in images -%}
+      {%- if asset is matching("[.](jpg|png|gif)$") -%}
+        {# Skip thumbnail #}
+        {%- if asset is matching("(thumb[.]jpg)$") -%}
+          {%- continue %}
+        {%- endif %}
+        {%- set date_string = "/art/" ~ page.date ~ "-" %}
+        {%- set image_path = page.extra.image | replace(from="/art/", to=date_string) %}
+        {%- set image = resize_image(path=asset, width=500, height=500, op="fit", quality=90) %}
+        {#
+          I can go back to get_url when this issue is fixed
+          https://github.com/getzola/zola/issues/788
+          get_url(path=asset)
+        #}
+        {%- set meta = get_image_metadata(path=asset) %}
+        {%- set filename = asset | split(pat="/") | last %}
+        {% set photo_index = photo_index + 1 %}
+        <a
+          class="gallery__item"
+          href="{{ asset }}"
+          data-pswp-width="{{ meta.width }}"
+          data-pswp-height="{{ meta.height }}"
+          style="aspect-ratio: {{ meta.width / meta.height }}"
+          target="_blank"
+        >
+          {# TODO think what to do about alt text #}
+          <img src="{{ image.url }}" alt="Photo {{ photo_index }}"  />
+        </a>
+      {%- endif %}
+      {%- if asset is matching("[.](mp4)$") -%}
+        {% set filename = asset | split(pat="/") | last %}
+        {% set video_size = filename | split(pat=".") | first | split(pat="_") | last | split(pat="x") -%}
+        <a
+          class="gallery__item gallery__item--video"
+          href="{{ asset }}"
+          data-pswp-width="{{ video_size[0] }}"
+          data-pswp-height="{{ video_size[1] }}"
+          data-is-video="true"
+          style="aspect-ratio: {{ video_size[0] }} / {{ video_size[1] }}"
+          target="_blank"
+          aria-label="Plotting in progress"
+        >
+          <video
+            src="{{ asset }}#t=0.001"
+            muted="true"
+            playsinline="true"
+            class="gallery__video-thumbnail"
+            aria-hidden="true"
+            tabindex="-1"
+          ></video>
+          <svg viewBox="0 0 512 512" class="gallery__play-icon" aria-hidden="true">
+            <path d="M405.2,232.9L126.8,67.2c-3.4-2-6.9-3.2-10.9-3.2c-10.9,0-19.8,9-19.8,20H96v344h0.1c0,11,8.9,20,19.8,20  c4.1,0,7.5-1.4,11.2-3.4l278.1-165.5c6.6-5.5,10.8-13.8,10.8-23.1C416,246.7,411.8,238.5,405.2,232.9z"/>
+          </svg>
+        </a>
+      {%- endif %}
+    {%- endfor %}
+  </div>
+{% endif %}

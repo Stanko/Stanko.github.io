@@ -1,0 +1,6 @@
+comment_id = "89e934a0-f085-11ea-a4a1-4dfdf39af64a"
+slug = "neon-generative-art-piece-made-using-2d-vector-field"
+name = "Theo"
+email = "2de973a8ada78a3608b5f4cf31d798f7"
+message = "You might be interested to compare https://wangyasai.github.io/Perlin-Noise/.\n\nThe trick used there is to displace particles in a direction determined by calling 2d Perlin noise.\n\nMore code by the same author here: https://www.openprocessing.org/sketch/494102"
+date = "2020-09-06T21:11:32.540Z"

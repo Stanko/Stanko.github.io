@@ -1,0 +1,33 @@
+.dual-image {
+  @include post-content-lg;
+
+  @include md {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.dual-image__img {
+  @include sm-only {
+    margin-bottom: $spacing-md;
+  }
+
+  @include md {
+    flex-shrink: 0;
+    width: calc(50% - #{$spacing-md / 2});
+  }
+
+  @include lg {
+    width: calc(50% - #{$spacing-md});
+  }
+}
+
+.dual-image--shadow .dual-image__img {
+  box-shadow: var(--image-shadow);
+}
+
+.dual-image__text {
+  display: block;
+  text-align: center;
+}

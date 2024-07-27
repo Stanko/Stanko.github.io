@@ -1,0 +1,6 @@
+comment_id = "a8ef07b0-e7d0-11e6-bf17-3b62c726cec1"
+slug = "setting-up-webpack-babel-and-react-from-scratch"
+name = "Stanko"
+email = "13a28fac985c11eb7f40169be7da32f4"
+message = "Hey Pedro,\n\nThanks for the feedback, it is really hard to get this thing up to date. I will try my best, and definitely have that in mind for the new posts. And you are right, I forgot to add <code>react-router</code> to the <code>package.json</code>. It is now updated, and I added a simple routing example (the one from this post) as well.\n\n\nHey Dev,\n\nThanks, unfortunately I don't plansto update this guide to Webpack 2, but I have a complete boilerplate for it. Check <a href=\"/webpack-2-react-redux/\">this post</a>, it has much more options.\n\nAs for your error take a look at <a href=\"https://github.com/styleguidist/react-styleguidist/issues/294\">this thread</a>. It seems to be a issue with <code> CommonsChunkPlugin</code>.\n\nCheers both of you!"
+date = "2017-01-31T16:16:45.917Z"

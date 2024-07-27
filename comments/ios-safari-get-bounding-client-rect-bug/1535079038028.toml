@@ -1,0 +1,6 @@
+comment_id = "7ae3bf30-a748-11e8-9d49-9fff9455a2a1"
+slug = "ios-safari-get-bounding-client-rect-bug"
+name = "cc712"
+email = "b09caf5faebeb0098973ccf32ba99d8a"
+message = "I do get the same bug when using `<canvas>` making a signature board.\nI get a almost random `rect.top` from `getBoundingClientRect()`,\neach time when I open my web page.\nI guess safari has some magic while runing js after rendering HTML.\nBecause when I use `window.onload`, bugfixed and dont know why."
+date = "2018-08-24T02:50:38.027Z"

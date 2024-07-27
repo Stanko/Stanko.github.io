@@ -1,0 +1,6 @@
+comment_id = "fa8a20d0-43ec-11e9-ab1b-b1484e5f4180"
+slug = "uploading-files-using-fetch-multipart-form-data"
+name = "Stanko"
+email = "13a28fac985c11eb7f40169be7da32f4"
+message = "Hello Chap,\n\nThat means <code>options.headers</code> is <code>null</code> or <code>undefined</code>. You probably have to check if it is defined before trying to delete it's property.\n\nSomething like:\n<pre>if (options && options.headers) {<br/>  delete options.headers['Content-Type'];<br/>}</pre>\nCheers!"
+date = "2019-03-11T11:01:11.049Z"

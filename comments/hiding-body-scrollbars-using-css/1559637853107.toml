@@ -1,0 +1,6 @@
+comment_id = "eceec3e0-86a4-11e9-b120-eb4c94149cf6"
+slug = "hiding-body-scrollbars-using-css"
+name = "Petar Petrovic"
+email = "5c078a48f2cb62df5cddd3812ca89c46"
+message = "I keep needing to toggle scrollbar on the body element while developing so I made a bookmarklet based on the CSS above. Thanks Stanko! The code is below in case others need it as well. Cheers!\n<pre> javascript:(()=>{window.hss?window.hss.remove():(()=>{window.hss=document.createElement('style');hss.innerHTML='html,body{scrollbar-width:none;-ms-overflow-style:none;}body::-webkit-scrollbar{width:0;height:0;}';document.body.appendChild(hss);})()})() </pre>"
+date = "2019-06-04T08:44:13.106Z"

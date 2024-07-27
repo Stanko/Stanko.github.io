@@ -1,0 +1,514 @@
+@import "../base/_variables.scss";
+@import "../base/_reset.scss";
+@import "../base/_breakpoints.scss";
+@import "../base/_mixins.scss";
+
+.main {
+  overflow-x: hidden;
+}
+
+.rotation {
+  @include md {
+    display: flex;
+  }
+
+  label {
+    display: block;
+    margin-right: 15px;
+    font-size: 16rem;
+  }
+
+  input {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+.country-select {
+  div {
+    margin-bottom: 10rem;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+    font-weight: bold;
+
+    @include md {
+      display: inline-flex;
+      margin-right: 20rem;
+    }
+  }
+
+  input {
+    margin-right: 8rem;
+    transform: translateY(1rem);
+  }
+}
+
+// -------- BLOCKY PEOPLE
+
+$time: 3s;
+
+.people-wrapper {
+  font-size: 1px;
+  transform-style: preserve-3d;
+  transform: rotateY(60deg) rotateX(5deg);
+  margin-top: 60em;
+
+  @include md {
+    font-size: 1.5px;
+  }
+
+  @include lg {
+    font-size: 2px;
+  }
+
+  * {
+    transform-style: preserve-3d;
+  }
+}
+
+.people-wrapper-single {
+  margin-left: 20rem;
+  width: 54em;
+}
+
+// -------- BOX
+
+.box,
+css-box {
+  display: block;
+  position: relative;
+  transform-style: preserve-3d;
+
+  .left,
+  .right,
+  .front,
+  .back,
+  .top,
+  .bottom {
+    position: absolute;
+    backface-visibility: hidden;
+    border: 1em solid rgba(black, 0.2);
+    background: white;
+  }
+}
+
+@mixin box($width, $height, $depth) {
+  width: $width;
+  height: $height;
+
+  .left,
+  .right {
+    width: $depth;
+    height: $height;
+  }
+
+  .front,
+  .back {
+    width: $width;
+    height: $height;
+  }
+
+  .top,
+  .bottom {
+    width: $width;
+    height: $depth;
+  }
+
+  .front {
+    transform: translateZ($depth / 2);
+  }
+
+  .back {
+    transform: translateZ($depth / -2) rotateY(180deg);
+  }
+
+  .left {
+    transform: translateX($depth / -2) rotateY(270deg);
+  }
+
+  .right {
+    transform: translateX($width - $depth / 2) rotateY(90deg);
+  }
+
+  .top {
+    transform: translateY($depth / -2) rotateX(90deg);
+  }
+
+  .bottom {
+    transform: translateY($height - $depth / 2) rotateX(-90deg);
+  }
+}
+
+// -------- BOX DEMO
+
+@keyframes spin {
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+.boxes-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  @include box(100px, 150px, 50px);
+  margin: 50px auto;
+  animation: spin infinite 10s ease-in-out;
+  animation-play-state: paused;
+  outline: 1px solid #e53f73;
+
+  .left,
+  .right,
+  .front,
+  .back,
+  .top,
+  .bottom {
+    // Outline and background color will help us see the box in this state
+    border: 1px solid #356cde;
+    background: rgba(255, 255, 255, 0.7);
+  }
+}
+
+.box.no-transform {
+  div {
+    transform: none;
+  }
+}
+
+.box.no-rotation {
+  .front {
+    transform: translateZ(25px);
+  }
+
+  .back {
+    transform: translateZ(-25px);
+  }
+
+  .left {
+    transform: translateX(-25px);
+  }
+
+  .right {
+    transform: translateX(75px);
+  }
+
+  .top {
+    transform: translateY(-25px);
+  }
+
+  .bottom {
+    transform: translateY(125px);
+  }
+}
+
+.is-in-viewport .box {
+  animation-play-state: running;
+}
+
+// ------------- ROW
+
+.row {
+  display: flex;
+  justify-content: center;
+  width: 500%;
+  margin-left: -200%;
+}
+
+// ------------- PERSON
+
+css-person {
+  display: flex;
+  flex-wrap: wrap;
+  width: 54em;
+  margin-right: 12em;
+}
+
+$tshirt-colors: #9b59b7, #1abc9d, #e74c3c, #f1c40f, #3498db, #e67e22, #34495e;
+$shoes-colors: #2b071f, #ffe600, #345, #ecf0f1, #0abde3, #6c5ce7;
+$pants-colors: #1e3799, #198066, #510b6d, #2c3e50, #d35400, #95a5a6;
+$skin-colors: #d8b997, #bb9472, #866946, #473a30;
+
+@for $i from 1 through 10 {
+  css-person:nth-child(#{$i}),
+  css-person.person-#{$i} {
+    &,
+    & * {
+      animation-delay: $i * 0.3s;
+    }
+
+    $tshirt-color: nth($tshirt-colors, random(length($tshirt-colors)));
+    $shoes-color: nth($shoes-colors, random(length($shoes-colors)));
+    $pants-color: nth($pants-colors, random(length($pants-colors)));
+    $skin-color: nth($skin-colors, random(length($skin-colors)));
+
+    .head *,
+    .arm-bottom * {
+      background: $skin-color;
+    }
+
+    .torso *,
+    .arm-top * {
+      background: $tshirt-color;
+    }
+
+    .leg-top *,
+    .leg-bottom * {
+      background-color: $pants-color;
+    }
+
+    .leg-shoe * {
+      background-color: $shoes-color;
+    }
+  }
+}
+
+// ------- World cup code
+
+@mixin fan($tshirt-color, $pants-color) {
+  $shoes-color: nth($shoes-colors, random(length($shoes-colors)));
+  $skin-color: nth($skin-colors, random(length($skin-colors)));
+
+  .head *,
+  .arm-bottom * {
+    background: $skin-color;
+  }
+
+  .torso *,
+  .arm-top * {
+    background: $tshirt-color;
+  }
+
+  .leg-top * {
+    background-color: $pants-color;
+  }
+
+  .leg-bottom * {
+    background-color: $skin-color;
+  }
+
+  .leg-shoe * {
+    background-color: $shoes-color;
+  }
+}
+
+@for $i from 1 through 10 {
+  css-person:nth-child(#{$i}).serbia {
+    @include fan(#c21f19, #b9140e);
+  }
+
+  css-person:nth-child(#{$i}).denmark {
+    @include fan(#aa2d29, #f2f3f3);
+  }
+
+  css-person:nth-child(#{$i}).usa {
+    @include fan(#f2f3f3, #2e3660);
+  }
+
+  css-person:nth-child(#{$i}).brazil {
+    @include fan(#eac856, #2e5cd7);
+  }
+
+  css-person:nth-child(#{$i}).netherlands {
+    @include fan(#ea6f2d, #f2f3f3);
+  }
+}
+
+// ------- End of World cup code
+
+.is-not-in-viewport css-person,
+css-person.is-not-in-viewport,
+css-person.no-animation {
+  &,
+  & * {
+    animation-play-state: paused !important;
+  }
+}
+
+css-person.no-colors {
+  .front,
+  .back,
+  .top,
+  .bottom,
+  .left,
+  .right {
+    background-color: white !important;
+  }
+}
+
+// ------------- TOP
+
+@keyframes person-top {
+  0% {
+    transform: translateZ(-7em) translateY(-15em) rotateX(-5deg);
+  }
+  50% {
+    transform: translateZ(16em) translateY(-33em) rotateX(0deg);
+  }
+}
+
+.person-top {
+  display: flex;
+  flex-wrap: wrap;
+  transform: translateZ(-7em) translateY(-15em) rotateX(-5deg);
+  animation: person-top $time ease-in-out infinite;
+}
+
+// ------------- HEAD
+
+.head-wrapper {
+  flex-basis: 100%;
+  margin-bottom: 2em;
+}
+
+@keyframes head {
+  0% {
+    transform: rotateX(3deg);
+  }
+  50% {
+    transform: rotateX(7deg);
+  }
+}
+
+.head {
+  @include box(15em, 20em, 15em);
+  margin: 0 auto;
+  transform: rotateX(3deg);
+  animation: head $time ease-in-out infinite;
+}
+
+// ------------- TORSO
+
+.torso {
+  @include box(30em, 45em, 15em);
+  margin: 0 2em;
+  position: relative;
+  z-index: 100;
+}
+
+// ------------- ARMS
+
+@keyframes arm {
+  0% {
+    transform: translateZ(-4em) rotateX(60deg);
+  }
+  50% {
+    transform: translateZ(-4em) rotateX(150deg);
+  }
+}
+
+.arm {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  transform-origin: top center;
+  transform: translateZ(-4em) rotateX(60deg);
+  animation: arm $time ease-in-out infinite;
+  margin-top: 10em;
+}
+
+@keyframes arm-top {
+  0% {
+    transform: rotateX(-40deg);
+  }
+  50% {
+    transform: rotateX(0deg);
+  }
+}
+
+.arm-top {
+  @include box(10em, 30em, 10em);
+  transform: rotateX(-40deg);
+  animation: arm-top $time ease-in-out infinite;
+  position: relative;
+  z-index: 50;
+}
+
+@keyframes arm-bottom {
+  0% {
+    transform: rotateX(40deg);
+  }
+  50% {
+    transform: rotateX(0deg) translateZ(0em);
+  }
+}
+
+.arm-bottom {
+  @include box(9em, 30em, 9em);
+  margin-top: -4em;
+  transform: rotateX(40deg);
+  animation: arm-bottom $time ease-in-out infinite;
+}
+
+// ------------- LEGS
+
+.legs {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: -18em;
+  transform: translateZ(18em) translateY(-14em);
+}
+
+.leg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leg-left {
+  margin-right: 2em;
+}
+
+@keyframes leg-top {
+  0% {
+    transform: translateZ(-15em) rotateX(-10deg);
+  }
+  50% {
+    transform: translateZ(-6em) translateY(-15em) rotateX(-88deg);
+  }
+}
+
+.leg-top {
+  @include box(12em, 12em, 40em);
+  transform-origin: bottom center;
+  transform: translateZ(-15em) rotateX(-10deg);
+  animation: leg-top $time ease-in-out infinite;
+  position: relative;
+  z-index: 50;
+}
+
+@keyframes leg-bottom {
+  0% {
+    transform: rotateX(-15deg);
+  }
+  50% {
+    transform: rotateX(-2deg) translateY(-2em);
+  }
+}
+
+.leg-bottom {
+  @include box(10em, 30em, 10em);
+  transform: rotateX(-15deg);
+  animation: leg-bottom $time ease-in-out infinite;
+}
+
+@keyframes leg-shoe {
+  0% {
+    transform: translateZ(3em);
+  }
+  50% {
+    transform: translateZ(3em) translateY(-2em) rotateX(-15deg);
+  }
+}
+
+.leg-shoe {
+  @include box(11em, 8em, 20em);
+  animation: leg-shoe $time ease-in-out infinite;
+  transform: translateZ(3em);
+}
