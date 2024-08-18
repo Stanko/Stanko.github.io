@@ -10,6 +10,7 @@
 }
 
 .modal__top {
+  background-color: var(--neutral-50);
   position: relative;
   z-index: $layer-modal;
 }
