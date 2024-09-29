@@ -60,8 +60,9 @@ $label-padding: 10rem;
   text-align: center;
 
   span {
-    background-color: var(--neutral-800);
-    color: var(--neutral-100);
+    background-color: var(--bg-color);
+    border: 1px solid var(--theme-color);
+    color: var(--theme-color);
     border-radius: $radius-xs;
     position: absolute;
     display: inline-block;
@@ -69,6 +70,14 @@ $label-padding: 10rem;
     padding: 4rem 6rem;
     opacity: 0;
     transition: opacity $time;
+  }
+
+  span.move-up {
+    transform: translate(-50%, calc(-200% - 16rem));
+  }
+
+  span.move-down {
+    transform: translate(-50%, 0);
   }
 }
 

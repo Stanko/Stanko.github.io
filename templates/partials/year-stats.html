@@ -6,9 +6,10 @@
 {% set post_height = 6 %}
 {% set year_width = 100 %}
 
-{% for key, value in posts_by_year %}
-  {% if value | length > max_posts %}
-    {% set_global max_posts = value | length %}
+{# Post count per year #}
+{% for key, posts in posts_by_year %}
+  {% if posts | length > max_posts %}
+    {% set_global max_posts = posts | length %}
   {% endif %}
 {% endfor %}
 
@@ -24,13 +25,42 @@
 {% set lines_count = range(end = lines_max) %}
 
 
+{# Word count per year #}
+{% set max_word_count = 0 %}
+
+{% set_global word_count_by_year = [] %}
+
+{% for key, posts in posts_by_year %}
+  {% set_global total_word_count = 0 %}
+
+  {% for post in posts %}
+    {% set_global total_word_count = total_word_count + post.word_count %}
+  {% endfor %}
+
+  {% set posts_count = posts | length %}
+  {% set average_word_count = total_word_count / posts_count | round %}
+
+  {% if average_word_count > max_word_count %}
+    {% set_global max_word_count = average_word_count %}
+  {% endif %}
+
+  {% set_global word_count_by_year = word_count_by_year | concat(with=average_word_count) %}
+{% endfor %}
+
+{% set word_height = (height * 0.9) / max_word_count %}
+
 <h2 class="h4" id="posts-per-year">Posts per year</h2>
+
+<p>
+  This chart shows the number of posts I published each year.
+  The red line represents the average number of words in each post.
+</p>
 
 <div class="year-stats" aria-label="Blog posts per year chart">
   <div class="year-stats__left" aria-hidden="true">
-    {% for value in lines_count | reverse %}
+    {% for index in lines_count | reverse %}
       <div class="year-stats__count-label">
-        {{(value + 1) * 10}}
+        {{(index + 1) * 10}}
       </div>
     {% endfor %}
   </div>
@@ -46,7 +76,7 @@
         stroke="currentColor"
         stroke-linecap="round"
       >
-        {% for value in lines_count %}
+        {% for index in lines_count %}
           <path
             d="M 0 {{ height - (10 * post_height * loop.index) }} l {{ width }} 0"
             class="year-stats__label-lines"
@@ -54,8 +84,8 @@
           />
         {% endfor %}
 
-        {% for key, value in posts_by_year %}
-          {% set post_count = value | length %}
+        {% for key, posts in posts_by_year %}
+          {% set post_count = posts | length %}
           <path
             d="M {{ loop.index * year_width }} 0 l 0 {{ height }}"
             class="year-stats__label-lines"
@@ -69,10 +99,32 @@
           vector-effect="non-scaling-stroke"
         />
 
+        <g class="red">
+          <path
+            d="M
+            {% for word_count in word_count_by_year %}
+              {{ loop.index0 * year_width }} {{ height - (word_count * word_height) }} L
+            {% endfor %}
+            "
+            stroke-width="2"
+            vector-effect="non-scaling-stroke"
+            class="year-stats__graph"
+          />
+
+          {% for word_count in word_count_by_year %}
+            <path
+              d="M {{ loop.index0 * year_width }} {{ height - (word_count * word_height) }} l 0.001 0"
+              stroke-width="8"
+              vector-effect="non-scaling-stroke"
+              class="year-stats__graph"
+            />
+          {% endfor %}
+        </g>
+
         <path
           d="M
-          {% for key, value in posts_by_year %}
-            {% set post_count = value | length %}
+          {% for key, posts in posts_by_year %}
+            {% set post_count = posts | length %}
             {{ loop.index0 * year_width }} {{ height - (post_count * post_height) }} L
           {% endfor %}
           "
@@ -80,8 +132,9 @@
           vector-effect="non-scaling-stroke"
           class="year-stats__graph"
         />
-        {% for key, value in posts_by_year %}
-          {% set post_count = value | length %}
+
+        {% for key, posts in posts_by_year %}
+          {% set post_count = posts | length %}
           <path
             d="M {{ loop.index0 * year_width }} {{ height - (post_count * post_height) }} l 0.001 0"
             stroke-width="8"
@@ -95,22 +148,43 @@
       class="year-stats__columns"
       style="left: -{{ 100 / years_count / 2 }}%"
     >
-      {% for key, value in posts_by_year %}
-        {% set post_count = value | length %}
+      {% for key, posts in posts_by_year %}
+        {% set post_count = posts | length %}
         {% set y = (post_count * post_height) / height %}
+
+        {% set word_count = word_count_by_year[loop.index0] %}
+        {% set y_word_count = (word_count * word_height) / height %}
+
+        {% set diff = (y - y_word_count) %}
+        {% set abs_diff = diff | abs %}
+        {% set word_class = "" %}
+
+        {% if abs_diff < 0.2 %}
+          {% set y_word_count = y_word_count + diff %}
+          {% if diff > 0 %}
+            {% set word_class = "move-down" %}
+          {% else %}
+            {% set word_class = "move-up" %}
+          {% endif %}
+        {% endif %}
 
         <div
           class="year-stats__column"
           style="flex: 0 0 {{ 100 / (years_count) }}%"
-          aria-label="Year {{ key }}, {{ post_count }} posts"
+          aria-label="Year {{ key }}, {{ post_count }} posts, averaging {{ word_count }} words per post"
         >
-          <span style="top: {{100 - y * 100}}%" aria-hidden="true">{{ post_count }}</span>
+          <span style="top: {{100 - y_word_count * 100}}%" aria-hidden="true" class="red {{ word_class }}">
+            {{ word_count }}<br/>words
+          </span>
+          <span style="top: {{100 - y * 100}}%" aria-hidden="true">
+            {{ post_count }}<br/>posts
+          </span>
         </div>
       {% endfor %}
     </div>
   </div>
   <div class="year-stats__bottom" aria-hidden="true">
-    {% for key, value in posts_by_year %}
+    {% for key, posts in posts_by_year %}
       <div class="year-stats__year-label">
         <span>{{key}}</span>
       </div>
