@@ -128,3 +128,12 @@ $btn-drop: 2px;
     padding: 10rem 22rem;
   }
 }
+
+.btn--xs {
+  padding: 4rem 9rem;
+  font-size: 13rem;
+
+  @include lg {
+    padding: 5rem 11rem;
+  }
+}

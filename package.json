@@ -11,7 +11,7 @@
   "dependencies": {
     "@leeoniya/ufuzzy": "^1.0.14",
     "animated-scroll-to": "^2.3.0",
-    "esbuild": "^0.23.0",
+    "esbuild": "^0.24.0",
     "micromodal": "^0.4.10",
     "photoswipe": "^5.4.4"
   }

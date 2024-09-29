@@ -1,0 +1,20 @@
+.toc {
+  padding: 20rem;
+  background-color: var(--neutral-50);
+  border-radius: $radius-sm;
+  margin-bottom: 2em;
+}
+
+.toc__title.h4 {
+  padding-top: 0;
+}
+
+.toc .toc__list {
+  margin-bottom: 0;
+}
+
+// .toc__item {
+// }
+
+// .toc__link {
+// }

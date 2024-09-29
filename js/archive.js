@@ -6,18 +6,21 @@ const slug = window.location.hash.replace("#", "").trim();
 
 // Open section from the URL slug
 if (slug) {
-  const category = document.querySelector(`.archive__category--${slug}`);
+  try {
+    const category = document.querySelector(`.archive__category--${slug}`);
 
-  if (category) {
-    const toggle = category.querySelector(".archive__toggle");
-    const posts = category.querySelector(".archive__posts");
+    if (category) {
+      const toggle = category.querySelector(".archive__toggle");
+      const posts = category.querySelector(".archive__posts");
 
-    toggle.setAttribute("aria-expanded", true);
-    console.log(toggle);
+      toggle.setAttribute("aria-expanded", true);
 
-    posts.style.display = "block";
-    posts.setAttribute("aria-hidden", false);
-    toggle.setAttribute("aria-expanded", true);
+      posts.style.display = "block";
+      posts.setAttribute("aria-hidden", false);
+      toggle.setAttribute("aria-expanded", true);
+    }
+  } catch (e) {
+    // do nothing
   }
 }
 
