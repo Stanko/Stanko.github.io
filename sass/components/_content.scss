@@ -50,6 +50,11 @@
 
     @include md {
       border-radius: $radius-xs;
+      padding-inline: $spacing-lg;
+    }
+
+    @include lg {
+      padding-inline: $spacing-md;
     }
   }
 
