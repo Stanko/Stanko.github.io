@@ -38,6 +38,7 @@
 .post-list__title {
   @include header;
   transition: color $time;
+  text-wrap: balance; // to make sure the arrow doesn't fall on a new line
 }
 
 .post-list__date {

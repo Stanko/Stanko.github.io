@@ -36,6 +36,7 @@
   @include header;
   transition: all $time;
   display: inline-block;
+  text-wrap: balance; // to make sure the arrow doesn't fall on a new line
   // Messy as text-decoration props support is weird
   text-decoration: underline;
   text-decoration: 1px underline transparent;

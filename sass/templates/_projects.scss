@@ -58,6 +58,7 @@
   @include header;
   transition: color $time;
   margin-bottom: 6rem;
+  text-wrap: balance; // to make sure the arrow doesn't fall on a new line
 
   span {
     @include text-gradient;

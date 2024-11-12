@@ -61,6 +61,7 @@
 
 .art__single-title {
   margin-bottom: 10rem;
+  text-wrap: balance; // to make sure the arrow doesn't fall on a new line
 }
 
 .art__single-date {
