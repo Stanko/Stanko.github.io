@@ -97,8 +97,10 @@ $label-padding: 10rem;
   flex: auto;
 
   @include sm-only {
-    &:nth-child(even) {
+    &:nth-child(3n),
+    &:nth-child(3n + 2) {
       opacity: 0;
+      font-size: 0px;
     }
   }
 }
