@@ -6,8 +6,271 @@
 	<link href="https://muffinman.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://muffinman.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2024-06-13T00:00:00+00:00</updated>
+	<updated>2024-11-09T00:00:00+00:00</updated>
 	<id>https://muffinman.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Open source mac apps I love</title>
+		<published>2024-11-09T00:00:00+00:00</published>
+		<updated>2024-11-09T00:00:00+00:00</updated>
+		<link href="https://muffinman.io/blog/open-source-mac-apps-i-love/" type="text/html"/>
+		<id>https://muffinman.io/blog/open-source-mac-apps-i-love/</id>
+    <author>
+      <name>Stanko</name>
+    </author>
+		<content type="html" >&lt;style&gt;
+.content p code {
+  display: block;
+  padding: 5rem 12rem;
+  margin-top: 10rem;
+  border: 1px solid var(--neutral-100);
+  background: var(--neutral-50);
+  color: var(--neutral-600);
+  border-radius: 2rem;
+  width: fit-content;
+  position: relative;
+}
+
+.copy-button {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5rem 12rem;
+  font-size: 0.9em;
+  color: var(--neutral-800);
+  transition: all 250ms;
+  border-radius: 4px;
+}
+
+@media (hover: hover) {
+  p:hover .copy-button {
+    opacity: 1;
+  }
+
+  .copy-button {
+    opacity: 0;
+  }
+}
+
+.copy-button:hover {
+  color: var(--theme-color);
+}
+
+.copy-button:focus {
+  opacity: 1;
+}
+
+&lt;&#x2F;style&gt;
+&lt;p&gt;I want to share some really nice open-source applications I use on a daily basis. I did a &lt;a href=&quot;&#x2F;blog&#x2F;small-mac-apps-i-love&#x2F;&quot;&gt;similar post&lt;&#x2F;a&gt; about six years ago, so I felt there is a need for an updated one. I focused on the apps that I feel are really convenient but less known.&lt;&#x2F;p&gt;
+&lt;p&gt;All of the applications listed are free and open source. For each app, I included a brew install command.&lt;&#x2F;p&gt;
+&lt;p&gt;If you happen to like and use them, please consider donating to their respective authors.&lt;&#x2F;p&gt;
+&lt;p&gt;Here are all of the apps in alphabetical order:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;GUI Applications&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;muffinman.io&#x2F;blog&#x2F;open-source-mac-apps-i-love&#x2F;#hidden-bar&quot;&gt;Hidden Bar&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;muffinman.io&#x2F;blog&#x2F;open-source-mac-apps-i-love&#x2F;#imageoptim&quot;&gt;ImageOption&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;muffinman.io&#x2F;blog&#x2F;open-source-mac-apps-i-love&#x2F;#itsycal&quot;&gt;Itsycal&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;muffinman.io&#x2F;blog&#x2F;open-source-mac-apps-i-love&#x2F;#karabiner-elements&quot;&gt;Karabiner-Elements&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;muffinman.io&#x2F;blog&#x2F;open-source-mac-apps-i-love&#x2F;#keeping-you-awake&quot;&gt;Keeping You Awake&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;muffinman.io&#x2F;blog&#x2F;open-source-mac-apps-i-love&#x2F;#maccy&quot;&gt;Maccy&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;muffinman.io&#x2F;blog&#x2F;open-source-mac-apps-i-love&#x2F;#maestral&quot;&gt;Maestral&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;muffinman.io&#x2F;blog&#x2F;open-source-mac-apps-i-love&#x2F;#openinterminal&quot;&gt;OpenInTerminal&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;muffinman.io&#x2F;blog&#x2F;open-source-mac-apps-i-love&#x2F;#pearcleaner&quot;&gt;Pearcleaner&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;muffinman.io&#x2F;blog&#x2F;open-source-mac-apps-i-love&#x2F;#pika&quot;&gt;Pika&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;muffinman.io&#x2F;blog&#x2F;open-source-mac-apps-i-love&#x2F;#rectangle&quot;&gt;Rectangle&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Bash programs&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;muffinman.io&#x2F;blog&#x2F;open-source-mac-apps-i-love&#x2F;#dust&quot;&gt;dust&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;muffinman.io&#x2F;blog&#x2F;open-source-mac-apps-i-love&#x2F;#ripgrep&quot;&gt;ripgrep&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;muffinman.io&#x2F;blog&#x2F;open-source-mac-apps-i-love&#x2F;#tio&quot;&gt;tio&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;muffinman.io&#x2F;blog&#x2F;open-source-mac-apps-i-love&#x2F;#zoxide&quot;&gt;zoxide&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;gui-applications&quot;&gt;GUI Applications&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#gui-applications&quot; aria-label=&quot;Anchor link for: gui-applications&quot;
+  title=&quot;Anchor link for: gui-applications&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;hidden-bar&quot;&gt;Hidden Bar&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#hidden-bar&quot; aria-label=&quot;Anchor link for: hidden-bar&quot;
+  title=&quot;Anchor link for: hidden-bar&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;dwarvesf&#x2F;hidden&quot;&gt;GitHub&lt;&#x2F;a&gt;
+&lt;code&gt;brew install hiddenbar&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Hidden Bar allows you to hide icons from the menu bar. It seems that every app nowadays wants to be in the menu bar, and this helps declutter it.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;mac-open-source&#x2F;hidden-bar.png&quot; alt=&quot;Hidden Bar settings&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;imageoptim&quot;&gt;ImageOptim&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#imageoptim&quot; aria-label=&quot;Anchor link for: imageoptim&quot;
+  title=&quot;Anchor link for: imageoptim&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ImageOptim&#x2F;ImageOptim&quot;&gt;GitHub&lt;&#x2F;a&gt; | &lt;a href=&quot;https:&#x2F;&#x2F;imageoptim.com&#x2F;mac&quot;&gt;Website&lt;&#x2F;a&gt;
+&lt;code&gt;brew install imageoptim&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;As its name suggests, ImageOptim optimizes images. It is a UI for a bunch of lossless image optimization tools. Just drop your images and it will compress them without losing any quality.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;mac-open-source&#x2F;imageoptim.png&quot; alt=&quot;ImageOptim main window&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;itsycal&quot;&gt;Itsycal&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#itsycal&quot; aria-label=&quot;Anchor link for: itsycal&quot;
+  title=&quot;Anchor link for: itsycal&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sfsam&#x2F;Itsycal&quot;&gt;GitHub&lt;&#x2F;a&gt; | &lt;a href=&quot;https:&#x2F;&#x2F;www.mowglii.com&#x2F;itsycal&#x2F;&quot;&gt;Website&lt;&#x2F;a&gt;
+&lt;code&gt;brew install itsycal&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;A small calendar that lives in your menu bar. Why is this not built into the operating system?&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;mac-open-source&#x2F;itsycal.png&quot; alt=&quot;Istycal calendar&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;karabiner-elements&quot;&gt;Karabiner-Elements&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#karabiner-elements&quot; aria-label=&quot;Anchor link for: karabiner-elements&quot;
+  title=&quot;Anchor link for: karabiner-elements&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;pqrs-org&#x2F;Karabiner-Elements&quot;&gt;GitHub&lt;&#x2F;a&gt; | &lt;a href=&quot;https:&#x2F;&#x2F;pqrs.org&#x2F;osx&#x2F;karabiner&#x2F;&quot;&gt;Website&lt;&#x2F;a&gt; &lt;code&gt;brew install karabiner-elements&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I just can&#x27;t get used to Apple&#x27;s international keyboard layout and the tilde being in the bottom left. Karabiner solves that. It&#x27;s a keyboard customizer that allows you to remap keys and create complex modifications.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;mac-open-source&#x2F;karabiner.png&quot; alt=&quot;Karabiner main window&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;keeping-you-awake&quot;&gt;Keeping You Awake&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#keeping-you-awake&quot; aria-label=&quot;Anchor link for: keeping-you-awake&quot;
+  title=&quot;Anchor link for: keeping-you-awake&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;newmarcel&#x2F;KeepingYouAwake&quot;&gt;GitHub&lt;&#x2F;a&gt; | &lt;a href=&quot;https:&#x2F;&#x2F;keepingyouawake.app&#x2F;&quot;&gt;Website&lt;&#x2F;a&gt;
+&lt;code&gt;brew install keepingyouawake&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Prevents your Mac from going to sleep by clicking on its icon in the menu bar. I use it when I&#x27;m running my pen plotter to make sure the laptop doesn&#x27;t go to sleep.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;mac-open-source&#x2F;keeping-you-awake.png&quot; alt=&quot;Keeping You Awake&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;maccy&quot;&gt;Maccy&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#maccy&quot; aria-label=&quot;Anchor link for: maccy&quot;
+  title=&quot;Anchor link for: maccy&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;p0deje&#x2F;Maccy&quot;&gt;GitHub&lt;&#x2F;a&gt; | &lt;a href=&quot;https:&#x2F;&#x2F;maccy.app&#x2F;&quot;&gt;Website&lt;&#x2F;a&gt;
+&lt;code&gt;brew install maccy&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;A clipboard manager. It saves your clipboard history and allows you to quickly access it.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;mac-open-source&#x2F;maccy.png&quot; alt=&quot;Keeping You Awake&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;maestral&quot;&gt;Maestral&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#maestral&quot; aria-label=&quot;Anchor link for: maestral&quot;
+  title=&quot;Anchor link for: maestral&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;samschott&#x2F;maestral&quot;&gt;GitHub&lt;&#x2F;a&gt; | &lt;a href=&quot;https:&#x2F;&#x2F;maestral.app&#x2F;&quot;&gt;Website&lt;&#x2F;a&gt;
+&lt;code&gt;brew install maestral&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;A lightweight Dropbox client. The official Dropbox app has become bloated over the years, and Maestral is a great alternative.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;mac-open-source&#x2F;maestral.png&quot; alt=&quot;Maestral&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;openinterminal&quot;&gt;OpenInTerminal&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#openinterminal&quot; aria-label=&quot;Anchor link for: openinterminal&quot;
+  title=&quot;Anchor link for: openinterminal&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Ji4n1ng&#x2F;OpenInTerminal&quot;&gt;GitHub&lt;&#x2F;a&gt;
+&lt;code&gt;brew install openinterminal&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;A Finder extension that allows you to open the current directory in a terminal or a code editor.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;mac-open-source&#x2F;open-in-terminal.png&quot; alt=&quot;OpenInTerminal Finder extension&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;pearcleaner&quot;&gt;Pearcleaner&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#pearcleaner&quot; aria-label=&quot;Anchor link for: pearcleaner&quot;
+  title=&quot;Anchor link for: pearcleaner&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alienator88&#x2F;Pearcleaner&quot;&gt;GitHub&lt;&#x2F;a&gt; | &lt;a href=&quot;https:&#x2F;&#x2F;itsalin.com&#x2F;appInfo&#x2F;?id=pearcleaner&quot;&gt;Website&lt;&#x2F;a&gt; &lt;code&gt;brew install pearcleaner&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;An app remover that lets you select an app and finds all of its files, allowing you to remove it in a single click.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;mac-open-source&#x2F;pearcleaner.png&quot; alt=&quot;Pearcleaner main window&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;pika&quot;&gt;Pika&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#pika&quot; aria-label=&quot;Anchor link for: pika&quot;
+  title=&quot;Anchor link for: pika&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;superhighfives&#x2F;pika&quot;&gt;GitHub&lt;&#x2F;a&gt; | &lt;a href=&quot;https:&#x2F;&#x2F;superhighfives.com&#x2F;pika&quot;&gt;Website&lt;&#x2F;a&gt;
+&lt;code&gt;brew install pika&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;A system-wide color picker. I&#x27;m &lt;em&gt;picky&lt;&#x2F;em&gt; when it comes to these, and Pika works in the way I expect a color picker to work.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;mac-open-source&#x2F;pika.png&quot; alt=&quot;Pika window and eyedropper&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;rectangle&quot;&gt;Rectangle&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#rectangle&quot; aria-label=&quot;Anchor link for: rectangle&quot;
+  title=&quot;Anchor link for: rectangle&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rxhanson&#x2F;Rectangle&quot;&gt;GitHub&lt;&#x2F;a&gt; | &lt;a href=&quot;https:&#x2F;&#x2F;rectangleapp.com&#x2F;&quot;&gt;Website&lt;&#x2F;a&gt;
+&lt;code&gt;brew install rectangle&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;A window tiling app and successor to Spectacle. Allows you to move and tile windows using keyboard shortcuts.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;mac-open-source&#x2F;rectangle.png&quot; alt=&quot;Rectangle settings window&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;bash&quot;&gt;Bash&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#bash&quot; aria-label=&quot;Anchor link for: bash&quot;
+  title=&quot;Anchor link for: bash&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;You might also want to check out the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ibraheemdev&#x2F;modern-unix&quot;&gt;Modern Unix&lt;&#x2F;a&gt; repository, which contains modern alternatives to many traditional Unix commands.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;dust&quot;&gt;dust&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#dust&quot; aria-label=&quot;Anchor link for: dust&quot;
+  title=&quot;Anchor link for: dust&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bootandy&#x2F;dust&quot;&gt;GitHub&lt;&#x2F;a&gt; &lt;code&gt;brew install dust&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;A program that estimates file space usage in the current directory.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;mac-open-source&#x2F;dust.png&quot; alt=&quot;dust running in terminal&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;ripgrep&quot;&gt;ripgrep&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#ripgrep&quot; aria-label=&quot;Anchor link for: ripgrep&quot;
+  title=&quot;Anchor link for: ripgrep&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;BurntSushi&#x2F;ripgrep&quot;&gt;GitHub&lt;&#x2F;a&gt; &lt;code&gt;brew install ripgrep&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Ripgrep recursively searches the current folder using regular expressions. I don&#x27;t use it often, but when I need it, I&#x27;m really thankful it exists.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tio&quot;&gt;tio&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#tio&quot; aria-label=&quot;Anchor link for: tio&quot;
+  title=&quot;Anchor link for: tio&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tio&#x2F;tio&quot;&gt;GitHub&lt;&#x2F;a&gt; &lt;code&gt;brew install tio&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;A serial device I&#x2F;O tool, a replacement for the screen command. I&#x27;m not using it&#x27;s advanced features, but I loved the auto-reconnect feature while working on my &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;stanko&#x2F;retro-frame&quot;&gt;Retro Frame&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;zoxide&quot;&gt;zoxide&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#zoxide&quot; aria-label=&quot;Anchor link for: zoxide&quot;
+  title=&quot;Anchor link for: zoxide&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ajeetdsouza&#x2F;zoxide&quot;&gt;GitHub&lt;&#x2F;a&gt; &lt;code&gt;brew install zoxide&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;In my previous post, I mentioned that autojump is pure awesomeness. Well, zoxide is pretty much the same thing, but faster.&lt;&#x2F;p&gt;
+&lt;p&gt;Both let you jump around the system using fuzzy search, and prioritize the directories you visit more often. If I didn&#x27;t explain it well, just check the gif on it&#x27;s &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ajeetdsouza&#x2F;zoxide&quot;&gt;GitHub page&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;I hope you found a few you like!&lt;&#x2F;p&gt;
+&lt;script&gt;
+  if (navigator.clipboard) {
+    document.querySelectorAll(&#x27;.content code&#x27;).forEach(code =&gt; {
+      const text = code.innerText;
+      const button = document.createElement(&#x27;button&#x27;);
+      let timeout;
+      button.addEventListener(&#x27;click&#x27;, () =&gt; {
+        clearTimeout(timeout);
+        navigator.clipboard.writeText(text).then(() =&gt; {
+          button.innerText = &#x27;Coppied&#x27;;
+        }, () =&gt; {
+          button.innerText = &#x27;Error, try again&#x27;;
+        }).finally(() =&gt; {
+          timeout = setTimeout(() =&gt; {
+            button.innerText = &#x27;Copy&#x27;;
+          }, 3000);
+        });
+      });
+      button.classList.add(&#x27;copy-button&#x27;)
+      button.innerText = &#x27;Copy&#x27;;
+      code.appendChild(button);
+    });
+  }
+&lt;&#x2F;script&gt;
+
+    </content>
+
+	</entry>
 	<entry xml:lang="en">
 		<title>Node.js script to run multiple commands in parallel</title>
 		<published>2024-06-13T00:00:00+00:00</published>
