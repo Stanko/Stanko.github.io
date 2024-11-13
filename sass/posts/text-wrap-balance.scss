@@ -1,0 +1,81 @@
+.demo:has(input:checked) .demo-text {
+  text-wrap: balance;
+}
+
+.demo label {
+  display: flex;
+  gap: 8rem;
+  align-items: center;
+}
+
+.demo code {
+  font-size: 0.9em;
+  color: var(--neutral-600);
+  color: var(--theme-color);
+}
+
+.demo-text {
+  font-size: 24rem;
+  color: var(--neutral-500);
+}
+
+.demo-text-example {
+  border: 1px solid var(--neutral-200);
+  width: fit-content;
+  padding: 20rem;
+}
+
+.demo-text:not(:last-child) {
+  margin-bottom: 20rem;
+}
+
+.orphan-icon {
+  color: var(--theme-color);
+  position: relative;
+  top: 4rem;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+.demo-resize {
+  margin: 10rem 0 20rem;
+  position: relative;
+  border: 1px solid var(--neutral-100);
+  padding: 20rem;
+  padding-right: 44rem; // padding 20rem + handle width 24rem
+}
+
+.demo-resize-handle {
+  width: 24rem;
+  cursor: ew-resize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 0;
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  right: -24rem;
+  background: var(--neutral-50);
+  color: var(--neutral-400);
+  border: 1px solid currentColor;
+  transition: color 250ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &:hover {
+    color: var(--neutral-700);
+  }
+}
+
+.demo-resize-handle span {
+  width: 3rem;
+  height: 100%;
+  max-height: 40rem;
+  border-radius: 100rem;
+  background: currentColor;
+}

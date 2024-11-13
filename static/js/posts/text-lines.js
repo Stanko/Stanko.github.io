@@ -62,7 +62,11 @@ exampleElements.forEach((exampleElement) => {
   let resizeValue = 0;
 
   function handleDragStart(e) {
-    if (e.clientX || (e.touches && e.touches.length === 1)) {
+    if (e.touches && e.touches.length > 1) {
+      return;
+    }
+
+    if (e.clientX || (e.touches && e.touches[0])) {
       isDragging = true;
       document.body.classList.add("no-select");
       startX = e.clientX || e.touches[0].clientX;
@@ -70,7 +74,7 @@ exampleElements.forEach((exampleElement) => {
   }
 
   function handleDrag(e) {
-    const isValid = e.clientX || (e.touches && e.touches.length === 1);
+    const isValid = e.clientX || (e.touches && e.touches[0]);
 
     if (isDragging && isValid) {
       let clientX = e.clientX || e.touches[0].clientX;

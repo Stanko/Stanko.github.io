@@ -8,6 +8,7 @@
 .example {
   margin-bottom: 20rem;
   position: relative;
+  padding-right: 24rem; // handle width
 }
 
 .example--debug {
@@ -58,8 +59,7 @@
 }
 
 .example-handle {
-  width: 16rem;
-  height: calc(100% + 2px);
+  width: 24rem;
   cursor: ew-resize;
   display: flex;
   align-items: center;
@@ -67,7 +67,8 @@
   padding: 8rem 0;
   position: absolute;
   top: -1px;
-  right: -16rem;
+  bottom: -1px;
+  right: -24rem;
   background: #fff;
   color: #ccc;
   border: 1px solid currentColor;
