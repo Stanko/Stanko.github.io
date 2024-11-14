@@ -59,6 +59,7 @@
   transition: color $time;
   margin-bottom: 6rem;
   text-wrap: balance; // to make sure the arrow doesn't fall on a new line
+  text-wrap: pretty;
 
   span {
     @include text-gradient;

@@ -36,17 +36,42 @@ text-wrap: balance;
 
 This property tells the browser to wrap the text in a way that best balances the number of characters on each line, enhancing layout quality and legibility. The browser will calculate this for us, preventing orphaned icons or words.
 
+### text-wrap: pretty
+
+There is also the [pretty](https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap#pretty) value for text-wrap, which is even better. It works in a similar way, but the browser will use a slower algorithm that prioritizes better layout over speed.
+
+Unfortunately, at the time of writing, `pretty` is not supported in Firefox nor Safari. However, you can define both values, and browsers that don't support `pretty` will fall back to `balance`.
+
+```css
+text-wrap: balance;
+text-wrap: pretty; /* This will be ignored by browsers that don't support it. */
+```
+
 ### Demo
 
 Here's a simple demo. Use the handle on the right to resize the element and see how text breaks with and without the `balance` property applied.
 
 <div class="demo">
 <label>
-<input type="checkbox" >
-<span>
-Apply <code>text-wrap: balance;</code>
-</span>
+<input type="radio" name="wrap" value="wrap" checked>
+Default
 </label>
+
+<label>
+<input type="radio" name="wrap" value="balance">
+<code>text-wrap: <span>balance</span></code>
+</label>
+
+<label class="pretty-label">
+<input type="radio" name="wrap" value="pretty">
+<div>
+<code>text-wrap: <span>pretty</span></code>
+</div>
+</label>
+
+<div class="pretty-notice notice">
+Unfortunately your browser doesn't support <code>text-wrap: pretty</code>.
+</div>
 
 <div class="demo-resize">
 <div class="demo-resize-handle" title="Drag to resize"><span></span></div>
@@ -70,58 +95,64 @@ A somewhat longer text that will break into multiple lines
 
 
 <script>
-const exampleElements = document.querySelectorAll(".demo-resize");
+const radios = document.querySelectorAll('input[type=radio]');
 
-let windowWidth = window.innerWidth;
+const resizable = document.querySelector('.demo-resize');
+const handle = resizable.querySelector('.demo-resize-handle');
 
-exampleElements.forEach((exampleElement) => {
-  const handleElement = exampleElement.querySelector(".demo-resize-handle");
+radios.forEach((radio) => {
+  radio.addEventListener('input', () => {
+    if (radio.checked) {
+      resizable.className = `demo-resize ${radio.value}`;
+    }
+  });
+});
 
-  let startX;
-  let isDragging;
-  let resizeValue = 0;
+let startX;
+let isDragging;
+let resizeValue = 0;
 
-  function handleDragStart(e) {
-    if (e.touches && e.touches.length > 1) {
+function handleDragStart(e) {
+  if (e.touches && e.touches.length > 1) {
+    return;
+  }
+
+  if (e.clientX || (e.touches && e.touches[0])) {
+    isDragging = true;
+    document.body.classList.add('no-select');
+    startX = e.clientX || e.touches[0].clientX;
+  }
+}
+
+function handleDrag(e) {
+  const isValid = e.clientX || (e.touches && e.touches[0]);
+
+  if (isDragging && isValid) {
+    let clientX = e.clientX || e.touches[0].clientX;
+    const delta = clientX - startX;
+
+    if (delta < 0 && resizable.clientWidth <= 100) {
       return;
     }
 
-    if (e.clientX || (e.touches && e.touches[0])) {
-      isDragging = true;
-      document.body.classList.add("no-select");
-      startX = e.clientX || e.touches[0].clientX;
-    }
+    resizeValue += delta;
+    startX = clientX;
+
+    resizable.style.width = `calc(100% + ${resizeValue}px)`;
   }
+}
 
-  function handleDrag(e) {
-    const isValid = e.clientX || (e.touches && e.touches[0]);
+function handleDragEnd() {
+  isDragging = false;
+  document.body.classList.remove('no-select');
+}
 
-    if (isDragging && isValid) {
-      let clientX = e.clientX || e.touches[0].clientX;
-      const delta = clientX - startX;
+handle.addEventListener('mousedown', handleDragStart);
+window.addEventListener('mousemove', handleDrag);
+window.addEventListener('mouseup', handleDragEnd);
 
-      if (delta < 0 && exampleElement.clientWidth <= 100) {
-        return;
-      }
+handle.addEventListener('touchstart', handleDragStart);
+window.addEventListener('touchmove', handleDrag);
+window.addEventListener('touchend', handleDragEnd);
 
-      resizeValue += delta;
-      startX = clientX;
-
-      exampleElement.style.width = `calc(100% + ${resizeValue}px)`;
-    }
-  }
-
-  function handleDragEnd() {
-    isDragging = false;
-    document.body.classList.remove("no-select");
-  }
-
-  handleElement.addEventListener("mousedown", handleDragStart);
-  window.addEventListener("mousemove", handleDrag);
-  window.addEventListener("mouseup", handleDragEnd);
-
-  handleElement.addEventListener("touchstart", handleDragStart);
-  window.addEventListener("touchmove", handleDrag);
-  window.addEventListener("touchend", handleDragEnd);
-});
 </script>

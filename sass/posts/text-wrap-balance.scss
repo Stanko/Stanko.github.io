@@ -1,22 +1,46 @@
-.demo:has(input:checked) .demo-text {
-  text-wrap: balance;
-}
-
 .demo label {
   display: flex;
   gap: 8rem;
-  align-items: center;
 }
 
 .demo code {
   font-size: 0.9em;
   color: var(--neutral-600);
+}
+
+.demo code span {
   color: var(--theme-color);
+}
+
+.pretty-notice {
+  margin: 10rem 0 15rem;
+}
+
+.pretty-label {
+  opacity: 0.5;
+}
+
+@supports (text-wrap: pretty) {
+  .pretty-notice {
+    display: none;
+  }
+
+  .pretty-label {
+    opacity: 1;
+  }
 }
 
 .demo-text {
   font-size: 24rem;
   color: var(--neutral-500);
+}
+
+.balance .demo-text {
+  text-wrap: balance;
+}
+
+.pretty .demo-text {
+  text-wrap: pretty;
 }
 
 .demo-text-example {
@@ -57,7 +81,7 @@
   position: absolute;
   top: -1px;
   bottom: -1px;
-  right: -24rem;
+  right: 0;
   background: var(--neutral-50);
   color: var(--neutral-400);
   border: 1px solid currentColor;

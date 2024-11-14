@@ -39,6 +39,7 @@
   @include header;
   transition: color $time;
   text-wrap: balance; // to make sure the arrow doesn't fall on a new line
+  text-wrap: pretty;
 }
 
 .post-list__date {

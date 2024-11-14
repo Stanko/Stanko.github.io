@@ -66,6 +66,7 @@
   font-weight: bold;
   line-height: 1.3;
   text-wrap: balance; // to make sure the arrow doesn't fall on a new line
+  text-wrap: pretty;
 
   @include md {
     padding: 10rem;
