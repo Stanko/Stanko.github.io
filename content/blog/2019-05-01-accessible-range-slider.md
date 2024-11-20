@@ -4,7 +4,7 @@ aliases = ["/accessible-range-slider/"]
 
 [taxonomies]
 category = ["JavaScript"]
-tags = ["js", "accessibility"]
+tags = ["js", "accessibility", "range", "input"]
 
 [extra]
 image = "/img/range-slider.png"

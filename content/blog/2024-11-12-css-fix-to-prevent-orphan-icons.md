@@ -2,7 +2,7 @@
 title = "CSS fix to <span>prevent orphan icons</span> dropping to a new line"
 
 [taxonomies]
-category = ["Random"]
+category = ["CSS/SASS"]
 tags = ["css", "sass"]
 
 [extra]

@@ -1,5 +1,5 @@
 +++
-title = "Node.js script to run <span>multiple commands in parallel</span>"
+title = "Node.js script to run <span>multiple commands</span> in parallel"
 
 [taxonomies]
 category = ["JavaScript"]

@@ -2,7 +2,7 @@
 title = "CSS only <span>floating labels</span>"
 
 [taxonomies]
-category = ["SCSS/CSS"]
+category = ["CSS/SASS"]
 tags = ["css", "input", "placeholder", "clear"]
 
 [extra]

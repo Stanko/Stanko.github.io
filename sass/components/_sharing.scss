@@ -19,48 +19,71 @@
   width: 36rem;
   flex-shrink: 0;
 
+  &:focus-visible {
+    outline-color: currentColor;
+  }
+
   svg {
+    fill: currentColor;
     display: block;
     overflow: visible;
   }
 }
 
 .sharing__button--twitter {
-  border-color: #00abf1;
+  color: #00abf1;
+  border-color: currentColor;
 
   svg {
-    fill: #00abf1;
     transform: translateY(1rem);
     height: 18rem;
   }
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     background: rgba(#00abf1, 0.1);
   }
 }
 
-.sharing__button--reddit {
-  border-color: #fc451e;
+.sharing__button--bluesky {
+  color: #3d83f6;
+  border-color: currentColor;
 
   svg {
-    fill: #fc451e;
+    transform: translateY(1rem);
+    height: 16rem;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background: rgba(#3d83f6, 0.1);
+  }
+}
+
+.sharing__button--reddit {
+  color: #fc451e;
+  border-color: currentColor;
+
+  svg {
     height: 20rem;
   }
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     background: rgba(#fc451e, 0.1);
   }
 }
 
 .sharing__button--hn {
-  border-color: #fb651e;
+  color: #fb651e;
+  border-color: currentColor;
 
   svg {
-    fill: #fb651e;
     height: 14rem;
   }
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     background: rgba(#fb651e, 0.1);
   }
 }
