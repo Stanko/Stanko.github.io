@@ -1,5 +1,5 @@
 +++
-title = "I have a trillion ideas."
+title = "I have a trillion ideas"
 aliases = ["/trillion-ideas/"]
 
 [taxonomies]

@@ -25,13 +25,13 @@ note="On desktop, you should be able to resize each image on it's own by draggin
 ) }}, and you'll see that the bottom line always stays 1px, while the upper one scales with the image:
 
 <div class="resize">
-  <svg
-    aria-label="Example of vector-effect='non-scaling-stroke'"
-    viewBox="0 0 200 30"
-  >
-    <path d="M 0 5 200 5" fill="none" stroke="black" />
-    <path d="M 0 25 200 25" fill="none" stroke="black" vector-effect="non-scaling-stroke" />
-  </svg>
+<svg
+  aria-label="Example of vector-effect='non-scaling-stroke'"
+  viewBox="0 0 200 30"
+>
+<path d="M 0 5 200 5" fill="none" stroke="black"></path>
+<path d="M 0 25 200 25" fill="none" stroke="black" vector-effect="non-scaling-stroke"></path>
+</svg>
 </div>
 
 ## Stroke line cap
@@ -43,12 +43,12 @@ SVG also allows you to change how your line's ends look like, by using [stroke-l
   style="background: white; padding: 30rem;"
   viewBox="0 0 200 100" class="image"
 >
-<path d="M 10 10 l 180 0" stroke="black" stroke-linecap="butt" stroke-width="20" />
-<path d="M 10 10 l 180 0" stroke="#e6a03c" />
-<path d="M 10 50 l 180 0" stroke="black" stroke-linecap="square" stroke-width="20" />
-<path d="M 10 50 l 180 0" stroke="#e6a03c" />
-<path d="M 10 90 l 180 0" stroke="black" stroke-linecap="round" stroke-width="20" />
-<path d="M 10 90 l 180 0" stroke="#e6a03c" />
+<path d="M 10 10 l 180 0" stroke="black" stroke-linecap="butt" stroke-width="20"></path>
+<path d="M 10 10 l 180 0" stroke="#e6a03c"></path>
+<path d="M 10 50 l 180 0" stroke="black" stroke-linecap="square" stroke-width="20"></path>
+<path d="M 10 50 l 180 0" stroke="#e6a03c"></path>
+<path d="M 10 90 l 180 0" stroke="black" stroke-linecap="round" stroke-width="20"></path>
+<path d="M 10 90 l 180 0" stroke="#e6a03c"></path>
 </svg>
 
 As you can see `square` and `round` line caps are sticking out of our line. You probably figured it out, but that is exactly what we are going to use to create non-scaling circles and rectangles.
@@ -85,7 +85,7 @@ The code below will create a black circle with a radius of 50 and center at `{ x
   stroke-width="100"
   stroke-linecap="round"
   stroke="black"
-/>
+></path>
 </svg>
 
 Let me quickly break the code down:
@@ -122,46 +122,46 @@ On the left are
 
 
 <div class="resize">
-  <svg
-    aria-label="Example of filled non-scaling circle next to the standard scaling one"
-    viewBox="0 0 200 100"
-  >
-    <circle
-      cx="50"
-      cy="50"
-      r="50"
-      fill="#2980b9"
-    />
-    <path
-      stroke="#2980b9"
-      d="M 150 50 l 0.0001 0"
-      stroke-linecap="round"
-      stroke-width="100"
-      vector-effect="non-scaling-stroke"
-    />
-  </svg>
+<svg
+aria-label="Example of filled non-scaling circle next to the standard scaling one"
+viewBox="0 0 200 100"
+>
+<circle
+  cx="50"
+  cy="50"
+  r="50"
+  fill="#2980b9"
+></circle>
+<path
+  stroke="#2980b9"
+  d="M 150 50 l 0.0001 0"
+  stroke-linecap="round"
+  stroke-width="100"
+  vector-effect="non-scaling-stroke"
+></path>
+</svg>
 </div>
 
 <div class="resize">
-  <svg
-    aria-label="Example of filled non-scaling rectangle next to the standard scaling one"
-    viewBox="0 0 200 100"
-  >
-    <rect
-      x="10"
-      y="0"
-      width="100"
-      height="100"
-      fill="#16a085"
-    />
-    <path
-      stroke="#16a085"
-      d="M 150 50 l 0.0001 0"
-      vector-effect="non-scaling-stroke"
-      stroke-linecap="square"
-      stroke-width="100"
-    />
-  </svg>
+<svg
+  aria-label="Example of filled non-scaling rectangle next to the standard scaling one"
+  viewBox="0 0 200 100"
+>
+<rect
+  x="10"
+  y="0"
+  width="100"
+  height="100"
+  fill="#16a085"
+></rect>
+<path
+  stroke="#16a085"
+  d="M 150 50 l 0.0001 0"
+  vector-effect="non-scaling-stroke"
+  stroke-linecap="square"
+  stroke-width="100"
+></path>
+</svg>
 </div>
 
 ## Outlined shapes
@@ -190,64 +190,64 @@ Which gives us the following code:
 ```
 
 <div class="resize">
-  <svg
-    aria-label="Example of outlined non-scaling circle next to the standard scaling one"
-    viewBox="0 0 200 100"
-  >
-    <circle
-      cx="50"
-      cy="50"
-      r="50"
-      vector-effect="non-scaling-stroke"
-      stroke="black"
-      fill="none"
-    />
-    <path
-      stroke="black"
-      d="M 150 50 l 0.0001 0"
-      vector-effect="non-scaling-stroke"
-      stroke-linecap="round"
-      stroke-width="100"
-    />
-    <path
-      stroke="white"
-      d="M 150 50 l 0.0001 0"
-      vector-effect="non-scaling-stroke"
-      stroke-linecap="round"
-      stroke-width="98"
-    />
-  </svg>
+<svg
+aria-label="Example of outlined non-scaling circle next to the standard scaling one"
+viewBox="0 0 200 100"
+>
+<circle
+  cx="50"
+  cy="50"
+  r="50"
+  vector-effect="non-scaling-stroke"
+  stroke="black"
+  fill="none"
+></circle>
+<path
+  stroke="black"
+  d="M 150 50 l 0.0001 0"
+  vector-effect="non-scaling-stroke"
+  stroke-linecap="round"
+  stroke-width="100"
+></path>
+<path
+  stroke="white"
+  d="M 150 50 l 0.0001 0"
+  vector-effect="non-scaling-stroke"
+  stroke-linecap="round"
+  stroke-width="98"
+></path>
+</svg>
 </div>
 
 <div class="resize">
-  <svg
-    viewBox="0 0 200 100"
-    aria-label="Example of outlined non-scaling rectangle next to the standard scaling one"
-  >
-    <rect
-      x="10"
-      y="0"
-      width="100"
-      height="100"
-      vector-effect="non-scaling-stroke"
-      stroke="black"
-      fill="none"
-    />
-    <path
-      stroke="black"
-      d="M 150 50 l 0.0001 0"
-      vector-effect="non-scaling-stroke"
-      stroke-linecap="square"
-      stroke-width="100"
-    />
-    <path
-      stroke="white"
-      d="M 150 50 l 0.0001 0"
-      vector-effect="non-scaling-stroke"
-      stroke-linecap="square"
-      stroke-width="98"
-    />
-  </svg>
+<svg
+viewBox="0 0 200 100"
+aria-label="Example of outlined non-scaling rectangle next to the standard scaling one"
+>
+<rect
+  x="10"
+  y="0"
+  width="100"
+  height="100"
+  vector-effect="non-scaling-stroke"
+  stroke="black"
+  fill="none"
+></rect>
+<path
+  stroke="black"
+  d="M 150 50 l 0.0001 0"
+  vector-effect="non-scaling-stroke"
+  stroke-linecap="square"
+  stroke-width="100"
+></path>
+<path
+  stroke="white"
+  d="M 150 50 l 0.0001 0"
+  vector-effect="non-scaling-stroke"
+  stroke-linecap="square"
+  stroke-width="98"
+></path>
+</svg>
 </div>
 
 This method is practical for elements that should stay the same when image scales. I already mentioned data points on charts, but it is also useful for map markers.

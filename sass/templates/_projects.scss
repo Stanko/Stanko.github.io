@@ -62,7 +62,7 @@
   text-wrap: pretty;
 
   span {
-    @include text-gradient;
+    color: var(--theme-color);
   }
 }
 

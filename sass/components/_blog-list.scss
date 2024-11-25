@@ -45,7 +45,7 @@
   align-items: center;
 
   span {
-    @include text-gradient;
+    color: var(--theme-color);
   }
 }
 
