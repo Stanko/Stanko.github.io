@@ -3787,13 +3787,13 @@ And yesterday, &lt;a href=&quot;https:&#x2F;&#x2F;techcommunity.microsoft.com&#x
 &gt;&lt;span class=&quot;sidenote__bracket&quot;&gt;(&lt;&#x2F;span&gt;On desktop, you should be able to resize each image on it&#x27;s own by dragging the bottom right corner&lt;span class=&quot;sidenote__bracket&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
 , and you&#x27;ll see that the bottom line always stays 1px, while the upper one scales with the image:&lt;&#x2F;p&gt;
 &lt;div class=&quot;resize&quot;&gt;
-  &lt;svg
-    aria-label=&quot;Example of vector-effect=&#x27;non-scaling-stroke&#x27;&quot;
-    viewBox=&quot;0 0 200 30&quot;
-  &gt;
-    &lt;path d=&quot;M 0 5 200 5&quot; fill=&quot;none&quot; stroke=&quot;black&quot; &#x2F;&gt;
-    &lt;path d=&quot;M 0 25 200 25&quot; fill=&quot;none&quot; stroke=&quot;black&quot; vector-effect=&quot;non-scaling-stroke&quot; &#x2F;&gt;
-  &lt;&#x2F;svg&gt;
+&lt;svg
+  aria-label=&quot;Example of vector-effect=&#x27;non-scaling-stroke&#x27;&quot;
+  viewBox=&quot;0 0 200 30&quot;
+&gt;
+&lt;path d=&quot;M 0 5 200 5&quot; fill=&quot;none&quot; stroke=&quot;black&quot;&gt;&lt;&#x2F;path&gt;
+&lt;path d=&quot;M 0 25 200 25&quot; fill=&quot;none&quot; stroke=&quot;black&quot; vector-effect=&quot;non-scaling-stroke&quot;&gt;&lt;&#x2F;path&gt;
+&lt;&#x2F;svg&gt;
 &lt;&#x2F;div&gt;
 &lt;h2 id=&quot;stroke-line-cap&quot;&gt;Stroke line cap&lt;a
   class=&quot;header-anchor&quot;
@@ -3808,13 +3808,13 @@ style=&quot;background: white; padding: 30rem;&quot;
 viewBox=&quot;0 0 200 100&quot; class=&quot;image&quot;&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;path d=&quot;M 10 10 l 180 0&quot; stroke=&quot;black&quot; stroke-linecap=&quot;butt&quot; stroke-width=&quot;20&quot; &#x2F;&gt;
-&lt;path d=&quot;M 10 10 l 180 0&quot; stroke=&quot;#e6a03c&quot; &#x2F;&gt;
-&lt;path d=&quot;M 10 50 l 180 0&quot; stroke=&quot;black&quot; stroke-linecap=&quot;square&quot; stroke-width=&quot;20&quot; &#x2F;&gt;
-&lt;path d=&quot;M 10 50 l 180 0&quot; stroke=&quot;#e6a03c&quot; &#x2F;&gt;
-&lt;path d=&quot;M 10 90 l 180 0&quot; stroke=&quot;black&quot; stroke-linecap=&quot;round&quot; stroke-width=&quot;20&quot; &#x2F;&gt;
-&lt;path d=&quot;M 10 90 l 180 0&quot; stroke=&quot;#e6a03c&quot; &#x2F;&gt;
-&lt;&#x2F;svg&gt;
+&lt;p&gt;&lt;path d=&quot;M 10 10 l 180 0&quot; stroke=&quot;black&quot; stroke-linecap=&quot;butt&quot; stroke-width=&quot;20&quot;&gt;&lt;&#x2F;path&gt;
+&lt;path d=&quot;M 10 10 l 180 0&quot; stroke=&quot;#e6a03c&quot;&gt;&lt;&#x2F;path&gt;
+&lt;path d=&quot;M 10 50 l 180 0&quot; stroke=&quot;black&quot; stroke-linecap=&quot;square&quot; stroke-width=&quot;20&quot;&gt;&lt;&#x2F;path&gt;
+&lt;path d=&quot;M 10 50 l 180 0&quot; stroke=&quot;#e6a03c&quot;&gt;&lt;&#x2F;path&gt;
+&lt;path d=&quot;M 10 90 l 180 0&quot; stroke=&quot;black&quot; stroke-linecap=&quot;round&quot; stroke-width=&quot;20&quot;&gt;&lt;&#x2F;path&gt;
+&lt;path d=&quot;M 10 90 l 180 0&quot; stroke=&quot;#e6a03c&quot;&gt;&lt;&#x2F;path&gt;
+&lt;&#x2F;svg&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;As you can see &lt;code&gt;square&lt;&#x2F;code&gt; and &lt;code&gt;round&lt;&#x2F;code&gt; line caps are sticking out of our line. You probably figured it out, but that is exactly what we are going to use to create non-scaling circles and rectangles.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;putting-it-all-together&quot;&gt;Putting it all together&lt;a
   class=&quot;header-anchor&quot;
@@ -3846,14 +3846,16 @@ width=&quot;200&quot;
 style=&quot;background: white&quot;&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;path
-  d=&quot;M 50 50 l 0.0001 0&quot;
-  vector-effect=&quot;non-scaling-stroke&quot;
-  stroke-width=&quot;100&quot;
-  stroke-linecap=&quot;round&quot;
-  stroke=&quot;black&quot;
-&#x2F;&gt;
-&lt;&#x2F;svg&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&amp;lt;path
+d=&quot;M 50 50 l 0.0001 0&quot;
+vector-effect=&quot;non-scaling-stroke&quot;
+stroke-width=&quot;100&quot;
+stroke-linecap=&quot;round&quot;
+stroke=&quot;black&quot;&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;&#x2F;path&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;svg&gt;
 &lt;p&gt;Let me quickly break the code down:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;d=&quot;M 50 50 l 0.0001 0&quot;&lt;&#x2F;code&gt; - this creates a super short line. The first two coordinates (&lt;code&gt;M 50 50&lt;&#x2F;code&gt;) are the line&#x27;s start and our circle&#x27;s center. The rest of the code (&lt;code&gt;l 0.0001 0&lt;&#x2F;code&gt;) draws a horizontal
@@ -3909,45 +3911,45 @@ style=&quot;background: white&quot;&lt;&#x2F;p&gt;
 
 , while on the right are non-scaling shapes created using the method I described above. Try resizing your window and you&#x27;ll see that the shapes on the right always stay the same size, no matter the image size.&lt;&#x2F;p&gt;
 &lt;div class=&quot;resize&quot;&gt;
-  &lt;svg
-    aria-label=&quot;Example of filled non-scaling circle next to the standard scaling one&quot;
-    viewBox=&quot;0 0 200 100&quot;
-  &gt;
-    &lt;circle
-      cx=&quot;50&quot;
-      cy=&quot;50&quot;
-      r=&quot;50&quot;
-      fill=&quot;#2980b9&quot;
-    &#x2F;&gt;
-    &lt;path
-      stroke=&quot;#2980b9&quot;
-      d=&quot;M 150 50 l 0.0001 0&quot;
-      stroke-linecap=&quot;round&quot;
-      stroke-width=&quot;100&quot;
-      vector-effect=&quot;non-scaling-stroke&quot;
-    &#x2F;&gt;
-  &lt;&#x2F;svg&gt;
+&lt;svg
+aria-label=&quot;Example of filled non-scaling circle next to the standard scaling one&quot;
+viewBox=&quot;0 0 200 100&quot;
+&gt;
+&lt;circle
+  cx=&quot;50&quot;
+  cy=&quot;50&quot;
+  r=&quot;50&quot;
+  fill=&quot;#2980b9&quot;
+&gt;&lt;&#x2F;circle&gt;
+&lt;path
+  stroke=&quot;#2980b9&quot;
+  d=&quot;M 150 50 l 0.0001 0&quot;
+  stroke-linecap=&quot;round&quot;
+  stroke-width=&quot;100&quot;
+  vector-effect=&quot;non-scaling-stroke&quot;
+&gt;&lt;&#x2F;path&gt;
+&lt;&#x2F;svg&gt;
 &lt;&#x2F;div&gt;
 &lt;div class=&quot;resize&quot;&gt;
-  &lt;svg
-    aria-label=&quot;Example of filled non-scaling rectangle next to the standard scaling one&quot;
-    viewBox=&quot;0 0 200 100&quot;
-  &gt;
-    &lt;rect
-      x=&quot;10&quot;
-      y=&quot;0&quot;
-      width=&quot;100&quot;
-      height=&quot;100&quot;
-      fill=&quot;#16a085&quot;
-    &#x2F;&gt;
-    &lt;path
-      stroke=&quot;#16a085&quot;
-      d=&quot;M 150 50 l 0.0001 0&quot;
-      vector-effect=&quot;non-scaling-stroke&quot;
-      stroke-linecap=&quot;square&quot;
-      stroke-width=&quot;100&quot;
-    &#x2F;&gt;
-  &lt;&#x2F;svg&gt;
+&lt;svg
+  aria-label=&quot;Example of filled non-scaling rectangle next to the standard scaling one&quot;
+  viewBox=&quot;0 0 200 100&quot;
+&gt;
+&lt;rect
+  x=&quot;10&quot;
+  y=&quot;0&quot;
+  width=&quot;100&quot;
+  height=&quot;100&quot;
+  fill=&quot;#16a085&quot;
+&gt;&lt;&#x2F;rect&gt;
+&lt;path
+  stroke=&quot;#16a085&quot;
+  d=&quot;M 150 50 l 0.0001 0&quot;
+  vector-effect=&quot;non-scaling-stroke&quot;
+  stroke-linecap=&quot;square&quot;
+  stroke-width=&quot;100&quot;
+&gt;&lt;&#x2F;path&gt;
+&lt;&#x2F;svg&gt;
 &lt;&#x2F;div&gt;
 &lt;h2 id=&quot;outlined-shapes&quot;&gt;Outlined shapes&lt;a
   class=&quot;header-anchor&quot;
@@ -3974,63 +3976,63 @@ style=&quot;background: white&quot;&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-html z-basic&quot;&gt;&lt;span class=&quot;z-meta z-tag z-other z-html&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-tag z-end z-html&quot;&gt;&#x2F;&amp;gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;div class=&quot;resize&quot;&gt;
-  &lt;svg
-    aria-label=&quot;Example of outlined non-scaling circle next to the standard scaling one&quot;
-    viewBox=&quot;0 0 200 100&quot;
-  &gt;
-    &lt;circle
-      cx=&quot;50&quot;
-      cy=&quot;50&quot;
-      r=&quot;50&quot;
-      vector-effect=&quot;non-scaling-stroke&quot;
-      stroke=&quot;black&quot;
-      fill=&quot;none&quot;
-    &#x2F;&gt;
-    &lt;path
-      stroke=&quot;black&quot;
-      d=&quot;M 150 50 l 0.0001 0&quot;
-      vector-effect=&quot;non-scaling-stroke&quot;
-      stroke-linecap=&quot;round&quot;
-      stroke-width=&quot;100&quot;
-    &#x2F;&gt;
-    &lt;path
-      stroke=&quot;white&quot;
-      d=&quot;M 150 50 l 0.0001 0&quot;
-      vector-effect=&quot;non-scaling-stroke&quot;
-      stroke-linecap=&quot;round&quot;
-      stroke-width=&quot;98&quot;
-    &#x2F;&gt;
-  &lt;&#x2F;svg&gt;
+&lt;svg
+aria-label=&quot;Example of outlined non-scaling circle next to the standard scaling one&quot;
+viewBox=&quot;0 0 200 100&quot;
+&gt;
+&lt;circle
+  cx=&quot;50&quot;
+  cy=&quot;50&quot;
+  r=&quot;50&quot;
+  vector-effect=&quot;non-scaling-stroke&quot;
+  stroke=&quot;black&quot;
+  fill=&quot;none&quot;
+&gt;&lt;&#x2F;circle&gt;
+&lt;path
+  stroke=&quot;black&quot;
+  d=&quot;M 150 50 l 0.0001 0&quot;
+  vector-effect=&quot;non-scaling-stroke&quot;
+  stroke-linecap=&quot;round&quot;
+  stroke-width=&quot;100&quot;
+&gt;&lt;&#x2F;path&gt;
+&lt;path
+  stroke=&quot;white&quot;
+  d=&quot;M 150 50 l 0.0001 0&quot;
+  vector-effect=&quot;non-scaling-stroke&quot;
+  stroke-linecap=&quot;round&quot;
+  stroke-width=&quot;98&quot;
+&gt;&lt;&#x2F;path&gt;
+&lt;&#x2F;svg&gt;
 &lt;&#x2F;div&gt;
 &lt;div class=&quot;resize&quot;&gt;
-  &lt;svg
-    viewBox=&quot;0 0 200 100&quot;
-    aria-label=&quot;Example of outlined non-scaling rectangle next to the standard scaling one&quot;
-  &gt;
-    &lt;rect
-      x=&quot;10&quot;
-      y=&quot;0&quot;
-      width=&quot;100&quot;
-      height=&quot;100&quot;
-      vector-effect=&quot;non-scaling-stroke&quot;
-      stroke=&quot;black&quot;
-      fill=&quot;none&quot;
-    &#x2F;&gt;
-    &lt;path
-      stroke=&quot;black&quot;
-      d=&quot;M 150 50 l 0.0001 0&quot;
-      vector-effect=&quot;non-scaling-stroke&quot;
-      stroke-linecap=&quot;square&quot;
-      stroke-width=&quot;100&quot;
-    &#x2F;&gt;
-    &lt;path
-      stroke=&quot;white&quot;
-      d=&quot;M 150 50 l 0.0001 0&quot;
-      vector-effect=&quot;non-scaling-stroke&quot;
-      stroke-linecap=&quot;square&quot;
-      stroke-width=&quot;98&quot;
-    &#x2F;&gt;
-  &lt;&#x2F;svg&gt;
+&lt;svg
+viewBox=&quot;0 0 200 100&quot;
+aria-label=&quot;Example of outlined non-scaling rectangle next to the standard scaling one&quot;
+&gt;
+&lt;rect
+  x=&quot;10&quot;
+  y=&quot;0&quot;
+  width=&quot;100&quot;
+  height=&quot;100&quot;
+  vector-effect=&quot;non-scaling-stroke&quot;
+  stroke=&quot;black&quot;
+  fill=&quot;none&quot;
+&gt;&lt;&#x2F;rect&gt;
+&lt;path
+  stroke=&quot;black&quot;
+  d=&quot;M 150 50 l 0.0001 0&quot;
+  vector-effect=&quot;non-scaling-stroke&quot;
+  stroke-linecap=&quot;square&quot;
+  stroke-width=&quot;100&quot;
+&gt;&lt;&#x2F;path&gt;
+&lt;path
+  stroke=&quot;white&quot;
+  d=&quot;M 150 50 l 0.0001 0&quot;
+  vector-effect=&quot;non-scaling-stroke&quot;
+  stroke-linecap=&quot;square&quot;
+  stroke-width=&quot;98&quot;
+&gt;&lt;&#x2F;path&gt;
+&lt;&#x2F;svg&gt;
 &lt;&#x2F;div&gt;
 &lt;p&gt;This method is practical for elements that should stay the same when image scales. I already mentioned data points on charts, but it is also useful for map markers.&lt;&#x2F;p&gt;
 &lt;p&gt;It might even be possible to create more complex elements combining multiple paths, but I haven&#x27;t really looked into it.&lt;&#x2F;p&gt;
@@ -11034,7 +11036,7 @@ If you do, please share your blog in the comments.&lt;&#x2F;p&gt;
 
 	</entry>
 	<entry xml:lang="en">
-		<title>I have a trillion ideas.</title>
+		<title>I have a trillion ideas</title>
 		<published>2017-09-27T00:00:00+00:00</published>
 		<updated>2017-09-27T00:00:00+00:00</updated>
 		<link href="https://muffinman.io/blog/trillion-ideas/" type="text/html"/>
