@@ -47,4 +47,10 @@
   margin-top: 10rem;
   color: var(--text-light);
   max-width: 22em;
+  text-wrap: pretty;
+}
+
+.page__intro--small {
+  font-size: 0.8em;
+  max-width: 30em;
 }

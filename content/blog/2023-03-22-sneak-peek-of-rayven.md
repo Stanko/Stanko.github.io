@@ -9,6 +9,7 @@ tags = ["js", "svg", "3d", "raytracing", "generative", "vector-fields"]
 intro = "I want to give you a little preview of my 3D renderer which hatches a scene using vector lines."
 image = "/img/rayven/cover.png"
 theme = "purple"
+favorite = true
 
 +++
 

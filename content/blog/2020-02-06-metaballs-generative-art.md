@@ -8,6 +8,7 @@ tags = ["svg", "generative", "threejs", "js", "metaballs"]
 
 [extra]
 image = "/img/metaballs/05a.png"
+favorite = true
 +++
 
 I'm all about generative art these days. Today, I present you [Metaballs](/metaballs/), my latest creation. It is one of those projects that I visualized in my head and managed to pull it off exactly how I imagined it.

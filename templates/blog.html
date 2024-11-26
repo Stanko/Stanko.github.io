@@ -11,8 +11,17 @@
     {% set all_posts = get_section(path="blog/_index.md") %}
 
     <p class="page__intro">
-      Here are all {{ all_posts.pages | length }} of my posts, in chronological order.
-      For categories check <a href="/archive/">the archive</a>.
+      {# I started writing in february #}
+      {% set months_to_subtract = 2 %}
+      {% set current_year_months = now() | date(format='%m') | int %}
+      {% set current_year = now() | date(format='%Y') | int %}
+      {# I started writing in february 2016. #}
+      {% set total_months = (current_year - 2016) * 12 + current_year_months - months_to_subtract %}
+      All {{ all_posts.pages | length }} posts
+      I've written over the last {{ total_months / 12.0 | round }} years, in chronological order.
+    </p>
+    <p class="page__intro page__intro--small">
+      <span class="favorite">❋</span> Posts marked with the star symbol are my personal favorites.
     </p>
   </div>
 </div>
@@ -53,7 +62,7 @@
   {% endif %}
 
   <a href="{{ post.permalink }}" class="blog-years__post {% if post.extra.theme %}{{ post.extra.theme }}{% endif %}">
-    {{ post.title | safe }}{% include "partials/svg-post-arrow.html" %}
+    {% include "partials/post-title.html" %}
   </a>
 
 {% endfor %}

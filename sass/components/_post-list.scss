@@ -1,24 +1,15 @@
 .post-list__post {
   display: block;
   color: var(--text-color);
-  padding: 10rem 0;
+  padding: 5rem 0;
   border-radius: $radius-xs;
 
   &:hover {
-    background-color: var(--neutral-100);
+    color: var(--theme-color);
   }
 
   &:focus {
     background-color: var(--neutral-50);
-    outline: none;
-
-    .post-list__title {
-      color: var(--theme-color);
-    }
-  }
-
-  span {
-    color: var(--theme-color);
   }
 }
 

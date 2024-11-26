@@ -7,6 +7,7 @@ category = ["Random"]
 tags = ["random"]
 
 [extra]
+favorite = true
 
 +++
 

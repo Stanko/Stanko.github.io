@@ -7,6 +7,7 @@ category = ["CSS/SASS"]
 tags = ["css", "svg", "animation"]
 
 [extra]
+favorite = true
 
 +++
 

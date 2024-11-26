@@ -11,10 +11,11 @@ comments = [
   "comments/letters-from-sarajevo/1595253580749.toml"
 ]
 image = "/img/letters-from-sarajevo/book.jpg"
+favorite = true
 +++
 
 
-Today. I have a very personal project to share with you all.
+Today I have a very personal project to share with you all.
 
 [Letters from Sarajevo](https://lettersfromsarajevo.com/) is a web adaptation of the book of the same name. My brother wrote the book using authentic letters our father sent us while being stuck in Sarajevo during the war in the nineties.
 

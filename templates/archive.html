@@ -20,18 +20,13 @@
     </h1>
 
     {% set all_posts = get_section(path="blog/_index.md") %}
+    {% set categories = get_taxonomy(kind="category") %}
 
     <p class="page__intro">
-      {% set categories = get_taxonomy(kind="category") %}
-      {# I started writing in february #}
-      {% set months_to_subtract = 2 %}
-      {% set current_year_months = now() | date(format='%m') | int %}
-      {% set current_year = now() | date(format='%Y') | int %}
-      {# I started writing in february 2016. #}
-      {% set total_months = (current_year - 2016) * 12 + current_year_months %}
-      Over the last {{ total_months / 12.0 | round }} years I've written
-      {{ all_posts.pages | length }} posts and here they are sorted in
-      {{ categories.items | length }} categories.
+      All {{ all_posts.pages | length }} posts, sorted in categories.<br>
+    </p>
+    <p class="page__intro page__intro--small">
+      <span class="favorite">❋</span> Posts marked with the star symbol are my personal favorites.
     </p>
   </div>
 </div>
@@ -73,7 +68,7 @@
         style="transition-duration: {{ 250 + (posts_count * 10) }}ms;"
       >
         <div class="archive__posts-inner">
-          {% for page in category.pages %}
+          {% for post in category.pages %}
             {% include "partials/post-list-post.html" %}
           {% endfor %}
         </div>

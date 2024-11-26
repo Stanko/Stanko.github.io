@@ -9,6 +9,7 @@ tags = ["css", "svg", "input", "giraffe", "caret"]
 intro = "I had some fun customizing HTML input caret and ended up with a tiny animated giraffe."
 image = "/img/giraffe/thumb.png"
 theme = "orange"
+favorite = true
 
 +++
 

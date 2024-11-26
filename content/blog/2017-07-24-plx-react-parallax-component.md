@@ -18,6 +18,7 @@ comments = [
   "comments/plx-react-parallax-component/1572898221633.toml"
 ]
 image = "/img/plx-explode.png"
+favorite = true
 
 +++
 

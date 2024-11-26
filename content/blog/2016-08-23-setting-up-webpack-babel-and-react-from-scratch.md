@@ -7,6 +7,7 @@ category = ["React"]
 tags = ["react", "webpack", "babel"]
 
 [extra]
+favorite = true
 comments = [
   "comments/setting-up-webpack-babel-and-react-from-scratch/1483817149155.toml",
   "comments/setting-up-webpack-babel-and-react-from-scratch/1483820394131.toml",

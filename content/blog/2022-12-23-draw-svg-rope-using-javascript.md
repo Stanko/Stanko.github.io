@@ -8,6 +8,7 @@ tags = ["js", "svg", "drawing", "rope", "interactive"]
 [extra]
 intro = ""
 image = "/img/rope/cover.png"
+favorite = true
 
 +++
 <link rel="stylesheet" href="/posts/rope.css" />

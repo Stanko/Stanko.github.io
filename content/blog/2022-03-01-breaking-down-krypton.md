@@ -9,7 +9,7 @@ tags = ["js", "voronoi", "generative-art"]
 image = "/img/krypton/cover-horizontal.jpg"
 intro = 'Walk through the creative process behind my pen plotted piece, <i>"Krypton"</i>'
 theme = "gray"
-
+favorite = true
 +++
 
 This post was originally written for our internal technology newsletter at [Work & Co](https://work.co). It is a little bit adapted for web, but the content is almost identical.

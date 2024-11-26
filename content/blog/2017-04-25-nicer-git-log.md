@@ -7,6 +7,7 @@ category = ["Development"]
 tags = ["git", " bash"]
 
 [extra]
+favorite = true
 
 +++
 

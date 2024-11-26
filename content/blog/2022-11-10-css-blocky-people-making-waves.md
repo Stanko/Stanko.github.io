@@ -8,6 +8,7 @@ tags = ["css", "sass", "3d", "waves", "blocky", "animation"]
 [extra]
 intro = "Stadium waves in CSS, just in time for the World Cup!"
 image = "/img/blocky-people.png"
+favorite = true
 
 +++
 <link rel="stylesheet" href="/posts/blocky-people.css" />

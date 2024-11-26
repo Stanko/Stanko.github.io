@@ -1,0 +1,4 @@
+{% if post %}
+{% if post.extra.favorite %}<span class="favorite">❋</span>{% endif %}
+{{ post.title | safe }}{% include "partials/svg-post-arrow.html" %}
+{% endif %}
