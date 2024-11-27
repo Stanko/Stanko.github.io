@@ -148,7 +148,7 @@ If you ever implement something like this, please let me know.
 
 I searched for a simple giraffe drawing and found a very cute one, but I needed one with a longer and thinner neck to fit better as a caret. I redrew it for my caret purposes, and here are the source SVG files. Feel free to download and use them in your projects.
 
-Base image which might easier to customize:
+Base image which might be easier to customize:
 
 ![Base vector image of the giraffe, wireframe and colored version](/img/giraffe/base.svg)
 
