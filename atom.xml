@@ -1491,7 +1491,7 @@ But it can also be used to create floating labels.&lt;&#x2F;p&gt;
 &gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
 &lt;&#x2F;h2&gt;
 &lt;p&gt;I searched for a simple giraffe drawing and found a very cute one, but I needed one with a longer and thinner neck to fit better as a caret. I redrew it for my caret purposes, and here are the source SVG files. Feel free to download and use them in your projects.&lt;&#x2F;p&gt;
-&lt;p&gt;Base image which might easier to customize:&lt;&#x2F;p&gt;
+&lt;p&gt;Base image which might be easier to customize:&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;giraffe&#x2F;base.svg&quot; alt=&quot;Base vector image of the giraffe, wireframe and colored version&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Animation keyframes:&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;giraffe&#x2F;keyframes.svg&quot; alt=&quot;Giraffe animation keyframes&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
