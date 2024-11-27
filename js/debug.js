@@ -1,19 +1,13 @@
-const styleElement = document.createElement("style");
-styleElement.className = "debug-styles";
-styleElement.innerHTML = "* { outline: 1px solid rgb(57, 102, 230, 0.2); }";
+const className = "outline-debug";
 
 if (window.location.hash === "#debug") {
-  document.head.appendChild(styleElement);
+  document.documentElement.classList.add(className);
 }
 
-window.addEventListener(
-  "hashchange",
-  () => {
-    if (window.location.hash === "#debug") {
-      document.head.appendChild(styleElement);
-    } else {
-      styleElement.remove();
-    }
-  },
-  false
-);
+window.addEventListener("hashchange", () => {
+  if (window.location.hash === "#debug") {
+    document.documentElement.classList.add(className);
+  } else {
+    document.documentElement.classList.remove(className);
+  }
+});
