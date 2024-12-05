@@ -59,15 +59,15 @@ Before you start playing with the checkboxes I advise you to read the rest of th
 ## Implementation
 
 My initial idea was to analyze couple of audio files to extract the
-{{ sidenote(text="average values", note="
+{{ sidenote(text="average values", note='
 Try disabling all checkboxes but "static".
-") }}
+') }}
 for the spectrum. Then combine it with the data from this great post about [language pitch](https://erikbern.com/2017/02/01/language-pitch.html). At the end, I ended up tweaking values to make it "look better", based only on my personal feel.
 
 Only thing left was to multiple the values I got with the
-{{ sidenote(text="randomly generated value.", note="
+{{ sidenote(text="randomly generated value.", note='
 Enable "random" and "static" checkboxes and disable the "perlin" one to see how it looks. It kinda works, but it feel too random.
-") }}
+') }}
 
 
 ### Perlin noise
