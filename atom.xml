@@ -7697,14 +7697,32 @@ It is enough to include it on you page. Only drawback is that it doesn&#x27;t su
 &gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
 &lt;&#x2F;h2&gt;
 &lt;p&gt;My initial idea was to analyze couple of audio files to extract the
-{{ sidenote(text=&quot;average values&quot;, note=&quot;
-Try disabling all checkboxes but &quot;static&quot;.
-&quot;) }}
+&lt;span
+  class=&quot;sidenote__trigger &quot;
+  tabindex=&quot;0&quot;
+  role=&quot;button&quot;
+&gt;
+  average values
+&lt;&#x2F;span&gt;
+
+&lt;span
+  class=&quot;sidenote__note &quot;
+&gt;&lt;span class=&quot;sidenote__bracket&quot;&gt;(&lt;&#x2F;span&gt;Try disabling all checkboxes but &quot;static&quot;.&lt;span class=&quot;sidenote__bracket&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+
 for the spectrum. Then combine it with the data from this great post about &lt;a href=&quot;https:&#x2F;&#x2F;erikbern.com&#x2F;2017&#x2F;02&#x2F;01&#x2F;language-pitch.html&quot;&gt;language pitch&lt;&#x2F;a&gt;. At the end, I ended up tweaking values to make it &quot;look better&quot;, based only on my personal feel.&lt;&#x2F;p&gt;
 &lt;p&gt;Only thing left was to multiple the values I got with the
-{{ sidenote(text=&quot;randomly generated value.&quot;, note=&quot;
-Enable &quot;random&quot; and &quot;static&quot; checkboxes and disable the &quot;perlin&quot; one to see how it looks. It kinda works, but it feel too random.
-&quot;) }}&lt;&#x2F;p&gt;
+&lt;span
+  class=&quot;sidenote__trigger &quot;
+  tabindex=&quot;0&quot;
+  role=&quot;button&quot;
+&gt;
+  randomly generated value.
+&lt;&#x2F;span&gt;
+
+&lt;span
+  class=&quot;sidenote__note &quot;
+&gt;&lt;span class=&quot;sidenote__bracket&quot;&gt;(&lt;&#x2F;span&gt;Enable &quot;random&quot; and &quot;static&quot; checkboxes and disable the &quot;perlin&quot; one to see how it looks. It kinda works, but it feel too random.&lt;span class=&quot;sidenote__bracket&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;perlin-noise&quot;&gt;Perlin noise&lt;a
   class=&quot;header-anchor&quot;
   href=&quot;#perlin-noise&quot; aria-label=&quot;Anchor link for: perlin-noise&quot;
