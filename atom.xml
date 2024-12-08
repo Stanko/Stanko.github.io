@@ -19,7 +19,7 @@
     </author>
 		<content type="html" >&lt;link rel=&quot;stylesheet&quot; href=&quot;&#x2F;posts&#x2F;dual-range-input.css&quot; &#x2F;&gt;
 &lt;p&gt;I just released &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;stanko&#x2F;dual-range-input&quot;&gt;@stanko&#x2F;dual-range-input&lt;&#x2F;a&gt; - a native dual-range input. Here is how it looks with the default styles:&lt;&#x2F;p&gt;
-&lt;div class=&quot;demo&quot;&gt;
+&lt;div class=&quot;demo&quot; data-thumb-width=&quot;20rem&quot;&gt;
   &lt;div class=&quot;dual-range-input&quot;&gt;
     &lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; step=&quot;1&quot; value=&quot;25&quot;&gt;
     &lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; step=&quot;1&quot; value=&quot;75&quot;&gt;
@@ -50,7 +50,7 @@
 &lt;&#x2F;h2&gt;
 &lt;p&gt;There are two inputs placed next to each other. When either of the inputs is changed, the library calculates a midpoint between the two selected values. Then the &lt;code&gt;min&lt;&#x2F;code&gt; and &lt;code&gt;max&lt;&#x2F;code&gt; attributes are set to the midpoint, and the width of both inputs is updated to match.&lt;&#x2F;p&gt;
 &lt;p&gt;Here is an unstyled example, which will hopefully illustrate this well:&lt;&#x2F;p&gt;
-&lt;div class=&quot;demo demo--blank&quot;&gt;
+&lt;div class=&quot;demo demo--blank&quot; data-thumb-width=&quot;16px&quot;&gt;
   &lt;div class=&quot;inputs&quot;&gt;
     &lt;input list=&quot;tickmarks&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;50&quot; step=&quot;1&quot; value=&quot;25&quot;&gt;
     &lt;input list=&quot;tickmarks&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;50&quot; step=&quot;1&quot; value=&quot;75&quot;&gt;
@@ -89,7 +89,7 @@
 &lt;&#x2F;h3&gt;
 &lt;p&gt;Because the inputs are resized to meet at the midpoint, whenever you click between the thumbs, the one closer to the click will move to that value.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;button type=&quot;button&quot; class=&quot;toggle-debug&quot;&gt;Toggle the debug mode &lt;span class=&quot;hide-when-debug&quot;&gt;on&lt;&#x2F;span&gt;&lt;span class=&quot;show-when-debug&quot;&gt;off&lt;&#x2F;span&gt;&lt;&#x2F;button&gt; and the midpoint will be easier to see.&lt;&#x2F;p&gt;
-&lt;div class=&quot;demo demo--purple&quot;&gt;
+&lt;div class=&quot;demo demo--purple&quot; data-thumb-width=&quot;32rem&quot;&gt;
   &lt;div class=&quot;dual-range-input&quot;&gt;
     &lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;20&quot; step=&quot;1&quot; value=&quot;4&quot;&gt;
     &lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;20&quot; step=&quot;1&quot; value=&quot;5&quot;&gt;
@@ -105,7 +105,7 @@
 &gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
 &lt;&#x2F;h2&gt;
 &lt;p&gt;All browsers allow us to style range inputs using CSS. That made styling of the tracks and thumbs pretty straightforward. I just ensured that the tracks didn&#x27;t have a border radius in the middle where they connect.&lt;&#x2F;p&gt;
-&lt;div class=&quot;demo demo--thick-no-gradient&quot;&gt;
+&lt;div class=&quot;demo demo--thick-no-gradient&quot; data-thumb-width=&quot;32rem&quot;&gt;
   &lt;div class=&quot;dual-range-input&quot;&gt;
     &lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; step=&quot;1&quot; value=&quot;25&quot;&gt;
     &lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; step=&quot;1&quot; value=&quot;75&quot;&gt;
@@ -155,7 +155,7 @@
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-scss&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-property-list z-end z-css&quot;&gt;}&lt;&#x2F;span&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Again, &lt;button type=&quot;button&quot; class=&quot;toggle-debug&quot;&gt;toggling the debug mode &lt;span class=&quot;hide-when-debug&quot;&gt;on&lt;&#x2F;span&gt;&lt;span class=&quot;show-when-debug&quot;&gt;off&lt;&#x2F;span&gt;&lt;&#x2F;button&gt; and the semi-transparent thumbs will make the gradients easier to see.&lt;&#x2F;p&gt;
-&lt;div class=&quot;demo demo--thick&quot;&gt;
+&lt;div class=&quot;demo demo--thick&quot; data-thumb-width=&quot;32rem&quot;&gt;
   &lt;div class=&quot;dual-range-input&quot;&gt;
     &lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; step=&quot;1&quot; value=&quot;25&quot;&gt;
     &lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; step=&quot;1&quot; value=&quot;75&quot;&gt;
