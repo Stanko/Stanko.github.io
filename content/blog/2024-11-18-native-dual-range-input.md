@@ -16,7 +16,7 @@ image = "/img/dual-range-input/thumbnail.png"
 
 I just released [@stanko/dual-range-input](https://github.com/stanko/dual-range-input) - a native dual-range input. Here is how it looks with the default styles:
 
-<div class="demo">
+<div class="demo" data-thumb-width="20rem">
   <div class="dual-range-input">
     <input type="range" min="0" max="100" step="1" value="25">
     <input type="range" min="0" max="100" step="1" value="75">
@@ -48,7 +48,7 @@ There are two inputs placed next to each other. When either of the inputs is cha
 
 Here is an unstyled example, which will hopefully illustrate this well:
 
-<div class="demo demo--blank">
+<div class="demo demo--blank" data-thumb-width="16px">
   <div class="inputs">
     <input list="tickmarks" type="range" min="0" max="50" step="1" value="25">
     <input list="tickmarks" type="range" min="0" max="50" step="1" value="75">
@@ -92,7 +92,7 @@ Because the inputs are resized to meet at the midpoint, whenever you click betwe
 
 <button type="button" class="toggle-debug">Toggle the debug mode <span class="hide-when-debug">on</span><span class="show-when-debug">off</span></button> and the midpoint will be easier to see.
 
-<div class="demo demo--purple">
+<div class="demo demo--purple" data-thumb-width="32rem">
   <div class="dual-range-input">
     <input type="range" min="0" max="20" step="1" value="4">
     <input type="range" min="0" max="20" step="1" value="5">
@@ -108,7 +108,7 @@ With that, both requirements are satisfied. The only thing left is to style it p
 
 All browsers allow us to style range inputs using CSS. That made styling of the tracks and thumbs pretty straightforward. I just ensured that the tracks didn't have a border radius in the middle where they connect.
 
-<div class="demo demo--thick-no-gradient">
+<div class="demo demo--thick-no-gradient" data-thumb-width="32rem">
   <div class="dual-range-input">
     <input type="range" min="0" max="100" step="1" value="25">
     <input type="range" min="0" max="100" step="1" value="75">
@@ -160,7 +160,7 @@ input:first-child::-moz-range-track {
 
 Again, <button type="button" class="toggle-debug">toggling the debug mode <span class="hide-when-debug">on</span><span class="show-when-debug">off</span></button> and the semi-transparent thumbs will make the gradients easier to see.
 
-<div class="demo demo--thick">
+<div class="demo demo--thick" data-thumb-width="32rem">
   <div class="dual-range-input">
     <input type="range" min="0" max="100" step="1" value="25">
     <input type="range" min="0" max="100" step="1" value="75">
