@@ -1,7 +1,7 @@
 .post-arrow {
   color: var(--theme-color);
   width: 0.7em;
-  display: inline;
+  display: none;
   vertical-align: baseline;
   opacity: 0;
   top: -0.075em;
@@ -15,6 +15,10 @@
   stroke-linejoin: round;
   stroke: currentColor;
   stroke-width: 4;
+
+  @media (hover: hover) {
+    display: inline;
+  }
 }
 
 a:focus .post-arrow,
