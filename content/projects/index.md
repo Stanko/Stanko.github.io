@@ -91,7 +91,7 @@ theme = "purple"
 [[extra.libs]]
   name = "Marvin (deprecated)"
   description = "React application boilerplate that gained popularity within the community before React Create App became a thing. The project was born from my blog post series on setting up a React project from scratch."
-  link = "https://github.com/workco/marvin/"
+  link = "https://github.com/stanko/marvin/"
   image = "/img/projects/marvin.svg"
 
 # https://muffinman.io/blog/setting-up-webpack-babel-and-react-from-scratch/

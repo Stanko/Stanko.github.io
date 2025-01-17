@@ -127,7 +127,7 @@ and gives you a solid ground to start from.
 Well, I'm a principal developer at [Work&Co](https://work.co).
 I have a lot of experience on production level React projects,
 for clients like Twitter, Mastercard, Aeromexico, Hampton Creek...
-[Marvin](https://github.com/workco/marvin)
+[Marvin](https://github.com/stanko/marvin)
 {{ sidenote(text="boilerplate", note="We have big plans for Marvin in the near future.") }}
 is my creation as well,
 and what I'm trying to teach you is directly based on my experience on these projects.
@@ -919,7 +919,7 @@ Don't worry, I will cover more in posts to come.
 But it might take a while, as creating a meaningful tutorial is really time consuming.
 So please, [bear with me](http://i.imgur.com/1d9dwpj.gif).
 
-This new tutorial series is closely related to [Marvin](https://github.com/workco/marvin)'s future.
+This new tutorial series is closely related to [Marvin](https://github.com/stanko/marvin)'s future.
 So there will posts about development of Marvin and setting up React applications using React.
 
 React router, redux, hot module reload, thunks, sagas, SASS, PostCSS, universal rendering

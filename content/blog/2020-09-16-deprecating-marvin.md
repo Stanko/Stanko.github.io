@@ -17,7 +17,7 @@ theme = "red"
 
 It is funny, I would never say I would be sad to deprecate a software project. Especially a project boilerplate. But I just merged the deprecation notice, and I do feel down a little.
 
-I created [Marvin](https://github.com/workco/marvin) about [four years ago](/blog/webpack-2-react-redux/) for my own needs. Since then it grew, became internal project at
+I created [Marvin](https://github.com/stanko/marvin) about [four years ago](/blog/webpack-2-react-redux/) for my own needs. Since then it grew, became internal project at
 {{ sidenote(text="Work&Co", note="
 Fun fact, [our website](https://work.co) is made on top of Marvin.
 ") }}
