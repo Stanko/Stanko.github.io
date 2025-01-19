@@ -28,7 +28,7 @@ I kept it deployed on GitHub Pages because I think they're great. Free and fast 
 However, for a long time now, I've wanted to write my own small static site generator. It would support interactive posts/components and
 {{sidenote(
   text="use JSX",
-  note="I think that JSX is a great templating language, although I wouldn't use React on the front-end."
+  note="I think that JSX is a great templating language"
 )}}. If I ever do it, I'll open-source it.
 
 ## Have you blogged on other platforms before?
