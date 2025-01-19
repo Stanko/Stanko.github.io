@@ -6,8 +6,111 @@
 	<link href="https://muffinman.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://muffinman.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2024-11-18T00:00:00+00:00</updated>
+	<updated>2025-01-18T00:00:00+00:00</updated>
 	<id>https://muffinman.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Blog Questions Challenge</title>
+		<published>2025-01-18T00:00:00+00:00</published>
+		<updated>2025-01-18T00:00:00+00:00</updated>
+		<link href="https://muffinman.io/blog/blog-question-challenge/" type="text/html"/>
+		<id>https://muffinman.io/blog/blog-question-challenge/</id>
+    <author>
+      <name>Stanko</name>
+    </author>
+		<content type="html" >&lt;p&gt;I&#x27;ve seen this challenge on &lt;a href=&quot;https:&#x2F;&#x2F;herman.bearblog.dev&#x2F;bear-blog-question-challenge&#x2F;&quot;&gt;Herman&#x27;s blog&lt;&#x2F;a&gt;. I liked it, so I decided to do my own version, even though I&#x27;m not using the bear blog. For the same reason, I slightly adapted &lt;a href=&quot;https:&#x2F;&#x2F;blog.avas.space&#x2F;bear-blog-challenge&#x2F;&quot;&gt;the original questions&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;why-did-you-make-the-blog-in-the-first-place&quot;&gt;Why did you make the blog in the first place?&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#why-did-you-make-the-blog-in-the-first-place&quot; aria-label=&quot;Anchor link for: why-did-you-make-the-blog-in-the-first-place&quot;
+  title=&quot;Anchor link for: why-did-you-make-the-blog-in-the-first-place&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;Since I first got online, I&#x27;ve wanted a personal website - a piece of internet I can call my own. I had a few websites over the years, but none of them are online anymore (and I don&#x27;t have backups). Then, in my late twenties, I decided to try again. As someone who loves programming and making things, I&#x27;ve gathered plenty of material to share over the years. I also wanted to change the fact that I hadn&#x27;t written much since high school. I&#x27;ve never been a fan of social networks, so starting a blog felt like the perfect thing for me — I could have my own website and share the things I&#x27;m working on.&lt;&#x2F;p&gt;
+&lt;p&gt;This blog has been up since 2016, and I&#x27;m really proud of it. While the frequency of my posts has gone down, I like to think the quality has gone up.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;why-did-you-choose-bearblog-zola-and-github-pages&quot;&gt;Why did you choose &lt;del&gt;Bearblog&lt;&#x2F;del&gt; Zola and GitHub Pages?&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#why-did-you-choose-bearblog-zola-and-github-pages&quot; aria-label=&quot;Anchor link for: why-did-you-choose-bearblog-zola-and-github-pages&quot;
+  title=&quot;Anchor link for: why-did-you-choose-bearblog-zola-and-github-pages&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;Before Zola, I used Jekyll, which is tightly coupled with GitHub Pages. GitHub Pages restricts you to the default Jekyll configuration, so I couldn&#x27;t customize all the stuff I wanted. I started looking for a replacement and stumbled on Zola. It seemed very nice — fast, a single binary, with a sane templating language. After trying it, I really liked it and decided to stick with it.&lt;&#x2F;p&gt;
+&lt;p&gt;I kept it deployed on GitHub Pages because I think they&#x27;re great. Free and fast hosting, and the fact that I don&#x27;t have to mess with deployments myself — thanks, GitHub folks!&lt;&#x2F;p&gt;
+&lt;p&gt;However, for a long time now, I&#x27;ve wanted to write my own small static site generator. It would support interactive posts&#x2F;components and
+&lt;span
+  class=&quot;sidenote__trigger &quot;
+  tabindex=&quot;0&quot;
+  role=&quot;button&quot;
+&gt;
+  use JSX
+&lt;&#x2F;span&gt;
+
+&lt;span
+  class=&quot;sidenote__note &quot;
+&gt;&lt;span class=&quot;sidenote__bracket&quot;&gt;(&lt;&#x2F;span&gt;I think that JSX is a great templating language, although I wouldn&#x27;t use React on the front-end.&lt;span class=&quot;sidenote__bracket&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+. If I ever do it, I&#x27;ll open-source it.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;have-you-blogged-on-other-platforms-before&quot;&gt;Have you blogged on other platforms before?&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#have-you-blogged-on-other-platforms-before&quot; aria-label=&quot;Anchor link for: have-you-blogged-on-other-platforms-before&quot;
+  title=&quot;Anchor link for: have-you-blogged-on-other-platforms-before&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;As mentioned above, this blog used to be a Jekyll blog.&lt;&#x2F;p&gt;
+&lt;p&gt;Before that, I tried keeping a blog a few times, but only one attempt is worth mentioning. At university, a friend set up a WordPress blog, and I ended up writing alongside him for a while.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;how-do-you-write-your-posts&quot;&gt;How do you write your posts?&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#how-do-you-write-your-posts&quot; aria-label=&quot;Anchor link for: how-do-you-write-your-posts&quot;
+  title=&quot;Anchor link for: how-do-you-write-your-posts&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;I use Visual Studio Code, but if I get an idea on the run, I put it in the notes app on my phone.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;when-do-you-feel-most-inspired-to-write&quot;&gt;When do you feel most inspired to write?&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#when-do-you-feel-most-inspired-to-write&quot; aria-label=&quot;Anchor link for: when-do-you-feel-most-inspired-to-write&quot;
+  title=&quot;Anchor link for: when-do-you-feel-most-inspired-to-write&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;It&#x27;s when I get excited about something and want to write about it. I don&#x27;t really have a specific time of day.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;do-you-publish-immediately-after-writing-or-do-you-let-it-simmer-a-bit-as-a-draft&quot;&gt;Do you publish immediately after writing or do you let it simmer a bit as a draft?&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#do-you-publish-immediately-after-writing-or-do-you-let-it-simmer-a-bit-as-a-draft&quot; aria-label=&quot;Anchor link for: do-you-publish-immediately-after-writing-or-do-you-let-it-simmer-a-bit-as-a-draft&quot;
+  title=&quot;Anchor link for: do-you-publish-immediately-after-writing-or-do-you-let-it-simmer-a-bit-as-a-draft&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;This changed since I started this blog. I used to publish posts quickly after I wrote them, but they were shorter and simpler. As the blog (and myself) matured, I now take days, even weeks for some posts, before publishing them.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;your-favorite-post-on-your-blog&quot;&gt;Your favorite post on your blog?&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#your-favorite-post-on-your-blog&quot; aria-label=&quot;Anchor link for: your-favorite-post-on-your-blog&quot;
+  title=&quot;Anchor link for: your-favorite-post-on-your-blog&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;It is probably &lt;a href=&quot;&#x2F;blog&#x2F;draw-svg-rope-using-javascript&#x2F;&quot;&gt;Draw SVG rope using JavaScript&lt;&#x2F;a&gt;. It went through many drafts, and it took me a while to finish it. By the time I published it, I already had a love-hate relationship with the post. I was really excited about it, but I wasn&#x27;t sure if it was any good. Luckily, it got recognized and exploded on Hacker News.&lt;&#x2F;p&gt;
+&lt;p&gt;To this day, it is the most popular post on my blog.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;any-future-plans-for-your-blog-maybe-a-redesign-changing-the-tag-system-etc&quot;&gt;Any future plans for your blog? Maybe a redesign, changing the tag system, etc.?&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#any-future-plans-for-your-blog-maybe-a-redesign-changing-the-tag-system-etc&quot; aria-label=&quot;Anchor link for: any-future-plans-for-your-blog-maybe-a-redesign-changing-the-tag-system-etc&quot;
+  title=&quot;Anchor link for: any-future-plans-for-your-blog-maybe-a-redesign-changing-the-tag-system-etc&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;I always have a backlog of things I would like to improve on my blog. I&#x27;m thinking of a redesign, but I currently lack the time to achieve the level of polish I want. Some other things on my to-do list are:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&#x2F;now&lt;&#x2F;code&gt; and &lt;code&gt;&#x2F;uses&lt;&#x2F;code&gt; pages&lt;&#x2F;li&gt;
+&lt;li&gt;Table of contents for posts&lt;&#x2F;li&gt;
+&lt;li&gt;A global system for interactive posts&lt;&#x2F;li&gt;
+&lt;li&gt;Re-do the dark theme&lt;&#x2F;li&gt;
+&lt;li&gt;A few easter eggs which I&#x27;ll keep a secret for now&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;who-s-next&quot;&gt;Who&#x27;s next?&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#who-s-next&quot; aria-label=&quot;Anchor link for: who-s-next&quot;
+  title=&quot;Anchor link for: who-s-next&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;There you have it. Some people are also tagging others to join in and answer the questions. I like that idea too, so &lt;a href=&quot;https:&#x2F;&#x2F;www.d17e.dev&#x2F;blog&quot;&gt;David&lt;&#x2F;a&gt;, I would like you to do one of these posts too!&lt;&#x2F;p&gt;
+&lt;p&gt;Of course, I invite everybody to join in — these posts are fun to read.&lt;&#x2F;p&gt;
+
+    </content>
+
+	</entry>
 	<entry xml:lang="en">
 		<title>Native dual-range input</title>
 		<published>2024-11-18T00:00:00+00:00</published>
@@ -5407,7 +5510,7 @@ Now, if buffering happens, we&#x27;ll get these events fired:&lt;&#x2F;p&gt;
       <name>Stanko</name>
     </author>
 		<content type="html" >&lt;p&gt;It is funny, I would never say I would be sad to deprecate a software project. Especially a project boilerplate. But I just merged the deprecation notice, and I do feel down a little.&lt;&#x2F;p&gt;
-&lt;p&gt;I created &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;workco&#x2F;marvin&quot;&gt;Marvin&lt;&#x2F;a&gt; about &lt;a href=&quot;&#x2F;blog&#x2F;webpack-2-react-redux&#x2F;&quot;&gt;four years ago&lt;&#x2F;a&gt; for my own needs. Since then it grew, became internal project at
+&lt;p&gt;I created &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;stanko&#x2F;marvin&quot;&gt;Marvin&lt;&#x2F;a&gt; about &lt;a href=&quot;&#x2F;blog&#x2F;webpack-2-react-redux&#x2F;&quot;&gt;four years ago&lt;&#x2F;a&gt; for my own needs. Since then it grew, became internal project at
 &lt;span
   class=&quot;sidenote__trigger &quot;
   tabindex=&quot;0&quot;
@@ -9102,7 +9205,7 @@ Enjoy!&lt;&#x2F;p&gt;
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html" >&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;workco&#x2F;marvin&#x2F;&quot;&gt;Marvin&lt;&#x2F;a&gt; just got better!&lt;&#x2F;p&gt;
+		<content type="html" >&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;stanko&#x2F;marvin&#x2F;&quot;&gt;Marvin&lt;&#x2F;a&gt; just got better!&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;marvin.jpg&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Few days ago I&#x27;ve released version 1.0 of my
 &lt;span
@@ -9876,7 +9979,7 @@ and gives you a solid ground to start from.&lt;&#x2F;p&gt;
 &lt;p&gt;Well, I&#x27;m a principal developer at &lt;a href=&quot;https:&#x2F;&#x2F;work.co&quot;&gt;Work&amp;amp;Co&lt;&#x2F;a&gt;.
 I have a lot of experience on production level React projects,
 for clients like Twitter, Mastercard, Aeromexico, Hampton Creek...
-&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;workco&#x2F;marvin&quot;&gt;Marvin&lt;&#x2F;a&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;stanko&#x2F;marvin&quot;&gt;Marvin&lt;&#x2F;a&gt;
 &lt;span
   class=&quot;sidenote__trigger &quot;
   tabindex=&quot;0&quot;
@@ -10859,7 +10962,7 @@ it by pointing out things that are not clear enough or could be written better.&
 &lt;p&gt;Don&#x27;t worry, I will cover more in posts to come.
 But it might take a while, as creating a meaningful tutorial is really time consuming.
 So please, &lt;a href=&quot;http:&#x2F;&#x2F;i.imgur.com&#x2F;1d9dwpj.gif&quot;&gt;bear with me&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;This new tutorial series is closely related to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;workco&#x2F;marvin&quot;&gt;Marvin&lt;&#x2F;a&gt;&#x27;s future.
+&lt;p&gt;This new tutorial series is closely related to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;stanko&#x2F;marvin&quot;&gt;Marvin&lt;&#x2F;a&gt;&#x27;s future.
 So there will posts about development of Marvin and setting up React applications using React.&lt;&#x2F;p&gt;
 &lt;p&gt;React router, redux, hot module reload, thunks, sagas, SASS, PostCSS, universal rendering
 are some of the themes that I want to write about.&lt;&#x2F;p&gt;
@@ -11739,8 +11842,8 @@ This can be used in our React examples but also with any other framework or vani
     <author>
       <name>Stanko</name>
     </author>
-		<content type="html" >&lt;p&gt;I&#x27;m happy to announce &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;workco&#x2F;marvin&quot;&gt;Marvin&lt;&#x2F;a&gt;, boilerplate for kicking off React&#x2F;Redux applications.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;workco&#x2F;marvin&quot;&gt;&lt;img src=&quot;&#x2F;img&#x2F;marvin.jpg&quot; alt=&quot;Marvin on Github&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+		<content type="html" >&lt;p&gt;I&#x27;m happy to announce &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;stanko&#x2F;marvin&quot;&gt;Marvin&lt;&#x2F;a&gt;, boilerplate for kicking off React&#x2F;Redux applications.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;stanko&#x2F;marvin&quot;&gt;&lt;img src=&quot;&#x2F;img&#x2F;marvin.jpg&quot; alt=&quot;Marvin on Github&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Basically my &lt;a href=&quot;&#x2F;blog&#x2F;webpack-2-react-redux&#x2F;&quot;&gt;boilerplate&lt;&#x2F;a&gt; became Work &amp;amp; Co&#x27;s internal project. It is meant to be a starting point for our React projects. This way faster development is assured along with higher quality code. It is open source, and external contributions are welcome.&lt;&#x2F;p&gt;
 &lt;p&gt;Name comes from a fictional character Marvin, android from the The Hitchhiker&#x27;s Guide to the Galaxy book as a homage to it&#x27;s author Douglas Adams.&lt;&#x2F;p&gt;
 
