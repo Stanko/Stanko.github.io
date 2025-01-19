@@ -45,7 +45,7 @@
 
 &lt;span
   class=&quot;sidenote__note &quot;
-&gt;&lt;span class=&quot;sidenote__bracket&quot;&gt;(&lt;&#x2F;span&gt;I think that JSX is a great templating language, although I wouldn&#x27;t use React on the front-end.&lt;span class=&quot;sidenote__bracket&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&gt;&lt;span class=&quot;sidenote__bracket&quot;&gt;(&lt;&#x2F;span&gt;I think that JSX is a great templating language&lt;span class=&quot;sidenote__bracket&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
 . If I ever do it, I&#x27;ll open-source it.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;have-you-blogged-on-other-platforms-before&quot;&gt;Have you blogged on other platforms before?&lt;a
   class=&quot;header-anchor&quot;
