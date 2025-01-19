@@ -69,6 +69,8 @@ I always have a backlog of things I would like to improve on my blog. I'm thinki
 
 ## Who's next?
 
-There you have it. Some people are also tagging others to join in and answer the questions. I like that idea too, so [David](https://www.d17e.dev/blog), I would like you to do one of these posts too!
+There you have it, those are my answers.
+
+Some people are also tagging others to join in and answer the questions. I like that idea too, so [David](https://www.d17e.dev/blog), I would like you to do one of these posts too!
 
 Of course, I invite everybody to join in — these posts are fun to read.
