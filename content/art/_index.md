@@ -4,7 +4,7 @@ sort_by = "date"
 template = "art.html"
 page_template = "art-single.html"
 insert_anchor_links = "right"
-paginate_by = 1000
+paginate_by = 10000
 # TODO enable feed and figure out how to render XML template
 # generate_feed = true
 

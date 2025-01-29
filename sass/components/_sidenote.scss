@@ -59,10 +59,13 @@ body {
   @include md-and-lower {
     border-left: 2px solid var(--neutral-300);
     background-color: var(--neutral-50);
-  }
 
-  .sidenote__trigger--expanded + & {
-    display: block;
+    .sidenote__trigger--expanded + & {
+      display: block;
+      float: left;
+      clear: both;
+      width: 100%;
+    }
   }
 
   @include lg {
