@@ -175,6 +175,10 @@ svg {
 
 .favorite {
   color: var(--theme-color);
+  display: inline;
+  height: 0.8em;
+  width: 0.8em;
+  transform: translateY(0.05em);
 }
 
 .sr-only {

@@ -8,6 +8,7 @@ tags = ["js", "css", "animation", "timer", "timeout"]
 [extra]
 intro = "Allow me to show you how to leverage CSS animations to create timers."
 image = "/img/css-animations-as-timers.png"
+favorite = true
 +++
 
 <link rel="stylesheet" href="/posts/css-timers.css" />
