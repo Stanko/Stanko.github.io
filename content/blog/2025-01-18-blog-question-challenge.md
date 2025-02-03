@@ -6,7 +6,6 @@ category = ["Random"]
 tags = ["random", "blog"]
 
 [extra]
-theme = "purple"
 intro = "I've stumbled across this challenge and wanted to try it for my blog. It's fun to reflect on why I started blogging in the first place and share a part of the journey."
 # image = "/img/"
 +++
