@@ -8,7 +8,7 @@
           {%- continue %}
         {%- endif %}
         {%- set date_string = "/art/" ~ page.date ~ "-" %}
-        {%- set image_path = page.extra.image | replace(from="/art/", to=date_string) %}
+        {%- set image_path = get_url(path=asset) %}
         {%- set image = resize_image(path=asset, width=500, height=500, op="fit", quality=90) %}
         {#
           I can go back to get_url when this issue is fixed
@@ -27,7 +27,7 @@
           target="_blank"
         >
           {# TODO think what to do about alt text #}
-          <img src="{{ image.url }}" alt="Photo {{ photo_index }}"  />
+          <img src="{{ image.url }}" alt="Photo {{ photo_index }}" />
         </a>
       {%- endif %}
       {%- if asset is matching("[.](mp4)$") -%}
