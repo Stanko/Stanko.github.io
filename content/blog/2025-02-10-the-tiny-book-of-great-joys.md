@@ -278,8 +278,6 @@ Lesson learned if I ever end up doing something similar.
 
 ## Timeline
 
-It lasted way longer than it should - it took me a month a half to finish it. It took so long because I did it in secrecy, which meant working late in the evenings when my wife and kid were asleep. The bunch of little fails... ehm, I mean *learning opportunities* also prolonged the project. And finally, I had to order multiple things, so I was blocked a few times while I was waiting for the deliveries. In total I made four different orders:
-
 It took way longer than it should have—it took me a month and a half to finish it. It took so long because I did it in secrecy, which meant working late in the evenings when my wife and kid were asleep. A bunch of little failures... ehm, I mean *learning opportunities* also prolonged the project. And finally, I had to order multiple things, so I was blocked a few times while I was waiting for four different deliveries.
 
 But the final assembly took me around two and a half hours from start to finish - plotting, cutting, sewing, and bookbinding. Mostly because I had already practiced all of them and defined the exact process.

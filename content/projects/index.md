@@ -112,9 +112,15 @@ theme = "purple"
 
 [[extra.projects]]
   name = "Letters from Sarajevo"
-  description = "Very personal project: a web adaptation of the book *Letters From Sarajevo*. Our father was stuck in Sarajevo during the war and still sent us funny, positive letters filled with drawings."
+  description = "Very personal project - a web adaptation of the book *Letters From Sarajevo*. Our father was stuck in Sarajevo during the war and still sent us funny, positive letters filled with drawings."
   link = "https://lettersfromsarajevo.com/"
   image = "/img/projects/letters.png"
+
+[[extra.projects]]
+  name = "The Tiny Book of Great Joys"
+  description = "A tiny, hand-crafted book I made my wife using AI, a pen plotter and 3D printer."
+  link = "/blog/the-tiny-book-of-great-joys/"
+  image = "/img/projects/tiny-book.png"
 
 [[extra.projects]]
   name = "Weekly Code Challenge"
