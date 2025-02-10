@@ -6,8 +6,400 @@
 	<link href="https://muffinman.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://muffinman.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2025-02-03T00:00:00+00:00</updated>
+	<updated>2025-02-10T00:00:00+00:00</updated>
 	<id>https://muffinman.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>The Tiny Book  of Great Joys</title>
+		<published>2025-02-10T00:00:00+00:00</published>
+		<updated>2025-02-10T00:00:00+00:00</updated>
+		<link href="https://muffinman.io/blog/the-tiny-book-of-great-joys/" type="text/html"/>
+		<id>https://muffinman.io/blog/the-tiny-book-of-great-joys/</id>
+    <author>
+      <name>Stanko</name>
+    </author>
+		<content type="html" >&lt;p&gt;If you are interested in how I over-engineered the process of making a tiny book for my wife, using AI, a pen plotter, a 3D printer, and a lot of time, you are in the right place. The book is titled &lt;span
+  class=&quot;sidenote__trigger &quot;
+  tabindex=&quot;0&quot;
+  role=&quot;button&quot;
+&gt;
+  The Tiny Book of Great Joys
+&lt;&#x2F;span&gt;
+
+&lt;span
+  class=&quot;sidenote__note &quot;
+&gt;&lt;span class=&quot;sidenote__bracket&quot;&gt;(&lt;&#x2F;span&gt;&lt;em&gt;Mala Knjiga Velikih Radosti&lt;&#x2F;em&gt; in Serbian&lt;span class=&quot;sidenote__bracket&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+, and here is how it turned out:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;the-book-01.jpg&quot; alt=&quot;The Tiny Book of Great Joys sitting on the table slightly open with the title page showing&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+
+  &lt;div class=&quot;gallery gallery--post photoswipe-gallery&quot;&gt;
+    
+        
+        
+        &lt;a
+          class=&quot;gallery__item&quot;
+          href=&quot;&amp;#x2F;img&amp;#x2F;tiny-book&amp;#x2F;the-book-02.jpg&quot;
+          data-pswp-width=&quot;1500&quot;
+          data-pswp-height=&quot;1125&quot;
+          style=&quot;aspect-ratio: 1.3333333333333333&quot;
+          target=&quot;_blank&quot;
+        &gt;
+          
+          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;the-book-02.1b5c9b8f88610cdc.jpg&quot; alt=&quot;Photo 1&quot; &#x2F;&gt;
+        &lt;&#x2F;a&gt;
+        
+        
+        &lt;a
+          class=&quot;gallery__item&quot;
+          href=&quot;&amp;#x2F;img&amp;#x2F;tiny-book&amp;#x2F;the-book-03.jpg&quot;
+          data-pswp-width=&quot;1500&quot;
+          data-pswp-height=&quot;1125&quot;
+          style=&quot;aspect-ratio: 1.3333333333333333&quot;
+          target=&quot;_blank&quot;
+        &gt;
+          
+          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;the-book-03.5aff045f42579822.jpg&quot; alt=&quot;Photo 1&quot; &#x2F;&gt;
+        &lt;&#x2F;a&gt;
+        
+        
+        &lt;a
+          class=&quot;gallery__item&quot;
+          href=&quot;&amp;#x2F;img&amp;#x2F;tiny-book&amp;#x2F;the-book-04.jpg&quot;
+          data-pswp-width=&quot;1500&quot;
+          data-pswp-height=&quot;1125&quot;
+          style=&quot;aspect-ratio: 1.3333333333333333&quot;
+          target=&quot;_blank&quot;
+        &gt;
+          
+          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;the-book-04.23e7be1218d9cff2.jpg&quot; alt=&quot;Photo 1&quot; &#x2F;&gt;
+        &lt;&#x2F;a&gt;
+  &lt;&#x2F;div&gt;
+
+&lt;p&gt;My wife is delighted with it, so it was worth all the effort.&lt;&#x2F;p&gt;
+&lt;p&gt;This post will take you through the process. It will be a long one, but please stick around - I promise there will be a lot of pretty pictures.&lt;&#x2F;p&gt;
+&lt;p&gt;Here is the outline of the post:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;muffinman.io&#x2F;blog&#x2F;the-tiny-book-of-great-joys&#x2F;#the-idea&quot;&gt;The idea&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;muffinman.io&#x2F;blog&#x2F;the-tiny-book-of-great-joys&#x2F;#drawings&quot;&gt;Drawings&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;muffinman.io&#x2F;blog&#x2F;the-tiny-book-of-great-joys&#x2F;#text&quot;&gt;Text&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;muffinman.io&#x2F;blog&#x2F;the-tiny-book-of-great-joys&#x2F;#plotting&quot;&gt;Plotting&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;muffinman.io&#x2F;blog&#x2F;the-tiny-book-of-great-joys&#x2F;#bookbinding&quot;&gt;Bookbinding&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;muffinman.io&#x2F;blog&#x2F;the-tiny-book-of-great-joys&#x2F;#the-finished-book&quot;&gt;The finished book&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;muffinman.io&#x2F;blog&#x2F;the-tiny-book-of-great-joys&#x2F;#timeline&quot;&gt;Timeline&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;muffinman.io&#x2F;blog&#x2F;the-tiny-book-of-great-joys&#x2F;#conclusion&quot;&gt;Conclusion&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;the-idea&quot;&gt;The idea&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#the-idea&quot; aria-label=&quot;Anchor link for: the-idea&quot;
+  title=&quot;Anchor link for: the-idea&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;I had this idea for a while after seeing something similar somewhere on the internet.. Since then, I always wanted to make one for my wife - a physically small book with a bunch of small drawings of our memories together, inside jokes, and little things she likes.&lt;&#x2F;p&gt;
+&lt;p&gt;I wanted the illustrations to be hand-drawn, and I had a plan to ask my friend to do them. But I knew he would refuse any kind of payment, so I felt bad adding more work to his plate. So I shelved the idea, but every now and then, it would pop up in my head.&lt;&#x2F;p&gt;
+&lt;p&gt;Fast forward a few years - we got a kid, and our routine completely changed. We are enjoying it a lot, but it can be very exhausting, and every day seems identical to the last. That&#x27;s why I decided I needed to do something for her to break the routine. The book idea seemed perfect - personal and handcrafted - so I gave it a try.&lt;&#x2F;p&gt;
+&lt;p&gt;To be able to do everything myself, I went to create digital drawings and then draw them on paper using my trusty pen plotter.&lt;&#x2F;p&gt;
+&lt;p&gt;With the idea in place, I moved on to creating the drawings - which turned out to be a challenge of its own.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;drawings&quot;&gt;Drawings&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#drawings&quot; aria-label=&quot;Anchor link for: drawings&quot;
+  title=&quot;Anchor link for: drawings&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;For pen plotting, one needs vector files, so I started drawing in Figma. Unfortunately, I quickly realized that my drawing skills would not get me the result I had envisioned. Determined to do it this time, I decided to try using AI to generate images.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;midjourney&quot;&gt;Midjourney&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#midjourney&quot; aria-label=&quot;Anchor link for: midjourney&quot;
+  title=&quot;Anchor link for: midjourney&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;I got myself a Midjourney subscription and started playing with it. It took a lot of failed attempts to figure out how to get drawings that were simple and had a strong hand-drawn feel to them. Even then, I ended up editing every one of them, but more on that later.&lt;&#x2F;p&gt;
+&lt;p&gt;One of the first images I was satisfied with (it didn&#x27;t end up in the book, though):&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;01-fox.jpg&quot; alt=&quot;Black and white drawing of a cute fox curled up sleeping.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;It took a lot of time, but it was fun. Failed attempts were often quirky and funny, and I was learning how to use the tool. And it made me feel like a secret agent doing next to my wife, who had no idea what I was up to.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;fails.png&quot; alt=&quot;A bunch of attempts at drawing Link from Zelda&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;prompting&quot;&gt;Prompting&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#prompting&quot; aria-label=&quot;Anchor link for: prompting&quot;
+  title=&quot;Anchor link for: prompting&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;I may be wrong, but I think Midjourney wasn&#x27;t built for the kind of illustrations I had in mind. I was after simple, hand-drawn illustrations that felt personal. Luckily, I found a style reference (&lt;code&gt;--sref 230156437&lt;&#x2F;code&gt;) that worked well for my case. I used it to generate almost all of the drawings that ended up in the book. For those who haven&#x27;t used Midjourney - you can use images as style references to influence the style of images you want to generate.&lt;&#x2F;p&gt;
+&lt;p&gt;Most of my images were generated using that &lt;code&gt;sref&lt;&#x2F;code&gt; code and a &lt;span
+  class=&quot;sidenote__trigger &quot;
+  tabindex=&quot;0&quot;
+  role=&quot;button&quot;
+&gt;
+  style weight
+&lt;&#x2F;span&gt;
+
+&lt;span
+  class=&quot;sidenote__note &quot;
+&gt;&lt;span class=&quot;sidenote__bracket&quot;&gt;(&lt;&#x2F;span&gt;A number that tells Midjourney how much the reference should influence the final output&lt;span class=&quot;sidenote__bracket&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+ between 150 and 400 (it can go from 0 to 1000).&lt;&#x2F;p&gt;
+&lt;p&gt;As for the prompts, these are the key terms I combined with the description and the style reference:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;black and white&lt;&#x2F;li&gt;
+&lt;li&gt;vector line art&lt;&#x2F;li&gt;
+&lt;li&gt;stylized simple drawing&lt;&#x2F;li&gt;
+&lt;li&gt;solid white background&lt;&#x2F;li&gt;
+&lt;li&gt;isolated on white background&lt;&#x2F;li&gt;
+&lt;li&gt;low detail&lt;&#x2F;li&gt;
+&lt;li&gt;clean edges&lt;&#x2F;li&gt;
+&lt;li&gt;sketch&lt;&#x2F;li&gt;
+&lt;li&gt;rough sketch&lt;&#x2F;li&gt;
+&lt;li&gt;children&#x27;s coloring book&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;It took me a lot of tries - between 10 and 30 attempts for each image you see in the book.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;ai-to-plotter&quot;&gt;AI to Plotter&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#ai-to-plotter&quot; aria-label=&quot;Anchor link for: ai-to-plotter&quot;
+  title=&quot;Anchor link for: ai-to-plotter&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;Once I solved the image generation part, I had to figure out how to turn them into vector files for plotting. The first thing I tried was something similar to halftone. As you can see below, in this process, the images completely lost the hand-drawn feel.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;02-fox.jpg&quot; alt=&quot;The same fox drawing, but but drawn with a lot of small dots, using technique similar to halftone&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Then I remembered &lt;a href=&quot;https:&#x2F;&#x2F;www.instagram.com&#x2F;p&#x2F;CNJ_ZBOHZKj&#x2F;&quot;&gt;this plot&lt;&#x2F;a&gt; of Marble Machine X I did a while ago, for which I used AutoTrace to convert the original image to a vector file. The great thing about AutoTrace is that it supports &quot;centerline tracing&quot;. And this time, I learned that Inkscape has a great AutoTrace plugin, which made it even easier to convert.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;what-makes-centerline-tracing-different&quot;&gt;What makes centerline tracing different&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#what-makes-centerline-tracing-different&quot; aria-label=&quot;Anchor link for: what-makes-centerline-tracing-different&quot;
+  title=&quot;Anchor link for: what-makes-centerline-tracing-different&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;Most of the tools that convert raster to vector images do it by outlining shapes. This is not suitable for plotting, as each line in the original image becomes a sausage-like shape. Centerline tracing, on the other hand, tries to draw a single line following the middle path through shapes. Don&#x27;t worry if it sounds confusing; the example below should make things clearer.&lt;&#x2F;p&gt;
+&lt;p&gt;Here is the image of Link from &lt;em&gt;The Legend of Zelda&lt;&#x2F;em&gt; generated by Midjourney:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;link-01-midjourney.png&quot; alt=&quot;Black and white cartoony drawing of Link from The Legend of Zelda standing with a sword and shield.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;After applying a common vectorization technique, we get this. As you can see, each line in the original drawing is now outlined, creating this messy-looking image.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;link-03-shapes.png&quot; alt=&quot;Vectorized image of Link using common vectorization technique with each area outlined black&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;But if we use centerline tracing, it suddenly looks a lot more like a drawing. It is not perfect, but don&#x27;t worry - we are going to clean it up in the next step.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;link-04-before.png&quot; alt=&quot;Vectorized image of Link using centerline tracing, looking much more like a real drawing&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;cleaning-up&quot;&gt;Cleaning up&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#cleaning-up&quot; aria-label=&quot;Anchor link for: cleaning-up&quot;
+  title=&quot;Anchor link for: cleaning-up&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;In the points where lines touch or cross, AutoTrace is not sure which line to follow and creates these funky-looking joints. Here is an exaggerated example to show you what I&#x27;m talking about. Input is the raster image at the top and the vectorized result is at the bottom:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;tracing-01.png&quot; alt=&quot;Lines that are crossing and touching before and after centerline tracing&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;But I found out that if I roughly separate these lines, I get a much better result.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;tracing-02.png&quot; alt=&quot;Lines that are crossing and touching, but slightly separated before tracing, with the result being much better&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Let&#x27;s now apply this technique to the image of Link we&#x27;ve seen above. After separating lines (and some cleaning up) this is the image I ended up with. It is rough, but it is only used as an input for the tracing process, so it doesn&#x27;t really matter. This was manual and somewhat tedious process, but I enjoyed it overall. It was a sort of meditation for me.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;link-02-after-cleanup.png&quot; alt=&quot;The image of Link, but this time with lines slightly separated and details removed&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;And finally, when we trace this image, we get a really nice and clean vector file perfect for plotting.
+&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;link-05-after.png&quot; alt=&quot;Very clean vectorized image of Link&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Here is another example. We start with the image I generated using Midjourney:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;setnja-01.png&quot; alt=&quot;Black and white drawing of a woman, man, little girl and a dog walking in a forest&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;After editing, removing details and separating lines, we get this one:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;setnja-02.png&quot; alt=&quot;The same image of the family walking in the forest but with lines separated and some parts redrawn&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;And the traced vector result:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;setnja-03.png&quot; alt=&quot;Vectorized image of of the family walking in the forest&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;You&#x27;ll notice that in both examples I did &lt;span
+  class=&quot;sidenote__trigger &quot;
+  tabindex=&quot;0&quot;
+  role=&quot;button&quot;
+&gt;
+  some redrawing
+&lt;&#x2F;span&gt;
+
+&lt;span
+  class=&quot;sidenote__note &quot;
+&gt;&lt;span class=&quot;sidenote__bracket&quot;&gt;(&lt;&#x2F;span&gt;For example, in the second image, I redraw the dog completely to look like our dog Zappa.&lt;span class=&quot;sidenote__bracket&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+. I did that for pretty much all of the images, to fix things I wasn&#x27;t able to polish using prompts. I also removed a lot of details to make sure images are crisp and readable at the small size.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;final-image-flow&quot;&gt;Final image flow&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#final-image-flow&quot; aria-label=&quot;Anchor link for: final-image-flow&quot;
+  title=&quot;Anchor link for: final-image-flow&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;All of this took a lot of experimentation, but it gave me a pretty solid workflow which I used to generate all of the images. The complete flow looks like this:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Generate images using Midjourney.&lt;&#x2F;li&gt;
+&lt;li&gt;Upscale them two times, because upscaled images were easier to edit and tracing was more precise.&lt;&#x2F;li&gt;
+&lt;li&gt;Clean up, redraw and separate lines by hand using Gimp.&lt;&#x2F;li&gt;
+&lt;li&gt;Use Inkscape plugin to run AutoTrace centerline tracing.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;It took me a while to generate all the images, and the fact that I was trying to keep it a secret from my wife didn&#x27;t help. I think I did it over the span of two weeks, mostly in the evening after she would go to bed.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;never-stood-a-chance&quot;&gt;&lt;span
+  class=&quot;sidenote__trigger &quot;
+  tabindex=&quot;0&quot;
+  role=&quot;button&quot;
+&gt;
+  Ganon
+&lt;&#x2F;span&gt;
+
+&lt;span
+  class=&quot;sidenote__note &quot;
+&gt;&lt;span class=&quot;sidenote__bracket&quot;&gt;(&lt;&#x2F;span&gt;Name of the main villain Link fights against in The Legend of Zelda series&lt;span class=&quot;sidenote__bracket&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+ never stood a chance!&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#never-stood-a-chance&quot; aria-label=&quot;Anchor link for: never-stood-a-chance&quot;
+  title=&quot;Anchor link for: never-stood-a-chance&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;Before we continue I just want to show you two funky images of Link that really made me laugh:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;funky-links.jpg&quot; alt=&quot;Funky looking Links generated by Midjourney&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Midjourney please staph!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;text&quot;&gt;Text&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#text&quot; aria-label=&quot;Anchor link for: text&quot;
+  title=&quot;Anchor link for: text&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;With the drawings ready, I turned out to the next crucial part - the text. I first wanted to write everything by hand, photograph it and then vectorize it in the same way I did with the images. But it was a hassle - I had to do a lot of editing for text to look as my handwriting.&lt;&#x2F;p&gt;
+&lt;p&gt;Evil Mad Scientist, the maker of my pen plotter, has a fantastic tool called &lt;a href=&quot;https:&#x2F;&#x2F;wiki.evilmadscientist.com&#x2F;Hershey_Text&quot;&gt;Hershey Text&lt;&#x2F;a&gt;. It contains a bunch of single-line fonts ideal for plotting. I chose the EMS Elfin font as it looked playful and hand-drawn. I used it to write all of the text in the book and I think it turned out great.&lt;&#x2F;p&gt;
+&lt;p&gt;Here is how it looks:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;fonts.png&quot; alt=&quot;Title of the book in English and Aerbian in EMS Elfin font&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;plotting&quot;&gt;Plotting&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#plotting&quot; aria-label=&quot;Anchor link for: plotting&quot;
+  title=&quot;Anchor link for: plotting&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;The tricky part with bookbinding is that pages are not printed in order, but in a way that when you fold the sheets in half, you get the right order. I used Figma to design the layout, with a great care to make sure pages are in order after double-sided plotting.&lt;&#x2F;p&gt;
+&lt;p&gt;Here is the layout laid out on A4 sized paper. Sorry for blurring the text, but a lot of it is very personal and I want to keep it for our eyes only.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;layout.jpg&quot; alt=&quot;Layout of the book ready for plotting&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Plotting is the part that went the smoothest, but not without hiccups. I usually use Pigma Micron blackliner markers. They use archival quality ink and they are literally indestructible. But this time, even the thinnest one I had was too thick for the book this small.&lt;&#x2F;p&gt;
+&lt;p&gt;Here you can see the first &lt;span
+  class=&quot;sidenote__trigger &quot;
+  tabindex=&quot;0&quot;
+  role=&quot;button&quot;
+&gt;
+  two test plots
+&lt;&#x2F;span&gt;
+
+&lt;span
+  class=&quot;sidenote__note &quot;
+&gt;&lt;span class=&quot;sidenote__bracket&quot;&gt;(&lt;&#x2F;span&gt;Sorry for the poor quality photos, I threw the plots away, so these are the only ones I have&lt;span class=&quot;sidenote__bracket&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+ using markers of 0.2mm and 0.1mm thickness respectively. Lines got a bit smudged and looked much thicker than I expected. This was also the moment I realized I need to remove &lt;span
+  class=&quot;sidenote__trigger &quot;
+  tabindex=&quot;0&quot;
+  role=&quot;button&quot;
+&gt;
+  a lot of details
+&lt;&#x2F;span&gt;
+
+&lt;span
+  class=&quot;sidenote__note &quot;
+&gt;&lt;span class=&quot;sidenote__bracket&quot;&gt;(&lt;&#x2F;span&gt;A friend of mine said that in these plots, Link looks like he has measles&lt;span class=&quot;sidenote__bracket&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+ from the images to make them readable at this size.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;marker-02.jpg&quot; alt=&quot;Test plot using 0.2mm marker&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;marker-01.jpg&quot; alt=&quot;Test plot using 0.1mm marker&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I needed to find a thinner pen.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;technical-pen-to-the-rescue&quot;&gt;Technical pen to the rescue&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#technical-pen-to-the-rescue&quot; aria-label=&quot;Anchor link for: technical-pen-to-the-rescue&quot;
+  title=&quot;Anchor link for: technical-pen-to-the-rescue&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;Blackliner markers were made as a more practical replacement for technical pens. But from what I&#x27;ve read, an old-school technical pen was the only thing capable of achieving super-fine lines I wanted. I went online and ordered Rotring Isograph 0.2mm. As soon as it arrived I sneaked out to my study and did another test plot using it. Oh boy, was I happy when I saw the result:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;technical-pen-01.jpg&quot; alt=&quot;Test plot using a technical pen&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Lines were thin and crisp and at this point I was convinced the project will be a success!&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;smudged-drawings&quot;&gt;Smudged drawings&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#smudged-drawings&quot; aria-label=&quot;Anchor link for: smudged-drawings&quot;
+  title=&quot;Anchor link for: smudged-drawings&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;All of the first plots were done on 120gsm printer paper. It is somewhat thick paper and drawings looked fantastic. Unfortunately, when I bound the pages together, the drawings and letters would get transferred on the opposite pages. I could probably get away with it, considering the whole hand made feel of the book. But I wanted it to be perfect.&lt;&#x2F;p&gt;
+&lt;p&gt;A friend advised me to leave ink to dry for a few hours. I left each side to dry for 24 hours, but it smudged again. Next time I tried putting the plot (before cutting the pages) between two sheets of papers and pressing it with heavy books. I did that for more than 24 hours, but still after cutting and bounding the pages, they got smudged again. At this point I was becoming somewhat desperate. As the last resort I ordered different, 100gsm paper and to my relief it worked! Crisis averted!&lt;&#x2F;p&gt;
+&lt;p&gt;In the final version you can still see tiny traces on a few pages, but these are barely visible and don&#x27;t really bother me.&lt;&#x2F;p&gt;
+&lt;p&gt;After plotting and cutting I was left with a stack of somewhat delicate pages. Now, it was finally time to turn them into a book.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;bookbinding&quot;&gt;Bookbinding&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#bookbinding&quot; aria-label=&quot;Anchor link for: bookbinding&quot;
+  title=&quot;Anchor link for: bookbinding&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;As you can imagine, I had zero bookbinding experience. There are a lot of resources online, but two of them were crucial for my project as they were on how to bind tiny books:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=kA2bjvOAzGw&quot;&gt;Mini BookBinding Marathon&lt;&#x2F;a&gt; video&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.rokolee.com&#x2F;diy-miniature-hardback-book&quot;&gt;How to Make A Miniature Hardback Book&lt;&#x2F;a&gt; article&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;After reading and watching these and a few generic articles on bookbinding, I gathered enough info to try doing it myself. I thought I was super clever because I 3D printed sides and spine of the book. I designed sewing holes in the spine so I can connect the pages directly to it without using glue. It was a decent idea, but it left a gap between two &lt;span
+  class=&quot;sidenote__trigger &quot;
+  tabindex=&quot;0&quot;
+  role=&quot;button&quot;
+&gt;
+  signatures
+&lt;&#x2F;span&gt;
+
+&lt;span
+  class=&quot;sidenote__note &quot;
+&gt;&lt;span class=&quot;sidenote__bracket&quot;&gt;(&lt;&#x2F;span&gt;In bookbinding, a section, gathering, or signature is a group of sheets folded in half.&lt;span class=&quot;sidenote__bracket&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+. Still, I went with it for the first try.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;3d-printed-spine.jpg&quot; alt=&quot;3D printed spine with two book signatures already sewn to it&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I laid everything down on the canvas that the book would be wrapped in and started assembling it. But I made a crucial mistake - I used super glue. It dries quickly, it is stiff, and doesn&#x27;t glue 3D printed plastic well and it dissolved the paper I used. Long story short, I made a mess. But I didn&#x27;t stress too much, I just proclaimed that version is a prototype and used it as a learning experience.&lt;&#x2F;p&gt;
+&lt;p&gt;I ordered proper bookbinding glue (PVA). While I was waiting for it, I focused on properly sewing the pages together.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;sewing-the-pages&quot;&gt;Sewing the pages&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#sewing-the-pages&quot; aria-label=&quot;Anchor link for: sewing-the-pages&quot;
+  title=&quot;Anchor link for: sewing-the-pages&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;The first time I sewed the pages together, I poked the holes by hand and they were somewhat uneven. Again, it was nothing major, but I didn&#x27;t like it. So I designed and 3D printed a simple tool to help me drill the holes evenly.&lt;&#x2F;p&gt;
+&lt;p&gt;The tool has two parts, and the pages fit snugly between them. Both top and bottom parts have holes, so I was able to put the needle through and poke perfectly even holes in the pages. I&#x27;m very proud of this silly contraption.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;3d-print-01.jpg&quot; alt=&quot;3D printed tool, closed, with needle poking through it&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;3d-print-02.jpg&quot; alt=&quot;3D printed tool, opened, with the sheet with sewing holes visible still in it&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Here you can see all of the eight sheets with sewing holes.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;pages-with-sewing-holes.jpg&quot; alt=&quot;All eight sheets with illustrations ready for sewing&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Fun fact, I designed all 3D parts using JavaScript and &lt;a href=&quot;https:&#x2F;&#x2F;replicad.xyz&#x2F;&quot;&gt;Replicad&lt;&#x2F;a&gt; library. Here is &lt;a href=&quot;https:&#x2F;&#x2F;studio.replicad.xyz&#x2F;workbench?from-url=https:&#x2F;&#x2F;muffinman.io&#x2F;img&#x2F;tiny-book&#x2F;model.js&quot;&gt;a link&lt;&#x2F;a&gt; if you want to play with the model in your browser.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;studio.replicad.xyz&#x2F;workbench?from-url=https:&#x2F;&#x2F;muffinman.io&#x2F;img&#x2F;tiny-book&#x2F;model.js&quot;&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;model-code.png&quot; alt=&quot;Application showing code and the 3D model&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;But I ditched the 3D printed spine used the technique called &lt;em&gt;pamphlet stitch&lt;&#x2F;em&gt; which works great when you have only two signatures. It made signatures way more tight than when I connected them separately to 3D printed spine.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;pamphlet-stich.jpg&quot; alt=&quot;Two book signatures sewn together using pamphlet stich&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;signatures.jpg&quot; alt=&quot;Two book signatures opened at the exact point where they meet&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;glue-arrived&quot;&gt;Glue arrived&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#glue-arrived&quot; aria-label=&quot;Anchor link for: glue-arrived&quot;
+  title=&quot;Anchor link for: glue-arrived&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;When the glue arrived, I plotted everything again and took it from the top. I swapped 3D printed sides for cardboard. Using proper glue was a game changer. I had enough time to apply it before it hardened, and when it dried it stayed flexible. And when it got onto my fingers, it was easy to remove. Everything was much cleaner, and I finally managed to put it all together.&lt;&#x2F;p&gt;
+&lt;p&gt;Unfortunately, I was rushing to finish the book, so I didn&#x27;t take any photos of the process. But here are a few I do have:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;binding.jpg&quot; alt=&quot;Cardboard sides laid out in the bookbinding canvas&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;If you are an experienced bookbinder and reading this, I&#x27;m sorry for the bookbinding crimes I probably committed. I promise I won&#x27;t use super glue again.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-finished-book&quot;&gt;The finished book&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#the-finished-book&quot; aria-label=&quot;Anchor link for: the-finished-book&quot;
+  title=&quot;Anchor link for: the-finished-book&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;It looked great! It was not perfect (more on that below), but I was super happy with how it turned out. It had a distinct handcrafted feel to it, the images turned out fantastic, and I think I really managed to bring out a personal touch with it.&lt;&#x2F;p&gt;
+&lt;p&gt;On the day I finished the book and gave it to my wife, we were both exhausted (our kid was teething, and we had a very rough night), so I thought she would appreciate a little pick-me-up.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;the-book-06.jpg&quot; alt=&quot;Book opened on the table showing the illustration of the family walking in the forrest&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;When I gave it to her, the first thing she asked was, &quot;Will I cry?&quot;. She was brave, but it definitely got her all mushy and made her day. After reading, she carefully put it on the shelf, out of the reach of the little one.&lt;&#x2F;p&gt;
+&lt;p&gt;Then I asked her if she ever suspected I was preparing a surprise for her, and she said that she had no idea. But she also said that she thought it was weird that I would often plot something and not brag about it to her afterwards. It was true, I love showing her my work, but luckily she didn&#x27;t give it too much thought, and I was able to finish my secret project.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;the-book-07.jpg&quot; alt=&quot;Book opened on the table showing the illustration of Link from The Legend of Zelda&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;one-thing-i-would-like-to-fix&quot;&gt;One thing I would like to fix&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#one-thing-i-would-like-to-fix&quot; aria-label=&quot;Anchor link for: one-thing-i-would-like-to-fix&quot;
+  title=&quot;Anchor link for: one-thing-i-would-like-to-fix&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;Like I mentioned, the book isn&#x27;t perfect. The sides are a bit too large, so the pages seem too deep inside when the book is closed. For the same reason, the end pages turned out to be a bit short, which gives it a weird, uneven look. It is purely aesthetic, but I think it is the only thing keeping it from being perfect.&lt;&#x2F;p&gt;
+&lt;p&gt;Lesson learned if I ever end up doing something similar.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;timeline&quot;&gt;Timeline&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#timeline&quot; aria-label=&quot;Anchor link for: timeline&quot;
+  title=&quot;Anchor link for: timeline&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;It lasted way longer than it should - it took me a month a half to finish it. It took so long because I did it in secrecy, which meant working late in the evenings when my wife and kid were asleep. The bunch of little fails... ehm, I mean &lt;em&gt;learning opportunities&lt;&#x2F;em&gt; also prolonged the project. And finally, I had to order multiple things, so I was blocked a few times while I was waiting for the deliveries. In total I made four different orders:&lt;&#x2F;p&gt;
+&lt;p&gt;It took way longer than it should have—it took me a month and a half to finish it. It took so long because I did it in secrecy, which meant working late in the evenings when my wife and kid were asleep. A bunch of little failures... ehm, I mean &lt;em&gt;learning opportunities&lt;&#x2F;em&gt; also prolonged the project. And finally, I had to order multiple things, so I was blocked a few times while I was waiting for four different deliveries.&lt;&#x2F;p&gt;
+&lt;p&gt;But the final assembly took me around two and a half hours from start to finish - plotting, cutting, sewing, and bookbinding. Mostly because I had already practiced all of them and defined the exact process.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#conclusion&quot; aria-label=&quot;Anchor link for: conclusion&quot;
+  title=&quot;Anchor link for: conclusion&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;It was so much fun. I love projects that span across multiple disciplines. This one touched AI, drawing, plotting, modeling, 3D printing, sewing, and bookbinding. I encountered a lot of little hiccups, but I also learned about all of them. Some of the errors I made could have been avoided if I had been more patient. But I hope you&#x27;ll cut me some slack - I was super excited and eager to see how it would turn out, and I had limited time windows when I could do it in secrecy. Still, I need to take it as a lesson - being patient will help me save time when doing projects like this one.&lt;&#x2F;p&gt;
+&lt;p&gt;The highlight for me was that I could do it without an illustrator. Love it or hate it, AI ended up being a fantastic tool that filled the gap in my skill set, which was crucial for making the book.&lt;&#x2F;p&gt;
+&lt;p&gt;I hope you enjoyed this write-up as much as I enjoyed making the book and writing the post. And I do hope I inspired you to try making something of your own. If I did, please reach out on GitHub, I would love to see it.&lt;&#x2F;p&gt;
+
+&lt;script src=&quot;&#x2F;js&#x2F;photoswipe.js&quot;&gt;&lt;&#x2F;script&gt;
+
+
+    </content>
+
+	</entry>
 	<entry xml:lang="en">
 		<title>Change font-weight based on the user&#x27;s screen DPI</title>
 		<published>2025-02-03T00:00:00+00:00</published>
@@ -1982,7 +2374,7 @@ handleScrollbarWidth(window.innerWidth - document.documentElement.clientWidth);
           target=&quot;_blank&quot;
         &gt;
           
-          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;text-render-00.2388844a952b63d2.jpg&quot; alt=&quot;Photo 1&quot;  &#x2F;&gt;
+          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;text-render-00.2388844a952b63d2.jpg&quot; alt=&quot;Photo 1&quot; &#x2F;&gt;
         &lt;&#x2F;a&gt;
   &lt;&#x2F;div&gt;
 
@@ -2008,7 +2400,7 @@ handleScrollbarWidth(window.innerWidth - document.documentElement.clientWidth);
           target=&quot;_blank&quot;
         &gt;
           
-          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;vector-00.a0af804742619108.jpg&quot; alt=&quot;Photo 1&quot;  &#x2F;&gt;
+          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;vector-00.a0af804742619108.jpg&quot; alt=&quot;Photo 1&quot; &#x2F;&gt;
         &lt;&#x2F;a&gt;
         &lt;a
           class=&quot;gallery__item gallery__item--video&quot;
@@ -2056,7 +2448,7 @@ handleScrollbarWidth(window.innerWidth - document.documentElement.clientWidth);
           target=&quot;_blank&quot;
         &gt;
           
-          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;lights-00.88d9536ee0edb944.png&quot; alt=&quot;Photo 1&quot;  &#x2F;&gt;
+          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;lights-00.88d9536ee0edb944.png&quot; alt=&quot;Photo 1&quot; &#x2F;&gt;
         &lt;&#x2F;a&gt;
         
         
@@ -2069,7 +2461,7 @@ handleScrollbarWidth(window.innerWidth - document.documentElement.clientWidth);
           target=&quot;_blank&quot;
         &gt;
           
-          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;vector-50.f560031159f5fe0b.png&quot; alt=&quot;Photo 1&quot;  &#x2F;&gt;
+          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;vector-50.f560031159f5fe0b.png&quot; alt=&quot;Photo 1&quot; &#x2F;&gt;
         &lt;&#x2F;a&gt;
         
         
@@ -2082,7 +2474,7 @@ handleScrollbarWidth(window.innerWidth - document.documentElement.clientWidth);
           target=&quot;_blank&quot;
         &gt;
           
-          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;vector-55.bb9ad6d7d38929ab.png&quot; alt=&quot;Photo 1&quot;  &#x2F;&gt;
+          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;vector-55.bb9ad6d7d38929ab.png&quot; alt=&quot;Photo 1&quot; &#x2F;&gt;
         &lt;&#x2F;a&gt;
         
         
@@ -2095,7 +2487,7 @@ handleScrollbarWidth(window.innerWidth - document.documentElement.clientWidth);
           target=&quot;_blank&quot;
         &gt;
           
-          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;vector-60.eb15667a214b57bb.png&quot; alt=&quot;Photo 1&quot;  &#x2F;&gt;
+          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;vector-60.eb15667a214b57bb.png&quot; alt=&quot;Photo 1&quot; &#x2F;&gt;
         &lt;&#x2F;a&gt;
         
         
@@ -2108,7 +2500,7 @@ handleScrollbarWidth(window.innerWidth - document.documentElement.clientWidth);
           target=&quot;_blank&quot;
         &gt;
           
-          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;vector-70.425bf6d5d022bfd5.png&quot; alt=&quot;Photo 1&quot;  &#x2F;&gt;
+          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;vector-70.425bf6d5d022bfd5.png&quot; alt=&quot;Photo 1&quot; &#x2F;&gt;
         &lt;&#x2F;a&gt;
         
         
@@ -2121,7 +2513,7 @@ handleScrollbarWidth(window.innerWidth - document.documentElement.clientWidth);
           target=&quot;_blank&quot;
         &gt;
           
-          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;vector-80.a9e50b8165aa40f3.png&quot; alt=&quot;Photo 1&quot;  &#x2F;&gt;
+          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;vector-80.a9e50b8165aa40f3.png&quot; alt=&quot;Photo 1&quot; &#x2F;&gt;
         &lt;&#x2F;a&gt;
         
         
@@ -2134,7 +2526,7 @@ handleScrollbarWidth(window.innerWidth - document.documentElement.clientWidth);
           target=&quot;_blank&quot;
         &gt;
           
-          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;vector-90.06caa0aca716dd7a.png&quot; alt=&quot;Photo 1&quot;  &#x2F;&gt;
+          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;vector-90.06caa0aca716dd7a.png&quot; alt=&quot;Photo 1&quot; &#x2F;&gt;
         &lt;&#x2F;a&gt;
         
         
@@ -2147,7 +2539,7 @@ handleScrollbarWidth(window.innerWidth - document.documentElement.clientWidth);
           target=&quot;_blank&quot;
         &gt;
           
-          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;vector-100.de466a1c54f630e8.png&quot; alt=&quot;Photo 1&quot;  &#x2F;&gt;
+          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;vector-100.de466a1c54f630e8.png&quot; alt=&quot;Photo 1&quot; &#x2F;&gt;
         &lt;&#x2F;a&gt;
         
         
@@ -2160,7 +2552,7 @@ handleScrollbarWidth(window.innerWidth - document.documentElement.clientWidth);
           target=&quot;_blank&quot;
         &gt;
           
-          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;vector-110.68480054c5aae105.png&quot; alt=&quot;Photo 1&quot;  &#x2F;&gt;
+          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;vector-110.68480054c5aae105.png&quot; alt=&quot;Photo 1&quot; &#x2F;&gt;
         &lt;&#x2F;a&gt;
   &lt;&#x2F;div&gt;
 
@@ -2185,7 +2577,7 @@ handleScrollbarWidth(window.innerWidth - document.documentElement.clientWidth);
           target=&quot;_blank&quot;
         &gt;
           
-          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;rust-00.26e947984ba36622.jpg&quot; alt=&quot;Photo 1&quot;  &#x2F;&gt;
+          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;rust-00.26e947984ba36622.jpg&quot; alt=&quot;Photo 1&quot; &#x2F;&gt;
         &lt;&#x2F;a&gt;
         &lt;a
           class=&quot;gallery__item gallery__item--video&quot;
@@ -2220,7 +2612,7 @@ handleScrollbarWidth(window.innerWidth - document.documentElement.clientWidth);
           target=&quot;_blank&quot;
         &gt;
           
-          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;rust-20.0d62c6f92b6cb8e4.jpg&quot; alt=&quot;Photo 1&quot;  &#x2F;&gt;
+          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;rust-20.0d62c6f92b6cb8e4.jpg&quot; alt=&quot;Photo 1&quot; &#x2F;&gt;
         &lt;&#x2F;a&gt;
         
         
@@ -2233,7 +2625,7 @@ handleScrollbarWidth(window.innerWidth - document.documentElement.clientWidth);
           target=&quot;_blank&quot;
         &gt;
           
-          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;rust-30.d9765f2201635834.png&quot; alt=&quot;Photo 1&quot;  &#x2F;&gt;
+          &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;muffinman.io&amp;#x2F;processed_images&amp;#x2F;rust-30.d9765f2201635834.png&quot; alt=&quot;Photo 1&quot; &#x2F;&gt;
         &lt;&#x2F;a&gt;
   &lt;&#x2F;div&gt;
 
