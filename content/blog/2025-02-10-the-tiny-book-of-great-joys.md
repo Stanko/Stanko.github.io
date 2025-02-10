@@ -63,7 +63,7 @@ One of the first images I was satisfied with (it didn't end up in the book, thou
 
 ![Black and white drawing of a cute fox curled up sleeping.](/img/tiny-book/01-fox.jpg)
 
-It took a lot of time, but it was fun. Failed attempts were often quirky and funny, and I was learning how to use the tool. And it made me feel like a secret agent doing next to my wife, who had no idea what I was up to.
+It took a lot of time, but it was fun. Failed attempts were often quirky and funny, and I was learning how to use the tool. And it made me feel like a secret agent, doing it next to my wife, who had no idea what I was up to.
 
 ![A bunch of attempts at drawing Link from Zelda](/img/tiny-book/fails.png)
 
@@ -164,7 +164,7 @@ Midjourney please staph!
 
 ## Text
 
-With the drawings ready, I turned out to the next crucial part - the text. I first wanted to write everything by hand, photograph it and then vectorize it in the same way I did with the images. But it was a hassle - I had to do a lot of editing for text to look as my handwriting.
+With the drawings ready, I turned to the next crucial part - the text. I first wanted to write everything by hand, photograph it and then vectorize it in the same way I did with the images. But it was a hassle - I had to do a lot of editing for text to look as my handwriting.
 
 Evil Mad Scientist, the maker of my pen plotter, has a fantastic tool called [Hershey Text](https://wiki.evilmadscientist.com/Hershey_Text). It contains a bunch of single-line fonts ideal for plotting. I chose the EMS Elfin font as it looked playful and hand-drawn. I used it to write all of the text in the book and I think it turned out great.
 
@@ -240,7 +240,7 @@ Fun fact, I designed all 3D parts using JavaScript and [Replicad](https://replic
 
 [![Application showing code and the 3D model](/img/tiny-book/model-code.png)](https://studio.replicad.xyz/workbench?from-url=https://muffinman.io/img/tiny-book/model.js)
 
-But I ditched the 3D printed spine used the technique called *pamphlet stitch* which works great when you have only two signatures. It made signatures way more tight than when I connected them separately to 3D printed spine.
+But I ditched the 3D printed spine and used the technique called *pamphlet stitch*, which works great when you have only two signatures. It made signatures way more tight than when I connected them separately to the 3D printed spine.
 
 ![Two book signatures sewn together using pamphlet stich](/img/tiny-book/pamphlet-stich.jpg)
 
