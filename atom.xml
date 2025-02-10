@@ -114,7 +114,7 @@
 &lt;p&gt;I got myself a Midjourney subscription and started playing with it. It took a lot of failed attempts to figure out how to get drawings that were simple and had a strong hand-drawn feel to them. Even then, I ended up editing every one of them, but more on that later.&lt;&#x2F;p&gt;
 &lt;p&gt;One of the first images I was satisfied with (it didn&#x27;t end up in the book, though):&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;01-fox.jpg&quot; alt=&quot;Black and white drawing of a cute fox curled up sleeping.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;It took a lot of time, but it was fun. Failed attempts were often quirky and funny, and I was learning how to use the tool. And it made me feel like a secret agent doing next to my wife, who had no idea what I was up to.&lt;&#x2F;p&gt;
+&lt;p&gt;It took a lot of time, but it was fun. Failed attempts were often quirky and funny, and I was learning how to use the tool. And it made me feel like a secret agent, doing it next to my wife, who had no idea what I was up to.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;fails.png&quot; alt=&quot;A bunch of attempts at drawing Link from Zelda&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;prompting&quot;&gt;Prompting&lt;a
   class=&quot;header-anchor&quot;
@@ -243,7 +243,7 @@
   title=&quot;Anchor link for: text&quot;
 &gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
 &lt;&#x2F;h2&gt;
-&lt;p&gt;With the drawings ready, I turned out to the next crucial part - the text. I first wanted to write everything by hand, photograph it and then vectorize it in the same way I did with the images. But it was a hassle - I had to do a lot of editing for text to look as my handwriting.&lt;&#x2F;p&gt;
+&lt;p&gt;With the drawings ready, I turned to the next crucial part - the text. I first wanted to write everything by hand, photograph it and then vectorize it in the same way I did with the images. But it was a hassle - I had to do a lot of editing for text to look as my handwriting.&lt;&#x2F;p&gt;
 &lt;p&gt;Evil Mad Scientist, the maker of my pen plotter, has a fantastic tool called &lt;a href=&quot;https:&#x2F;&#x2F;wiki.evilmadscientist.com&#x2F;Hershey_Text&quot;&gt;Hershey Text&lt;&#x2F;a&gt;. It contains a bunch of single-line fonts ideal for plotting. I chose the EMS Elfin font as it looked playful and hand-drawn. I used it to write all of the text in the book and I think it turned out great.&lt;&#x2F;p&gt;
 &lt;p&gt;Here is how it looks:&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;fonts.png&quot; alt=&quot;Title of the book in English and Aerbian in EMS Elfin font&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
@@ -342,7 +342,7 @@
 &lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;pages-with-sewing-holes.jpg&quot; alt=&quot;All eight sheets with illustrations ready for sewing&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Fun fact, I designed all 3D parts using JavaScript and &lt;a href=&quot;https:&#x2F;&#x2F;replicad.xyz&#x2F;&quot;&gt;Replicad&lt;&#x2F;a&gt; library. Here is &lt;a href=&quot;https:&#x2F;&#x2F;studio.replicad.xyz&#x2F;workbench?from-url=https:&#x2F;&#x2F;muffinman.io&#x2F;img&#x2F;tiny-book&#x2F;model.js&quot;&gt;a link&lt;&#x2F;a&gt; if you want to play with the model in your browser.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;studio.replicad.xyz&#x2F;workbench?from-url=https:&#x2F;&#x2F;muffinman.io&#x2F;img&#x2F;tiny-book&#x2F;model.js&quot;&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;model-code.png&quot; alt=&quot;Application showing code and the 3D model&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;But I ditched the 3D printed spine used the technique called &lt;em&gt;pamphlet stitch&lt;&#x2F;em&gt; which works great when you have only two signatures. It made signatures way more tight than when I connected them separately to 3D printed spine.&lt;&#x2F;p&gt;
+&lt;p&gt;But I ditched the 3D printed spine and used the technique called &lt;em&gt;pamphlet stitch&lt;&#x2F;em&gt;, which works great when you have only two signatures. It made signatures way more tight than when I connected them separately to the 3D printed spine.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;pamphlet-stich.jpg&quot; alt=&quot;Two book signatures sewn together using pamphlet stich&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;signatures.jpg&quot; alt=&quot;Two book signatures opened at the exact point where they meet&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;glue-arrived&quot;&gt;Glue arrived&lt;a
