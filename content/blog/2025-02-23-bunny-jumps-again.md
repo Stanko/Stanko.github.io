@@ -1,0 +1,45 @@
++++
+title = "<span>Bunny</span> jumps again"
+
+[taxonomies]
+category = ["JavaScript"]
+tags = ["3d printing", "random", "bunny", "inkscape"]
+
+[extra]
+intro = "My wife's favorite bunny brooch broke, and she turned to me to fix it. If you have a 3D printer at home, 3D printing is the answer."
+image = "/img/bunny/bunny-jumps-again.jpg"
+theme = "blue"
++++
+
+
+I love 3D printing. It feels like magic - we are able to design and create physical things in a matter of hours, in our homes. I understand the underlying technology, but it still blows my mind when I think about it. It makes me a bit sad that more people aren't fascinated by it.
+
+Let's see what my love for 3D printing has to do with bunnies. Ski jumping bunnies to be exact. My wife has a brooch that she really likes - of a bunny ski jumping. She wears it on her backpack, and when she's in the mountains, on her ski jacket. But unfortunately it broke - the skies snapped off. So she asked me, *Can you fix it somehow? Maybe 3D print something?*
+
+![The bunny brooch with skies broken](/img/bunny/broken.jpg)
+
+This was right up my alley. After some thought, I decided the best approach would be to design a frame for the broken pieces, with slightly offset edges to keep them in place. But how could I design it when the outline was so irregular? After overthinking it, I returned to a simple solution - I took a photo of the brooch, imported it into Inkscape, and traced it by hand.
+
+Here is the result:
+
+![Photo of the brooch with pink vector outline I drew in Inkscape](/img/bunny/outline.jpg)
+
+I extruded the outline using [TinkerCad](https://www.tinkercad.com/) and did a test print. I was pleasantly surprised, because the print was almost perfect.
+
+![Test print pressed against the brooch, it fits perfectly](/img/bunny/test-print-1.jpg)
+
+![Test print next to the brooch for comparison](/img/bunny/test-print-2.jpg)
+
+There were a few points that needed tweaking, but before making changes, I wanted to see if simply adding an edge would work. And it did! To be fair I printed four in total. I'm a bit embarrassed to admit, but I printed the first one mirrored. Then printed three more with slightly different measurements for the offset and edge height.
+
+![All of the 3D prints I've done](/img/bunny/five-bunnies.jpg)
+
+One of them fit perfectly. And I mean - perfectly - it is a very tight press fit.
+
+![Bunny all fixed up, sitting in the 3D printed frame](/img/bunny/bunny-jumps-again.jpg)
+
+![The back side of the brooch with the 3D printed frame](/img/bunny/back.jpg)
+
+Oh joy! Bunny bunny jumps again! My wife was thrilled to see her favorite brooch fixed.
+
+But the real point I wanted to share is that 3D printing is amazing, and sometimes, the simplest ideas work best!

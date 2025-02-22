@@ -3,7 +3,7 @@ title = "The <span>Tiny Book</span>  of Great Joys"
 
 [taxonomies]
 category = ["Random"]
-tags = ["ai", "midjourney", "svg", "plotter", "book"]
+tags = ["ai", "midjourney", "svg", "plotter", "book", "3d printing"]
 
 [extra]
 theme = "purple"
