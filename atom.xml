@@ -45,7 +45,7 @@
   class=&quot;sidenote__note &quot;
 &gt;&lt;span class=&quot;sidenote__bracket&quot;&gt;(&lt;&#x2F;span&gt;I&#x27;m quite proud of it! The shadow effect is my favorite detail.&lt;span class=&quot;sidenote__bracket&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
 . It reveals the structure in 3D and might give you a clue as to how I managed to create the slider with only a few lines of JavaScript.&lt;&#x2F;p&gt;
-&lt;p&gt;Here&#x27;s a tip - the blue element is actually a native HTML slider.&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s a tip - the blue element is actually a native HTML range input.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;it-s-in-the-name&quot;&gt;It&#x27;s in the name&lt;a
   class=&quot;header-anchor&quot;
   href=&quot;#it-s-in-the-name&quot; aria-label=&quot;Anchor link for: it-s-in-the-name&quot;
