@@ -69,10 +69,11 @@
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 
   <script>
-    var isSystemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    var userSelected = localStorage.getItem('color-scheme');
-    var scheme = 'light-scheme';
-    if (userSelected) { scheme = userSelected } else if (isSystemDark) { scheme = 'dark-scheme'; }
+    let systemScheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark-scheme' : 'light-scheme';
+    let storedScheme = localStorage.getItem('color-scheme');
+    let scheme = 'light-scheme';
+    if (storedScheme) { scheme = storedScheme } else { scheme = systemScheme; }
+    if (systemScheme === storedScheme) { localStorage.removeItem('color-scheme'); }
     document.documentElement.classList.add(scheme);
   </script>
 

@@ -2,7 +2,7 @@
 title = "<span>Bunny</span> jumps again"
 
 [taxonomies]
-category = ["JavaScript"]
+category = ["Random"]
 tags = ["3d printing", "random", "bunny", "inkscape"]
 
 [extra]

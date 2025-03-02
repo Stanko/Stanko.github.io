@@ -1,5 +1,5 @@
 {% if images | length > 0 %}
-  <div class="gallery gallery--post photoswipe-gallery">
+  <div class="gallery-post photoswipe-gallery">
     {% set photo_index = 0 %}
     {%- for asset in images -%}
       {%- if asset is matching("[.](jpg|png|gif)$") -%}

@@ -39,7 +39,7 @@
   }
 
   span {
-    @include text-gradient;
+    color: var(--theme-color);
   }
 }
 

@@ -13,6 +13,12 @@
 }
 
 // --- Small
+@mixin sm() {
+  @media (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
 @mixin sm-only() {
   @media (max-width: #{$breakpoint-md - 1}) {
     @content;
