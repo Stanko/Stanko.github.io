@@ -37,7 +37,7 @@ Here is the finished slider, with images from the book [Letters from Sarajevo](h
 
 Try out the {{sidenote(text="debug mode", note="I'm quite proud of it! The shadow effect is my favorite detail.")}}. It reveals the structure in 3D and might give you a clue as to how I managed to create the slider with only a few lines of JavaScript.
 
-Here's a tip - the blue element is actually a native HTML slider.
+Here's a tip - the blue element is actually a native HTML range input.
 
 ## It's in the name
 
