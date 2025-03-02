@@ -6,8 +6,132 @@
 	<link href="https://muffinman.io/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://muffinman.io"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2025-02-23T00:00:00+00:00</updated>
+	<updated>2025-03-02T00:00:00+00:00</updated>
 	<id>https://muffinman.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Image comparison slider in 6 lines of JavaScript</title>
+		<published>2025-03-02T00:00:00+00:00</published>
+		<updated>2025-03-02T00:00:00+00:00</updated>
+		<link href="https://muffinman.io/blog/image-comparison-slider/" type="text/html"/>
+		<id>https://muffinman.io/blog/image-comparison-slider/</id>
+    <author>
+      <name>Stanko</name>
+    </author>
+		<content type="html" >&lt;link rel=&quot;stylesheet&quot; href=&quot;&#x2F;posts&#x2F;image-comparison-slider.css&quot; &#x2F;&gt;
+&lt;p&gt;While I was writing &lt;a href=&quot;&#x2F;blog&#x2F;the-tiny-book-of-great-joys&#x2F;&quot;&gt;this post&lt;&#x2F;a&gt;, I wanted to create an image comparison component. I made one with just a few lines of JavaScript, but I didn&#x27;t include it in the post.&lt;&#x2F;p&gt;
+&lt;p&gt;Here is the finished slider, with images from the book &lt;a href=&quot;https:&#x2F;&#x2F;lettersfromsarajevo.com&#x2F;&quot;&gt;Letters from Sarajevo&lt;&#x2F;a&gt;. If you want to play with the code, you can find it on &lt;a href=&quot;https:&#x2F;&#x2F;codepen.io&#x2F;stanko&#x2F;pen&#x2F;myddXKm&quot;&gt;CodePen&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;div class=&quot;compare compare--letters&quot;&gt;
+  &lt;img class=&quot;compare__bottom-image&quot; src=&quot;&#x2F;img&#x2F;image-comparison-slider&#x2F;letters-01.jpg&quot;&gt;
+  &lt;div class=&quot;compare__mask&quot;&gt;
+    &lt;img class=&quot;compare__top-image&quot; src=&quot;&#x2F;img&#x2F;image-comparison-slider&#x2F;letters-02.png&quot;&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;compare__separator&quot;&gt;
+    &lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; fill=&quot;none&quot; class=&quot;compare__icon&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+      &lt;path d=&quot;M 6 2 L 1 8 L 6 14 M 10 2 L 15 8 L 10 14&quot; stroke=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;
+    &lt;&#x2F;svg&gt;
+  &lt;&#x2F;div&gt;
+  &lt;input class=&quot;compare__input&quot; type=&quot;range&quot; min=&quot;0&quot; step=&quot;0.5&quot; max=&quot;100&quot; value=&quot;50&quot;&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;&lt;button class=&quot;btn btn--xs btn--main toggle-debug&quot;&gt;Toggle debug&lt;&#x2F;button&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Try out the &lt;span
+  class=&quot;sidenote__trigger &quot;
+  tabindex=&quot;0&quot;
+  role=&quot;button&quot;
+&gt;
+  debug mode
+&lt;&#x2F;span&gt;
+
+&lt;span
+  class=&quot;sidenote__note &quot;
+&gt;&lt;span class=&quot;sidenote__bracket&quot;&gt;(&lt;&#x2F;span&gt;I&#x27;m quite proud of it! The shadow effect is my favorite detail.&lt;span class=&quot;sidenote__bracket&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+. It reveals the structure in 3D and might give you a clue as to how I managed to create the slider with only a few lines of JavaScript.&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s a tip - the blue element is actually a native HTML slider.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;it-s-in-the-name&quot;&gt;It&#x27;s in the name&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#it-s-in-the-name&quot; aria-label=&quot;Anchor link for: it-s-in-the-name&quot;
+  title=&quot;Anchor link for: it-s-in-the-name&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;Image comparison &lt;em&gt;slider&lt;&#x2F;em&gt;. Slider, you say? We already have a native slider component - input &lt;code&gt;[type=range]&lt;&#x2F;code&gt;. Could we use it to make an image comparison slider? Turns out we can.&lt;&#x2F;p&gt;
+&lt;p&gt;I think that the solution I came up with is clever, yet simple to understand.&lt;&#x2F;p&gt;
+&lt;p&gt;This is the base idea:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;We have two images and the range slider, stacked on each other.&lt;&#x2F;li&gt;
+&lt;li&gt;The range input goes from 0 to 100.&lt;&#x2F;li&gt;
+&lt;li&gt;As the slider is moved, we update a CSS variable to match the slider value.&lt;&#x2F;li&gt;
+&lt;li&gt;We use this variable to set the width of the top image.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Here is a simplified, unstyled example. Try moving the slider to see how it works.&lt;&#x2F;p&gt;
+&lt;div class=&quot;unstyled&quot;&gt;
+  &lt;pre class=&quot;unstyled__css z-code&quot;&gt;&lt;&#x2F;pre&gt;
+  &lt;div class=&quot;unstyled__mask&quot;&gt;
+    &lt;img class=&quot;unstyled__image&quot; src=&quot;&#x2F;img&#x2F;image-comparison-slider&#x2F;letters-02.png&quot;&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div&gt;
+    &lt;input class=&quot;unstyled__input&quot; type=&quot;range&quot; min=&quot;0&quot; step=&quot;0.5&quot; max=&quot;100&quot; value=&quot;50&quot;&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;h2 id=&quot;javascript&quot;&gt;JavaScript&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#javascript&quot; aria-label=&quot;Anchor link for: javascript&quot;
+  title=&quot;Anchor link for: javascript&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;As we saw in the example above, everything is about keeping the slider value synced with the CSS variable. This variable controls the width of the top image and the position of the separator.&lt;&#x2F;p&gt;
+&lt;p&gt;Here is the JavaScript code that keeps the &lt;code&gt;--slider-value&lt;&#x2F;code&gt; variable in sync with the slider value:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;js&quot; class=&quot;language-js z-code&quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;z-source z-ts&quot;&gt;&lt;span class=&quot;z-comment z-line z-double-slash z-ts&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-ts&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment z-line z-double-slash z-ts&quot;&gt; Set element variables&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-ts&quot;&gt;&lt;span class=&quot;z-meta z-var z-expr z-ts&quot;&gt;&lt;span class=&quot;z-storage z-type z-ts&quot;&gt;const&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-var-single-variable z-expr z-ts&quot;&gt;&lt;span class=&quot;z-meta z-definition z-variable z-ts&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-ts&quot;&gt;compareSlider&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-operator z-assignment z-ts&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-function-call z-ts&quot;&gt;&lt;span class=&quot;z-support z-variable z-dom z-ts&quot;&gt;document&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-accessor z-ts&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-support z-function z-dom z-ts&quot;&gt;querySelector&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-brace z-round z-ts&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-quoted z-double z-ts&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-ts&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;.comparison-slider&lt;span class=&quot;z-punctuation z-definition z-string z-end z-ts&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-brace z-round z-ts&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-statement z-ts&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-ts&quot;&gt;&lt;span class=&quot;z-meta z-var z-expr z-ts&quot;&gt;&lt;span class=&quot;z-storage z-type z-ts&quot;&gt;const&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-var-single-variable z-expr z-ts&quot;&gt;&lt;span class=&quot;z-meta z-definition z-variable z-ts&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-ts&quot;&gt;input&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-operator z-assignment z-ts&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-function-call z-ts&quot;&gt;&lt;span class=&quot;z-variable z-other z-object z-ts&quot;&gt;compareSlider&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-accessor z-ts&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-support z-function z-dom z-ts&quot;&gt;querySelector&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-brace z-round z-ts&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-quoted z-double z-ts&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-ts&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;.comparison-slider__input&lt;span class=&quot;z-punctuation z-definition z-string z-end z-ts&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-brace z-round z-ts&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-statement z-ts&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-ts&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-ts&quot;&gt;&lt;span class=&quot;z-comment z-line z-double-slash z-ts&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-ts&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment z-line z-double-slash z-ts&quot;&gt; Update the CSS variable on input change&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-ts&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-ts&quot;&gt;&lt;span class=&quot;z-variable z-other z-object z-ts&quot;&gt;input&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-accessor z-ts&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-support z-function z-dom z-ts&quot;&gt;addEventListener&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-brace z-round z-ts&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-quoted z-double z-ts&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-ts&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;input&lt;span class=&quot;z-punctuation z-definition z-string z-end z-ts&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator z-comma z-ts&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-arrow z-ts&quot;&gt; &lt;span class=&quot;z-meta z-parameters z-ts&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-parameters z-begin z-ts&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-parameters z-end z-ts&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-arrow z-ts&quot;&gt;&lt;span class=&quot;z-storage z-type z-function z-arrow z-ts&quot;&gt;=&amp;gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-block z-ts&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-block z-ts&quot;&gt;{&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-ts&quot;&gt;&lt;span class=&quot;z-meta z-arrow z-ts&quot;&gt;&lt;span class=&quot;z-meta z-block z-ts&quot;&gt;  &lt;span class=&quot;z-meta z-function-call z-ts&quot;&gt;&lt;span class=&quot;z-variable z-other z-object z-ts&quot;&gt;compareSlider&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-accessor z-ts&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-support z-variable z-property z-dom z-ts&quot;&gt;style&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-accessor z-ts&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function z-ts&quot;&gt;setProperty&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-brace z-round z-ts&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-quoted z-double z-ts&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-ts&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;--slider-value&lt;span class=&quot;z-punctuation z-definition z-string z-end z-ts&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator z-comma z-ts&quot;&gt;,&lt;&#x2F;span&gt; &lt;span class=&quot;z-string z-template z-ts&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-template z-begin z-ts&quot;&gt;`&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-template z-expression z-ts&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-template-expression z-begin z-ts&quot;&gt;${&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-template z-expression z-ts&quot;&gt;&lt;span class=&quot;z-meta z-embedded z-line z-ts&quot;&gt;&lt;span class=&quot;z-variable z-other z-object z-ts&quot;&gt;input&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-accessor z-ts&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-support z-variable z-property z-dom z-ts&quot;&gt;value&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-template-expression z-end z-ts&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;%&lt;span class=&quot;z-punctuation z-definition z-string z-template z-end z-ts&quot;&gt;`&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-brace z-round z-ts&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-statement z-ts&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-ts&quot;&gt;&lt;span class=&quot;z-meta z-arrow z-ts&quot;&gt;&lt;span class=&quot;z-meta z-block z-ts&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-block z-ts&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-brace z-round z-ts&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-statement z-ts&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-ts&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-ts&quot;&gt;&lt;span class=&quot;z-comment z-line z-double-slash z-ts&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-ts&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment z-line z-double-slash z-ts&quot;&gt; Update the CSS variable on load&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-ts&quot;&gt;&lt;span class=&quot;z-comment z-line z-double-slash z-ts&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-ts&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment z-line z-double-slash z-ts&quot;&gt; to ensure the slider starts in sync with image&amp;#39;s width.&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-ts&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-ts&quot;&gt;&lt;span class=&quot;z-variable z-other z-object z-ts&quot;&gt;compareSlider&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-accessor z-ts&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-support z-variable z-property z-dom z-ts&quot;&gt;style&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-accessor z-ts&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function z-ts&quot;&gt;setProperty&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-brace z-round z-ts&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-quoted z-double z-ts&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-ts&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;--slider-value&lt;span class=&quot;z-punctuation z-definition z-string z-end z-ts&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator z-comma z-ts&quot;&gt;,&lt;&#x2F;span&gt; &lt;span class=&quot;z-string z-template z-ts&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-template z-begin z-ts&quot;&gt;`&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-template z-expression z-ts&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-template-expression z-begin z-ts&quot;&gt;${&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-template z-expression z-ts&quot;&gt;&lt;span class=&quot;z-meta z-embedded z-line z-ts&quot;&gt;&lt;span class=&quot;z-variable z-other z-object z-ts&quot;&gt;input&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-accessor z-ts&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-support z-variable z-property z-dom z-ts&quot;&gt;value&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-template-expression z-end z-ts&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;%&lt;span class=&quot;z-punctuation z-definition z-string z-template z-end z-ts&quot;&gt;`&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-brace z-round z-ts&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-statement z-ts&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;We could have been cheeky and shortened this code even more, but I favor readability. The code is still super short and easy to understand.&lt;&#x2F;p&gt;
+&lt;p&gt;Here is another example for good measure, this time images are from &lt;a href=&quot;&#x2F;blog&#x2F;the-tiny-book-of-great-joys&#x2F;&quot;&gt;The Tiny Book of Great Joys&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
+&lt;div class=&quot;compare compare--tiny-book&quot;&gt;
+  &lt;img class=&quot;compare__bottom-image&quot; src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;setnja-01.png&quot;&gt;
+  &lt;div class=&quot;compare__mask&quot;&gt;
+    &lt;img class=&quot;compare__top-image&quot; src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;setnja-03.png&quot;&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;compare__separator&quot;&gt;
+    &lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; fill=&quot;none&quot; class=&quot;compare__icon&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+      &lt;path d=&quot;M 6 2 L 1 8 L 6 14 M 10 2 L 15 8 L 10 14&quot; stroke=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;
+    &lt;&#x2F;svg&gt;
+  &lt;&#x2F;div&gt;
+  &lt;input class=&quot;compare__input&quot; type=&quot;range&quot; min=&quot;0&quot; step=&quot;0.5&quot; max=&quot;100&quot; value=&quot;50&quot;&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;&lt;button class=&quot;btn btn--xs btn--main toggle-debug&quot;&gt;Toggle debug&lt;&#x2F;button&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;browser-support&quot;&gt;Browser support&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#browser-support&quot; aria-label=&quot;Anchor link for: browser-support&quot;
+  title=&quot;Anchor link for: browser-support&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;I&#x27;ve tested it in Firefox, Chrome, and Safari on desktop, as well as Safari on mobile. It works smoothly in all of them. I&#x27;m pretty sure it will work on other browser too, but I haven&#x27;t tested it myself.&lt;&#x2F;p&gt;
+&lt;p&gt;If this post gets some traction, I&#x27;ll probably clean it up and release a small library.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;a
+  class=&quot;header-anchor&quot;
+  href=&quot;#conclusion&quot; aria-label=&quot;Anchor link for: conclusion&quot;
+  title=&quot;Anchor link for: conclusion&quot;
+&gt; &lt;span class=&quot;sr-only&quot; aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;I love using native features whenever possible. I even use them to solve problems beyond their intended purpose. By doing this I avoid re-implementing features that are already built in, keeping the code short and efficient.&lt;&#x2F;p&gt;
+&lt;p&gt;If you are interested in this topic, you might like these posts too:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;&#x2F;blog&#x2F;css-animations-instead-of-js-timers&#x2F;&quot;&gt;Using CSS animations instead of JavaScript timers&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;&#x2F;blog&#x2F;native-dual-range-input&#x2F;&quot;&gt;Native dual-range input&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;script src=&quot;&#x2F;js&#x2F;posts&#x2F;image-comparison-slider.js&quot;&gt;&lt;&#x2F;script&gt;
+
+    </content>
+
+	</entry>
 	<entry xml:lang="en">
 		<title>Bunny jumps again</title>
 		<published>2025-02-23T00:00:00+00:00</published>
@@ -60,7 +184,7 @@
 , and here is how it turned out:&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;tiny-book&#x2F;the-book-01.jpg&quot; alt=&quot;The Tiny Book of Great Joys sitting on the table slightly open with the title page showing&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 
-  &lt;div class=&quot;gallery gallery--post photoswipe-gallery&quot;&gt;
+  &lt;div class=&quot;gallery-post photoswipe-gallery&quot;&gt;
     
         
         
@@ -2389,7 +2513,7 @@ handleScrollbarWidth(window.innerWidth - document.documentElement.clientWidth);
 &lt;&#x2F;h2&gt;
 &lt;p&gt;The first step was to build a basic 3D renderer with objects defined as signed distance functions. It used text to render the scene and it was based entirely on &lt;a href=&quot;https:&#x2F;&#x2F;vgel.me&#x2F;posts&#x2F;donut&#x2F;&quot;&gt;Theia Vogel&#x27;s great article&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 
-  &lt;div class=&quot;gallery gallery--post photoswipe-gallery&quot;&gt;
+  &lt;div class=&quot;gallery-post photoswipe-gallery&quot;&gt;
     
         
         
@@ -2415,7 +2539,7 @@ handleScrollbarWidth(window.innerWidth - document.documentElement.clientWidth);
 &lt;p&gt;Then, I started improving the ray-tracing part. Articles by &lt;a href=&quot;https:&#x2F;&#x2F;iquilezles.org&#x2F;articles&#x2F;distfunctions&#x2F;&quot;&gt;Inigo Quilez&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;jamie-wong.com&#x2F;2016&#x2F;07&#x2F;15&#x2F;ray-marching-signed-distance-functions&#x2F;&quot;&gt;Jamie Wong&lt;&#x2F;a&gt; were immensely helpful.&lt;&#x2F;p&gt;
 &lt;p&gt;With proper ray-tracing in place, I began figuring out how to hatch a scene using vector lines. I started simple, using only vertical lines (image on the left). Then, I gradually worked my way to using vector fields (image on the right).&lt;&#x2F;p&gt;
 
-  &lt;div class=&quot;gallery gallery--post photoswipe-gallery&quot;&gt;
+  &lt;div class=&quot;gallery-post photoswipe-gallery&quot;&gt;
     
         
         
@@ -2463,7 +2587,7 @@ handleScrollbarWidth(window.innerWidth - document.documentElement.clientWidth);
 &lt;p&gt;Once I had basic vector rendering in place, I spent a lot of time tweaking and experimenting. Here are some examples using lights, boolean operations, displacement, and different hatching options.&lt;&#x2F;p&gt;
 &lt;p&gt;In the first two images you can also see the raster output I&#x27;m using for debugging.&lt;&#x2F;p&gt;
 
-  &lt;div class=&quot;gallery gallery--post photoswipe-gallery&quot;&gt;
+  &lt;div class=&quot;gallery-post photoswipe-gallery&quot;&gt;
     
         
         
@@ -2592,7 +2716,7 @@ handleScrollbarWidth(window.innerWidth - document.documentElement.clientWidth);
 &lt;&#x2F;h2&gt;
 &lt;p&gt;As you can imagine, the JavaScript version is not very performant. To speed up rendering, I decided to learn some Rust and port Rayven to it. Here are a few screenshots in the terminal, along with the SVG render at the end.&lt;&#x2F;p&gt;
 
-  &lt;div class=&quot;gallery gallery--post photoswipe-gallery&quot;&gt;
+  &lt;div class=&quot;gallery-post photoswipe-gallery&quot;&gt;
     
         
         
