@@ -88,8 +88,10 @@ $label-padding: 10rem;
 .year-stats__bottom {
   flex: 0 0 100%;
   padding-left: $left-width;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(10, 10%);
   position: relative;
+  max-width: 100%;
 }
 
 .year-stats__year-label {
@@ -100,7 +102,12 @@ $label-padding: 10rem;
     &:nth-child(3n),
     &:nth-child(3n + 2) {
       opacity: 0;
-      font-size: 0px;
+    }
+  }
+
+  @include md {
+    &:nth-child(2n) {
+      opacity: 0;
     }
   }
 }
