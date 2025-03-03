@@ -6,7 +6,7 @@ category = ["JavaScript"]
 tags = ["slider", "js", "css", "image"]
 
 [extra]
-intro = ""
+intro = "Image comparison component leveraging native HTML range input and a few lines of JavaScript."
 image = "/img/image-comparison-slider/thumb.jpg"
 +++
 
@@ -23,14 +23,13 @@ Here is the finished slider, with images from the book [Letters from Sarajevo](h
     <img class="compare__top-image" src="/img/image-comparison-slider/letters-02.png">
   </div>
 
+  <input class="compare__input" type="range" min="0" step="0.5" max="100" value="50">
+
   <div class="compare__separator">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="compare__icon" viewBox="0 0 16 16">
       <path d="M 6 2 L 1 8 L 6 14 M 10 2 L 15 8 L 10 14" stroke="currentColor"></path>
     </svg>
   </div>
-
-  <input class="compare__input" type="range" min="0" step="0.5" max="100" value="50">
-
 </div>
 
 <button class="btn btn--xs btn--main toggle-debug">Toggle debug</button>
@@ -97,14 +96,13 @@ Here is another example for good measure, this time images are from [The Tiny Bo
     <img class="compare__top-image" src="/img/tiny-book/setnja-03.png">
   </div>
 
+  <input class="compare__input" type="range" min="0" step="0.5" max="100" value="50">
+
   <div class="compare__separator">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="compare__icon" viewBox="0 0 16 16">
       <path d="M 6 2 L 1 8 L 6 14 M 10 2 L 15 8 L 10 14" stroke="currentColor"></path>
     </svg>
   </div>
-
-  <input class="compare__input" type="range" min="0" step="0.5" max="100" value="50">
-
 </div>
 
 <button class="btn btn--xs btn--main toggle-debug">Toggle debug</button>
@@ -114,6 +112,28 @@ Here is another example for good measure, this time images are from [The Tiny Bo
 I've tested it in Firefox, Chrome, and Safari on desktop, as well as Safari on mobile. It works smoothly in all of them. I'm pretty sure it will work on other browser too, but I haven't tested it myself.
 
 If this post gets some traction, I'll probably clean it up and release a small library.
+
+## Accessibility
+
+A nice thing about using native elements is that they are accessible by default. The range input is accessible and works with keyboard and screen readers. However, we need to add labels for the range input and the component itself.
+
+I think something like this would work well:
+
+```html
+<div
+  class="comparison-slider"
+  aria-label="
+    Image comparison slider showing [image 1 description] and [image 2 description].
+    Use the slider to compare the images."
+  >
+  <!-- Images and separator go here -->
+
+  <label for="comparison-slider-input" id="comparison-slider-label">
+    Adjust slider to compare images
+  </label>
+  <input type="range" id="comparison-slider-input" aria-labelledby="comparison-slider-label" />
+</div>
+```
 
 ## Conclusion
 
