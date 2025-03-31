@@ -2,7 +2,7 @@
 title = "Make <span>regular expressions</span> easier to read"
 
 [taxonomies]
-category = ["CSS/SASS"]
+category = ["JavaScript"]
 tags = ["regex", "js"]
 
 [extra]
