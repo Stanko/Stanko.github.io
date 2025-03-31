@@ -252,6 +252,6 @@ aria-label="Example of outlined non-scaling rectangle next to the standard scali
 
 This method is practical for elements that should stay the same when image scales. I already mentioned data points on charts, but it is also useful for map markers.
 
-It might even be possible to create more complex elements combining multiple paths, but I haven't really looked into it.
+It might even be possible to create more complex elements by combining multiple paths, but I haven't really looked into it.
 
 I hope you'll find it useful!
