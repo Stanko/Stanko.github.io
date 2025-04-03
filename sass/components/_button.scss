@@ -47,19 +47,11 @@ $btn-drop: 2px;
     }
   }
 
-  &:focus {
+  &:focus-visible {
     transform: translateY(-2px);
 
     &::before {
       transform: translateY(2px);
-    }
-  }
-
-  &:focus-visible {
-    transform: translateY(-5px);
-
-    &::before {
-      transform: translateY(5px);
     }
   }
 
