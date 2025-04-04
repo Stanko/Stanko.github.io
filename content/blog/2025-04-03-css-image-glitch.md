@@ -167,7 +167,7 @@ Let's start with a simple example of a smooth animation. We'll move a div horizo
 <div class="animation-monorail"></div>
 </div>
 
-<small>Try dragging the timeline, {{ sidenote(text="all graphs are interactive", note="Instead of making a few static images, I got sidetracked, and wrote a whole library that generates these interactive SVG timelines. I named it *Monorail*, and plan to release it soon.") }}.</small>
+<small>Try dragging the timeline, {{ sidenote(text="all graphs are interactive.", note="Instead of making a few static images, I got sidetracked, and wrote a whole library that generates these interactive SVG timelines. I named it *Monorail*, and plan to release it soon.") }}</small>
 
 This kind of works, but it is not the intended effect. To achieve instant movement, we need to add more keyframes. The closer the keyframes are to each other, the snappier the movement will be. If we put them really close, the movement will be super short - shorter than it takes to render a single frame. This will give us the sudden movement we are after using only CSS.
 
