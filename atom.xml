@@ -214,13 +214,13 @@
   tabindex=&quot;0&quot;
   role=&quot;button&quot;
 &gt;
-  all graphs are interactive
+  all graphs are interactive.
 &lt;&#x2F;span&gt;
 
 &lt;span
   class=&quot;sidenote__note &quot;
 &gt;&lt;span class=&quot;sidenote__bracket&quot;&gt;(&lt;&#x2F;span&gt;Instead of making a few static images, I got sidetracked, and wrote a whole library that generates these interactive SVG timelines. I named it &lt;em&gt;Monorail&lt;&#x2F;em&gt;, and plan to release it soon.&lt;span class=&quot;sidenote__bracket&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
-.&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;This kind of works, but it is not the intended effect. To achieve instant movement, we need to add more keyframes. The closer the keyframes are to each other, the snappier the movement will be. If we put them really close, the movement will be super short - shorter than it takes to render a single frame. This will give us the sudden movement we are after using only CSS.&lt;&#x2F;p&gt;
 &lt;p&gt;Let&#x27;s try doing that.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;super-short-keyframes&quot;&gt;Super short keyframes&lt;a
