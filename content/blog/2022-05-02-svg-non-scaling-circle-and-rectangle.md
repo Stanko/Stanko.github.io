@@ -6,7 +6,7 @@ category = ["Development"]
 tags = ["svg", "non-scaling", "vector", "stroke", "circle", "rectangle"]
 
 [extra]
-intro = "It is easy to apply non-scaling effect to strokes, but about simple shapes?"
+intro = "It is easy to apply non-scaling effect to strokes, but what about simple shapes?"
 image = "/img/non-scaling-shapes.png"
 
 +++
