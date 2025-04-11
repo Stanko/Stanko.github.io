@@ -8,6 +8,7 @@ tags = ["slider", "js", "css", "image"]
 [extra]
 intro = "Image comparison component leveraging native HTML range input and a few lines of JavaScript."
 image = "/img/image-comparison-slider/thumb.jpg"
+favorite = true
 +++
 
 <link rel="stylesheet" href="/posts/image-comparison-slider.css" />
