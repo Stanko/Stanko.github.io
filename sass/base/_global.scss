@@ -7,8 +7,13 @@
   }
 }
 
+body * {
+  scrollbar-color: var(--neutral-300) transparent;
+}
+
 html {
   font-size: 1px;
+  scrollbar-color: var(--neutral-400) var(--neutral-50);
 
   @include xxl {
     font-size: 1.1px;
