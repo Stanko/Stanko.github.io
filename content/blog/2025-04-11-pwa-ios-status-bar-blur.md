@@ -91,7 +91,7 @@ You can check [the live demo](https://muffinman.io/ios-statusbar-blur), just rem
 
 If you don't want to bother, I recorded a video of the effect in action:
 
-<video src="/img/ios-blur-demo-cropped.mp4#t=0.001" controls loop muted playsinline style="max-width: 375px; border-radius: 48px 48px 0 0; border: 1px solid var(--neutral-200)"></video>
+<video src="/img/ios-blur-demo-cropped.mp4#t=0.001" controls loop muted playsinline style="width: 100%; max-width: 375px; border-radius: 48px 48px 0 0; border: 1px solid var(--neutral-200)"></video>
 
 Personally, I love that I was able to implement background color selector using CSS only, thanks to `:has` selector and CSS variables. But that is a topic for another post. If you are interested, you can see the code on [GitHub](https://github.com/Stanko/ios-statusbar-blur).
 
@@ -101,7 +101,7 @@ First, you'll have to use a solid color for native status bar background. Image 
 
 Second, the statusbar overlay we added needs to be the same color as the background. Technically, it doesn't have to be, but here is what happens:
 
-<video src="/img/ios-blur-mask.mp4#t=0.001" controls loop muted playsinline style="max-width: 375px; border-radius: 48px 48px 0 0; border: 1px solid var(--neutral-300)"></video>
+<video src="/img/ios-blur-mask.mp4#t=0.001" controls loop muted playsinline style="width: 100%; max-width: 375px; border-radius: 48px 48px 0 0; border: 1px solid var(--neutral-300)"></video>
 
 The element is positioned outside of the viewport, right below the status bar. But it isn't visible until you start scrolling. Only then does iOS begin rendering the element, but only the part that overlaps with the page's content becomes visible.
 
