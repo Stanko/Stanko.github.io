@@ -96,7 +96,7 @@ import iosNoBlur from &quot;.&#x2F;img&#x2F;ios-no-blur.png&quot;;
 &lt;&#x2F;h2&gt;
 &lt;p&gt;You can check &lt;a href=&quot;https:&#x2F;&#x2F;muffinman.io&#x2F;ios-statusbar-blur&quot;&gt;the live demo&lt;&#x2F;a&gt;, just remember that you&#x27;ll need an iOS device to see the effect. Not just that - for the effect to be visible, you&#x27;ll need to add the app to your home screen.&lt;&#x2F;p&gt;
 &lt;p&gt;If you don&#x27;t want to bother, I recorded a video of the effect in action:&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;video src=&quot;&#x2F;img&#x2F;ios-blur-demo-cropped.mp4#t=0.001&quot; controls loop muted playsinline style=&quot;max-width: 375px; border-radius: 48px 48px 0 0; border: 1px solid var(--neutral-200)&quot;&gt;&lt;&#x2F;video&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;video src=&quot;&#x2F;img&#x2F;ios-blur-demo-cropped.mp4#t=0.001&quot; controls loop muted playsinline style=&quot;width: 100%; max-width: 375px; border-radius: 48px 48px 0 0; border: 1px solid var(--neutral-200)&quot;&gt;&lt;&#x2F;video&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Personally, I love that I was able to implement background color selector using CSS only, thanks to &lt;code&gt;:has&lt;&#x2F;code&gt; selector and CSS variables. But that is a topic for another post. If you are interested, you can see the code on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Stanko&#x2F;ios-statusbar-blur&quot;&gt;GitHub&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;caveats&quot;&gt;Caveats&lt;a
   class=&quot;header-anchor&quot;
@@ -106,7 +106,7 @@ import iosNoBlur from &quot;.&#x2F;img&#x2F;ios-no-blur.png&quot;;
 &lt;&#x2F;h2&gt;
 &lt;p&gt;First, you&#x27;ll have to use a solid color for native status bar background. Image background or gradient won&#x27;t work.&lt;&#x2F;p&gt;
 &lt;p&gt;Second, the statusbar overlay we added needs to be the same color as the background. Technically, it doesn&#x27;t have to be, but here is what happens:&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;video src=&quot;&#x2F;img&#x2F;ios-blur-mask.mp4#t=0.001&quot; controls loop muted playsinline style=&quot;max-width: 375px; border-radius: 48px 48px 0 0; border: 1px solid var(--neutral-300)&quot;&gt;&lt;&#x2F;video&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;video src=&quot;&#x2F;img&#x2F;ios-blur-mask.mp4#t=0.001&quot; controls loop muted playsinline style=&quot;width: 100%; max-width: 375px; border-radius: 48px 48px 0 0; border: 1px solid var(--neutral-300)&quot;&gt;&lt;&#x2F;video&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;The element is positioned outside of the viewport, right below the status bar. But it isn&#x27;t visible until you start scrolling. Only then does iOS begin rendering the element, but only the part that overlaps with the page&#x27;s content becomes visible.&lt;&#x2F;p&gt;
 &lt;p&gt;It is somewhat hard to explain, it&#x27;s like the content itself is masking the overlay, revealing it only as it scrolls underneath. Because the status bar picks up the body color, you are going to see the overlay unmasking as you scroll. This is only visible when the overlay is a different color than the body background.&lt;&#x2F;p&gt;
 &lt;p&gt;When you read the paragraph above, watch the video one more time - I hope then everything will click together.&lt;&#x2F;p&gt;
