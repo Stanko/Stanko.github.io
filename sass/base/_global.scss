@@ -136,7 +136,7 @@ h4,
   }
 
   @include lg {
-    font-size: 24rem;
+    font-size: 32rem;
   }
 }
 
@@ -184,6 +184,7 @@ svg {
   height: 0.8em;
   width: 0.8em;
   transform: translateY(0.05em);
+  margin-right: 0.25em;
 }
 
 .sr-only {

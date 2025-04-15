@@ -52,8 +52,6 @@
     font-size: 15rem;
     line-height: 1.3;
     padding: $spacing-md;
-    // because of the line numbers
-    padding-left: $spacing-md / 2;
 
     @include md {
       border-radius: $radius-xs;
@@ -72,6 +70,7 @@
     code > .z-source::before {
       display: inline-block;
       margin-right: 0.5em;
+      margin-left: -0.5em;
       min-width: 2.5em;
       text-align: right;
       padding-right: 0.5em;
