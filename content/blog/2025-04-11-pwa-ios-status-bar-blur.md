@@ -63,8 +63,8 @@ body {
   position: fixed;
   left: 0;
   right: 0;
-  top: -60px;
-  height: 60px;
+  top: -80px;
+  height: 80px;
   overflow: hidden;
   z-index: 100;
 }
