@@ -10,7 +10,7 @@ image = "/img/about.png"
 I'm a programmer, but I like to think of myself as a maker. I tremendously enjoy software development, experimenting with small projects and playing with random technologies. That is where
 this blog comes from.
 
-<img src="/img/s1.png" alt="My pixel art portrait" class="about__myself pixel-art" />
+<img src="/img/s2.png" alt="My pixel art portrait" class="about__myself pixel-art" />
 
 I'm mostly a maker of a digital stuff, but I love bringing digital into the physical world. That includes pen plotting my generative art, tinkering with hobby electronics and crafts.
 
