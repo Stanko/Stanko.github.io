@@ -18,6 +18,8 @@
   text-wrap: balance;
   padding: 0.5rem;
   margin-inline: -0.5rem;
+  // TODO hotfix, remove
+  transform: translateZ(0);
 
   &:hover {
     color: var(--theme-color);

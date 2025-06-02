@@ -26,7 +26,10 @@ const Nav = ({ children, className = '', pathname, ...props }: NavProps) => {
           <Logo className="nav__logo" />
         </a>
 
-        <button className="nav__hamburger open-menu">
+        <button
+          className="nav__hamburger open-menu"
+          aria-label="Open menu and search"
+        >
           <svg viewBox="0 0 16 12">
             <path
               d="M 1 1 L 15 1 M 1 6 L 15 6 M 1 11 L 15 11"
@@ -76,6 +79,7 @@ const Nav = ({ children, className = '', pathname, ...props }: NavProps) => {
 
       <button
         className="nav__hamburger nav__hamburger--fixed nav__hamburger--hidden open-menu"
+        aria-label="Open menu and search"
         tabIndex={-1}
       >
         <svg viewBox="0 0 16 12">

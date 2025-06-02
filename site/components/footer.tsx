@@ -17,7 +17,7 @@ const Footer = ({
   return (
     <footer className={clsx('footer', className)} {...props}>
       <div className="container">
-        <a href="/" className="footer__home-link">
+        <a href="/" className="footer__home-link" aria-label="Home">
           <Logo className="footer__logo" />
         </a>
 

@@ -58,6 +58,8 @@
     display: inline-block;
     text-wrap: balance;
     padding: 0.625rem;
+    // TODO hotfix, remove
+    transform: translateZ(0);
 
     &:hover {
       color: var(--theme-color);
