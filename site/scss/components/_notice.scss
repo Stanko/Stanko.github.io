@@ -1,0 +1,12 @@
+@use '../base/mixins' as *;
+
+.notice {
+  border-radius: var(--radius);
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--neutral-200);
+  background-color: var(--neutral-100);
+  font-size: 1rem;
+}
+
+.notice--warning {
+}

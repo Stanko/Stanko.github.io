@@ -1,0 +1,57 @@
+.home__header h1 {
+  font-size: 3rem;
+  max-width: 8em;
+
+  @include md {
+    font-size: 4rem;
+  }
+
+  @include lg {
+    font-size: 5rem;
+  }
+}
+
+.home__content {
+  margin-block: 3rem;
+
+  @include md {
+    margin-block: 4rem;
+  }
+}
+
+.home__title {
+  margin-bottom: 1rem;
+}
+
+.home__title--art {
+  margin-top: 3rem;
+  margin-bottom: 2.25rem;
+
+  @include md {
+    margin-top: 4rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.home__title a {
+  color: var(--neutral-500);
+}
+
+.home__posts {
+  margin-bottom: 1rem;
+
+  @include lg {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 3rem;
+    align-items: flex-start;
+  }
+}
+
+.home__art-btn {
+  margin-top: 1.25rem;
+
+  @include md {
+    margin-top: 1.5rem;
+  }
+}

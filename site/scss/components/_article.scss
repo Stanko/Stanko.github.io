@@ -1,0 +1,124 @@
+@use '../base/mixins' as *;
+
+.article:empty {
+  display: none;
+}
+
+.article {
+  display: grid;
+  grid-template-columns: 1.25rem calc(100% - 2.5rem) 1.25rem;
+  align-items: start;
+  margin-inline: auto;
+  gap: 1.25rem 0;
+  max-width: 100%;
+  grid-template-areas:
+    '. content .'
+    'wide wide wide'
+    'full full full';
+
+  @include md {
+    grid-template-columns: 1fr min(88%, 48rem) 1fr;
+  }
+
+  @include lg {
+    gap: 1.5rem 0;
+    max-width: var(--content-max-width);
+    padding-inline: 2.25rem;
+    grid-template-columns: 40rem 6rem 1fr;
+    grid-template-areas:
+      'content . .'
+      'wide wide .'
+      'full full full';
+  }
+
+  h2:first-child {
+    margin-top: -0.75em;
+  }
+}
+
+.article > * {
+  grid-column: content;
+}
+
+.article a {
+  @include text-link;
+}
+
+.article p a,
+.article li a {
+  border-radius: 2px;
+  outline-offset: 2px;
+}
+
+.article ul,
+.article ol {
+  padding-left: 2.5rem;
+}
+
+.article p,
+.article li {
+  position: relative;
+}
+
+.article h2,
+.article h3,
+.article h4,
+.article h5,
+.article h6 {
+  padding-top: 0.75em;
+  position: relative;
+}
+
+.article > .wide {
+  grid-column: wide;
+}
+
+.article > .full {
+  grid-column: full;
+}
+
+.article li p + p {
+  margin-top: 0.5rem;
+}
+
+.article figcaption {
+  margin-top: 0.5rem;
+  display: block;
+  font-size: 0.875em;
+}
+
+.article .image {
+  border-radius: var(--radius);
+}
+
+p code,
+li > code {
+  font-size: 0.875em;
+  padding: 0.1em 0.25em;
+  border-radius: 6px;
+  background: var(--neutral-100);
+}
+
+hr {
+  margin: 1rem 0;
+  border: none;
+  border-top: 1px solid var(--neutral-200);
+}
+
+.codepen-iframe {
+  grid-column: wide;
+
+  @include md {
+    grid-column: content;
+  }
+}
+
+.resize {
+  overflow: auto;
+  resize: both;
+  padding: 1.5rem;
+  background-color: var(--white);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius);
+  border-bottom-right-radius: 0;
+}

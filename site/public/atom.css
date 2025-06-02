@@ -1,0 +1,161 @@
+/* Kudos to https://darekkay.com/blog/rss-styling/ */
+
+:root {
+  --text-color: #2a313a;
+  --bg-color: #fff;
+  --blue: #196ee6;
+  --neutral-50: #f8fbfe;
+  --neutral-100: #f1f5f9;
+  --neutral-200: #e2e8f0;
+  --neutral-300: #cbd5e1;
+  --neutral-400: #94a3b8;
+  --neutral-500: #64748b;
+  --neutral-600: #475569;
+  --neutral-700: #334155;
+  --neutral-800: #1e293b;
+  --neutral-900: #0f172a;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Marvin Visions Variable';
+  src: url(/fonts/MarvinVisions-Variable.woff2) format('woff2'),
+    url(/fonts/MarvinVisions-Variable.woff) format('woff'),
+    url(/fonts/MarvinVisions-Variable.ttf) format('truetype');
+  font-weight: 20 170;
+}
+
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url(/fonts/BricolageGrotesque[opsz,wdth,wght].woff2) format('woff2'),
+    url(/fonts/BricolageGrotesque[opsz,wdth,wght].woff) format('woff'),
+    url(/fonts/BricolageGrotesque[opsz,wdth,wght].ttf) format('truetype');
+}
+
+body {
+  line-height: 1.4;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  font-family: 'Bricolage Grotesque', ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: 'wdth' 100; /* 75 - 100 */
+  padding: 20px;
+  font-size: 1rem;
+  line-height: 1.3;
+  color: var(--neutral-800);
+}
+
+@media (min-width: 600px) {
+  html {
+    font-size: 18px;
+  }
+
+  body {
+    padding: 40px;
+  }
+}
+
+h1,
+h2 {
+  font-weight: 900;
+}
+
+h1 {
+  margin: 1.5rem 0 2rem;
+  font-size: 1.2rem;
+}
+
+a {
+  transition: -webkit-text-decoration-color 250ms, text-decoration-color 250ms;
+  color: var(--blue);
+  /* Messy as text-decoration props support is weird */
+  -webkit-text-decoration-color: var(--neutral-300);
+  -webkit-text-decoration-line: underline;
+  text-decoration-color: var(--neutral-300);
+  text-decoration-line: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+
+a:hover {
+  -webkit-text-decoration-color: currentColor;
+  text-decoration-color: currentColor;
+}
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.info {
+  border: 1px solid var(--neutral-200);
+  background: var(--neutral-100);
+  font-size: 1rem;
+  padding: 0.8rem 1rem;
+  border-left-width: 4px;
+}
+
+.muffinman {
+  font-family: 'Marvin Visions Variable', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-variation-settings: 'opsz' 100;
+  line-height: 0;
+  letter-spacing: 0.01em;
+  font-size: 2.5rem;
+  margin-bottom: 0.4rem;
+  color: var(--blue);
+  font-weight: 160;
+}
+
+.domain {
+  font-size: 0.3em;
+  color: var(--neutral-800);
+}
+
+.small {
+  font-size: 0.8rem;
+}
+
+.list-title {
+  margin: 3rem 0 2rem;
+}
+
+.list {
+  list-style: none;
+}
+
+.list-item {
+  margin-bottom: 1.2rem;
+}
+
+.list-link {
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+  display: block;
+}
+
+.list-arrow {
+  opacity: 0;
+  transform: translate(-10px, 1px);
+  transition: transform 250ms, opacity 250ms;
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.list-link:hover .list-arrow {
+  transform: translate(0, 1px);
+  opacity: 1;
+}
+
+.list-date {
+  color: var(--neutral-500);
+}

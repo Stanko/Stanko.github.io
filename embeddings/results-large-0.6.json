@@ -1,0 +1,2539 @@
+{
+  "animate-between-two-react-components": [
+    {
+      "post": "react-animate-height-slide-up-down",
+      "score": 0.7796718220004208
+    },
+    {
+      "post": "react-rerender-in-component-did-mount",
+      "score": 0.6758668758422378
+    },
+    {
+      "post": "plx-react-parallax-component",
+      "score": 0.6059320872561332
+    }
+  ],
+  "small-mac-apps-i-love": [
+    {
+      "post": "open-source-mac-apps-i-love",
+      "score": 0.877928402539015
+    },
+    {
+      "post": "my-blog-setup",
+      "score": 0.6175460258858206
+    },
+    {
+      "post": "js-libraries-for-generative-art",
+      "score": 0.6073008999824273
+    }
+  ],
+  "css-and-svg-input-animations": [
+    {
+      "post": "animated-login-signup-forms",
+      "score": 0.6657814197492389
+    },
+    {
+      "post": "elastic-hover-effect",
+      "score": 0.655213329276225
+    },
+    {
+      "post": "css-only-sprite-animations",
+      "score": 0.6150321460703495
+    }
+  ],
+  "weekly-code-challenge-spring-2021": [
+    {
+      "post": "css-blocky-people-making-waves",
+      "score": 0.6374464675056796
+    },
+    {
+      "post": "fake-audio-spectrum-using-perlin-noise",
+      "score": 0.6086518401763368
+    },
+    {
+      "post": "making-2d-platformer-controls",
+      "score": 0.6009251831074685
+    }
+  ],
+  "hello-world": [],
+  "draw-svg-rope-using-javascript": [
+    {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.7445541214097168
+    },
+    {
+      "post": "neon-generative-art-piece-made-using-2d-vector-field",
+      "score": 0.6859694062543028
+    },
+    {
+      "post": "css-image-glitch",
+      "score": 0.680100722196325
+    },
+    {
+      "post": "css-blocky-people-making-waves",
+      "score": 0.6783020037439845
+    },
+    {
+      "post": "breaking-down-krypton",
+      "score": 0.6737518481062341
+    },
+    {
+      "post": "custom-giraffe-caret",
+      "score": 0.6717278326164186
+    },
+    {
+      "post": "metaballs-generative-art",
+      "score": 0.6709778336758124
+    },
+    {
+      "post": "image-comparison-slider",
+      "score": 0.6624604964632385
+    },
+    {
+      "post": "native-dual-range-input",
+      "score": 0.6415777326978582
+    },
+    {
+      "post": "js-libraries-for-generative-art",
+      "score": 0.6415703935741793
+    },
+    {
+      "post": "webpack-babel-react-revisited",
+      "score": 0.6184167794433657
+    },
+    {
+      "post": "svg-non-scaling-circle-and-rectangle",
+      "score": 0.6175936877707106
+    },
+    {
+      "post": "css-animations-instead-of-js-timers",
+      "score": 0.6143120958545764
+    },
+    {
+      "post": "fake-audio-spectrum-using-perlin-noise",
+      "score": 0.6139674571614404
+    },
+    {
+      "post": "sneak-peek-of-rayven",
+      "score": 0.6119796791173817
+    },
+    {
+      "post": "javascript-animation-loop",
+      "score": 0.6049884927325945
+    }
+  ],
+  "introducing-keen-npm-package-boilerplate": [
+    {
+      "post": "webpack-babel-react-revisited",
+      "score": 0.6995575124091674
+    },
+    {
+      "post": "my-blog-setup",
+      "score": 0.663632175230317
+    },
+    {
+      "post": "setting-up-webpack-babel-and-react-from-scratch",
+      "score": 0.6615762598843026
+    },
+    {
+      "post": "jekyll-gulp-workflow",
+      "score": 0.6205146987980725
+    },
+    {
+      "post": "webpack-2-react-redux",
+      "score": 0.6189383847873359
+    }
+  ],
+  "react-decorators-and-scroll-manager": [
+    {
+      "post": "react-scroll-position-decorator",
+      "score": 0.8020903261531614
+    },
+    {
+      "post": "plx-react-parallax-component",
+      "score": 0.674370627843737
+    },
+    {
+      "post": "animate-window-scroll-to",
+      "score": 0.6608811596128086
+    },
+    {
+      "post": "react-animate-height-slide-up-down",
+      "score": 0.6245018927180435
+    },
+    {
+      "post": "simple-react-slider",
+      "score": 0.6075619296327115
+    }
+  ],
+  "i-washed-my-headphones": [],
+  "animated-login-signup-forms": [
+    {
+      "post": "css-and-svg-input-animations",
+      "score": 0.6657814197492389
+    },
+    {
+      "post": "elastic-hover-effect",
+      "score": 0.6131481430505041
+    },
+    {
+      "post": "css-only-sprite-animations",
+      "score": 0.6075846678329742
+    }
+  ],
+  "has-tabbed-aka-should-i-release-small-libraries": [
+    {
+      "post": "accessible-range-slider",
+      "score": 0.6403717146098987
+    }
+  ],
+  "work-co-tech-meetup-vol-6": [
+    {
+      "post": "winter-tech-meetup-vol-5",
+      "score": 0.7531068702852548
+    },
+    {
+      "post": "it-girls-react-series",
+      "score": 0.7388012856737171
+    },
+    {
+      "post": "null-object-tech-meetup-vol-2",
+      "score": 0.7104233708019975
+    },
+    {
+      "post": "null-object-meetup-vol-3",
+      "score": 0.6986566074547499
+    }
+  ],
+  "counting-sheep": [],
+  "ios-safari-scroll-position-fixed": [
+    {
+      "post": "ios-safari-get-bounding-client-rect-bug",
+      "score": 0.7086243216012628
+    },
+    {
+      "post": "mobile-chrome-vh-units-fix",
+      "score": 0.6825560416552404
+    },
+    {
+      "post": "pwa-ios-status-bar-blur",
+      "score": 0.6669992927672859
+    },
+    {
+      "post": "hack-for-ios-safari-to-display-html-video-thumbnail",
+      "score": 0.6198531399611514
+    },
+    {
+      "post": "custom-scroll-bars",
+      "score": 0.6137853403806245
+    },
+    {
+      "post": "hiding-body-scrollbars-using-css",
+      "score": 0.6018626756204094
+    }
+  ],
+  "uploading-files-using-fetch-multipart-form-data": [],
+  "highlight-vars-in-atom-babel-javascript": [],
+  "scrollbar-size-observer": [
+    {
+      "post": "get-scrollbar-width-in-javascript",
+      "score": 0.7175182012446558
+    },
+    {
+      "post": "custom-scroll-bars",
+      "score": 0.7154865439992222
+    },
+    {
+      "post": "hiding-body-scrollbars-using-css",
+      "score": 0.6823663822201604
+    }
+  ],
+  "marvin-v1": [
+    {
+      "post": "introducing-marvin",
+      "score": 0.8454980588677037
+    },
+    {
+      "post": "webpack-2-react-redux",
+      "score": 0.7490699473447479
+    },
+    {
+      "post": "deprecating-marvin",
+      "score": 0.7139570584733911
+    },
+    {
+      "post": "webpack-babel-react-revisited",
+      "score": 0.6835313342457207
+    },
+    {
+      "post": "setting-up-webpack-babel-and-react-from-scratch-part-3",
+      "score": 0.647153990866276
+    },
+    {
+      "post": "setting-up-webpack-babel-and-react-from-scratch",
+      "score": 0.6195314743963386
+    }
+  ],
+  "consume-less-create-more": [],
+  "back-to-the-basics": [
+    {
+      "post": "my-programming-story",
+      "score": 0.6912369345669689
+    },
+    {
+      "post": "into-2020",
+      "score": 0.6853305959121634
+    },
+    {
+      "post": "into-2022",
+      "score": 0.6752764393102824
+    },
+    {
+      "post": "my-blog-setup",
+      "score": 0.6673019980092271
+    },
+    {
+      "post": "into-2021",
+      "score": 0.659376385976883
+    },
+    {
+      "post": "looking-forward-to-2017",
+      "score": 0.6458088393120532
+    },
+    {
+      "post": "blog-question-challenge",
+      "score": 0.6352550912380823
+    }
+  ],
+  "css-only-floating-input-labels": [],
+  "my-two-cents-on-the-new-macbook-pro": [],
+  "react-simple-video-buffering-loader": [
+    {
+      "post": "scrubbing-videos-using-javascript",
+      "score": 0.6261357498228473
+    }
+  ],
+  "localstorage-and-sessionstorage-in-safaris-private-mode": [],
+  "simple-javascript-api-wrapper": [],
+  "fix-for-chrome-not-rendering-borders": [
+    {
+      "post": "ie6-hacks-ten-years-after",
+      "score": 0.6300105837774597
+    },
+    {
+      "post": "mobile-chrome-vh-units-fix",
+      "score": 0.6018373424113226
+    }
+  ],
+  "javascript-keyboard-easter-egg": [
+    {
+      "post": "custom-giraffe-caret",
+      "score": 0.6445220690154397
+    },
+    {
+      "post": "making-2d-platformer-controls",
+      "score": 0.6206454491069132
+    }
+  ],
+  "setting-up-webpack-babel-and-react-from-scratch": [
+    {
+      "post": "webpack-babel-react-revisited",
+      "score": 0.91328657722754
+    },
+    {
+      "post": "setting-up-webpack-babel-and-react-from-scratch-part-2",
+      "score": 0.8399273969531666
+    },
+    {
+      "post": "setting-up-webpack-babel-and-react-from-scratch-part-3",
+      "score": 0.77100160234215
+    },
+    {
+      "post": "webpack-2-react-redux",
+      "score": 0.7390568763365998
+    },
+    {
+      "post": "react-router-subfolder-on-server",
+      "score": 0.6921601439691434
+    },
+    {
+      "post": "introducing-keen-npm-package-boilerplate",
+      "score": 0.6615762598843026
+    },
+    {
+      "post": "my-blog-setup",
+      "score": 0.6423782506051033
+    },
+    {
+      "post": "marvin-v1",
+      "score": 0.6195314743963386
+    },
+    {
+      "post": "react-rerender-in-component-did-mount",
+      "score": 0.6071018292177337
+    }
+  ],
+  "nodejs-simple-colorful-logging": [
+    {
+      "post": "node-script-to-run-multiple-commands-in-parallel",
+      "score": 0.6559194770861112
+    }
+  ],
+  "null-object-tech-meetup-vol-2": [
+    {
+      "post": "null-object-meetup-vol-3",
+      "score": 0.8384598202523623
+    },
+    {
+      "post": "it-girls-react-series",
+      "score": 0.7395482708809541
+    },
+    {
+      "post": "winter-tech-meetup-vol-5",
+      "score": 0.7155336108353366
+    },
+    {
+      "post": "work-co-tech-meetup-vol-6",
+      "score": 0.7104233708019975
+    }
+  ],
+  "minor-design-refresh": [
+    {
+      "post": "redesign-again",
+      "score": 0.70497286563505
+    },
+    {
+      "post": "new-design-and-features",
+      "score": 0.6558326388547976
+    }
+  ],
+  "travis-jekyll-and-github-pages": [
+    {
+      "post": "my-blog-setup",
+      "score": 0.7242535744240711
+    },
+    {
+      "post": "jekyll-gulp-workflow",
+      "score": 0.6856614943259147
+    },
+    {
+      "post": "new-design-and-features",
+      "score": 0.6729697097974934
+    },
+    {
+      "post": "running-staticman-on-heroku",
+      "score": 0.6437363793551805
+    }
+  ],
+  "back-to-firefox": [
+    {
+      "post": "firefox-57-cpu-usage-is-insane",
+      "score": 0.7741267846147499
+    }
+  ],
+  "webpack-2-react-redux": [
+    {
+      "post": "marvin-v1",
+      "score": 0.7490699473447479
+    },
+    {
+      "post": "setting-up-webpack-babel-and-react-from-scratch",
+      "score": 0.7390568763365998
+    },
+    {
+      "post": "setting-up-webpack-babel-and-react-from-scratch-part-3",
+      "score": 0.7370315951460858
+    },
+    {
+      "post": "introducing-marvin",
+      "score": 0.7346215289647959
+    },
+    {
+      "post": "webpack-babel-react-revisited",
+      "score": 0.7156361757610846
+    },
+    {
+      "post": "setting-up-webpack-babel-and-react-from-scratch-part-2",
+      "score": 0.644432458520418
+    },
+    {
+      "post": "introducing-keen-npm-package-boilerplate",
+      "score": 0.6189383847873359
+    },
+    {
+      "post": "jekyll-gulp-workflow",
+      "score": 0.6118016435068976
+    }
+  ],
+  "accessible-range-slider": [
+    {
+      "post": "simple-react-slider",
+      "score": 0.7744902223587243
+    },
+    {
+      "post": "native-dual-range-input",
+      "score": 0.7325132258748558
+    },
+    {
+      "post": "image-comparison-slider",
+      "score": 0.7084756099906874
+    },
+    {
+      "post": "react-animate-height-slide-up-down",
+      "score": 0.6456526217500412
+    },
+    {
+      "post": "has-tabbed-aka-should-i-release-small-libraries",
+      "score": 0.6403717146098987
+    },
+    {
+      "post": "react-ratio-component",
+      "score": 0.6329490996904495
+    },
+    {
+      "post": "plx-react-parallax-component",
+      "score": 0.6192880055736977
+    },
+    {
+      "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
+      "score": 0.6131303606100803
+    },
+    {
+      "post": "react-image-filter-component",
+      "score": 0.612977251487237
+    }
+  ],
+  "native-dual-range-input": [
+    {
+      "post": "image-comparison-slider",
+      "score": 0.8451616249236448
+    },
+    {
+      "post": "accessible-range-slider",
+      "score": 0.7325132258748558
+    },
+    {
+      "post": "custom-giraffe-caret",
+      "score": 0.6957155097311458
+    },
+    {
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.6415777326978582
+    },
+    {
+      "post": "css-image-glitch",
+      "score": 0.625677637149057
+    },
+    {
+      "post": "css-blocky-people-making-waves",
+      "score": 0.6166348902558301
+    },
+    {
+      "post": "css-animations-instead-of-js-timers",
+      "score": 0.6145737184931611
+    },
+    {
+      "post": "js-libraries-for-generative-art",
+      "score": 0.6054623777577278
+    }
+  ],
+  "metaballs-generative-art": [
+    {
+      "post": "neon-generative-art-piece-made-using-2d-vector-field",
+      "score": 0.8437990783465493
+    },
+    {
+      "post": "breaking-down-krypton",
+      "score": 0.8377191102350746
+    },
+    {
+      "post": "js-libraries-for-generative-art",
+      "score": 0.7412431345300908
+    },
+    {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.6868967641418738
+    },
+    {
+      "post": "sneak-peek-of-rayven",
+      "score": 0.6856860300954098
+    },
+    {
+      "post": "into-2021",
+      "score": 0.6850661112282079
+    },
+    {
+      "post": "the-tiny-book-of-great-joys",
+      "score": 0.6832495605054753
+    },
+    {
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.6709778336758124
+    },
+    {
+      "post": "axidraw-plotter-camera-mount",
+      "score": 0.6580489657059632
+    },
+    {
+      "post": "into-2022",
+      "score": 0.6534019532653134
+    },
+    {
+      "post": "css-image-glitch",
+      "score": 0.6396120077227219
+    },
+    {
+      "post": "vertigo-svg-shaders",
+      "score": 0.6141553506443631
+    },
+    {
+      "post": "my-programming-story",
+      "score": 0.6054779680219163
+    },
+    {
+      "post": "custom-giraffe-caret",
+      "score": 0.6021599410180727
+    },
+    {
+      "post": "fake-audio-spectrum-using-perlin-noise",
+      "score": 0.601603964676715
+    },
+    {
+      "post": "css-blocky-people-making-waves",
+      "score": 0.6005168746949966
+    }
+  ],
+  "bunny-jumps-again": [
+    {
+      "post": "the-tiny-book-of-great-joys",
+      "score": 0.6784693293826236
+    }
+  ],
+  "pwa-ios-status-bar-blur": [
+    {
+      "post": "ios-safari-scroll-position-fixed",
+      "score": 0.6669992927672859
+    },
+    {
+      "post": "css-image-glitch",
+      "score": 0.6291169459707717
+    },
+    {
+      "post": "custom-scroll-bars",
+      "score": 0.6081674289638671
+    }
+  ],
+  "scrubbing-videos-using-javascript": [
+    {
+      "post": "hack-for-ios-safari-to-display-html-video-thumbnail",
+      "score": 0.6365851558927602
+    },
+    {
+      "post": "javascript-animation-loop",
+      "score": 0.6285230784535688
+    },
+    {
+      "post": "react-simple-video-buffering-loader",
+      "score": 0.6261357498228473
+    },
+    {
+      "post": "image-comparison-slider",
+      "score": 0.6224040445616706
+    },
+    {
+      "post": "css-only-sprite-animations",
+      "score": 0.6152341601215803
+    },
+    {
+      "post": "css-image-glitch",
+      "score": 0.6014440480055917
+    }
+  ],
+  "get-scrollbar-width-in-javascript": [
+    {
+      "post": "scrollbar-size-observer",
+      "score": 0.7175182012446558
+    },
+    {
+      "post": "hiding-body-scrollbars-using-css",
+      "score": 0.6894449503005314
+    },
+    {
+      "post": "custom-scroll-bars",
+      "score": 0.6252942733992088
+    }
+  ],
+  "plx-react-parallax-component": [
+    {
+      "post": "react-animate-height-slide-up-down",
+      "score": 0.6981379911697617
+    },
+    {
+      "post": "react-decorators-and-scroll-manager",
+      "score": 0.674370627843737
+    },
+    {
+      "post": "react-scroll-position-decorator",
+      "score": 0.6588461903330751
+    },
+    {
+      "post": "simple-react-slider",
+      "score": 0.6517196372316559
+    },
+    {
+      "post": "react-image-filter-component",
+      "score": 0.6371258323599974
+    },
+    {
+      "post": "animate-window-scroll-to",
+      "score": 0.6313132971187337
+    },
+    {
+      "post": "accessible-range-slider",
+      "score": 0.6192880055736977
+    },
+    {
+      "post": "animate-between-two-react-components",
+      "score": 0.6059320872561332
+    }
+  ],
+  "react-rerender-in-component-did-mount": [
+    {
+      "post": "react-animate-height-slide-up-down",
+      "score": 0.708924553952676
+    },
+    {
+      "post": "animate-between-two-react-components",
+      "score": 0.6758668758422378
+    },
+    {
+      "post": "css-animations-instead-of-js-timers",
+      "score": 0.6695500820015488
+    },
+    {
+      "post": "webpack-babel-react-revisited",
+      "score": 0.6456606916014247
+    },
+    {
+      "post": "css-image-glitch",
+      "score": 0.6193918884976312
+    },
+    {
+      "post": "javascript-animation-loop",
+      "score": 0.617337724414242
+    },
+    {
+      "post": "setting-up-webpack-babel-and-react-from-scratch",
+      "score": 0.6071018292177337
+    },
+    {
+      "post": "css-only-sprite-animations",
+      "score": 0.6042418728866956
+    }
+  ],
+  "neon-generative-art-piece-made-using-2d-vector-field": [
+    {
+      "post": "metaballs-generative-art",
+      "score": 0.8437990783465493
+    },
+    {
+      "post": "breaking-down-krypton",
+      "score": 0.8319270579864467
+    },
+    {
+      "post": "js-libraries-for-generative-art",
+      "score": 0.7425137261915714
+    },
+    {
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.6859694062543028
+    },
+    {
+      "post": "sneak-peek-of-rayven",
+      "score": 0.6815671699698413
+    },
+    {
+      "post": "into-2021",
+      "score": 0.6788840302302519
+    },
+    {
+      "post": "css-image-glitch",
+      "score": 0.6766581162555974
+    },
+    {
+      "post": "the-tiny-book-of-great-joys",
+      "score": 0.6527557251409128
+    },
+    {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.6481954581100723
+    },
+    {
+      "post": "into-2022",
+      "score": 0.6373906651923782
+    },
+    {
+      "post": "fake-audio-spectrum-using-perlin-noise",
+      "score": 0.633207355808588
+    },
+    {
+      "post": "css-blocky-people-making-waves",
+      "score": 0.6244791103945475
+    },
+    {
+      "post": "axidraw-plotter-camera-mount",
+      "score": 0.6221947902711326
+    },
+    {
+      "post": "custom-giraffe-caret",
+      "score": 0.6200987781935995
+    }
+  ],
+  "custom-scroll-bars": [
+    {
+      "post": "hiding-body-scrollbars-using-css",
+      "score": 0.7687321937340983
+    },
+    {
+      "post": "scrollbar-size-observer",
+      "score": 0.7154865439992222
+    },
+    {
+      "post": "get-scrollbar-width-in-javascript",
+      "score": 0.6252942733992088
+    },
+    {
+      "post": "ios-safari-scroll-position-fixed",
+      "score": 0.6137853403806245
+    },
+    {
+      "post": "pwa-ios-status-bar-blur",
+      "score": 0.6081674289638671
+    },
+    {
+      "post": "animate-window-scroll-to",
+      "score": 0.6036612592210002
+    }
+  ],
+  "firefox-57-cpu-usage-is-insane": [
+    {
+      "post": "back-to-firefox",
+      "score": 0.7741267846147499
+    }
+  ],
+  "html-inert-property": [
+    {
+      "post": "catching-the-blur-event-on-an-element-and-its-children",
+      "score": 0.663228487427393
+    }
+  ],
+  "setting-up-webpack-babel-and-react-from-scratch-part-2": [
+    {
+      "post": "setting-up-webpack-babel-and-react-from-scratch",
+      "score": 0.8399273969531666
+    },
+    {
+      "post": "webpack-babel-react-revisited",
+      "score": 0.7957333668754419
+    },
+    {
+      "post": "setting-up-webpack-babel-and-react-from-scratch-part-3",
+      "score": 0.7359774143874876
+    },
+    {
+      "post": "webpack-2-react-redux",
+      "score": 0.644432458520418
+    }
+  ],
+  "being-a-tech-lead": [],
+  "catching-the-blur-event-on-an-element-and-its-children": [
+    {
+      "post": "html-inert-property",
+      "score": 0.663228487427393
+    }
+  ],
+  "sass-random-and-circle-animation": [
+    {
+      "post": "css-only-sprite-animations",
+      "score": 0.6396246579567035
+    }
+  ],
+  "get-lines-of-text-from-html-element": [],
+  "node-script-to-run-multiple-commands-in-parallel": [
+    {
+      "post": "nodejs-simple-colorful-logging",
+      "score": 0.6559194770861112
+    }
+  ],
+  "jekyll-read-more-link": [
+    {
+      "post": "custom-jekyll-pagination",
+      "score": 0.6022831087857681
+    }
+  ],
+  "jekyll-gulp-workflow": [
+    {
+      "post": "my-blog-setup",
+      "score": 0.7242753846583151
+    },
+    {
+      "post": "travis-jekyll-and-github-pages",
+      "score": 0.6856614943259147
+    },
+    {
+      "post": "new-design-and-features",
+      "score": 0.6481818452619346
+    },
+    {
+      "post": "webpack-babel-react-revisited",
+      "score": 0.6287257853500476
+    },
+    {
+      "post": "introducing-keen-npm-package-boilerplate",
+      "score": 0.6205146987980725
+    },
+    {
+      "post": "webpack-2-react-redux",
+      "score": 0.6118016435068976
+    }
+  ],
+  "my-favorite-bash-oneliner": [],
+  "what-is-the-point": [],
+  "talks-i-like": [
+    {
+      "post": "my-programming-story",
+      "score": 0.6465560527064099
+    },
+    {
+      "post": "looking-forward-to-2017",
+      "score": 0.6223540718929995
+    }
+  ],
+  "winter-tech-meetup-vol-5": [
+    {
+      "post": "work-co-tech-meetup-vol-6",
+      "score": 0.7531068702852548
+    },
+    {
+      "post": "null-object-meetup-vol-3",
+      "score": 0.7481126494102028
+    },
+    {
+      "post": "null-object-tech-meetup-vol-2",
+      "score": 0.7155336108353366
+    },
+    {
+      "post": "it-girls-react-series",
+      "score": 0.6466505965226353
+    }
+  ],
+  "font-size-and-tracking-points-to-pixels": [
+    {
+      "post": "font-weight-based-on-dpi",
+      "score": 0.608229496983547
+    }
+  ],
+  "trillion-ideas": [],
+  "three-js-extrude-svg-path": [
+    {
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.7445541214097168
+    },
+    {
+      "post": "metaballs-generative-art",
+      "score": 0.6868967641418738
+    },
+    {
+      "post": "neon-generative-art-piece-made-using-2d-vector-field",
+      "score": 0.6481954581100723
+    },
+    {
+      "post": "custom-giraffe-caret",
+      "score": 0.6362341900786818
+    },
+    {
+      "post": "js-libraries-for-generative-art",
+      "score": 0.6353237541508099
+    },
+    {
+      "post": "sneak-peek-of-rayven",
+      "score": 0.6318777731094677
+    },
+    {
+      "post": "breaking-down-krypton",
+      "score": 0.6283435452767214
+    },
+    {
+      "post": "css-image-glitch",
+      "score": 0.6158212222475711
+    },
+    {
+      "post": "css-blocky-people-making-waves",
+      "score": 0.6157224161770629
+    },
+    {
+      "post": "image-comparison-slider",
+      "score": 0.6128732910080817
+    },
+    {
+      "post": "javascript-animation-loop",
+      "score": 0.6011065255697231
+    }
+  ],
+  "webpack-babel-react-revisited": [
+    {
+      "post": "setting-up-webpack-babel-and-react-from-scratch",
+      "score": 0.91328657722754
+    },
+    {
+      "post": "setting-up-webpack-babel-and-react-from-scratch-part-2",
+      "score": 0.7957333668754419
+    },
+    {
+      "post": "setting-up-webpack-babel-and-react-from-scratch-part-3",
+      "score": 0.774585948429242
+    },
+    {
+      "post": "webpack-2-react-redux",
+      "score": 0.7156361757610846
+    },
+    {
+      "post": "my-blog-setup",
+      "score": 0.7048457792211722
+    },
+    {
+      "post": "introducing-keen-npm-package-boilerplate",
+      "score": 0.6995575124091674
+    },
+    {
+      "post": "marvin-v1",
+      "score": 0.6835313342457207
+    },
+    {
+      "post": "react-router-subfolder-on-server",
+      "score": 0.6771016507736931
+    },
+    {
+      "post": "introducing-marvin",
+      "score": 0.6495444188629179
+    },
+    {
+      "post": "react-rerender-in-component-did-mount",
+      "score": 0.6456606916014247
+    },
+    {
+      "post": "jekyll-gulp-workflow",
+      "score": 0.6287257853500476
+    },
+    {
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.6184167794433657
+    },
+    {
+      "post": "css-image-glitch",
+      "score": 0.6116144839711445
+    }
+  ],
+  "time-pills-tracks-stems": [],
+  "axidraw-lego-camera-mount": [
+    {
+      "post": "axidraw-plotter-camera-mount",
+      "score": 0.8101220960742828
+    }
+  ],
+  "react-animate-height-slide-up-down": [
+    {
+      "post": "animate-between-two-react-components",
+      "score": 0.7796718220004208
+    },
+    {
+      "post": "react-rerender-in-component-did-mount",
+      "score": 0.708924553952676
+    },
+    {
+      "post": "plx-react-parallax-component",
+      "score": 0.6981379911697617
+    },
+    {
+      "post": "simple-react-slider",
+      "score": 0.6902678906746921
+    },
+    {
+      "post": "animate-window-scroll-to",
+      "score": 0.6561082501106611
+    },
+    {
+      "post": "accessible-range-slider",
+      "score": 0.6456526217500412
+    },
+    {
+      "post": "mobile-chrome-vh-units-fix",
+      "score": 0.6253252374725453
+    },
+    {
+      "post": "react-decorators-and-scroll-manager",
+      "score": 0.6245018927180435
+    },
+    {
+      "post": "react-scroll-position-decorator",
+      "score": 0.6192301134665384
+    },
+    {
+      "post": "react-ratio-component",
+      "score": 0.610027739660975
+    }
+  ],
+  "react-router-subfolder-on-server": [
+    {
+      "post": "setting-up-webpack-babel-and-react-from-scratch",
+      "score": 0.6921601439691434
+    },
+    {
+      "post": "webpack-babel-react-revisited",
+      "score": 0.6771016507736931
+    }
+  ],
+  "react-router-v4-redirect-decorator": [
+    {
+      "post": "react-scroll-position-decorator",
+      "score": 0.6536273896077076
+    }
+  ],
+  "custom-jekyll-pagination": [
+    {
+      "post": "jekyll-read-more-link",
+      "score": 0.6022831087857681
+    }
+  ],
+  "ios-safari-get-bounding-client-rect-bug": [
+    {
+      "post": "ios-safari-scroll-position-fixed",
+      "score": 0.7086243216012628
+    },
+    {
+      "post": "javascript-get-element-offset",
+      "score": 0.643091545137967
+    },
+    {
+      "post": "mobile-chrome-vh-units-fix",
+      "score": 0.627791663939591
+    }
+  ],
+  "the-tiny-book-of-great-joys": [
+    {
+      "post": "breaking-down-krypton",
+      "score": 0.6962029821568103
+    },
+    {
+      "post": "metaballs-generative-art",
+      "score": 0.6832495605054753
+    },
+    {
+      "post": "bunny-jumps-again",
+      "score": 0.6784693293826236
+    },
+    {
+      "post": "neon-generative-art-piece-made-using-2d-vector-field",
+      "score": 0.6527557251409128
+    },
+    {
+      "post": "my-programming-story",
+      "score": 0.6421670776063091
+    },
+    {
+      "post": "into-2022",
+      "score": 0.6374820027927032
+    },
+    {
+      "post": "into-2021",
+      "score": 0.6315652720928813
+    },
+    {
+      "post": "axidraw-plotter-camera-mount",
+      "score": 0.6295123329482775
+    },
+    {
+      "post": "custom-giraffe-caret",
+      "score": 0.6158800942840832
+    },
+    {
+      "post": "into-2020",
+      "score": 0.615697294752722
+    }
+  ],
+  "animate-window-scroll-to": [
+    {
+      "post": "react-decorators-and-scroll-manager",
+      "score": 0.6608811596128086
+    },
+    {
+      "post": "react-animate-height-slide-up-down",
+      "score": 0.6561082501106611
+    },
+    {
+      "post": "plx-react-parallax-component",
+      "score": 0.6313132971187337
+    },
+    {
+      "post": "react-scroll-position-decorator",
+      "score": 0.6233433052251933
+    },
+    {
+      "post": "mobile-chrome-vh-units-fix",
+      "score": 0.606941041691038
+    },
+    {
+      "post": "custom-scroll-bars",
+      "score": 0.6036612592210002
+    }
+  ],
+  "super-resolution-image-resizer": [],
+  "into-2021": [
+    {
+      "post": "into-2022",
+      "score": 0.8983364345487129
+    },
+    {
+      "post": "into-2020",
+      "score": 0.8525017322771129
+    },
+    {
+      "post": "looking-forward-to-2017",
+      "score": 0.776119689052536
+    },
+    {
+      "post": "breaking-down-krypton",
+      "score": 0.6860079458446817
+    },
+    {
+      "post": "metaballs-generative-art",
+      "score": 0.6850661112282079
+    },
+    {
+      "post": "neon-generative-art-piece-made-using-2d-vector-field",
+      "score": 0.6788840302302519
+    },
+    {
+      "post": "my-programming-story",
+      "score": 0.6639500498082616
+    },
+    {
+      "post": "back-to-the-basics",
+      "score": 0.659376385976883
+    },
+    {
+      "post": "js-libraries-for-generative-art",
+      "score": 0.6592168432116999
+    },
+    {
+      "post": "the-tiny-book-of-great-joys",
+      "score": 0.6315652720928813
+    }
+  ],
+  "sektor-draw-and-animate-svg-circle-sectors-2016": [
+    {
+      "post": "javascript-animation-loop",
+      "score": 0.6259954913755833
+    },
+    {
+      "post": "react-image-filter-component",
+      "score": 0.6141013532689978
+    },
+    {
+      "post": "accessible-range-slider",
+      "score": 0.6131303606100803
+    },
+    {
+      "post": "svg-non-scaling-circle-and-rectangle",
+      "score": 0.6005667956990308
+    }
+  ],
+  "fix-lumpy-joy-con-using-hair-dryer": [],
+  "hiding-body-scrollbars-using-css": [
+    {
+      "post": "custom-scroll-bars",
+      "score": 0.7687321937340983
+    },
+    {
+      "post": "get-scrollbar-width-in-javascript",
+      "score": 0.6894449503005314
+    },
+    {
+      "post": "scrollbar-size-observer",
+      "score": 0.6823663822201604
+    },
+    {
+      "post": "ios-safari-scroll-position-fixed",
+      "score": 0.6018626756204094
+    }
+  ],
+  "goodbye-ie": [
+    {
+      "post": "ie6-hacks-ten-years-after",
+      "score": 0.6409251965933923
+    }
+  ],
+  "react-ratio-component": [
+    {
+      "post": "simple-react-slider",
+      "score": 0.6335162233460075
+    },
+    {
+      "post": "accessible-range-slider",
+      "score": 0.6329490996904495
+    },
+    {
+      "post": "react-animate-height-slide-up-down",
+      "score": 0.610027739660975
+    }
+  ],
+  "hyperx-cloud-II-sound-card-usb-connector-replacement": [],
+  "open-source-mac-apps-i-love": [
+    {
+      "post": "small-mac-apps-i-love",
+      "score": 0.877928402539015
+    },
+    {
+      "post": "js-libraries-for-generative-art",
+      "score": 0.6226358933439878
+    }
+  ],
+  "three-web-development-bookmarklets": [],
+  "this-blog-is-now-google-free": [],
+  "another-web-development-awesome-list": [],
+  "hack-for-ios-safari-to-display-html-video-thumbnail": [
+    {
+      "post": "scrubbing-videos-using-javascript",
+      "score": 0.6365851558927602
+    },
+    {
+      "post": "ios-safari-scroll-position-fixed",
+      "score": 0.6198531399611514
+    },
+    {
+      "post": "html-canvas-video-player-ios",
+      "score": 0.6005300634750809
+    }
+  ],
+  "flex-justify-content-equally-distanced-items": [
+    {
+      "post": "ie6-hacks-ten-years-after",
+      "score": 0.6081147618305666
+    }
+  ],
+  "into-2020": [
+    {
+      "post": "into-2022",
+      "score": 0.8632712853180627
+    },
+    {
+      "post": "into-2021",
+      "score": 0.8525017322771129
+    },
+    {
+      "post": "looking-forward-to-2017",
+      "score": 0.8111618131984679
+    },
+    {
+      "post": "back-to-the-basics",
+      "score": 0.6853305959121634
+    },
+    {
+      "post": "my-programming-story",
+      "score": 0.6784744554170731
+    },
+    {
+      "post": "my-blog-setup",
+      "score": 0.6548236641572123
+    },
+    {
+      "post": "blog-question-challenge",
+      "score": 0.6328035253553832
+    },
+    {
+      "post": "the-tiny-book-of-great-joys",
+      "score": 0.615697294752722
+    },
+    {
+      "post": "breaking-down-krypton",
+      "score": 0.6009290421985849
+    }
+  ],
+  "one-million-npm-downloads": [],
+  "css-only-sprite-animations": [
+    {
+      "post": "css-image-glitch",
+      "score": 0.7042787764762699
+    },
+    {
+      "post": "css-animations-instead-of-js-timers",
+      "score": 0.697452908582615
+    },
+    {
+      "post": "javascript-animation-loop",
+      "score": 0.6664912814103123
+    },
+    {
+      "post": "custom-giraffe-caret",
+      "score": 0.6530538624215516
+    },
+    {
+      "post": "image-comparison-slider",
+      "score": 0.6426681204770719
+    },
+    {
+      "post": "css-blocky-people-making-waves",
+      "score": 0.6409671671993407
+    },
+    {
+      "post": "sass-random-and-circle-animation",
+      "score": 0.6396246579567035
+    },
+    {
+      "post": "making-2d-platformer-controls",
+      "score": 0.6231648854871674
+    },
+    {
+      "post": "scrubbing-videos-using-javascript",
+      "score": 0.6152341601215803
+    },
+    {
+      "post": "css-and-svg-input-animations",
+      "score": 0.6150321460703495
+    },
+    {
+      "post": "elastic-hover-effect",
+      "score": 0.6081904187517724
+    },
+    {
+      "post": "animated-login-signup-forms",
+      "score": 0.6075846678329742
+    },
+    {
+      "post": "react-rerender-in-component-did-mount",
+      "score": 0.6042418728866956
+    },
+    {
+      "post": "fake-audio-spectrum-using-perlin-noise",
+      "score": 0.6005408998530287
+    }
+  ],
+  "into-2022": [
+    {
+      "post": "into-2021",
+      "score": 0.8983364345487129
+    },
+    {
+      "post": "into-2020",
+      "score": 0.8632712853180627
+    },
+    {
+      "post": "looking-forward-to-2017",
+      "score": 0.818767694460842
+    },
+    {
+      "post": "my-programming-story",
+      "score": 0.6825323092101394
+    },
+    {
+      "post": "back-to-the-basics",
+      "score": 0.6752764393102824
+    },
+    {
+      "post": "breaking-down-krypton",
+      "score": 0.6559316080388911
+    },
+    {
+      "post": "metaballs-generative-art",
+      "score": 0.6534019532653134
+    },
+    {
+      "post": "js-libraries-for-generative-art",
+      "score": 0.6384614089072027
+    },
+    {
+      "post": "the-tiny-book-of-great-joys",
+      "score": 0.6374820027927032
+    },
+    {
+      "post": "neon-generative-art-piece-made-using-2d-vector-field",
+      "score": 0.6373906651923782
+    },
+    {
+      "post": "my-blog-setup",
+      "score": 0.6125711513718228
+    },
+    {
+      "post": "blog-question-challenge",
+      "score": 0.6075332366254564
+    }
+  ],
+  "looking-forward-to-2017": [
+    {
+      "post": "into-2022",
+      "score": 0.818767694460842
+    },
+    {
+      "post": "into-2020",
+      "score": 0.8111618131984679
+    },
+    {
+      "post": "into-2021",
+      "score": 0.776119689052536
+    },
+    {
+      "post": "my-programming-story",
+      "score": 0.6995235736674119
+    },
+    {
+      "post": "my-blog-setup",
+      "score": 0.6608282922210488
+    },
+    {
+      "post": "back-to-the-basics",
+      "score": 0.6458088393120532
+    },
+    {
+      "post": "new-design-and-features",
+      "score": 0.6241333219243482
+    },
+    {
+      "post": "talks-i-like",
+      "score": 0.6223540718929995
+    }
+  ],
+  "ie6-hacks-ten-years-after": [
+    {
+      "post": "goodbye-ie",
+      "score": 0.6409251965933923
+    },
+    {
+      "post": "fix-for-chrome-not-rendering-borders",
+      "score": 0.6300105837774597
+    },
+    {
+      "post": "css-image-glitch",
+      "score": 0.6234865067778862
+    },
+    {
+      "post": "flex-justify-content-equally-distanced-items",
+      "score": 0.6081147618305666
+    }
+  ],
+  "it-girls-react-series": [
+    {
+      "post": "null-object-tech-meetup-vol-2",
+      "score": 0.7395482708809541
+    },
+    {
+      "post": "work-co-tech-meetup-vol-6",
+      "score": 0.7388012856737171
+    },
+    {
+      "post": "null-object-meetup-vol-3",
+      "score": 0.6764229063668225
+    },
+    {
+      "post": "winter-tech-meetup-vol-5",
+      "score": 0.6466505965226353
+    }
+  ],
+  "add-git-version-tag-after-publishing-to-npm": [
+    {
+      "post": "nvm-updating-npm",
+      "score": 0.6224614039969356
+    }
+  ],
+  "xiaomi-airdots-review": [],
+  "nvm-updating-npm": [
+    {
+      "post": "add-git-version-tag-after-publishing-to-npm",
+      "score": 0.6224614039969356
+    }
+  ],
+  "setting-up-webpack-babel-and-react-from-scratch-part-3": [
+    {
+      "post": "webpack-babel-react-revisited",
+      "score": 0.774585948429242
+    },
+    {
+      "post": "setting-up-webpack-babel-and-react-from-scratch",
+      "score": 0.77100160234215
+    },
+    {
+      "post": "webpack-2-react-redux",
+      "score": 0.7370315951460858
+    },
+    {
+      "post": "setting-up-webpack-babel-and-react-from-scratch-part-2",
+      "score": 0.7359774143874876
+    },
+    {
+      "post": "marvin-v1",
+      "score": 0.647153990866276
+    },
+    {
+      "post": "deprecating-marvin",
+      "score": 0.6175436186492342
+    },
+    {
+      "post": "introducing-marvin",
+      "score": 0.6155464873976344
+    }
+  ],
+  "introducing-marvin": [
+    {
+      "post": "marvin-v1",
+      "score": 0.8454980588677037
+    },
+    {
+      "post": "deprecating-marvin",
+      "score": 0.7363951557143631
+    },
+    {
+      "post": "webpack-2-react-redux",
+      "score": 0.7346215289647959
+    },
+    {
+      "post": "webpack-babel-react-revisited",
+      "score": 0.6495444188629179
+    },
+    {
+      "post": "setting-up-webpack-babel-and-react-from-scratch-part-3",
+      "score": 0.6155464873976344
+    }
+  ],
+  "mobile-chrome-vh-units-fix": [
+    {
+      "post": "ios-safari-scroll-position-fixed",
+      "score": 0.6825560416552404
+    },
+    {
+      "post": "ios-safari-get-bounding-client-rect-bug",
+      "score": 0.627791663939591
+    },
+    {
+      "post": "react-animate-height-slide-up-down",
+      "score": 0.6253252374725453
+    },
+    {
+      "post": "animate-window-scroll-to",
+      "score": 0.606941041691038
+    },
+    {
+      "post": "fix-for-chrome-not-rendering-borders",
+      "score": 0.6018373424113226
+    }
+  ],
+  "trying-atom-for-the-third-time": [],
+  "new-design-and-features": [
+    {
+      "post": "my-blog-setup",
+      "score": 0.7174042305361956
+    },
+    {
+      "post": "redesign-again",
+      "score": 0.7074584318966838
+    },
+    {
+      "post": "travis-jekyll-and-github-pages",
+      "score": 0.6729697097974934
+    },
+    {
+      "post": "minor-design-refresh",
+      "score": 0.6558326388547976
+    },
+    {
+      "post": "jekyll-gulp-workflow",
+      "score": 0.6481818452619346
+    },
+    {
+      "post": "looking-forward-to-2017",
+      "score": 0.6241333219243482
+    }
+  ],
+  "css-blocky-people-making-waves": [
+    {
+      "post": "css-image-glitch",
+      "score": 0.716218723550586
+    },
+    {
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.6783020037439845
+    },
+    {
+      "post": "custom-giraffe-caret",
+      "score": 0.671216978763395
+    },
+    {
+      "post": "image-comparison-slider",
+      "score": 0.647449106809861
+    },
+    {
+      "post": "css-only-sprite-animations",
+      "score": 0.6409671671993407
+    },
+    {
+      "post": "css-animations-instead-of-js-timers",
+      "score": 0.6393669143246575
+    },
+    {
+      "post": "weekly-code-challenge-spring-2021",
+      "score": 0.6374464675056796
+    },
+    {
+      "post": "neon-generative-art-piece-made-using-2d-vector-field",
+      "score": 0.6244791103945475
+    },
+    {
+      "post": "native-dual-range-input",
+      "score": 0.6166348902558301
+    },
+    {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.6157224161770629
+    },
+    {
+      "post": "fake-audio-spectrum-using-perlin-noise",
+      "score": 0.6102370992460999
+    },
+    {
+      "post": "breaking-down-krypton",
+      "score": 0.6029289147048371
+    },
+    {
+      "post": "metaballs-generative-art",
+      "score": 0.6005168746949966
+    }
+  ],
+  "running-staticman-on-heroku": [
+    {
+      "post": "my-blog-setup",
+      "score": 0.656434989697436
+    },
+    {
+      "post": "travis-jekyll-and-github-pages",
+      "score": 0.6437363793551805
+    }
+  ],
+  "making-2d-platformer-controls": [
+    {
+      "post": "javascript-animation-loop",
+      "score": 0.6984223779513494
+    },
+    {
+      "post": "css-only-sprite-animations",
+      "score": 0.6231648854871674
+    },
+    {
+      "post": "javascript-keyboard-easter-egg",
+      "score": 0.6206454491069132
+    },
+    {
+      "post": "weekly-code-challenge-spring-2021",
+      "score": 0.6009251831074685
+    }
+  ],
+  "axidraw-plotter-camera-mount": [
+    {
+      "post": "axidraw-lego-camera-mount",
+      "score": 0.8101220960742828
+    },
+    {
+      "post": "metaballs-generative-art",
+      "score": 0.6580489657059632
+    },
+    {
+      "post": "the-tiny-book-of-great-joys",
+      "score": 0.6295123329482775
+    },
+    {
+      "post": "breaking-down-krypton",
+      "score": 0.6230764298206547
+    },
+    {
+      "post": "neon-generative-art-piece-made-using-2d-vector-field",
+      "score": 0.6221947902711326
+    }
+  ],
+  "deprecating-marvin": [
+    {
+      "post": "introducing-marvin",
+      "score": 0.7363951557143631
+    },
+    {
+      "post": "marvin-v1",
+      "score": 0.7139570584733911
+    },
+    {
+      "post": "setting-up-webpack-babel-and-react-from-scratch-part-3",
+      "score": 0.6175436186492342
+    }
+  ],
+  "my-programming-story": [
+    {
+      "post": "looking-forward-to-2017",
+      "score": 0.6995235736674119
+    },
+    {
+      "post": "back-to-the-basics",
+      "score": 0.6912369345669689
+    },
+    {
+      "post": "into-2022",
+      "score": 0.6825323092101394
+    },
+    {
+      "post": "into-2020",
+      "score": 0.6784744554170731
+    },
+    {
+      "post": "into-2021",
+      "score": 0.6639500498082616
+    },
+    {
+      "post": "my-blog-setup",
+      "score": 0.659431778998475
+    },
+    {
+      "post": "talks-i-like",
+      "score": 0.6465560527064099
+    },
+    {
+      "post": "the-tiny-book-of-great-joys",
+      "score": 0.6421670776063091
+    },
+    {
+      "post": "blog-question-challenge",
+      "score": 0.6312735930083091
+    },
+    {
+      "post": "breaking-down-krypton",
+      "score": 0.6311017851572852
+    },
+    {
+      "post": "metaballs-generative-art",
+      "score": 0.6054779680219163
+    }
+  ],
+  "blog-question-challenge": [
+    {
+      "post": "my-blog-setup",
+      "score": 0.7141618148952269
+    },
+    {
+      "post": "back-to-the-basics",
+      "score": 0.6352550912380823
+    },
+    {
+      "post": "into-2020",
+      "score": 0.6328035253553832
+    },
+    {
+      "post": "my-programming-story",
+      "score": 0.6312735930083091
+    },
+    {
+      "post": "into-2022",
+      "score": 0.6075332366254564
+    }
+  ],
+  "sneak-peek-of-rayven": [
+    {
+      "post": "metaballs-generative-art",
+      "score": 0.6856860300954098
+    },
+    {
+      "post": "neon-generative-art-piece-made-using-2d-vector-field",
+      "score": 0.6815671699698413
+    },
+    {
+      "post": "breaking-down-krypton",
+      "score": 0.6811154702598277
+    },
+    {
+      "post": "vertigo-svg-shaders",
+      "score": 0.6445786673357737
+    },
+    {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.6318777731094677
+    },
+    {
+      "post": "js-libraries-for-generative-art",
+      "score": 0.6282845256830024
+    },
+    {
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.6119796791173817
+    },
+    {
+      "post": "visualizing-a-vector-field",
+      "score": 0.6059285015068203
+    }
+  ],
+  "javascript-time-ago-function": [],
+  "null-object-meetup-vol-3": [
+    {
+      "post": "null-object-tech-meetup-vol-2",
+      "score": 0.8384598202523623
+    },
+    {
+      "post": "winter-tech-meetup-vol-5",
+      "score": 0.7481126494102028
+    },
+    {
+      "post": "work-co-tech-meetup-vol-6",
+      "score": 0.6986566074547499
+    },
+    {
+      "post": "it-girls-react-series",
+      "score": 0.6764229063668225
+    }
+  ],
+  "nicer-git-log": [],
+  "disable-cmd-mouse-wheel-zoom-in-firefox": [],
+  "fake-audio-spectrum-using-perlin-noise": [
+    {
+      "post": "css-image-glitch",
+      "score": 0.6479620463404525
+    },
+    {
+      "post": "neon-generative-art-piece-made-using-2d-vector-field",
+      "score": 0.633207355808588
+    },
+    {
+      "post": "breaking-down-krypton",
+      "score": 0.6259002793825881
+    },
+    {
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.6139674571614404
+    },
+    {
+      "post": "css-blocky-people-making-waves",
+      "score": 0.6102370992460999
+    },
+    {
+      "post": "weekly-code-challenge-spring-2021",
+      "score": 0.6086518401763368
+    },
+    {
+      "post": "metaballs-generative-art",
+      "score": 0.601603964676715
+    },
+    {
+      "post": "css-only-sprite-animations",
+      "score": 0.6005408998530287
+    }
+  ],
+  "css-image-glitch": [
+    {
+      "post": "css-blocky-people-making-waves",
+      "score": 0.716218723550586
+    },
+    {
+      "post": "css-only-sprite-animations",
+      "score": 0.7042787764762699
+    },
+    {
+      "post": "image-comparison-slider",
+      "score": 0.6951934635325392
+    },
+    {
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.680100722196325
+    },
+    {
+      "post": "custom-giraffe-caret",
+      "score": 0.6784860163140473
+    },
+    {
+      "post": "neon-generative-art-piece-made-using-2d-vector-field",
+      "score": 0.6766581162555974
+    },
+    {
+      "post": "breaking-down-krypton",
+      "score": 0.676292412742324
+    },
+    {
+      "post": "css-animations-instead-of-js-timers",
+      "score": 0.6720086678296535
+    },
+    {
+      "post": "fake-audio-spectrum-using-perlin-noise",
+      "score": 0.6479620463404525
+    },
+    {
+      "post": "metaballs-generative-art",
+      "score": 0.6396120077227219
+    },
+    {
+      "post": "pwa-ios-status-bar-blur",
+      "score": 0.6291169459707717
+    },
+    {
+      "post": "native-dual-range-input",
+      "score": 0.625677637149057
+    },
+    {
+      "post": "ie6-hacks-ten-years-after",
+      "score": 0.6234865067778862
+    },
+    {
+      "post": "react-rerender-in-component-did-mount",
+      "score": 0.6193918884976312
+    },
+    {
+      "post": "js-libraries-for-generative-art",
+      "score": 0.6169257439753026
+    },
+    {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.6158212222475711
+    },
+    {
+      "post": "webpack-babel-react-revisited",
+      "score": 0.6116144839711445
+    },
+    {
+      "post": "react-image-filter-component",
+      "score": 0.6062593910931572
+    },
+    {
+      "post": "scrubbing-videos-using-javascript",
+      "score": 0.6014440480055917
+    }
+  ],
+  "3d-rotating-cube-effect": [],
+  "macos-catalina-ruby-bad-interpreter-error": [
+    {
+      "post": "remove-macos-catalina-zsh-nagging",
+      "score": 0.6260009805710882
+    }
+  ],
+  "breaking-down-krypton": [
+    {
+      "post": "metaballs-generative-art",
+      "score": 0.8377191102350746
+    },
+    {
+      "post": "neon-generative-art-piece-made-using-2d-vector-field",
+      "score": 0.8319270579864467
+    },
+    {
+      "post": "js-libraries-for-generative-art",
+      "score": 0.732371894953824
+    },
+    {
+      "post": "the-tiny-book-of-great-joys",
+      "score": 0.6962029821568103
+    },
+    {
+      "post": "into-2021",
+      "score": 0.6860079458446817
+    },
+    {
+      "post": "sneak-peek-of-rayven",
+      "score": 0.6811154702598277
+    },
+    {
+      "post": "css-image-glitch",
+      "score": 0.676292412742324
+    },
+    {
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.6737518481062341
+    },
+    {
+      "post": "into-2022",
+      "score": 0.6559316080388911
+    },
+    {
+      "post": "my-programming-story",
+      "score": 0.6311017851572852
+    },
+    {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.6283435452767214
+    },
+    {
+      "post": "fake-audio-spectrum-using-perlin-noise",
+      "score": 0.6259002793825881
+    },
+    {
+      "post": "axidraw-plotter-camera-mount",
+      "score": 0.6230764298206547
+    },
+    {
+      "post": "custom-giraffe-caret",
+      "score": 0.6131431577100267
+    },
+    {
+      "post": "css-blocky-people-making-waves",
+      "score": 0.6029289147048371
+    },
+    {
+      "post": "into-2020",
+      "score": 0.6009290421985849
+    }
+  ],
+  "react-image-filter-component": [
+    {
+      "post": "plx-react-parallax-component",
+      "score": 0.6371258323599974
+    },
+    {
+      "post": "simple-react-slider",
+      "score": 0.6191877097076585
+    },
+    {
+      "post": "image-comparison-slider",
+      "score": 0.6174294854064046
+    },
+    {
+      "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
+      "score": 0.6141013532689978
+    },
+    {
+      "post": "accessible-range-slider",
+      "score": 0.612977251487237
+    },
+    {
+      "post": "css-image-glitch",
+      "score": 0.6062593910931572
+    }
+  ],
+  "my-blog-setup": [
+    {
+      "post": "jekyll-gulp-workflow",
+      "score": 0.7242753846583151
+    },
+    {
+      "post": "travis-jekyll-and-github-pages",
+      "score": 0.7242535744240711
+    },
+    {
+      "post": "new-design-and-features",
+      "score": 0.7174042305361956
+    },
+    {
+      "post": "blog-question-challenge",
+      "score": 0.7141618148952269
+    },
+    {
+      "post": "webpack-babel-react-revisited",
+      "score": 0.7048457792211722
+    },
+    {
+      "post": "back-to-the-basics",
+      "score": 0.6673019980092271
+    },
+    {
+      "post": "introducing-keen-npm-package-boilerplate",
+      "score": 0.663632175230317
+    },
+    {
+      "post": "looking-forward-to-2017",
+      "score": 0.6608282922210488
+    },
+    {
+      "post": "my-programming-story",
+      "score": 0.659431778998475
+    },
+    {
+      "post": "running-staticman-on-heroku",
+      "score": 0.656434989697436
+    },
+    {
+      "post": "into-2020",
+      "score": 0.6548236641572123
+    },
+    {
+      "post": "setting-up-webpack-babel-and-react-from-scratch",
+      "score": 0.6423782506051033
+    },
+    {
+      "post": "small-mac-apps-i-love",
+      "score": 0.6175460258858206
+    },
+    {
+      "post": "into-2022",
+      "score": 0.6125711513718228
+    }
+  ],
+  "redesign-again": [
+    {
+      "post": "new-design-and-features",
+      "score": 0.7074584318966838
+    },
+    {
+      "post": "minor-design-refresh",
+      "score": 0.70497286563505
+    }
+  ],
+  "letters-from-sarajevo": [],
+  "visualizing-a-vector-field": [
+    {
+      "post": "sneak-peek-of-rayven",
+      "score": 0.6059285015068203
+    }
+  ],
+  "css-fix-to-prevent-orphan-icons": [],
+  "design-articles": [],
+  "font-weight-based-on-dpi": [
+    {
+      "post": "font-size-and-tracking-points-to-pixels",
+      "score": 0.608229496983547
+    }
+  ],
+  "custom-giraffe-caret": [
+    {
+      "post": "image-comparison-slider",
+      "score": 0.7036468043644128
+    },
+    {
+      "post": "native-dual-range-input",
+      "score": 0.6957155097311458
+    },
+    {
+      "post": "css-image-glitch",
+      "score": 0.6784860163140473
+    },
+    {
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.6717278326164186
+    },
+    {
+      "post": "css-blocky-people-making-waves",
+      "score": 0.671216978763395
+    },
+    {
+      "post": "css-only-sprite-animations",
+      "score": 0.6530538624215516
+    },
+    {
+      "post": "javascript-keyboard-easter-egg",
+      "score": 0.6445220690154397
+    },
+    {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.6362341900786818
+    },
+    {
+      "post": "css-animations-instead-of-js-timers",
+      "score": 0.6306436320813393
+    },
+    {
+      "post": "neon-generative-art-piece-made-using-2d-vector-field",
+      "score": 0.6200987781935995
+    },
+    {
+      "post": "the-tiny-book-of-great-joys",
+      "score": 0.6158800942840832
+    },
+    {
+      "post": "breaking-down-krypton",
+      "score": 0.6131431577100267
+    },
+    {
+      "post": "js-libraries-for-generative-art",
+      "score": 0.6070423227959582
+    },
+    {
+      "post": "metaballs-generative-art",
+      "score": 0.6021599410180727
+    }
+  ],
+  "html-canvas-video-player-ios": [
+    {
+      "post": "hack-for-ios-safari-to-display-html-video-thumbnail",
+      "score": 0.6005300634750809
+    }
+  ],
+  "react-scroll-position-decorator": [
+    {
+      "post": "react-decorators-and-scroll-manager",
+      "score": 0.8020903261531614
+    },
+    {
+      "post": "plx-react-parallax-component",
+      "score": 0.6588461903330751
+    },
+    {
+      "post": "react-router-v4-redirect-decorator",
+      "score": 0.6536273896077076
+    },
+    {
+      "post": "animate-window-scroll-to",
+      "score": 0.6233433052251933
+    },
+    {
+      "post": "react-animate-height-slide-up-down",
+      "score": 0.6192301134665384
+    }
+  ],
+  "make-regular-expressions-easier-to-read": [],
+  "javascript-get-element-offset": [
+    {
+      "post": "ios-safari-get-bounding-client-rect-bug",
+      "score": 0.643091545137967
+    }
+  ],
+  "elastic-hover-effect": [
+    {
+      "post": "css-and-svg-input-animations",
+      "score": 0.655213329276225
+    },
+    {
+      "post": "animated-login-signup-forms",
+      "score": 0.6131481430505041
+    },
+    {
+      "post": "css-only-sprite-animations",
+      "score": 0.6081904187517724
+    }
+  ],
+  "css-animations-instead-of-js-timers": [
+    {
+      "post": "css-only-sprite-animations",
+      "score": 0.697452908582615
+    },
+    {
+      "post": "image-comparison-slider",
+      "score": 0.6869384421905649
+    },
+    {
+      "post": "css-image-glitch",
+      "score": 0.6720086678296535
+    },
+    {
+      "post": "react-rerender-in-component-did-mount",
+      "score": 0.6695500820015488
+    },
+    {
+      "post": "javascript-animation-loop",
+      "score": 0.6492802685616311
+    },
+    {
+      "post": "css-blocky-people-making-waves",
+      "score": 0.6393669143246575
+    },
+    {
+      "post": "custom-giraffe-caret",
+      "score": 0.6306436320813393
+    },
+    {
+      "post": "native-dual-range-input",
+      "score": 0.6145737184931611
+    },
+    {
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.6143120958545764
+    }
+  ],
+  "remove-macos-catalina-zsh-nagging": [
+    {
+      "post": "macos-catalina-ruby-bad-interpreter-error",
+      "score": 0.6260009805710882
+    }
+  ],
+  "always-use-button-for-clickable-elements": [],
+  "js-libraries-for-generative-art": [
+    {
+      "post": "neon-generative-art-piece-made-using-2d-vector-field",
+      "score": 0.7425137261915714
+    },
+    {
+      "post": "metaballs-generative-art",
+      "score": 0.7412431345300908
+    },
+    {
+      "post": "breaking-down-krypton",
+      "score": 0.732371894953824
+    },
+    {
+      "post": "into-2021",
+      "score": 0.6592168432116999
+    },
+    {
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.6415703935741793
+    },
+    {
+      "post": "into-2022",
+      "score": 0.6384614089072027
+    },
+    {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.6353237541508099
+    },
+    {
+      "post": "sneak-peek-of-rayven",
+      "score": 0.6282845256830024
+    },
+    {
+      "post": "open-source-mac-apps-i-love",
+      "score": 0.6226358933439878
+    },
+    {
+      "post": "css-image-glitch",
+      "score": 0.6169257439753026
+    },
+    {
+      "post": "image-comparison-slider",
+      "score": 0.6118490230358103
+    },
+    {
+      "post": "small-mac-apps-i-love",
+      "score": 0.6073008999824273
+    },
+    {
+      "post": "custom-giraffe-caret",
+      "score": 0.6070423227959582
+    },
+    {
+      "post": "native-dual-range-input",
+      "score": 0.6054623777577278
+    }
+  ],
+  "simple-react-slider": [
+    {
+      "post": "accessible-range-slider",
+      "score": 0.7744902223587243
+    },
+    {
+      "post": "react-animate-height-slide-up-down",
+      "score": 0.6902678906746921
+    },
+    {
+      "post": "plx-react-parallax-component",
+      "score": 0.6517196372316559
+    },
+    {
+      "post": "react-ratio-component",
+      "score": 0.6335162233460075
+    },
+    {
+      "post": "react-image-filter-component",
+      "score": 0.6191877097076585
+    },
+    {
+      "post": "image-comparison-slider",
+      "score": 0.6185261342134227
+    },
+    {
+      "post": "react-decorators-and-scroll-manager",
+      "score": 0.6075619296327115
+    }
+  ],
+  "javascript-animation-loop": [
+    {
+      "post": "making-2d-platformer-controls",
+      "score": 0.6984223779513494
+    },
+    {
+      "post": "css-only-sprite-animations",
+      "score": 0.6664912814103123
+    },
+    {
+      "post": "css-animations-instead-of-js-timers",
+      "score": 0.6492802685616311
+    },
+    {
+      "post": "scrubbing-videos-using-javascript",
+      "score": 0.6285230784535688
+    },
+    {
+      "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
+      "score": 0.6259954913755833
+    },
+    {
+      "post": "react-rerender-in-component-did-mount",
+      "score": 0.617337724414242
+    },
+    {
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.6049884927325945
+    },
+    {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.6011065255697231
+    }
+  ],
+  "image-comparison-slider": [
+    {
+      "post": "native-dual-range-input",
+      "score": 0.8451616249236448
+    },
+    {
+      "post": "accessible-range-slider",
+      "score": 0.7084756099906874
+    },
+    {
+      "post": "custom-giraffe-caret",
+      "score": 0.7036468043644128
+    },
+    {
+      "post": "css-image-glitch",
+      "score": 0.6951934635325392
+    },
+    {
+      "post": "css-animations-instead-of-js-timers",
+      "score": 0.6869384421905649
+    },
+    {
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.6624604964632385
+    },
+    {
+      "post": "css-blocky-people-making-waves",
+      "score": 0.647449106809861
+    },
+    {
+      "post": "css-only-sprite-animations",
+      "score": 0.6426681204770719
+    },
+    {
+      "post": "scrubbing-videos-using-javascript",
+      "score": 0.6224040445616706
+    },
+    {
+      "post": "simple-react-slider",
+      "score": 0.6185261342134227
+    },
+    {
+      "post": "react-image-filter-component",
+      "score": 0.6174294854064046
+    },
+    {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.6128732910080817
+    },
+    {
+      "post": "js-libraries-for-generative-art",
+      "score": 0.6118490230358103
+    }
+  ],
+  "json-stringify-removes-undefined": [],
+  "svg-non-scaling-circle-and-rectangle": [
+    {
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.6175936877707106
+    },
+    {
+      "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
+      "score": 0.6005667956990308
+    }
+  ],
+  "vertigo-svg-shaders": [
+    {
+      "post": "sneak-peek-of-rayven",
+      "score": 0.6445786673357737
+    },
+    {
+      "post": "metaballs-generative-art",
+      "score": 0.6141553506443631
+    }
+  ]
+}

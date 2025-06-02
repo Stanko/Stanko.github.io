@@ -1,0 +1,48 @@
+@use '../base/mixins' as *;
+
+.spoiler {
+}
+
+.spoiler__content-wrapper {
+  transition: grid-template-rows 500ms ease-in-out, transform 500ms ease-in-out,
+    opacity 500ms ease-in-out, display 500ms ease-in-out;
+  transition-behavior: allow-discrete;
+  display: none;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.spoiler__content-wrapper--expanded {
+  @starting-style {
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  display: grid;
+  grid-template-rows: 1fr;
+  opacity: 1;
+  transform: none;
+}
+
+.spoiler__content {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.5rem;
+}
+
+.spoiler__toggle {
+}
+
+.spoiler__content-wrapper--expanded + .spoiler__toggle .spoiler__toggle-show {
+  display: none;
+}
+
+.spoiler__toggle-hide {
+  display: none;
+}
+
+.spoiler__content-wrapper--expanded + .spoiler__toggle .spoiler__toggle-hide {
+  display: block;
+}

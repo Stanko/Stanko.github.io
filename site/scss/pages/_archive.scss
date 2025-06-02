@@ -1,0 +1,37 @@
+.archive__favorite-text {
+  margin-top: 0.5rem;
+}
+
+.archive__posts {
+  list-style: none;
+  margin-block: 1rem 3rem;
+
+  @include md {
+    margin-bottom: 4rem;
+  }
+}
+
+.archive__post a {
+  border-radius: 4px;
+  color: var(--text-color);
+  display: inline-block;
+  text-wrap: balance;
+  padding: 0.5rem;
+  margin-inline: -0.5rem;
+
+  &:hover {
+    color: var(--theme-color);
+  }
+
+  &:focus-visible {
+    background-color: var(--theme-color-50);
+  }
+}
+
+.archive__category-name {
+  padding-top: 0.75em;
+
+  &:first-child {
+    margin-top: -0.75em;
+  }
+}

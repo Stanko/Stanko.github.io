@@ -1,18 +1,4 @@
 {
-  "cSpell.words": [
-    "photoswipe",
-    "sidenote"
-  ],
-  "[typescript]": {
-    "editor.formatOnSave": true
-  },
-  "[javascript]": {
-    "editor.formatOnSave": true
-  },
-  "[json]": {
-    "editor.formatOnSave": true
-  },
-  "[scss]": {
-    "editor.formatOnSave": true
-  }
+  "editor.formatOnSave": true,
+  "cSpell.words": ["brz", "sidenote", "sidenotes"]
 }

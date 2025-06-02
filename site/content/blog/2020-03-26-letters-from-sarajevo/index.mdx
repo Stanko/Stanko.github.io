@@ -1,0 +1,71 @@
++++
+title = "Letters from Sarajevo"
+aliases = ["/letters-from-sarajevo/"]
+category = ["Random"]
+tags = ["book","jekyll","illustrations","sarajevo"]
+comments = [
+  "comments/letters-from-sarajevo/1595253580749.json"
+]
+image = "./img/book.jpg"
+favorite = true
+
++++
+
+
+Today I have a very personal project to share with you all.
+
+[Letters from Sarajevo](https://lettersfromsarajevo.com/) is a web adaptation of the book of the same name. My brother wrote the book using authentic letters our father sent us while being stuck in Sarajevo during the war in the nineties.
+
+For more information about the book, please check [about page](https://lettersfromsarajevo.com/en/about/).
+
+
+<Image
+  src='./img/pazi-snajper.jpg'
+  alt='One of the images from the book, People running across a street, passing by a "caution sniper" sign.'
+  link="https://lettersfromsarajevo.com/"
+  size="wide"
+/>
+
+
+## Illustrations
+
+In the process of publishing the book, my father's original letters got lost. We were left with only low resolution scans. That's why I asked my friend [Ivan](https://www.instagram.com/sun_day_sign/), to redraw (and digitalize) all of the illustrations using scans as a reference.
+
+Ivan did an amazing job, just check the comparison below:
+
+<Grid sm={1}>
+  <Image
+    src='./img/water-original.jpg'
+    alt="One of the original illustrations, low resolution scan"
+  />
+  <Image
+    src='./img/water.png'
+    alt="Same illustration redrawn by Ivan"
+  />
+</Grid>
+
+## Tech
+
+The website is open source and the code is available on [GitHub](https://github.com/Stanko/letters-from-sarajevo).
+
+The site is powered by Jekyll, and follows a very similar setup to my blog. The build process is a little bit more complicated, because there are two different versions deployed on two different domains.
+
+* <Sidenote note={`Soon to become the international version with more translations.`}>[English version](https://lettersfromsarajevo.com/)</Sidenote>
+* [Serbian version](https://pismaizsarajeva.com/)
+
+There is almost no JavaScript at all, except [the fix for vh units](/blog/mobile-chrome-vh-units-fix/). I will probably sprinkle some JavaScript goodness, but only as a progressive enchainment. I don't want this to become a single page app.
+
+Everything is deployed on Netlify's free plan.
+
+
+## Contributing
+
+If you want to contribute, help with translations or you just have a suggestion, please open an issue [here](https://github.com/Stanko/letters-from-sarajevo/issues) or leave a comment on this post. For translations, please note that each image has `alt` text as well.
+
+I'm super happy to say, the website is already being translated to more languages. Special kudos to my colleague [Felipe](http://felipemedina.com.br/) who volunteered to provide Brazilian Portuguese translation.
+
+Everything on the website, including the code, is under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) license. I think the license is fair, as it allows people to share and adapt content as long the appropriate credit is given and it is for non-commercial purposes.
+
+## Thank you
+
+This project means a lot to my parents and myself. Please let us know if you enjoyed reading it and share it with your friends.

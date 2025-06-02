@@ -1,0 +1,15 @@
+.spectrum {
+  align-items: center;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.spectrum-segment {
+  background: #345;
+  width: 4px;
+  height: 100%;
+  margin: 0 2px;
+  transition: transform 0.125s linear;
+}

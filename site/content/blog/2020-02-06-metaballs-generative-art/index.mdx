@@ -1,0 +1,128 @@
++++
+title = "Metaballs"
+aliases = ["/metaballs-generative-art/"]
+category = ["Generative"]
+tags = ["svg","generative","threejs","js","metaballs"]
+image = "./img/05a.png"
+favorite = true
+
++++
+
+
+I'm all about generative art these days. Today, I present you [Metaballs](/metaballs/), my latest creation. It is one of those projects that I visualized in my head and managed to pull it off exactly how I imagined it.
+
+Somehow I came up with an idea to generate spheres, smoothly merge them to get organic looking shapes, which then I would slice up and render the
+<Sidenote note={`I ordered a pen plotter and that is the reason I'm focused on producing vector files.`}>outlines.</Sidenote>
+
+One of the final images looks like this (click on it to see more):
+
+<Image
+  src="./img/03a.png"
+  alt='"Ginger", image generated using Metaballs"'
+  link="/metaballs/"
+  size="wide"
+/>
+
+## Exploration
+
+Not sure how I started thinking about slicing these *blobby* objects, but I had a clear vision of what I wanted to achieve. At this point I had no idea they are called metaballs. I asked on our company's `#tech-creative-coding` channel, if anyone is familiar with making something like this, and my colleagues pointed out the term metaballs and [marching cubes](https://en.m.wikipedia.org/wiki/Marching_cubes) algorithm.
+
+### Definition
+
+Wikipedia defines metaballs as:
+
+> In computer graphics, metaballs are organic-looking n-dimensional isosurfaces, characterised by their ability to meld together when in close proximity to create single, contiguous objects.
+
+Which makes them perfect for what I had in mind - generating organic looking blobs.
+
+## Implementation
+
+### The first try
+
+Initially I wanted to implement it myself, but I didn't really know where to start. I had an idea to hack it by overlapping two spheres and calculate a curve between them. By rotating this curve, I would create a *tube* and merge everything together.
+
+<Image
+  alt="Visualization of connecting two spheres using a tube"
+  src="./img/2d.svg"
+/>
+
+It looks ok-ish for two spheres, but I wasn't completely satisfied. And it was impossible do it for more than two spheres. So I gave up early on this idea.
+
+### Marching on
+
+So I went back to the marching cubes algorithm. After some research I found a [wonderful
+post](http://jamie-wong.com/2014/08/19/metaballs-and-marching-squares/), which very thoroughly explains implementation of
+<Sidenote note={`Marching squares are the same algorithm as marching cubes, but in 2D.`}>marching squares.</Sidenote>
+
+Now I understood how algorithm works, but I gave up on implementing it myself. I was more interested in being creative and playing with the shapes, rather than re-implementing a known algorithm. So I started searching for the existing solution. That's how I stumbled on [this demo](https://www.clicktorelease.com/code/bumpy-metaballs/).
+
+`MarchingCubes.js` was shamelessly copied and I started creating some blobs.
+
+## Tooling
+
+I love making tools. And for generative art, I love tooling that helps me fine tune the algorithm  with
+<Sidenote note={`Bret Victor has a great talk on the subject - [Inventing on Principle](https://vimeo.com/36579366)`}>immediate visual feedback.</Sidenote>
+Tools like this allow me to stay in the zone and see changes real time.
+
+This is the tool I made for generating Metaballs, it is made using [three.js](https://threejs.org/) and allows me to create shapes in 3D:
+
+<Image
+  alt="Screenshot of the custom tool I build using three.js"
+  src="./img/tooling.png"
+/>
+
+I start by playing with random number generator seeds, until I get something that looks interesting. Then I adjust the number and the size of the spheres. Once I love the shape and the point of view, I spend a lot of time finely tuning all other parameters, until I'm satisfied with the looks.
+
+### Blob to vector
+
+As the final goal is to pen plot these, I had to convert them to vector files.
+
+I wanted to have thick edges, and cel (a.k.a. toon) shading seemed like a good idea. Apply a shader to the model, grab an image and
+<Sidenote note={`Under the hood, Inkscape uses [Potrace](http://potrace.sourceforge.net/) to convert raster to vector images.`}>trace it using Inkscape.</Sidenote>
+But it ended up being much harder to pull off then I thought it would, as I didn't have any prior experience with shaders.
+
+And then it hit me! Why would I try to get fat edges in 3D, when I could just trace the object as it is and change edge width once I convert it to vector.
+
+To pull this off, I paint the outer mesh black, and slice surfaces white. I take a screenshot, reverse the colors and take another screenshot. The result looks like this, and the high contrast makes tracing very precise.
+
+<Image
+  alt="Images prepared for vector tracing"
+  src="./img/exports.png"
+/>
+
+Once traced, I check and polish any rogue edges that appeared in the tracing process. And that gives me the final result:
+
+<Image
+  alt='"Perspective", image generated using Metaballs'
+  src="./img/05b.png"
+  link="/metaballs/"
+/>
+
+I can't wait for my plotter to arrive to
+<Sidenote note={`Couple of my friends already asked for prints :blush:`}>start printing</Sidenote>
+these.
+
+
+## Closing thoughts
+
+When I read this post, it sounds like the whole process was smooth sailing. But in reality, I had a lot of back and forth moments and had to learn a lot about working with 3D objects. But it was worth it - it was a lot of fun and I can't be more satisfied with the result.
+
+
+## Plotted version
+
+<small>Update, August 2020</small>
+
+I plotted this one long time ago, but never updated the post. Better late than never!
+
+<Grid sm={1} md={1} lg={2} className='full'>
+  <Image
+    alt="Pen plotted image generated by Metaballs, white gel pen on black paper"
+    src="./img/plot.jpg"
+  />
+  <Image
+    alt="Same plotted image in the white frame](/img"
+    src="./img/plot-framed.jpg"
+  />
+</Grid>
+
+If you want to see more of my generative art, check [the art section](/art/) of this site.

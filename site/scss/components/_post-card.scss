@@ -1,0 +1,76 @@
+.post-card {
+  display: block;
+  padding: 1.25rem;
+  margin-inline: -1.25rem;
+  border-radius: 1rem;
+  align-items: center;
+
+  @include md {
+    padding: 1.5rem;
+    margin-inline: -1.5rem;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--theme-color-50);
+  }
+}
+
+.post-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  svg {
+    display: inline-block;
+    margin-right: 0.25rem;
+  }
+}
+
+.post-card__title-text span {
+  color: var(--theme-color);
+}
+
+.post-card__image {
+  border-radius: var(--radius);
+
+  @include sm-only {
+    width: 100%;
+    max-width: 20rem;
+    margin-top: 1rem;
+    object-fit: contain;
+    object-position: left top;
+  }
+
+  @include md {
+    width: auto;
+  }
+
+  @include lg {
+    max-height: 15rem;
+  }
+}
+
+// Version with image
+
+.post-card--image {
+  @include md {
+    display: flex;
+  }
+
+  @include lg {
+    align-items: center;
+  }
+
+  .post-card__content {
+    margin-top: -0.5rem;
+
+    @include md {
+      margin-right: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    @include lg {
+    }
+  }
+}

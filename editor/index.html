@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./src/style.css" rel="stylesheet">
+  <title>Editor</title>
+</head>
+
+<body>
+  <div class="editor"></div>
+  <pre class="content"># The Lord of the Rings: An Epic Journey
+
+This text explores the epic fantasy world of [J.R.R. Tolkien's](https://en.wikipedia.org/wiki/J._R._R._Tolkien) *The Lord of the Rings*.
+
+## Characters
+
+* **Frodo Baggins:** The hobbit who bears the One Ring.
+* **Gandalf the Grey/White:** A powerful wizard.
+* **Aragorn:** A ranger and heir to the throne of Gondor.
+* **Legolas:** An elf archer.
+* **Gimli:** A dwarf warrior.
+* **Samwise Gamgee:** Frodo's loyal gardener and friend.
+
+
+```js
+let view = new EditorView({
+  doc: "Hello World",
+  extensions: [
+    minimalSetup,
+    markdown({
+      codeLanguages: languages,
+    }),
+    syntaxHighlighting(highlightingStyles),
+    syntaxHighlighting(highlightingClasses),
+    EditorView.lineWrapping,
+  ],
+  parent: document.querySelector('.editor'),
+});
+```
+
+## Locations
+
+1. The Shire: Home of the hobbits.
+2. Rivendell: Elven realm.
+3. Mordor: The dark land of Sauron.
+
+## Plot Summary
+
+The story follows Frodo's quest to destroy the One Ring, an artifact of immense power forged by the Dark Lord Sauron. The ring corrupts its bearer and Sauron seeks to reclaim it to dominate Middle-earth. Frodo, along with a fellowship of companions, journeys across Middle-earth, facing numerous dangers and challenges.
+  
+![The One Ring](https://upload.wikimedia.org/wikipedia/commons/d/d4/One_Ring_Blender_Render.png)
+
+### The Fellowship's Journey
+
+The fellowship, initially consisting of nine members, travels through various lands, encountering allies and enemies. They face treacherous mountains, dark forests, and the Mines of Moria, where they battle orcs and a Balrog.
+
+**Quote from Gandalf:**
+
+> "All that is gold does not glitter,
+> Not all those who wander are lost;
+> The strong old that does not wither,
+> Deep roots are not reached by the frost."
+
+## Themes
+
+* Good versus evil
+* The corrupting influence of power
+* Friendship and loyalty
+* Sacrifice and courage
+
+## The One Ring's Power
+
+The One Ring grants its wearer invisibility but also corrupts them, whispering promises of power and extending their lifespan. Its allure is difficult to resist, even for the most virtuous.
+
+## The Ending
+
+The story culminates in a final confrontation at the Black Gate of Mordor. The ring is ultimately destroyed in the fires of Mount Doom, Sauron is defeated, and peace is restored to Middle-earth.
+
+## A List of Creatures
+
+* Orcs
+* Elves
+* Dwarves
+* Hobbits
+* Trolls
+* Balrogs
+
+## Code Example (Elvish)
+
+```elvish
+# An Elvish greeting
+print "Aiya!"
+```
+  </pre>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+@use '../base/mixins' as *;
+
+.wave {
+  max-width: 1500px;
+  margin-inline: auto;
+  margin-top: -1px;
+  display: block;
+  overflow: visible;
+}
+
+.wave__fill {
+  fill: var(--theme-color-50);
+}
+
+.wave__mask {
+  fill: var(--bg-color);
+}
+
+.wave__border {
+  stroke: var(--theme-color-100);
+  stroke-linecap: round;
+}

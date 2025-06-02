@@ -1,0 +1,16 @@
+.art__items {
+  margin-top: 3rem;
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr 1fr;
+
+  @include md {
+    margin-top: 4rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  @include lg {
+    gap: 2rem;
+  }
+}

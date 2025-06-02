@@ -1,0 +1,134 @@
++++
+title = "Breaking down <span>Krypton</span>"
+category = ["Generative"]
+tags = ["js","voronoi","generative-art"]
+image = "./img/cover-horizontal.jpg"
+intro = "Walk through the creative process behind my pen plotted piece, <i>\"Krypton\"</i>"
+theme = "gray"
+favorite = true
+
++++
+
+
+This post was originally written for our internal technology newsletter at [Work & Co](https://work.co). It is a little bit adapted for web, but the content is almost identical.
+
+---
+
+About a year ago I made this plot. It is called <Sidenote note={`Named by a dear friend and ex-colleague`}>"Krypton"</Sidenote>, and I'll try to break down how it was made.
+
+<Image alt={"Krypton plot"} src="./img/cover.jpg" />
+
+The wonderful thing about generative art is that code is just a tool. Thing that really matters is the actual artwork. In this specific case, code is straightforward and relatively simple. But it produces drawings that, in my opinion, look visually pleasing and have a nice sense of depth to them.
+
+
+## Tooling
+
+For all of my generative work, I use plain JavaScript, [p5.js](https://p5js.org/) and a couple of custom-made tools. These tools are often crude, but they do exactly what I want so I don't mind. With each new project I keep adding more features and polishing them. At some point these tools may reach the point where they are presentable. If that happens I'll gladly share them with the world and open source everything.
+
+This is how the interface looks. I have an easy way to add controls for image parameters. These controls allow me to tweak drawings with a short feedback loop. Each time a parameter is changed, the image is redrawn and the parameter is reflected in the URL. This allows me to go through iterations using the browser history.
+
+<Image alt={"My tooling"} src="./img/tooling.png" />
+
+To make navigation through the history easier, for each unique combination of parameters, I generate a random color and ASCII face. That is why my browser history looks like this :)
+
+<Image alt={"History dropdown with ASCII faces"} src="./img/history.png" outline />
+
+
+## Voronoi diagram
+
+I use Voronoi diagrams a lot in my drawings. So much, that I'm sometimes trying to avoid them, to make sure I'm not limiting myself to a single algorithm.
+
+Voronoi diagram takes a collection of points, and then partitions a plane into polygons, where each polygon's edge is right in the middle of two points. It sounds like a lot, but if you study this image, it should become clearer. For a more detailed explanation you can check out [the article on Wikipedia](https://en.wikipedia.org/wiki/Voronoi_diagram).
+
+<Image alt={"Voronoi diagram"} src="./img/voronoi.png" style={{maxWidth: 400}} />
+
+
+## Generating points
+
+To get Voronoi polygons, we'll need some points. We'll iterate from the center, and in each iteration, we'll take a random point on a circle and displace it a little bit, so it doesn't look artificial. Then, increase the radius and repeat the whole process. The larger the radius, the more points we are going to generate.
+
+The result looks nice, but it took me a number of tries to get it just right.
+
+<Image alt={"Points"} src="./img/10.png" />
+
+Now when we have our points, Voronoi can do it's thing. This is what we end up with.
+
+<Image alt={"Voronoi diagram with points visible"} src="./img/20.png" transparent />
+
+### Different points distribution
+
+Like I mentioned, the point distribution is something I tweaked to get the result I like. For example, if we change the easing function for radius increasing ("ease in" instead of "ease out"), we'll get a completely different result. If you ask me, it doesn't look nearly as good.
+
+Let me give you a tip, if you start doing generative art, don't be afraid to experiment. If a parameter looks nice in a range between 10 and 20, try -50 or 300 or swap `x` and `y` coordinates. Do it for fun, as a lot of times it will not look good, but sometimes it will and it will just blow your mind.
+
+<Grid className="full">
+  <Image src="./img/b-10.png" alt={"Points with different distribution"} />
+  <Image src="./img/b-20.png" alt={"And corresponding Voronoi diagram"} transparent />
+</Grid>
+
+## Cleaning up Voronoi
+
+Let's get rid of points, as they already did their work. We can loose these weird looking edge polygons as well. When I got to this point I thought to myself: *"OK, this is taking shape. I can work with this."*
+
+
+<Grid className="full">
+  <Image src="./img/30.png" alt={"Diagram without points"} transparent />
+  <Image src="./img/40.png" alt={"Diagram with edge polygons removed"} />
+</Grid>
+
+
+Back then, I experimented a little bit with colors.
+
+<Image alt={"Color exploration"} src="./img/color.jpg" />
+
+But as I wanted to pen plot the drawing, I abandoned the whole full color idea.
+
+## Making it interesting
+
+We made a solid base, but let's try to make it more interesting. How about we space the tiles apart a little? Randomly remove pieces? Make the whole thing explode? Or maybe pieces could start falling apart? Tiles could have rounded corners? The general idea is to mimic phenomena from the physical world by using a little bit of carefully introduced randomness.
+
+I tried all of the things mentioned above, and for the final plot I scaled the tiles and made pieces break off the main structure. Only pieces in the lower half are offset. The further away they are from the center, the more offset they are going to be. A little bit of randomness is sprinkled on top to break the mathematical orderliness.
+
+
+<Grid className="full">
+  <Image src="./img/50.png" alt={"Add polygon offset"} />
+  <Image src="./img/60.png" alt={"Make pieces fall off"} />
+</Grid>
+
+Then I added another layer to give it more depth, and finally inverted the whole image, as I was planning to plot it on a black paper.
+
+
+<Grid className="full">
+  <Image src="./img/80.png" alt={"Add another layer"} />
+  <Image src="./img/90.png" alt={"Invert colors"} />
+</Grid>
+
+## Plot
+
+I plotted the drawing on Fabriano's Black Black paper, using Sakura gel markers. Between the layers, I had to swap the markers and run it again. For this particular drawing, it wasn't that important if the layers are not perfectly aligned. But in some cases it can be really tricky to swap pens precisely.
+
+Fun fact, the drawing was reserved and sold even before it was plotted. It went to US, to now an ex-Work&Co colleague.
+
+<Grid className="full">
+  <Image src="./img/plot1.jpg" alt={"Pen plot, white on black paper"} />
+  <Image src="./img/plot2.jpg" alt={"Detail of the plotted piece"} />
+</Grid>
+
+
+## Conclusion
+
+Basically, it takes only a few steps to generate Krypton. I hope this will inspire you to try fooling around with creative coding.
+
+
+<Video src="./img/output.mp4" />
+
+
+To encourage you, here are a few rejected examples of generated images. These are not nearly as nice. Randomness is a super powerful tool, but you need to play around with the values and finely tune them to get good results.
+
+<Grid className="full">
+  <Image src="./img/r1.png" alt={"Rejected render"} />
+  <Image src="./img/r2.png" alt={"Another rejected render"} />
+</Grid>
+
+You can find this and my other plots on [my Instagram profile](https://instagram.com/p/CM6sTJKH8Eu). ~At some point I'll stop being lazy, and make an artwork section here on my website.~ [I did it!](/art)
+

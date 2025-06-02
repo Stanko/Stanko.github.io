@@ -1,0 +1,124 @@
+@use '../base/mixins' as *;
+
+body {
+  counter-reset: sidenote;
+}
+
+.sidenote__text {
+  border-radius: 6px;
+  cursor: pointer;
+  margin: -0.125rem -0.25rem;
+  padding: 0.125rem 0.25rem;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 2px;
+  transition: all 250ms;
+
+  @include lg {
+    cursor: help;
+  }
+
+  &::after {
+    content: counter(sidenote);
+    counter-increment: sidenote;
+    font-size: 0.875rem;
+    line-height: 1;
+    vertical-align: super;
+    padding-left: 0.25em;
+    display: inline-block;
+  }
+}
+
+.sidenote__note {
+  font-size: 0.875rem;
+  transition: grid-template-rows 250ms, transform 250ms, opacity 250ms,
+    display 250ms;
+  z-index: var(--layer-sidenote);
+
+  @include md-and-lower {
+    float: left;
+    clear: both;
+    transition-behavior: allow-discrete;
+    width: 100%;
+    // Collapsed styles
+    display: none;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  @include lg {
+    width: 14rem;
+    margin-inline: -0.5rem;
+    display: inline-block;
+    position: absolute;
+    left: calc(100% + 1.25rem);
+  }
+
+  @include xl {
+    width: 18rem;
+  }
+}
+
+.sidenote__text--expanded + .sidenote__note {
+  @include md-and-lower {
+    @starting-style {
+      grid-template-rows: 0fr;
+      opacity: 0;
+      transform: scale(0.95);
+    }
+
+    display: grid;
+    grid-template-rows: 1fr;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.sidenote__note-inner {
+  display: block;
+  overflow: hidden;
+}
+
+.sidenote__note-text {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-variation-settings: 'wdth' 100;
+  line-height: 1.4;
+  display: block;
+  padding: 0.375rem 0.625rem;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  transition: background-color 250ms, border-color 250ms;
+
+  @include md-and-lower {
+    background: var(--theme-color-50);
+    border-color: var(--theme-color-100);
+    margin: 0.5rem 0;
+  }
+
+  @include lg {
+    &::before {
+      content: counter(sidenote);
+      font-size: 0.875rem;
+      line-height: 1;
+      vertical-align: super;
+      position: relative;
+      margin-right: 0.25em;
+    }
+  }
+}
+
+.sidenote__note-text:hover {
+  background: var(--theme-color-50);
+}
+
+.sidenote__text:hover,
+.sidenote__text:has(+ .sidenote__note:hover) {
+  color: var(--theme-color);
+  text-decoration-color: var(--theme-color);
+}
+
+.sidenote__text:hover + .sidenote__note .sidenote__note-text {
+  background: var(--theme-color-50);
+}

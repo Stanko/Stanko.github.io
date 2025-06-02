@@ -1,0 +1,40 @@
+.about__myself {
+  width: 200px;
+  float: right;
+  text-align: right;
+  aspect-ratio: 0.945;
+  shape-outside: polygon(
+    43% 6%,
+    51% 0%,
+    100% 0%,
+    100% 100%,
+    4% 100%,
+    4% 96%,
+    12% 95%,
+    16% 86%,
+    22% 83%,
+    26% 65%,
+    19% 60%,
+    20% 51%,
+    16% 41%,
+    19% 29%,
+    29% 21%,
+    42% 15%
+  );
+
+  @include md {
+    width: 300px;
+    margin-right: -30px;
+  }
+
+  @include lg {
+    width: 350px;
+    margin-right: -100px;
+  }
+}
+
+.about__intro {
+  p:not(:first-child) {
+    margin-top: 1.25rem;
+  }
+}

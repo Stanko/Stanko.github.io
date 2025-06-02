@@ -1,0 +1,242 @@
++++
+title = "Components - longer title for testing purposes"
+
+category = ["Random"]
+tags = []
+
+intro = "Fruitcake bear claw sweet roll lollipop shortbread jujubes pastry. Dragée chocolate bar sweet powder marshmallow brownie."
+
+draft = true
+image = "./img/bunny-jumps-again.jpg"
++++
+
+## Heading 2
+
+Fruitcake bear claw sweet roll lollipop shortbread jujubes pastry. Dragée chocolate bar sweet powder marshmallow brownie. Pie cake tootsie roll lemon drops carrot cake marshmallow tiramisu danish chupa chups.
+
+### Heading 3
+
+Lemon drops oat cake toffee chocolate gummi bears liquorice toffee pudding. Tootsie roll candy canes dessert sweet dragée toffee. 
+
+Shortbread cake fruitcake topping muffin marzipan brownie powder jelly-o. Cupcake tootsie roll jujubes fruitcake gingerbread candy macaroon.
+
+#### Heading 4
+
+Cupcake tootsie roll jujubes fruitcake gingerbread candy macaroon. Tootsie roll candy canes dessert sweet dragée toffee. 
+
+##### Heading 5
+
+Pie cake tootsie roll lemon drops carrot cake marshmallow tiramisu danish chupa chups.
+
+## Colors
+
+<div className="colors">
+{
+  [ 'red', 'blue', 'purple', 'gray', 'orange'].map((color) => {
+    return (
+      <div 
+        className={color}
+        style={{ 
+          display: 'flex', 
+          color: 'white', 
+          fontWeight: 600, 
+          fontSize: 12,
+        }} 
+        key={color}
+      >
+        {[50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950].map((hue) => (
+          <div
+            key={hue}
+            style={{ 
+              backgroundColor: `var(--theme-color-${hue})`, 
+              flex: 1, 
+              height: 50, 
+              display: 'grid', 
+              placeItems: 'center', 
+            }}
+          >
+            {hue}
+          </div>
+        ))}
+      </div>)
+  })
+}
+</div>
+<style dangerouslySetInnerHTML={{ __html: '.colors:hover{ filter: grayscale(1) }' }} />
+
+## Buttons
+
+{
+  ['blue', 'red', 'purple', 'orange', 'gray'].map((color) => {
+    return (
+      <div 
+        style={{ 
+          display: 'flex', 
+          gap: '1rem', 
+          alignItems: 'center',
+        }} 
+        key={color}
+      >
+        {['', 'sm', 'xs'].map((size) => (
+          <button
+            key={size}
+            className={`${color} btn btn--${size}`}
+          >
+            Button {size}
+          </button>
+        ))}
+      </div>)
+  })
+}
+
+## Sidenote
+
+Lemon drops oat cake toffee chocolate <Sidenote note="Pie cake tootsie roll lemon drops carrot cake marshmallow tiramisu danish chupa chups.">gummi bears</Sidenote> liquorice toffee pudding. Tootsie roll candy canes dessert sweet dragée toffee. 
+
+## Code
+
+```js
+document.documentElement.style.setProperty(
+  '--scrollbar-width',
+  window.innerWidth - document.documentElement.clientWidth + 'px'
+);
+```
+
+### Code component
+
+Line highlighting and line numbers
+
+<Code title="grid.tsx">
+```tsx {4-6, 24-26} showLineNumbers
+import clsx from 'clsx';
+
+export type GridProps = React.HTMLAttributes<HTMLDivElement> & {
+  sm?: number;
+  md?: number;
+  lg?: number;
+};
+
+const Grid = async ({
+  children,
+  sm = 2,
+  md = 2,
+  lg = 2,
+  className = '',
+  ...props
+}: GridProps) => {
+  return (
+    <div
+      {...props}
+      className={clsx('grid', className)}
+      style={
+        {
+          ...props.style,
+          '--columns': sm,
+          '--columns-md': md,
+          '--columns-lg': lg,
+        } as React.CSSProperties
+      }
+    >
+      {children}
+    </div>
+  );
+};
+
+export default Grid;
+```
+</Code>
+
+### Diff
+
+```diff 
+document.documentElement.style.setProperty(
++  '--scrollbar-width',
+-  '--width',
+  window.innerWidth - document.documentElement.clientWidth + 'px'
+);
+```
+
+## Spoiler
+
+<Spoiler>
+<Code title="spoiler.tsx">
+```tsx
+import clsx from 'clsx';
+import { useId } from 'react';
+
+export type SpoilerProps = React.HTMLAttributes<HTMLDivElement> & {
+  hide?: string;
+  show?: string;
+  expanded?: boolean;
+};
+
+const Spoiler = async ({
+  children,
+  hide = 'Hide',
+  show = 'Show',
+  expanded = false,
+  ...props
+}: SpoilerProps) => {
+  const id = useId();
+
+  return (
+    <div className="spoiler" {...props}>
+      <div
+        className={clsx('spoiler__content-wrapper', {
+          'spoiler__content-wrapper--expanded': expanded,
+        })}
+        id={id}
+      >
+        <div className="spoiler__content">{children}</div>
+      </div>
+
+      <button
+        className="spoiler__toggle btn btn--sm"
+        aria-expanded={expanded}
+        aria-controls={id}
+      >
+        <span className="spoiler__toggle-show">{show}</span>
+        <span className="spoiler__toggle-hide">{hide}</span>
+      </button>
+    </div>
+  );
+};
+
+export default Spoiler;
+```
+</Code>
+</Spoiler>
+
+
+## Image
+
+### Standard
+
+<Image src="./img/bunny-jumps-again.jpg" alt="" />
+
+### Wide
+
+<Image src="./img/bunny-jumps-again.jpg" alt="" size='wide' />
+
+### Full width
+
+<Image src="./img/bunny-jumps-again.jpg" alt="" size='full' />
+
+## Grid
+
+<Grid>
+  <Image src="./img/bunny-jumps-again.jpg" alt="" />
+  <Image src="./img/bunny-jumps-again.jpg" alt="" />
+  <Image src="./img/bunny-jumps-again.jpg" alt="" />
+  <Image src="./img/bunny-jumps-again.jpg" alt="" />
+</Grid>
+
+## Gallery
+
+<Gallery
+  images={[
+    "./img/bunny-jumps-again.jpg",
+    "./img/bunny-jumps-again.jpg",
+    "./img/bunny-jumps-again.jpg",
+  ]}
+/>

@@ -1,0 +1,57 @@
+.comments {
+  background-color: var(--neutral-50);
+
+  h3 {
+    padding-top: 3rem;
+
+    @include md {
+      padding-top: 4rem;
+    }
+  }
+}
+
+.comments__list {
+  margin-top: 1rem;
+}
+
+.comments__comment {
+  border-bottom: 1px solid var(--neutral-200);
+  padding-bottom: 1.25rem;
+
+  @include md {
+    padding-bottom: 1.5rem;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.comments__comment-date {
+  color: var(--neutral-500);
+}
+
+.comments__comment-name {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+
+  img {
+    flex: 1em 0 0;
+    width: 1em;
+    border-radius: 50%;
+    outline: 1px solid rgb(0 0 0 / 0.075);
+    outline-offset: -1px;
+  }
+
+  // Hide the arrow
+  svg {
+    display: none;
+  }
+}
+
+.comments__comment-message {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.5rem;
+}

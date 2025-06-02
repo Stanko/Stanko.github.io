@@ -1,0 +1,23 @@
+@use '../base/mixins' as *;
+
+.header {
+  background-color: var(--theme-color-50);
+
+  h1 {
+    color: var(--theme-color-950);
+  }
+}
+
+.header__content {
+  padding-block: 3rem;
+
+  @include md {
+    padding-block: 4rem;
+  }
+}
+
+.header__children {
+  margin-top: 0.5rem;
+  max-width: 30rem;
+  color: var(--neutral-500);
+}

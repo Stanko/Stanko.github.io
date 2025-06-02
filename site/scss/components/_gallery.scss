@@ -1,0 +1,92 @@
+@use '../base/mixins' as *;
+
+.gallery {
+  --columns: 2;
+  --columns-md: 3;
+  --columns-lg: 4;
+
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  gap: 0.75rem;
+  align-items: center;
+
+  @include md {
+    grid-template-columns: repeat(var(--columns-md), 1fr);
+  }
+
+  @include lg {
+    grid-template-columns: repeat(var(--columns-lg), 1fr);
+  }
+}
+
+.gallery__link {
+  outline-offset: -2px;
+  border-radius: 4px;
+  display: block;
+  position: relative;
+  transition: opacity 250ms;
+  overflow: hidden;
+
+  &:hover {
+    opacity: 0.8;
+    cursor: zoom-in;
+  }
+}
+
+.gallery__image,
+.gallery__video {
+  background-color: var(--neutral-100);
+}
+
+.gallery__play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 2.5rem;
+  paint-order: stroke;
+
+  @include lg {
+    width: 3rem;
+  }
+
+  path {
+    fill: var(--white);
+    stroke: rgb(0 0 0 / 0.5);
+    stroke-width: 10px;
+    opacity: 0.95;
+  }
+}
+
+// ----- Photoswipe video
+
+.pswp__content .pswp__video-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.pswp__video {
+  background: var(--neutral-500);
+  pointer-events: all;
+  max-height: 100%;
+}
+
+// ----- Photoswipe blur background
+
+.pswp {
+  // 333 is a default PhotoSwipe animation duration
+  transition: all 333ms;
+}
+
+.pswp--open {
+  @include backdrop-filter(10px);
+}
+
+.pwsp--no-backdrop-filter {
+  backdrop-filter: none !important;
+  -ms-backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}

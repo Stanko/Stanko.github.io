@@ -1,0 +1,70 @@
+.blog__favorite-text {
+  margin-top: 0.5rem;
+}
+
+.blog__list {
+  margin-block: 3rem;
+
+  @include md {
+    margin-block: 4rem;
+  }
+}
+
+.blog__year {
+  margin-bottom: 2rem;
+}
+
+.blog__year-title {
+  margin-bottom: 0.5em;
+}
+
+.blog__month {
+  @include md {
+    display: flex;
+  }
+}
+
+.blog__month-title {
+  padding: 0.5rem 0;
+  flex: 10rem 0 0;
+  color: var(--neutral-500);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 1rem;
+  // TODO
+  font-variation-settings: unset;
+
+  @include md {
+    padding-top: 0.75rem;
+  }
+
+  @include md {
+    padding-top: 0.875rem;
+  }
+}
+
+.blog__month-post {
+  list-style: none;
+  padding-left: 0.5rem;
+
+  @include md {
+    padding-left: 0;
+  }
+
+  a {
+    border-radius: 4px;
+    color: var(--text-color);
+    display: inline-block;
+    text-wrap: balance;
+    padding: 0.625rem;
+
+    &:hover {
+      color: var(--theme-color);
+    }
+
+    &:focus-visible {
+      background-color: var(--theme-color-50);
+    }
+  }
+}

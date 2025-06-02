@@ -1,0 +1,233 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* --bg-color: #f9f7f5; */
+  /* --fg-color: #1e201f; */
+
+  --bg-color: #fffefd;
+  --fg-color: #252727;
+
+  --gray-dark: #777;
+  --gray: #aaa;
+  --gray-light: #ccc;
+  --accent: #6f12e2;
+  --selection-color: #eae3ff;
+
+  --monospace-font: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo,
+    Consolas, 'DejaVu Sans Mono', monospace;
+  --font: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
+}
+
+@media (color-gamut: p3) {
+  :root {
+    --accent: oklch(64.45% 0.2023 246.71);
+  }
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+  font-family: var(--font);
+  line-height: 1.5;
+}
+
+.content {
+  display: none;
+}
+
+html,
+body,
+.editor {
+  min-height: 100vh;
+}
+
+.editor {
+  min-height: 40vh;
+}
+
+.cm-content {
+  padding: 3em max(calc(50% - 300px), 2em) !important;
+  font-family: var(--font);
+}
+
+/* Editor text styles */
+
+.editor {
+  font-size: 1.25rem;
+}
+
+.editor *::selection {
+  background-color: var(--selection-color);
+  color: var(--fg-color);
+}
+
+.b {
+  font-weight: bold;
+}
+
+.em {
+  font-style: italic;
+}
+
+/* Headers */
+
+.h1.sx:first-child {
+  margin-left: -0.9125em;
+}
+.h2.sx:first-child {
+  margin-left: -1.525em;
+}
+.h3.sx:first-child {
+  margin-left: -2.1375em;
+}
+.h4.sx:first-child {
+  margin-left: -2.75em;
+}
+.h5.sx:first-child {
+  margin-left: -3.355em;
+}
+.h6.sx:first-child {
+  margin-left: -3.975em;
+}
+
+/* Lists */
+.list.sx:first-child {
+  color: var(--accent);
+}
+
+/* Quotes */
+.quote.sx:first-child {
+  color: var(--accent);
+}
+
+/* Code */
+.code {
+  color: var(--gray-dark);
+}
+
+/* Separators */
+.hr {
+  color: var(--gray-light);
+}
+
+/* Link and image */
+
+.link {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.link.sx {
+  text-decoration: none;
+}
+
+.link.url {
+  color: var(--gray-dark);
+  text-decoration: none;
+}
+
+/* Markdown syntax */
+.sx {
+  color: var(--gray-light);
+}
+
+/* Code Syntax  */
+/* 
+.cm-line:has(.code) {
+  font-family: var(--monospace-font);
+  color: var(--gray-dark);
+}
+
+.keyword {
+  color: #d73a49;
+}
+.atom {
+  color: #6f42c1;
+}
+.bool {
+  color: #005cc5;
+}
+.url {
+  color: #032f62;
+}
+.labelName {
+  color: #e36209;
+}
+.inserted {
+  color: #22863a;
+}
+.deleted {
+  color: #d73a49;
+}
+.literal {
+  color: #005cc5;
+}
+.string {
+  color: #032f62;
+}
+.number {
+  color: #005cc5;
+}
+.string2 {
+  color: #032f62;
+}
+.var {
+  color: #e36209;
+}
+.var.local {
+  color: #e36209;
+}
+.var.definition {
+  color: #e36209;
+}
+.var.special {
+  color: #e36209;
+}
+.propertyName.definition {
+  color: #6f42c1;
+}
+.typeName {
+  color: #005cc5;
+}
+.namespace {
+  color: #6f42c1;
+}
+.className {
+  color: #6f42c1;
+}
+.macroName {
+  color: #6f42c1;
+}
+.propertyName {
+  color: #005cc5;
+}
+.operator {
+  color: #d73a49;
+}
+.comment {
+  color: #6a737d;
+}
+.meta {
+  color: #6f42c1;
+}
+.invalid {
+  color: #d73a49;
+}
+.punctuation {
+  color: #24292e;
+} 
+  */
+
+.cm-completionIcon-image::after {
+  content: '🖼️';
+}
+
+.cm-completionIcon-url::after {
+  content: '🔗';
+}

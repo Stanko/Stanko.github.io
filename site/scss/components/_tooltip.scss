@@ -1,0 +1,27 @@
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + var(--tooltip-y-offset, 0px));
+  left: 50%;
+  background-color: var(--neutral-900);
+  color: var(--neutral-100);
+  font-weight: 500;
+  padding: 0.125rem 0.375rem;
+  border-radius: var(--radius);
+  font-size: 0.75rem;
+  z-index: 1;
+  opacity: 0;
+  transform: translate(-50%, 0.5rem);
+  transition: transform 250ms, opacity 250ms;
+  display: flex;
+  gap: 0.25rem;
+  width: max-content;
+  pointer-events: none;
+
+  a:hover &,
+  a:focus-visible &,
+  button:hover &,
+  button:focus-visible & {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}

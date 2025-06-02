@@ -1,0 +1,41 @@
+.keyboard-svg-wrapper {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  right: 0;
+  padding: 4rem 0 50%;
+  z-index: -1;
+}
+
+.keyboard-svg {
+  position: absolute;
+  display: none;
+  left: 50%;
+  opacity: 0.15;
+  overflow: visible;
+  transform: rotate(-4.75deg); // to match the header line
+  width: 32rem;
+
+  @include md {
+    display: block;
+    width: 40rem;
+  }
+
+  @include lg {
+    opacity: 0.25;
+    max-width: 56rem;
+    width: 80%;
+  }
+}
+
+// --- Keyboard keys
+
+.key {
+  fill: var(--neutral-200);
+  rx: 6px;
+}
+
+.key--active {
+  fill: var(--theme-color-200);
+}

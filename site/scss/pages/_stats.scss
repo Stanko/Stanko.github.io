@@ -1,0 +1,33 @@
+.stats__table {
+  display: grid;
+  gap: 0.75rem;
+  // max-width: 40rem;
+
+  @include md {
+    gap: 1rem;
+  }
+}
+
+.stats__row {
+  @include md {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}
+
+.stats__row-value {
+  @include md {
+    text-align: right;
+  }
+
+  .arrow-title {
+    @include md {
+      margin-right: -0.9em;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

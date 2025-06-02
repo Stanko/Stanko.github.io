@@ -1,0 +1,148 @@
+@use '../base/mixins' as *;
+
+.nav {
+  background-color: var(--theme-color-50);
+  padding-top: 1.25rem;
+
+  @include md {
+    padding-top: 1.5rem;
+  }
+}
+
+.nav__strip {
+  border-top: 3px solid var(--theme-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: var(--layer-color-strip);
+}
+
+.nav__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__home-link {
+  border-radius: 2px;
+}
+
+.nav__logo {
+  fill: var(--theme-color);
+  height: 2rem;
+}
+
+.nav__hamburger {
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+  color: var(--neutral-600);
+  transition: color 250ms;
+  margin-right: -0.75rem; // to visually align with the content
+  margin-block: -0.5rem; // to align it with the main menu
+  border-radius: 50%;
+  padding: 0.75rem;
+
+  &:hover {
+    color: var(--neutral-900);
+  }
+
+  @include md {
+    display: none;
+  }
+}
+
+.nav__hamburger--fixed {
+  margin-top: 0;
+  border-radius: 4px;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  right: 1.25rem;
+  top: 0.75rem;
+  transition: transform var(--time), opacity var(--time);
+  z-index: var(--layer-floating-hamburger);
+
+  svg {
+    position: relative;
+  }
+
+  @include md {
+    display: block;
+    top: 1rem;
+  }
+
+  @include md {
+    right: max(calc(50% - 24rem), calc(6%));
+  }
+
+  @include lg {
+    right: calc((100% - var(--content-max-width)) / 2 + 2.5rem);
+  }
+}
+
+.nav__hamburger--hidden {
+  opacity: 0;
+  transform: translateY(-1.5rem);
+  pointer-events: none;
+}
+
+.nav__links {
+  display: none;
+
+  @include md {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  a,
+  button {
+    outline-offset: 2px;
+  }
+}
+
+.nav__separator {
+  color: var(--theme-color-300);
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-linecap: round;
+  width: 0.25rem;
+}
+
+.nav__link {
+  border-bottom: 2px solid transparent;
+  color: var(--theme-color-800);
+  color: var(--neutral-700);
+  font-size: 1rem;
+  line-height: 1.2;
+  font-variation-settings: 'wdth' 95;
+
+  &::before {
+    border-top-width: 2px;
+    bottom: -2px;
+  }
+}
+
+.nav__link--active {
+  color: var(--theme-color-500);
+  border-bottom-color: var(--theme-color-300);
+}
+
+.nav__link {
+  font-family: var(--font-header);
+  line-height: 1;
+  font-variation-settings: 'opsz' 85; /* 80 - 100 */
+  font-weight: 130;
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+
+  @include md {
+    font-variation-settings: 'opsz' 90; /* 80 - 100 */
+  }
+}
+
+.nav__search-icon {
+  margin-left: 0.375rem;
+  width: 0.75em;
+}

@@ -1,14 +1,52 @@
-# My personal blog
+# brz
 
-Frontend development & rants.
+To install dependencies:
 
-[https://muffinman.io](https://muffinman.io)
+```bash
+bun install
+```
 
------
+To run:
 
-# Licensing
+```bash
+bun run ./app/index.js
+```
 
-Copyright © Stanko Tadić
+## File Structure
 
-[All rights reserved.](LICENSE.md)
+- content
+  - index.tsx - home page
+  - collection-name
+    - index.tsx - collection landing
+    <!-- - (YYYY-MM-DD)-item-name.mdx - da li uopste ovo da parsiram? -->
+    - [(YYYY-MM-DD)-item-name]
+      - index.mdx
+- public
+- scss
+- js
+- config.ts
 
+## TODO
+
+### Must have
+
+- [ ] Check Scrubbing videos using JavaScript
+
+### Future
+
+- [ ] Generative art -> Algorithmic art
+- [ ] OG image generation
+- [ ] Improve watchers in dev mode
+- [ ] Simplify stats year chart. Add word count legend on the right.
+- [ ] Replace index.tsx with index.mdx for root pages - this will also remove the need to add pathname by hand in templates
+- [ ] Investigate `font-size-adjust: 0.5;`
+- [ ] Experiment with variable fonts
+- [ ] Transparent blur on code blocks
+- [ ] Remove "silenceDeprecations" from sass config
+- [ ] Table of contents
+- [ ] Dark mode
+- [ ] Accordion on the archive page
+- [ ] Heading component which includes anchor link
+- [ ] Separate --watch and --dev commands
+- [ ] Add container which has the same width as the article content
+- [ ] Add a note about search, that users can use \*. Explore what the fuzzy library is also capable of.

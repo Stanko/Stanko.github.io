@@ -1,0 +1,119 @@
+.projects__group:not(:last-child) {
+  margin-bottom: 3rem;
+
+  @include md {
+    margin-bottom: 4rem;
+  }
+}
+
+.projects__group-grid {
+  @include lg {
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 3rem;
+  }
+}
+
+.projects__group-title {
+  color: var(--neutral-500);
+  margin-bottom: 1rem;
+}
+
+.project {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  color: var(--text-color);
+  padding: 1.25rem;
+  margin-inline: -1.25rem;
+  border-radius: 1rem;
+
+  @include md {
+    padding: 1.5rem;
+    margin-inline: -1.5rem;
+  }
+
+  &:hover,
+  &:focus-within {
+    background-color: var(--theme-color-50);
+  }
+}
+
+.project__left {
+  min-width: 4rem;
+  display: grid;
+  place-items: center;
+
+  @include md {
+    min-width: 5rem;
+  }
+}
+
+.project__image {
+  width: 4rem;
+  max-height: 4rem;
+  object-fit: contain;
+
+  @include md {
+    width: 5rem;
+    max-height: 5rem;
+  }
+}
+
+.project__initial {
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-inline: 0.5rem;
+  background-color: var(--theme-color-100);
+  color: var(--theme-color-500);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.project__name {
+  margin-bottom: 0.5rem;
+}
+
+// Vertigo thumb
+
+.vrtg circle {
+  transition: r 1000ms;
+  will-change: r;
+  fill: white;
+}
+
+// RAH thumb
+
+@keyframes rah {
+  0%,
+  30% {
+    height: 10px;
+  }
+
+  10%,
+  20% {
+    height: 45px;
+  }
+}
+
+.rah {
+  width: 75%;
+}
+
+.rah-item {
+  border-radius: 3px;
+  border: 2px solid var(--neutral-700);
+  height: 10px;
+  margin-bottom: 2px;
+  animation: rah infinite 5000ms;
+}
+
+.rah-item:nth-child(1) {
+  animation-delay: 2500ms;
+}
+
+.rah-item:nth-child(3) {
+  animation-delay: 3500ms;
+}

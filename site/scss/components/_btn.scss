@@ -1,0 +1,74 @@
+.btn {
+  --theme-color-shadow: oklch(0.75 0 230.318 / 0.2);
+  --border-color: var(--theme-color-300);
+
+  --depth: 5px;
+  --shadow-offset: 12px;
+
+  --depth-hover: 4px;
+  --pressed-hover: 1px;
+  --shadow-offset-hover: 10px;
+
+  --depth-active: 0;
+
+  display: block;
+  font-size: 1rem;
+  font-family: inherit;
+  line-height: 1;
+  padding: 0.625em 1.375em;
+  border-radius: 100px;
+  border: 2px solid var(--border-color);
+  font-weight: 700;
+  background: var(--theme-color-50);
+  color: var(--theme-color-700);
+  transition: all 150ms;
+  position: relative;
+  outline: none;
+  box-shadow: 0 var(--depth) 0 -2px var(--theme-color-100),
+    0 var(--depth) 0 0 var(--border-color),
+    0 var(--shadow-offset) 0 -2px var(--theme-color-shadow);
+
+  width: fit-content;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background: var(--theme-color-50);
+  transform: translateY(var(--pressed-hover));
+  box-shadow: 0 var(--depth-hover) 0 -2px var(--theme-color-100),
+    0 var(--depth-hover) 0 0 var(--border-color),
+    0 var(--shadow-offset-hover) 0 -2px var(--theme-color-shadow);
+}
+
+.btn:active {
+  transform: translateY(var(--depth));
+  box-shadow: 0 var(--depth-active) 0 -2px var(--theme-color-100),
+    0 var(--depth-active) 0 0 var(--border-color),
+    0 0 0 -2px var(--theme-color-shadow);
+}
+
+.btn:focus-visible {
+  --border-color: var(--theme-color-500);
+  background: var(--theme-color-100);
+}
+
+.btn--sm,
+.btn--xs {
+  font-size: 0.875rem;
+  padding: 0.5em 1em;
+
+  --depth: 4px;
+  --shadow-offset: 10px;
+
+  --depth-hover: 3px;
+  --pressed-hover: 1px;
+  --shadow-offset-hover: 8px;
+
+  --depth-active: 0;
+}
+
+// TODO this is too small on phones
+.btn--xs {
+  font-size: 0.8125rem;
+  padding: 0.3125em 0.75em;
+}

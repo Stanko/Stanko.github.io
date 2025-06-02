@@ -1,0 +1,160 @@
+@use '../base/mixins' as *;
+
+.year-stats {
+  --left-width: 3ch;
+
+  display: grid;
+  grid-template-columns: var(--left-width) 1fr;
+  grid-template-areas:
+    'left svg'
+    'bottom bottom';
+  font-size: 0.75rem;
+
+  @include md {
+    font-size: 0.875rem;
+  }
+
+  @include lg {
+    grid-column: wide;
+  }
+}
+
+.year-stats__chart-wrapper {
+  position: relative;
+  grid-area: svg;
+}
+
+// SVG
+.year-stats__chart {
+  position: relative;
+
+  path {
+    vector-effect: non-scaling-stroke;
+  }
+}
+
+.year-stats__grid {
+  stroke: var(--neutral-200);
+}
+
+.year-stats__grid--horizontal path:last-child {
+  stroke: var(--neutral-400);
+}
+
+.year-stats__grid--vertical path:first-child {
+  stroke: var(--neutral-400);
+}
+
+.year-stats__posts,
+.year-stats__words {
+  stroke: var(--theme-color);
+}
+
+.year-stats__line {
+  stroke-width: 2px;
+}
+
+.year-stats__point {
+  stroke-width: 8px;
+  stroke-linecap: round;
+}
+
+// Overlay
+
+.year-stats__columns {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.year-stats__column {
+  flex-shrink: 0;
+  flex-grow: 0;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.1;
+
+  &:hover span {
+    opacity: 1;
+  }
+
+  span {
+    background-color: var(--bg-color);
+    border: 1px solid var(--theme-color);
+    color: var(--theme-color);
+    border-radius: 4px;
+    position: absolute;
+    display: inline-block;
+    transform: translate(-50%, calc(-100% - 0.5rem));
+    padding: 0.25rem 0.375rem;
+    opacity: 0;
+    transition: opacity var(--time);
+  }
+
+  span.move-up {
+    transform: translate(-50%, calc(-200% - 1rem));
+  }
+
+  span.move-down {
+    transform: translate(-50%, 0);
+  }
+}
+
+// Bottom years labels
+
+.year-stats__bottom {
+  grid-area: bottom;
+  padding-left: var(--left-width);
+  display: grid;
+  width: 100%;
+  position: relative;
+}
+
+.year-stats__bottom-year {
+  padding-top: 1ch;
+
+  @include sm-only {
+    &:nth-child(3n),
+    &:nth-child(3n + 2) {
+      opacity: 0;
+    }
+  }
+
+  @include md {
+    &:nth-child(2n) {
+      opacity: 0;
+    }
+  }
+}
+
+.year-stats__bottom-year span {
+  transform: translateX(-50%);
+  display: inline-block;
+}
+
+.year-stats__bottom-year:last-child {
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+
+// Left posts labels
+
+.year-stats__left {
+  line-height: 1;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 1ch;
+}
+
+.year-stats__left-value {
+  flex: auto;
+  margin-top: -0.5em;
+}

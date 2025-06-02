@@ -1,0 +1,209 @@
+pre {
+  overflow-x: auto;
+}
+
+pre[class*='language-'] {
+  overflow: auto;
+  font-size: 0.875rem;
+  line-height: 1.3;
+  padding: 1rem;
+  background-color: var(--neutral-50);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius);
+
+  @include md {
+    font-size: 1rem;
+  }
+}
+
+/**
+ * Inspired by gatsby remark prism - https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs/
+ * 1. Make the element just wide enough to fit its content.
+ * 2. Always fill the visible space in .code-highlight.
+ */
+.code-highlight {
+  display: block;
+  float: left; /* 1 */
+  min-width: 100%; /* 2 */
+}
+
+.code-line {
+  display: block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  border-left: 2px solid transparent; /* Set placeholder for highlight accent border color to transparent */
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Set hover bg color */
+  }
+}
+
+.code-line.inserted {
+  background-color: rgba(16, 185, 129, 0.2); /* Set inserted line (+) color */
+}
+
+.code-line.deleted {
+  background-color: rgba(239, 68, 68, 0.2); /* Set deleted line (-) color */
+}
+
+.highlight-line {
+  border-left: 2px solid rgb(52, 100, 236); /* Set highlight accent border color */
+  background-color: rgba(0, 0, 0, 0.03); /* Set highlight bg color */
+}
+
+.line-number::before {
+  display: inline-block;
+  margin-right: 0.5em;
+  margin-left: -0.75em;
+  min-width: 2.5em;
+  text-align: right;
+  padding-right: 0.5em;
+  text-align: right;
+  content: attr(line);
+  color: var(--neutral-300);
+  border-right: 1px solid currentColor;
+}
+
+// ----- THEME ----- //
+
+code[class*='language-'],
+pre[class*='language-'] {
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #acafc3; /* overlay2 */
+}
+
+.token.punctuation {
+  color: #4c4f69; /* text */
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #d20f39; /* red */
+}
+
+.token.boolean,
+.token.number {
+  color: #8839ef; /* mauve */
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #40a02b; /* green */
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #04a5e5; /* sky */
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #1e66f5; /* blue */
+}
+
+.token.function,
+.token.class-name {
+  color: #df8e1d; /* yellow */
+}
+
+.token.regex,
+.token.variable {
+  color: #fe640b; /* peach */
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.attr-name.language-javascript,
+.token.attr-name.language-jsx {
+  color: #40a02b; /* green - JSX attribute names */
+}
+
+.token.tag.language-html .token.punctuation,
+.token.tag.language-jsx .token.punctuation {
+  color: #4c4f69; /* text - Punctuation within HTML/JSX tags */
+}
+
+.token.script.language-javascript {
+  color: #4c4f69; /* text - Script tag content */
+}
+
+.token.selector.language-css .token.attribute {
+  color: #df8e1d; /* yellow - CSS attribute selectors */
+}
+
+.token.property.language-css .token.punctuation {
+  color: #4c4f69; /* text - Punctuation in CSS properties */
+}
+
+/* Specific language overrides or additions can be added here */
+/* Example: Markdown headings */
+.token.title {
+  color: #1e66f5; /* blue */
+  font-weight: bold;
+}
+
+/* Example: Markdown links */
+.token.url {
+  color: #99d1db; /* sky (lighter) or teal #179299 */
+}
+
+.token.url .token.content {
+  color: #04a5e5; /* sky */
+}
+
+.token.url .token.punctuation {
+  color: #04a5e5; /* sky */
+}
+
+.token.keyword.module {
+  color: #8839ef; /* mauve */
+}
+
+.token.operator.module {
+  color: #1e66f5; /* blue */
+}

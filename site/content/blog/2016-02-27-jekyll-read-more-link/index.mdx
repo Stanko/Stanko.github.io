@@ -1,0 +1,26 @@
++++
+title = "Jekyll Read more link"
+aliases = ["/jekyll-read-more-link/"]
+category = ["Jekyll"]
+tags = ["jekyll"]
+comments = [
+  "comments/jekyll-read-more-link/1559777044030.json",
+  "comments/jekyll-read-more-link/1577605750964.json",
+  "comments/jekyll-read-more-link/1577612158401.json",
+  "comments/jekyll-read-more-link/1609178579331.json",
+  "comments/jekyll-read-more-link/1609180274502.json"
+]
+
++++
+
+It is nice to use `post.excerpt` instead of `post.content`
+on your Jekyll home page, but then users can't see if there 
+is more to read until they open the whole post.
+
+To add `Read more` link, you can use this simple snippet.
+
+```
+{% if post.excerpt != post.content %}
+    <a href="{{ site.baseurl }}{{ post.url }}">Read more</a>
+{% endif %}
+```

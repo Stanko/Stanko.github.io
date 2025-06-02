@@ -1,0 +1,20 @@
+@use '../base/mixins' as *;
+
+.grid {
+  --columns: 2;
+  --columns-md: 2;
+  --columns-lg: 2;
+  --gap: 0.75rem;
+
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  gap: var(--gap);
+
+  @include md {
+    grid-template-columns: repeat(var(--columns-md), 1fr);
+  }
+
+  @include lg {
+    grid-template-columns: repeat(var(--columns-lg), 1fr);
+  }
+}
