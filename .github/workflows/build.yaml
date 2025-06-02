@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: brz - build and deploy
 on:
   push:
     branches:
@@ -6,6 +6,7 @@ on:
     paths:
       - site/**
       - app/**
+      - build/**
 jobs:
   # Only build PRs
   build_and_deploy:
