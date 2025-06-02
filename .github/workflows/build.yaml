@@ -4,6 +4,8 @@ on:
     branches:
       - brz
     paths:
+      - .github/workflows/build.yaml
+      - deploy.sh
       - site/**
       - app/**
       - build/**
