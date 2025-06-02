@@ -87,8 +87,8 @@ function chaikin(curve, iterations = 1, closed = false, ratio = 0.25) {
 function getPathPoints(d, step = 10) {
   // For potential NodeJS version
   // https://www.npmjs.com/package/svg-path-properties
-  const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-  path.setAttribute("d", d);
+  const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  path.setAttribute('d', d);
 
   const length = path.getTotalLength();
 
@@ -297,11 +297,11 @@ function renderRope(
             (segment, i) =>
               `<path d="M ${segment.points
                 .map((p) => `${p.x} ${p.y}`)
-                .join(" L ")} Z" style="fill: ${
-                options.colors[i % options.colors.length] || "none"
+                .join(' L ')} Z" style="fill: ${
+                options.colors[i % options.colors.length] || 'none'
               }" />`
           )
-          .join("\n")}
+          .join('\n')}
       </g>
       <g opacity="${render.polygons}" class="polygons">
       ${segments
@@ -309,9 +309,9 @@ function renderRope(
           (segment) =>
             `<path d="M ${segment.path
               .map((p) => `${p.x} ${p.y}`)
-              .join(" L ")} Z"/>`
+              .join(' L ')} Z"/>`
         )
-        .join("\n")}
+        .join('\n')}
       </g>
       <g opacity="${render.polygonsRounded}" class="polygons-rounded">
       ${segments
@@ -319,9 +319,9 @@ function renderRope(
           (segment) =>
             `<path d="M ${chaikin(segment.path, 3, true, 0.15)
               .map((p) => `${p.x} ${p.y}`)
-              .join(" L ")} Z"/>`
+              .join(' L ')} Z"/>`
         )
-        .join("\n")}
+        .join('\n')}
       </g>
       <g opacity="${render.segments}" class="segments">
       ${segments
@@ -330,17 +330,17 @@ function renderRope(
             `<g class="segment">
               <path d="M ${segment.line1
                 .map((p) => `${p.x} ${p.y}`)
-                .join(" L ")}"/>
+                .join(' L ')}"/>
               <path d="M ${segment.line2
                 .map((p) => `${p.x} ${p.y}`)
-                .join(" L ")}"/>
+                .join(' L ')}"/>
             </g>`
         )
-        .join("\n")}
+        .join('\n')}
       </g>
       <path class="path" d="${path}" opacity="${render.path}" />
       <g opacity="${render.points}" class="points">
-      ${points.map((p) => `<circle cx="${p.x}" cy="${p.y}" r="3" />`).join("")}
+      ${points.map((p) => `<circle cx="${p.x}" cy="${p.y}" r="3" />`).join('')}
       </g>
       <g opacity="${render.normals}" class="normals">
         ${normals.map(
@@ -379,7 +379,7 @@ function getStepPath() {
   return `M 50 ${y2} C 150 ${y2} 150 ${y1} 250 ${y1} C 350 ${y1} 350 ${y2} 450 ${y2}`;
 }
 
-const stepSvg = document.querySelector(".rope-svg");
+const stepSvg = document.querySelector('.rope-svg');
 
 function updateStepsImage(
   path,
@@ -391,7 +391,7 @@ function updateStepsImage(
   stepLastUpdate = Date.now();
 
   // TODO check if I can solve this in a more elegant way
-  const isInViewport = ropeStepsElement.classList.contains("is-in-viewport");
+  const isInViewport = ropeStepsElement.classList.contains('is-in-viewport');
 
   if (isInViewport || forceRender) {
     renderRope(path, stepSvg, options, render);
@@ -480,7 +480,7 @@ const optionsMap = {
       polygons: 1,
     },
   },
-  "round-polygons": {
+  'round-polygons': {
     options: {
       ...defaultOptions,
     },
@@ -491,7 +491,7 @@ const optionsMap = {
       polygonsRounded: 1,
     },
   },
-  "angle-polygons": {
+  'angle-polygons': {
     options: {
       ...defaultOptions,
       angle: Math.PI * 0.25,
@@ -503,7 +503,7 @@ const optionsMap = {
       polygonsRounded: 1,
     },
   },
-  "angle-polygons-thin": {
+  'angle-polygons-thin': {
     options: {
       ...defaultOptions,
       angle: Math.PI * 0.25,
@@ -527,7 +527,7 @@ const optionsMap = {
       polygons: 1,
     },
   },
-  "segments-rounded": {
+  'segments-rounded': {
     options: {
       ...defaultOptions,
     },
@@ -538,7 +538,7 @@ const optionsMap = {
       rope: 1,
     },
   },
-  "segments-rounded-fix-gaps": {
+  'segments-rounded-fix-gaps': {
     options: {
       ...defaultOptions,
       fixGaps: true,
@@ -550,7 +550,7 @@ const optionsMap = {
       rope: 1,
     },
   },
-  "angle-segments": {
+  'angle-segments': {
     options: {
       ...defaultOptions,
       angle: Math.PI * 0.25,
@@ -566,7 +566,7 @@ const optionsMap = {
     options: {
       ...defaultOptions,
       angle: Math.PI * 0.25,
-      colors: ["#e4cdad", "#dcbf99", "#d6b88e", "#dcbf99"],
+      colors: ['#e4cdad', '#dcbf99', '#d6b88e', '#dcbf99'],
     },
     render: {
       ...defaultRender,
@@ -578,19 +578,19 @@ const optionsMap = {
     options: {
       ...defaultOptions,
       angle: Math.PI * 0.25,
-      colors: ["#e4cdad", "#dcbf99", "#d6b88e", "#dcbf99"],
+      colors: ['#e4cdad', '#dcbf99', '#d6b88e', '#dcbf99'],
     },
     render: {
       ...defaultRender,
       rope: 1,
     },
   },
-  "animate-thin": {
+  'animate-thin': {
     animate: true,
     options: {
       ...defaultOptions,
       angle: Math.PI * 0.25,
-      colors: ["#e4cdad", "#dcbf99", "#d6b88e", "#dcbf99"],
+      colors: ['#e4cdad', '#dcbf99', '#d6b88e', '#dcbf99'],
       thickness: 20,
       step: 10,
     },
@@ -601,9 +601,9 @@ const optionsMap = {
   },
 };
 
-const titles = document.querySelectorAll(".step-title");
-const ropeStepsElement = document.querySelector(".rope-steps");
-const mainElement = document.querySelector(".main");
+const titles = document.querySelectorAll('.step-title');
+const ropeStepsElement = document.querySelector('.rope-steps');
+const mainElement = document.querySelector('main');
 
 let currentStep = null;
 
@@ -634,20 +634,20 @@ function updateSteps(forceRender = false) {
 }
 
 updateSteps(true);
-window.addEventListener("scroll", () => {
+window.addEventListener('scroll', () => {
   updateSteps();
 });
 
 // ----- CHAIKIN DEMO ----- //
 
-const chaikinSvg = document.querySelector(".chaikin-svg");
-const chaikinIterationsInput = document.querySelector(".chaikin-iterations");
-const chaikinRatioInput = document.querySelector(".chaikin-ratio");
-const chaikinShowPointsInput = document.querySelector(".chaikin-show-points");
+const chaikinSvg = document.querySelector('.chaikin-svg');
+const chaikinIterationsInput = document.querySelector('.chaikin-iterations');
+const chaikinRatioInput = document.querySelector('.chaikin-ratio');
+const chaikinShowPointsInput = document.querySelector('.chaikin-show-points');
 const chaikinIterationsValue = document.querySelector(
-  ".chaikin-iterations-value"
+  '.chaikin-iterations-value'
 );
-const chaikinRatioValue = document.querySelector(".chaikin-ratio-value");
+const chaikinRatioValue = document.querySelector('.chaikin-ratio-value');
 
 function updateChaikinDemo() {
   const shape = [
@@ -670,24 +670,24 @@ function updateChaikinDemo() {
   chaikinSvg.innerHTML = `
     <path class="original" d="M ${shape
       .map((p) => `${p.x} ${p.y}`)
-      .join(" L ")} Z"/>
-    ${shape.map((p) => `<circle cx="${p.x}" cy="${p.y}" r="1.5" />`).join("\n")}
+      .join(' L ')} Z"/>
+    ${shape.map((p) => `<circle cx="${p.x}" cy="${p.y}" r="1.5" />`).join('\n')}
     <path class="rounded" d="M ${rounded
       .map((p) => `${p.x} ${p.y}`)
-      .join(" L ")} Z"/>
+      .join(' L ')} Z"/>
     ${
       chaikinShowPointsInput.checked
         ? rounded
             .map((p) => `<circle cx="${p.x}" cy="${p.y}" r="2" />`)
-            .join("\n")
-        : ""
+            .join('\n')
+        : ''
     }
   `;
 }
 updateChaikinDemo();
-chaikinIterationsInput.addEventListener("change", updateChaikinDemo);
-chaikinRatioInput.addEventListener("change", updateChaikinDemo);
-chaikinShowPointsInput.addEventListener("change", updateChaikinDemo);
+chaikinIterationsInput.addEventListener('input', updateChaikinDemo);
+chaikinRatioInput.addEventListener('input', updateChaikinDemo);
+chaikinShowPointsInput.addEventListener('change', updateChaikinDemo);
 
 // ----- INTERACTIVE DEMO ----- //
 
@@ -712,42 +712,42 @@ function getDemoPath() {
   C 450  ${y3}, 450  100, ${x2}  100`;
 }
 
-const demoSvg = document.querySelector(".demo-svg");
-const demoRenderCheckboxes = document.querySelectorAll(".demo-checkbox");
-const demoRenderRadios = document.querySelectorAll(".demo-radio");
-const demoAnimateCheckbox = document.querySelector(".demo-checkbox-animate");
-const demoControlElements = document.querySelectorAll(".demo-control");
+const demoSvg = document.querySelector('.demo-svg');
+const demoRenderCheckboxes = document.querySelectorAll('.demo-checkbox');
+const demoRenderRadios = document.querySelectorAll('.demo-radio');
+const demoAnimateCheckbox = document.querySelector('.demo-checkbox-animate');
+const demoControlElements = document.querySelectorAll('.demo-control');
 
 const colors = {
   transparent: [],
-  white: ["#fff"],
-  natural: ["#e4cdad", "#dcbf99", "#d6b88e", "#dcbf99"],
-  rainbow: ["#2ecc71", "#3498db", "#9b59b6", "#e74c3c", "#e67e22", "#f1c40f"],
+  white: ['#fff'],
+  natural: ['#e4cdad', '#dcbf99', '#d6b88e', '#dcbf99'],
+  rainbow: ['#2ecc71', '#3498db', '#9b59b6', '#e74c3c', '#e67e22', '#f1c40f'],
 };
 
 function updateDemo(forceRender = false) {
   const options = {
-    colors: colors[document.querySelector(".demo-radio:checked").value],
+    colors: colors[document.querySelector('.demo-radio:checked').value],
   };
   const render = {};
   const animate = demoAnimateCheckbox.checked;
 
   demoControlElements.forEach((element) => {
-    const input = element.querySelector("input");
-    const valueElement = element.querySelector(".demo-value");
+    const input = element.querySelector('input');
+    const valueElement = element.querySelector('.demo-value');
     valueElement.innerHTML = `(${input.value})`;
-    options[input.getAttribute("data-key")] = parseFloat(input.value);
+    options[input.getAttribute('data-key')] = parseFloat(input.value);
   });
 
   options.angle *= Math.PI / 180;
 
   demoRenderCheckboxes.forEach((checkbox) => {
-    render[checkbox.getAttribute("data-key")] = checkbox.checked ? 1 : 0;
+    render[checkbox.getAttribute('data-key')] = checkbox.checked ? 1 : 0;
   });
 
   demoLastUpdate = Date.now();
 
-  const isInViewport = demoSvg.classList.contains("is-in-viewport");
+  const isInViewport = demoSvg.classList.contains('is-in-viewport');
 
   // TODO check if I can solve this in a more elegant way
   if (isInViewport || forceRender) {
@@ -781,15 +781,15 @@ function updateDemo(forceRender = false) {
 updateDemo(true);
 
 demoControlElements.forEach((element) => {
-  element.querySelector("input").addEventListener("change", updateDemo);
+  element.querySelector('input').addEventListener('change', updateDemo);
 });
 
 demoRenderCheckboxes.forEach((checkbox) => {
-  checkbox.addEventListener("change", updateDemo);
+  checkbox.addEventListener('change', updateDemo);
 });
 
 demoRenderRadios.forEach((radio) => {
-  radio.addEventListener("change", updateDemo);
+  radio.addEventListener('change', updateDemo);
 });
 
-demoAnimateCheckbox.addEventListener("change", updateDemo);
+demoAnimateCheckbox.addEventListener('change', updateDemo);

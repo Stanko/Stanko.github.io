@@ -1,9 +1,9 @@
 /* Kudos to https://darekkay.com/blog/rss-styling/ */
 
 :root {
+  --text-color: #2a313a;
+  --bg-color: #fff;
   --blue: #196ee6;
-  --gradient-color-1: #4341d7;
-  --gradient-color-2: #00a3ef;
   --neutral-50: #f8fbfe;
   --neutral-100: #f1f5f9;
   --neutral-200: #e2e8f0;
@@ -25,18 +25,29 @@
 }
 
 @font-face {
-  font-family: "MarvinVisions";
-  src: url("/fonts/MarvinVisions-Bold.eot");
-  src: url("/fonts/MarvinVisions-Bold.eot?#iefix") format("embedded-opentype"),
-    url("/fonts/MarvinVisions-Bold.woff2") format("woff2"),
-    url("/fonts/MarvinVisions-Bold.woff") format("woff");
-  font-weight: bold;
+  font-family: 'Marvin Visions Variable';
+  src: url(/fonts/MarvinVisions-Variable.woff2) format('woff2'),
+    url(/fonts/MarvinVisions-Variable.woff) format('woff'),
+    url(/fonts/MarvinVisions-Variable.ttf) format('truetype');
+  font-weight: 20 170;
+}
+
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url(/fonts/BricolageGrotesque[opsz,wdth,wght].woff2) format('woff2'),
+    url(/fonts/BricolageGrotesque[opsz,wdth,wght].woff) format('woff'),
+    url(/fonts/BricolageGrotesque[opsz,wdth,wght].ttf) format('truetype');
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Roboto,
-  "Helvetica Neue", Helvetica, Inter, Arial, "Noto Sans", sans-serif;
-  font-weight: 400;
+  line-height: 1.4;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  font-family: 'Bricolage Grotesque', ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: 'wdth' 100; /* 75 - 100 */
   padding: 20px;
   font-size: 1rem;
   line-height: 1.3;
@@ -53,7 +64,8 @@ body {
   }
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: 900;
 }
 
@@ -93,19 +105,15 @@ main {
 }
 
 .muffinman {
-  font-family: MarvinVisions, Helvetica, Arial, sans-serif;
+  font-family: 'Marvin Visions Variable', Helvetica, Arial, sans-serif;
   font-weight: bold;
+  font-variation-settings: 'opsz' 100;
   line-height: 0;
   letter-spacing: 0.01em;
   font-size: 2.5rem;
   margin-bottom: 0.4rem;
-}
-
-.gradient {
-  background-clip:text;
-  background:linear-gradient(90deg, var(--gradient-color-1), var(--gradient-color-2) 50%);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:rgba(0,0,0,0);
+  color: var(--blue);
+  font-weight: 160;
 }
 
 .domain {
@@ -144,7 +152,7 @@ main {
 }
 
 .list-link:hover .list-arrow {
-  transform: translate(0, 1px);;
+  transform: translate(0, 1px);
   opacity: 1;
 }
 

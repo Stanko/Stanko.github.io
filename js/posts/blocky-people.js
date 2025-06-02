@@ -11,7 +11,7 @@ class Box extends HTMLElement {
   }
 }
 
-window.customElements.define("css-box", Box);
+window.customElements.define('css-box', Box);
 
 class Person extends HTMLElement {
   constructor() {
@@ -46,33 +46,34 @@ class Person extends HTMLElement {
   }
 }
 
-window.customElements.define("css-person", Person);
+window.customElements.define('css-person', Person);
 
-document.querySelectorAll(".rotation-input").forEach(function (input) {
-  const peopleWrapper = input.parentElement.previousSibling;
+document.querySelectorAll('.rotation-input').forEach(function (input) {
+  const peopleWrapper = input.parentElement.previousElementSibling;
+  console.log(input, peopleWrapper);
   peopleWrapper.style.transform = `rotateY(${input.value}deg) rotateX(5deg)`;
-  input.addEventListener("input", () => {
+  input.addEventListener('input', () => {
     peopleWrapper.style.transform = `rotateY(${input.value}deg) rotateX(5deg)`;
   });
 });
 
 let colorSetIndex = 1;
-const colorPerson = document.querySelector(".color-person");
-const colorButton = document.querySelector(".next-color");
+const colorPerson = document.querySelector('.color-person');
+const colorButton = document.querySelector('.next-color');
 
-colorButton.addEventListener("click", function () {
-  colorPerson.classList.remove("person-" + colorSetIndex);
+colorButton.addEventListener('click', function () {
+  colorPerson.classList.remove('person-' + colorSetIndex);
   colorSetIndex++;
   if (colorSetIndex === 11) {
     colorSetIndex = 1;
   }
-  colorPerson.classList.add("person-" + colorSetIndex);
+  colorPerson.classList.add('person-' + colorSetIndex);
 });
 
-const fans = document.querySelectorAll(".fan");
-const countryInputs = document.querySelectorAll("input[name=country]");
+const fans = document.querySelectorAll('.fan');
+const countryInputs = document.querySelectorAll('input[name=country]');
 const selectedCountry = document.querySelector(
-  "input[name=country]:checked"
+  'input[name=country]:checked'
 ).value;
 
 fans.forEach(function (fan) {
@@ -80,7 +81,7 @@ fans.forEach(function (fan) {
 });
 
 countryInputs.forEach(function (input) {
-  input.addEventListener("change", function (e) {
+  input.addEventListener('change', function (e) {
     fans.forEach(function (fan) {
       fan.className = e.target.value;
     });

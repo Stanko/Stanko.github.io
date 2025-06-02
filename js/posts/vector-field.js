@@ -1,5 +1,5 @@
-import { createNoise2D } from "https://esm.sh/simplex-noise@4.0.3";
-import simplify from "https://esm.sh/simplify@1.0.0";
+import { createNoise2D } from 'https://esm.sh/simplex-noise@4.0.3';
+import simplify from 'https://esm.sh/simplify@1.0.0';
 
 // ----- UTILS ----- //
 
@@ -104,7 +104,7 @@ class Vec {
   normalize() {
     const d = this.length();
     if (d === 0) {
-      console.warn("Normalizing zero vector");
+      console.warn('Normalizing zero vector');
       return new Vec(this.x, this.y, this.width);
     }
 
@@ -523,7 +523,7 @@ class VField {
 
 class Example {
   constructor(wrapper, width, height, options, classToggles = []) {
-    const svg = wrapper.querySelector("svg");
+    const svg = wrapper.querySelector('svg');
 
     this.svg = svg;
     this.width = width;
@@ -541,23 +541,23 @@ class Example {
       ...options,
     });
 
-    this.svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+    this.svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
 
     const regenerateVectorsButton = wrapper.querySelector(
-      ".example__regenerate-vectors"
+      '.example__regenerate-vectors'
     );
     const randomVectorsButton = wrapper.querySelector(
-      ".example__random-vectors"
+      '.example__random-vectors'
     );
 
     if (regenerateVectorsButton) {
-      regenerateVectorsButton.addEventListener("click", () => {
+      regenerateVectorsButton.addEventListener('click', () => {
         this.updateNoiseField();
       });
     }
 
     if (randomVectorsButton) {
-      randomVectorsButton.addEventListener("click", () => {
+      randomVectorsButton.addEventListener('click', () => {
         this.updateRandomField();
       });
     }
@@ -565,34 +565,34 @@ class Example {
     this.createGridPaths();
     this.createVectorPaths();
 
-    const toggles = document.createElement("div");
-    toggles.classList.add("example__toggles");
+    const toggles = document.createElement('div');
+    toggles.classList.add('example__toggles');
 
     classToggles.forEach((options) => {
-      const button = document.createElement("button");
-      button.classList.add("btn", "btn--xs");
+      const button = document.createElement('button');
+      button.classList.add('btn', 'btn--sm');
 
       const className = `example--hide-${options.type}`;
 
       let isHidden = !options.isVisible;
 
       if (isHidden) {
-        button.classList.add("btn--empty");
+        button.classList.add('btn--empty');
         this.svg.classList.add(className);
       } else {
-        button.classList.add("btn--main");
+        button.classList.add('btn--main');
       }
 
-      button.addEventListener("click", () => {
+      button.addEventListener('click', () => {
         isHidden = !isHidden;
         this.svg.classList.toggle(className);
-        button.classList.toggle("btn--empty");
-        button.classList.toggle("btn--main");
+        button.classList.toggle('btn--empty');
+        button.classList.toggle('btn--main');
 
-        button.textContent = `${isHidden ? "Show" : "Hide"} ${options.type}`;
+        button.textContent = `${isHidden ? 'Show' : 'Hide'} ${options.type}`;
       });
 
-      button.textContent = `${isHidden ? "Show" : "Hide"} ${options.type}`;
+      button.textContent = `${isHidden ? 'Show' : 'Hide'} ${options.type}`;
 
       toggles.appendChild(button);
     });
@@ -650,21 +650,21 @@ class Example {
     doLine(current, 1);
     doLine(current, -1);
 
-    const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
-    g.classList.add("example__chunky-line");
-    g.setAttribute("fill", "none");
-    g.setAttribute("stroke-linecap", "round");
-    g.setAttribute("stroke-linejoin", "round");
+    const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    g.classList.add('example__chunky-line');
+    g.setAttribute('fill', 'none');
+    g.setAttribute('stroke-linecap', 'round');
+    g.setAttribute('stroke-linejoin', 'round');
 
     const paths = line.map(({ start, angle }) => {
       const path = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "path"
+        'http://www.w3.org/2000/svg',
+        'path'
       );
-      path.setAttribute("class", "example__chunky-vector");
-      path.setAttribute("vector-effect", "non-scaling-stroke");
+      path.setAttribute('class', 'example__chunky-vector');
+      path.setAttribute('vector-effect', 'non-scaling-stroke');
       path.setAttribute(
-        "d",
+        'd',
         `
         M ${start.x} ${start.y} v ${vectorLength}
         M ${start.x - arrowLength} ${start.y + arrowHeight}
@@ -711,7 +711,7 @@ class Example {
       fill="none"
       stroke-linecap="round"
     >
-      ${lines.join("\n")}
+      ${lines.join('\n')}
     </g>`;
   }
 
@@ -732,11 +732,11 @@ class Example {
 
     this.vectorPaths = [];
 
-    const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
-    g.classList.add("example__vectors");
-    g.setAttribute("fill", "none");
-    g.setAttribute("stroke-linecap", "round");
-    g.setAttribute("stroke-linejoin", "round");
+    const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    g.classList.add('example__vectors');
+    g.setAttribute('fill', 'none');
+    g.setAttribute('stroke-linecap', 'round');
+    g.setAttribute('stroke-linejoin', 'round');
 
     const vectorLength = vField.vectorGridStep * 0.7;
 
@@ -752,11 +752,11 @@ class Example {
         const start = new Vec(x, y);
 
         const path = document.createElementNS(
-          "http://www.w3.org/2000/svg",
-          "path"
+          'http://www.w3.org/2000/svg',
+          'path'
         );
         path.setAttribute(
-          "d",
+          'd',
           `
           M ${start.x} ${start.y} v ${vectorLength}
           M ${start.x - arrowLength} ${start.y + arrowHeight}
@@ -764,7 +764,7 @@ class Example {
           L ${start.x + arrowLength} ${start.y + arrowHeight}
           `
         );
-        path.setAttribute("vector-effect", "non-scaling-stroke");
+        path.setAttribute('vector-effect', 'non-scaling-stroke');
         const angle = vField.field(start) * 180;
         path.style.transform = `rotate(${angle + 90}deg)`;
 
@@ -777,13 +777,13 @@ class Example {
   }
 
   getLinePath(line) {
-    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    path.setAttribute("fill", "none");
-    path.setAttribute("class", "example__line");
-    path.setAttribute("vector-effect", "non-scaling-stroke");
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('fill', 'none');
+    path.setAttribute('class', 'example__line');
+    path.setAttribute('vector-effect', 'non-scaling-stroke');
     path.setAttribute(
-      "d",
-      `M ${line.simplified.map(({ x, y }) => `${x} ${y}`).join(" L ")}`
+      'd',
+      `M ${line.simplified.map(({ x, y }) => `${x} ${y}`).join(' L ')}`
     );
     return path;
   }
@@ -804,17 +804,17 @@ class Example {
   drawLines() {
     const { vField } = this;
 
-    let g = this.svg.querySelector(".example__lines");
+    let g = this.svg.querySelector('.example__lines');
 
     this.resetVField();
 
     vField.getAllLines();
 
     if (g) {
-      g.style.transition = "none";
-      g.style.display = "none";
+      g.style.transition = 'none';
+      g.style.display = 'none';
       g.style.opacity = 0;
-      g.innerHTML = "";
+      g.innerHTML = '';
     }
 
     const paths = vField.lines.map((line) => {
@@ -822,22 +822,22 @@ class Example {
     });
 
     if (!g) {
-      g = document.createElementNS("http://www.w3.org/2000/svg", "g");
-      g.classList.add("example__lines");
-      g.setAttribute("fill", "none");
-      g.setAttribute("stroke-linecap", "round");
-      g.setAttribute("stroke-linejoin", "round");
+      g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+      g.classList.add('example__lines');
+      g.setAttribute('fill', 'none');
+      g.setAttribute('stroke-linecap', 'round');
+      g.setAttribute('stroke-linejoin', 'round');
       this.svg.appendChild(g);
     }
 
-    g.innerHTML = "";
+    g.innerHTML = '';
     g.append(...paths);
 
     requestAnimationFrame(() => {
-      g.style.display = "";
+      g.style.display = '';
 
       requestAnimationFrame(() => {
-        g.style.transition = "";
+        g.style.transition = '';
         g.style.opacity = 1;
       });
     });
@@ -845,7 +845,7 @@ class Example {
 }
 
 const exampleWhatIsVF = new Example(
-  document.querySelector(".example--what-is-vector-field"),
+  document.querySelector('.example--what-is-vector-field'),
   80,
   80,
   {
@@ -854,9 +854,9 @@ const exampleWhatIsVF = new Example(
     disableDistanceCheck: true,
   },
   [
-    { type: "grid", isVisible: true },
-    { type: "vectors", isVisible: true },
-    { type: "lines", isVisible: true },
+    { type: 'grid', isVisible: true },
+    { type: 'vectors', isVisible: true },
+    { type: 'lines', isVisible: true },
   ]
 );
 

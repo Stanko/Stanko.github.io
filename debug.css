@@ -1,0 +1,77 @@
+/* Error dialog */
+
+.__error-dialog {
+  margin: auto;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+  overflow: auto;
+  padding: 0;
+  max-width: 1000px;
+}
+
+.__error-dialog::backdrop {
+  background-color: rgb(255 255 255 / 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.__error-dialog__header {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(255 255 255 / 0.1);
+}
+
+.__error-dialog__close {
+  padding: 10px;
+  margin: -10px;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.__error-dialog__code {
+  padding: 30px;
+  font-size: 0.875rem;
+  width: 100%;
+  overflow: auto;
+}
+
+/* Meta data panel */
+
+.meta-data-debug {
+  width: 200px;
+  opacity: 0.5;
+  position: fixed;
+  right: 0;
+  top: 50vh;
+  z-index: 10000;
+  text-align: left;
+  transform: translateX(calc(100% - 32px)) translateY(-50%);
+  background-color: var(--bg-color);
+  padding: 8px;
+  border-radius: 4px 0 0 4px;
+  line-height: 15px;
+  transition: all 250ms;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.meta-data-debug:hover,
+.meta-data-debug:focus {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
+.meta-data-debug p {
+  font-size: 12px;
+  font-family: var(--font-mono);
+  margin-bottom: 8px;
+}
+
+.meta-data-debug img {
+  outline: 1px solid rgb(0 0 0 / 0.075);
+  outline-offset: -1px;
+  border-radius: 3px;
+}

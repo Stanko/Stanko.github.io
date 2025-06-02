@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="3.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:atom="http://www.w3.org/2005/Atom">
+<xsl:stylesheet version="3.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:atom="http://www.w3.org/2005/Atom">
   <xsl:output method="html" version="1.0" encoding="UTF-8" indent="yes"/>
   <xsl:template match="/">
     <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
@@ -24,7 +25,8 @@
             <h1>
               RSS Feed Preview
             </h1>
-            <h2 class="muffinman"><span class="gradient">muffinman</span><span class="domain">.io</span></h2>
+            <h2 class="muffinman">muffinman<span class="domain">.io</span>
+            </h2>
             <p>
               <xsl:value-of select="/atom:feed/atom:subtitle"/>
             </p>
@@ -48,7 +50,7 @@
                     <span class="list-arrow">&#x2192;</span>
                   </a>
                   <div class="list-date small">
-                    Published: <xsl:value-of select="substring(atom:updated, 0, 11)" />
+                    Published: <xsl:value-of select="substring(atom:published, 0, 11)" />
                   </div>
                 </li>
               </xsl:for-each>
