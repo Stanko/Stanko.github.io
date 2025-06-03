@@ -18,9 +18,9 @@ jobs:
     if: github.ref == 'refs/heads/brz'
     steps:
       - name: 'Checkout'
-      - uses: actions/checkout@v4
-      - name: 'Setup Bun'
-      - uses: oven-sh/setup-bun@v2
+        uses: actions/checkout@v4
+        uses: oven-sh/setup-bun@v2
       - name: Build and deploy
-      - run: bun install
-      - run: sh deploy.sh
+        run: bun install
+        run: bun build
+        run: sh deploy.sh
