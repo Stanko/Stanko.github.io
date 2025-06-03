@@ -8,9 +8,6 @@ then
   git fetch origin gh-pages gh-pages
   git checkout gh-pages
 
-  git config user.name "GitHub Actions"
-  git config user.email "github-actions-bot@users.noreply.${GITHUB_HOSTNAME}"
-
   # Delete old build
   find . ! -path './.git' ! -path . ! -name 'dist' -maxdepth 1 -exec rm -rf {} +
 

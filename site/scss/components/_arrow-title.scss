@@ -7,8 +7,6 @@
   text-wrap: balance;
   color: var(--text-color);
   transition: color 250ms;
-  // TODO hotfix, remove
-  transform: translateZ(0);
 
   @include md {
     font-variation-settings: 'opsz' 90; /* 80 - 100 */
