@@ -1,5 +1,5 @@
 .btn {
-  --theme-color-shadow: oklch(0.75 0 230.318 / 0.2);
+  --color-shadow: oklch(0.75 0 230.318 / 0.2);
   --border-color: var(--theme-color-300);
 
   --depth: 5px;
@@ -26,7 +26,7 @@
   outline: none;
   box-shadow: 0 var(--depth) 0 -2px var(--theme-color-100),
     0 var(--depth) 0 0 var(--border-color),
-    0 var(--shadow-offset) 0 -2px var(--theme-color-shadow);
+    0 var(--shadow-offset) 0 -2px var(--color-shadow);
 
   width: fit-content;
 }
@@ -37,14 +37,14 @@
   transform: translateY(var(--pressed-hover));
   box-shadow: 0 var(--depth-hover) 0 -2px var(--theme-color-100),
     0 var(--depth-hover) 0 0 var(--border-color),
-    0 var(--shadow-offset-hover) 0 -2px var(--theme-color-shadow);
+    0 var(--shadow-offset-hover) 0 -2px var(--color-shadow);
 }
 
 .btn:active {
   transform: translateY(var(--depth));
   box-shadow: 0 var(--depth-active) 0 -2px var(--theme-color-100),
     0 var(--depth-active) 0 0 var(--border-color),
-    0 0 0 -2px var(--theme-color-shadow);
+    0 0 0 -2px var(--color-shadow);
 }
 
 .btn:focus-visible {

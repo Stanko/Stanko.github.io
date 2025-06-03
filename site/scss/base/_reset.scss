@@ -81,8 +81,15 @@ h3,
 h4,
 h5,
 h6 {
-  // TODO investigate the Safari bug
-  // text-wrap: balance;
+  text-wrap: balance;
+
+  // Safari-specific override
+  @supports (hanging-punctuation: first) and (font: -apple-system-body) and
+    (-webkit-appearance: none) {
+    & {
+      text-wrap: auto;
+    }
+  }
 }
 
 button {
