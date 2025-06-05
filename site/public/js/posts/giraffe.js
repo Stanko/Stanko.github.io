@@ -10,26 +10,28 @@ let position = null;
 let visible = false;
 
 function update() {
-  visible = input.selectionStart === input.selectionEnd;
-  position = visible ? input.selectionStart : null;
+  requestAnimationFrame(() => {
+    visible = input.selectionStart === input.selectionEnd;
+    position = visible ? input.selectionStart : null;
 
-  if (position !== null) {
-    const beforeText = input.value
-      .substring(0, position)
-      .replace(/ /g, '&nbsp');
-    const afterText = input.value.substring(position).replace(/ /g, '&nbsp');
+    if (position !== null) {
+      const beforeText = input.value
+        .substring(0, position)
+        .replace(/ /g, '&nbsp');
+      const afterText = input.value.substring(position).replace(/ /g, '&nbsp');
 
-    before.innerHTML = beforeText;
-    after.innerHTML = afterText;
-  }
+      before.innerHTML = beforeText;
+      after.innerHTML = afterText;
+    }
 
-  if (visible && document.activeElement === input) {
-    wrapper.classList.add('giraffe--caret-visible');
-  } else {
-    wrapper.classList.remove('giraffe--caret-visible');
-  }
+    if (visible && document.activeElement === input) {
+      wrapper.classList.add('giraffe--caret-visible');
+    } else {
+      wrapper.classList.remove('giraffe--caret-visible');
+    }
 
-  clone.scrollLeft = input.scrollLeft;
+    clone.scrollLeft = input.scrollLeft;
+  });
 }
 
 function isSelectionChangeSupported() {
