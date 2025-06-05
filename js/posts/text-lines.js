@@ -1,19 +1,19 @@
 function getTextLines(element) {
-  const text = element.innerText.trim().replace(/(\r\n|\n|\r)/gm, " ");
+  const text = element.innerText.trim().replace(/(\r\n|\n|\r)/gm, ' ');
 
-  const words = text.split(" ");
+  const words = text.split(' ');
 
   const spans = words.map((word) => {
     return `<span style="display: inline-block">${word}</span>`;
   });
 
-  element.innerHTML = spans.join(" ");
+  element.innerHTML = spans.join(' ');
 
   const lines = [];
   let line = [];
   let prevTop = null;
 
-  element.querySelectorAll("span").forEach((wordSpan, index) => {
+  element.querySelectorAll('span').forEach((wordSpan, index) => {
     const wordRect = wordSpan.getBoundingClientRect();
 
     if (prevTop !== wordRect.top && index > 0) {
@@ -34,23 +34,23 @@ function getTextLines(element) {
 
   const coloredLines = lines
     .map((line) => {
-      return `<div class="line">${line.join(" ")}</div>`;
+      return `<div class="line">${line.join(' ')}</div>`;
     })
-    .join("\n");
+    .join('\n');
 
   element.innerHTML = coloredLines;
 }
 
-const exampleElements = document.querySelectorAll(".example");
+const exampleElements = document.querySelectorAll('.example');
 
 let windowWidth = window.innerWidth;
 exampleElements.forEach((exampleElement) => {
-  const textElement = exampleElement.querySelector(".example-text");
-  const handleElement = exampleElement.querySelector(".example-handle");
+  const textElement = exampleElement.querySelector('.example-text');
+  const handleElement = exampleElement.querySelector('.example-handle');
 
   getTextLines(textElement);
 
-  window.addEventListener("resize", () => {
+  window.addEventListener('resize', () => {
     if (windowWidth !== window.innerWidth) {
       windowWidth = window.innerWidth;
       getTextLines(textElement);
@@ -68,7 +68,7 @@ exampleElements.forEach((exampleElement) => {
 
     if (e.clientX || (e.touches && e.touches[0])) {
       isDragging = true;
-      document.body.classList.add("no-select");
+      document.body.classList.add('no-select');
       startX = e.clientX || e.touches[0].clientX;
     }
   }
@@ -94,14 +94,15 @@ exampleElements.forEach((exampleElement) => {
 
   function handleDragEnd() {
     isDragging = false;
-    document.body.classList.remove("no-select");
+    document.body.classList.remove('no-select');
   }
 
-  handleElement.addEventListener("mousedown", handleDragStart);
-  window.addEventListener("mousemove", handleDrag);
-  window.addEventListener("mouseup", handleDragEnd);
+  handleElement.addEventListener('mousedown', handleDragStart);
+  window.addEventListener('mousemove', handleDrag);
+  window.addEventListener('mouseup', handleDragEnd);
 
-  handleElement.addEventListener("touchstart", handleDragStart);
-  window.addEventListener("touchmove", handleDrag);
-  window.addEventListener("touchend", handleDragEnd);
+  handleElement.addEventListener('touchstart', handleDragStart);
+  window.addEventListener('touchmove', handleDrag);
+  window.addEventListener('touchend', handleDragEnd);
+  window.addEventListener('blur', handleDragEnd);
 });
