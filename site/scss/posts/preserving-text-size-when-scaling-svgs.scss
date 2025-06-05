@@ -1,0 +1,46 @@
+@import '../base/_variables.scss';
+@import '../base/_breakpoints.scss';
+
+.example {
+  --text-factor: 0;
+  background: var(--theme-color-50);
+  max-width: 100%;
+  max-height: 100%;
+}
+
+text {
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.line {
+  stroke: var(--theme-color-200);
+  stroke-dasharray: 5 5;
+}
+
+// Then we define any font size multiplied by the text scaling factor
+.hello {
+  font-size: calc(24px * var(--text-factor));
+}
+
+.pixels {
+  font-size: calc(16px * var(--text-factor));
+}
+
+// Positioning demo
+
+.positioning-options {
+  label {
+    display: block;
+  }
+}
+
+.example--interactive-positioning {
+  text {
+    font-size: calc(24px * var(--text-factor));
+
+    @include md {
+      font-size: calc(32px * var(--text-factor));
+    }
+  }
+}

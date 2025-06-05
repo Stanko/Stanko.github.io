@@ -1,36 +1,20 @@
-# brz
+# My personal blog
 
-To install dependencies:
+Frontend development & rants.
 
-```bash
-bun install
-```
+[https://muffinman.io](https://muffinman.io)
 
-To run:
+---
 
-```bash
-bun run ./app/index.js
-```
+# Licensing
 
-## File Structure
+Copyright © Stanko Tadić
 
-- content
-  - index.tsx - home page
-  - collection-name
-    - index.tsx - collection landing
-    <!-- - (YYYY-MM-DD)-item-name.mdx - da li uopste ovo da parsiram? -->
-    - [(YYYY-MM-DD)-item-name]
-      - index.mdx
-- public
-- scss
-- js
-- config.ts
+[All rights reserved.](LICENSE.md)
 
-## TODO
+# TODO
 
 ### Must have
-
-- [ ] Check Scrubbing videos using JavaScript
 
 ### Future
 
@@ -50,3 +34,4 @@ bun run ./app/index.js
 - [ ] Separate --watch and --dev commands
 - [ ] Add container which has the same width as the article content
 - [ ] Add a note about search, that users can use \*. Explore what the fuzzy library is also capable of.
+- [ ] Polish the embeddings script

@@ -1,0 +1,41 @@
+.resize {
+  --handle-width: 1.25rem;
+  padding-right: var(--handle-width);
+  position: relative;
+}
+
+.resize__handle {
+  width: var(--handle-width);
+  cursor: ew-resize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--bg-color);
+  color: var(--neutral-300);
+  border: 1px solid currentColor;
+  transition: color 250ms;
+  user-select: none;
+
+  &:hover {
+    color: var(--neutral-600);
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: var(--theme-color);
+    color: var(--theme-color);
+  }
+}
+
+.resize__handle span {
+  width: 0.125rem;
+  height: 100%;
+  max-height: 3rem;
+  border-radius: 1rem;
+  background: currentColor;
+}

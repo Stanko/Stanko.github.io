@@ -25,7 +25,8 @@
     "build-brz": "bun build ./app/index.ts --target=bun-darwin-arm64 --compile --outfile ./build/brz-darwin-arm64",
     "build-brz-linux": "bun build ./app/index.ts --target=bun-linux-x64 --compile --outfile ./build/brz-linux-x64",
     "copy-photoswipe-styles": "cp ./node_modules/photoswipe/dist/photoswipe.css ./site/scss/photoswipe.scss",
-    "postinstall": "bun run copy-photoswipe-styles"
+    "postinstall": "bun run copy-photoswipe-styles",
+    "embeddings": "bun ./embeddings/index.ts"
   },
   "dependencies": {
     "@leeoniya/ufuzzy": "^1.0.18",

@@ -13,18 +13,26 @@ interface RelatedPostsProps extends React.HTMLAttributes<HTMLElement> {
   eyebrow?: React.ReactNode;
   title: string;
   posts: RelatedPost[];
-  children?: React.ReactNode;
 }
 
 const RelatedPosts = ({
-  children,
   className = '',
   title,
   posts,
   ...props
 }: RelatedPostsProps) => {
   if (!posts || posts.length === 0) {
-    return null;
+    return (
+      <Dev>
+        <div className={clsx('related-posts', className)} {...props}>
+          <div className="container">
+            <h3 className="related-posts__title">
+              No related posts, check embeddings
+            </h3>
+          </div>
+        </div>
+      </Dev>
+    );
   }
 
   return (

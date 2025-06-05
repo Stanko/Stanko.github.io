@@ -8,7 +8,7 @@
 .example {
   margin-bottom: 20px;
   position: relative;
-  padding-right: 24px; // handle width
+  padding-right: 1.25rem; // handle width
 }
 
 .example--debug {
@@ -59,12 +59,12 @@
 }
 
 .example-handle {
-  width: 24px;
+  width: 1.25rem;
   cursor: ew-resize;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 0;
+  padding: 0.5rem 0;
   position: absolute;
   top: -1px;
   bottom: -1px;

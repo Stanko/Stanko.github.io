@@ -71,19 +71,6 @@ export class Pages {
               />
             </Template>
           );
-
-        // page.html = await render(
-        //   <Template
-        //     data={data}
-        //     dirPath={dirPath}
-        //     outputDir={outputDir}
-        //     pathname={pathname}
-        //   >
-        //     <ContentComponent
-        //       components={this.getMdxComponents?.(dirPath, outputDir)}
-        //     />
-        //   </Template>
-        // );
       } else {
         const relativePath = templatePath.replace(dirs.TEMPLATES, '');
         throw new Error(

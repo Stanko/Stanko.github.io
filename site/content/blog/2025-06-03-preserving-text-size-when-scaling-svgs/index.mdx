@@ -1,0 +1,134 @@
++++
+title = "<span>Preserving text size</span> when scaling SVGs"
+
+category = ["JavaScript"]
+tags = ["css", "svg", "font size"]
+
+intro = "If you ever needed to keep your SVG text size consistent regardless of scale, this approach should do the trick. It's simple, flexible, and doesn't require much code."
+# image = "./img/"
++++
+
+import Resize from "../../../components/resize";
+
+<link rel="stylesheet" href="/css/posts/preserving-text-size-when-scaling-svgs.css" />
+
+SVGs support non-scaling strokes using the [vector-effect](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/vector-effect#non-scaling-stroke) attribute, which we can even use to draw [non-scaling rectangles and circles](/blog/svg-non-scaling-circle-and-rectangle/).
+
+For example, in graphs and charts, text can become too small or too large, so it would be really nice to make it non-scaling. But unfortunately, there is no native solution - text will always scale together with the SVG.
+
+We can manually define different font sizes on different breakpoints, but text is still going to be scaled within a single breakpoint.
+
+If we need truly non-scalable text, we'll have to use JavaScript. Luckily, not a lot of it - ten lines will do.
+
+But before we dive into the solution, here is an example for you (try resizing the wrapper):
+
+<Resize>
+  <svg viewBox="0 0 100 60" className="example">
+    <text x="50" y="25" className="hello">Hello World!</text>
+    <text x="50" y="35" className="pixels">I'll stay 16px on all screen sizes</text>
+  </svg>
+</Resize>
+
+## How it works
+
+The idea is to use a CSS variable and a resize observer to counteract SVG scaling.
+
+The variable stores the information about how much the SVG is scaled compared to its natural size. Then we can set a resize observer on our SVG, and every time it is resized, we update the CSS variable. That will ensure the font size remains consistent.
+
+In order for the CSS variable to have an effect, we have to define font size <Sidenote note="You can also use `rem` or other font size units, as well as media or container queries.">like this</Sidenote>:
+
+```css
+text {
+  font-size: calc(16px * var(--text-factor));
+}
+```
+
+This means that if we want to keep the font size 16px, and the SVG is rendered at twice its natural size, `--text-factor` has to be set to 2. To achieve this, we need to divide *rendered width* by *natural width*. Let's see how we can get these values.
+
+The rendered width is directly accessible as `svg.clientWidth`.
+
+Natural width is a bit trickier, but we can use `viewBox` to get it. In general, I think it is a good practice to define `viewBox` on SVGs. 
+
+View box is a string consisting of four numbers. The third number represents the width of the SVG. We need to parse the string to <Sidenote note="If you don't have `viewBox` defined, you'll have to update this line to fit your needs.">get the width</Sidenote>:
+
+```js
+svg.getAttribute('viewBox').split(' ')[2]
+```
+
+The only thing left is to add a [ResizeObserver](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver) and connect everything together.
+
+### JavaScript code
+
+Here is the final code. It accepts a reference to an SVG element, sets the initial value for the `--text-factor` variable, and attaches the resize observer to update the variable.
+
+```js showLineNumbers
+const fixTextScaling = (svg) => {
+  // We assume the SVG has a viewBox attribute
+  // Getting the natural width of the SVG from the viewBox attribute
+  const width = svg.getAttribute('viewBox').split(' ')[2];
+
+  // Set the initial value for the scaling factor and mark it as loaded
+  svg.style.setProperty('--text-factor', width / svg.clientWidth);
+  svg.classList.add('loaded');
+
+  // Update the scaling factor when SVG is resized
+  const resizeObserver = new ResizeObserver(() => {
+    svg.style.setProperty('--text-factor', width / svg.clientWidth);
+  });
+
+  resizeObserver.observe(svg);
+
+  // In a real app, you'll want to disconnect the observer
+  // on unmount by calling resizeObserver.disconnect();
+};
+```
+
+Finally, all that's left is to call our method:
+
+```js
+const svg = document.querySelector('.my-svg');
+
+fixTextScaling(svg);
+```
+
+You can also play with the code on [CodePen](https://codepen.io/stanko/pen/qEBQRwz?editors=0010).
+
+### Avoiding flash of non-resized text
+
+To make sure the text doesn't flash in its natural size before our script is executed, we'll set the initial value for `--text-factor` to 0. This will ensure text is not visible until it is resized.
+
+## SVG text positioning
+
+When talking about SVG text, I think it's good to mention how to position it, as I don't find it very intuitive. The `<text>` element has `x` and `y` attributes. By default, text is going to be positioned below and to the right of the point defined by these coordinates.
+
+To align it differently, CSS provides us with two properties: `text-anchor` (horizontal alignment) and `dominant-baseline` (vertical alignment). I find the property names (and their values) a bit odd, but I'm pretty sure they are inspired by traditional typesetting.
+
+Try playing with the example below. The text's `x` and `y` attributes are represented by the blue point.
+
+<Grid sm={2} md={2} lg={3} className="positioning-options">
+  <div>
+    <b>text-anchor</b>
+    <label><input type="radio" value="start" name="text-anchor" defaultChecked /> start</label>
+    <label><input type="radio" value="middle" name="text-anchor" /> middle</label>
+    <label><input type="radio" value="end" name="text-anchor" /> end</label>
+  </div>
+  <div>
+    <b>dominant-baseline</b>
+    <label><input type="radio" value="hanging" name="dominant-baseline" defaultChecked /> hanging</label>
+    <label><input type="radio" value="middle" name="dominant-baseline" /> middle</label>
+    <label><input type="radio" value="auto" name="dominant-baseline" /> auto</label>
+  </div>
+</Grid>
+
+<svg viewBox="0 0 100 50" className="example example--interactive-positioning">
+  <path d="M 50 0 V 50 M 0 25 H 100" fill="none" className="line" vectorEffect="non-scaling-stroke" />
+  <text x="50" y="25" className="top-left">Hello World!</text>
+  <path d="M 50 25 v 0.01" strokeWidth={5} stroke="var(--theme-color-500)" strokeLinecap="round" vectorEffect="non-scaling-stroke" />
+</svg>
+
+That's it. If you ever need to keep your SVG text size consistent regardless of scale, this approach should do the trick. It's simple, flexible, and doesn't require much code.
+
+As usual, this ended up being a longer post than I expected. I really hope you found it useful.
+
+<script src="/js/posts/preserving-text-size-when-scaling-svgs.js"></script>
+

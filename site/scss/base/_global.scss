@@ -256,6 +256,10 @@ svg {
   @include link-underline;
 }
 
+.no-select {
+  user-select: none;
+}
+
 .sr-only {
   opacity: 0;
   position: absolute;

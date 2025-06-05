@@ -604,6 +604,7 @@ const optionsMap = {
 const titles = document.querySelectorAll('.step-title');
 const ropeStepsElement = document.querySelector('.rope-steps');
 const mainElement = document.querySelector('main');
+const initialMainClass = mainElement.className;
 
 let currentStep = null;
 
@@ -617,7 +618,7 @@ function updateSteps(forceRender = false) {
     if (rect.top + offset > ropeStepsElement.clientHeight) {
       if (title.id !== currentStep) {
         currentStep = title.id;
-        mainElement.className = `main active-section--${currentStep}`;
+        mainElement.className = `${initialMainClass} active-section--${currentStep}`;
 
         const stepOptions = optionsMap[currentStep];
         updateStepsImage(

@@ -7,6 +7,7 @@ image = "./non-scaling-shapes.png"
 
 +++
 
+<link rel="stylesheet" href="/css/posts/non-scaling-circle-and-rectangle.css" />
 
 
 While making [a simple SVG chart](/stats/#posts-per-year), I realized I would like to have non-scaling circles for data points. Unfortunately, SVG doesn't support it out of the box.
@@ -19,7 +20,7 @@ SVG does support non-scaling stroke width by setting [vector-effect](https://dev
 
 Try <Sidenote note={`On desktop, you should be able to resize each image on it's own by dragging the bottom right corner`}>resizing your window</Sidenote>, and you'll see that the bottom line always stays 1px, while the upper one scales with the image:
 
-<div className="resize">
+<div className="non-scaling-svg-resize">
 <svg
   aria-label="Example of vector-effect='non-scaling-stroke'"
   viewBox="0 0 200 30"
@@ -113,7 +114,7 @@ On the left are
 , while on the right are non-scaling shapes created using the method I described above. Try resizing your window and you'll see that the shapes on the right always stay the same size, no matter the image size.
 
 
-<div className="resize">
+<div className="non-scaling-svg-resize">
 <svg
 aria-label="Example of filled non-scaling circle next to the standard scaling one"
 viewBox="0 0 200 100"
@@ -134,7 +135,7 @@ viewBox="0 0 200 100"
 </svg>
 </div>
 
-<div className="resize">
+<div className="non-scaling-svg-resize">
 <svg
   aria-label="Example of filled non-scaling rectangle next to the standard scaling one"
   viewBox="0 0 200 100"
@@ -181,7 +182,7 @@ Which gives us the following code:
 />
 ```
 
-<div className="resize">
+<div className="non-scaling-svg-resize">
 <svg
 aria-label="Example of outlined non-scaling circle next to the standard scaling one"
 viewBox="0 0 200 100"
@@ -211,7 +212,7 @@ viewBox="0 0 200 100"
 </svg>
 </div>
 
-<div className="resize">
+<div className="non-scaling-svg-resize">
 <svg
 viewBox="0 0 200 100"
 aria-label="Example of outlined non-scaling rectangle next to the standard scaling one"
