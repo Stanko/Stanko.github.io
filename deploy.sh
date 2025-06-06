@@ -1,10 +1,5 @@
 #!/bin/sh
 
-# ./build/brz-linux-x64
-
-# if [ $? -eq 0 ]
-# then
-# Switch to gh-pages branch
 git fetch origin gh-pages gh-pages
 git checkout gh-pages
 
@@ -28,7 +23,3 @@ git commit -a -m "Deploy `date +'%Y-%m-%d %H:%M:%S'`"
 
 # Push changes
 git push origin gh-pages
-# else
-#   echo "brz build failed"
-#   exit 1
-# fi
