@@ -24,14 +24,10 @@ $breakpoint-xxxl: 2000px;
   --font-mono: 'Fira Code', 'DejaVu Sans Mono', 'Menlo', ui-monospace,
     'Cascadia Code', 'Source Code Pro', Consolas, monospace;
 
-  // --scrollbar-width: 0px;
-
   --content-max-width: 60rem;
 
-  --true-black: #000;
-  --black: #111112;
-  --true-white: #fff;
   --white: #fff;
+  --black: #111112;
 
   --neutral-50: #f8fbfe;
   --neutral-100: #f1f5f9;
@@ -44,28 +40,25 @@ $breakpoint-xxxl: 2000px;
   --neutral-800: #1e293b;
   --neutral-900: #0f172a;
 
-  --text-color: #2a313a;
-  --text-light: var(--neutral-500);
-
   --bg-color: var(--white);
+  --text-color: #2a313a;
+
+  // Dark mode WIP
+  // --neutral-900: #f1f5f9;
+  // --neutral-800: #e2e8f0;
+  // --neutral-700: #cbd5e1;
+  // --neutral-600: #94a3b8;
+  // --neutral-500: #64748b;
+  // --neutral-400: #475569;
+  // --neutral-300: #334155;
+  // --neutral-200: #1e293b;
+  // --neutral-100: #0f172a;
+  // --neutral-50: #000719;
+
+  // --bg-color: var(--neutral-100);
+  // --text-color: #e2ebfb;
 
   --time: 250ms;
-
-  --block-bg: var(--neutral-50);
-  --separator-color: var(--neutral-200);
-  --link-underline-color: var(--neutral-300);
-
-  --link-color: var(--theme-color);
-
-  // shadows
-  --image-shadow: 1px 1px 7px rgba(0, 0, 20, 0.15);
-
-  // footer (always dark)
-  --footer-bg: var(--black);
-  --footer-text: #94a3b8; // gray 400
-  --footer-link: #f1f5f9; // gray 100
-  --footer-underline: #334155; // gray 700
-  --footer-separator: #1e293b; // gray 800
 
   // notice
   --notice-bg: #fffbeb;
@@ -95,6 +88,21 @@ $breakpoint-xxxl: 2000px;
   --theme-color-950: oklch(14.62% 0.05 249.76);
 
   --theme-color: var(--theme-color-500);
+
+  // Dark mode WIP
+  // --theme-color-950: oklch(95.49% 0.021 258.53);
+  // --theme-color-900: oklch(90.75% 0.038 256.97);
+  // --theme-color-800: oklch(81.55% 0.077 257.02);
+  // --theme-color-700: oklch(73.53% 0.119 257.09);
+  // --theme-color-600: oklch(64.8% 0.16 257.45);
+  // --theme-color-500: oklch(56.16% 0.198 258.79);
+  // --theme-color-400: oklch(48.86% 0.176 258.65);
+  // --theme-color-300: oklch(40.19% 0.151 258.45);
+  // --theme-color-200: oklch(30.03% 0.14 258.12);
+  // --theme-color-100: oklch(20.12% 0.1 256.69);
+  // --theme-color-50: oklch(14.62% 0.05 249.76);
+
+  // --theme-color: var(--theme-color-500);
 }
 
 .red {
