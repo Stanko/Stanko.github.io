@@ -41,12 +41,13 @@
 }
 
 .project__left {
-  min-width: 4rem;
+  flex-shrink: 0;
+  width: 4rem;
   display: grid;
   place-items: center;
 
   @include md {
-    min-width: 5rem;
+    width: 5rem;
   }
 }
 

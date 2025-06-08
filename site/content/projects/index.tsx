@@ -29,6 +29,33 @@ const projects: {
         name: 'Generative Art',
       },
       {
+        name: 'Creative Coding Amsterdam',
+        description:
+          'David, Sinan and myself organize monthly creative coding meetups for anyone fascinated by creative coding.',
+        link: 'https://cca.codes/',
+        thumb: (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="-10 -10 182 70"
+            className="project__image"
+          >
+            <g
+              fill="none"
+              stroke="var(--text-color)"
+              strokeWidth="12"
+              strokeLinecap="round"
+            >
+              <path d="M 46.97 13.029 A 24 24 1 1 0 46.97 46.97" />
+              <path d="M 97.97 13.029 A 24 24 1 1 0 97.97 46.97" />
+              <path
+                d="M 156 29.96 A 24 24 1 1 0 156 30 v 24"
+                stroke="#B52D2C"
+              />
+            </g>
+          </svg>
+        ),
+      },
+      {
         description:
           'Glitchy B.A.R.D. is an experiment in robot poetry. It uses a small language model to generate crappy poems for fun and profit (I lied, there is no profit).',
         link: 'https://muffinman.io/bard/',
@@ -87,7 +114,7 @@ const projects: {
       },
       {
         description:
-          'My first remotely presentable generative project, utilizing a vector field to draw vibrant, neon lines. It includes the accompanying blog post.',
+          'My first remotely presentable generative project, utilizing a vector field to draw vibrant, neon lines.',
         image: './neon.png',
         link: 'https://neon.muffinman.io/#/false/15/6/60/55/140/5/2aybxq8tmqv/crdmt2f7nn8/i5g7i80cigf',
         name: 'Neon',
