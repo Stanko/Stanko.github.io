@@ -31,7 +31,7 @@ const projects: {
       {
         name: 'Creative Coding Amsterdam',
         description:
-          'David, Sinan and myself organize monthly creative coding meetups for anyone fascinated by creative coding.',
+          'Since early 2024, David, Sinan and myself organize monthly meetups for anyone fascinated by creative coding.',
         link: 'https://cca.codes/',
         thumb: (
           <svg
