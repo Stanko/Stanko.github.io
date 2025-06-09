@@ -10,7 +10,7 @@ const DOCS_DIR = './site/content/blog';
 // const MODEL = 'small';
 const MODEL = 'large';
 const CACHE_DIR = `./embeddings/cache-${MODEL}`;
-const SIMILARITY_THRESHOLD = 0.6;
+const SIMILARITY_THRESHOLD = 0.5;
 const OUTPUT_FILE = `./embeddings/results-${MODEL}-${SIMILARITY_THRESHOLD}.json`;
 const DATE_REGEX = /^\d{4}-\d{2}-\d{2}-/;
 

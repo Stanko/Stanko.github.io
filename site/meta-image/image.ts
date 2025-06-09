@@ -1,4 +1,5 @@
 import sharp from 'sharp';
+import fs from 'node:fs';
 
 /**
  * Represents a word with optional highlighting
@@ -69,7 +70,7 @@ class MetaImage {
 
       if (currentLength + partLength > lineLength) {
         // new line
-        currentLength = 0;
+        currentLength = part.text.length;
         currentLine = [part];
         lines.push(currentLine);
       } else {
@@ -81,20 +82,36 @@ class MetaImage {
     return lines;
   };
 
+  // Create a function that takes an image path as a parameter
+  private toDataUri(imgPath: string) {
+    // resize image using sharp
+
+    const bitmap = fs.readFileSync(imgPath);
+
+    const base64Image = bitmap.toString('base64');
+
+    const ext = imgPath.split('.').pop();
+
+    const uri = `data:image/${ext};base64,${base64Image}`;
+
+    return uri;
+  }
+
   /**
    * Creates an SVG with styled text
    */
   private createSvg(
     text: string,
     lineLength: number,
-    themeColor: string = '#196ee6'
+    themeColor: string = '#196ee6',
+    imagePath: string
   ): string {
     const lines = this.textPartsToLines(
       this.titleToTextParts(text),
       lineLength
     );
-    const lineHeight = 10;
-    const start = 50 - (lineHeight * lines.length) / 2;
+    const lineHeight = 10; // in percent
+    const start = 50 - (lineHeight * (lines.length - 1)) / 2;
 
     const svgText = lines
       .map((line, i) => {
@@ -107,7 +124,7 @@ class MetaImage {
           .join(' ');
 
         const y = start + i * lineHeight;
-        return `<text x="10%" y="${y}%" dominant-baseline="middle">${words}</text>`;
+        return `<text x="50" y="${y}%" dominant-baseline="middle">${words}</text>`;
       })
       .join('\n');
 
@@ -118,7 +135,7 @@ class MetaImage {
             font-family: 'Marvin Visions', sans-serif;
             font-variation-settings: 'wdth' 100;
             font-weight: 900;
-            font-size: 72px;
+            font-size: 64px;
             width: 800px;
             white-space: wrap;
             height: 600px;
@@ -130,9 +147,15 @@ class MetaImage {
           }
 
           text, tspan {
-            line-height: 1;
+            line-height: 0;
           }
         </style>
+
+        <rect width="1200" height="628" fill="#ffffff" />
+
+        <image href="${this.toDataUri(
+          imagePath
+        )}" width="20%" height="20%" x="0" y="0" />
 
         ${svgText}
       </svg>
@@ -150,16 +173,19 @@ class MetaImage {
     themeColor?: string;
     outputPath?: string;
     width?: number;
+    imagePath: string;
   }): Promise<void> {
     const {
       text,
       lineLength = 30,
       themeColor = '#196ee6',
-      outputPath = 'post-image.png',
+      outputPath = import.meta.dir + '/post-image.png',
       width = 1200,
+      imagePath,
     } = options;
 
-    const svg = this.createSvg(text, lineLength, themeColor);
+    const svg = this.createSvg(text, lineLength, themeColor, imagePath);
+    fs.writeFileSync(import.meta.dir + '/post-image.svg', svg);
 
     try {
       console.time('meta image');
@@ -177,7 +203,14 @@ export default MetaImage;
 
 const metaImage = new MetaImage();
 metaImage.generatePNG({
-  text: 'The <span>Tiny Book</span> of Great Joys',
-  lineLength: 30,
+  // text: 'The <span>Tiny Book</span> of Great Joys',
+  // text: 'Implementing <span>PhotoShop</span> font sizes and tracking in CSS, points to pixels conversion',
+  text: 'Origami <span>jumping frog</span>',
+  // text: '00000000000000000000 00000000000000000000',
+  // text: '<span>Preserving text size</span> when scaling SVGs',
+  lineLength: 24,
   themeColor: '#196ee6',
+  // imagePath: import.meta.dir + '/bard.png',
+  imagePath:
+    '/Users/stanko/Projects/stanko.github.io/site/content/blog/2025-02-10-the-tiny-book-of-great-joys/img/the-book-02.jpg',
 });

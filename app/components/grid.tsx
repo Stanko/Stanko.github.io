@@ -12,7 +12,7 @@ const Grid = async ({
   sm = 2,
   md = 2,
   lg = 2,
-  gap = 0.75,
+  gap = 1,
   className = '',
   ...props
 }: GridProps) => {

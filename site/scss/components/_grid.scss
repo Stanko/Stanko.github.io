@@ -4,7 +4,7 @@
   --columns: 2;
   --columns-md: 2;
   --columns-lg: 2;
-  --gap: 0.75rem;
+  --gap: 1.25rem;
 
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);

@@ -9,7 +9,7 @@ import Share from '@site/components/share';
 import { config } from '@site/config';
 import type { BlogPost } from '@site/content/blog';
 import { getSlug } from '@site/lib/get-slug';
-import similarity from '../../embeddings/results-large-0.6.json';
+import similarity from '../../embeddings/results-large-0.5.json';
 import Notice from '../components/notice';
 import BaseTemplate from './base';
 
@@ -79,10 +79,14 @@ const BlogPostTemplate = async ({
     relatedEmbeddings = [];
   }
 
+  // Show all if the similarity is over 0.7
   if (relatedEmbeddings.filter((r) => r.score > 0.7).length >= 3) {
     relatedEmbeddings = relatedEmbeddings.filter((r) => r.score > 0.7);
   } else {
-    relatedEmbeddings = relatedEmbeddings.slice(0, 3);
+    // Otherwise, filter out those with a score below 0.6 and limit to 3
+    relatedEmbeddings = relatedEmbeddings
+      .filter((r) => r.score >= 0.6)
+      .slice(0, 3);
   }
 
   const relatedPosts: RelatedPost[] = relatedEmbeddings

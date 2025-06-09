@@ -1,0 +1,13 @@
+@import '../base/_variables.scss';
+@import '../base/_reset.scss';
+@import '../base/_breakpoints.scss';
+@import '../base/_mixins.scss';
+
+.frog-instructions {
+  gap: 2rem;
+
+  img {
+    max-width: 20rem;
+    width: 100%;
+  }
+}
