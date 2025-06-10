@@ -28,10 +28,7 @@ const PostCard = async ({
       })}
     >
       <div className="post-card__content">
-        <time
-          dateTime={post.pageData.date}
-          className="text-neutral-500 text-xs"
-        >
+        <time dateTime={post.pageData.date} className="text-light text-xs">
           {latest && (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -55,9 +52,7 @@ const PostCard = async ({
           />
         </ArrowTitle>
         {post.pageData.intro && (
-          <p className="post-card__text text-neutral-500">
-            {post.pageData.intro}
-          </p>
+          <p className="post-card__text text-light">{post.pageData.intro}</p>
         )}
       </div>
       {latest && post.pageData.image && (

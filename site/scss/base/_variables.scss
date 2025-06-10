@@ -49,7 +49,9 @@
 .purple,
 .gray {
   --bg-color: var(--white);
-  --text-color: #2a313a;
+  --text: #2a313a;
+  --text-light: #64748b;
+  --text-lightest: #94a3b8;
   // Header
   --header-bg: var(--theme-color-50);
   --header-border: var(--theme-color-100);
@@ -173,7 +175,7 @@
 //   .purple,
 //   .gray {
 //     --bg-color: var(--theme-color-50);
-//     --text-color: #e2ebfb;
+//     --text: #e2ebfb;
 //     // Header
 //     --header-bg: var(--theme-color-100);
 //     --header-border: var(--theme-color-200);

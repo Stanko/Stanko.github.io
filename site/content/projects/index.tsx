@@ -41,7 +41,7 @@ const projects: {
           >
             <g
               fill="none"
-              stroke="var(--text-color)"
+              stroke="var(--text)"
               strokeWidth="12"
               strokeLinecap="round"
             >
@@ -272,7 +272,7 @@ const Projects = () => {
                         <ArrowTitle className="project__name h5">
                           {project.name}
                         </ArrowTitle>
-                        <p className="text-sm text-neutral-500">
+                        <p className="text-sm text-light">
                           {project.description}
                         </p>
                       </div>

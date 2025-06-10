@@ -39,9 +39,7 @@ const RelatedItem = async ({
         'related-art__item--prev': !isNext,
       })}
     >
-      <div className="text-xs text-neutral-500">
-        {isNext ? 'Next' : 'Previous'}
-      </div>
+      <div className="text-xs text-light">{isNext ? 'Next' : 'Previous'}</div>
       <ArrowTitle className="related-art__item-title" reversed={!isNext}>
         {item.pageData.title}
       </ArrowTitle>

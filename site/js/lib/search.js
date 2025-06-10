@@ -50,7 +50,7 @@ export function search() {
     searchResults.innerHTML = `<div class="menu__no-results">
       <div class="container">
       <p>No results found for <span class="arrow-title">"${searchTerm}"</span></p>
-      <p class="text-neutral-500 text-sm">Search is using fuzzy matching and searches only through page titles.</p>
+      <p class="text-light text-sm">Search is using fuzzy matching and searches only through page titles.</p>
       </div>
       </div>`;
   } else {
@@ -73,7 +73,7 @@ export function search() {
           index === 0 ? RESULT_FOCUS_CLASS : ''
         }" href="${result.url}">
         <div class="container">
-        <div class="menu__result-eyebrow text-sm text-neutral-500">${
+        <div class="menu__result-eyebrow text-sm text-light">${
           result.eyebrow
         }</div>
         <div class="menu__result-title arrow-title">

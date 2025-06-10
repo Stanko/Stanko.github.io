@@ -32,7 +32,7 @@ html {
 
 body {
   line-height: 1.4;
-  color: var(--text-color);
+  color: var(--text);
   background-color: var(--bg-color);
   font-family: var(--font-body);
   font-optical-sizing: auto;
@@ -84,7 +84,7 @@ button {
 }
 
 dialog {
-  color: var(--text-color);
+  color: var(--text);
 }
 
 h1,
@@ -253,7 +253,7 @@ blockquote {
 }
 
 .jump-to-content {
-  color: var(--text-color);
+  color: var(--text);
   background: var(--bg-color);
   border: 2px solid var(--theme-color);
   outline: none;
@@ -331,6 +331,14 @@ $neutral-shades: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900;
   .text-neutral-#{$shade} {
     color: var(--neutral-#{$shade});
   }
+}
+
+.text-light {
+  color: var(--text-light);
+}
+
+.text-lightest {
+  color: var(--text-lightest);
 }
 
 .outline {

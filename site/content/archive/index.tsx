@@ -89,7 +89,7 @@ const Archive = async ({ ...props }: ArchiveProps) => {
             <Fragment key={categoryGroup.name}>
               <div className="archive__category-header">
                 <h2
-                  className="archive__category-name h2 text-neutral-500"
+                  className="archive__category-name h2 text-light"
                   id={categoryGroup.slug}
                 >
                   {categoryGroup.name}{' '}
@@ -97,7 +97,7 @@ const Archive = async ({ ...props }: ArchiveProps) => {
                     #
                   </a>
                 </h2>
-                <div className="text-sm text-neutral-500">
+                <div className="text-sm text-light">
                   {categoryGroup.posts.length} posts
                 </div>
               </div>
@@ -105,7 +105,7 @@ const Archive = async ({ ...props }: ArchiveProps) => {
                 {categoryGroup.posts.map((post) => (
                   <li key={post.pathname} className="archive__post">
                     <a href={post.pathname} className={post.pageData.theme}>
-                      <div className="text-sm text-neutral-500">
+                      <div className="text-sm text-light">
                         {formatDate(post.pageData.date)}
                       </div>
                       <ArrowTitle>

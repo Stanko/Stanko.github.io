@@ -75,7 +75,7 @@ const getStats = () => {
     value: (
       <a href={longestPost.pathname} className={longestPost.pageData.theme}>
         <ArrowTitle>{longestPost.pageData.titlePlain}</ArrowTitle>
-        <span className="text-sm text-neutral-500">
+        <span className="text-sm text-light">
           {longestPost.pageData.words} words
         </span>
       </a>
@@ -94,7 +94,7 @@ const getStats = () => {
     value: (
       <a href={shortestPost.pathname} className={shortestPost.pageData.theme}>
         <ArrowTitle>{shortestPost.pageData.titlePlain}</ArrowTitle>
-        <span className="text-sm text-neutral-500">
+        <span className="text-sm text-light">
           {shortestPost.pageData.words} words
         </span>
       </a>
@@ -110,7 +110,7 @@ const getStats = () => {
     label: 'Redesigns',
     value: (
       <div>
-        4<div className="text-sm text-neutral-500">That I can remember</div>
+        4<div className="text-sm text-light">That I can remember</div>
       </div>
     ),
   });
@@ -148,7 +148,7 @@ const Stats = () => {
             })}
           </div>
 
-          <h2 className="text-neutral-500">Yearly Stats</h2>
+          <h2 className="text-light">Yearly Stats</h2>
 
           <p>
             The blue line shows the number of posts I published each year. The

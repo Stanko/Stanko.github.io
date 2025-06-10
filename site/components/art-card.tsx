@@ -42,7 +42,7 @@ const ArtCard = async ({
         />
       </span>
 
-      <span className="text-neutral-400 text-xs">
+      <span className="text-lightest text-xs">
         {formatDateMonthYear(page.pageData.date)}
       </span>
     </a>

@@ -20,7 +20,7 @@ $time: 750ms;
 
 .giraffe-input,
 .giraffe-clone {
-  border: 1px solid #ddd;
+  border: 1px solid var(--neutral-300);
   display: block;
   padding: $padding ($padding * 1.3);
   font-size: 30px;
@@ -30,7 +30,7 @@ $time: 750ms;
   background: var(--neutral-50);
 
   &::placeholder {
-    color: var(--neutral-500);
+    color: var(--text-light);
   }
 }
 
@@ -50,7 +50,7 @@ $time: 750ms;
   display: flex;
   border-color: transparent;
   transform: translateY(110px);
-  outline: 1px dashed var(--neutral-500);
+  outline: 1px dashed var(--neutral-400);
   outline-offset: -1px;
   color: var(--theme-color);
 }

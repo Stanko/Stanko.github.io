@@ -78,7 +78,7 @@ const Comments = ({ className = '', slug, theme, ...props }: CommentsProps) => {
   return (
     <div className={clsx('comments', className)} {...props}>
       <div className="container">
-        <h3 className="text-neutral-500">Comments ({comments.length})</h3>
+        <h3 className="text-light">Comments ({comments.length})</h3>
 
         {/* NICE render 5 and a show all button */}
         <div className="comments__list cont">

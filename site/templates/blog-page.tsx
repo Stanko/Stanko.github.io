@@ -120,7 +120,7 @@ const BlogPostTemplate = async ({
     >
       <Header
         eyebrow={
-          <time dateTime={date} className="text-neutral-500 text-sm">
+          <time dateTime={date} className="text-light text-sm">
             {formatDate(date)}
           </time>
         }

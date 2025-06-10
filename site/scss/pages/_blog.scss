@@ -27,7 +27,7 @@
 .blog__month-title {
   padding: 0.5rem 0;
   flex: 10rem 0 0;
-  color: var(--neutral-500);
+  color: var(--text-light);
   font-family: var(--font-body);
   font-weight: 400;
   line-height: 1.4;
@@ -54,7 +54,7 @@
 
   a {
     border-radius: 4px;
-    color: var(--text-color);
+    color: var(--text);
     display: inline-block;
     padding: 0.625rem;
 

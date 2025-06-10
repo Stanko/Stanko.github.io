@@ -22,12 +22,12 @@
 }
 
 .related-posts__title {
-  color: var(--neutral-500);
+  color: var(--text-light);
 }
 
 .related-posts__post {
   display: block;
-  color: var(--text-color);
+  color: var(--text);
 
   &:hover {
     color: var(--theme-color);

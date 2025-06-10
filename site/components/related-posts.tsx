@@ -53,12 +53,12 @@ const RelatedPosts = ({
               >
                 <time
                   dateTime={post.pageData.date}
-                  className="text-neutral-500 text-sm"
+                  className="text-light text-sm"
                 >
                   {formatDate(post.pageData.date)}
                 </time>
                 <Dev>
-                  <span className="text-neutral-500 text-sm">
+                  <span className="text-light text-sm">
                     {' '}
                     &bull; {post.score.toFixed(2)}
                   </span>
