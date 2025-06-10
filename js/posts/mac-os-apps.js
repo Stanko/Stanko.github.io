@@ -1,5 +1,5 @@
 if (navigator.clipboard) {
-  document.querySelectorAll('.content code').forEach((code) => {
+  document.querySelectorAll('.article a + code').forEach((code) => {
     const text = code.innerText;
     const button = document.createElement('button');
     let timeout;

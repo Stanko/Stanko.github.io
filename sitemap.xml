@@ -551,12 +551,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/elastic-hover-effect/</loc>
+  <loc>https://muffinman.io/blog/uploading-files-using-fetch-multipart-form-data/</loc>
   <lastmod>2018-03-19</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/uploading-files-using-fetch-multipart-form-data/</loc>
+  <loc>https://muffinman.io/blog/elastic-hover-effect/</loc>
   <lastmod>2018-03-19</lastmod>
 
 </url>
@@ -596,12 +596,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/consume-less-create-more/</loc>
+  <loc>https://muffinman.io/blog/my-programming-story/</loc>
   <lastmod>2018-01-01</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/my-programming-story/</loc>
+  <loc>https://muffinman.io/blog/consume-less-create-more/</loc>
   <lastmod>2018-01-01</lastmod>
 
 </url>
@@ -761,12 +761,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/setting-up-webpack-babel-and-react-from-scratch-part-3/</loc>
+  <loc>https://muffinman.io/blog/webpack-2-react-redux/</loc>
   <lastmod>2016-11-24</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/webpack-2-react-redux/</loc>
+  <loc>https://muffinman.io/blog/setting-up-webpack-babel-and-react-from-scratch-part-3/</loc>
   <lastmod>2016-11-24</lastmod>
 
 </url>
@@ -896,12 +896,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/animated-login-signup-forms/</loc>
+  <loc>https://muffinman.io/blog/custom-jekyll-pagination/</loc>
   <lastmod>2016-02-22</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/custom-jekyll-pagination/</loc>
+  <loc>https://muffinman.io/blog/animated-login-signup-forms/</loc>
   <lastmod>2016-02-22</lastmod>
 
 </url>
@@ -911,22 +911,22 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/</loc>
+  <loc>https://muffinman.io/stats/</loc>
+</url>
+  <url>
+  <loc>https://muffinman.io/about/</loc>
 </url>
   <url>
   <loc>https://muffinman.io/art/</loc>
 </url>
   <url>
-  <loc>https://muffinman.io/projects/</loc>
-</url>
-  <url>
   <loc>https://muffinman.io/archive/</loc>
 </url>
   <url>
-  <loc>https://muffinman.io/stats/</loc>
+  <loc>https://muffinman.io/projects/</loc>
 </url>
   <url>
-  <loc>https://muffinman.io/about/</loc>
+  <loc>https://muffinman.io/blog/</loc>
 </url>
   <url>
   <loc>https://muffinman.io/</loc>
