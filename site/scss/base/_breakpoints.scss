@@ -1,3 +1,12 @@
+// --- Variables
+
+$breakpoint-sm: 400px;
+$breakpoint-md: 600px;
+$breakpoint-lg: 960px;
+$breakpoint-xl: 1100px;
+$breakpoint-xxl: 1600px;
+$breakpoint-xxxl: 2000px;
+
 // --- Landscape
 @mixin landscape() {
   @media (orientation: landscape) {
