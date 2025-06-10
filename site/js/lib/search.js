@@ -8,7 +8,7 @@ let previousSearchTerm;
 
 const MIN_CHARACTERS = 1;
 const RESULT_FOCUS_CLASS = 'menu__result--focused';
-const MAX_RESULTS = 15;
+const MAX_RESULTS = 20;
 
 const fuzzy = new uFuzzy({
   intraIns: Infinity,
@@ -41,7 +41,10 @@ export function search() {
   navLinks.style.display = 'none';
   previousSearchTerm = searchTerm;
 
-  const indexes = fuzzy.filter(titles, searchTerm) || [].slice(0, MAX_RESULTS);
+  const indexes = (fuzzy.filter(titles, searchTerm) || []).slice(
+    0,
+    MAX_RESULTS
+  );
 
   if (indexes.length === 0) {
     searchResults.innerHTML = `<div class="menu__no-results">
@@ -109,7 +112,9 @@ searchInput.addEventListener('keydown', function (e) {
   if (isDown || isUp) {
     e.preventDefault();
 
-    item = isDown ? current.nextElementSibling : current.previousElementSibling;
+    item = isDown
+      ? current?.nextElementSibling
+      : current?.previousElementSibling;
   }
 
   if (item) {

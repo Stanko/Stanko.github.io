@@ -1,5 +1,5 @@
 .comments {
-  background-color: var(--neutral-50);
+  background-color: var(--footer-bg);
 
   h3 {
     padding-top: 3rem;
@@ -10,20 +10,26 @@
   }
 }
 
-.comments__list {
-  margin-top: 1rem;
-}
-
-.comments__comment {
-  border-bottom: 1px solid var(--neutral-200);
-  padding-bottom: 1.25rem;
+.comments__border {
+  padding-top: 2.5rem;
 
   @include md {
-    padding-bottom: 1.5rem;
+    padding-top: 3.5rem;
   }
 
-  &:last-child {
-    border-bottom: none;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.comments__list {
+  margin-top: 1rem;
+  max-width: 40rem;
+}
+
+.comments__comment + .comments__comment {
+  margin-top: 1.5rem;
+
+  @include md {
+    margin-top: 2rem;
   }
 }
 
@@ -54,4 +60,8 @@
   margin-top: 1rem;
   display: grid;
   gap: 0.5rem;
+
+  a {
+    @include text-link;
+  }
 }

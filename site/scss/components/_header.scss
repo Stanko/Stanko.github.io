@@ -1,7 +1,7 @@
 @use '../base/mixins' as *;
 
 .header {
-  background-color: var(--theme-color-50);
+  background-color: var(--header-bg);
 
   h1 {
     color: var(--theme-color-950);

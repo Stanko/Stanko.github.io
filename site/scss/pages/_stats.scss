@@ -1,7 +1,6 @@
 .stats__table {
   display: grid;
   gap: 0.75rem;
-  // max-width: 40rem;
 
   @include md {
     gap: 1rem;

@@ -96,13 +96,15 @@ li > code {
   font-size: 0.875em;
   padding: 0.1em 0.25em;
   border-radius: 6px;
-  background: var(--neutral-100);
+  // background: var(--neutral-100);
+  background: rgb(0 0 0 / 0.05);
+  color: var(--theme-color-900);
 }
 
 hr {
   margin: 1rem 0;
   border: none;
-  border-top: 1px solid var(--neutral-200);
+  border-top: 1px solid var(--border-color);
 }
 
 .codepen-iframe {

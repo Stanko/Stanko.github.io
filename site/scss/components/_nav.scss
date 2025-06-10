@@ -1,7 +1,7 @@
 @use '../base/mixins' as *;
 
 .nav {
-  background-color: var(--theme-color-50);
+  background-color: var(--header-bg);
   padding-top: 1.25rem;
 
   @include md {

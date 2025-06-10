@@ -1,10 +1,4 @@
 :root {
-  --radius: 8px;
-}
-
-// --- Colors
-
-:root {
   // --- Fonts
   --font-body: 'Bricolage Grotesque', ui-sans-serif, system-ui, -apple-system,
     BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
@@ -20,6 +14,8 @@
   --white: #fff;
   --black: #111112;
 
+  --theme-color: var(--theme-color-500);
+
   --neutral-50: #f8fbfe;
   --neutral-100: #f1f5f9;
   --neutral-200: #e2e8f0;
@@ -30,24 +26,6 @@
   --neutral-700: #334155;
   --neutral-800: #1e293b;
   --neutral-900: #0f172a;
-
-  --bg-color: var(--white);
-  --text-color: #2a313a;
-
-  // Dark mode WIP
-  // --neutral-900: #f1f5f9;
-  // --neutral-800: #e2e8f0;
-  // --neutral-700: #cbd5e1;
-  // --neutral-600: #94a3b8;
-  // --neutral-500: #64748b;
-  // --neutral-400: #475569;
-  // --neutral-300: #334155;
-  // --neutral-200: #1e293b;
-  // --neutral-100: #0f172a;
-  // --neutral-50: #000719;
-
-  // --bg-color: var(--neutral-100);
-  // --text-color: #e2ebfb;
 
   --time: 250ms;
 
@@ -60,6 +38,29 @@
   --layer-sidenote: 10;
   --layer-floating-hamburger: 20;
   --layer-color-strip: 1000;
+
+  --radius: 8px;
+}
+
+:root,
+.blue,
+.red,
+.orange,
+.purple,
+.gray {
+  --bg-color: var(--white);
+  --text-color: #2a313a;
+  // Header
+  --header-bg: var(--theme-color-50);
+  --header-border: var(--theme-color-100);
+  // Borders
+  --border-color: rgb(0 0 0 / 0.075);
+  // Footer
+  --footer-bg: var(--neutral-50);
+  // Cards
+  --card-hover: var(--theme-color-50);
+  // Search
+  --search-highlight: rgb(255 255 255 / 0.5);
 }
 
 // --- Color themes
@@ -79,21 +80,6 @@
   --theme-color-950: oklch(14.62% 0.05 249.76);
 
   --theme-color: var(--theme-color-500);
-
-  // Dark mode WIP
-  // --theme-color-950: oklch(95.49% 0.021 258.53);
-  // --theme-color-900: oklch(90.75% 0.038 256.97);
-  // --theme-color-800: oklch(81.55% 0.077 257.02);
-  // --theme-color-700: oklch(73.53% 0.119 257.09);
-  // --theme-color-600: oklch(64.8% 0.16 257.45);
-  // --theme-color-500: oklch(56.16% 0.198 258.79);
-  // --theme-color-400: oklch(48.86% 0.176 258.65);
-  // --theme-color-300: oklch(40.19% 0.151 258.45);
-  // --theme-color-200: oklch(30.03% 0.14 258.12);
-  // --theme-color-100: oklch(20.12% 0.1 256.69);
-  // --theme-color-50: oklch(14.62% 0.05 249.76);
-
-  // --theme-color: var(--theme-color-500);
 }
 
 .red {
@@ -159,3 +145,119 @@
 
   --theme-color: var(--theme-color-500);
 }
+
+// ----- DARK MODE ----- //
+
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --neutral-900: #f8f8f8;
+//     --neutral-800: #ededed;
+//     --neutral-700: #dddddd;
+//     --neutral-500: #afafaf;
+//     --neutral-400: #7f7f7f;
+//     --neutral-300: #515151;
+//     --neutral-200: #3f3f3f;
+//     --neutral-100: #262626;
+//     --neutral-50: #131313;
+
+//     // notice
+//     --notice-bg: #fffbeb;
+//     --notice-border: #fde68a;
+//     --notice-text: #925f07;
+//   }
+
+//   :root,
+//   .blue,
+//   .red,
+//   .orange,
+//   .purple,
+//   .gray {
+//     --bg-color: var(--theme-color-50);
+//     --text-color: #e2ebfb;
+//     // Header
+//     --header-bg: var(--theme-color-100);
+//     --header-border: var(--theme-color-200);
+//     // Borders
+//     --border-color: rgb(255 255 255 / 0.15);
+//     // Footer
+//     --footer-bg: var(--theme-color-100);
+//     // Cards
+//     --card-hover: var(--theme-color-100);
+//     // Search
+//     --search-highlight: var(--theme-color-100);
+//   }
+
+//   // --- Color themes
+
+//   :root,
+//   .blue {
+//     --theme-color-950: oklch(95.49% 0.021 258.53);
+//     --theme-color-900: oklch(90.75% 0.038 256.97);
+//     --theme-color-800: oklch(81.55% 0.077 257.02);
+//     --theme-color-700: oklch(73.53% 0.119 257.09);
+//     --theme-color-600: oklch(64.8% 0.16 257.45);
+//     --theme-color-500: oklch(56.16% 0.198 258.79);
+//     --theme-color-400: oklch(48.86% 0.176 258.65);
+//     --theme-color-300: oklch(40.19% 0.151 258.45);
+//     --theme-color-200: oklch(30.03% 0.14 258.12);
+//     --theme-color-100: oklch(20.12% 0.1 256.69);
+//     --theme-color-50: oklch(14.62% 0.05 249.76);
+//   }
+
+//   .red {
+//     --theme-color-950: oklch(99% 0.02 357.61);
+//     --theme-color-900: oklch(91.24% 0.041 357.05);
+//     --theme-color-800: oklch(82.71% 0.086 359.59);
+//     --theme-color-700: oklch(75.3% 0.131 1.67);
+//     --theme-color-600: oklch(66.84% 0.18 4.16);
+//     --theme-color-500: oklch(59.7% 0.207 10);
+//     --theme-color-400: oklch(52.02% 0.183 9.79);
+//     --theme-color-300: oklch(42.97% 0.158 8.84);
+//     --theme-color-200: oklch(30.49% 0.112 8.1);
+//     --theme-color-100: oklch(20.2% 0.059 4.66);
+//     --theme-color-50: oklch(14.31% 0.035 0.38);
+//   }
+
+//   .orange {
+//     // TODO update colors for dark theme
+//     --theme-color-950: oklch(0.9494 0.0323 61.4366);
+//     --theme-color-900: oklch(0.8988 0.0644 58.472);
+//     --theme-color-800: oklch(0.8524 0.0961 57.3187);
+//     --theme-color-700: oklch(0.8088 0.1271 55.9144);
+//     --theme-color-600: oklch(0.7687 0.156 53.7604);
+//     --theme-color-500: oklch(0.7215 0.1767 52.2691);
+//     --theme-color-400: oklch(0.6244 0.1488 52.4345);
+//     --theme-color-300: oklch(0.5266 0.1201 53.1982);
+//     --theme-color-200: oklch(0.4288 0.0926 52.9499);
+//     --theme-color-100: oklch(0.3325 0.0638 53.9821);
+//     --theme-color-50: oklch(0.2365 0.0353 57.4121);
+//   }
+
+//   .purple {
+//     --theme-color-950: oklch(95.95% 0.017 304.8);
+//     --theme-color-900: oklch(90.8% 0.037 304.76);
+//     --theme-color-800: oklch(82.57% 0.071 304.38);
+//     --theme-color-700: oklch(73.19% 0.111 302.74);
+//     --theme-color-600: oklch(65.07% 0.148 301.54);
+//     --theme-color-500: oklch(56.44% 0.185 299.82);
+//     --theme-color-400: oklch(48.94% 0.196 297.02);
+//     --theme-color-300: oklch(38.94% 0.155 297.36);
+//     --theme-color-200: oklch(29.42% 0.123 298.25);
+//     --theme-color-100: oklch(19.34% 0.092 299.23);
+//     --theme-color-50: oklch(14.98% 0.037 301.58);
+//   }
+
+//   .gray {
+//     --theme-color-950: oklch(95.54% 0.005 258.32);
+//     --theme-color-900: oklch(90.5% 0.008 253.86);
+//     --theme-color-800: oklch(82% 0.017 259.42);
+//     --theme-color-700: oklch(71.5% 0.027 255.61);
+//     --theme-color-600: oklch(61.77% 0.034 256.08);
+//     --theme-color-500: oklch(51% 0.026 256.8);
+//     --theme-color-400: oklch(42.99% 0.022 256.38);
+//     --theme-color-300: oklch(33.47% 0.017 255.64);
+//     --theme-color-200: oklch(25.47% 0.013 258.37);
+//     --theme-color-100: oklch(17.68% 0.007 258.37);
+//     --theme-color-50: oklch(12.97% 0.005 285.67);
+//   }
+// }

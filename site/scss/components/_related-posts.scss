@@ -1,6 +1,6 @@
 .related-posts {
   padding-top: 3rem;
-  background-color: var(--neutral-50);
+  background-color: var(--footer-bg);
 
   @include md {
     padding-top: 4rem;
@@ -9,7 +9,7 @@
 
 .related-posts__posts {
   padding-bottom: 3rem;
-  border-bottom: 1px solid var(--neutral-200);
+  border-bottom: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
   align-items: flex-start;

@@ -1,6 +1,6 @@
 .related-art {
   padding-top: 3rem;
-  background-color: var(--neutral-50);
+  background-color: var(--footer-bg);
 
   @include md {
     padding-top: 4rem;
@@ -13,7 +13,7 @@
 
 .related-art__items {
   display: flex;
-  border-bottom: 1px solid var(--neutral-200);
+  border-bottom: 1px solid var(--border-color);
   justify-content: space-between;
   padding-bottom: 3rem;
   margin-top: 1rem;

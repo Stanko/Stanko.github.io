@@ -223,7 +223,7 @@
 
 .menu__result--focused {
   display: block;
-  background-color: rgb(255 255 255 / 0.5);
+  background-color: var(--search-highlight);
 
   .arrow-title {
     color: var(--theme-color);

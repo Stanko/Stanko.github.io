@@ -9,7 +9,7 @@
 }
 
 .wave__fill {
-  fill: var(--theme-color-50);
+  fill: var(--header-bg);
 }
 
 .wave__mask {
@@ -17,6 +17,6 @@
 }
 
 .wave__border {
-  stroke: var(--theme-color-100);
+  stroke: var(--header-border);
   stroke-linecap: round;
 }

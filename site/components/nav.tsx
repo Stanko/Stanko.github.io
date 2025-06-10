@@ -52,7 +52,7 @@ const Nav = ({ children, className = '', pathname, ...props }: NavProps) => {
                 <a
                   href={link.href}
                   key={link.href}
-                  className={clsx('nav__link', {
+                  className={clsx('nav__link', link.theme, {
                     'nav__link--active': link.href === pathname,
                     'link-underline': link.href !== pathname,
                   })}
@@ -64,7 +64,6 @@ const Nav = ({ children, className = '', pathname, ...props }: NavProps) => {
                   className="nav__separator"
                   aria-hidden="true"
                 >
-                  {/* <path d="M 4 0 L 0 12" /> */}
                   <circle cx="2" cy="6" r="1" />
                 </svg>
               </Fragment>

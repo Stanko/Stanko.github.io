@@ -7,7 +7,7 @@
   &:hover,
   &:focus-visible {
     .art-card__image-wrapper {
-      background-color: var(--theme-color-50);
+      background-color: var(--card-hover);
     }
 
     img {
@@ -22,7 +22,7 @@
   }
 
   &:focus-visible .art-card__image-wrapper {
-    background-color: var(--theme-color-50);
+    background-color: var(--card-hover);
     outline: 2px solid var(--theme-color);
   }
 }

@@ -25,7 +25,7 @@
 
 .basic-input {
   background: transparent;
-  border: 1px solid var(--neutral-200);
+  border: 1px solid var(--border-color);
   padding: 6px 12px;
   font-size: 18px;
   border-radius: 4px;
@@ -69,7 +69,7 @@
   padding-right: 30px; // To avoid overlapping with the clear button
   color: var(--neutral-900);
   border: none;
-  border-bottom: 1px solid var(--neutral-200);
+  border-bottom: 1px solid var(--border-color);
   transition: border-color 250ms;
   background-color: transparent;
 

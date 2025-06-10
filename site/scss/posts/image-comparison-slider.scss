@@ -6,7 +6,7 @@
   --compare-handle-size: 32px;
 
   position: relative;
-  border: 1px solid var(--neutral-200);
+  border: 1px solid var(--border-color);
 }
 
 .compare:has(.compare__input:focus-visible) {
@@ -226,7 +226,7 @@
 
 .unstyled__mask {
   width: var(--slider-value);
-  border: 1px solid var(--neutral-200);
+  border: 1px solid var(--border-color);
   height: 100%;
   display: inline-block;
   overflow: hidden;
