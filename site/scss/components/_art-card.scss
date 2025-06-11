@@ -7,7 +7,7 @@
   &:hover,
   &:focus-visible {
     .art-card__image-wrapper {
-      background-color: var(--card-hover);
+      color: var(--theme-color-100);
     }
 
     img {
@@ -22,7 +22,6 @@
   }
 
   &:focus-visible .art-card__image-wrapper {
-    background-color: var(--card-hover);
     outline: 2px solid var(--theme-color);
   }
 }
@@ -33,20 +32,40 @@
 
 .art-card__image-wrapper {
   margin-top: auto;
-  padding: 1rem;
+  padding: 0.75rem;
   border-radius: var(--radius);
-  background: var(--neutral-50);
   margin-bottom: 0.25rem;
-  transition: background 250ms;
+  aspect-ratio: 1;
+  overflow: hidden;
+  transition: color 250ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: var(--neutral-100);
+  border: 1px solid currentColor;
+
+  @include md {
+    padding: 1rem;
+  }
 
   @include lg {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
 
   img {
     will-change: transform;
-    aspect-ratio: 1;
     object-fit: contain;
     transition: transform 250ms;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    border-radius: 4px;
   }
+}
+
+.art-card__pattern {
+  position: absolute;
+  inset: 0;
 }

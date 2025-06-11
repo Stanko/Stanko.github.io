@@ -1,5 +1,6 @@
 import { brz, dirs, type Page } from '@brz';
 import Sidenote from '@brz/components/sidenote';
+import CirclePatternSymbol from '@site/components/circle-pattern-symbol';
 import ArtCard from '@site/components/art-card';
 import Header from '@site/components/header';
 import BaseTemplate from '@site/templates/base';
@@ -68,6 +69,8 @@ const Art = async () => {
           })}
         </div>
       </main>
+
+      <CirclePatternSymbol />
     </BaseTemplate>
   );
 };

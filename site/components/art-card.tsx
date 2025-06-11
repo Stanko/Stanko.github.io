@@ -4,6 +4,7 @@ import type { ArtPage } from '@site/content/art';
 import clsx from 'clsx';
 import { sep } from 'node:path';
 import ArrowTitle from './arrow-title';
+import CirclePattern from './circle-pattern';
 
 export type ArtCardProps = React.HTMLAttributes<HTMLDivElement> & {
   page: ArtPage;
@@ -28,6 +29,7 @@ const ArtCard = async ({
       </ArrowTitle>
 
       <span className="art-card__image-wrapper">
+        <CirclePattern className="art-card__pattern" />
         <Img
           src={page.pageData.image}
           alt={page.pageData.title}
