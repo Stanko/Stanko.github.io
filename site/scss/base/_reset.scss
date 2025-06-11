@@ -23,8 +23,9 @@
   *,
   *::before,
   *::after {
-    transition: none !important;
-    animation: none !important;
+    // TODO improve on this
+    // transition: none !important;
+    // animation: none !important;
     scroll-behavior: auto !important;
   }
 }
