@@ -3,9 +3,11 @@
 .notice {
   border-radius: var(--radius);
   padding: 0.5rem 0.75rem;
-  border: 1px solid var(--border-color);
-  background-color: var(--neutral-100);
+  border: 1px solid var(--notice-border);
+  background-color: var(--notice-bg);
+  color: var(--notice-text);
   font-size: 1rem;
+  max-width: fit-content;
 }
 
 .notice--warning {
