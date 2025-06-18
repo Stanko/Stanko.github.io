@@ -57,14 +57,14 @@ it is not enough to listen <code>keydown</code> event. We need to create a simpl
 </span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></code></pre>
 <p>Now when we have our <code>activeKeys</code>, we can use them in our animation loop. To make sure I&#x27;m not making any typos when typing key names, I created a simple enum:</p>
-<div class="spoiler"><div class="spoiler__content-wrapper" id="mbrs0f4b-0g0wtu"><div class="spoiler__content"><pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">const</span> keys <span class="token operator">=</span> <span class="token punctuation">{</span>
+<div class="spoiler"><div class="spoiler__content-wrapper" id="mc2gvw42-ch9hf2"><div class="spoiler__content"><pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">const</span> keys <span class="token operator">=</span> <span class="token punctuation">{</span>
 </span><span class="code-line">  <span class="token constant">SPACE</span><span class="token operator">:</span> <span class="token string">&#x27; &#x27;</span><span class="token punctuation">,</span>
 </span><span class="code-line">  <span class="token constant">LEFT</span><span class="token operator">:</span> <span class="token string">&#x27;ArrowLeft&#x27;</span><span class="token punctuation">,</span>
 </span><span class="code-line">  <span class="token constant">RIGHT</span><span class="token operator">:</span> <span class="token string">&#x27;ArrowRight&#x27;</span><span class="token punctuation">,</span>
 </span><span class="code-line">  <span class="token constant">UP</span><span class="token operator">:</span> <span class="token string">&#x27;ArrowUp&#x27;</span><span class="token punctuation">,</span>
 </span><span class="code-line">  <span class="token constant">DOWN</span><span class="token operator">:</span> <span class="token string">&#x27;ArrowDown&#x27;</span><span class="token punctuation">,</span>
 </span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
-</span></code></pre></div></div><button class="spoiler__toggle btn btn--sm" aria-expanded="false" aria-controls="mbrs0f4b-0g0wtu"><span class="spoiler__toggle-show">Show enum</span><span class="spoiler__toggle-hide">Hide enum</span></button></div>
+</span></code></pre></div></div><button class="spoiler__toggle btn btn--sm" aria-expanded="false" aria-controls="mc2gvw42-ch9hf2"><span class="spoiler__toggle-show">Show enum</span><span class="spoiler__toggle-hide">Hide enum</span></button></div>
 <h2 id="game-state">Game state <a class="anchor-link" href="#game-state">#</a></h2>
 <p>The bare minimum we need is player&#x27;s position and velocity. Both of these values are two dimensional vectors.</p>
 <pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token comment">// ----- Types</span>
@@ -222,7 +222,7 @@ it is not enough to listen <code>keydown</code> event. We need to create a simpl
 <p>// ------------ TODO
 For easier debugging and figuring out what is going on, let&#x27;s add a movement trail. We can save and render the history of player&#x27;s positions and color code them. Horizontal acceleration is green and deceleration red. Trail immediately helped me to catch a few minor bugs I had with acceleration when player is already moving in the opposite direction.</p>
 <p>I don&#x27;t think the code is crucial or interesting, so I won&#x27;t go through it in details, but you can check it below and on <a href="https://codepen.io/stanko/pen/XWYrXvJ?editors=0100">CodePen</a>.</p>
-<div class="spoiler"><div class="spoiler__content-wrapper" id="mbrs0f4e-6p51r8"><div class="spoiler__content"><pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">function</span> <span class="token function">updateTrail</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<div class="spoiler"><div class="spoiler__content-wrapper" id="mc2gvw44-u983sq"><div class="spoiler__content"><pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">function</span> <span class="token function">updateTrail</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 </span><span class="code-line">  <span class="token keyword">const</span> last <span class="token operator">=</span> trail<span class="token punctuation">[</span>trail<span class="token punctuation">.</span><span class="token property-access">length</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 </span><span class="code-line">
 </span><span class="code-line">  <span class="token keyword">const</span> hasMoved <span class="token operator">=</span>
@@ -262,7 +262,7 @@ For easier debugging and figuring out what is going on, let&#x27;s add a movemen
 </span><span class="code-line">
 </span><span class="code-line">  trailElement<span class="token punctuation">.</span><span class="token property-access">innerHTML</span> <span class="token operator">=</span> trailHTML<span class="token punctuation">;</span>
 </span><span class="code-line"><span class="token punctuation">}</span>
-</span></code></pre></div></div><button class="spoiler__toggle btn btn--sm" aria-expanded="false" aria-controls="mbrs0f4e-6p51r8"><span class="spoiler__toggle-show">Show trail related code</span><span class="spoiler__toggle-hide">Hide trail related code</span></button></div>
+</span></code></pre></div></div><button class="spoiler__toggle btn btn--sm" aria-expanded="false" aria-controls="mc2gvw44-u983sq"><span class="spoiler__toggle-show">Show trail related code</span><span class="spoiler__toggle-hide">Hide trail related code</span></button></div>
 <h2 id="jumping">Jumping <a class="anchor-link" href="#jumping">#</a></h2>
 <p>// ---------- TODO</p>
 <p>// TODO ---------- Color code trail for vertical velocity</p>
