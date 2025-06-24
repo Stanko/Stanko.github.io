@@ -7,6 +7,7 @@ import Header from '@site/components/header';
 import ArtCard from '@site/components/art-card';
 import Arrow from '@site/components/arrow';
 import PostCard from '@site/components/post-card';
+import CirclePatternSymbol from '@site/components/circle-pattern-symbol';
 
 const Index = () => {
   const allPosts = brz.pages.getCollection('blog') as BlogPost[];
@@ -79,6 +80,8 @@ const Index = () => {
           See all drawings
         </a>
       </main>
+
+      <CirclePatternSymbol />
     </BaseTemplate>
   );
 };
