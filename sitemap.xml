@@ -596,12 +596,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/my-programming-story/</loc>
+  <loc>https://muffinman.io/blog/consume-less-create-more/</loc>
   <lastmod>2018-01-01</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/consume-less-create-more/</loc>
+  <loc>https://muffinman.io/blog/my-programming-story/</loc>
   <lastmod>2018-01-01</lastmod>
 
 </url>
@@ -651,12 +651,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/my-blog-setup/</loc>
+  <loc>https://muffinman.io/blog/trillion-ideas/</loc>
   <lastmod>2017-09-27</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/trillion-ideas/</loc>
+  <loc>https://muffinman.io/blog/my-blog-setup/</loc>
   <lastmod>2017-09-27</lastmod>
 
 </url>
@@ -881,12 +881,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/jekyll-read-more-link/</loc>
+  <loc>https://muffinman.io/blog/jekyll-gulp-workflow/</loc>
   <lastmod>2016-02-27</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/jekyll-gulp-workflow/</loc>
+  <loc>https://muffinman.io/blog/jekyll-read-more-link/</loc>
   <lastmod>2016-02-27</lastmod>
 
 </url>
@@ -896,12 +896,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/custom-jekyll-pagination/</loc>
+  <loc>https://muffinman.io/blog/animated-login-signup-forms/</loc>
   <lastmod>2016-02-22</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/animated-login-signup-forms/</loc>
+  <loc>https://muffinman.io/blog/custom-jekyll-pagination/</loc>
   <lastmod>2016-02-22</lastmod>
 
 </url>
@@ -911,22 +911,22 @@
 
 </url>
   <url>
+  <loc>https://muffinman.io/blog/</loc>
+</url>
+  <url>
+  <loc>https://muffinman.io/art/</loc>
+</url>
+  <url>
   <loc>https://muffinman.io/stats/</loc>
 </url>
   <url>
   <loc>https://muffinman.io/about/</loc>
 </url>
   <url>
-  <loc>https://muffinman.io/art/</loc>
-</url>
-  <url>
-  <loc>https://muffinman.io/archive/</loc>
-</url>
-  <url>
   <loc>https://muffinman.io/projects/</loc>
 </url>
   <url>
-  <loc>https://muffinman.io/blog/</loc>
+  <loc>https://muffinman.io/archive/</loc>
 </url>
   <url>
   <loc>https://muffinman.io/</loc>
