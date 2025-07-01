@@ -14,6 +14,101 @@ type Project = {
   thumb?: React.ReactElement;
 };
 
+const Monorail = () => {
+  return (
+    <svg viewBox="0 0 100 56" fill="none" className="project__image">
+      <style>
+        {`
+        :root {
+          --monorail-bg: #fdfaf9;
+          --monorail-fg: #191819;
+          --monorail-light-gray: #c1c1c9;
+          --monorail-gray: #515159;
+          --monorail-text-gray: #818189;
+
+          --monorail-red: #d9174b;
+          --monorail-orange: #f27d00;
+          --monorail-yellow: #e3aa00;
+          --monorail-green: #00b96b;
+          --monorail-blue: #0085fb;
+          --monorail-purple: #3a17c6;
+
+          --monorail-current-time: #940757;
+          --monorail-swatch-outline: rgb(0 0 0 / 0.1);
+        }
+
+        /*
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --monorail-bg: #191819;
+            --monorail-fg: #fdfaf9;
+            --monorail-light-gray: #313139;
+            --monorail-gray: #b1b1b9;
+            --monorail-text-gray: #818189;
+
+            --monorail-red: #ff4073;
+            --monorail-orange: #ff9320;
+            --monorail-yellow: #ffd700;
+            --monorail-green: #00ff93;
+            --monorail-blue: #3ea5ff;
+            --monorail-purple: #8b6eff;
+
+            --monorail-current-time: #fd799c;
+            --monorail-swatch-outline: rgb(255 255 255 / 0.1);
+          }
+        }
+        */
+    `}
+      </style>
+      <g className="monorail-fills" style={{ opacity: 0.1 }}>
+        <path
+          fill="var(--monorail-green)"
+          d="M 0.0 30.0 C 4.2 30.0 5.8 53.5 10.0 53.5 C 19.8 53.5 23.5 27.0 33.3 27.0 C 61.3 27.0 72.0 30.0 100.0 30.0 V 30 H 0.0 Z"
+        />
+        <path
+          fill="var(--monorail-blue)"
+          d="M 0.0 30.0 C 4.2 30.0 5.8 30.0 10.0 30.0 C 19.8 30.0 23.5 54.0 33.3 54.0 C 61.3 54.0 72.0 30.0 100.0 30.0 V 30 H 0.0 Z"
+        />
+        <path
+          fill="var(--monorail-purple)"
+          d="M 0.0 0.0 C 28.0 0.0 38.6 15.0 66.6 15.0 C 80.6 15.0 86.0 0.0 100.0 0.0 V 30 H 0.0 Z"
+        />
+        <path
+          fill="var(--monorail-yellow)"
+          d="M 0.0 28.4 C 4.2 28.4 5.8 20.2 10.0 20.2 C 26.8 20.2 33.2 6.0 50.0 6.0 C 71.0 6.0 79.0 28.4 100.0 28.4 V 30 H 0.0 Z"
+        />
+      </g>
+      <polyline
+        className="monorail-zero-line"
+        vectorEffect="non-scaling-stroke"
+        points="0,30 100,30"
+      />
+      <g className="monorail-lines">
+        <path
+          vectorEffect="non-scaling-stroke"
+          stroke="var(--monorail-green)"
+          d="M 0.0 30.0 C 4.2 30.0 5.8 53.5 10.0 53.5 C 19.8 53.5 23.5 27.0 33.3 27.0 C 61.3 27.0 72.0 30.0 100.0 30.0"
+        />
+        <path
+          vectorEffect="non-scaling-stroke"
+          stroke="var(--monorail-blue)"
+          d="M 0.0 30.0 C 4.2 30.0 5.8 30.0 10.0 30.0 C 19.8 30.0 23.5 54.0 33.3 54.0 C 61.3 54.0 72.0 30.0 100.0 30.0"
+        />
+        <path
+          vectorEffect="non-scaling-stroke"
+          stroke="var(--monorail-purple)"
+          d="M 0.0 0.0 C 28.0 0.0 38.6 15.0 66.6 15.0 C 80.6 15.0 86.0 0.0 100.0 0.0"
+        />
+        <path
+          vectorEffect="non-scaling-stroke"
+          stroke="var(--monorail-yellow)"
+          d="M 0.0 28.4 C 4.2 28.4 5.8 20.2 10.0 20.2 C 26.8 20.2 33.2 6.0 50.0 6.0 C 71.0 6.0 79.0 28.4 100.0 28.4"
+        />
+      </g>
+    </svg>
+  );
+};
+
 const projects: {
   title: string;
   projects: Project[];
@@ -136,6 +231,13 @@ const projects: {
   {
     title: 'Libraries and tools',
     projects: [
+      {
+        description:
+          'Tailor is a developer tool that simplifies inspecting spacings on websites. Available as a browser extension and as a library.',
+        thumb: <Monorail />,
+        link: 'https://muffinman.io/monorail/',
+        name: 'Monorail',
+      },
       {
         description:
           'Tailor is a developer tool that simplifies inspecting spacings on websites. Available as a browser extension and as a library.',
