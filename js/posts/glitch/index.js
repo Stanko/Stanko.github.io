@@ -4,7 +4,6 @@ const examples = [...document.querySelectorAll('.example')];
 
 examples.forEach((example) => {
   const animationElement = example.querySelector('.animation');
-  const playButton = example.querySelector('.btn');
   const monorailContainer = example.querySelector('.animation-monorail');
   let animation;
   try {
@@ -22,20 +21,6 @@ examples.forEach((example) => {
 
   const monorail = new Monorail(animation, { height: 20 });
   monorailContainer.appendChild(monorail.element);
-
-  animationElement.addEventListener('animationend', () => {
-    playButton.textContent = 'Play';
-  });
-
-  playButton.addEventListener('click', () => {
-    if (animation.playState === 'running') {
-      animation.pause();
-      playButton.textContent = 'Play';
-    } else {
-      animation.play();
-      playButton.textContent = 'Pause';
-    }
-  });
 });
 
 const toggleGap = document.querySelector('.toggle-gap');

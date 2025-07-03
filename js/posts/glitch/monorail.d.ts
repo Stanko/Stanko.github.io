@@ -1,4 +1,4 @@
-import { AnimationData, Easing, PropertyKeyframes, Color } from "./parser.js";
+import { AnimationData, Easing, PropertyKeyframes, Color } from './parser.js';
 export type Vector = {
   x: number;
   y: number;
@@ -30,6 +30,7 @@ export type MinMax = {
 type Options = {
   height?: number;
   colors?: string[];
+  playbackSpeed?: number;
 };
 export declare class Monorail {
   animation: CSSAnimation;
@@ -39,20 +40,28 @@ export declare class Monorail {
   totalHeight: number;
   scales: Record<string, number>;
   properties: Properties;
+  playbackSpeed: number;
+  isPlaying: boolean;
+  isDragging: boolean;
+  colors: string[];
+  colorIndex: number;
   svg: SVGElement;
+  playPauseButton: HTMLButtonElement;
   tooltip: HTMLDivElement;
   element: HTMLDivElement;
   valuesDivs: Record<string, HTMLDivElement>;
-  colors: string[];
-  colorIndex: number;
   constructor(animation: CSSAnimation, options?: Options);
   getMinMaxValues: () => Record<string, MinMax>;
   prepareAnimation: (data: Record<string, PropertyKeyframes>) => Properties;
   getPoint: (p: Vector, scale: number, color: string) => string;
-  draw: () => void;
+  renderGraph: () => void;
   buildTooltip: () => void;
   updateTooltip: (offsetX: number, xPercentage: number) => void;
-  scroll: (axis: SVGGElement, offsetX: number) => void;
+  update: (axis: SVGGElement, offsetX: number, moveAnimation?: boolean) => void;
+  play: (axis: SVGGElement) => void;
+  pause: () => void;
   addEvents: (axis: SVGGElement) => void;
+  handleMouseUp: () => void;
+  destroy: () => void;
 }
 export {};

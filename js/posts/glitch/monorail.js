@@ -1,7 +1,6 @@
-import BezierEasing from "./bezier-easing.js";
-import { parse } from "./parser.js";
-import { getScales } from "./utils.js";
-
+import BezierEasing from './bezier-easing.js';
+import { parse } from './parser.js';
+import { getScales } from './utils.js';
 const getCurve = (
   start,
   end,
@@ -25,21 +24,25 @@ const getCurve = (
   ];
 };
 const DEFAULT_COLORS = [
-  "var(--monorail-blue)",
-  "var(--monorail-purple)",
-  "var(--monorail-yellow)",
-  "var(--monorail-orange)",
-  "var(--monorail-red)",
-  "var(--monorail-green)",
+  'var(--monorail-purple)',
+  'var(--monorail-blue)',
+  'var(--monorail-yellow)',
+  'var(--monorail-orange)',
+  'var(--monorail-red)',
+  'var(--monorail-green)',
 ];
 // TODO handle opacity and filter-opacity
 export class Monorail {
   constructor(animation, options = {}) {
-    this.svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    this.tooltip = document.createElement("div");
-    this.element = document.createElement("div");
-    this.valuesDivs = {};
+    this.isPlaying = false;
+    this.isDragging = false;
     this.colorIndex = 0;
+    // DOM
+    this.svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    this.playPauseButton = document.createElement('button');
+    this.tooltip = document.createElement('div');
+    this.element = document.createElement('div');
+    this.valuesDivs = {};
     this.getMinMaxValues = () => {
       const { transform, numeric, filter, colors } = this.animationData;
       const properties = [
@@ -79,9 +82,9 @@ export class Monorail {
             name: property.name,
             startValue: frame.value,
             endValue: nextFrame.value,
-            rgbaStartValue: "rgba" in frame ? frame.rgba : undefined,
-            rgbaEndValue: "rgba" in nextFrame ? nextFrame.rgba : undefined,
-            unit: "unit" in frame ? frame.unit || nextFrame.unit : "",
+            rgbaStartValue: 'rgba' in frame ? frame.rgba : undefined,
+            rgbaEndValue: 'rgba' in nextFrame ? nextFrame.rgba : undefined,
+            unit: 'unit' in frame ? frame.unit || nextFrame.unit : '',
             scale: this.scales[property.name],
             curve,
           });
@@ -104,7 +107,7 @@ export class Monorail {
               const [c1, c2, p2] = scaledPoints;
               return `C ${c1.x} ${c1.y} ${c2.x} ${c2.y} ${p2.x} ${p2.y}`;
             })
-            .join(" ");
+            .join(' ');
         const line = `<path vector-effect="non-scaling-stroke" stroke="${color}" d="${d}" />`;
         const fill = `<path fill="${color}" d="${d} V ${height} H ${start.x} Z" />`;
         return {
@@ -122,9 +125,9 @@ export class Monorail {
       const x = p.x.toFixed(1);
       return `<path stroke="${color}" d="M ${x} ${y} h 0.01" vector-effect="non-scaling-stroke"/>`;
     };
-    this.draw = () => {
+    this.renderGraph = () => {
       const { svg, height: h, totalHeight: th, properties } = this;
-      this.tooltip.classList.add("monorail-tooltip");
+      this.tooltip.classList.add('monorail-tooltip');
       const pointsHTML = [];
       const linesHTML = [];
       const fillHTML = [];
@@ -148,26 +151,26 @@ export class Monorail {
         `  <path     class="monorail-current-time-point" vector-effect="non-scaling-stroke" d="M 0 0 h 0.01"/>`,
         `  <path     class="monorail-current-time-point" vector-effect="non-scaling-stroke" d="M 0 ${th} h 0.01"/>`,
         `</g>`,
-      ].join("\n");
+      ].join('\n');
       // Zero line
       const zeroLine = `<polyline class="monorail-zero-line" vector-effect="non-scaling-stroke" points="0,${h} 100,${h}" />`;
       const notches = [0, 25, 50, 75, 100]
         .map((x) => {
           return `<polyline class="monorail-notch" vector-effect="non-scaling-stroke" points="${x},${th} ${x},${h}" />`;
         })
-        .join("\n");
+        .join('\n');
       // Invisible area for better hover
       const hoverHelper = `<rect x="-10" y="0" width="120" height="${th}" />`;
       svg.innerHTML += hoverHelper;
-      svg.innerHTML += `<g class="monorail-fills">${fillHTML.join("\n")}</g>`;
+      svg.innerHTML += `<g class="monorail-fills">${fillHTML.join('\n')}</g>`;
       svg.innerHTML += `<g class="monorail-notches">${notches}</g>`;
       svg.innerHTML += zeroLine;
-      svg.innerHTML += `<g class="monorail-lines">${linesHTML.join("\n")}</g>`;
+      svg.innerHTML += `<g class="monorail-lines">${linesHTML.join('\n')}</g>`;
       svg.innerHTML += `<g class="monorail-points">${pointsHTML.join(
-        "\n"
+        '\n'
       )}</g>`;
       svg.innerHTML += currentTimeAxis;
-      const axis = svg.querySelector(".monorail-current-time");
+      const axis = svg.querySelector('.monorail-current-time');
       this.addEvents(axis);
     };
     this.buildTooltip = () => {
@@ -188,18 +191,26 @@ export class Monorail {
           `<div>${property.name}</div>`,
           `<div class="monorail-tooltip-value-${property.name}"></div>`,
           `</div>`,
-        ].join("\n");
+        ].join('\n');
       });
+      // Manually selected minimum width to fit the color name and value
+      // Value looks like this: rgb(255 255 255 / 0.99) [swatch]
       if (longestColorName > 0) {
-        this.tooltip.style.minWidth = `${longestColorName + 29}ch`;
+        this.tooltip.style.setProperty(
+          '--monorail-tooltip-min-width',
+          `${longestColorName + 29}ch`
+        );
       } else {
-        this.tooltip.style.minWidth = `${longestPropName + 12}ch`;
+        this.tooltip.style.setProperty(
+          '--monorail-tooltip-min-width',
+          `${longestColorName + 12}ch`
+        );
       }
       tooltip.innerHTML =
         '<div class="monorail-tooltip-value-percentage">0.0%</div>' +
-        html.join("");
+        html.join('');
       this.valuesDivs = {
-        percentage: tooltip.querySelector(".monorail-tooltip-value-percentage"),
+        percentage: tooltip.querySelector('.monorail-tooltip-value-percentage'),
       };
       properties.forEach((property) => {
         this.valuesDivs[property.name] = tooltip.querySelector(
@@ -254,58 +265,93 @@ export class Monorail {
       });
       this.valuesDivs.percentage.innerHTML = `${xPercentage.toFixed(1)}%`;
       this.tooltip.style.setProperty(
-        "--monorail-tooltip-x",
+        '--monorail-tooltip-x',
         `${offsetX.toFixed(1)}px`
       );
       this.tooltip.style.setProperty(
-        "--monorail-tooltip-margin",
+        '--monorail-tooltip-margin',
         `-${xPercentage.toFixed(1)}%`
       );
     };
-    this.scroll = (axis, offsetX) => {
+    this.update = (axis, offsetX, moveAnimation = true) => {
       const { svg, animation } = this;
       if (offsetX < 0) {
         offsetX = 0;
       } else if (offsetX > svg.clientWidth) {
         offsetX = svg.clientWidth;
       }
-      const ratio = offsetX / svg.clientWidth;
-      let xPercentage = (offsetX / svg.clientWidth) * 100;
+      const progress = offsetX / svg.clientWidth;
+      let xPercentage = progress * 100;
       // Round to 0.1
       xPercentage = Math.round(xPercentage / 0.1) * 0.1;
-      axis.setAttribute("transform", `translate(${xPercentage.toFixed(1)} 0)`);
+      axis.setAttribute('transform', `translate(${xPercentage.toFixed(1)} 0)`);
       const duration = animation.effect.getTiming().duration;
-      animation.currentTime = duration * ratio;
-      animation.pause();
+      if (moveAnimation) {
+        animation.currentTime = duration * progress;
+        animation.pause();
+      }
       this.updateTooltip(offsetX, xPercentage);
     };
+    this.play = (axis) => {
+      this.isPlaying = true;
+      this.element.classList.add('monorail-playing');
+      const { svg, animation, playbackSpeed } = this;
+      const duration = animation.effect.getTiming().duration;
+      let start = performance.now();
+      const update = () => {
+        const currentTime = performance.now();
+        const elapsed = (currentTime - start) * playbackSpeed;
+        const progress = elapsed / duration;
+        this.update(axis, progress * svg.clientWidth, true);
+        if (progress >= 1 || !this.isPlaying) {
+          this.pause();
+          return;
+        }
+        requestAnimationFrame(() => {
+          update();
+        });
+      };
+      update();
+    };
+    this.pause = () => {
+      this.isPlaying = false;
+      this.animation.pause();
+      this.element.classList.remove('monorail-playing');
+    };
     this.addEvents = (axis) => {
-      const { svg } = this;
-      // Mouse events
-      let isDragging = false;
-      svg.addEventListener("mousedown", (e) => {
-        const offsetX = e.offsetX;
-        this.scroll(axis, offsetX);
-        isDragging = true;
-      });
-      svg.addEventListener("mousemove", (e) => {
-        if (isDragging) {
-          const offsetX = e.offsetX;
-          this.scroll(axis, offsetX);
+      const { svg, playPauseButton } = this;
+      // Play pause
+      playPauseButton.addEventListener('click', () => {
+        if (this.isPlaying) {
+          this.pause();
+        } else {
+          this.play(axis);
         }
       });
-      document.addEventListener("mouseup", () => {
-        isDragging = false;
+      // Mouse events
+      svg.addEventListener('mousedown', (e) => {
+        this.pause();
+        const offsetX = e.offsetX;
+        this.update(axis, offsetX);
+        this.isDragging = true;
       });
+      svg.addEventListener('mousemove', (e) => {
+        if (this.isDragging) {
+          const offsetX = e.offsetX;
+          this.update(axis, offsetX);
+        }
+      });
+      document.addEventListener('mouseup', this.handleMouseUp);
       // Touch events
       let touchStart;
-      svg.addEventListener("touchstart", (e) => {
+      svg.addEventListener('touchstart', (e) => {
+        this.pause();
         touchStart = {
           x: e.touches[0].clientX,
           y: e.touches[0].clientY,
         };
       });
-      svg.addEventListener("touchmove", (e) => {
+      svg.addEventListener('touchmove', (e) => {
         const current = {
           x: e.touches[0].clientX,
           y: e.touches[0].clientY,
@@ -316,15 +362,32 @@ export class Monorail {
           e.preventDefault();
           const offsetX =
             e.touches[0].clientX - svg.getBoundingClientRect().left;
-          this.scroll(axis, offsetX);
+          this.update(axis, offsetX);
         }
       });
     };
-    const { height = 30, colors = DEFAULT_COLORS } = options;
+    this.handleMouseUp = () => {
+      this.isDragging = false;
+    };
+    this.destroy = () => {
+      // Destroying all references
+      // This will also clean up the event listeners
+      this.element.innerHTML = '';
+      this.element.remove();
+      this.svg = null;
+      this.playPauseButton = null;
+      this.tooltip = null;
+      this.element = null;
+      this.valuesDivs = {};
+      document.removeEventListener('mouseup', this.handleMouseUp);
+    };
+    const { height = 30, colors = DEFAULT_COLORS, playbackSpeed = 1 } = options;
     this.colors = colors;
     this.height = height;
+    this.playbackSpeed = playbackSpeed;
     this.animation = animation;
-    this.animationData = parse(animation);
+    this.animation = this.animation;
+    this.animationData = parse(this.animation);
     const minMax = this.getMinMaxValues();
     this.scales = getScales(height, minMax);
     // scale * min
@@ -336,24 +399,38 @@ export class Monorail {
     }
     this.heightNegative = Math.abs(globalMinimum) + 2;
     this.totalHeight = height + this.heightNegative;
-    this.svg.setAttribute("viewBox", `0 0 100 ${this.totalHeight}`);
-    this.svg.setAttribute("fill", "none");
+    this.svg.setAttribute('viewBox', `0 0 100 ${this.totalHeight}`);
+    this.svg.setAttribute('fill', 'none');
     this.properties = [
       ...this.prepareAnimation(this.animationData.transform),
       ...this.prepareAnimation(this.animationData.filter),
       ...this.prepareAnimation(this.animationData.numeric),
       ...this.prepareAnimation(this.animationData.colors),
     ];
+    this.playPauseButton.innerHTML = [
+      '<span class="monorail-play">Play</span>',
+      '<span class="monorail-pause">Pause</span>',
+    ].join('\n');
+    this.playPauseButton.classList.add(
+      'monorail-play-pause-button',
+      'btn',
+      'btn--sm'
+    );
     this.buildTooltip();
-    this.draw();
-    const timeline = document.createElement("div");
-    timeline.classList.add("monorail-timeline");
+    this.renderGraph();
+    const timeline = document.createElement('div');
+    timeline.classList.add('monorail-timeline');
     timeline.innerHTML = [
-      "<div><span>0</span></div>",
-      "<div><span>50</span></div>",
-      "<div><span>100</span></div>",
-    ].join("\n");
-    this.element.classList.add("monorail");
-    this.element.replaceChildren(this.svg, timeline, this.tooltip);
+      '<div><span>0</span></div>',
+      '<div><span>50</span></div>',
+      '<div><span>100</span></div>',
+    ].join('\n');
+    this.element.classList.add('monorail');
+    this.element.replaceChildren(
+      this.svg,
+      timeline,
+      this.playPauseButton,
+      this.tooltip
+    );
   }
 }
