@@ -134,8 +134,16 @@
   --monorail-stroke-width: 1px;
   --monorail-fill-opacity: 0.1;
 
+  --monorail-fill-opacity: 0.1;
+  --monorail-font-family: 'Fira Code', 'DejaVu Sans Mono', Menlo, ui-monospace,
+    'Cascadia Code', 'Source Code Pro', Consolas, monospace;
+  --monorail-font-size: 0.75rem;
+
+  /* Colors */
+
   --monorail-bg: #fdfaf9;
   --monorail-fg: #191819;
+  --monorail-light-gray: #c1c1c9;
 
   --monorail-red: #d9174b;
   --monorail-orange: #f27d00;
@@ -145,20 +153,15 @@
   --monorail-purple: #3a17c6;
 
   --monorail-current-time: #940757;
-  --monorail-notches: #c1c1c9;
   --monorail-swatch-outline: rgb(0 0 0 / 0.1);
-
-  --monorail-fill-opacity: 0.1;
-  --monorail-font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro',
-    Menlo, Consolas, 'DejaVu Sans Mono', monospace;
-  --monorail-font-size: 12px;
 }
 
 /* Dark mode */
-.dark-scheme {
+@media (prefers-color-scheme: dark) {
   .monorail {
     --monorail-bg: #191819;
     --monorail-fg: #fdfaf9;
+    --monorail-light-gray: #313139;
 
     --monorail-red: #ff4073;
     --monorail-orange: #ff9320;
@@ -168,13 +171,11 @@
     --monorail-purple: #8b6eff;
 
     --monorail-current-time: #fd799c;
-    --monorail-notches: #313139;
     --monorail-swatch-outline: rgb(255 255 255 / 0.1);
   }
 }
 
 .monorail {
-  margin: 20px 0;
   font-family: var(--monorail-font-family);
   line-height: 1.3;
   font-weight: 500;
@@ -208,7 +209,7 @@
 
 .monorail-zero-line,
 .monorail-notch {
-  stroke: var(--monorail-notches);
+  stroke: var(--monorail-light-gray);
 }
 
 .monorail-current-time {
@@ -232,7 +233,7 @@
   justify-content: space-between;
   height: 1.3em;
   position: relative;
-  margin: 0.5em 0 1em;
+  margin: 0.5em 0;
 }
 
 .monorail-timeline div {
@@ -244,11 +245,20 @@
   transform: translateX(-50%);
 }
 
+.monorail-play-pause-button {
+  margin-bottom: 0.75rem;
+}
+
+.monorail:not(.monorail-playing) .monorail-pause,
+.monorail-playing .monorail-play {
+  display: none;
+}
+
 .monorail-tooltip {
   font-size: var(--monorail-font-size);
   display: inline-block;
-  padding: 10px;
-  border: 1px solid var(--monorail-notches);
+  padding: 0.625rem;
+  border: 1px solid var(--monorail-light-gray);
   color: var(--monorail-fg);
   background-color: var(--monorail-bg);
   border-radius: 4px;
@@ -258,8 +268,9 @@
 .monorail-tooltip > div {
   display: flex;
   justify-content: space-between;
-  gap: 1em;
+  gap: 0 1.5rem;
   position: relative;
+  flex-wrap: wrap;
 }
 
 .monorail-color-swatch {
@@ -281,9 +292,14 @@
     --monorail-stroke-width: 2px;
   }
 
-  .monorail-tooltip,
-  .monorail-timeline {
-    --monorail-font-size: 14px;
+  .monorail-timeline,
+  .monorail-play-pause-button,
+  .monorail-tooltip {
+    --monorail-font-size: 0.875rem;
+  }
+
+  .monorail-tooltip {
+    min-width: var(--monorail-tooltip-min-width);
   }
 
   .monorail-current-time {
@@ -291,9 +307,9 @@
   }
 }
 
-@container (min-width: 500px) {
+@container (min-width: 600px) {
   .monorail-tooltip {
-    width: auto;
+    width: fit-content;
     transform: translateX(
       calc(var(--monorail-tooltip-x) + var(--monorail-tooltip-margin))
     );

@@ -15,7 +15,6 @@ const Example = ({ className }) => {
           style={{ backgroundPosition: '0 -38em', height: '38em' }}
         />
       </div>
-      <button className="btn btn--sm btn--empty">Play</button>
       <div className="animation-monorail" />
     </div>
   );
