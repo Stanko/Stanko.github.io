@@ -16,7 +16,7 @@
 <h3 id="esm-and-cjs-modules">ESM and CJS modules <a class="anchor-link" href="#esm-and-cjs-modules">#</a></h3>
 <p>It helps your users to have both types of modules available. The main blocker is that you can&#x27;t use ESM packages in CJS.</p>
 <p>That&#x27;s why I have two builds which are using different TypeScript configurations. Both config files extend <a href="https://github.com/Stanko/keen/blob/dev/tsconfig-base.json">tsconfig-base.json</a> and they just define the appropriate module type and transpile target:</p>
-<div class="spoiler"><div class="spoiler__content-wrapper" id="mdyejai0-4xomih"><div class="spoiler__content"><pre class="language-json"><code class="language-json code-highlight"><span class="code-line"><span class="token punctuation">{</span>
+<div class="spoiler"><div class="spoiler__content-wrapper" id="mdyhjusa-ths4iu"><div class="spoiler__content"><pre class="language-json"><code class="language-json code-highlight"><span class="code-line"><span class="token punctuation">{</span>
 </span><span class="code-line">  <span class="token property">&quot;extends&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./tsconfig-base.json&quot;</span><span class="token punctuation">,</span>
 </span><span class="code-line">  <span class="token property">&quot;compilerOptions&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
 </span><span class="code-line">    <span class="token property">&quot;module&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ES2020&quot;</span><span class="token punctuation">,</span>
@@ -24,8 +24,8 @@
 </span><span class="code-line">    <span class="token property">&quot;target&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ES2015&quot;</span>
 </span><span class="code-line">  <span class="token punctuation">}</span>
 </span><span class="code-line"><span class="token punctuation">}</span>
-</span></code></pre></div></div><button class="spoiler__toggle btn btn--sm" aria-expanded="false" aria-controls="mdyejai0-4xomih"><span class="spoiler__toggle-show">Show tsconfig-esm.json</span><span class="spoiler__toggle-hide">Hide tsconfig-esm.json</span></button></div>
-<div class="spoiler"><div class="spoiler__content-wrapper" id="mdyejai1-ftuthh"><div class="spoiler__content"><pre class="language-json"><code class="language-json code-highlight"><span class="code-line"><span class="token punctuation">{</span>
+</span></code></pre></div></div><button class="spoiler__toggle btn btn--sm" aria-expanded="false" aria-controls="mdyhjusa-ths4iu"><span class="spoiler__toggle-show">Show tsconfig-esm.json</span><span class="spoiler__toggle-hide">Hide tsconfig-esm.json</span></button></div>
+<div class="spoiler"><div class="spoiler__content-wrapper" id="mdyhjusa-m6t83u"><div class="spoiler__content"><pre class="language-json"><code class="language-json code-highlight"><span class="code-line"><span class="token punctuation">{</span>
 </span><span class="code-line">  <span class="token property">&quot;extends&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./tsconfig-base.json&quot;</span><span class="token punctuation">,</span>
 </span><span class="code-line">  <span class="token property">&quot;compilerOptions&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
 </span><span class="code-line">    <span class="token property">&quot;module&quot;</span><span class="token operator">:</span> <span class="token string">&quot;commonjs&quot;</span><span class="token punctuation">,</span>
@@ -33,7 +33,7 @@
 </span><span class="code-line">    <span class="token property">&quot;target&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ES2015&quot;</span>
 </span><span class="code-line">  <span class="token punctuation">}</span>
 </span><span class="code-line"><span class="token punctuation">}</span>
-</span></code></pre></div></div><button class="spoiler__toggle btn btn--sm" aria-expanded="false" aria-controls="mdyejai1-ftuthh"><span class="spoiler__toggle-show">Show tsconfig-cjs.json</span><span class="spoiler__toggle-hide">Hide tsconfig-cjs.json</span></button></div>
+</span></code></pre></div></div><button class="spoiler__toggle btn btn--sm" aria-expanded="false" aria-controls="mdyhjusa-m6t83u"><span class="spoiler__toggle-show">Show tsconfig-cjs.json</span><span class="spoiler__toggle-hide">Hide tsconfig-cjs.json</span></button></div>
 <p>I won&#x27;t go into more details, but there are a couple of other things I had to setup. The code I ended up using is heavily based on these two articles. If you are interested to find out more, check them out:</p>
 <ul>
 <li><a href="https://www.sensedeep.com/blog/posts/2021/how-to-create-single-source-npm-module.html">How to Create a Hybrid NPM Module for ESM and CommonJS.</a></li>
