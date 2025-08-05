@@ -1,4 +1,4 @@
-import { Monorail } from './monorail.js';
+import { Monorail } from './monorail/monorail.js';
 
 const examples = [...document.querySelectorAll('.example')];
 

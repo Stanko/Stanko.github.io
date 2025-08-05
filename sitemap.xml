@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+  <loc>https://muffinman.io/blog/all-aboard-the-monorail/</loc>
+  <lastmod>2025-07-07</lastmod>
+
+</url>
+  <url>
   <loc>https://muffinman.io/blog/origami-jumping-frog/</loc>
   <lastmod>2025-06-09</lastmod>
 
@@ -651,12 +656,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/trillion-ideas/</loc>
+  <loc>https://muffinman.io/blog/my-blog-setup/</loc>
   <lastmod>2017-09-27</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/my-blog-setup/</loc>
+  <loc>https://muffinman.io/blog/trillion-ideas/</loc>
   <lastmod>2017-09-27</lastmod>
 
 </url>
@@ -761,12 +766,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/webpack-2-react-redux/</loc>
+  <loc>https://muffinman.io/blog/setting-up-webpack-babel-and-react-from-scratch-part-3/</loc>
   <lastmod>2016-11-24</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/setting-up-webpack-babel-and-react-from-scratch-part-3/</loc>
+  <loc>https://muffinman.io/blog/webpack-2-react-redux/</loc>
   <lastmod>2016-11-24</lastmod>
 
 </url>
@@ -881,12 +886,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/jekyll-gulp-workflow/</loc>
+  <loc>https://muffinman.io/blog/jekyll-read-more-link/</loc>
   <lastmod>2016-02-27</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/jekyll-read-more-link/</loc>
+  <loc>https://muffinman.io/blog/jekyll-gulp-workflow/</loc>
   <lastmod>2016-02-27</lastmod>
 
 </url>
@@ -911,10 +916,13 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/</loc>
+  <loc>https://muffinman.io/archive/</loc>
 </url>
   <url>
-  <loc>https://muffinman.io/art/</loc>
+  <loc>https://muffinman.io/projects/</loc>
+</url>
+  <url>
+  <loc>https://muffinman.io/blog/</loc>
 </url>
   <url>
   <loc>https://muffinman.io/stats/</loc>
@@ -923,10 +931,7 @@
   <loc>https://muffinman.io/about/</loc>
 </url>
   <url>
-  <loc>https://muffinman.io/projects/</loc>
-</url>
-  <url>
-  <loc>https://muffinman.io/archive/</loc>
+  <loc>https://muffinman.io/art/</loc>
 </url>
   <url>
   <loc>https://muffinman.io/</loc>

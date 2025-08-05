@@ -26,10 +26,10 @@ const getCurve = (
 const DEFAULT_COLORS = [
   'var(--monorail-purple)',
   'var(--monorail-blue)',
+  'var(--monorail-green)',
   'var(--monorail-yellow)',
   'var(--monorail-orange)',
   'var(--monorail-red)',
-  'var(--monorail-green)',
 ];
 // TODO handle opacity and filter-opacity
 export class Monorail {
@@ -203,7 +203,7 @@ export class Monorail {
       } else {
         this.tooltip.style.setProperty(
           '--monorail-tooltip-min-width',
-          `${longestColorName + 12}ch`
+          `${longestPropName + 12}ch`
         );
       }
       tooltip.innerHTML =
