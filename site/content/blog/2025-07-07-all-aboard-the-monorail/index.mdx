@@ -1,0 +1,94 @@
++++
+title = "All aboard the <span>Monorail</span>"
+
+category = ["JavaScript"]
+tags = ["css", "animation", "keyframes", "svg"]
+
+intro = ""
+# image = "./img/thumb.png"
+draft = true
++++
+
+import Example from './components/example'
+
+<link rel="stylesheet" href="/css/posts/monorail.css" />
+<link rel="stylesheet" href="/css/posts/monorail-post.css" />
+
+When I was writing [the CSS glitch post](/blog/css-image-glitch/) I wanted to add a few graphs to visualize CSS animation timelines. Every sane person in my shoes would create a few images and moved with writing and their life. But not me. Instead, I built a whole library that parses CSS keyframe animations and builds interactive graphs that are synced with the animation.
+
+I call it [Monorail](https://muffinman.io/monorail/).
+
+Before we dive in, here is an example of a Monorail graph. It is interactive - you can click anywhere on the timeline to seek the animation or play it from the start.
+
+<Example className='animation-1' playbackSpeed />
+
+I thought it would be relatively easy to get the data and draw the graph, but it ended up being a rabbit hole. Even when I was satisfied with a library as a whole, I still had a list of features I wanted to implement.
+
+## Getting the animation data
+
+To render a graph like this, we need animation data. Initially I wanted to take raw CSS and parse the everything from it. I made a crude proof of concept, but it became clear to me that there is a lot of edge cases. I researched for an existing solution and found the native [getKeyframes()](https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/getKeyframes) method.
+
+This method returns an array of the computed keyframes that make up a CSS animation. That sounded almost too good to be true. And it kinda was.
+
+### `getKeyframes()`
+
+Here is an example of the data returned by `getKeyframes()`. At the first glance, all the information we need is there. But when we take a closer look, we'll see that there are a couple of gotchas:
+
+- `transform` property starts from `none` in the first keyframe and changes to `translateX(5rem)` and `translateX(5rem) rotate(90deg)` in the next two frames.
+- `backgroundColor` uses `rgb()` in the first, then `oklch()` in the second and then it is completely missing in the third keyframe.
+- `paddingTop`'s value is a string including the unit. Also, the unit changes, it is `px` in the first frame, but `rem` in the third. And it skips one frame too.
+- `easing` is another string.
+
+```js {7-9, 16-17, 24-25}
+[
+  {
+    "composite": "auto",
+    "easing": "ease-in-out",
+    "offset": 0,
+    "computedOffset": 0,
+    "transform": "none",
+    "paddingTop": "16px",
+    "backgroundColor": "rgb(0, 133, 251)"
+  },
+  {
+    "composite": "auto",
+    "easing": "ease-in-out",
+    "offset": 0.5,
+    "computedOffset": 0.5,
+    "backgroundColor": "oklch(0.597 0.207 10)",
+    "transform": "translateX(5rem)"
+  },
+  {
+    "composite": "auto",
+    "easing": "ease-in-out",
+    "offset": 1,
+    "computedOffset": 1,
+    "paddingTop": "2rem",
+    "transform": "translateX(5rem) rotate(90deg)"
+  },
+]
+```
+
+It means we'll have to do a lot of data massaging before it is ready to render it in a straight forward way. Some of the things I ended up doing are:
+
+- Fill in missing keyframes for each property.
+- Parse values and units from the numerical properties (like `paddingTop` above). However, Monorail doesn't support mixing units like in the example. You'll have to stick to a single unit per property.
+- Normalize and parse color values. In order to render them on a graph, I also made a simple method to convert them to a single number.
+- Parse easing methods and convert them to JavaScript functions.
+- Parse `transform` and `filter` properties. At the moment, Monorail supports only methods that use a single numerical value - like `translateX(10px)` but doesn't parse methods with multiple values like `translate(10px, 20px)`. But it does parse multiple single value methods for a single property.
+
+
+* Parsing raw CSS
+* `.getKeyframes()`
+  * four types - transforms, filter, colors, numeric
+  * Parsing complex properties - go through keyframes for the first time, determine the type of the property and initialize it
+  * Colors canvas
+  * Filling in - go through the keyframes again and add missing keyframes and data for all properties
+* get min and max values, scale all values, add negative part if needed
+* render graph and UI
+* connect the timeline and the animation
+* add an animation loop to slow the animation down
+* Colors
+
+
+<script src="/js/posts/monorail.js" type="module"></script>
