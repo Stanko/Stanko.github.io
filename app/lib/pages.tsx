@@ -172,11 +172,11 @@ export class Pages {
       pagePromises.push(page);
     }
 
-    const pages = await Promise.all(pagePromises);
+    let pages = await Promise.all(pagePromises);
 
     if (IS_PROD) {
       // Filter out drafts in production
-      pages.filter((page) => !page.pageData?.draft);
+      pages = pages.filter((page) => !page.pageData?.draft);
     }
 
     this.collections[collectionName] = pages.sort((a, b) =>
