@@ -22,7 +22,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.5734606440597046
+      "score": 0.5751720639304934
     },
     {
       "post": "three-web-development-bookmarklets",
@@ -57,6 +57,10 @@
       "score": 0.5473780274331864
     },
     {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5418285296410398
+    },
+    {
       "post": "draw-svg-rope-using-javascript",
       "score": 0.5394621876342872
     },
@@ -77,6 +81,10 @@
       "score": 0.5307246197432374
     },
     {
+      "post": "css-only-counter",
+      "score": 0.5262472888028842
+    },
+    {
       "post": "sneak-peek-of-rayven",
       "score": 0.5261070030848256
     },
@@ -94,7 +102,7 @@
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.5163798530738923
+      "score": 0.5161450912595309
     },
     {
       "post": "preserving-text-size-when-scaling-svgs",
@@ -128,7 +136,7 @@
   "fix-for-chrome-not-rendering-borders": [
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.629657037264366
+      "score": 0.6290198725204345
     },
     {
       "post": "mobile-chrome-vh-units-fix",
@@ -188,7 +196,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.5039251261119627
+      "score": 0.5047171355673298
     },
     {
       "post": "css-only-sprite-animations",
@@ -196,6 +204,10 @@
     }
   ],
   "css-only-floating-input-labels": [
+    {
+      "post": "css-only-counter",
+      "score": 0.6402057341250151
+    },
     {
       "post": "elastic-hover-effect",
       "score": 0.5962523250085966
@@ -254,7 +266,7 @@
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.521541812013955
+      "score": 0.5211405990258313
     },
     {
       "post": "preserving-text-size-when-scaling-svgs",
@@ -262,7 +274,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.516595927351707
+      "score": 0.5179320094394544
     },
     {
       "post": "catching-the-blur-event-on-an-element-and-its-children",
@@ -349,8 +361,12 @@
       "score": 0.5757116846609673
     },
     {
+      "post": "css-only-counter",
+      "score": 0.5740164204429473
+    },
+    {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.5632929030722552
+      "score": 0.5624196946331108
     },
     {
       "post": "three-web-development-bookmarklets",
@@ -406,7 +422,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.5213836205033009
+      "score": 0.5216801853469486
     },
     {
       "post": "plx-react-parallax-component",
@@ -435,6 +451,10 @@
     {
       "post": "svg-non-scaling-circle-and-rectangle",
       "score": 0.5131085959738807
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5113312580382599
     },
     {
       "post": "css-animations-instead-of-js-timers",
@@ -630,7 +650,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.548769815367762
+      "score": 0.5505309600159225
     },
     {
       "post": "sneak-peek-of-rayven",
@@ -681,6 +701,10 @@
       "score": 0.5219817923202282
     },
     {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5183964757436103
+    },
+    {
       "post": "hello-world",
       "score": 0.5164362556674519
     },
@@ -706,7 +730,7 @@
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.5047662280537153
+      "score": 0.5041518725462131
     }
   ],
   "axidraw-plotter-camera-mount": [
@@ -762,219 +786,227 @@
   "css-image-glitch": [
     {
       "post": "css-blocky-people-making-waves",
-      "score": 0.7151099306442416
+      "score": 0.7152325602351249
     },
     {
       "post": "css-only-sprite-animations",
-      "score": 0.7021275913933129
+      "score": 0.7030976833902952
     },
     {
       "post": "image-comparison-slider",
-      "score": 0.6926154018918831
+      "score": 0.6948917232454181
     },
     {
-      "post": "draw-svg-rope-using-javascript",
-      "score": 0.6798340663323648
+      "post": "all-aboard-the-monorail",
+      "score": 0.6904533039987868
     },
     {
       "post": "custom-giraffe-caret",
-      "score": 0.6790615494187504
+      "score": 0.6805226856121626
+    },
+    {
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.6795147250078668
     },
     {
       "post": "neon-generative-art-piece-made-using-2d-vector-field",
-      "score": 0.6776215827259305
+      "score": 0.6782432021023902
     },
     {
       "post": "breaking-down-krypton",
-      "score": 0.6767128480402319
+      "score": 0.677929956223557
     },
     {
       "post": "css-animations-instead-of-js-timers",
-      "score": 0.6697476436834756
+      "score": 0.6702277491385464
     },
     {
       "post": "fake-audio-spectrum-using-perlin-noise",
-      "score": 0.6478156052158773
+      "score": 0.647523653047859
     },
     {
       "post": "metaballs-generative-art",
-      "score": 0.6400132076813418
+      "score": 0.641557591517698
     },
     {
       "post": "pwa-ios-status-bar-blur",
-      "score": 0.627807881964101
+      "score": 0.6280037646430228
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.6249815562719193
+      "score": 0.6248536204039026
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.6210569122835586
+      "score": 0.6216182135940838
+    },
+    {
+      "post": "css-only-counter",
+      "score": 0.6195946350177274
     },
     {
       "post": "react-rerender-in-component-did-mount",
-      "score": 0.6177577163397928
-    },
-    {
-      "post": "three-js-extrude-svg-path",
-      "score": 0.616200902670077
+      "score": 0.6170584027375667
     },
     {
       "post": "js-libraries-for-generative-art",
-      "score": 0.6156280293643052
+      "score": 0.6169462938758424
+    },
+    {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.6157047415597181
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.609993225147142
+      "score": 0.6085144783780214
     },
     {
       "post": "react-image-filter-component",
-      "score": 0.6034770391899787
+      "score": 0.6038365310046543
     },
     {
       "post": "scrubbing-videos-using-javascript",
-      "score": 0.5987953083495051
-    },
-    {
-      "post": "weekly-code-challenge-spring-2021",
-      "score": 0.5908303775013654
+      "score": 0.5975395493699329
     },
     {
       "post": "elastic-hover-effect",
-      "score": 0.5901890401973473
+      "score": 0.5911899840542056
+    },
+    {
+      "post": "weekly-code-challenge-spring-2021",
+      "score": 0.5910687595156927
     },
     {
       "post": "plx-react-parallax-component",
-      "score": 0.5844401859472895
+      "score": 0.5852126959778641
     },
     {
       "post": "javascript-animation-loop",
-      "score": 0.582459375682645
+      "score": 0.581629932151221
     },
     {
       "post": "3d-rotating-cube-effect",
-      "score": 0.5780306402204164
+      "score": 0.5780182739624139
     },
     {
       "post": "ios-safari-scroll-position-fixed",
-      "score": 0.5773756300992615
-    },
-    {
-      "post": "sass-random-and-circle-animation",
-      "score": 0.5737940063940923
+      "score": 0.5773413098262254
     },
     {
       "post": "javascript-keyboard-easter-egg",
-      "score": 0.5734606440597046
+      "score": 0.5751720639304934
+    },
+    {
+      "post": "sass-random-and-circle-animation",
+      "score": 0.5740414395110471
     },
     {
       "post": "css-and-svg-input-animations",
-      "score": 0.5684916198798883
-    },
-    {
-      "post": "the-tiny-book-of-great-joys",
-      "score": 0.5662738260137533
-    },
-    {
-      "post": "preserving-text-size-when-scaling-svgs",
-      "score": 0.566093659191414
+      "score": 0.5726973057417126
     },
     {
       "post": "sneak-peek-of-rayven",
-      "score": 0.5651007976556536
+      "score": 0.5674026779512081
+    },
+    {
+      "post": "the-tiny-book-of-great-joys",
+      "score": 0.5672591142458479
+    },
+    {
+      "post": "preserving-text-size-when-scaling-svgs",
+      "score": 0.5668531602327573
     },
     {
       "post": "into-2021",
-      "score": 0.5641857054369445
+      "score": 0.5657880654632487
     },
     {
       "post": "vertigo-svg-shaders",
-      "score": 0.5622445047933249
-    },
-    {
-      "post": "animated-login-signup-forms",
-      "score": 0.5501286805133349
+      "score": 0.5628165348783836
     },
     {
       "post": "my-programming-story",
-      "score": 0.548769815367762
+      "score": 0.5505309600159225
+    },
+    {
+      "post": "animated-login-signup-forms",
+      "score": 0.5502776002667136
     },
     {
       "post": "svg-non-scaling-circle-and-rectangle",
-      "score": 0.5456100059944767
+      "score": 0.5472576188100066
     },
     {
       "post": "my-blog-setup",
-      "score": 0.5443826184460879
+      "score": 0.5458568385427054
     },
     {
       "post": "making-2d-platformer-controls",
-      "score": 0.5403418352347856
+      "score": 0.5388832418880932
     },
     {
       "post": "flex-justify-content-equally-distanced-items",
-      "score": 0.5359503956913815
+      "score": 0.5369732119624633
     },
     {
       "post": "talks-i-like",
-      "score": 0.5285145959326472
-    },
-    {
-      "post": "into-2020",
-      "score": 0.5243480818273129
+      "score": 0.5317410409754991
     },
     {
       "post": "get-lines-of-text-from-html-element",
-      "score": 0.5243319436026602
+      "score": 0.5266482569813674
+    },
+    {
+      "post": "into-2020",
+      "score": 0.5263651052455454
     },
     {
       "post": "into-2022",
-      "score": 0.5227684258860064
+      "score": 0.5247082336057809
     },
     {
       "post": "custom-scroll-bars",
-      "score": 0.5213836205033009
-    },
-    {
-      "post": "setting-up-webpack-babel-and-react-from-scratch",
-      "score": 0.5191612968234699
+      "score": 0.5216801853469486
     },
     {
       "post": "css-only-floating-input-labels",
-      "score": 0.516595927351707
+      "score": 0.5179320094394544
+    },
+    {
+      "post": "setting-up-webpack-babel-and-react-from-scratch",
+      "score": 0.517284959750228
     },
     {
       "post": "counting-sheep",
-      "score": 0.5144307987095806
-    },
-    {
-      "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
-      "score": 0.5123390820294653
+      "score": 0.5160167613160472
     },
     {
       "post": "nodejs-simple-colorful-logging",
-      "score": 0.5118956518129946
+      "score": 0.5131525952666832
+    },
+    {
+      "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
+      "score": 0.5122354446092545
     },
     {
       "post": "hack-for-ios-safari-to-display-html-video-thumbnail",
-      "score": 0.5093484483811614
-    },
-    {
-      "post": "html-inert-property",
-      "score": 0.5051142504556063
-    },
-    {
-      "post": "mobile-chrome-vh-units-fix",
-      "score": 0.5040619657104743
-    },
-    {
-      "post": "fix-for-chrome-not-rendering-borders",
-      "score": 0.5039251261119627
+      "score": 0.5111743625742369
     },
     {
       "post": "bunny-jumps-again",
-      "score": 0.5031826951326535
+      "score": 0.5062491666111941
+    },
+    {
+      "post": "html-inert-property",
+      "score": 0.5048396170021329
+    },
+    {
+      "post": "fix-for-chrome-not-rendering-borders",
+      "score": 0.5047171355673298
+    },
+    {
+      "post": "mobile-chrome-vh-units-fix",
+      "score": 0.5025046311399324
     }
   ],
   "small-mac-apps-i-love": [
@@ -1275,6 +1307,10 @@
       "score": 0.5338719850923753
     },
     {
+      "post": "css-only-counter",
+      "score": 0.5320271363560071
+    },
+    {
       "post": "html-canvas-video-player-ios",
       "score": 0.5312011598584583
     },
@@ -1518,6 +1554,10 @@
       "score": 0.5734597211021665
     },
     {
+      "post": "all-aboard-the-monorail",
+      "score": 0.571064098237623
+    },
+    {
       "post": "custom-giraffe-caret",
       "score": 0.5706157680666125
     },
@@ -1539,7 +1579,11 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.5456100059944767
+      "score": 0.5472576188100066
+    },
+    {
+      "post": "css-only-counter",
+      "score": 0.544874541408184
     },
     {
       "post": "neon-generative-art-piece-made-using-2d-vector-field",
@@ -1567,7 +1611,7 @@
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.5277582536277956
+      "score": 0.5267269949808716
     },
     {
       "post": "metaballs-generative-art",
@@ -1842,12 +1886,12 @@
       "score": 0.5263283215720134
     },
     {
-      "post": "small-mac-apps-i-love",
-      "score": 0.5234366834382075
+      "post": "css-image-glitch",
+      "score": 0.5247082336057809
     },
     {
-      "post": "css-image-glitch",
-      "score": 0.5227684258860064
+      "post": "small-mac-apps-i-love",
+      "score": 0.5234366834382075
     },
     {
       "post": "letters-from-sarajevo",
@@ -1856,6 +1900,10 @@
     {
       "post": "draw-svg-rope-using-javascript",
       "score": 0.52208004609534
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5170602986345004
     },
     {
       "post": "minor-design-refresh",
@@ -1889,7 +1937,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.5908303775013654
+      "score": 0.5910687595156927
     },
     {
       "post": "my-programming-story",
@@ -1956,6 +2004,10 @@
       "score": 0.5483958438423636
     },
     {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5416441278747879
+    },
+    {
       "post": "three-js-extrude-svg-path",
       "score": 0.5400643302003081
     },
@@ -2000,6 +2052,10 @@
       "score": 0.5176426926410533
     },
     {
+      "post": "css-only-counter",
+      "score": 0.5113615217566208
+    },
+    {
       "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
       "score": 0.5087918927326027
     },
@@ -2033,7 +2089,7 @@
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.5011809591417157
+      "score": 0.5008781315190699
     },
     {
       "post": "hello-world",
@@ -2043,7 +2099,7 @@
   "flex-justify-content-equally-distanced-items": [
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.6077702437255369
+      "score": 0.6069765987197637
     },
     {
       "post": "elastic-hover-effect",
@@ -2074,8 +2130,12 @@
       "score": 0.5503516203578236
     },
     {
+      "post": "css-only-counter",
+      "score": 0.5387077562988173
+    },
+    {
       "post": "css-image-glitch",
-      "score": 0.5359503956913815
+      "score": 0.5369732119624633
     },
     {
       "post": "javascript-get-element-offset",
@@ -2156,6 +2216,10 @@
       "score": 0.5753709935481486
     },
     {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5736534439706878
+    },
+    {
       "post": "fake-audio-spectrum-using-perlin-noise",
       "score": 0.56485480280243
     },
@@ -2176,12 +2240,16 @@
       "score": 0.5431123039215954
     },
     {
-      "post": "css-image-glitch",
-      "score": 0.5403418352347856
-    },
-    {
       "post": "css-animations-instead-of-js-timers",
       "score": 0.540147509900453
+    },
+    {
+      "post": "css-only-counter",
+      "score": 0.5390552349225397
+    },
+    {
+      "post": "css-image-glitch",
+      "score": 0.5388832418880932
     },
     {
       "post": "three-js-extrude-svg-path",
@@ -2218,10 +2286,6 @@
     {
       "post": "vertigo-svg-shaders",
       "score": 0.5022352471200502
-    },
-    {
-      "post": "ie6-hacks-ten-years-after",
-      "score": 0.5000335151172041
     }
   ],
   "time-pills-tracks-stems": [],
@@ -2291,12 +2355,12 @@
       "score": 0.5680254366558292
     },
     {
-      "post": "back-to-the-basics",
-      "score": 0.5668692691525355
+      "post": "css-image-glitch",
+      "score": 0.5672591142458479
     },
     {
-      "post": "css-image-glitch",
-      "score": 0.5662738260137533
+      "post": "back-to-the-basics",
+      "score": 0.5668692691525355
     },
     {
       "post": "three-js-extrude-svg-path",
@@ -2313,6 +2377,10 @@
     {
       "post": "native-dual-range-input",
       "score": 0.5444855789451201
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5365985184633325
     },
     {
       "post": "axidraw-lego-camera-mount",
@@ -2362,7 +2430,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.6767128480402319
+      "score": 0.677929956223557
     },
     {
       "post": "draw-svg-rope-using-javascript",
@@ -2379,6 +2447,10 @@
     {
       "post": "three-js-extrude-svg-path",
       "score": 0.6292715919776994
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.6265009430422984
     },
     {
       "post": "fake-audio-spectrum-using-perlin-noise",
@@ -2496,11 +2568,15 @@
   "fake-audio-spectrum-using-perlin-noise": [
     {
       "post": "css-image-glitch",
-      "score": 0.6478156052158773
+      "score": 0.647523653047859
     },
     {
       "post": "neon-generative-art-piece-made-using-2d-vector-field",
       "score": 0.6327772432679091
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.6265137941532934
     },
     {
       "post": "breaking-down-krypton",
@@ -2585,6 +2661,10 @@
     {
       "post": "native-dual-range-input",
       "score": 0.5454881710899033
+    },
+    {
+      "post": "css-only-counter",
+      "score": 0.5432210200164901
     },
     {
       "post": "pwa-ios-status-bar-blur",
@@ -2710,7 +2790,7 @@
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.5259529838144453
+      "score": 0.5251303940874582
     },
     {
       "post": "svg-non-scaling-circle-and-rectangle",
@@ -2731,6 +2811,14 @@
     {
       "post": "ios-safari-scroll-position-fixed",
       "score": 0.5131334512928061
+    },
+    {
+      "post": "css-only-counter",
+      "score": 0.5079513874694865
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5062498926853759
     },
     {
       "post": "font-weight-based-on-dpi",
@@ -2802,7 +2890,11 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.6400132076813418
+      "score": 0.641557591517698
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.6170652805536242
     },
     {
       "post": "vertigo-svg-shaders",
@@ -2920,7 +3012,7 @@
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.5348413274741546
+      "score": 0.5348395577927705
     },
     {
       "post": "react-simple-video-buffering-loader",
@@ -2940,7 +3032,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.5093484483811614
+      "score": 0.5111743625742369
     }
   ],
   "travis-jekyll-and-github-pages": [
@@ -3054,13 +3146,13 @@
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.5038649307898605
+      "score": 0.50341368837624
     }
   ],
   "css-only-sprite-animations": [
     {
       "post": "css-image-glitch",
-      "score": 0.7021275913933129
+      "score": 0.7030976833902952
     },
     {
       "post": "css-animations-instead-of-js-timers",
@@ -3069,6 +3161,10 @@
     {
       "post": "javascript-animation-loop",
       "score": 0.6656817970056803
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.6546418123186825
     },
     {
       "post": "custom-giraffe-caret",
@@ -3085,6 +3181,10 @@
     {
       "post": "sass-random-and-circle-animation",
       "score": 0.6395230341054077
+    },
+    {
+      "post": "css-only-counter",
+      "score": 0.6390561254180306
     },
     {
       "post": "making-2d-platformer-controls",
@@ -3120,7 +3220,7 @@
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.596976980812014
+      "score": 0.5964037130721682
     },
     {
       "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
@@ -3309,6 +3409,10 @@
       "score": 0.5219786840290249
     },
     {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5151773571833768
+    },
+    {
       "post": "javascript-animation-loop",
       "score": 0.5089830438540903
     },
@@ -3335,20 +3439,28 @@
       "score": 0.5836558577357254
     },
     {
-      "post": "custom-giraffe-caret",
-      "score": 0.5696623526557353
+      "post": "css-image-glitch",
+      "score": 0.5726973057417126
     },
     {
-      "post": "css-image-glitch",
-      "score": 0.5684916198798883
+      "post": "custom-giraffe-caret",
+      "score": 0.5696623526557353
     },
     {
       "post": "css-only-floating-input-labels",
       "score": 0.5670806249175713
     },
     {
+      "post": "css-only-counter",
+      "score": 0.5623199064770329
+    },
+    {
       "post": "javascript-keyboard-easter-egg",
       "score": 0.5498155386674561
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5487135761416487
     },
     {
       "post": "native-dual-range-input",
@@ -3448,7 +3560,7 @@
   "three-web-development-bookmarklets": [
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.5822036817348373
+      "score": 0.5818478506290163
     },
     {
       "post": "hiding-body-scrollbars-using-css",
@@ -3701,12 +3813,12 @@
       "score": 0.5475236944508087
     },
     {
-      "post": "css-blocky-people-making-waves",
-      "score": 0.5455643949199659
+      "post": "css-image-glitch",
+      "score": 0.5458568385427054
     },
     {
-      "post": "css-image-glitch",
-      "score": 0.5443826184460879
+      "post": "css-blocky-people-making-waves",
+      "score": 0.5455643949199659
     },
     {
       "post": "native-dual-range-input",
@@ -3747,6 +3859,10 @@
     {
       "post": "draw-svg-rope-using-javascript",
       "score": 0.5088692618924713
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5006737891478539
     }
   ],
   "letters-from-sarajevo": [
@@ -3895,6 +4011,10 @@
       "score": 0.5733196643596893
     },
     {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5713707410974461
+    },
+    {
       "post": "native-dual-range-input",
       "score": 0.5680359417873564
     },
@@ -3904,7 +4024,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.566093659191414
+      "score": 0.5668531602327573
     },
     {
       "post": "css-animations-instead-of-js-timers",
@@ -3912,7 +4032,7 @@
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.5591928966946087
+      "score": 0.5580444941022844
     },
     {
       "post": "elastic-hover-effect",
@@ -3921,6 +4041,10 @@
     {
       "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
       "score": 0.5511986400111496
+    },
+    {
+      "post": "css-only-counter",
+      "score": 0.5506348621431475
     },
     {
       "post": "css-blocky-people-making-waves",
@@ -4157,7 +4281,7 @@
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.590451462909226
+      "score": 0.5899167206221916
     },
     {
       "post": "javascript-get-element-offset",
@@ -4165,7 +4289,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.5773756300992615
+      "score": 0.5773413098262254
     },
     {
       "post": "flex-justify-content-equally-distanced-items",
@@ -4385,6 +4509,10 @@
       "score": 0.5641785851601974
     },
     {
+      "post": "css-only-counter",
+      "score": 0.5464494114693297
+    },
+    {
       "post": "custom-giraffe-caret",
       "score": 0.5444268224681486
     },
@@ -4405,16 +4533,16 @@
       "score": 0.5167570370036819
     },
     {
+      "post": "css-image-glitch",
+      "score": 0.5160167613160472
+    },
+    {
       "post": "css-blocky-people-making-waves",
       "score": 0.515888331614812
     },
     {
       "post": "css-animations-instead-of-js-timers",
       "score": 0.5147617197334401
-    },
-    {
-      "post": "css-image-glitch",
-      "score": 0.5144307987095806
     },
     {
       "post": "javascript-animation-loop",
@@ -4435,12 +4563,20 @@
       "score": 0.6966733407446939
     },
     {
+      "post": "all-aboard-the-monorail",
+      "score": 0.6784628028560753
+    },
+    {
       "post": "draw-svg-rope-using-javascript",
       "score": 0.6419967165422823
     },
     {
+      "post": "css-only-counter",
+      "score": 0.6258681764038189
+    },
+    {
       "post": "css-image-glitch",
-      "score": 0.6249815562719193
+      "score": 0.6248536204039026
     },
     {
       "post": "css-blocky-people-making-waves",
@@ -4564,7 +4700,7 @@
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.5382258811806512
+      "score": 0.537619488711166
     },
     {
       "post": "plx-react-parallax-component",
@@ -4667,6 +4803,10 @@
       "score": 0.6174708212314232
     },
     {
+      "post": "all-aboard-the-monorail",
+      "score": 0.6161790428507188
+    },
+    {
       "post": "draw-svg-rope-using-javascript",
       "score": 0.6047163722335838
     },
@@ -4684,7 +4824,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.582459375682645
+      "score": 0.581629932151221
     },
     {
       "post": "image-comparison-slider",
@@ -4728,7 +4868,7 @@
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.5411290506525562
+      "score": 0.5406473287106174
     },
     {
       "post": "react-simple-video-buffering-loader",
@@ -4765,6 +4905,10 @@
     {
       "post": "webpack-babel-react-revisited",
       "score": 0.5197878347278679
+    },
+    {
+      "post": "css-only-counter",
+      "score": 0.5194028651410623
     },
     {
       "post": "javascript-time-ago-function",
@@ -4888,15 +5032,23 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.6926154018918831
+      "score": 0.6948917232454181
     },
     {
       "post": "css-animations-instead-of-js-timers",
       "score": 0.6870383949588083
     },
     {
+      "post": "all-aboard-the-monorail",
+      "score": 0.6761575975564027
+    },
+    {
       "post": "draw-svg-rope-using-javascript",
       "score": 0.6627795980940608
+    },
+    {
+      "post": "css-only-counter",
+      "score": 0.6475112361319543
     },
     {
       "post": "css-blocky-people-making-waves",
@@ -4960,7 +5112,7 @@
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.5788487928151229
+      "score": 0.5780384747656003
     },
     {
       "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
@@ -5176,7 +5328,7 @@
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.5195299431080667
+      "score": 0.5184156682109369
     },
     {
       "post": "elastic-hover-effect",
@@ -5250,12 +5402,12 @@
       "score": 0.5372197124885739
     },
     {
-      "post": "back-to-the-basics",
-      "score": 0.5298095466428151
+      "post": "css-image-glitch",
+      "score": 0.5317410409754991
     },
     {
-      "post": "css-image-glitch",
-      "score": 0.5285145959326472
+      "post": "back-to-the-basics",
+      "score": 0.5298095466428151
     },
     {
       "post": "breaking-down-krypton",
@@ -5296,6 +5448,10 @@
       "score": 0.6593288355752672
     },
     {
+      "post": "all-aboard-the-monorail",
+      "score": 0.6582290158928211
+    },
+    {
       "post": "draw-svg-rope-using-javascript",
       "score": 0.6421717337539105
     },
@@ -5317,7 +5473,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.6156280293643052
+      "score": 0.6169462938758424
     },
     {
       "post": "image-comparison-slider",
@@ -5602,12 +5758,16 @@
       "score": 0.5993922762513385
     },
     {
+      "post": "css-only-counter",
+      "score": 0.5962504298029822
+    },
+    {
       "post": "css-and-svg-input-animations",
       "score": 0.5836558577357254
     },
     {
       "post": "css-image-glitch",
-      "score": 0.5737940063940923
+      "score": 0.5740414395110471
     },
     {
       "post": "css-animations-instead-of-js-timers",
@@ -5644,6 +5804,10 @@
     {
       "post": "svg-non-scaling-circle-and-rectangle",
       "score": 0.5296340381509062
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5257567033764918
     },
     {
       "post": "flex-justify-content-equally-distanced-items",
@@ -5728,6 +5892,10 @@
       "score": 0.5045446491792318
     },
     {
+      "post": "css-only-counter",
+      "score": 0.5021143078913227
+    },
+    {
       "post": "has-tabbed-aka-should-i-release-small-libraries",
       "score": 0.5007404113909374
     },
@@ -5758,6 +5926,10 @@
       "score": 0.5872903542396658
     },
     {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5796051208354485
+    },
+    {
       "post": "three-js-extrude-svg-path",
       "score": 0.5705502795912599
     },
@@ -5771,7 +5943,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.5622445047933249
+      "score": 0.5628165348783836
     },
     {
       "post": "fake-audio-spectrum-using-perlin-noise",
@@ -5861,7 +6033,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.6776215827259305
+      "score": 0.6782432021023902
     },
     {
       "post": "the-tiny-book-of-great-joys",
@@ -5870,6 +6042,10 @@
     {
       "post": "three-js-extrude-svg-path",
       "score": 0.6485951547711677
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.6373345675486269
     },
     {
       "post": "into-2022",
@@ -5987,147 +6163,151 @@
   "ie6-hacks-ten-years-after": [
     {
       "post": "goodbye-ie",
-      "score": 0.6408872165773254
+      "score": 0.6409183669120735
     },
     {
       "post": "fix-for-chrome-not-rendering-borders",
-      "score": 0.629657037264366
+      "score": 0.6290198725204345
     },
     {
       "post": "css-image-glitch",
-      "score": 0.6210569122835586
+      "score": 0.6216182135940838
     },
     {
       "post": "flex-justify-content-equally-distanced-items",
-      "score": 0.6077702437255369
+      "score": 0.6069765987197637
     },
     {
       "post": "css-only-sprite-animations",
-      "score": 0.596976980812014
+      "score": 0.5964037130721682
     },
     {
       "post": "ios-safari-scroll-position-fixed",
-      "score": 0.590451462909226
+      "score": 0.5899167206221916
     },
     {
       "post": "three-web-development-bookmarklets",
-      "score": 0.5822036817348373
+      "score": 0.5818478506290163
     },
     {
       "post": "image-comparison-slider",
-      "score": 0.5788487928151229
+      "score": 0.5780384747656003
     },
     {
       "post": "pwa-ios-status-bar-blur",
-      "score": 0.5691031458971562
+      "score": 0.5685888516833287
     },
     {
       "post": "custom-scroll-bars",
-      "score": 0.5632929030722552
+      "score": 0.5624196946331108
     },
     {
       "post": "javascript-get-element-offset",
-      "score": 0.5621408187581833
+      "score": 0.5614599065534644
     },
     {
       "post": "custom-giraffe-caret",
-      "score": 0.5608424903561288
+      "score": 0.5603200123522595
     },
     {
       "post": "preserving-text-size-when-scaling-svgs",
-      "score": 0.5591928966946087
-    },
-    {
-      "post": "mobile-chrome-vh-units-fix",
-      "score": 0.5579446616009314
+      "score": 0.5580444941022844
     },
     {
       "post": "css-blocky-people-making-waves",
-      "score": 0.5577208689150914
+      "score": 0.5572348633563038
+    },
+    {
+      "post": "mobile-chrome-vh-units-fix",
+      "score": 0.5567794969478855
+    },
+    {
+      "post": "css-only-counter",
+      "score": 0.553853191879021
     },
     {
       "post": "hiding-body-scrollbars-using-css",
-      "score": 0.5538204051886253
+      "score": 0.5529908074653426
     },
     {
       "post": "elastic-hover-effect",
-      "score": 0.5451690811027845
+      "score": 0.5444073229326206
     },
     {
       "post": "javascript-animation-loop",
-      "score": 0.5411290506525562
+      "score": 0.5406473287106174
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.5382258811806512
+      "score": 0.537619488711166
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5359575719910061
     },
     {
       "post": "css-animations-instead-of-js-timers",
-      "score": 0.5366019829087667
+      "score": 0.5356754870297384
     },
     {
       "post": "hack-for-ios-safari-to-display-html-video-thumbnail",
-      "score": 0.5348413274741546
-    },
-    {
-      "post": "font-weight-based-on-dpi",
-      "score": 0.5305057979800538
+      "score": 0.5348395577927705
     },
     {
       "post": "react-image-filter-component",
-      "score": 0.5295172513575018
+      "score": 0.5298963528881545
     },
     {
-      "post": "svg-non-scaling-circle-and-rectangle",
-      "score": 0.5277582536277956
+      "post": "font-weight-based-on-dpi",
+      "score": 0.5297134509409263
     },
     {
       "post": "always-use-button-for-clickable-elements",
-      "score": 0.5274710955474187
+      "score": 0.5267872840327075
+    },
+    {
+      "post": "svg-non-scaling-circle-and-rectangle",
+      "score": 0.5267269949808716
     },
     {
       "post": "scrollbar-size-observer",
-      "score": 0.5259529838144453
+      "score": 0.5251303940874582
     },
     {
       "post": "css-only-floating-input-labels",
-      "score": 0.521541812013955
+      "score": 0.5211405990258313
     },
     {
       "post": "font-size-and-tracking-points-to-pixels",
-      "score": 0.5200904368176199
+      "score": 0.5194236419588234
     },
     {
       "post": "css-fix-to-prevent-orphan-icons",
-      "score": 0.5195299431080667
+      "score": 0.5184156682109369
     },
     {
       "post": "javascript-keyboard-easter-egg",
-      "score": 0.5163798530738923
+      "score": 0.5161450912595309
     },
     {
       "post": "my-programming-story",
-      "score": 0.5047662280537153
+      "score": 0.5041518725462131
     },
     {
       "post": "ios-safari-get-bounding-client-rect-bug",
-      "score": 0.5038649307898605
+      "score": 0.50341368837624
     },
     {
       "post": "scrubbing-videos-using-javascript",
-      "score": 0.5028603981759651
+      "score": 0.5024117500003
     },
     {
       "post": "react-rerender-in-component-did-mount",
-      "score": 0.5018987450825291
+      "score": 0.5014250755851188
     },
     {
       "post": "weekly-code-challenge-spring-2021",
-      "score": 0.5011809591417157
-    },
-    {
-      "post": "making-2d-platformer-controls",
-      "score": 0.5000335151172041
+      "score": 0.5008781315190699
     }
   ],
   "draw-svg-rope-using-javascript": [
@@ -6136,12 +6316,16 @@
       "score": 0.7459471346748331
     },
     {
+      "post": "all-aboard-the-monorail",
+      "score": 0.7056016419147255
+    },
+    {
       "post": "neon-generative-art-piece-made-using-2d-vector-field",
       "score": 0.6857030878180843
     },
     {
       "post": "css-image-glitch",
-      "score": 0.6798340663323648
+      "score": 0.6795147250078668
     },
     {
       "post": "css-blocky-people-making-waves",
@@ -6268,6 +6452,10 @@
       "score": 0.52208004609534
     },
     {
+      "post": "css-only-counter",
+      "score": 0.5209516977978923
+    },
+    {
       "post": "nodejs-simple-colorful-logging",
       "score": 0.5204128857550714
     },
@@ -6350,12 +6538,12 @@
       "score": 0.5918425460700858
     },
     {
-      "post": "react-rerender-in-component-did-mount",
-      "score": 0.5845376819790857
+      "post": "css-image-glitch",
+      "score": 0.5852126959778641
     },
     {
-      "post": "css-image-glitch",
-      "score": 0.5844401859472895
+      "post": "react-rerender-in-component-did-mount",
+      "score": 0.5845376819790857
     },
     {
       "post": "mobile-chrome-vh-units-fix",
@@ -6376,6 +6564,10 @@
     {
       "post": "setting-up-webpack-babel-and-react-from-scratch",
       "score": 0.5559349282729811
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5548510326615014
     },
     {
       "post": "fake-audio-spectrum-using-perlin-noise",
@@ -6554,6 +6746,10 @@
       "score": 0.5788746092940346
     },
     {
+      "post": "css-only-counter",
+      "score": 0.5788726169215083
+    },
+    {
       "post": "3d-rotating-cube-effect",
       "score": 0.5685376558477094
     },
@@ -6579,7 +6775,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.5501286805133349
+      "score": 0.5502776002667136
     },
     {
       "post": "sass-random-and-circle-animation",
@@ -6616,6 +6812,10 @@
     {
       "post": "image-comparison-slider",
       "score": 0.5199906119061171
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5186566311027284
     },
     {
       "post": "counting-sheep",
@@ -6896,6 +7096,10 @@
       "score": 0.5414502523034238
     },
     {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5405181816936595
+    },
+    {
       "post": "node-script-to-run-multiple-commands-in-parallel",
       "score": 0.537074785515399
     },
@@ -6994,6 +7198,10 @@
       "score": 0.6121953213047772
     },
     {
+      "post": "all-aboard-the-monorail",
+      "score": 0.6095141935635294
+    },
+    {
       "post": "visualizing-a-vector-field",
       "score": 0.6061224130629872
     },
@@ -7031,7 +7239,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.5651007976556536
+      "score": 0.5674026779512081
     },
     {
       "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
@@ -7191,7 +7399,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.6790615494187504
+      "score": 0.6805226856121626
     },
     {
       "post": "draw-svg-rope-using-javascript",
@@ -7200,6 +7408,10 @@
     {
       "post": "css-blocky-people-making-waves",
       "score": 0.6709836148675863
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.6702150216843916
     },
     {
       "post": "css-only-sprite-animations",
@@ -7266,6 +7478,10 @@
       "score": 0.5730833213029923
     },
     {
+      "post": "css-only-counter",
+      "score": 0.5730612591760043
+    },
+    {
       "post": "react-rerender-in-component-did-mount",
       "score": 0.5707993284926571
     },
@@ -7299,7 +7515,7 @@
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.5608424903561288
+      "score": 0.5603200123522595
     },
     {
       "post": "css-only-floating-input-labels",
@@ -7574,12 +7790,16 @@
       "score": 0.5265761169402791
     },
     {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5220618351925047
+    },
+    {
       "post": "native-dual-range-input",
       "score": 0.5202751721773494
     },
     {
       "post": "css-image-glitch",
-      "score": 0.5191612968234699
+      "score": 0.517284959750228
     },
     {
       "post": "simple-react-slider",
@@ -7619,7 +7839,7 @@
   "css-blocky-people-making-waves": [
     {
       "post": "css-image-glitch",
-      "score": 0.7151099306442416
+      "score": 0.7152325602351249
     },
     {
       "post": "draw-svg-rope-using-javascript",
@@ -7644,6 +7864,10 @@
     {
       "post": "weekly-code-challenge-spring-2021",
       "score": 0.6368862524030828
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.6319938650710022
     },
     {
       "post": "neon-generative-art-piece-made-using-2d-vector-field",
@@ -7678,12 +7902,16 @@
       "score": 0.581201063201309
     },
     {
+      "post": "css-only-counter",
+      "score": 0.5735260548864444
+    },
+    {
       "post": "pwa-ios-status-bar-blur",
       "score": 0.5603777304494034
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.5577208689150914
+      "score": 0.5572348633563038
     },
     {
       "post": "javascript-animation-loop",
@@ -7811,7 +8039,7 @@
   "goodbye-ie": [
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.6408872165773254
+      "score": 0.6409183669120735
     },
     {
       "post": "deprecating-marvin",
@@ -7857,7 +8085,7 @@
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.5538204051886253
+      "score": 0.5529908074653426
     },
     {
       "post": "fix-for-chrome-not-rendering-borders",
@@ -7886,6 +8114,10 @@
     {
       "post": "javascript-get-element-offset",
       "score": 0.5286982874339994
+    },
+    {
+      "post": "css-only-counter",
+      "score": 0.5232199527568594
     },
     {
       "post": "flex-justify-content-equally-distanced-items",
@@ -7990,6 +8222,10 @@
       "score": 0.5555752919253804
     },
     {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5511623605997502
+    },
+    {
       "post": "html-inert-property",
       "score": 0.541599205109635
     },
@@ -8032,6 +8268,10 @@
     {
       "post": "elastic-hover-effect",
       "score": 0.5209170102370568
+    },
+    {
+      "post": "css-only-counter",
+      "score": 0.5181764103445522
     },
     {
       "post": "scrubbing-videos-using-javascript",
@@ -8219,7 +8459,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.609993225147142
+      "score": 0.6085144783780214
     },
     {
       "post": "three-js-extrude-svg-path",
@@ -8228,6 +8468,10 @@
     {
       "post": "plx-react-parallax-component",
       "score": 0.5982174683799624
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5966087649993991
     },
     {
       "post": "into-2020",
@@ -8422,6 +8666,10 @@
   ],
   "always-use-button-for-clickable-elements": [
     {
+      "post": "css-only-counter",
+      "score": 0.5853461820834587
+    },
+    {
       "post": "elastic-hover-effect",
       "score": 0.5822265893270568
     },
@@ -8463,7 +8711,7 @@
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.5274710955474187
+      "score": 0.5267872840327075
     },
     {
       "post": "font-weight-based-on-dpi",
@@ -8608,12 +8856,12 @@
       "score": 0.5267073655884745
     },
     {
-      "post": "draw-svg-rope-using-javascript",
-      "score": 0.5256613881992538
+      "post": "css-image-glitch",
+      "score": 0.5266482569813674
     },
     {
-      "post": "css-image-glitch",
-      "score": 0.5243319436026602
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.5256613881992538
     },
     {
       "post": "image-comparison-slider",
@@ -8644,8 +8892,16 @@
       "score": 0.6870383949588083
     },
     {
+      "post": "all-aboard-the-monorail",
+      "score": 0.67878813097787
+    },
+    {
+      "post": "css-only-counter",
+      "score": 0.6736998975842798
+    },
+    {
       "post": "css-image-glitch",
-      "score": 0.6697476436834756
+      "score": 0.6702277491385464
     },
     {
       "post": "react-rerender-in-component-did-mount",
@@ -8700,12 +8956,12 @@
       "score": 0.5371802844072088
     },
     {
-      "post": "ie6-hacks-ten-years-after",
-      "score": 0.5366019829087667
-    },
-    {
       "post": "react-animate-height-slide-up-down",
       "score": 0.5365710113187817
+    },
+    {
+      "post": "ie6-hacks-ten-years-after",
+      "score": 0.5356754870297384
     },
     {
       "post": "three-js-extrude-svg-path",
@@ -8784,6 +9040,10 @@
     {
       "post": "accessible-range-slider",
       "score": 0.6123315249835917
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.6101078488238557
     },
     {
       "post": "svg-non-scaling-circle-and-rectangle",
@@ -8870,6 +9130,10 @@
       "score": 0.5413968580174324
     },
     {
+      "post": "css-only-counter",
+      "score": 0.5398144511062177
+    },
+    {
       "post": "animate-between-two-react-components",
       "score": 0.537313147740964
     },
@@ -8903,7 +9167,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.5123390820294653
+      "score": 0.5122354446092545
     },
     {
       "post": "metaballs-generative-art",
@@ -8978,6 +9242,10 @@
       "score": 0.6881155549637642
     },
     {
+      "post": "all-aboard-the-monorail",
+      "score": 0.6501888627273055
+    },
+    {
       "post": "neon-generative-art-piece-made-using-2d-vector-field",
       "score": 0.6485951547711677
     },
@@ -9003,7 +9271,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.616200902670077
+      "score": 0.6157047415597181
     },
     {
       "post": "image-comparison-slider",
@@ -9218,6 +9486,10 @@
     {
       "post": "image-comparison-slider",
       "score": 0.5021025694067284
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5012187060194446
     }
   ],
   "html-inert-property": [
@@ -9248,6 +9520,10 @@
     {
       "post": "plx-react-parallax-component",
       "score": 0.5434018464715302
+    },
+    {
+      "post": "css-only-counter",
+      "score": 0.5428294211771695
     },
     {
       "post": "react-rerender-in-component-did-mount",
@@ -9303,7 +9579,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.5051142504556063
+      "score": 0.5048396170021329
     }
   ],
   "xiaomi-airdots-review": [
@@ -9333,7 +9609,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.5780306402204164
+      "score": 0.5780182739624139
     },
     {
       "post": "javascript-animation-loop",
@@ -9370,6 +9646,10 @@
     {
       "post": "javascript-keyboard-easter-egg",
       "score": 0.533556960921698
+    },
+    {
+      "post": "css-only-counter",
+      "score": 0.5335322339496104
     },
     {
       "post": "react-animate-height-slide-up-down",
@@ -9441,7 +9721,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.627807881964101
+      "score": 0.6280037646430228
     },
     {
       "post": "custom-scroll-bars",
@@ -9496,8 +9776,12 @@
       "score": 0.5744125227660482
     },
     {
+      "post": "css-only-counter",
+      "score": 0.5702560314060358
+    },
+    {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.5691031458971562
+      "score": 0.5685888516833287
     },
     {
       "post": "preserving-text-size-when-scaling-svgs",
@@ -9534,6 +9818,10 @@
     {
       "post": "fake-audio-spectrum-using-perlin-noise",
       "score": 0.5336995306248238
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5328906218226603
     },
     {
       "post": "react-animate-height-slide-up-down",
@@ -9631,7 +9919,7 @@
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.5579446616009314
+      "score": 0.5567794969478855
     },
     {
       "post": "react-scroll-position-decorator",
@@ -9706,12 +9994,12 @@
       "score": 0.505957465236019
     },
     {
-      "post": "css-image-glitch",
-      "score": 0.5040619657104743
-    },
-    {
       "post": "image-comparison-slider",
       "score": 0.503948066858743
+    },
+    {
+      "post": "css-image-glitch",
+      "score": 0.5025046311399324
     }
   ],
   "font-weight-based-on-dpi": [
@@ -9737,7 +10025,7 @@
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.5305057979800538
+      "score": 0.5297134509409263
     },
     {
       "post": "css-fix-to-prevent-orphan-icons",
@@ -9795,7 +10083,7 @@
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.5200904368176199
+      "score": 0.5194236419588234
     },
     {
       "post": "flex-justify-content-equally-distanced-items",
@@ -9804,6 +10092,10 @@
     {
       "post": "elastic-hover-effect",
       "score": 0.5187246985305818
+    },
+    {
+      "post": "css-only-counter",
+      "score": 0.5056292154482063
     }
   ],
   "make-regular-expressions-easier-to-read": [
@@ -9868,6 +10160,10 @@
     {
       "post": "plx-react-parallax-component",
       "score": 0.516152026705504
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5137645794669949
     },
     {
       "post": "three-js-extrude-svg-path",
@@ -10091,7 +10387,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.5641857054369445
+      "score": 0.5657880654632487
     },
     {
       "post": "css-blocky-people-making-waves",
@@ -10108,6 +10404,10 @@
     {
       "post": "axidraw-plotter-camera-mount",
       "score": 0.5395363728817572
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5370033606284006
     },
     {
       "post": "new-design-and-features",
@@ -10185,7 +10485,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.6034770391899787
+      "score": 0.6038365310046543
     },
     {
       "post": "react-animate-height-slide-up-down",
@@ -10204,6 +10504,10 @@
       "score": 0.5808100767170751
     },
     {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5765754385886801
+    },
+    {
       "post": "css-only-sprite-animations",
       "score": 0.5710537804846846
     },
@@ -10214,6 +10518,10 @@
     {
       "post": "scrubbing-videos-using-javascript",
       "score": 0.5639057274035721
+    },
+    {
+      "post": "css-only-counter",
+      "score": 0.5625672392227183
     },
     {
       "post": "native-dual-range-input",
@@ -10297,7 +10605,7 @@
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.5295172513575018
+      "score": 0.5298963528881545
     },
     {
       "post": "css-blocky-people-making-waves",
@@ -10350,6 +10658,10 @@
       "score": 0.6365083131763462
     },
     {
+      "post": "all-aboard-the-monorail",
+      "score": 0.6313199129390995
+    },
+    {
       "post": "javascript-animation-loop",
       "score": 0.6284534769635746
     },
@@ -10367,7 +10679,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.5987953083495051
+      "score": 0.5975395493699329
     },
     {
       "post": "html-canvas-video-player-ios",
@@ -10486,6 +10798,10 @@
       "score": 0.5169976184329634
     },
     {
+      "post": "css-only-counter",
+      "score": 0.5168068053200099
+    },
+    {
       "post": "uploading-files-using-fetch-multipart-form-data",
       "score": 0.5099937756046101
     },
@@ -10502,12 +10818,12 @@
       "score": 0.503472641539661
     },
     {
-      "post": "ie6-hacks-ten-years-after",
-      "score": 0.5028603981759651
-    },
-    {
       "post": "3d-rotating-cube-effect",
       "score": 0.5028158956435937
+    },
+    {
+      "post": "ie6-hacks-ten-years-after",
+      "score": 0.5024117500003
     },
     {
       "post": "setting-up-webpack-babel-and-react-from-scratch-part-3",
@@ -10613,7 +10929,11 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.5243480818273129
+      "score": 0.5263651052455454
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5215914984437592
     },
     {
       "post": "one-million-npm-downloads",
@@ -10938,6 +11258,10 @@
       "score": 0.5203741856737504
     },
     {
+      "post": "css-only-counter",
+      "score": 0.5182406389291341
+    },
+    {
       "post": "react-decorators-and-scroll-manager",
       "score": 0.5167693080806993
     },
@@ -10952,6 +11276,10 @@
     {
       "post": "css-animations-instead-of-js-timers",
       "score": 0.5118525073697703
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5021214845968665
     }
   ],
   "redesign-again": [
@@ -10998,6 +11326,10 @@
       "score": 0.5556512771010877
     },
     {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5520919832746146
+    },
+    {
       "post": "custom-giraffe-caret",
       "score": 0.5346987938589265
     },
@@ -11031,7 +11363,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.5118956518129946
+      "score": 0.5131525952666832
     },
     {
       "post": "javascript-animation-loop",
@@ -11076,6 +11408,10 @@
       "score": 0.6129647423063349
     },
     {
+      "post": "css-only-counter",
+      "score": 0.6101175061455313
+    },
+    {
       "post": "css-only-sprite-animations",
       "score": 0.6081484156341624
     },
@@ -11093,7 +11429,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.5901890401973473
+      "score": 0.5911899840542056
     },
     {
       "post": "flex-justify-content-equally-distanced-items",
@@ -11125,7 +11461,7 @@
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.5451690811027845
+      "score": 0.5444073229326206
     },
     {
       "post": "counting-sheep",
@@ -11162,6 +11498,10 @@
     {
       "post": "css-blocky-people-making-waves",
       "score": 0.5182411370575747
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5168317116944475
     },
     {
       "post": "font-weight-based-on-dpi",
@@ -11269,7 +11609,7 @@
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.5621408187581833
+      "score": 0.5614599065534644
     },
     {
       "post": "scrollbar-size-observer",
@@ -11430,12 +11770,16 @@
       "score": 0.6454341695562249
     },
     {
-      "post": "css-image-glitch",
-      "score": 0.6177577163397928
+      "post": "all-aboard-the-monorail",
+      "score": 0.6233779560737983
     },
     {
       "post": "javascript-animation-loop",
       "score": 0.6174708212314232
+    },
+    {
+      "post": "css-image-glitch",
+      "score": 0.6170584027375667
     },
     {
       "post": "setting-up-webpack-babel-and-react-from-scratch",
@@ -11510,6 +11854,10 @@
       "score": 0.5421891336329575
     },
     {
+      "post": "css-only-counter",
+      "score": 0.5357462341053089
+    },
+    {
       "post": "preserving-text-size-when-scaling-svgs",
       "score": 0.5349537470599772
     },
@@ -11547,7 +11895,7 @@
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.5018987450825291
+      "score": 0.5014250755851188
     }
   ],
   "bunny-jumps-again": [
@@ -11601,7 +11949,7 @@
     },
     {
       "post": "css-image-glitch",
-      "score": 0.5031826951326535
+      "score": 0.5062491666111941
     },
     {
       "post": "sneak-peek-of-rayven",
@@ -11654,6 +12002,10 @@
       "score": 0.5828093031721862
     },
     {
+      "post": "css-only-counter",
+      "score": 0.578791201540336
+    },
+    {
       "post": "pwa-ios-status-bar-blur",
       "score": 0.5588344637274582
     },
@@ -11688,6 +12040,10 @@
     {
       "post": "mobile-chrome-vh-units-fix",
       "score": 0.5359675817208355
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5325661256984277
     },
     {
       "post": "custom-giraffe-caret",
@@ -11736,6 +12092,382 @@
     {
       "post": "css-and-svg-input-animations",
       "score": 0.5020335806066107
+    }
+  ],
+  "all-aboard-the-monorail": [
+    {
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.7056016419147255
+    },
+    {
+      "post": "css-image-glitch",
+      "score": 0.6904533039987868
+    },
+    {
+      "post": "css-animations-instead-of-js-timers",
+      "score": 0.67878813097787
+    },
+    {
+      "post": "native-dual-range-input",
+      "score": 0.6784628028560753
+    },
+    {
+      "post": "image-comparison-slider",
+      "score": 0.6761575975564027
+    },
+    {
+      "post": "custom-giraffe-caret",
+      "score": 0.6702150216843916
+    },
+    {
+      "post": "js-libraries-for-generative-art",
+      "score": 0.6582290158928211
+    },
+    {
+      "post": "css-only-sprite-animations",
+      "score": 0.6546418123186825
+    },
+    {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.6501888627273055
+    },
+    {
+      "post": "neon-generative-art-piece-made-using-2d-vector-field",
+      "score": 0.6373345675486269
+    },
+    {
+      "post": "css-blocky-people-making-waves",
+      "score": 0.6319938650710022
+    },
+    {
+      "post": "scrubbing-videos-using-javascript",
+      "score": 0.6313199129390995
+    },
+    {
+      "post": "fake-audio-spectrum-using-perlin-noise",
+      "score": 0.6265137941532934
+    },
+    {
+      "post": "breaking-down-krypton",
+      "score": 0.6265009430422984
+    },
+    {
+      "post": "react-rerender-in-component-did-mount",
+      "score": 0.6233779560737983
+    },
+    {
+      "post": "metaballs-generative-art",
+      "score": 0.6170652805536242
+    },
+    {
+      "post": "javascript-animation-loop",
+      "score": 0.6161790428507188
+    },
+    {
+      "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
+      "score": 0.6101078488238557
+    },
+    {
+      "post": "sneak-peek-of-rayven",
+      "score": 0.6095141935635294
+    },
+    {
+      "post": "webpack-babel-react-revisited",
+      "score": 0.5966087649993991
+    },
+    {
+      "post": "vertigo-svg-shaders",
+      "score": 0.5796051208354485
+    },
+    {
+      "post": "react-image-filter-component",
+      "score": 0.5765754385886801
+    },
+    {
+      "post": "making-2d-platformer-controls",
+      "score": 0.5736534439706878
+    },
+    {
+      "post": "preserving-text-size-when-scaling-svgs",
+      "score": 0.5713707410974461
+    },
+    {
+      "post": "svg-non-scaling-circle-and-rectangle",
+      "score": 0.571064098237623
+    },
+    {
+      "post": "css-only-counter",
+      "score": 0.5624219017467196
+    },
+    {
+      "post": "plx-react-parallax-component",
+      "score": 0.5548510326615014
+    },
+    {
+      "post": "nodejs-simple-colorful-logging",
+      "score": 0.5520919832746146
+    },
+    {
+      "post": "react-animate-height-slide-up-down",
+      "score": 0.5511623605997502
+    },
+    {
+      "post": "css-and-svg-input-animations",
+      "score": 0.5487135761416487
+    },
+    {
+      "post": "javascript-keyboard-easter-egg",
+      "score": 0.5418285296410398
+    },
+    {
+      "post": "weekly-code-challenge-spring-2021",
+      "score": 0.5416441278747879
+    },
+    {
+      "post": "introducing-keen-npm-package-boilerplate",
+      "score": 0.5405181816936595
+    },
+    {
+      "post": "into-2021",
+      "score": 0.5370033606284006
+    },
+    {
+      "post": "the-tiny-book-of-great-joys",
+      "score": 0.5365985184633325
+    },
+    {
+      "post": "ie6-hacks-ten-years-after",
+      "score": 0.5359575719910061
+    },
+    {
+      "post": "pwa-ios-status-bar-blur",
+      "score": 0.5328906218226603
+    },
+    {
+      "post": "accessible-range-slider",
+      "score": 0.5325661256984277
+    },
+    {
+      "post": "sass-random-and-circle-animation",
+      "score": 0.5257567033764918
+    },
+    {
+      "post": "setting-up-webpack-babel-and-react-from-scratch",
+      "score": 0.5220618351925047
+    },
+    {
+      "post": "into-2020",
+      "score": 0.5215914984437592
+    },
+    {
+      "post": "animated-login-signup-forms",
+      "score": 0.5186566311027284
+    },
+    {
+      "post": "my-programming-story",
+      "score": 0.5183964757436103
+    },
+    {
+      "post": "into-2022",
+      "score": 0.5170602986345004
+    },
+    {
+      "post": "elastic-hover-effect",
+      "score": 0.5168317116944475
+    },
+    {
+      "post": "visualizing-a-vector-field",
+      "score": 0.5151773571833768
+    },
+    {
+      "post": "setting-up-webpack-babel-and-react-from-scratch-part-2",
+      "score": 0.5137645794669949
+    },
+    {
+      "post": "custom-scroll-bars",
+      "score": 0.5113312580382599
+    },
+    {
+      "post": "scrollbar-size-observer",
+      "score": 0.5062498926853759
+    },
+    {
+      "post": "react-simple-video-buffering-loader",
+      "score": 0.5021214845968665
+    },
+    {
+      "post": "animate-window-scroll-to",
+      "score": 0.5012187060194446
+    },
+    {
+      "post": "my-blog-setup",
+      "score": 0.5006737891478539
+    }
+  ],
+  "css-only-counter": [
+    {
+      "post": "css-animations-instead-of-js-timers",
+      "score": 0.6736998975842798
+    },
+    {
+      "post": "image-comparison-slider",
+      "score": 0.6475112361319543
+    },
+    {
+      "post": "css-only-floating-input-labels",
+      "score": 0.6402057341250151
+    },
+    {
+      "post": "css-only-sprite-animations",
+      "score": 0.6390561254180306
+    },
+    {
+      "post": "native-dual-range-input",
+      "score": 0.6258681764038189
+    },
+    {
+      "post": "css-image-glitch",
+      "score": 0.6195946350177274
+    },
+    {
+      "post": "elastic-hover-effect",
+      "score": 0.6101175061455313
+    },
+    {
+      "post": "sass-random-and-circle-animation",
+      "score": 0.5962504298029822
+    },
+    {
+      "post": "always-use-button-for-clickable-elements",
+      "score": 0.5853461820834587
+    },
+    {
+      "post": "animated-login-signup-forms",
+      "score": 0.5788726169215083
+    },
+    {
+      "post": "accessible-range-slider",
+      "score": 0.578791201540336
+    },
+    {
+      "post": "custom-scroll-bars",
+      "score": 0.5740164204429473
+    },
+    {
+      "post": "css-blocky-people-making-waves",
+      "score": 0.5735260548864444
+    },
+    {
+      "post": "custom-giraffe-caret",
+      "score": 0.5730612591760043
+    },
+    {
+      "post": "pwa-ios-status-bar-blur",
+      "score": 0.5702560314060358
+    },
+    {
+      "post": "react-image-filter-component",
+      "score": 0.5625672392227183
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.5624219017467196
+    },
+    {
+      "post": "css-and-svg-input-animations",
+      "score": 0.5623199064770329
+    },
+    {
+      "post": "ie6-hacks-ten-years-after",
+      "score": 0.553853191879021
+    },
+    {
+      "post": "preserving-text-size-when-scaling-svgs",
+      "score": 0.5506348621431475
+    },
+    {
+      "post": "counting-sheep",
+      "score": 0.5464494114693297
+    },
+    {
+      "post": "svg-non-scaling-circle-and-rectangle",
+      "score": 0.544874541408184
+    },
+    {
+      "post": "fake-audio-spectrum-using-perlin-noise",
+      "score": 0.5432210200164901
+    },
+    {
+      "post": "html-inert-property",
+      "score": 0.5428294211771695
+    },
+    {
+      "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
+      "score": 0.5398144511062177
+    },
+    {
+      "post": "making-2d-platformer-controls",
+      "score": 0.5390552349225397
+    },
+    {
+      "post": "flex-justify-content-equally-distanced-items",
+      "score": 0.5387077562988173
+    },
+    {
+      "post": "react-rerender-in-component-did-mount",
+      "score": 0.5357462341053089
+    },
+    {
+      "post": "3d-rotating-cube-effect",
+      "score": 0.5335322339496104
+    },
+    {
+      "post": "simple-react-slider",
+      "score": 0.5320271363560071
+    },
+    {
+      "post": "javascript-keyboard-easter-egg",
+      "score": 0.5262472888028842
+    },
+    {
+      "post": "hiding-body-scrollbars-using-css",
+      "score": 0.5232199527568594
+    },
+    {
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.5209516977978923
+    },
+    {
+      "post": "javascript-animation-loop",
+      "score": 0.5194028651410623
+    },
+    {
+      "post": "react-simple-video-buffering-loader",
+      "score": 0.5182406389291341
+    },
+    {
+      "post": "react-animate-height-slide-up-down",
+      "score": 0.5181764103445522
+    },
+    {
+      "post": "scrubbing-videos-using-javascript",
+      "score": 0.5168068053200099
+    },
+    {
+      "post": "weekly-code-challenge-spring-2021",
+      "score": 0.5113615217566208
+    },
+    {
+      "post": "scrollbar-size-observer",
+      "score": 0.5079513874694865
+    },
+    {
+      "post": "font-size-and-tracking-points-to-pixels",
+      "score": 0.5056292154482063
+    },
+    {
+      "post": "catching-the-blur-event-on-an-element-and-its-children",
+      "score": 0.5021143078913227
     }
   ]
 }

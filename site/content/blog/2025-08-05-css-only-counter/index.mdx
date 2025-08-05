@@ -1,0 +1,136 @@
++++
+title = "<span>CSS only</span> counter component"
+
+category = ["CSS/SASS"]
+tags = ["css", "counter", "radio"]
+
+intro = "Let's build a counter component using only CSS, using radio inputs and modern CSS selectors."
++++
+
+import Counter from './components/counter'
+import InputsOnly from './components/inputs-only'
+import InputsWithButtons from './components/buttons'
+
+<link rel="stylesheet" href="/css/posts/css-counter.css" />
+
+Before we start, here is a demo of the counter (you can also check it out on [CodePen](https://codepen.io/stanko/pen/jEbmpMX?editors=0100)):
+
+<Counter name="c1" />
+
+This idea started with a [space invaders generator](https://muffinman.io/invaders/) I recently made. If you look at the randomize button, you'll notice the number on the dice changes from five to three when you hover over it. A friend then said, "It would be really cool if you showed a different number every time you hover."
+
+That got me thinking, could I make this <Sidenote note="It's trivial to do in a few lines of JavaScript, which I'll probably do at some point.">using CSS only?</Sidenote>
+
+Before diving deeper, I decided to simplify the problem by first making a basic counter component. Since the solution had to be CSS-only, we'd need to render all the numbers before hand and then select one at a time using CSS - which felt a lot like how radio inputs work.
+
+So I decided to try radio inputs. After a bit of experimenting, I ended up with this HTML structure:
+
+```html
+<div class="counter">
+  <input id="counter-1" type="radio" value="1" name="counter" checked />
+  <label for="counter-1">1</label>
+
+  <input id="counter-2" type="radio" value="2" name="counter" />
+  <label for="counter-2">2</label>
+
+  <!-- ... -->
+
+  <input id="counter-10" type="radio" value="10" name="counter" />
+  <label for="counter-10">10</label>
+</div>
+```
+
+## Solution
+
+To make a counter, we need to somehow select the checked input's label, as well as the previous and next ones, using CSS.
+
+Lucky for us, we live in the future where the `:has`  selector exists. If you had shown me `:has` back when we were still dealing with IE6, it would have completely blown my mind.
+
+Anyway, we can use this fancy selector to target the inputs we need, and it's fairly simple:
+
+```css
+/* Checked label */
+input:checked + label {}
+
+/* Prev label */
+label:has(+ input:checked) {}
+
+/* Next Label */
+input:checked + label + input + label {}
+```
+
+I hope this code is clear as it is, but to make things easier to grasp here is an interactive demo:
+
+<InputsOnly max={6} name="i1" />
+
+This demo uses the exact code we have above (plus a `::before` element for labels) to highlight the elements we are interested in.
+
+## Buttons
+
+At this point it is safe to hide all the other labels and all of the radio inputs. That leaves us with three labels we care about (at the start and end it is only two). For good measure, I added the plus and minus signs in `::after` elements.
+
+Now it really looks like a counter!
+
+<InputsWithButtons name="b1" />
+
+### Making buttons nicer
+
+Pseudo-elements are cool, but regular elements give us more flexibility. Instead of ::after elements, in the final version I added "fake" buttons placed under the labels. The labels are transparent, so it feels like you're clicking the buttons themselves.
+
+```html
+<div class="counter__ui">
+  <div class="counter__button counter__button--minus">-</div>
+  <div class="counter__button counter__button--plus">+</div>
+</div>
+```
+
+With that, we have our counter completed!
+
+<Counter name="c2" />
+
+## Looping
+
+We can also create a looping version. Again, we're going to use `:has` to select the first label when the last input is checked and vice versa:
+
+```css
+/* First label - for looping */
+.counter:has(input:nth-last-child(2):checked) label:nth-child(2) {}
+
+/* Last label - for looping */
+.counter:has(input:nth-child(1):checked) label:nth-last-child(1) {}
+```
+
+Let's apply it to our demo:
+
+<InputsOnly max={6} className="inputs-only--loop" name="i2" />
+
+And to the final version:
+
+<Counter name="c3" className="css-counter--loop" />
+
+## Mouse hover
+
+I also experimented with mouse hover on the buttons, well, labels. Because the buttons are fake, hover styles need to be applied to the previous and next labels.
+
+Chrome works fine, but unfortunately, it doesn't work well in Firefox or Safari. On click, the labels swap under your mouse cursor, which results in losing the mouse hover effect until you move your mouse again.
+
+<Counter name="c4" className="css-counter--hover" />
+
+Let me know if you have any ideas how to fix it. This is the code I used:
+
+<Spoiler hide="Hide code" show="Show code">
+```css
+/* Prev label */
+label:has(+ input:checked):hover,
+/* Next label */
+input:checked + label + input + label:hover {
+  background: rgb(0 0 0 / 0.1);
+}
+```
+</Spoiler>
+
+## Should I use it?
+
+Honestly, probably not. It is accessible, because it is using native radio inputs, but for that exact reason I would stick to the traditional styling for radio groups. The only exception would be that the counter component is critical for the user experience and that website has to work without JavaScript disabled. But again, I can't really think of a real world example.
+
+But I would treat it as a fun exercise in CSS.

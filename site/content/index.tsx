@@ -10,9 +10,14 @@ import PostCard from '@site/components/post-card';
 import CirclePatternSymbol from '@site/components/circle-pattern-symbol';
 
 const Index = () => {
-  const allPosts = brz.pages.getCollection('blog') as BlogPost[];
-  const latestPost = allPosts[0] as BlogPost;
-  const posts = allPosts.slice(1, 5);
+  let allPosts = brz.pages.getCollection('blog').slice(0, 6) as BlogPost[];
+  let posts = allPosts.slice(0, 6) as BlogPost[];
+  const latestPostHasImage = !!allPosts[0]?.pageData.image;
+
+  if (latestPostHasImage) {
+    posts = posts.slice(1, 5);
+  }
+
   const art = brz.pages.getCollection('art').slice(0, 6) as ArtPage[];
 
   return (
@@ -39,12 +44,19 @@ const Index = () => {
           </a>
         </h2>
 
-        <PostCard post={latestPost} outputDir={dirs.OUTPUT} latest />
+        {latestPostHasImage && (
+          <PostCard
+            post={allPosts[0] as BlogPost}
+            outputDir={dirs.OUTPUT}
+            latest
+          />
+        )}
 
         <div className="home__posts">
-          {posts.map((post) => {
+          {posts.map((post, i) => {
             return (
               <PostCard
+                latest={!latestPostHasImage && i === 0}
                 key={post.pathname}
                 post={post}
                 outputDir={dirs.OUTPUT}

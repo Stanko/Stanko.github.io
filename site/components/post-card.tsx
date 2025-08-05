@@ -24,7 +24,7 @@ const PostCard = async ({
       {...props}
       href={post.pathname}
       className={clsx('post-card', className, post.pageData.theme, {
-        'post-card--image': latest,
+        'post-card--image': latest && post.pageData.image,
       })}
     >
       <div className="post-card__content">
