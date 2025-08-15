@@ -7,18 +7,26 @@ export type WatcherOptions = {
   endsWith: string;
   onChange: (path: string) => void;
   onDelete?: (path: string) => void;
+  depth?: number;
 };
 
 export class Watcher {
   watcher: FSWatcher;
 
-  constructor({ dir, endsWith, onChange, onDelete, label }: WatcherOptions) {
+  constructor({
+    dir,
+    endsWith,
+    onChange,
+    onDelete,
+    label,
+    depth = 10,
+  }: WatcherOptions) {
     this.watcher = chokidar.watch(dir, {
       persistent: true,
       ignoreInitial: true,
       ignored: (path, stats) =>
         Boolean(stats?.isFile() && !path.endsWith(endsWith)),
-      depth: 2,
+      depth,
     });
 
     this.watcher.on('all', async (event, path) => {

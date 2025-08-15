@@ -286,7 +286,8 @@ export class Pages {
 
     if (parts.length > 1) {
       const collectionName = parts[0] as string;
-      this.updateCollection(this.getCollection(collectionName), page);
+      const collection = this.getCollection(collectionName);
+      this.updateCollection(collection, page);
     }
 
     await Pages.writePage(page);

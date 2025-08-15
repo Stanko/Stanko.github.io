@@ -56,6 +56,7 @@ const mdxPlugin: BunPlugin = {
 
       // This is a backup for the case where intro is not provided
       let snippet = content
+        .replace(/<[^>]*>?/gm, '') // remove HTML tags
         .replace(/\[([^\]]+)\]\([^\)]+\)/g, '$1') // Remove markdown links
         .replace(/!\[([^\]]+)\]\([^\)]+\)/g, '$1') // Remove markdown images
         .replace(/\(?(https?:\/\/[^\s)]+)\)?/g, '') // Remove inline links

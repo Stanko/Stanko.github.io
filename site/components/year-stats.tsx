@@ -169,7 +169,7 @@ const YearsStats = ({
 
   // Group posts by year
   const groupedPosts = posts
-    .reverse()
+    .toReversed()
     // All posts have post.pageData.date in YYYY-MM-DD format
     .reduce((acc, post) => {
       const year = parseInt(post.pageData.date.split('-')[0] as string, 10);
