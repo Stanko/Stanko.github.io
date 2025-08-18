@@ -47,9 +47,9 @@ const StatsSVG = ({
         ))}
       </g>
       <g className="year-stats__grid year-stats__grid--vertical">
-        {verticalLines.map((x) => (
+        {verticalLines.map((x, i) => (
           // leaving 1 pixel so it doesn't overlap with the horizontal lines
-          <path key={x} d={`M ${x} 0 v ${height - 1}`} />
+          <path key={x} d={`M ${x} 0 v ${i === 0 ? height : height - 1}`} />
         ))}
       </g>
       <g className="year-stats__posts blue">

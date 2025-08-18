@@ -61,7 +61,9 @@ export const getFeed = (pages: Page[]) => {
   const entries = pages
     .filter((page) => {
       return (
-        (page.pageData.titlePlain || page.pageData.title) && page.pageData.date
+        (page.pageData.titlePlain || page.pageData.title) &&
+        page.pageData.date &&
+        !page.pageData.unlisted
       );
     })
     .map((page) => entry(page))

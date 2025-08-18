@@ -42,7 +42,10 @@ type YearGroup = {
 };
 
 const BlogIndex = async ({ ...props }: BlogIndexProps) => {
-  const posts = brz.pages.getCollection('blog') as BlogPost[];
+  const posts = brz.pages
+    .getCollection('blog')
+    // Removes unlisted posts from the blog index page
+    .filter((post) => !post.pageData.unlisted) as BlogPost[];
 
   const writingFor = getYearsFromTheBlogStart();
 

@@ -16,9 +16,10 @@ Copyright © Stanko Tadić
 
 ### Must have
 
+- [ ] Custom 404 page (it should be at `/404.html` for GitHub pages)
+
 ### Future
 
-- [ ] Generative art -> Algorithmic art
 - [ ] OG image generation
 - [ ] Improve watchers in dev mode
 - [ ] Simplify stats year chart. Add word count legend on the right.

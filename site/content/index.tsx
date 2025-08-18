@@ -10,7 +10,11 @@ import PostCard from '@site/components/post-card';
 import CirclePatternSymbol from '@site/components/circle-pattern-symbol';
 
 const Index = () => {
-  let allPosts = brz.pages.getCollection('blog').slice(0, 6) as BlogPost[];
+  let allPosts = brz.pages
+    .getCollection('blog')
+    // Removes unlisted posts from the home page
+    .filter((post) => !post.pageData.unlisted)
+    .slice(0, 6) as BlogPost[];
   let posts = allPosts.slice(0, 6) as BlogPost[];
   const latestPostHasImage = !!allPosts[0]?.pageData.image;
 

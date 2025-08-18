@@ -1,4 +1,4 @@
-.share {
+.shr {
   margin-bottom: 3rem;
 
   @include md {
@@ -6,17 +6,17 @@
   }
 }
 
-.share__title {
+.shr__title {
   color: var(--text-light);
   margin-bottom: 1rem;
 }
 
-.share__icons {
+.shr__icons {
   display: flex;
   gap: 0.5rem;
 }
 
-.share__icon {
+.shr__icon {
   --icon-color: rgb(var(--icon-color-rgb));
   position: relative;
   flex: 0 0 2.25rem;
@@ -43,7 +43,7 @@
   }
 }
 
-.share__icon--twitter {
+.shr__icon--twitter {
   --icon-color-rgb: 0 171 241;
 
   svg {
@@ -52,7 +52,7 @@
   }
 }
 
-.share__icon--bluesky {
+.shr__icon--bluesky {
   --icon-color-rgb: 61 131 246;
 
   svg {
@@ -61,7 +61,7 @@
   }
 }
 
-.share__icon--reddit {
+.shr__icon--reddit {
   --icon-color-rgb: 252 69 30;
 
   svg {
@@ -69,7 +69,7 @@
   }
 }
 
-.share__icon--hn {
+.shr__icon--hn {
   --icon-color-rgb: 251 101 30;
 
   svg {

@@ -200,7 +200,7 @@ export class Pages {
     ).getMdxComponents;
 
     await this.getPages();
-    await this.writePages();
+    this.writePages();
   }
 
   writePages() {

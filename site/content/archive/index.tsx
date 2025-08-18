@@ -39,7 +39,10 @@ type CategoryGroup = {
 };
 
 const Archive = async ({ ...props }: ArchiveProps) => {
-  let posts = brz.pages.getCollection('blog') as BlogPost[];
+  const posts = brz.pages
+    .getCollection('blog')
+    // Removes unlisted posts from the blog index page
+    .filter((post) => !post.pageData.unlisted) as BlogPost[];
 
   const intro = `All of my ${posts.length} posts, sorted in categories.`;
 

@@ -14,14 +14,14 @@ const Share = ({
   ...props
 }: ShareProps) => {
   return (
-    <div className={clsx('share', className)} {...props}>
+    <div className={clsx('shr', className)} {...props}>
       <div className="container">
-        <h3 className="share__title">Share on:</h3>
+        <h3 className="shr__title">Share on:</h3>
 
-        <div className="share__icons">
+        <div className="shr__icons">
           {/* --- HN - */}
           <a
-            className="share__icon share__icon--hn"
+            className="shr__icon shr__icon--hn"
             title="Share post on Hacker News"
             href={`http://news.ycombinator.com/submitlink?u=${url}&t=${title}`}
             target="_blank"
@@ -41,7 +41,7 @@ const Share = ({
           </a>
           {/* --- Bluesky - */}
           <a
-            className="share__icon share__icon--bluesky"
+            className="shr__icon shr__icon--bluesky"
             title="Share post on Bluesky"
             href={`https://bsky.app/intent/compose?text=${title}%20${url}`}
             target="_blank"
@@ -57,7 +57,7 @@ const Share = ({
           </a>
           {/* --- Twitter - */}
           <a
-            className="share__icon share__icon--twitter"
+            className="shr__icon shr__icon--twitter"
             title="Share post on Twitter"
             href={`http://twitter.com/share?text=${title}&amp;url=${url}`}
             target="_blank"
@@ -77,7 +77,7 @@ const Share = ({
           </a>
           {/* --- Reddit - */}
           <a
-            className="share__icon share__icon--reddit"
+            className="shr__icon shr__icon--reddit"
             title="Share post on Reddit"
             href={`http://www.reddit.com/submit?url=${url}&title=${title}`}
             target="_blank"

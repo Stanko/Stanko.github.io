@@ -1,0 +1,286 @@
++++
+title = "How to draw a <span>Space Invader</span>"
+
+category = ["JavaScript"]
+tags = ["js","svg","drawing","rope","invaders"]
+
+intro = ""
+favorite = true
+image = "./img/invaders-grid.png"
+
+unlisted = true
++++
+
+import InvaderAnimation from './components/invader-animation'
+import SizeAnimation from './components/size-animation'
+
+<link rel="stylesheet" href="/css/posts/invaders.css" />
+
+<noscript>
+<p>This is an interactive article. To fully experience it, you'll need to turn JavaScript on.</p>
+</noscript>
+
+I recently made the [Space Invader Generator](https://muffinman.io/invaders/) for Creative Coding Amsterdam [code challenge](https://cca.codes/invaders). I made it for fun of course... and galactic domination too! You can see how it looks below and in this post I'll show you how it works using an interactive animation.
+
+<a href="https://muffinman.io/invaders/"><Image src="./img/ui.png" alt="" /></a>
+
+Here are a few invaders it can generate:
+
+<Grid sm="3" md="3" lg="3">
+  <Image src="./img/invader-1.png" alt="A pink space invader generated using my tool" transparent />
+  <Image src="./img/invader-3.png" alt="A green space invader generated using my tool" transparent />
+  <Image src="./img/invader-2.png" alt="A blue space invader generated using my tool" transparent />
+</Grid>
+
+While showing friends how it works, I realized the process would look great animated. So I decided to write another interactive blog post. I'll give you some background first, but if you are eager to see the process, feel free to jump straight to the [interactive part](#building-the-invader).
+
+## How it started
+
+I was working on a new version of [Rayven](/blog/sneak-peek-of-rayven/), my vector 3D renderer. Sometimes I get stuck working on tools - they turn into never-ending projects and I never actually use them to create something. At some point I became aware of this pattern, and I think I've gotten better at wrapping projects up, releasing them in one form or another, and moving on.
+
+So I thought it would be cool to do a few plots using Rayven instead of endlessly tweaking the renderer itself. I wanted something simple that I could whip up quickly. It would be a meaningful milestone, even if I didn't finish everything I planned for Rayven.
+
+Then I thought of Space Invaders. They are small, easy to render with 3D blocks, and instantly recognizable as part of video game history.
+
+<Grid>
+  <Image outline src="./img/rayven-invader-1.png" alt="Classic space invader rendered using Rayven"  />
+  <Image outline src="./img/rayven-invader-2.png" alt="The same space invader rendered from a different angle and with different shading"  />
+</Grid>
+
+I did a few renders of the classic space invader and started thinking that it would be fun to generate random ones and create a series of plots. That sounded like a good idea to share as a code challenge.
+
+## The code challenge
+
+I was pleasantly surprised that people liked the idea. We drafted some rules and the [Space Invaders code challenge](https://cca.codes/invaders) was on! At the time of writing, the challenge is still ongoing, but once it wraps up, I'll link to all the submissions. I've already seen some works in progress and there is some really cool stuff coming - stay tuned!
+
+## From doodles to pixels
+
+I often bore people by saying you should step back and solve the problem before diving into code. This time it was no different. I literally had no idea how to generate space invaders, so I started with some research. I doodled on paper, but pixel art felt like it deserved digital tools.
+
+So I fired up Aseprite and got to work:
+
+<Image src="./img/invaders.png" alt="" />
+
+These are the 38 invaders I drew. They all fit in a 15x15 pixel grid, a bit larger than the originals, but I really liked how they turned out. I enjoyed drawing them a lot. Still, I had no clue how to generate them. I had some over-engineered ideas, but with such a small canvas I worried they would end up as unrecognizable splats of pixels.
+
+Looking at the drawings, a pattern started to emerge. And it was the best kind of pattern - one based on geometry and vector graphics, both things I enjoy and am good at. I chose to play to my strengths and try generating a vector invader. I'm glad to say it worked - what I implemented can generate most of the invaders I drew by hand.
+
+Before we dive into the process, a small disclaimer: I won't go into every little detail, but I'll walk you through the core steps and make digressions about stuff I find interesting. If you want to see implementation details, you can check out the code on [GitHub](https://github.com/Stanko/invaders).
+
+One last note: I use the terms 'generate' and 'randomly select' a lot. Usually that means I use randomness (with some constraints) to calculate a point in 2D space.
+
+<div className="steps-wrapper">
+
+## Building the invader
+
+Here's our grid. It will stay in the viewport and we'll draw an invader on it as we scroll down.
+
+<div className="drawing">
+<button className="btn-replay" aria-label="Replay step" title="Replay step">
+  <svg
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="btn-replay-icon"
+  >
+    <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+    <path d="M3 3v5h5"/>
+  </svg>
+</button>
+</div>
+
+We should probably start with the body. If you look at my sketches above, you might notice the same pattern I did - almost all of the bodies resemble a low-resolution polygon. The plan is to generate a vector polygon. The low resolution of the grid will help hide our (vector) crimes.
+
+### Finding the center
+
+Having a central point for the body will help us draw the rest of it. Think of it as an anchor. Since we'll generate tentacles in the bottom part, it makes sense to shift the body slightly upward.
+
+The original space invaders are symmetrical around the vertical axis, and we can use that to our advantage. It's enough to generate one side of the body and then mirror it.
+
+### Defining top and bottom
+
+To generate one side of the body, we start with top and bottom points. Both sit on the vertical axis of symmetry and are randomly selected.
+
+### Drawing the left side
+
+We only need to generate one side and then mirror it. On the left side, we'll randomly pick between one and five points.
+
+At first I limited it to two or three points with a convex shape. Later I allowed more points and dropped the convex rule, which unlocked more interesting results. Lines sometimes overlap, but once pixelized, those imperfections disappear.
+
+### Mirroring it to the right
+
+Once the left side vertices are generated, we mirror them to the right.
+
+### Connect the dots
+
+Now we connect the points into a polygon. Side points are connected according to their vertical position.
+
+That gives our invader a body! Now let's add some extremities.
+
+## Adding limbs
+
+In code, limbs generated on the bottom side are called tentacles, and the ones on the top are horns. They are generated the same way, just with different parameters.
+
+Let's see how to generate one tentacle, and then we'll reuse the same technique for others.
+
+### Finding the root
+
+Since tentacles grow from the bottom, we start with the lowest side point of the body polygon. As usual, we do the left side first and mirror later.
+
+### Sketching the mid-line
+
+From the lowest point, we generate a few random points to form a polyline. Its length is random, and it serves as a mid-line for the tentacle.
+
+### Fattening the line
+
+On its own, the line is too thin. To turn it into a tentacle we need to give it width. The trick is to calculate points on both sides of the bisector line and connect them together. I like this technique and use it often for my drawings.
+
+It feels natural that the tentacle is wider where it connects to the body and shrinks further away. To achieve this, we reduce the bisector length as we move outward.
+
+Two notes on this "fat line" algorithm:
+- Because the mid-line is random, we often get sharp corners, which create weird overlaps. To soften them we scale down the line width relative to how sharp the angle is.
+- In the generator, you'll see an easing parameter for the width. Probably overkill, but it lets me fine tune the width along the tentacle and occasionally fill a missing pixel. I liked the control, so I kept it.
+
+### Our first tentacle
+
+Connecting the bisector endpoints gives us our first fat line, or rather, our first tentacle.
+
+Now we're ready to generate more tentacles and horns the same way.
+
+### Growing more tentacles
+
+First we mirror the tentacle we just drew. Some invaders also have a middle tentacle. Let's <Sidenote note="If the invader you are looking at hasn't grown a middle tentacle, refresh the page to get a new one.">randomly decide</Sidenote> if we should draw one.
+
+For the middle tentacle we start from the bottom point of the body polygon. We draw a line just like before, but with one change - if we get close to a side tentacle we stop. This avoids overlaps that often create a blob of pixels.
+
+To keep the middle tentacle symmetrical, we'll take the lazy route - draw it randomly and then mirror it.
+
+### Adding horns
+
+We draw horns the same way, except we start from the central point and shoot diagonally upward. Horns use a slightly narrower angle range to avoid overlaps. As usual, draw the left one and then mirror it.
+
+At this stage we have a very ~~crappy~~ rough vector invader. With this rough outline in place, the next challenge is turning it into the pixelated look we all know and love.
+
+## Turning vectors into pixels
+
+
+By pixelization, I mean painting pixels on the grid based on the vector invader. My first idea was to calculate how much of each pixel lies inside the vector shape and paint it if it's over 50%. That would be the most accurate, but it felt over-engineered for such a tiny grid.
+
+### Pixelizing the body
+
+Instead, we'll keep it simple - check if the center of a pixel is inside the polygon. If it is, paint it.
+
+This method isn't perfectly accurate, but it's easy and more than good enough. We're drawing tiny fictional space invaders, not building a universal rasterizer.
+
+### Pixelizing the limbs
+
+Tentacles can get thin, so often the center of a pixel won't fall inside them. That leaves only a few pixels painted. To improve this, we check if the center of a pixel is close to one of the tentacle points. If so, we paint it.
+
+But if the points are far apart, that still leaves gaps. To improve it, I added a `line splitting` parameter that subdivides the mid-line into more segments. More points mean a higher chance that a pixel center will be near one. It is not essential, but it helps fine tune invaders you like.
+
+Now it really looks like an invader - but it's still blind. Let's slap some eyes on it!
+
+## Adding eyes
+
+We could get clever with eyes, but a few predefined sets work just fine. I already drew some, so we just select one set. We'll place the eyes near the central point, since the body is built around it.
+
+To keep eyes from ending up on the edge, I padded the predefined sets with a few extra pixels. To <Sidenote note="Pun intended!">make it easier to see</Sidenote>, these extra pixels are shown lighter in the animation. Finally, if eye pixels overlap with body pixels, we remove them to create holes.
+
+## Coloring the invader
+
+Finally, we can apply some color and there is our invader! Let's talk about color a little.
+
+To generate colors, I used the [OKLCH color space](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch). It's similar to HSL, but unlike HSL it has predictable lightness. That means if we keep the lightness parameter fixed and randomly generate the other two, all generated colors share the same lightness. This is practical for many reasons, but in our case it helps us create colors of similar vibrancy for each invader.
+
+The code looks like this:
+
+```js
+const l = random(0.55, 0.8, rng, 2).toString();
+const c = random(0.2, 0.5, rng, 2).toString();
+const h = (random(120, 420, rng, 0) % 360).toString(); // skip brownish tones 60 - 120
+
+document.documentElement.style.setProperty('--theme-l', l);
+document.documentElement.style.setProperty('--theme-c', c);
+document.documentElement.style.setProperty('--theme-h', h);
+````
+
+Notice that for the hue I skip the range between 60 and 120 - yellow-brownish tones I didn't like.
+
+### Color tweaks with CSS
+
+One cool thing is that we can keep `l`, `c` and `h` as separate CSS variables. That makes it easy to mix and match or manipulate them with CSS `calc` method.
+
+For example, I use this to fix lightness for controls in the generator so they always have enough contrast:
+
+```css
+.controls {
+  --controls-main: oklch(0.6 var(--theme-c) var(--theme-h));
+  --controls-main-light: oklch(0.75 var(--theme-c) var(--theme-h));
+}
+```
+
+I also use it in debug mode to make tentacle and horn pixels darker and less saturated:
+
+```css
+.invader--debug .invader-pixel--l {
+  fill: oklch(calc(var(--theme-l) * 0.8) calc(var(--theme-c) * 0.6) var(--theme-h));
+}
+```
+
+</div>
+
+## Bringing it to life
+
+For the animation, we'll try to mimic the original video game. The original invaders have very simple two-frame animations with tentacles and horns moving.
+
+To move tentacles and horns, we'll clone them and randomly shift a few end points. Then we redraw the fat line and animation is done! Well, almost. We'll also move the eyes by one pixel to add a bit more life.
+
+Here is how it looks in action:
+
+<InvaderAnimation />
+
+The pink lines are alternate mid-lines for tentacles and horns. In the generator, you can see this debug view by turning on both `animate` and `debug` options.
+
+## Size
+
+I love how changing the size makes the invader feel like it's evolving or growing.
+
+<SizeAnimation />
+
+But if we increase the size too much, the vector shape becomes more prominent and it usually doesn't look good. Occasionally you'll get something that looks like a final boss, but most of the time you end up with ridiculous crappy ones:
+
+<Grid sm="2" md="2" lg="2">
+  <Image src="./img/invader-xl-3.png" alt="A huge pink space invader generated using my tool" transparent />
+  <Image src="./img/invader-xl-2.png" alt="Another huge blue space invader generated using my tool" transparent />
+</Grid>
+
+That's why I capped the size in the generator's interface to 31x31 pixels. But there is a way to increase it a bit more. If you change the URL directly you can push it up to a maximum of [51x51 pixels](https://muffinman.io/invaders/#/size:25/). I left this hidden feature in to show how increasing the size breaks the illusion.
+
+## Conclusion
+
+We made it!
+
+Thank you for sticking with me until the end. We built a generator that can create an infinite number of little colorful invaders. I'm super happy with how they turned out, and I hope you like them too.
+
+Making the generator and writing the post was a lot of fun. There are still things to add and improve, but like I said earlier - I learned how to publish a project even when my TODO list isn't empty. I might add a few more things to the generator, but I've got other projects lined up, so we'll see.
+
+I honestly hope you enjoyed reading the post and generating our little colorful intergalactic friends. And don't forget to [generate your own fleet](https://muffinman.io/invaders/).
+
+## Making of the post
+
+I usually keep all of the JavaScript in my posts unminified so people can read the code and hack around. But in this case, the invader generator and the animation use several external dependencies, so it was easier to add a build step.
+
+The animation is made with [Anime.js](https://animejs.com/) and its code lives in the [generator repository](https://github.com/Stanko/invaders/blob/dev/src/drawing/step-by-step.ts). The TypeScript gets compiled and copied to my blog repo. Finally, there is a [small script](https://github.com/Stanko/Stanko.github.io/blob/brz/site/public/js/posts/invaders/index.js) that coordinates the animation and connects it to the page scroll.
+
+The animation is also available in the generator itself. If you add the `step` parameter and toggle debug mode you'll be able to [play with it](https://muffinman.io/invaders/?step#/debug:true) there as well.
+
+## Bonus - The rope post
+
+If you liked this post, check out my earlier interactive one - [Draw SVG rope using JavaScript](/blog/draw-svg-rope-using-javascript/). I think you'll enjoy it.
+
+<script src="/js/posts/invaders/index.js" type="module"></script>

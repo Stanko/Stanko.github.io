@@ -104,7 +104,8 @@ const BlogPostTemplate = async ({
 
       return null;
     })
-    .filter((p) => p !== null);
+    .filter((p) => p !== null)
+    .slice(0, 5);
 
   return (
     <BaseTemplate
