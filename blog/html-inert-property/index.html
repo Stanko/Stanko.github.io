@@ -6,7 +6,7 @@
 <p>Now I prefer to use the native solution, but on most projects, we still have to support older browsers. My approach is to handle it in the wrapper component, which finds all focusable elements and sets <code>tabindex=&quot;-1&quot;</code>. After mounting, the mutation observer starts listening and re-sets the tabindex when content is changed.</p>
 <p>The wrapper itself has <code>aria-hidden=&quot;true&quot;</code>, which hides it from screen readers.</p>
 <p>You can try it out on <a href="https://codepen.io/stanko/pen/VwRZeVN">CodePen</a> and see the source code below:</p>
-<div class="spoiler"><div class="spoiler__content-wrapper" id="meigcfom-c9xjkc"><div class="spoiler__content"><pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">const</span> focusableElementsSelector <span class="token operator">=</span> <span class="token punctuation">[</span>
+<div class="spoiler"><div class="spoiler__content-wrapper" id="meipclf7-demr87"><div class="spoiler__content"><pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">const</span> focusableElementsSelector <span class="token operator">=</span> <span class="token punctuation">[</span>
 </span><span class="code-line">  <span class="token string">&quot;a[href]&quot;</span><span class="token punctuation">,</span>
 </span><span class="code-line">  <span class="token string">&quot;input&quot;</span><span class="token punctuation">,</span>
 </span><span class="code-line">  <span class="token string">&quot;select&quot;</span><span class="token punctuation">,</span>
@@ -72,7 +72,7 @@
 </span></span><span class="code-line"><span class="token plain-text">    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
 </span><span class="code-line">  <span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
-</span></code></pre></div></div><button class="spoiler__toggle btn btn--sm" aria-expanded="false" aria-controls="meigcfom-c9xjkc"><span class="spoiler__toggle-show">Show source code</span><span class="spoiler__toggle-hide">Hide source code</span></button></div>
+</span></code></pre></div></div><button class="spoiler__toggle btn btn--sm" aria-expanded="false" aria-controls="meipclf7-demr87"><span class="spoiler__toggle-show">Show source code</span><span class="spoiler__toggle-hide">Hide source code</span></button></div>
 <h3 id="drawbacks--edge-cases">Drawbacks / edge cases <a class="anchor-link" href="#drawbacks--edge-cases">#</a></h3>
 <p>The component uses a pretty simple approach, and it doesn&#x27;t handle some edge cases:</p>
 <ul>
