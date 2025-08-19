@@ -64,7 +64,7 @@ const mainSeedRng = seededRandom(mainSeed);
 Math.random = mainSeedRng;
 
 const options = {
-  size: random(6, 9, null, 0),
+  size: random(6, 13, null, 0),
   mainSeed: 123,
   mainSeedRng,
   gap: 0,
