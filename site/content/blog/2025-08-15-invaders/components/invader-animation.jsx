@@ -1902,7 +1902,7 @@ const InvaderAnimation = ({ ...props }) => {
           </g>
         </g>
       </svg>
-      <button class="animation-pause">
+      <button className="animation-pause">
         <span>Pause</span>
         <span>Resume</span>
       </button>

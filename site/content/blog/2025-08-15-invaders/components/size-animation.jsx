@@ -8044,7 +8044,7 @@ const SizeAnimation = ({ ...props }) => {
           </g>
         </svg>
       </div>
-      <button class="animation-pause">
+      <button className="animation-pause">
         <span>Pause</span>
         <span>Resume</span>
       </button>
