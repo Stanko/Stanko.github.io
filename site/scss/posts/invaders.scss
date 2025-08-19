@@ -55,10 +55,15 @@
 .invader-svg[data-position='in'] {
 }
 
+.sidenote__note:hover,
+.sidenote__text:hover + .sidenote__note {
+  z-index: calc(var(--layer-sidenote) + 10);
+}
+
 .drawing {
   position: sticky;
   top: 0;
-  z-index: 21; // to be over the menu button on large screens
+  z-index: calc(var(--layer-sidenote) + 1);
   background: #202125;
   padding: 1rem;
   top: 1rem;
@@ -67,7 +72,7 @@
   border-radius: 4px;
 
   @include lg {
-    top: 1.5rem;
+    top: 4.75rem;
     max-width: 100%;
     margin-inline: 0;
     width: 20rem;
