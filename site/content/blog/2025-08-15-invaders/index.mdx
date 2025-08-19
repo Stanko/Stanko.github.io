@@ -237,7 +237,7 @@ I also use it in debug mode to make tentacle and horn pixels darker and less sat
 
 For the animation, we'll try to mimic the original video game. The original invaders have very simple two-frame animations with tentacles and horns moving.
 
-To move tentacles and horns, we'll clone them and randomly shift a few end points. Then we redraw the fat line and animation is done! Well, almost. We'll also move the eyes by one pixel to add a bit more life.
+To move tentacles and horns, we clone their mid-lines and randomly shift a few end points. This gives us a variation for each tentacle and horn. Then we redraw the fat lines around them, pixelize it again, and get the second frame. To top it off and add a bit more life, we also move the eyes by one pixel.
 
 Here is how it looks in action:
 
@@ -247,7 +247,7 @@ The pink lines are alternate mid-lines for tentacles and horns. In the generator
 
 ## Size
 
-I love how changing the size makes the invader feel like it's evolving or growing.
+I love how increasing the grid size makes the invader feel like it’s evolving or growing. The same algorithm runs, but on a larger area, which allows for more details.
 
 <SizeAnimation />
 
