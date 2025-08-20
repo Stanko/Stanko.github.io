@@ -96,6 +96,12 @@ const BlogIndex = async ({ ...props }: BlogIndexProps) => {
       <Keyboard />
 
       <main className="container blog__list">
+        <label className="blog__favorites-label">
+          <input type="checkbox" className="blog__favorites-checkbox" />
+          <Favorite className="blog__favorites-icon" />
+          Show favorite posts only
+        </label>
+
         {groupedPosts.map((yearGroup) => {
           return (
             <div key={yearGroup.year} className="blog__year">
