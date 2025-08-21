@@ -8,8 +8,8 @@ import { getFeed } from '@brz/lib/feed';
 import { Pages } from '@brz/lib/pages';
 import { errorToHTML } from '@brz/utils/error-to-html';
 import { log, paint } from '@brz/utils/log';
-import { cp, readdir, writeFile } from 'node:fs/promises';
-import { join } from 'node:path';
+import { cp, exists, readdir, writeFile } from 'node:fs/promises';
+import { join, sep } from 'node:path';
 import { listenForKeyPresses } from './keypress';
 import { getSitemap } from './sitemap';
 
@@ -314,6 +314,7 @@ export class Brz {
   }
 
   watchComponents() {
+    // Site wide components
     this.watch({
       dir: dirs.COMPONENTS,
       label: 'components',
@@ -328,6 +329,35 @@ export class Brz {
           type: 'refresh',
           path: path.replace(dirs.COMPONENTS, ''),
         });
+      },
+    });
+
+    // Individual post components
+    this.watch({
+      dir: dirs.CONTENT,
+      label: 'page components',
+      endsWith: '.jsx',
+      onChange: async (path) => {
+        delete require.cache[path];
+
+        // JSX components usually live in "components" folder inside the post folder
+        // Trying to find the index.mdx and update it
+        const parts = path.split(sep);
+        const pagePath = [
+          ...parts.slice(0, parts.length - 2),
+          'index.mdx',
+        ].join(sep);
+
+        if (await exists(pagePath)) {
+          const pathnames = await this.pages.updateMdxPage(pagePath);
+
+          pathnames.forEach((pathname) => {
+            this.socketServer?.broadcast({
+              type: 'page-changed',
+              pathname,
+            });
+          });
+        }
       },
     });
   }
