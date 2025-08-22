@@ -53,6 +53,7 @@ const Index = () => {
             post={allPosts[0] as BlogPost}
             outputDir={dirs.OUTPUT}
             latest
+            image
           />
         )}
 

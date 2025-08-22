@@ -1,0 +1,92 @@
+.not-found__404 {
+  font-size: 8rem;
+  font-family: var(--font-header);
+  line-height: 1;
+  font-variation-settings: 'opsz' 100; /* 80 - 100 */
+  font-weight: 170; // 20 - 170
+  color: var(--neutral-300);
+
+  @include md {
+    font-size: 12rem;
+  }
+
+  @include lg {
+    font-size: 14rem;
+  }
+}
+
+.not-found__content {
+  margin-block: 3rem;
+  display: grid;
+  gap: 1rem;
+
+  @include md {
+    margin-block: 4rem;
+  }
+}
+
+@keyframes not-found__first-four {
+  0% {
+    font-weight: 100;
+  }
+  26.66% {
+    font-weight: 20;
+  }
+  76.66% {
+    font-weight: 170;
+  }
+  100% {
+    font-weight: 100;
+  }
+}
+@keyframes not-found__zero {
+  0% {
+    font-weight: 20;
+  }
+  50% {
+    font-weight: 170;
+  }
+  100% {
+    font-weight: 20;
+  }
+}
+@keyframes not-found__second-four {
+  0% {
+    font-weight: 170;
+  }
+  50% {
+    font-weight: 20;
+  }
+  100% {
+    font-weight: 170;
+  }
+}
+
+.not-found__first-four {
+  animation: not-found__first-four linear 15000ms infinite;
+}
+
+.not-found__zero {
+  font-weight: 20;
+  animation: not-found__zero linear 25000ms infinite;
+}
+
+.not-found__second_four {
+  animation: not-found__second-four linear 20000ms infinite;
+}
+
+.not-found__links {
+  max-width: 30rem;
+  position: relative;
+  z-index: 1;
+
+  @include md {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.not-found__link {
+  display: block;
+  color: var(--text);
+}

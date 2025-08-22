@@ -44,6 +44,7 @@
 
   @include md {
     width: auto;
+    min-width: 15rem;
   }
 
   @include lg {

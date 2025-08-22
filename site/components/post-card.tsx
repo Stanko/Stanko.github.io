@@ -9,6 +9,7 @@ export type PostCardProps = React.HTMLAttributes<HTMLDivElement> & {
   post: BlogPost;
   outputDir: string;
   latest?: boolean;
+  image?: boolean;
 };
 
 const PostCard = async ({
@@ -17,6 +18,7 @@ const PostCard = async ({
   post,
   outputDir,
   latest = false,
+  image = false,
   ...props
 }: PostCardProps) => {
   return (
@@ -24,7 +26,7 @@ const PostCard = async ({
       {...props}
       href={post.pathname}
       className={clsx('post-card', className, post.pageData.theme, {
-        'post-card--image': latest && post.pageData.image,
+        'post-card--image': image && post.pageData.image,
       })}
     >
       <div className="post-card__content">
@@ -55,7 +57,7 @@ const PostCard = async ({
           <p className="post-card__text text-light">{post.pageData.intro}</p>
         )}
       </div>
-      {latest && post.pageData.image && (
+      {image && post.pageData.image && (
         <div>
           <Img
             className="post-card__image"

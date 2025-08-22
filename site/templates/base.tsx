@@ -1,4 +1,4 @@
-import wsDebugCode from '@brz/dev/ws-debug' with { type: "text" };
+import wsDebugCode from '@brz/dev/ws-debug' with { type: 'text' };
 import { IS_DEV } from '@brz/lib/constants';
 import { copyAssetToDist } from '@brz/utils/copy-asset-to-dist';
 import Dev from '@site/components/dev';
@@ -8,8 +8,6 @@ import Nav from '@site/components/nav';
 import Prod from '@site/components/prod';
 import { config } from '@site/config';
 import os from 'node:os';
-;
-
 type FavIconProps = {
   theme?: string;
 };
@@ -90,7 +88,7 @@ const BaseTemplate = async ({
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{titleString}</title>
-        <link rel="canonical" href={`${baseUrl}${pathname}`} />
+        {pathname && <link rel="canonical" href={`${baseUrl}${pathname}`} />}
         <meta name="description" content={description} />
         <meta property="og:site_name" content={config.siteName} />
         <meta property="og:title" content={titleString} />
@@ -112,7 +110,7 @@ const BaseTemplate = async ({
             />
           );
         })}
-        
+
         <link rel="stylesheet" href="/css/style.css" />
 
         {head}
@@ -134,17 +132,28 @@ const BaseTemplate = async ({
         <script src="/js/app.js" type="module" />
 
         <Prod>
-          <script data-goatcounter="https://muffinman_io.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+          <script
+            data-goatcounter="https://muffinman_io.goatcounter.com/count"
+            async
+            src="//gc.zgo.at/count.js"
+          ></script>
         </Prod>
 
         <Dev>
-          <button className='meta-data-debug'>
+          <button className="meta-data-debug">
             <p>{description || '<no description>'}</p>
             <img src={metaImage} />
           </button>
           <link rel="stylesheet" href="/debug.css" />
 
-          <script dangerouslySetInnerHTML={{ __html: (wsDebugCode as string).replace('localhost', os.hostname()) }} />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: (wsDebugCode as string).replace(
+                'localhost',
+                os.hostname()
+              ),
+            }}
+          />
         </Dev>
       </body>
     </html>

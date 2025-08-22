@@ -101,9 +101,12 @@ export class Pages {
     }
   }
 
-  async getTsxPage(path: string): Promise<Page> {
+  async getTsxPage(
+    path: string,
+    // default to index page
+    pathname = '/'
+  ): Promise<Page> {
     if (await exists(path)) {
-      // delete require.cache[path];
       const start = Date.now();
 
       const parts = path
@@ -111,9 +114,9 @@ export class Pages {
         .split(sep)
         .filter((part) => part !== '');
 
-      // default to index page
-      let pathname = '/';
-      let outputFilepath = join(dirs.OUTPUT, 'index.html');
+      const fileName = parts[parts.length - 1] || 'index.tsx';
+
+      let outputFilepath = join(dirs.OUTPUT, fileName.replace('.tsx', '.html'));
 
       if (parts.length === 2) {
         // collection index page
@@ -134,7 +137,6 @@ export class Pages {
 
       const { default: Page } = await import(path);
 
-      // page.html = await render(<Page />);
       page.render = async () => await render(<Page />);
 
       log.verbose(
@@ -238,6 +240,11 @@ export class Pages {
     const indexPath = join(dirs.CONTENT, 'index.tsx');
     const index = await this.getTsxPage(indexPath);
     pages.push(index);
+
+    // 404 page
+    const notFoundPath = join(dirs.CONTENT, '404.tsx');
+    const notFound = await this.getTsxPage(notFoundPath, '/not-found');
+    await Pages.writePage(notFound);
 
     this.pages = pages;
     log.info(

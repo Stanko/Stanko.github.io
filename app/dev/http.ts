@@ -91,7 +91,9 @@ export class HttpServer {
             });
           }
 
-          return new Response('Not Found', { status: 404 });
+          const notFoundPath = join(dirs.OUTPUT, '404.html');
+          const notFoundFile = Bun.file(notFoundPath);
+          return new Response(notFoundFile, { status: 404 });
         } catch (error) {
           console.error('Error serving file:', error);
           return new Response('Internal Server Error', { status: 500 });

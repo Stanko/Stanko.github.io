@@ -7,6 +7,28 @@ interface MenuProps extends React.HTMLAttributes<HTMLElement> {
   children?: React.ReactNode;
 }
 
+const MenuNav = ({ className }: { className?: string }) => {
+  return (
+    <div className={clsx(className, 'menu__links')}>
+      {navLinks.map((link) => {
+        return (
+          <a
+            href={link.href}
+            key={link.href}
+            className={clsx('menu__link', link.theme, {
+              h1: link.main,
+              h4: !link.main,
+            })}
+          >
+            {link.label}
+            <Arrow className="menu__link-arrow" />
+          </a>
+        );
+      })}
+    </div>
+  );
+};
+
 const Menu = ({ children, className = '', ...props }: MenuProps) => {
   return (
     <dialog className={clsx('menu', className)} {...props}>
@@ -42,24 +64,7 @@ const Menu = ({ children, className = '', ...props }: MenuProps) => {
             />
           </div>
         </div>
-
-        <div className="container menu__links">
-          {navLinks.map((link) => {
-            return (
-              <a
-                href={link.href}
-                key={link.href}
-                className={clsx('menu__link', link.theme, {
-                  h1: link.main,
-                  h4: !link.main,
-                })}
-              >
-                {link.label}
-                <Arrow className="menu__link-arrow" />
-              </a>
-            );
-          })}
-        </div>
+        <MenuNav className="container" />
         <div className="menu__results"></div>
       </div>
     </dialog>
