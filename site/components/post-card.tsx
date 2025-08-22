@@ -10,6 +10,7 @@ export type PostCardProps = React.HTMLAttributes<HTMLDivElement> & {
   outputDir: string;
   latest?: boolean;
   image?: boolean;
+  isNotFoundPage?: boolean;
 };
 
 const PostCard = async ({
@@ -19,6 +20,7 @@ const PostCard = async ({
   outputDir,
   latest = false,
   image = false,
+  isNotFoundPage = false,
   ...props
 }: PostCardProps) => {
   return (
@@ -62,13 +64,14 @@ const PostCard = async ({
           <Img
             className="post-card__image"
             src={post.pageData.image}
-            alt={post.pageData.title}
+            alt={post.pageData.titlePlain}
             outputDir={outputDir}
             pageDir={post.path.split(sep).slice(0, -1).join(sep)}
             resize={{
               width: 600,
               name: post.pageData.slug,
             }}
+            useAbsolutePath={isNotFoundPage}
           />
         </div>
       )}

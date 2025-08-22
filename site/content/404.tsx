@@ -81,6 +81,7 @@ const NotFound = () => {
                 key={post.pathname}
                 post={post as BlogPost}
                 outputDir={dirs.OUTPUT}
+                isNotFoundPage
                 image
               />
             );

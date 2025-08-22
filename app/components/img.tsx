@@ -12,6 +12,8 @@ export type ImgProps = React.HTMLAttributes<HTMLImageElement> & {
     height?: number;
     name?: string;
   };
+  // Only used for 404 page, somewhat hacky way to make an exception
+  useAbsolutePath?: boolean;
 };
 
 const Img = async ({
@@ -21,6 +23,7 @@ const Img = async ({
   className = '',
   alt,
   resize,
+  useAbsolutePath = false,
   ...props
 }: ImgProps) => {
   const { fileName, width, height } = await useImg({
@@ -34,7 +37,7 @@ const Img = async ({
     <img
       {...props}
       className={clsx('image', className)}
-      src={`./${fileName}`}
+      src={useAbsolutePath ? `/${fileName}` : `./${fileName}`}
       alt={alt}
       width={width}
       height={height}
