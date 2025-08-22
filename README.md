@@ -16,12 +16,11 @@ Copyright © Stanko Tadić
 
 ### Must have
 
-- [ ] Custom 404 page (it should be at `/404.html` for GitHub pages)
-
 ### Future
 
 - [ ] OG image generation
-- [ ] Improve watchers in dev mode
+- [ ] Improve watchers in dev mode (partially done)
+  - 404 is not covered (I'll probably leave it as it is for now)
 - [ ] Simplify stats year chart. Add word count legend on the right.
 - [ ] Replace index.tsx with index.mdx for root pages - this will also remove the need to add pathname by hand in templates
 - [ ] Investigate `font-size-adjust: 0.5;`

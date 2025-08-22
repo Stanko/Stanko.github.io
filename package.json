@@ -19,7 +19,7 @@
     "sharp": "^0.34.2"
   },
   "scripts": {
-    "build": "rm -rf ./dist/ && bun run ./app/index.ts",
+    "build": "rm -rf ./dist/ && mkdir ./dist && bun run ./app/index.ts",
     "start": "bun run ./app/index.ts --dev",
     "verbose": "bun run ./app/index.ts --dev --verbose",
     "build-brz": "bun build ./app/index.ts --target=bun-darwin-arm64 --compile --outfile ./build/brz-darwin-arm64",
