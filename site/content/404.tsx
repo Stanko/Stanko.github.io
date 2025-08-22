@@ -8,6 +8,20 @@ import clsx from 'clsx';
 import { join } from 'node:path';
 import type { BlogPost } from './blog';
 
+// A helper method to create keyframes that lineary cycle through the font-weight
+// It accepts the starting weight and returns the CSS keyframes
+// function injectWeightKeyframes(start) {
+//   const p1 = ((170 - start) / 300) * 100;
+//   const p2 = ((170 - start + 150) / 300) * 100;
+//   const css = [
+//     `0% { font-variation-settings:"wght" ${start}; }`,
+//     `${p1}% { font-variation-settings:"wght" 170; }`,
+//     `${p2}% { font-variation-settings:"wght" 20; }`,
+//     `100% { font-variation-settings:"wght" ${start}; }`,
+//   ].join('\n');
+//   return css;
+// }
+
 const NotFound = () => {
   const postPathnames = [
     '/blog/draw-svg-rope-using-javascript/',
