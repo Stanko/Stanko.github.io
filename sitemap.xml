@@ -366,12 +366,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/art/galaxy-white/</loc>
+  <loc>https://muffinman.io/art/galaxy-black/</loc>
   <lastmod>2020-05-02</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/art/galaxy-black/</loc>
+  <loc>https://muffinman.io/art/galaxy-white/</loc>
   <lastmod>2020-05-02</lastmod>
 
 </url>
@@ -546,12 +546,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/elastic-hover-effect/</loc>
+  <loc>https://muffinman.io/blog/uploading-files-using-fetch-multipart-form-data/</loc>
   <lastmod>2018-03-19</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/uploading-files-using-fetch-multipart-form-data/</loc>
+  <loc>https://muffinman.io/blog/elastic-hover-effect/</loc>
   <lastmod>2018-03-19</lastmod>
 
 </url>
@@ -656,12 +656,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/nvm-updating-npm/</loc>
+  <loc>https://muffinman.io/blog/react-image-filter-component/</loc>
   <lastmod>2017-09-02</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/react-image-filter-component/</loc>
+  <loc>https://muffinman.io/blog/nvm-updating-npm/</loc>
   <lastmod>2017-09-02</lastmod>
 
 </url>
@@ -876,12 +876,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/jekyll-gulp-workflow/</loc>
+  <loc>https://muffinman.io/blog/jekyll-read-more-link/</loc>
   <lastmod>2016-02-27</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/jekyll-read-more-link/</loc>
+  <loc>https://muffinman.io/blog/jekyll-gulp-workflow/</loc>
   <lastmod>2016-02-27</lastmod>
 
 </url>
@@ -906,16 +906,16 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/art/</loc>
+  <loc>https://muffinman.io/projects/</loc>
 </url>
   <url>
-  <loc>https://muffinman.io/archive/</loc>
+  <loc>https://muffinman.io/art/</loc>
 </url>
   <url>
   <loc>https://muffinman.io/stats/</loc>
 </url>
   <url>
-  <loc>https://muffinman.io/projects/</loc>
+  <loc>https://muffinman.io/archive/</loc>
 </url>
   <url>
   <loc>https://muffinman.io/blog/</loc>
