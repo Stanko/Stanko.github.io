@@ -240,7 +240,14 @@ export const projects: {
     projects: [
       {
         description:
-          'Tailor is a developer tool that simplifies inspecting spacings on websites. Available as a browser extension and as a library.',
+          'Minimal library for controlling parameters, designed for algorithmic art.',
+        image: './ctrls.png',
+        link: 'https://muffinman.io/ctrls/',
+        name: 'Ctrls',
+      },
+      {
+        description:
+          ' Monorail turns any CSS keyframe animation into an interactive graph. ',
         thumb: <Monorail />,
         link: 'https://muffinman.io/monorail/',
         name: 'Monorail',
