@@ -13,6 +13,11 @@ image = "./img/final.png"
 
 +++
 
+### Update, September 2025
+
+Replaced `path.toShapes(true)` with `THREE.SVGLoader.createShapes(path)` because `toShapes` misses some of the SVG-specific logic implemented in the loader. Thanks to forresto who [pointed it out](https://github.com/Stanko/Stanko.github.io/issues/456). Also updated the demo to use a fresh version of ThreeJS.
+
+-----
 
 These days I'm playing with [three.js](https://threejs.org/) again. I'm not an expert but I enjoy playing with graphics.
 
@@ -33,14 +38,10 @@ If you just want to see the end result, feel free to jump to the [code](#code) o
 
 ## SVGLoader
 
-Three.js provides us with [SVGLoader](https://threejs.org/docs/#examples/en/loaders/SVGLoader), but it is not the part of the main library. It is an extra, you have to include yourself.
-
-If you are using three.js script file directly, make sure you include [this file](https://github.com/mrdoob/three.js/blob/master/examples/js/loaders/SVGLoader.js) as well.
-
-However if you are using `npm` module, you can import it like this:
+Three.js provides us with [SVGLoader](https://threejs.org/docs/#examples/en/loaders/SVGLoader), but it is not the part of the main export. It is an addon, and can import it like this:
 
 ```js
-import { SVGLoader } from "three/examples/jsm/loaders/SVGLoader";
+import { SVGLoader } from "three/addons/loaders/SVGLoader.js";
 ```
 
 Like it's name suggest this class loads SVG from an URL and parses it into three.js entries. If you already have SVG markup as a string, it is easy to parse it, but it is also easy to miss how to do it in the documentation.
@@ -51,7 +52,7 @@ Like it's name suggest this class loads SVG from an URL and parses it into three
 // Get SVG's markup
 const svgMarkup = document.querySelector('svg').outerHTML;
 
-const loader = new THREE.SVGLoader();
+const loader = new SVGLoader();
 const svgData = loader.parse(svgMarkup);
 ```
 
@@ -65,10 +66,7 @@ You'll need a SVG, I used my logo:
   <path fill="none" d="M201,1 L201,201 L1,201 L1,1 L201,1 Z M53.27053,71 L37.6666667,71 L37.6666667,134.333333 L53.27053,134.333333 L53.27053,86.6038647 C59.2367133,86.879227 66.1207733,91.1014493 66.1207733,99.9130433 L66.1207733,134.333333 L80.4396133,134.333333 L80.4396133,99.9130433 C80.4396133,91.1014493 87.32367,86.879227 93.2898567,86.6038647 L93.2898567,134.333333 L110.63768,134.333333 L110.63768,86.6038647 C116.603863,86.879227 123.487923,91.1014493 123.487923,99.9130433 L123.487923,134.333333 L137.806763,134.333333 L137.806763,99.9130433 C137.806763,91.1014493 144.69082,86.879227 150.657003,86.6038647 L150.657003,134.333333 L166.26087,134.333333 L166.26087,71 L150.657003,71 C142.120773,71 133.859903,75.589372 130.647343,80.178744 C127.434783,75.589372 119.173913,71 110.63768,71 L93.2898567,71 C84.7536233,71 76.4927533,75.589372 73.2801933,80.178744 C70.0676333,75.589372 61.8067633,71 53.27053,71 Z" stroke="#979797"></path>
 </svg>
 
-To get to the shapes we can extrude, we need to parse the SVG. Get paths' data by calling `.paths()` method. It will return an array of [ShapePaths](https://threejs.org/docs/#api/en/extras/core/ShapePath). Each of these has `.toShapes(true)` method. Which will return another array,
-<Sidenote note={`If you set second parameter \`noHoles\` to \`true\` it will return all holes as separate shapes. Read more in [toShapes documention](https://threejs.org/docs/#api/en/extras/core/ShapePath.toShapes).`}>which in our case will always include only one item.</Sidenote>
-
-Finally we got to the shapes we can use `ExtrudeGeometry` on.
+To get to the shapes we can extrude, we need to parse the SVG. Get paths' data by calling `.paths()` method. It will return an array of [ShapePaths](https://threejs.org/docs/#api/en/extras/core/ShapePath). Finally to get an array of `Shape` objects we need to call `SVGLoader.createShapes(path)` method on which we can use `ExtrudeGeometry` on.
 
 ```js
 const svgMarkup = document.querySelector('svg').outerHTML;
@@ -83,7 +81,7 @@ const material = new THREE.MeshNormalMaterial();
 
 // Loop through all of the parsed paths
 svgData.paths.forEach((path, i) => {
-  const shapes = path.toShapes(true);
+  const shapes = SVGLoader.createShapes(path);
 
   // Each path has array of shapes
   shapes.forEach((shape, j) => {
@@ -214,7 +212,7 @@ const material = new THREE.MeshNormalMaterial();
 
 // Loop through all of the parsed paths
 svgData.paths.forEach((path, i) => {
-  const shapes = path.toShapes(true);
+  const shapes = SVGLoader.createShapes(path);
 
   // Each path has array of shapes
   shapes.forEach((shape, j) => {
