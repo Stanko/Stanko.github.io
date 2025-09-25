@@ -251,12 +251,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/art/armadillo/</loc>
+  <loc>https://muffinman.io/art/pokeball/</loc>
   <lastmod>2021-03-14</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/art/pokeball/</loc>
+  <loc>https://muffinman.io/art/armadillo/</loc>
   <lastmod>2021-03-14</lastmod>
 
 </url>
@@ -591,12 +591,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/my-programming-story/</loc>
+  <loc>https://muffinman.io/blog/consume-less-create-more/</loc>
   <lastmod>2018-01-01</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/consume-less-create-more/</loc>
+  <loc>https://muffinman.io/blog/my-programming-story/</loc>
   <lastmod>2018-01-01</lastmod>
 
 </url>
@@ -876,12 +876,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/jekyll-read-more-link/</loc>
+  <loc>https://muffinman.io/blog/jekyll-gulp-workflow/</loc>
   <lastmod>2016-02-27</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/jekyll-gulp-workflow/</loc>
+  <loc>https://muffinman.io/blog/jekyll-read-more-link/</loc>
   <lastmod>2016-02-27</lastmod>
 
 </url>
@@ -906,6 +906,9 @@
 
 </url>
   <url>
+  <loc>https://muffinman.io/archive/</loc>
+</url>
+  <url>
   <loc>https://muffinman.io/projects/</loc>
 </url>
   <url>
@@ -913,9 +916,6 @@
 </url>
   <url>
   <loc>https://muffinman.io/stats/</loc>
-</url>
-  <url>
-  <loc>https://muffinman.io/archive/</loc>
 </url>
   <url>
   <loc>https://muffinman.io/blog/</loc>
