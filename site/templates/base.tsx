@@ -90,6 +90,12 @@ const BaseTemplate = async ({
         <title>{titleString}</title>
         {pathname && <link rel="canonical" href={`${baseUrl}${pathname}`} />}
         <meta name="description" content={description} />
+        <link
+          rel="alternate"
+          type="application/atom+xml"
+          title="RSS Feed"
+          href="/atom.xml"
+        />
         <meta property="og:site_name" content={config.siteName} />
         <meta property="og:title" content={titleString} />
         <meta property="og:description" content={description} />
