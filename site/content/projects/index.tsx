@@ -239,6 +239,12 @@ export const projects: {
     title: 'Libraries and tools',
     projects: [
       {
+        description: 'A sane, vanilla modal using the native <dialog> element ',
+        image: './nano-modal.png',
+        link: 'https://muffinman.io/nano-modal/',
+        name: 'NanoModal',
+      },
+      {
         description:
           'Minimal library for controlling parameters, designed for algorithmic art.',
         image: './ctrls.png',
@@ -247,7 +253,7 @@ export const projects: {
       },
       {
         description:
-          ' Monorail turns any CSS keyframe animation into an interactive graph. ',
+          'Monorail turns any CSS keyframe animation into an interactive graph. ',
         thumb: <Monorail />,
         link: 'https://muffinman.io/monorail/',
         name: 'Monorail',
