@@ -242,7 +242,7 @@ export const projects: {
         description: 'A sane, vanilla modal using the native <dialog> element ',
         image: './nano-modal.png',
         link: 'https://muffinman.io/nano-modal/',
-        name: 'NanoModal',
+        name: 'Nano Modal',
       },
       {
         description:
