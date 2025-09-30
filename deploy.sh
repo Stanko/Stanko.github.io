@@ -1,6 +1,6 @@
 #!/bin/sh
 
-git fetch origin gh-pages gh-pages
+git fetch origin gh-pages:gh-pages
 git checkout gh-pages
 
 git config user.name "GitHub Actions"
