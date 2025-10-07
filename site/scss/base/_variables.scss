@@ -1,13 +1,14 @@
 :root {
   // --- Fonts
-  --font-body: 'Bricolage Grotesque', ui-sans-serif, system-ui, -apple-system,
-    BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    sans-serif;
-  --font-header: 'Marvin Visions Variable', ui-sans-serif, system-ui,
-    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
-    Arial, 'Noto Sans', sans-serif;
-  --font-mono: 'Fira Code', 'DejaVu Sans Mono', 'Menlo', ui-monospace,
-    'Cascadia Code', 'Source Code Pro', Consolas, monospace;
+  --font-body:
+    'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  --font-header:
+    'Marvin Visions Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  --font-mono:
+    'Fira Code', 'DejaVu Sans Mono', 'Menlo', ui-monospace, 'Cascadia Code',
+    'Source Code Pro', Consolas, monospace;
 
   --content-max-width: 60rem;
 
