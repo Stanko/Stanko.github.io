@@ -159,7 +159,7 @@ export const projects: {
       },
       {
         description:
-          'Glitchy B.A.R.D. is an experiment in robot poetry. It uses a small language model to generate crappy poems for fun and profit (I lied, there is no profit).',
+          'Glitchy BARD is an experiment in robot poetry. It uses a small language model to generate crappy poems for fun and profit (I lied, there is no profit).',
         link: 'https://muffinman.io/bard/',
         name: 'BARD',
         thumb: (
