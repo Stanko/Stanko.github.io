@@ -1,4 +1,4 @@
-import { IS_PROD } from '@brz';
+import { IS_PROD } from '@brz/lib/constants';
 
 interface ProdProps {
   children?: React.ReactNode;

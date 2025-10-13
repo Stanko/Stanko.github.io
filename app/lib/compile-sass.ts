@@ -22,11 +22,11 @@ const processScssDir = async (dir: string, outputDir: string) => {
     const result = await compileAsync(filePath, {
       style: IS_DEV ? 'expanded' : 'compressed',
       sourceMap: true,
+      // TODO handle deprecations
       silenceDeprecations: [
         'color-functions',
         'global-builtin',
         'import',
-        'mixed-decls',
         'slash-div',
       ],
       // loadPaths: [dir],

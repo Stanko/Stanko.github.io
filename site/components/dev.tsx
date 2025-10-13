@@ -1,4 +1,4 @@
-import { IS_DEV } from '@brz';
+import { IS_DEV } from '@brz/lib/constants';
 
 interface DevProps {
   children?: React.ReactNode;

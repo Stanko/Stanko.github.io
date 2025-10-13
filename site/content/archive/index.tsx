@@ -9,28 +9,9 @@ import Keyboard from '@site/components/keyboard';
 import { formatDate } from '@brz/utils/format-date';
 import { getSlug } from '@site/lib/get-slug';
 import { Fragment } from 'react/jsx-runtime';
+import type { BlogPost } from '../blog';
 
 type ArchiveProps = {};
-
-export type BlogPost = Page & {
-  pageData: {
-    intro?: string;
-    slug: string;
-    title: string;
-    titlePlain: string;
-    description: string;
-    aliases?: string[];
-    date: string;
-    tags?: string[];
-    category?: string;
-    theme?: string;
-    favorite?: boolean;
-    draft?: boolean;
-    minutes: number;
-    template?: string;
-    image?: string;
-  };
-};
 
 type CategoryGroup = {
   name: string;

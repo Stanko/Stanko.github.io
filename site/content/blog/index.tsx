@@ -1,7 +1,8 @@
 import { join } from 'node:path';
 
 import BaseTemplate from '@site/templates/base';
-import { type Page, brz, dirs, IS_PROD } from '@brz';
+import { type Page, brz } from '@brz';
+import { dirs, IS_PROD } from '@brz/lib/constants';
 import Header from '@site/components/header';
 import Favorite from '@site/components/favorite';
 import ArrowTitle from '@site/components/arrow-title';

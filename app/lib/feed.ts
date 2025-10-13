@@ -1,4 +1,4 @@
-import type { Page } from '@brz';
+import type { Page } from '@brz/lib/types';
 import { config } from '@site/config';
 
 const entry = (page: Page) => {

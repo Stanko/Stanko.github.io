@@ -26,8 +26,9 @@ export const getMdxComponents = (pageDir: string, outputDir: string) => {
   // Helper function for components that need pageDir and outputDir
   const withDirs =
     <T,>(Component: any) =>
-    (props: T) =>
-      <Component {...props} pageDir={pageDir} outputDir={outputDir} />;
+    (props: T) => (
+      <Component {...props} pageDir={pageDir} outputDir={outputDir} />
+    );
 
   return {
     Sidenote,
