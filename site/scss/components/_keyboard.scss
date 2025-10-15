@@ -1,3 +1,6 @@
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
+
 .keyboard-svg-wrapper {
   position: absolute;
   overflow: hidden;
@@ -17,12 +20,12 @@
   transform: rotate(-4.75deg); // to match the header line
   width: 32rem;
 
-  @include md {
+  @include breakpoints.md {
     display: block;
     width: 40rem;
   }
 
-  @include lg {
+  @include breakpoints.lg {
     opacity: 0.25;
     max-width: 56rem;
     width: 80%;

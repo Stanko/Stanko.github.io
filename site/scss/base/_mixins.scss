@@ -1,3 +1,5 @@
+@use 'breakpoints';
+
 @mixin sr-only {
   width: 0;
   height: 0;
@@ -13,13 +15,13 @@
   margin: 0 auto;
   max-width: 100%;
 
-  @include md {
+  @include breakpoints.md {
     width: 48rem;
     padding-inline: 0;
     max-width: 88%;
   }
 
-  @include lg {
+  @include breakpoints.lg {
     padding-inline: 2.25rem;
     width: 100%;
     max-width: var(--content-max-width);

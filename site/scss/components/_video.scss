@@ -1,4 +1,5 @@
-@use '../base/mixins' as *;
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
 
 .video__figure video {
   background-color: var(--neutral-100);

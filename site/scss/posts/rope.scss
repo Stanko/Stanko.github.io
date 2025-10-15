@@ -1,5 +1,5 @@
-@import '../base/_breakpoints.scss';
-@import '../base/_mixins.scss';
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
 
 $blue: #4394e5;
 
@@ -12,14 +12,14 @@ $blue: #4394e5;
   transition: opacity 250ms;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 
-  @include lg {
+  @include breakpoints.lg {
     width: auto;
     margin: 0 -40px;
     border-radius: 8px;
     border-bottom-color: rgba(0, 0, 0, 0.03);
   }
 
-  @include xxl {
+  @include breakpoints.xxl {
     margin: 0 -120px;
   }
 }
@@ -150,7 +150,7 @@ path {
 }
 
 .demo-render-controls {
-  @include md {
+  @include breakpoints.md {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -171,14 +171,14 @@ path {
 }
 
 .demo-controls {
-  @include md {
+  @include breakpoints.md {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
   }
 
-  @include lg {
+  @include breakpoints.lg {
     margin-right: -200px;
   }
 }
@@ -186,7 +186,7 @@ path {
 .demo-controls-column {
   margin-bottom: 10px;
 
-  @include md {
+  @include breakpoints.md {
     flex: auto 0 0;
   }
 }

@@ -1,3 +1,6 @@
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
+
 .blog__favorite-text {
   margin-top: 0.5rem;
 }
@@ -5,7 +8,7 @@
 .blog__list {
   margin-block: 3rem;
 
-  @include md {
+  @include breakpoints.md {
     margin-block: 4rem;
   }
 }
@@ -19,7 +22,7 @@
 }
 
 .blog__month {
-  @include md {
+  @include breakpoints.md {
     display: flex;
   }
 }
@@ -35,11 +38,11 @@
   // TODO
   font-variation-settings: unset;
 
-  @include md {
+  @include breakpoints.md {
     padding-top: 0.75rem;
   }
 
-  @include md {
+  @include breakpoints.md {
     padding-top: 0.875rem;
   }
 }
@@ -48,7 +51,7 @@
   list-style: none;
   padding-left: 0.5rem;
 
-  @include md {
+  @include breakpoints.md {
     padding-left: 0;
   }
 

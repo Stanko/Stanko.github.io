@@ -1,3 +1,6 @@
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
+
 .arrow-title {
   font-family: var(--font-header);
   line-height: 1.1;
@@ -16,11 +19,11 @@
     }
   }
 
-  @include md {
+  @include breakpoints.md {
     font-variation-settings: 'opsz' 90; /* 80 - 100 */
   }
 
-  @include lg {
+  @include breakpoints.lg {
     font-size: 1.5rem;
   }
 
@@ -33,11 +36,11 @@
   font-size: 1.5rem;
   font-weight: 160;
 
-  @include md {
+  @include breakpoints.md {
     font-size: 1.625rem;
   }
 
-  @include lg {
+  @include breakpoints.lg {
     font-size: 1.75rem;
   }
 }

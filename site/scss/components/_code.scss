@@ -1,3 +1,6 @@
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
+
 .code__header {
   background-color: var(--neutral-100);
   border: 1px solid var(--border-color);
@@ -10,7 +13,7 @@
   justify-content: space-between;
   font-family: var(--font-mono);
 
-  @include md {
+  @include breakpoints.md {
     font-size: 1rem;
   }
 }

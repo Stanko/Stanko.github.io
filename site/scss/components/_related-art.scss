@@ -1,8 +1,11 @@
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
+
 .related-art {
   padding-top: 3rem;
   background-color: var(--footer-bg);
 
-  @include md {
+  @include breakpoints.md {
     padding-top: 4rem;
   }
 }
@@ -19,7 +22,7 @@
   margin-top: 1rem;
   align-items: flex-start;
 
-  @include md {
+  @include breakpoints.md {
     padding-bottom: 4rem;
   }
 }
@@ -46,7 +49,7 @@
   margin-right: 1.25rem;
   align-items: flex-start;
 
-  @include md {
+  @include breakpoints.md {
     margin-right: 1.5rem;
   }
 
@@ -76,22 +79,22 @@
   margin-top: 0.5rem;
   height: var(--height);
 
-  @include md {
+  @include breakpoints.md {
     --height: 12.5rem;
   }
 
-  @include lg {
+  @include breakpoints.lg {
     --height: 13.75rem;
   }
 
   .related-art__item--tall & {
     --height: 12.5rem;
 
-    @include md {
+    @include breakpoints.md {
       --height: 17.5rem;
     }
 
-    @include lg {
+    @include breakpoints.lg {
       --height: 20rem;
     }
   }

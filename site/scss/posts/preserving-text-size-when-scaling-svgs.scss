@@ -1,4 +1,4 @@
-@import '../base/_breakpoints.scss';
+@use '../base/_breakpoints.scss';
 
 .example {
   --text-factor: 0;
@@ -38,7 +38,7 @@ text {
   text {
     font-size: calc(24px * var(--text-factor));
 
-    @include md {
+    @include breakpoints.md {
       font-size: calc(32px * var(--text-factor));
     }
   }

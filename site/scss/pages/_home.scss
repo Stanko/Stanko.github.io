@@ -1,12 +1,15 @@
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
+
 .home__header h1 {
   font-size: 3rem;
   max-width: 8em;
 
-  @include md {
+  @include breakpoints.md {
     font-size: 4rem;
   }
 
-  @include lg {
+  @include breakpoints.lg {
     font-size: 5rem;
   }
 }
@@ -14,7 +17,7 @@
 .home__content {
   margin-block: 3rem;
 
-  @include md {
+  @include breakpoints.md {
     margin-block: 4rem;
   }
 }
@@ -27,7 +30,7 @@
   margin-top: 3rem;
   margin-bottom: 2.25rem;
 
-  @include md {
+  @include breakpoints.md {
     margin-top: 4rem;
     margin-bottom: 2.5rem;
   }
@@ -40,7 +43,7 @@
 .home__posts {
   margin-bottom: 1rem;
 
-  @include lg {
+  @include breakpoints.lg {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 3rem;
@@ -51,7 +54,7 @@
 .home__art-btn {
   margin-top: 1.25rem;
 
-  @include md {
+  @include breakpoints.md {
     margin-top: 1.5rem;
   }
 }

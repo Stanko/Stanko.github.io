@@ -1,3 +1,6 @@
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
+
 .arrow-icon {
   color: var(--theme-color);
   width: 0.7em;
@@ -7,7 +10,9 @@
   top: -0.075em;
   position: relative;
   transform: translateX(-0.625rem);
-  transition: transform var(--time), opacity var(--time);
+  transition:
+    transform var(--time),
+    opacity var(--time);
   margin-left: 0.2em;
 
   fill: none;

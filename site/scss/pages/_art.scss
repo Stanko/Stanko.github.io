@@ -1,16 +1,19 @@
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
+
 .art__items {
   margin-top: 3rem;
   display: grid;
   gap: 1.25rem;
   grid-template-columns: 1fr 1fr;
 
-  @include md {
+  @include breakpoints.md {
     margin-top: 4rem;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1.5rem;
   }
 
-  @include lg {
+  @include breakpoints.lg {
     gap: 2rem;
   }
 }

@@ -1,4 +1,5 @@
-@use '../base/mixins' as *;
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
 
 .article:empty {
   display: none;
@@ -16,11 +17,11 @@
     'wide wide wide'
     'full full full';
 
-  @include md {
+  @include breakpoints.md {
     grid-template-columns: 1fr min(88%, 48rem) 1fr;
   }
 
-  @include lg {
+  @include breakpoints.lg {
     gap: 1.5rem 0;
     max-width: var(--content-max-width);
     padding-inline: 2.25rem;
@@ -41,7 +42,7 @@
 }
 
 .article a {
-  @include text-link;
+  @include mixins.text-link;
 }
 
 .article p a,
@@ -110,7 +111,7 @@ hr {
 .codepen-iframe {
   grid-column: wide;
 
-  @include md {
+  @include breakpoints.md {
     grid-column: content;
   }
 }

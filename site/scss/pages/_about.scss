@@ -1,3 +1,6 @@
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
+
 .about__myself {
   width: 200px;
   float: right;
@@ -22,12 +25,12 @@
     42% 15%
   );
 
-  @include md {
+  @include breakpoints.md {
     width: 300px;
     margin-right: -30px;
   }
 
-  @include lg {
+  @include breakpoints.lg {
     width: 350px;
     margin-right: -100px;
   }

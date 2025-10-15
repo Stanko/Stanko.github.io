@@ -1,13 +1,16 @@
-@import '../base/_reset.scss';
-@import '../base/_breakpoints.scss';
-@import '../base/_mixins.scss';
+@use 'sass:math';
+@use 'sass:list';
+
+@use '../base/_reset.scss';
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
 
 .main {
   overflow-x: hidden;
 }
 
 .rotation {
-  @include md {
+  @include breakpoints.md {
     display: flex;
   }
 
@@ -34,7 +37,7 @@
     font-size: 0.8em;
     font-weight: bold;
 
-    @include md {
+    @include breakpoints.md {
       display: inline-flex;
       margin-right: 20px;
     }
@@ -59,11 +62,11 @@ $time: 3s;
   margin-left: 40em;
   max-width: 550px;
 
-  @include md {
+  @include breakpoints.md {
     font-size: 1.5px;
   }
 
-  @include lg {
+  @include breakpoints.lg {
     font-size: 2px;
   }
 
@@ -122,27 +125,27 @@ css-box {
   }
 
   .front {
-    transform: translateZ($depth / 2);
+    transform: translateZ(math.div($depth, 2));
   }
 
   .back {
-    transform: translateZ($depth / -2) rotateY(180deg);
+    transform: translateZ(math.div($depth, -2)) rotateY(180deg);
   }
 
   .left {
-    transform: translateX($depth / -2) rotateY(270deg);
+    transform: translateX(math.div($depth, -2)) rotateY(270deg);
   }
 
   .right {
-    transform: translateX($width - $depth / 2) rotateY(90deg);
+    transform: translateX($width - math.div($depth, 2)) rotateY(90deg);
   }
 
   .top {
-    transform: translateY($depth / -2) rotateX(90deg);
+    transform: translateY(math.div($depth, -2)) rotateX(90deg);
   }
 
   .bottom {
-    transform: translateY($height - $depth / 2) rotateX(-90deg);
+    transform: translateY($height - math.div($depth, 2)) rotateX(-90deg);
   }
 }
 
@@ -243,10 +246,19 @@ $skin-colors: #d8b997, #bb9472, #866946, #473a30;
       animation-delay: $i * 0.3s;
     }
 
-    $tshirt-color: nth($tshirt-colors, random(length($tshirt-colors)));
-    $shoes-color: nth($shoes-colors, random(length($shoes-colors)));
-    $pants-color: nth($pants-colors, random(length($pants-colors)));
-    $skin-color: nth($skin-colors, random(length($skin-colors)));
+    $tshirt-color: list.nth(
+      $tshirt-colors,
+      math.random(list.length($tshirt-colors))
+    );
+    $shoes-color: list.nth(
+      $shoes-colors,
+      math.random(list.length($shoes-colors))
+    );
+    $pants-color: list.nth(
+      $pants-colors,
+      math.random(list.length($pants-colors))
+    );
+    $skin-color: list.nth($skin-colors, math.random(list.length($skin-colors)));
 
     .head *,
     .arm-bottom * {
@@ -272,8 +284,11 @@ $skin-colors: #d8b997, #bb9472, #866946, #473a30;
 // ------- World cup code
 
 @mixin fan($tshirt-color, $pants-color) {
-  $shoes-color: nth($shoes-colors, random(length($shoes-colors)));
-  $skin-color: nth($skin-colors, random(length($skin-colors)));
+  $shoes-color: list.nth(
+    $shoes-colors,
+    math.random(list.length($shoes-colors))
+  );
+  $skin-color: list.nth($skin-colors, math.random(list.length($skin-colors)));
 
   .head *,
   .arm-bottom * {

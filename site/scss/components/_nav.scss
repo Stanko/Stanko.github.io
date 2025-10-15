@@ -1,10 +1,11 @@
-@use '../base/mixins' as *;
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
 
 .nav {
   background-color: var(--header-bg);
   padding-top: 1.25rem;
 
-  @include md {
+  @include breakpoints.md {
     padding-top: 1.5rem;
   }
 }
@@ -47,7 +48,7 @@
     color: var(--neutral-900);
   }
 
-  @include md {
+  @include breakpoints.md {
     display: none;
   }
 }
@@ -59,23 +60,25 @@
   position: fixed;
   right: 1.25rem;
   top: 0.75rem;
-  transition: transform var(--time), opacity var(--time);
+  transition:
+    transform var(--time),
+    opacity var(--time);
   z-index: var(--layer-floating-hamburger);
 
   svg {
     position: relative;
   }
 
-  @include md {
+  @include breakpoints.md {
     display: block;
     top: 1rem;
   }
 
-  @include md {
+  @include breakpoints.md {
     right: max(calc(50% - 24rem), calc(6%));
   }
 
-  @include lg {
+  @include breakpoints.lg {
     right: calc((100% - var(--content-max-width)) / 2 + 2.5rem);
   }
 }
@@ -89,7 +92,7 @@
 .nav__links {
   display: none;
 
-  @include md {
+  @include breakpoints.md {
     display: flex;
     gap: 0.5rem;
     align-items: center;
@@ -137,7 +140,7 @@
   display: flex;
   align-items: center;
 
-  @include md {
+  @include breakpoints.md {
     font-variation-settings: 'opsz' 90; /* 80 - 100 */
   }
 }

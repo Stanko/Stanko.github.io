@@ -1,3 +1,6 @@
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
+
 .tooltip {
   position: absolute;
   bottom: calc(100% + var(--tooltip-y-offset, 0px));
@@ -11,7 +14,9 @@
   z-index: 1;
   opacity: 0;
   transform: translate(-50%, 0.5rem);
-  transition: transform 250ms, opacity 250ms;
+  transition:
+    transform 250ms,
+    opacity 250ms;
   display: flex;
   gap: 0.25rem;
   width: max-content;

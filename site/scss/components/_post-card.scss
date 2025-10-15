@@ -1,3 +1,6 @@
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
+
 .post-card {
   display: block;
   padding: 1.25rem;
@@ -5,7 +8,7 @@
   border-radius: 1rem;
   align-items: center;
 
-  @include md {
+  @include breakpoints.md {
     padding: 1.5rem;
     margin-inline: -1.5rem;
   }
@@ -34,7 +37,7 @@
 .post-card__image {
   border-radius: var(--radius);
 
-  @include sm-only {
+  @include breakpoints.sm-only {
     width: 100%;
     max-width: 20rem;
     margin-top: 1rem;
@@ -42,12 +45,12 @@
     object-position: left top;
   }
 
-  @include md {
+  @include breakpoints.md {
     width: auto;
     min-width: 15rem;
   }
 
-  @include lg {
+  @include breakpoints.lg {
     max-height: 15rem;
   }
 }
@@ -55,23 +58,23 @@
 // Version with image
 
 .post-card--image {
-  @include md {
+  @include breakpoints.md {
     display: flex;
   }
 
-  @include lg {
+  @include breakpoints.lg {
     align-items: center;
   }
 
   .post-card__content {
     margin-top: -0.5rem;
 
-    @include md {
+    @include breakpoints.md {
       margin-right: 1.5rem;
       padding-right: 1.5rem;
     }
 
-    @include lg {
+    @include breakpoints.lg {
     }
   }
 }

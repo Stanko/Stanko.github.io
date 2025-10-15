@@ -1,3 +1,6 @@
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
+
 .menu {
   padding: 0;
   margin: 0;
@@ -8,7 +11,9 @@
   border: none;
   background: none;
   overflow: hidden;
-  transition: display 500ms allow-discrete, overlay 500ms allow-discrete;
+  transition:
+    display 500ms allow-discrete,
+    overlay 500ms allow-discrete;
   // Needed for Safari
   position: fixed;
   inset: 0;
@@ -28,11 +33,11 @@
   inset: 0;
 
   .menu[open] & {
+    opacity: 1;
+
     @starting-style {
       opacity: 0;
     }
-
-    opacity: 1;
   }
 }
 
@@ -43,7 +48,9 @@
   height: 100%;
   overflow: hidden;
   background-color: var(--theme-color-50);
-  transition: display 500ms allow-discrete, overlay 500ms allow-discrete,
+  transition:
+    display 500ms allow-discrete,
+    overlay 500ms allow-discrete,
     transform 500ms;
   scrollbar-width: auto;
 
@@ -53,12 +60,12 @@
   will-change: transform;
 
   .menu[open] & {
+    display: block;
+    transform: none;
+
     @starting-style {
       transform: translateY(-100%);
     }
-
-    display: block;
-    transform: none;
   }
 
   .html--overflow-hidden & {
@@ -93,7 +100,7 @@
   padding-top: 1.25rem;
   justify-content: space-between;
 
-  @include md {
+  @include breakpoints.md {
     padding-top: 1.5rem;
   }
 }
@@ -106,7 +113,7 @@
   background-color: var(--theme-color-50);
   z-index: 1;
 
-  @include md {
+  @include breakpoints.md {
     padding-top: 1.5rem;
   }
 }
@@ -124,7 +131,7 @@
   padding-block: 0.25rem;
   border-bottom: 2px solid var(--theme-color-100);
 
-  @include md {
+  @include breakpoints.md {
     font-size: 2rem;
   }
 
@@ -162,7 +169,7 @@
   padding-block: 1.25rem;
   align-items: flex-start;
 
-  @include md {
+  @include breakpoints.md {
     padding-block: 1.5rem;
   }
 }
@@ -190,7 +197,7 @@
 .menu__results {
   padding-block: 1.25rem 10rem;
 
-  @include md {
+  @include breakpoints.md {
     padding-top: 1.5rem;
   }
 }
@@ -200,7 +207,7 @@
   display: block;
   padding-block: 0.5rem;
 
-  @include md {
+  @include breakpoints.md {
     padding-block: 0.75rem;
   }
 

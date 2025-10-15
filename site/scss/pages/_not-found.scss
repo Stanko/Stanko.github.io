@@ -1,3 +1,6 @@
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
+
 .not-found__404 {
   font-size: 8rem;
   font-family: var(--font-header);
@@ -6,11 +9,11 @@
   font-weight: 170; // 20 - 170
   color: var(--neutral-300);
 
-  @include md {
+  @include breakpoints.md {
     font-size: 12rem;
   }
 
-  @include lg {
+  @include breakpoints.lg {
     font-size: 14rem;
   }
 }
@@ -20,7 +23,7 @@
   display: grid;
   gap: 1rem;
 
-  @include md {
+  @include breakpoints.md {
     margin-block: 4rem;
   }
 }
@@ -80,7 +83,7 @@
   position: relative;
   z-index: 1;
 
-  @include md {
+  @include breakpoints.md {
     display: flex;
     justify-content: space-between;
   }

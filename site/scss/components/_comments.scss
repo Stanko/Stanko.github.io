@@ -1,10 +1,13 @@
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
+
 .comments {
   background-color: var(--footer-bg);
 
   h3 {
     padding-top: 3rem;
 
-    @include md {
+    @include breakpoints.md {
       padding-top: 4rem;
     }
   }
@@ -13,7 +16,7 @@
 .comments__border {
   padding-top: 2.5rem;
 
-  @include md {
+  @include breakpoints.md {
     padding-top: 3.5rem;
   }
 
@@ -28,7 +31,7 @@
 .comments__comment + .comments__comment {
   margin-top: 1.5rem;
 
-  @include md {
+  @include breakpoints.md {
     margin-top: 2rem;
   }
 }
@@ -62,6 +65,6 @@
   gap: 0.5rem;
 
   a {
-    @include text-link;
+    @include mixins.text-link;
   }
 }

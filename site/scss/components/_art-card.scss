@@ -1,3 +1,6 @@
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
+
 .art-card {
   display: flex;
   flex-direction: column;
@@ -14,7 +17,7 @@
       transform: scale(1.025);
     }
 
-    @include md {
+    @include breakpoints.md {
       img {
         transform: scale(1.05);
       }
@@ -45,11 +48,11 @@
   color: var(--neutral-100);
   border: 1px solid currentColor;
 
-  @include md {
+  @include breakpoints.md {
     padding: 1rem;
   }
 
-  @include lg {
+  @include breakpoints.lg {
     padding: 1.25rem;
   }
 

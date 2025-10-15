@@ -1,3 +1,6 @@
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
+
 .archive__favorite-text {
   margin-top: 0.5rem;
 }
@@ -6,7 +9,7 @@
   list-style: none;
   margin-block: 1rem 3rem;
 
-  @include md {
+  @include breakpoints.md {
     margin-bottom: 4rem;
   }
 }

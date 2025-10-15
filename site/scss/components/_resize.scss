@@ -1,3 +1,6 @@
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
+
 .resize {
   --handle-width: 1.25rem;
   padding-right: var(--handle-width);

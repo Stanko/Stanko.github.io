@@ -1,8 +1,11 @@
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
+
 .related-posts {
   padding-top: 3rem;
   background-color: var(--footer-bg);
 
-  @include md {
+  @include breakpoints.md {
     padding-top: 4rem;
   }
 }
@@ -16,7 +19,7 @@
   gap: 0.5rem;
   margin-top: 1rem;
 
-  @include md {
+  @include breakpoints.md {
     padding-bottom: 4rem;
   }
 }

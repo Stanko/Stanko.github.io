@@ -1,3 +1,6 @@
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
+
 .btn {
   --color-shadow: oklch(0.75 0 230 / 0.2);
 
@@ -25,7 +28,8 @@
   transition: all 150ms;
   position: relative;
   outline: none;
-  box-shadow: 0 var(--depth) 0 -2px var(--theme-color-100),
+  box-shadow:
+    0 var(--depth) 0 -2px var(--theme-color-100),
     0 var(--depth) 0 0 var(--border-color),
     0 var(--shadow-offset) 0 -2px var(--color-shadow);
 
@@ -36,14 +40,16 @@
 .btn:focus-visible {
   background: var(--theme-color-50);
   transform: translateY(var(--pressed-hover));
-  box-shadow: 0 var(--depth-hover) 0 -2px var(--theme-color-100),
+  box-shadow:
+    0 var(--depth-hover) 0 -2px var(--theme-color-100),
     0 var(--depth-hover) 0 0 var(--border-color),
     0 var(--shadow-offset-hover) 0 -2px var(--color-shadow);
 }
 
 .btn:active {
   transform: translateY(var(--depth));
-  box-shadow: 0 var(--depth-active) 0 -2px var(--theme-color-100),
+  box-shadow:
+    0 var(--depth-active) 0 -2px var(--theme-color-100),
     0 var(--depth-active) 0 0 var(--border-color),
     0 0 0 -2px var(--color-shadow);
 }

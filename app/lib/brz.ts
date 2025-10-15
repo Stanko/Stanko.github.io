@@ -19,6 +19,11 @@ export class Brz {
   httpServer?: HttpServer;
 
   constructor() {
+    // const init = async () => {
+    //   await compileSASS();
+    // };
+    // init();
+
     this.pages = new Pages(dirs.CONTENT);
     const start = Date.now();
 

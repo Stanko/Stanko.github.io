@@ -1,7 +1,10 @@
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
+
 .shr {
   margin-bottom: 3rem;
 
-  @include md {
+  @include breakpoints.md {
     margin-bottom: 4rem;
   }
 }

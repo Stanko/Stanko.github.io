@@ -1,14 +1,17 @@
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
+
 .stats__table {
   display: grid;
   gap: 0.75rem;
 
-  @include md {
+  @include breakpoints.md {
     gap: 1rem;
   }
 }
 
 .stats__row {
-  @include md {
+  @include breakpoints.md {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
@@ -16,12 +19,12 @@
 }
 
 .stats__row-value {
-  @include md {
+  @include breakpoints.md {
     text-align: right;
   }
 
   .arrow-title {
-    @include md {
+    @include breakpoints.md {
       margin-right: -0.9em;
     }
   }

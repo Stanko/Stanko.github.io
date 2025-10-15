@@ -1,11 +1,15 @@
-@use '../base/mixins' as *;
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
 
 .spoiler {
 }
 
 .spoiler__content-wrapper {
-  transition: grid-template-rows 500ms ease-in-out, transform 500ms ease-in-out,
-    opacity 500ms ease-in-out, display 500ms ease-in-out;
+  transition:
+    grid-template-rows 500ms ease-in-out,
+    transform 500ms ease-in-out,
+    opacity 500ms ease-in-out,
+    display 500ms ease-in-out;
   transition-behavior: allow-discrete;
   display: none;
   grid-template-rows: 0fr;
@@ -14,16 +18,17 @@
 }
 
 .spoiler__content-wrapper--expanded {
+  display: grid;
+  align-items: flex-start;
+  grid-template-rows: 1fr;
+  opacity: 1;
+  transform: none;
+
   @starting-style {
     grid-template-rows: 0fr;
     opacity: 0;
     transform: scale(0.95);
   }
-
-  display: grid;
-  grid-template-rows: 1fr;
-  opacity: 1;
-  transform: none;
 }
 
 .spoiler__content {

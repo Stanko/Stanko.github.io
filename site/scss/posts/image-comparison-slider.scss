@@ -1,5 +1,6 @@
-@import '../base/variables';
-@import '../base/breakpoints';
+@use '../base/_variables.scss';
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
 
 .compare {
   --slider-value: 50%;
@@ -114,7 +115,7 @@
 .compare {
   transform-style: preserve-3d;
 
-  @include lg {
+  @include breakpoints.lg {
     max-width: 700px;
     width: 700px;
   }
@@ -145,7 +146,9 @@
 
 .compare {
   will-change: transform;
-  transition: transform 1000ms, margin 1000ms;
+  transition:
+    transform 1000ms,
+    margin 1000ms;
 }
 
 .compare__mask,
@@ -153,21 +156,29 @@
 .compare__bottom-image,
 .compare__separator {
   will-change: transform;
-  transition: transform 1000ms, outline 1000ms, box-shadow 1000ms,
-    opacity 1000ms, margin 1000ms;
+  transition:
+    transform 1000ms,
+    outline 1000ms,
+    box-shadow 1000ms,
+    opacity 1000ms,
+    margin 1000ms;
   transition-timing-function: ease-out;
   outline: 2px solid transparent;
 }
 
 .compare__input::-moz-range-thumb {
   transition-timing-function: ease-out;
-  transition: outline 1000ms, background-color 1000ms;
+  transition:
+    outline 1000ms,
+    background-color 1000ms;
   outline: 2px solid transparent;
 }
 
 .compare__input::-webkit-slider-thumb {
   transition-timing-function: ease-out;
-  transition: outline 1000ms, background-color 1000ms;
+  transition:
+    outline 1000ms,
+    background-color 1000ms;
   outline: 2px solid transparent;
 }
 
@@ -178,11 +189,11 @@
     transform: scale(0.75) translateY(5%) rotateX(30deg) rotateZ(10deg);
     margin-top: 35%;
 
-    @include sm {
+    @include breakpoints.sm {
       margin-top: 25%;
     }
 
-    @include md {
+    @include breakpoints.md {
       margin-top: 15%;
     }
   }

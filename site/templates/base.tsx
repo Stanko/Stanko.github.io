@@ -67,7 +67,7 @@ const BaseTemplate = async ({
   if (image && dirPath && outputDir) {
     // TODO think if I should resize the image
     const imageFilename = await copyAssetToDist(image, dirPath, outputDir);
-    metaImage = `${baseUrl}/${pathname}${imageFilename}`;
+    metaImage = `${baseUrl}${pathname}${imageFilename}`;
   }
 
   if (!metaImage) {

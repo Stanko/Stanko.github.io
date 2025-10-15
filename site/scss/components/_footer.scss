@@ -1,10 +1,13 @@
+@use '../base/_breakpoints.scss';
+@use '../base/_mixins.scss';
+
 .footer {
   background-color: var(--footer-bg);
   color: var(--neutral-400);
   padding-block: 3rem;
   font-size: 1rem;
 
-  @include md {
+  @include breakpoints.md {
     padding-block: 4rem;
   }
 
@@ -18,11 +21,11 @@
   display: grid;
   gap: 1rem;
 
-  @include md {
+  @include breakpoints.md {
     grid-template-columns: 1fr 1fr;
   }
 
-  @include lg {
+  @include breakpoints.lg {
     grid-template-columns: 1fr 2fr;
   }
 }
