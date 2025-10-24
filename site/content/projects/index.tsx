@@ -202,6 +202,13 @@ export const projects: {
       },
       {
         description:
+          'A tool I used to create a series of pen plotted drawings of the moon. It uses Poisson disk sampling, noise and a reference photo to create the effect.',
+        image: './moon-phases.png',
+        link: 'https://muffinman.io/moon/',
+        name: 'Moon Phases',
+      },
+      {
+        description:
           'One of my earliest generative projects, based on metaballs, organic-looking n-dimensional objects.',
         image: './metaballs.png',
         link: 'https://muffinman.io/metaballs/',

@@ -58,6 +58,7 @@
   width: 4rem;
   max-height: 4rem;
   object-fit: contain;
+  border-radius: 2px;
 
   @include breakpoints.md {
     width: 5rem;
