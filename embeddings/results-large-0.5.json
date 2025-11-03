@@ -9,12 +9,12 @@
       "score": 0.6211566666452252
     },
     {
-      "post": "invaders",
-      "score": 0.5988956159102345
-    },
-    {
       "post": "image-comparison-slider",
       "score": 0.5987549185737326
+    },
+    {
+      "post": "invaders",
+      "score": 0.597195884870058
     },
     {
       "post": "weekly-code-challenge-spring-2021",
@@ -49,12 +49,12 @@
       "score": 0.5556512771010877
     },
     {
-      "post": "css-and-svg-input-animations",
-      "score": 0.5498155386674561
+      "post": "native-dual-range-input",
+      "score": 0.5539893151998758
     },
     {
-      "post": "native-dual-range-input",
-      "score": 0.549122463715051
+      "post": "css-and-svg-input-animations",
+      "score": 0.5522925718381718
     },
     {
       "post": "css-blocky-people-making-waves",
@@ -66,7 +66,7 @@
     },
     {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.5394621876342872
+      "score": 0.539529170935157
     },
     {
       "post": "3d-rotating-cube-effect",
@@ -89,16 +89,16 @@
       "score": 0.5261070030848256
     },
     {
-      "post": "three-js-extrude-svg-path",
-      "score": 0.523286605027523
-    },
-    {
       "post": "my-programming-story",
       "score": 0.5219817923202282
     },
     {
       "post": "counting-sheep",
       "score": 0.5217147279622039
+    },
+    {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.5170618535096129
     },
     {
       "post": "ie6-hacks-ten-years-after",
@@ -221,12 +221,12 @@
       "score": 0.5908494119271168
     },
     {
-      "post": "always-use-button-for-clickable-elements",
-      "score": 0.5689420307686723
+      "post": "css-and-svg-input-animations",
+      "score": 0.5760491094896385
     },
     {
-      "post": "css-and-svg-input-animations",
-      "score": 0.5670806249175713
+      "post": "always-use-button-for-clickable-elements",
+      "score": 0.5689420307686723
     },
     {
       "post": "animated-login-signup-forms",
@@ -250,7 +250,7 @@
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.5463877978017638
+      "score": 0.5467483322235958
     },
     {
       "post": "ios-safari-scroll-position-fixed",
@@ -346,7 +346,7 @@
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.5915157925457641
+      "score": 0.5910930952413151
     },
     {
       "post": "image-comparison-slider",
@@ -425,6 +425,10 @@
       "score": 0.5227879500728136
     },
     {
+      "post": "css-and-svg-input-animations",
+      "score": 0.5224764538227641
+    },
+    {
       "post": "css-image-glitch",
       "score": 0.5216801853469486
     },
@@ -439,10 +443,6 @@
     {
       "post": "preserving-text-size-when-scaling-svgs",
       "score": 0.5188686697697156
-    },
-    {
-      "post": "css-and-svg-input-animations",
-      "score": 0.5164422141875712
     },
     {
       "post": "flex-justify-content-equally-distanced-items",
@@ -504,7 +504,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5689175438394386
+      "score": 0.5700593385467827
     },
     {
       "post": "the-tiny-book-of-great-joys",
@@ -520,7 +520,7 @@
     },
     {
       "post": "invaders",
-      "score": 0.5561715630562274
+      "score": 0.5561809636317879
     },
     {
       "post": "minor-design-refresh",
@@ -622,7 +622,7 @@
     },
     {
       "post": "invaders",
-      "score": 0.6122734242977429
+      "score": 0.6106183375571451
     },
     {
       "post": "metaballs-generative-art",
@@ -630,7 +630,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5904487629338444
+      "score": 0.5923417268813969
     },
     {
       "post": "neon-generative-art-piece-made-using-2d-vector-field",
@@ -685,12 +685,12 @@
       "score": 0.5371122779013399
     },
     {
-      "post": "css-blocky-people-making-waves",
-      "score": 0.5332688669829904
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.5332755956534302
     },
     {
-      "post": "draw-svg-rope-using-javascript",
-      "score": 0.5322968491151565
+      "post": "css-blocky-people-making-waves",
+      "score": 0.5332688669829904
     },
     {
       "post": "introducing-keen-npm-package-boilerplate",
@@ -709,6 +709,10 @@
       "score": 0.525425159215822
     },
     {
+      "post": "native-dual-range-input",
+      "score": 0.5229401364984401
+    },
+    {
       "post": "javascript-keyboard-easter-egg",
       "score": 0.5219817923202282
     },
@@ -721,10 +725,6 @@
       "score": 0.5164362556674519
     },
     {
-      "post": "native-dual-range-input",
-      "score": 0.5162268609228978
-    },
-    {
       "post": "design-articles",
       "score": 0.5161472233901275
     },
@@ -733,16 +733,16 @@
       "score": 0.5116250269756427
     },
     {
-      "post": "three-js-extrude-svg-path",
-      "score": 0.5085069489896048
-    },
-    {
       "post": "fake-audio-spectrum-using-perlin-noise",
       "score": 0.5052912487302474
     },
     {
       "post": "ie6-hacks-ten-years-after",
       "score": 0.5041518725462131
+    },
+    {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.5035556015569661
     }
   ],
   "axidraw-plotter-camera-mount": [
@@ -776,7 +776,7 @@
     },
     {
       "post": "invaders",
-      "score": 0.5664899913479898
+      "score": 0.5654071759638427
     },
     {
       "post": "into-2021",
@@ -802,7 +802,7 @@
   "css-image-glitch": [
     {
       "post": "invaders",
-      "score": 0.7259301429818068
+      "score": 0.7244672184694139
     },
     {
       "post": "css-blocky-people-making-waves",
@@ -821,12 +821,12 @@
       "score": 0.6904533039987868
     },
     {
-      "post": "custom-giraffe-caret",
-      "score": 0.6805226856121626
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.6827184503964762
     },
     {
-      "post": "draw-svg-rope-using-javascript",
-      "score": 0.6795147250078668
+      "post": "custom-giraffe-caret",
+      "score": 0.6805226856121626
     },
     {
       "post": "neon-generative-art-piece-made-using-2d-vector-field",
@@ -854,7 +854,7 @@
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.6248536204039026
+      "score": 0.6271271667814969
     },
     {
       "post": "ie6-hacks-ten-years-after",
@@ -870,11 +870,11 @@
     },
     {
       "post": "three-js-extrude-svg-path",
-      "score": 0.6157047415597181
+      "score": 0.610374092917592
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.6085144783780214
+      "score": 0.6096623666523585
     },
     {
       "post": "css-only-counter",
@@ -921,10 +921,6 @@
       "score": 0.5740414395110471
     },
     {
-      "post": "css-and-svg-input-animations",
-      "score": 0.5726973057417126
-    },
-    {
       "post": "sneak-peek-of-rayven",
       "score": 0.5674026779512081
     },
@@ -939,6 +935,10 @@
     {
       "post": "into-2021",
       "score": 0.5657880654632487
+    },
+    {
+      "post": "css-and-svg-input-animations",
+      "score": 0.5638051810024494
     },
     {
       "post": "vertigo-svg-shaders",
@@ -1071,6 +1071,10 @@
       "score": 0.531235114619626
     },
     {
+      "post": "webpack-babel-react-revisited",
+      "score": 0.5279988962079538
+    },
+    {
       "post": "jekyll-gulp-workflow",
       "score": 0.5276362117957017
     },
@@ -1081,10 +1085,6 @@
     {
       "post": "trying-atom-for-the-third-time",
       "score": 0.5261281100285251
-    },
-    {
-      "post": "webpack-babel-react-revisited",
-      "score": 0.5260013659613082
     },
     {
       "post": "into-2022",
@@ -1158,7 +1158,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5745835128725443
+      "score": 0.5752234052798432
     },
     {
       "post": "letters-from-sarajevo",
@@ -1182,7 +1182,7 @@
     },
     {
       "post": "invaders",
-      "score": 0.5329277079291896
+      "score": 0.5324665351058377
     },
     {
       "post": "work-co-tech-meetup-vol-6",
@@ -1272,7 +1272,7 @@
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.589057974931
+      "score": 0.589395525315548
     },
     {
       "post": "webpack-2-react-redux",
@@ -1328,7 +1328,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5338719850923753
+      "score": 0.5335963419659845
     },
     {
       "post": "html-canvas-video-player-ios",
@@ -1396,7 +1396,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.6854651801294738
+      "score": 0.6844337774938678
     },
     {
       "post": "setting-up-webpack-babel-and-react-from-scratch-part-3",
@@ -1555,7 +1555,7 @@
     },
     {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.6178753856728605
+      "score": 0.617057492400566
     },
     {
       "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
@@ -1567,7 +1567,7 @@
     },
     {
       "post": "three-js-extrude-svg-path",
-      "score": 0.5818079489772059
+      "score": 0.5856304349931256
     },
     {
       "post": "image-comparison-slider",
@@ -1591,7 +1591,7 @@
     },
     {
       "post": "invaders",
-      "score": 0.567232716424932
+      "score": 0.5625381498125958
     },
     {
       "post": "js-libraries-for-generative-art",
@@ -1603,7 +1603,7 @@
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.5494599070594827
+      "score": 0.5495968340855019
     },
     {
       "post": "css-image-glitch",
@@ -1690,6 +1690,10 @@
       "score": 0.507853936438482
     },
     {
+      "post": "css-and-svg-input-animations",
+      "score": 0.5064357401653167
+    },
+    {
       "post": "css-fix-to-prevent-orphan-icons",
       "score": 0.5027724578172588
     },
@@ -1700,10 +1704,6 @@
     {
       "post": "always-use-button-for-clickable-elements",
       "score": 0.5018870750683375
-    },
-    {
-      "post": "css-and-svg-input-animations",
-      "score": 0.5005875337727949
     }
   ],
   "this-blog-is-now-google-free": [
@@ -1735,7 +1735,7 @@
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.5727108799588201
+      "score": 0.5735322828122252
     },
     {
       "post": "html-inert-property",
@@ -1813,7 +1813,7 @@
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.6196576859632462
+      "score": 0.6190270263435524
     },
     {
       "post": "css-image-glitch",
@@ -1856,16 +1856,16 @@
       "score": 0.559742571967525
     },
     {
+      "post": "css-and-svg-input-animations",
+      "score": 0.5527743889577372
+    },
+    {
       "post": "react-image-filter-component",
       "score": 0.5511882221014588
     },
     {
       "post": "all-aboard-the-monorail",
       "score": 0.5506050276588146
-    },
-    {
-      "post": "css-and-svg-input-animations",
-      "score": 0.5496435738397304
     },
     {
       "post": "preserving-text-size-when-scaling-svgs",
@@ -1913,7 +1913,7 @@
     },
     {
       "post": "invaders",
-      "score": 0.5250863494824696
+      "score": 0.5222212018536141
     },
     {
       "post": "making-2d-platformer-controls",
@@ -1941,7 +1941,7 @@
     },
     {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.5069933665133138
+      "score": 0.5069206702738914
     },
     {
       "post": "scrubbing-videos-using-javascript",
@@ -2017,7 +2017,7 @@
     },
     {
       "post": "invaders",
-      "score": 0.6232208515551836
+      "score": 0.6242291330814249
     },
     {
       "post": "my-blog-setup",
@@ -2044,12 +2044,12 @@
       "score": 0.5604848109208189
     },
     {
-      "post": "new-design-and-features",
-      "score": 0.5478488779030855
+      "post": "webpack-babel-react-revisited",
+      "score": 0.5482109226255492
     },
     {
-      "post": "webpack-babel-react-revisited",
-      "score": 0.5473159174117479
+      "post": "new-design-and-features",
+      "score": 0.5478488779030855
     },
     {
       "post": "open-source-mac-apps-i-love",
@@ -2076,6 +2076,10 @@
       "score": 0.5263283215720134
     },
     {
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.5247710255598858
+    },
+    {
       "post": "css-image-glitch",
       "score": 0.5247082336057809
     },
@@ -2088,10 +2092,6 @@
       "score": 0.5225292309682397
     },
     {
-      "post": "draw-svg-rope-using-javascript",
-      "score": 0.52208004609534
-    },
-    {
       "post": "all-aboard-the-monorail",
       "score": 0.5170602986345004
     },
@@ -2100,16 +2100,16 @@
       "score": 0.5069624156443929
     },
     {
+      "post": "native-dual-range-input",
+      "score": 0.5046733552515673
+    },
+    {
       "post": "consume-less-create-more",
       "score": 0.5011527668089255
     },
     {
       "post": "image-comparison-slider",
       "score": 0.501032832155715
-    },
-    {
-      "post": "native-dual-range-input",
-      "score": 0.5008594154145092
     }
   ],
   "weekly-code-challenge-spring-2021": [
@@ -2119,7 +2119,7 @@
     },
     {
       "post": "invaders",
-      "score": 0.6157546051275357
+      "score": 0.6142414878006276
     },
     {
       "post": "fake-audio-spectrum-using-perlin-noise",
@@ -2166,12 +2166,12 @@
       "score": 0.574053041756934
     },
     {
-      "post": "looking-forward-to-2017",
-      "score": 0.5647268279887707
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.5647288796478072
     },
     {
-      "post": "draw-svg-rope-using-javascript",
-      "score": 0.5641967491314087
+      "post": "looking-forward-to-2017",
+      "score": 0.5647268279887707
     },
     {
       "post": "metaballs-generative-art",
@@ -2202,12 +2202,12 @@
       "score": 0.5416441278747879
     },
     {
-      "post": "three-js-extrude-svg-path",
-      "score": 0.5400643302003081
-    },
-    {
       "post": "talks-i-like",
       "score": 0.5372197124885739
+    },
+    {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.5352747397750425
     },
     {
       "post": "image-comparison-slider",
@@ -2215,7 +2215,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.527809786665695
+      "score": 0.5289293379181707
     },
     {
       "post": "vertigo-svg-shaders",
@@ -2234,10 +2234,6 @@
       "score": 0.5197298231508276
     },
     {
-      "post": "css-and-svg-input-animations",
-      "score": 0.5192944050894235
-    },
-    {
       "post": "the-tiny-book-of-great-joys",
       "score": 0.5176613492179999
     },
@@ -2246,12 +2242,16 @@
       "score": 0.5176426926410533
     },
     {
-      "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
-      "score": 0.5087918927326027
+      "post": "css-and-svg-input-animations",
+      "score": 0.5163048854459268
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.5087724147670086
+      "score": 0.5123386579686143
+    },
+    {
+      "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
+      "score": 0.5087918927326027
     },
     {
       "post": "winter-tech-meetup-vol-5",
@@ -2391,7 +2391,7 @@
     },
     {
       "post": "invaders",
-      "score": 0.6166604475933809
+      "score": 0.6146136684095748
     },
     {
       "post": "weekly-code-challenge-spring-2021",
@@ -2399,7 +2399,7 @@
     },
     {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.5838792088781042
+      "score": 0.5837206649412975
     },
     {
       "post": "custom-giraffe-caret",
@@ -2423,11 +2423,11 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5480760964020363
+      "score": 0.5479478889028349
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.5438704267152074
+      "score": 0.5454199644762595
     },
     {
       "post": "css-blocky-people-making-waves",
@@ -2443,7 +2443,7 @@
     },
     {
       "post": "three-js-extrude-svg-path",
-      "score": 0.5278116017108614
+      "score": 0.5265583092438275
     },
     {
       "post": "setting-up-webpack-babel-and-react-from-scratch-part-3",
@@ -2489,12 +2489,12 @@
       "score": 0.6951396173711404
     },
     {
-      "post": "metaballs-generative-art",
-      "score": 0.6826643632629708
+      "post": "invaders",
+      "score": 0.6828097339051334
     },
     {
-      "post": "invaders",
-      "score": 0.6825760519101762
+      "post": "metaballs-generative-art",
+      "score": 0.6826643632629708
     },
     {
       "post": "bunny-jumps-again",
@@ -2530,7 +2530,7 @@
     },
     {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.5971790974494982
+      "score": 0.6010692517768337
     },
     {
       "post": "js-libraries-for-generative-art",
@@ -2562,19 +2562,19 @@
     },
     {
       "post": "three-js-extrude-svg-path",
-      "score": 0.5553156646493944
+      "score": 0.5548083322848578
+    },
+    {
+      "post": "native-dual-range-input",
+      "score": 0.5483065031882255
+    },
+    {
+      "post": "webpack-babel-react-revisited",
+      "score": 0.5474355971507713
     },
     {
       "post": "image-comparison-slider",
       "score": 0.547382805273231
-    },
-    {
-      "post": "webpack-babel-react-revisited",
-      "score": 0.5456435624386038
-    },
-    {
-      "post": "native-dual-range-input",
-      "score": 0.5444855789451201
     },
     {
       "post": "all-aboard-the-monorail",
@@ -2612,7 +2612,7 @@
     },
     {
       "post": "invaders",
-      "score": 0.7640033155019569
+      "score": 0.7628738000276587
     },
     {
       "post": "js-libraries-for-generative-art",
@@ -2636,7 +2636,7 @@
     },
     {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.6739114573840161
+      "score": 0.6751857798317592
     },
     {
       "post": "into-2022",
@@ -2647,16 +2647,16 @@
       "score": 0.6313041387474662
     },
     {
-      "post": "three-js-extrude-svg-path",
-      "score": 0.6292715919776994
-    },
-    {
       "post": "all-aboard-the-monorail",
       "score": 0.6265009430422984
     },
     {
       "post": "fake-audio-spectrum-using-perlin-noise",
       "score": 0.6260412021666575
+    },
+    {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.62399103145094
     },
     {
       "post": "axidraw-plotter-camera-mount",
@@ -2675,6 +2675,10 @@
       "score": 0.6017994889205887
     },
     {
+      "post": "native-dual-range-input",
+      "score": 0.5922733850538542
+    },
+    {
       "post": "image-comparison-slider",
       "score": 0.591243968956337
     },
@@ -2687,12 +2691,8 @@
       "score": 0.5892299316278495
     },
     {
-      "post": "native-dual-range-input",
-      "score": 0.5881260845028294
-    },
-    {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5794574598591735
+      "score": 0.5812076642099651
     },
     {
       "post": "bunny-jumps-again",
@@ -2785,12 +2785,12 @@
       "score": 0.6260412021666575
     },
     {
-      "post": "invaders",
-      "score": 0.6168309922356796
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.6156215330882034
     },
     {
-      "post": "draw-svg-rope-using-javascript",
-      "score": 0.6144821682762688
+      "post": "invaders",
+      "score": 0.614616189391765
     },
     {
       "post": "css-blocky-people-making-waves",
@@ -2849,24 +2849,24 @@
       "score": 0.5587223255696475
     },
     {
-      "post": "three-js-extrude-svg-path",
-      "score": 0.5585872641506199
-    },
-    {
       "post": "vertigo-svg-shaders",
       "score": 0.5572282024325145
+    },
+    {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.5549313739350371
     },
     {
       "post": "plx-react-parallax-component",
       "score": 0.5537142303813026
     },
     {
-      "post": "react-image-filter-component",
-      "score": 0.5468542501421269
+      "post": "native-dual-range-input",
+      "score": 0.547987868448309
     },
     {
-      "post": "native-dual-range-input",
-      "score": 0.5454881710899033
+      "post": "react-image-filter-component",
+      "score": 0.5468542501421269
     },
     {
       "post": "pwa-ios-status-bar-blur",
@@ -2890,7 +2890,7 @@
     },
     {
       "post": "css-and-svg-input-animations",
-      "score": 0.5191438795129171
+      "score": 0.5116981331377891
     },
     {
       "post": "svg-non-scaling-circle-and-rectangle",
@@ -2919,6 +2919,10 @@
     {
       "post": "animated-login-signup-forms",
       "score": 0.5025559590760792
+    },
+    {
+      "post": "webpack-babel-react-revisited",
+      "score": 0.5001254478327695
     }
   ],
   "scrollbar-size-observer": [
@@ -2940,7 +2944,7 @@
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.5787430355868338
+      "score": 0.5786199778400267
     },
     {
       "post": "mobile-chrome-vh-units-fix",
@@ -3064,15 +3068,11 @@
     },
     {
       "post": "invaders",
-      "score": 0.7451740559813297
+      "score": 0.7436890104876254
     },
     {
       "post": "js-libraries-for-generative-art",
       "score": 0.7412128273741383
-    },
-    {
-      "post": "three-js-extrude-svg-path",
-      "score": 0.6881155549637642
     },
     {
       "post": "sneak-peek-of-rayven",
@@ -3083,12 +3083,16 @@
       "score": 0.6854692544480105
     },
     {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.6837112248659084
+    },
+    {
       "post": "the-tiny-book-of-great-joys",
       "score": 0.6826643632629708
     },
     {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.6713644780037429
+      "score": 0.6725376401339396
     },
     {
       "post": "axidraw-plotter-camera-mount",
@@ -3135,16 +3139,16 @@
       "score": 0.5914828997505276
     },
     {
+      "post": "native-dual-range-input",
+      "score": 0.566354399218258
+    },
+    {
       "post": "image-comparison-slider",
       "score": 0.5661219268694784
     },
     {
       "post": "weekly-code-challenge-spring-2021",
       "score": 0.5636626966373371
-    },
-    {
-      "post": "native-dual-range-input",
-      "score": 0.561760853240322
     },
     {
       "post": "visualizing-a-vector-field",
@@ -3160,7 +3164,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5497290841904252
+      "score": 0.5514169533207222
     },
     {
       "post": "css-only-sprite-animations",
@@ -3264,7 +3268,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5388149229775591
+      "score": 0.5386270305033282
     },
     {
       "post": "add-git-version-tag-after-publishing-to-npm",
@@ -3382,7 +3386,7 @@
     },
     {
       "post": "invaders",
-      "score": 0.6502083487562873
+      "score": 0.6468230746103204
     },
     {
       "post": "image-comparison-slider",
@@ -3406,7 +3410,7 @@
     },
     {
       "post": "css-and-svg-input-animations",
-      "score": 0.6155146509647627
+      "score": 0.6167305862040524
     },
     {
       "post": "scrubbing-videos-using-javascript",
@@ -3437,16 +3441,16 @@
       "score": 0.5964037130721682
     },
     {
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.5911654336599734
+    },
+    {
       "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
       "score": 0.5900864401176453
     },
     {
       "post": "preserving-text-size-when-scaling-svgs",
       "score": 0.5894438436493156
-    },
-    {
-      "post": "draw-svg-rope-using-javascript",
-      "score": 0.5889727423393456
     },
     {
       "post": "pwa-ios-status-bar-blur",
@@ -3478,7 +3482,7 @@
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.5554687535798698
+      "score": 0.5568619222227292
     },
     {
       "post": "neon-generative-art-piece-made-using-2d-vector-field",
@@ -3486,19 +3490,19 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5524660070086542
+      "score": 0.553150879076534
     },
     {
       "post": "flex-justify-content-equally-distanced-items",
       "score": 0.5503516203578236
     },
     {
-      "post": "three-js-extrude-svg-path",
-      "score": 0.548153289141323
-    },
-    {
       "post": "breaking-down-krypton",
       "score": 0.5464486970852108
+    },
+    {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.5438181672602891
     },
     {
       "post": "custom-scroll-bars",
@@ -3599,12 +3603,12 @@
       "score": 0.580614018583268
     },
     {
-      "post": "draw-svg-rope-using-javascript",
-      "score": 0.5614512500065015
+      "post": "invaders",
+      "score": 0.5586799684695215
     },
     {
-      "post": "invaders",
-      "score": 0.5605203235813522
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.5586650917557214
     },
     {
       "post": "breaking-down-krypton",
@@ -3620,7 +3624,7 @@
     },
     {
       "post": "three-js-extrude-svg-path",
-      "score": 0.5333582000887241
+      "score": 0.5282168960139124
     },
     {
       "post": "fake-audio-spectrum-using-perlin-noise",
@@ -3642,117 +3646,129 @@
   "css-and-svg-input-animations": [
     {
       "post": "animated-login-signup-forms",
-      "score": 0.6652677052866556
+      "score": 0.6637489996493741
     },
     {
       "post": "elastic-hover-effect",
-      "score": 0.655074102422802
+      "score": 0.6622638853269646
     },
     {
       "post": "css-only-sprite-animations",
-      "score": 0.6155146509647627
+      "score": 0.6167305862040524
     },
     {
       "post": "sass-random-and-circle-animation",
-      "score": 0.5836558577357254
-    },
-    {
-      "post": "css-image-glitch",
-      "score": 0.5726973057417126
-    },
-    {
-      "post": "custom-giraffe-caret",
-      "score": 0.5696623526557353
+      "score": 0.5847423244378348
     },
     {
       "post": "css-only-floating-input-labels",
-      "score": 0.5670806249175713
+      "score": 0.5760491094896385
     },
     {
-      "post": "javascript-keyboard-easter-egg",
-      "score": 0.5498155386674561
+      "post": "custom-giraffe-caret",
+      "score": 0.5716494957148123
+    },
+    {
+      "post": "css-image-glitch",
+      "score": 0.5638051810024494
     },
     {
       "post": "css-only-counter",
-      "score": 0.5496435738397304
+      "score": 0.5527743889577372
+    },
+    {
+      "post": "javascript-keyboard-easter-egg",
+      "score": 0.5522925718381718
     },
     {
       "post": "all-aboard-the-monorail",
-      "score": 0.5487135761416487
+      "score": 0.5436392438594312
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.5361743067444065
-    },
-    {
-      "post": "image-comparison-slider",
-      "score": 0.5341896648059272
+      "score": 0.5390663585861657
     },
     {
       "post": "three-web-development-bookmarklets",
-      "score": 0.527238080845527
+      "score": 0.5357597631549272
+    },
+    {
+      "post": "image-comparison-slider",
+      "score": 0.5350234305432854
     },
     {
       "post": "css-blocky-people-making-waves",
-      "score": 0.5232299448116969
-    },
-    {
-      "post": "counting-sheep",
-      "score": 0.5204081920446383
-    },
-    {
-      "post": "weekly-code-challenge-spring-2021",
-      "score": 0.5192944050894235
-    },
-    {
-      "post": "fake-audio-spectrum-using-perlin-noise",
-      "score": 0.5191438795129171
-    },
-    {
-      "post": "3d-rotating-cube-effect",
-      "score": 0.5170494722848712
+      "score": 0.5237753436773345
     },
     {
       "post": "custom-scroll-bars",
-      "score": 0.5164422141875712
+      "score": 0.5224764538227641
+    },
+    {
+      "post": "counting-sheep",
+      "score": 0.5220541621020484
+    },
+    {
+      "post": "weekly-code-challenge-spring-2021",
+      "score": 0.5163048854459268
     },
     {
       "post": "design-articles",
-      "score": 0.5155038876134153
+      "score": 0.5159817998551409
     },
     {
-      "post": "invaders",
-      "score": 0.5141664565669444
+      "post": "3d-rotating-cube-effect",
+      "score": 0.5143120698263983
+    },
+    {
+      "post": "fake-audio-spectrum-using-perlin-noise",
+      "score": 0.5116981331377891
     },
     {
       "post": "react-image-filter-component",
-      "score": 0.5126896713976011
-    },
-    {
-      "post": "vertigo-svg-shaders",
-      "score": 0.5040814976085147
+      "score": 0.5091769865885177
     },
     {
       "post": "css-animations-instead-of-js-timers",
-      "score": 0.5033262924720201
-    },
-    {
-      "post": "accessible-range-slider",
-      "score": 0.5020335806066107
+      "score": 0.5065835856221599
     },
     {
       "post": "svg-non-scaling-circle-and-rectangle",
-      "score": 0.5005875337727949
+      "score": 0.5064357401653167
+    },
+    {
+      "post": "minor-design-refresh",
+      "score": 0.5053395991885183
+    },
+    {
+      "post": "vertigo-svg-shaders",
+      "score": 0.5038051778857928
     },
     {
       "post": "ios-safari-scroll-position-fixed",
-      "score": 0.5001354833267341
+      "score": 0.5037737975500475
+    },
+    {
+      "post": "invaders",
+      "score": 0.5034685424708775
+    },
+    {
+      "post": "ie6-hacks-ten-years-after",
+      "score": 0.5022401024151802
+    },
+    {
+      "post": "accessible-range-slider",
+      "score": 0.5013709167588536
     }
   ],
   "node-script-to-run-multiple-commands-in-parallel": [
     {
       "post": "nodejs-simple-colorful-logging",
       "score": 0.6560418653159444
+    },
+    {
+      "post": "web-workers-promises",
+      "score": 0.5537606905028288
     },
     {
       "post": "add-git-version-tag-after-publishing-to-npm",
@@ -3772,7 +3788,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5266219391908274
+      "score": 0.5262876077346932
     },
     {
       "post": "making-2d-platformer-controls",
@@ -3809,6 +3825,10 @@
       "score": 0.5405030826484118
     },
     {
+      "post": "css-and-svg-input-animations",
+      "score": 0.5357597631549272
+    },
+    {
       "post": "has-tabbed-aka-should-i-release-small-libraries",
       "score": 0.5339523680239685
     },
@@ -3821,12 +3841,8 @@
       "score": 0.5321490590053007
     },
     {
-      "post": "css-and-svg-input-animations",
-      "score": 0.527238080845527
-    },
-    {
       "post": "native-dual-range-input",
-      "score": 0.5205900711188038
+      "score": 0.5238923853000218
     },
     {
       "post": "nodejs-simple-colorful-logging",
@@ -3936,7 +3952,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.7046845264392216
+      "score": 0.7049641602382767
     },
     {
       "post": "back-to-the-basics",
@@ -3976,7 +3992,7 @@
     },
     {
       "post": "invaders",
-      "score": 0.6061831916202652
+      "score": 0.6049229653291227
     },
     {
       "post": "into-2021",
@@ -4048,7 +4064,7 @@
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.5396539326427213
+      "score": 0.5428152099264882
     },
     {
       "post": "marvin-v1",
@@ -4075,6 +4091,10 @@
       "score": 0.5189524967287895
     },
     {
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.5096244801050496
+    },
+    {
       "post": "css-only-sprite-animations",
       "score": 0.5095611236790514
     },
@@ -4083,8 +4103,8 @@
       "score": 0.5094149181364749
     },
     {
-      "post": "draw-svg-rope-using-javascript",
-      "score": 0.5088692618924713
+      "post": "three-js-extrude-svg-path",
+      "score": 0.503300463641989
     },
     {
       "post": "all-aboard-the-monorail",
@@ -4146,7 +4166,7 @@
     },
     {
       "post": "invaders",
-      "score": 0.5030872441703894
+      "score": 0.5034508078937446
     }
   ],
   "jekyll-read-more-link": [
@@ -4206,7 +4226,7 @@
     },
     {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.5935744281180392
+      "score": 0.5940977787661469
     },
     {
       "post": "css-fix-to-prevent-orphan-icons",
@@ -4230,15 +4250,11 @@
     },
     {
       "post": "invaders",
-      "score": 0.5850346745997526
+      "score": 0.5814297626884105
     },
     {
       "post": "react-image-filter-component",
       "score": 0.5808100767170751
-    },
-    {
-      "post": "three-js-extrude-svg-path",
-      "score": 0.5770652823028487
     },
     {
       "post": "scrubbing-videos-using-javascript",
@@ -4249,8 +4265,12 @@
       "score": 0.5713707410974461
     },
     {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.5698002619128182
+    },
+    {
       "post": "native-dual-range-input",
-      "score": 0.5680359417873564
+      "score": 0.5689400691919653
     },
     {
       "post": "pwa-ios-status-bar-blur",
@@ -4442,6 +4462,10 @@
       "score": 0.5063992479613347
     },
     {
+      "post": "css-and-svg-input-animations",
+      "score": 0.5053395991885183
+    },
+    {
       "post": "marvin-v1",
       "score": 0.5052169648804076
     }
@@ -4599,7 +4623,7 @@
     },
     {
       "post": "css-and-svg-input-animations",
-      "score": 0.5001354833267341
+      "score": 0.5037737975500475
     }
   ],
   "running-staticman-on-heroku": [
@@ -4639,7 +4663,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.6286185593266661
+      "score": 0.6284158006468533
     },
     {
       "post": "introducing-keen-npm-package-boilerplate",
@@ -4755,12 +4779,12 @@
       "score": 0.5357921970977116
     },
     {
-      "post": "javascript-keyboard-easter-egg",
-      "score": 0.5217147279622039
+      "post": "css-and-svg-input-animations",
+      "score": 0.5220541621020484
     },
     {
-      "post": "css-and-svg-input-animations",
-      "score": 0.5204081920446383
+      "post": "javascript-keyboard-easter-egg",
+      "score": 0.5217147279622039
     },
     {
       "post": "animated-login-signup-forms",
@@ -4786,219 +4810,227 @@
   "native-dual-range-input": [
     {
       "post": "image-comparison-slider",
-      "score": 0.8451907533931372
+      "score": 0.847652032522759
     },
     {
       "post": "accessible-range-slider",
-      "score": 0.7325271288213844
+      "score": 0.7321347375152247
     },
     {
       "post": "custom-giraffe-caret",
-      "score": 0.6966733407446939
+      "score": 0.700303757950503
     },
     {
       "post": "all-aboard-the-monorail",
-      "score": 0.6784628028560753
+      "score": 0.6785794902028667
     },
     {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.6419967165422823
+      "score": 0.641442083242352
     },
     {
       "post": "invaders",
-      "score": 0.6378287441705008
+      "score": 0.6396433577847481
     },
     {
       "post": "css-image-glitch",
-      "score": 0.6248536204039026
+      "score": 0.6271271667814969
     },
     {
       "post": "css-only-counter",
-      "score": 0.6196576859632462
+      "score": 0.6190270263435524
     },
     {
       "post": "css-blocky-people-making-waves",
-      "score": 0.6162417843964654
+      "score": 0.6185913827183445
     },
     {
       "post": "css-animations-instead-of-js-timers",
-      "score": 0.6147136059537094
+      "score": 0.614294927705252
     },
     {
       "post": "js-libraries-for-generative-art",
-      "score": 0.60550773565687
-    },
-    {
-      "post": "custom-scroll-bars",
-      "score": 0.5915157925457641
-    },
-    {
-      "post": "simple-react-slider",
-      "score": 0.589057974931
+      "score": 0.6094877909002118
     },
     {
       "post": "breaking-down-krypton",
-      "score": 0.5881260845028294
+      "score": 0.5922733850538542
+    },
+    {
+      "post": "custom-scroll-bars",
+      "score": 0.5910930952413151
     },
     {
       "post": "introducing-keen-npm-package-boilerplate",
-      "score": 0.5876559838022353
+      "score": 0.5897450634332126
     },
     {
-      "post": "three-js-extrude-svg-path",
-      "score": 0.5843093690625967
-    },
-    {
-      "post": "scrubbing-videos-using-javascript",
-      "score": 0.58191467358136
+      "post": "simple-react-slider",
+      "score": 0.589395525315548
     },
     {
       "post": "neon-generative-art-piece-made-using-2d-vector-field",
-      "score": 0.5789999264736259
+      "score": 0.5827572208462211
     },
     {
-      "post": "scrollbar-size-observer",
-      "score": 0.5787430355868338
+      "post": "scrubbing-videos-using-javascript",
+      "score": 0.5826028389098539
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5777182190194303
+      "score": 0.5804135912832734
+    },
+    {
+      "post": "scrollbar-size-observer",
+      "score": 0.5786199778400267
     },
     {
       "post": "pwa-ios-status-bar-blur",
-      "score": 0.5744125227660482
+      "score": 0.5749822265642187
+    },
+    {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.5742778243056659
     },
     {
       "post": "has-tabbed-aka-should-i-release-small-libraries",
-      "score": 0.5727108799588201
+      "score": 0.5735322828122252
     },
     {
       "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
-      "score": 0.5700445871082801
+      "score": 0.5706260214298444
     },
     {
       "post": "preserving-text-size-when-scaling-svgs",
-      "score": 0.5680359417873564
+      "score": 0.5689400691919653
     },
     {
       "post": "metaballs-generative-art",
-      "score": 0.561760853240322
+      "score": 0.566354399218258
     },
     {
       "post": "react-image-filter-component",
-      "score": 0.5606153058064195
-    },
-    {
-      "post": "react-animate-height-slide-up-down",
-      "score": 0.5555752919253804
+      "score": 0.56220362065324
     },
     {
       "post": "css-only-sprite-animations",
-      "score": 0.5554687535798698
+      "score": 0.5568619222227292
     },
     {
-      "post": "svg-non-scaling-circle-and-rectangle",
-      "score": 0.5494599070594827
-    },
-    {
-      "post": "html-inert-property",
-      "score": 0.5493827393339763
+      "post": "react-animate-height-slide-up-down",
+      "score": 0.5553627793212846
     },
     {
       "post": "javascript-keyboard-easter-egg",
-      "score": 0.549122463715051
+      "score": 0.5539893151998758
     },
     {
-      "post": "css-only-floating-input-labels",
-      "score": 0.5463877978017638
+      "post": "svg-non-scaling-circle-and-rectangle",
+      "score": 0.5495968340855019
     },
     {
-      "post": "fake-audio-spectrum-using-perlin-noise",
-      "score": 0.5454881710899033
+      "post": "html-inert-property",
+      "score": 0.5487585447445033
     },
     {
       "post": "the-tiny-book-of-great-joys",
-      "score": 0.5444855789451201
+      "score": 0.5483065031882255
     },
     {
-      "post": "making-2d-platformer-controls",
-      "score": 0.5438704267152074
-    },
-    {
-      "post": "react-rerender-in-component-did-mount",
-      "score": 0.5429313796171795
+      "post": "fake-audio-spectrum-using-perlin-noise",
+      "score": 0.547987868448309
     },
     {
       "post": "sneak-peek-of-rayven",
-      "score": 0.5414775688620439
+      "score": 0.5476316059597917
+    },
+    {
+      "post": "css-only-floating-input-labels",
+      "score": 0.5467483322235958
+    },
+    {
+      "post": "making-2d-platformer-controls",
+      "score": 0.5454199644762595
+    },
+    {
+      "post": "react-rerender-in-component-did-mount",
+      "score": 0.5428402686712378
     },
     {
       "post": "my-blog-setup",
-      "score": 0.5396539326427213
-    },
-    {
-      "post": "ie6-hacks-ten-years-after",
-      "score": 0.537619488711166
+      "score": 0.5428152099264882
     },
     {
       "post": "plx-react-parallax-component",
-      "score": 0.5369748996900887
+      "score": 0.5403530586085641
+    },
+    {
+      "post": "ie6-hacks-ten-years-after",
+      "score": 0.539690806799985
     },
     {
       "post": "css-and-svg-input-animations",
-      "score": 0.5361743067444065
+      "score": 0.5390663585861657
     },
     {
       "post": "animated-login-signup-forms",
-      "score": 0.5330330047632951
+      "score": 0.5345242619357999
     },
     {
       "post": "javascript-animation-loop",
-      "score": 0.5256796193653831
-    },
-    {
-      "post": "mobile-chrome-vh-units-fix",
-      "score": 0.5241443401415913
-    },
-    {
-      "post": "react-ratio-component",
-      "score": 0.5227899235916528
+      "score": 0.5280871324431053
     },
     {
       "post": "three-web-development-bookmarklets",
-      "score": 0.5205900711188038
+      "score": 0.5238923853000218
     },
     {
-      "post": "setting-up-webpack-babel-and-react-from-scratch",
-      "score": 0.5202751721773494
-    },
-    {
-      "post": "into-2021",
-      "score": 0.5167705801185799
+      "post": "mobile-chrome-vh-units-fix",
+      "score": 0.5236319952208066
     },
     {
       "post": "my-programming-story",
-      "score": 0.5162268609228978
+      "score": 0.5229401364984401
+    },
+    {
+      "post": "react-ratio-component",
+      "score": 0.5226072282532166
+    },
+    {
+      "post": "setting-up-webpack-babel-and-react-from-scratch",
+      "score": 0.5213257599040727
+    },
+    {
+      "post": "into-2021",
+      "score": 0.5194017378610338
     },
     {
       "post": "weekly-code-challenge-spring-2021",
-      "score": 0.5087724147670086
+      "score": 0.5123386579686143
     },
     {
       "post": "into-2020",
-      "score": 0.5057886377928802
+      "score": 0.5091534511774195
     },
     {
       "post": "catching-the-blur-event-on-an-element-and-its-children",
-      "score": 0.5045446491792318
-    },
-    {
-      "post": "hiding-body-scrollbars-using-css",
-      "score": 0.5045022062153705
+      "score": 0.5051204739259544
     },
     {
       "post": "into-2022",
-      "score": 0.5008594154145092
+      "score": 0.5046733552515673
+    },
+    {
+      "post": "hiding-body-scrollbars-using-css",
+      "score": 0.5030497784095433
+    },
+    {
+      "post": "blog-question-challenge",
+      "score": 0.5019593294113461
+    },
+    {
+      "post": "animate-window-scroll-to",
+      "score": 0.5001220590102938
     }
   ],
   "disable-cmd-mouse-wheel-zoom-in-firefox": [
@@ -5046,19 +5078,19 @@
     },
     {
       "post": "invaders",
-      "score": 0.6122163679957145
+      "score": 0.6095802156903573
     },
     {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.6047163722335838
-    },
-    {
-      "post": "three-js-extrude-svg-path",
-      "score": 0.6013545910481546
+      "score": 0.6038017066752044
     },
     {
       "post": "fake-audio-spectrum-using-perlin-noise",
       "score": 0.5963501082435951
+    },
+    {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.5918135955685978
     },
     {
       "post": "preserving-text-size-when-scaling-svgs",
@@ -5125,16 +5157,16 @@
       "score": 0.5291194626497262
     },
     {
+      "post": "native-dual-range-input",
+      "score": 0.5280871324431053
+    },
+    {
       "post": "js-libraries-for-generative-art",
       "score": 0.5272934430879334
     },
     {
       "post": "react-animate-height-slide-up-down",
       "score": 0.5266914705402
-    },
-    {
-      "post": "native-dual-range-input",
-      "score": 0.5256796193653831
     },
     {
       "post": "vertigo-svg-shaders",
@@ -5146,7 +5178,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5197878347278679
+      "score": 0.5195115878245615
     },
     {
       "post": "javascript-time-ago-function",
@@ -5175,6 +5207,10 @@
     {
       "post": "nodejs-simple-colorful-logging",
       "score": 0.5066510195693783
+    },
+    {
+      "post": "web-workers-promises",
+      "score": 0.5027159890978147
     },
     {
       "post": "javascript-get-element-offset",
@@ -5256,13 +5292,13 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5046712367876559
+      "score": 0.5045973628409967
     }
   ],
   "image-comparison-slider": [
     {
       "post": "native-dual-range-input",
-      "score": 0.8451907533931372
+      "score": 0.847652032522759
     },
     {
       "post": "accessible-range-slider",
@@ -5286,11 +5322,11 @@
     },
     {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.6627795980940608
+      "score": 0.6627293392989171
     },
     {
       "post": "invaders",
-      "score": 0.6548763033550401
+      "score": 0.6515522366522938
     },
     {
       "post": "css-blocky-people-making-waves",
@@ -5317,16 +5353,16 @@
       "score": 0.6173043362125414
     },
     {
-      "post": "three-js-extrude-svg-path",
-      "score": 0.6139103173539148
-    },
-    {
       "post": "js-libraries-for-generative-art",
       "score": 0.612079711639432
     },
     {
       "post": "preserving-text-size-when-scaling-svgs",
       "score": 0.6067509656657023
+    },
+    {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.6054779145847308
     },
     {
       "post": "javascript-keyboard-easter-egg",
@@ -5350,7 +5386,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5815241629630423
+      "score": 0.5824871461395328
     },
     {
       "post": "javascript-animation-loop",
@@ -5426,7 +5462,7 @@
     },
     {
       "post": "css-and-svg-input-animations",
-      "score": 0.5341896648059272
+      "score": 0.5350234305432854
     },
     {
       "post": "weekly-code-challenge-spring-2021",
@@ -5625,7 +5661,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.558609738496208
+      "score": 0.56093098823497
     },
     {
       "post": "open-source-mac-apps-i-love",
@@ -5657,7 +5693,7 @@
     },
     {
       "post": "invaders",
-      "score": 0.5267306956122156
+      "score": 0.5262648138442193
     },
     {
       "post": "breaking-down-krypton",
@@ -5695,7 +5731,7 @@
     },
     {
       "post": "invaders",
-      "score": 0.7037685486427707
+      "score": 0.7005439911337007
     },
     {
       "post": "into-2021",
@@ -5707,7 +5743,7 @@
     },
     {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.6421717337539105
+      "score": 0.6399424804980351
     },
     {
       "post": "into-2022",
@@ -5715,7 +5751,7 @@
     },
     {
       "post": "three-js-extrude-svg-path",
-      "score": 0.6368609354150991
+      "score": 0.6294914967300816
     },
     {
       "post": "sneak-peek-of-rayven",
@@ -5734,16 +5770,16 @@
       "score": 0.612079711639432
     },
     {
+      "post": "native-dual-range-input",
+      "score": 0.6094877909002118
+    },
+    {
       "post": "custom-giraffe-caret",
       "score": 0.607803210517522
     },
     {
       "post": "small-mac-apps-i-love",
       "score": 0.6077547810146264
-    },
-    {
-      "post": "native-dual-range-input",
-      "score": 0.60550773565687
     },
     {
       "post": "fake-audio-spectrum-using-perlin-noise",
@@ -5759,7 +5795,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5794542064420185
+      "score": 0.5805850910984608
     },
     {
       "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
@@ -5929,7 +5965,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5615855313578594
+      "score": 0.5611876638933951
     },
     {
       "post": "hello-world",
@@ -5990,6 +6026,10 @@
   ],
   "simple-javascript-api-wrapper": [
     {
+      "post": "web-workers-promises",
+      "score": 0.5590190793915758
+    },
+    {
       "post": "animate-window-scroll-to",
       "score": 0.5319267507605326
     },
@@ -6005,7 +6045,7 @@
   "all-aboard-the-monorail": [
     {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.7056016419147255
+      "score": 0.7046554342366228
     },
     {
       "post": "css-image-glitch",
@@ -6013,7 +6053,7 @@
     },
     {
       "post": "invaders",
-      "score": 0.6846719894787239
+      "score": 0.6814044217911881
     },
     {
       "post": "css-animations-instead-of-js-timers",
@@ -6021,7 +6061,7 @@
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.6784628028560753
+      "score": 0.6785794902028667
     },
     {
       "post": "image-comparison-slider",
@@ -6041,7 +6081,7 @@
     },
     {
       "post": "three-js-extrude-svg-path",
-      "score": 0.6501888627273055
+      "score": 0.6444317755395966
     },
     {
       "post": "neon-generative-art-piece-made-using-2d-vector-field",
@@ -6085,7 +6125,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5966087649993991
+      "score": 0.5967020082820109
     },
     {
       "post": "vertigo-svg-shaders",
@@ -6125,7 +6165,7 @@
     },
     {
       "post": "css-and-svg-input-animations",
-      "score": 0.5487135761416487
+      "score": 0.5436392438594312
     },
     {
       "post": "javascript-keyboard-easter-egg",
@@ -6231,7 +6271,7 @@
     },
     {
       "post": "css-and-svg-input-animations",
-      "score": 0.5836558577357254
+      "score": 0.5847423244378348
     },
     {
       "post": "css-image-glitch",
@@ -6282,226 +6322,218 @@
       "score": 0.5105332996631096
     },
     {
-      "post": "invaders",
-      "score": 0.5085264281458957
-    },
-    {
       "post": "3d-rotating-cube-effect",
       "score": 0.5069079984144477
+    },
+    {
+      "post": "invaders",
+      "score": 0.5043087873719867
     }
   ],
   "invaders": [
     {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.7972370382113007
+      "score": 0.795966367918955
     },
     {
       "post": "neon-generative-art-piece-made-using-2d-vector-field",
-      "score": 0.7701400547690543
+      "score": 0.7683505704964754
     },
     {
       "post": "breaking-down-krypton",
-      "score": 0.7640033155019569
+      "score": 0.7628738000276587
     },
     {
       "post": "metaballs-generative-art",
-      "score": 0.7451740559813297
+      "score": 0.7436890104876254
     },
     {
       "post": "css-image-glitch",
-      "score": 0.7259301429818068
+      "score": 0.7244672184694139
     },
     {
       "post": "custom-giraffe-caret",
-      "score": 0.7193123381459382
+      "score": 0.7152297305339506
     },
     {
       "post": "css-blocky-people-making-waves",
-      "score": 0.7055909022402636
+      "score": 0.7045879825595188
     },
     {
       "post": "js-libraries-for-generative-art",
-      "score": 0.7037685486427707
+      "score": 0.7005439911337007
     },
     {
       "post": "three-js-extrude-svg-path",
-      "score": 0.7031818326010791
-    },
-    {
-      "post": "all-aboard-the-monorail",
-      "score": 0.6846719894787239
+      "score": 0.695533941695849
     },
     {
       "post": "the-tiny-book-of-great-joys",
-      "score": 0.6825760519101762
+      "score": 0.6828097339051334
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.6814044217911881
     },
     {
       "post": "sneak-peek-of-rayven",
-      "score": 0.6646279179014776
+      "score": 0.6621572209965129
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.6612088876655999
+      "score": 0.6603780511302033
     },
     {
       "post": "image-comparison-slider",
-      "score": 0.6548763033550401
+      "score": 0.6515522366522938
     },
     {
       "post": "css-only-sprite-animations",
-      "score": 0.6502083487562873
+      "score": 0.6468230746103204
     },
     {
       "post": "into-2021",
-      "score": 0.6404370693494241
+      "score": 0.6420557477257549
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.6378287441705008
+      "score": 0.6396433577847481
     },
     {
       "post": "into-2022",
-      "score": 0.6232208515551836
+      "score": 0.6242291330814249
     },
     {
       "post": "fake-audio-spectrum-using-perlin-noise",
-      "score": 0.6168309922356796
+      "score": 0.614616189391765
     },
     {
       "post": "making-2d-platformer-controls",
-      "score": 0.6166604475933809
+      "score": 0.6146136684095748
     },
     {
       "post": "weekly-code-challenge-spring-2021",
-      "score": 0.6157546051275357
+      "score": 0.6142414878006276
     },
     {
       "post": "my-programming-story",
-      "score": 0.6122734242977429
+      "score": 0.6106183375571451
     },
     {
       "post": "javascript-animation-loop",
-      "score": 0.6122163679957145
-    },
-    {
-      "post": "my-blog-setup",
-      "score": 0.6061831916202652
+      "score": 0.6095802156903573
     },
     {
       "post": "into-2020",
-      "score": 0.6055003901660997
+      "score": 0.6071816842859316
+    },
+    {
+      "post": "my-blog-setup",
+      "score": 0.6049229653291227
     },
     {
       "post": "javascript-keyboard-easter-egg",
-      "score": 0.5988956159102345
-    },
-    {
-      "post": "css-animations-instead-of-js-timers",
-      "score": 0.5975804290534761
+      "score": 0.597195884870058
     },
     {
       "post": "blog-question-challenge",
-      "score": 0.5956125445494603
+      "score": 0.5954738419971807
+    },
+    {
+      "post": "css-animations-instead-of-js-timers",
+      "score": 0.5946686945750135
     },
     {
       "post": "vertigo-svg-shaders",
-      "score": 0.5951158233402718
+      "score": 0.5933191491083866
     },
     {
       "post": "preserving-text-size-when-scaling-svgs",
-      "score": 0.5850346745997526
+      "score": 0.5814297626884105
     },
     {
       "post": "react-rerender-in-component-did-mount",
-      "score": 0.5770446262928584
+      "score": 0.5744465072587461
     },
     {
       "post": "scrubbing-videos-using-javascript",
-      "score": 0.570226147655541
-    },
-    {
-      "post": "svg-non-scaling-circle-and-rectangle",
-      "score": 0.567232716424932
+      "score": 0.5678163650275484
     },
     {
       "post": "axidraw-plotter-camera-mount",
-      "score": 0.5664899913479898
+      "score": 0.5654071759638427
+    },
+    {
+      "post": "svg-non-scaling-circle-and-rectangle",
+      "score": 0.5625381498125958
     },
     {
       "post": "visualizing-a-vector-field",
-      "score": 0.5605203235813522
-    },
-    {
-      "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
-      "score": 0.5563264085606411
+      "score": 0.5586799684695215
     },
     {
       "post": "back-to-the-basics",
-      "score": 0.5561715630562274
+      "score": 0.5561809636317879
+    },
+    {
+      "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
+      "score": 0.5520517705789801
     },
     {
       "post": "introducing-keen-npm-package-boilerplate",
-      "score": 0.5441649068379814
+      "score": 0.5415130917842821
     },
     {
       "post": "setting-up-webpack-babel-and-react-from-scratch",
-      "score": 0.540344991859768
+      "score": 0.5381286179446261
     },
     {
       "post": "react-image-filter-component",
-      "score": 0.5375714070680491
+      "score": 0.5342700356431688
     },
     {
       "post": "bunny-jumps-again",
-      "score": 0.5365724662910574
+      "score": 0.5342016265998373
     },
     {
       "post": "looking-forward-to-2017",
-      "score": 0.5329277079291896
+      "score": 0.5324665351058377
     },
     {
       "post": "talks-i-like",
-      "score": 0.5267306956122156
+      "score": 0.5262648138442193
     },
     {
       "post": "css-only-counter",
-      "score": 0.5250863494824696
+      "score": 0.5222212018536141
     },
     {
       "post": "plx-react-parallax-component",
-      "score": 0.521404366686948
+      "score": 0.5201946128768634
     },
     {
       "post": "ie6-hacks-ten-years-after",
-      "score": 0.514662187729927
-    },
-    {
-      "post": "css-and-svg-input-animations",
-      "score": 0.5141664565669444
+      "score": 0.5140610221680718
     },
     {
       "post": "open-source-mac-apps-i-love",
-      "score": 0.5113364832884009
-    },
-    {
-      "post": "sass-random-and-circle-animation",
-      "score": 0.5085264281458957
+      "score": 0.5114849276157357
     },
     {
       "post": "pwa-ios-status-bar-blur",
-      "score": 0.5067670080934465
+      "score": 0.5053068697637477
+    },
+    {
+      "post": "sass-random-and-circle-animation",
+      "score": 0.5043087873719867
+    },
+    {
+      "post": "css-and-svg-input-animations",
+      "score": 0.5034685424708775
     },
     {
       "post": "letters-from-sarajevo",
-      "score": 0.5030872441703894
-    },
-    {
-      "post": "nodejs-simple-colorful-logging",
-      "score": 0.5007321868873801
-    },
-    {
-      "post": "3d-rotating-cube-effect",
-      "score": 0.500574969216253
+      "score": 0.5034508078937446
     }
   ],
   "catching-the-blur-event-on-an-element-and-its-children": [
@@ -6575,7 +6607,7 @@
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.5045446491792318
+      "score": 0.5051204739259544
     },
     {
       "post": "has-tabbed-aka-should-i-release-small-libraries",
@@ -6597,7 +6629,7 @@
     },
     {
       "post": "invaders",
-      "score": 0.5951158233402718
+      "score": 0.5933191491083866
     },
     {
       "post": "breaking-down-krypton",
@@ -6616,20 +6648,20 @@
       "score": 0.5796051208354485
     },
     {
-      "post": "three-js-extrude-svg-path",
-      "score": 0.5705502795912599
-    },
-    {
       "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
       "score": 0.5666061707327116
     },
     {
-      "post": "draw-svg-rope-using-javascript",
-      "score": 0.5630829399898948
+      "post": "three-js-extrude-svg-path",
+      "score": 0.5659267559702872
     },
     {
       "post": "css-image-glitch",
       "score": 0.5628165348783836
+    },
+    {
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.5605981816237766
     },
     {
       "post": "fake-audio-spectrum-using-perlin-noise",
@@ -6680,12 +6712,12 @@
       "score": 0.5041990886699942
     },
     {
-      "post": "css-and-svg-input-animations",
-      "score": 0.5040814976085147
-    },
-    {
       "post": "pwa-ios-status-bar-blur",
       "score": 0.5038507679364855
+    },
+    {
+      "post": "css-and-svg-input-animations",
+      "score": 0.5038051778857928
     },
     {
       "post": "making-2d-platformer-controls",
@@ -6703,7 +6735,7 @@
     },
     {
       "post": "invaders",
-      "score": 0.7701400547690543
+      "score": 0.7683505704964754
     },
     {
       "post": "js-libraries-for-generative-art",
@@ -6711,7 +6743,7 @@
     },
     {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.6857030878180843
+      "score": 0.6850084617646834
     },
     {
       "post": "sneak-peek-of-rayven",
@@ -6731,7 +6763,7 @@
     },
     {
       "post": "three-js-extrude-svg-path",
-      "score": 0.6485951547711677
+      "score": 0.6491658268415466
     },
     {
       "post": "all-aboard-the-monorail",
@@ -6770,6 +6802,10 @@
       "score": 0.5854191274989963
     },
     {
+      "post": "native-dual-range-input",
+      "score": 0.5827572208462211
+    },
+    {
       "post": "into-2020",
       "score": 0.5813755448443523
     },
@@ -6778,16 +6814,12 @@
       "score": 0.580614018583268
     },
     {
-      "post": "native-dual-range-input",
-      "score": 0.5789999264736259
-    },
-    {
       "post": "my-blog-setup",
       "score": 0.5706710859202577
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5685442505695395
+      "score": 0.5697117570008753
     },
     {
       "post": "css-only-sprite-animations",
@@ -6929,7 +6961,7 @@
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.537619488711166
+      "score": 0.539690806799985
     },
     {
       "post": "all-aboard-the-monorail",
@@ -6981,7 +7013,7 @@
     },
     {
       "post": "invaders",
-      "score": 0.514662187729927
+      "score": 0.5140610221680718
     },
     {
       "post": "my-programming-story",
@@ -6996,6 +7028,10 @@
       "score": 0.5024117500003
     },
     {
+      "post": "css-and-svg-input-animations",
+      "score": 0.5022401024151802
+    },
+    {
       "post": "react-rerender-in-component-did-mount",
       "score": 0.5014250755851188
     },
@@ -7007,179 +7043,183 @@
   "draw-svg-rope-using-javascript": [
     {
       "post": "invaders",
-      "score": 0.7972370382113007
+      "score": 0.795966367918955
     },
     {
       "post": "three-js-extrude-svg-path",
-      "score": 0.7459471346748331
+      "score": 0.7451634658381909
     },
     {
       "post": "all-aboard-the-monorail",
-      "score": 0.7056016419147255
+      "score": 0.7046554342366228
     },
     {
       "post": "neon-generative-art-piece-made-using-2d-vector-field",
-      "score": 0.6857030878180843
+      "score": 0.6850084617646834
     },
     {
       "post": "css-image-glitch",
-      "score": 0.6795147250078668
+      "score": 0.6827184503964762
     },
     {
       "post": "css-blocky-people-making-waves",
-      "score": 0.6781350057464695
-    },
-    {
-      "post": "breaking-down-krypton",
-      "score": 0.6739114573840161
+      "score": 0.6793246996604109
     },
     {
       "post": "custom-giraffe-caret",
-      "score": 0.6737133109711255
+      "score": 0.6763917605226911
+    },
+    {
+      "post": "breaking-down-krypton",
+      "score": 0.6751857798317592
     },
     {
       "post": "metaballs-generative-art",
-      "score": 0.6713644780037429
+      "score": 0.6725376401339396
     },
     {
       "post": "image-comparison-slider",
-      "score": 0.6627795980940608
-    },
-    {
-      "post": "js-libraries-for-generative-art",
-      "score": 0.6421717337539105
+      "score": 0.6627293392989171
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.6419967165422823
+      "score": 0.641442083242352
+    },
+    {
+      "post": "js-libraries-for-generative-art",
+      "score": 0.6399424804980351
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.6184810664396966
+      "score": 0.6179441465999919
     },
     {
       "post": "svg-non-scaling-circle-and-rectangle",
-      "score": 0.6178753856728605
+      "score": 0.617057492400566
     },
     {
       "post": "fake-audio-spectrum-using-perlin-noise",
-      "score": 0.6144821682762688
+      "score": 0.6156215330882034
     },
     {
       "post": "css-animations-instead-of-js-timers",
-      "score": 0.6144480036895439
+      "score": 0.6151019713344278
     },
     {
       "post": "sneak-peek-of-rayven",
-      "score": 0.6121953213047772
+      "score": 0.6114790109286071
     },
     {
       "post": "javascript-animation-loop",
-      "score": 0.6047163722335838
-    },
-    {
-      "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
-      "score": 0.5981977857808275
+      "score": 0.6038017066752044
     },
     {
       "post": "the-tiny-book-of-great-joys",
-      "score": 0.5971790974494982
+      "score": 0.6010692517768337
     },
     {
       "post": "preserving-text-size-when-scaling-svgs",
-      "score": 0.5935744281180392
+      "score": 0.5940977787661469
+    },
+    {
+      "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
+      "score": 0.5923016349209975
     },
     {
       "post": "css-only-sprite-animations",
-      "score": 0.5889727423393456
-    },
-    {
-      "post": "scrubbing-videos-using-javascript",
-      "score": 0.5854066534144344
+      "score": 0.5911654336599734
     },
     {
       "post": "react-rerender-in-component-did-mount",
-      "score": 0.5847805939504928
+      "score": 0.5864768919281248
+    },
+    {
+      "post": "scrubbing-videos-using-javascript",
+      "score": 0.5863789756343951
     },
     {
       "post": "making-2d-platformer-controls",
-      "score": 0.5838792088781042
+      "score": 0.5837206649412975
     },
     {
       "post": "weekly-code-challenge-spring-2021",
-      "score": 0.5641967491314087
+      "score": 0.5647288796478072
     },
     {
       "post": "vertigo-svg-shaders",
-      "score": 0.5630829399898948
+      "score": 0.5605981816237766
     },
     {
       "post": "visualizing-a-vector-field",
-      "score": 0.5614512500065015
-    },
-    {
-      "post": "setting-up-webpack-babel-and-react-from-scratch",
-      "score": 0.5467706545715031
-    },
-    {
-      "post": "react-image-filter-component",
-      "score": 0.5459861217616296
+      "score": 0.5586650917557214
     },
     {
       "post": "into-2021",
-      "score": 0.5452828578479388
+      "score": 0.5460632296008686
+    },
+    {
+      "post": "react-image-filter-component",
+      "score": 0.5445206328670491
+    },
+    {
+      "post": "setting-up-webpack-babel-and-react-from-scratch",
+      "score": 0.5442144783996177
     },
     {
       "post": "javascript-keyboard-easter-egg",
-      "score": 0.5394621876342872
+      "score": 0.539529170935157
     },
     {
       "post": "my-programming-story",
-      "score": 0.5322968491151565
+      "score": 0.5332755956534302
     },
     {
       "post": "get-lines-of-text-from-html-element",
-      "score": 0.5256613881992538
-    },
-    {
-      "post": "pwa-ios-status-bar-blur",
-      "score": 0.5227387238001554
+      "score": 0.5277729433321026
     },
     {
       "post": "into-2022",
-      "score": 0.52208004609534
+      "score": 0.5247710255598858
+    },
+    {
+      "post": "pwa-ios-status-bar-blur",
+      "score": 0.523640302899192
     },
     {
       "post": "nodejs-simple-colorful-logging",
-      "score": 0.5204128857550714
+      "score": 0.5217354423767215
     },
     {
       "post": "into-2020",
-      "score": 0.5171705638706235
-    },
-    {
-      "post": "plx-react-parallax-component",
-      "score": 0.5108666281019218
-    },
-    {
-      "post": "my-blog-setup",
-      "score": 0.5088692618924713
+      "score": 0.5185641087592644
     },
     {
       "post": "blog-question-challenge",
-      "score": 0.5079996704993714
+      "score": 0.5104161705276969
+    },
+    {
+      "post": "plx-react-parallax-component",
+      "score": 0.5098429853683528
+    },
+    {
+      "post": "my-blog-setup",
+      "score": 0.5096244801050496
     },
     {
       "post": "css-only-counter",
-      "score": 0.5069933665133138
+      "score": 0.5069206702738914
     },
     {
       "post": "3d-rotating-cube-effect",
-      "score": 0.5065102565748713
+      "score": 0.5049011525974735
     },
     {
       "post": "introducing-keen-npm-package-boilerplate",
-      "score": 0.5040546848482033
+      "score": 0.5032197840759739
+    },
+    {
+      "post": "elastic-hover-effect",
+      "score": 0.5009339738335253
     }
   ],
   "plx-react-parallax-component": [
@@ -7221,7 +7261,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5982174683799624
+      "score": 0.5994727689094173
     },
     {
       "post": "webpack-2-react-redux",
@@ -7296,6 +7336,10 @@
       "score": 0.5406316476190923
     },
     {
+      "post": "native-dual-range-input",
+      "score": 0.5403530586085641
+    },
+    {
       "post": "neon-generative-art-piece-made-using-2d-vector-field",
       "score": 0.5402806561588969
     },
@@ -7308,12 +7352,8 @@
       "score": 0.5370952815363151
     },
     {
-      "post": "native-dual-range-input",
-      "score": 0.5369748996900887
-    },
-    {
       "post": "three-js-extrude-svg-path",
-      "score": 0.5321849833808098
+      "score": 0.5248662505227946
     },
     {
       "post": "scrubbing-videos-using-javascript",
@@ -7324,12 +7364,12 @@
       "score": 0.5216176955427763
     },
     {
-      "post": "invaders",
-      "score": 0.521404366686948
-    },
-    {
       "post": "my-blog-setup",
       "score": 0.5203824163923235
+    },
+    {
+      "post": "invaders",
+      "score": 0.5201946128768634
     },
     {
       "post": "custom-scroll-bars",
@@ -7357,7 +7397,7 @@
     },
     {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.5108666281019218
+      "score": 0.5098429853683528
     },
     {
       "post": "new-design-and-features",
@@ -7429,7 +7469,7 @@
   "animated-login-signup-forms": [
     {
       "post": "css-and-svg-input-animations",
-      "score": 0.6652677052866556
+      "score": 0.6637489996493741
     },
     {
       "post": "elastic-hover-effect",
@@ -7496,16 +7536,16 @@
       "score": 0.5364424029822636
     },
     {
+      "post": "native-dual-range-input",
+      "score": 0.5345242619357999
+    },
+    {
       "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
       "score": 0.533930324380824
     },
     {
       "post": "css-blocky-people-making-waves",
       "score": 0.5335968978239591
-    },
-    {
-      "post": "native-dual-range-input",
-      "score": 0.5330330047632951
     },
     {
       "post": "react-rerender-in-component-did-mount",
@@ -7631,7 +7671,7 @@
     },
     {
       "post": "invaders",
-      "score": 0.5956125445494603
+      "score": 0.5954738419971807
     },
     {
       "post": "new-design-and-features",
@@ -7671,7 +7711,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5371917387303301
+      "score": 0.537856748979823
     },
     {
       "post": "neon-generative-art-piece-made-using-2d-vector-field",
@@ -7699,11 +7739,15 @@
     },
     {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.5079996704993714
+      "score": 0.5104161705276969
     },
     {
       "post": "sneak-peek-of-rayven",
       "score": 0.5034789115178404
+    },
+    {
+      "post": "native-dual-range-input",
+      "score": 0.5019593294113461
     }
   ],
   "javascript-time-ago-function": [
@@ -7723,7 +7767,7 @@
   "introducing-keen-npm-package-boilerplate": [
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.6992455263572477
+      "score": 0.6998750044244555
     },
     {
       "post": "my-blog-setup",
@@ -7747,7 +7791,7 @@
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.5876559838022353
+      "score": 0.5897450634332126
     },
     {
       "post": "js-libraries-for-generative-art",
@@ -7794,12 +7838,12 @@
       "score": 0.5444152303589677
     },
     {
-      "post": "invaders",
-      "score": 0.5441649068379814
-    },
-    {
       "post": "into-2022",
       "score": 0.5418922787497605
+    },
+    {
+      "post": "invaders",
+      "score": 0.5415130917842821
     },
     {
       "post": "into-2020",
@@ -7870,12 +7914,12 @@
       "score": 0.5058300277360633
     },
     {
-      "post": "draw-svg-rope-using-javascript",
-      "score": 0.5040546848482033
-    },
-    {
       "post": "the-tiny-book-of-great-joys",
       "score": 0.5039476865388882
+    },
+    {
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.5032197840759739
     }
   ],
   "sneak-peek-of-rayven": [
@@ -7893,23 +7937,23 @@
     },
     {
       "post": "invaders",
-      "score": 0.6646279179014776
+      "score": 0.6621572209965129
     },
     {
       "post": "vertigo-svg-shaders",
       "score": 0.6448465633002401
     },
     {
-      "post": "three-js-extrude-svg-path",
-      "score": 0.6329666570496774
-    },
-    {
       "post": "js-libraries-for-generative-art",
       "score": 0.6283405634142676
     },
     {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.6278658494826733
+    },
+    {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.6121953213047772
+      "score": 0.6114790109286071
     },
     {
       "post": "all-aboard-the-monorail",
@@ -7972,16 +8016,16 @@
       "score": 0.5481298340575027
     },
     {
+      "post": "native-dual-range-input",
+      "score": 0.5476316059597917
+    },
+    {
       "post": "react-image-filter-component",
       "score": 0.5462716326566432
     },
     {
-      "post": "native-dual-range-input",
-      "score": 0.5414775688620439
-    },
-    {
       "post": "webpack-babel-react-revisited",
-      "score": 0.536903172746083
+      "score": 0.5395711206704201
     },
     {
       "post": "scrubbing-videos-using-javascript",
@@ -8074,12 +8118,12 @@
       "score": 0.531026086260477
     },
     {
-      "post": "looking-forward-to-2017",
-      "score": 0.5202928597602906
+      "post": "webpack-babel-react-revisited",
+      "score": 0.5216910963598598
     },
     {
-      "post": "webpack-babel-react-revisited",
-      "score": 0.5198862444271533
+      "post": "looking-forward-to-2017",
+      "score": 0.5202928597602906
     },
     {
       "post": "remove-macos-catalina-zsh-nagging",
@@ -8087,7 +8131,7 @@
     },
     {
       "post": "invaders",
-      "score": 0.5113364832884009
+      "score": 0.5114849276157357
     },
     {
       "post": "trying-atom-for-the-third-time",
@@ -8109,7 +8153,7 @@
   "custom-giraffe-caret": [
     {
       "post": "invaders",
-      "score": 0.7193123381459382
+      "score": 0.7152297305339506
     },
     {
       "post": "image-comparison-slider",
@@ -8117,7 +8161,7 @@
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.6966733407446939
+      "score": 0.700303757950503
     },
     {
       "post": "css-image-glitch",
@@ -8125,7 +8169,7 @@
     },
     {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.6737133109711255
+      "score": 0.6763917605226911
     },
     {
       "post": "css-blocky-people-making-waves",
@@ -8145,7 +8189,7 @@
     },
     {
       "post": "three-js-extrude-svg-path",
-      "score": 0.6380681018702378
+      "score": 0.6337197534557689
     },
     {
       "post": "css-animations-instead-of-js-timers",
@@ -8200,16 +8244,16 @@
       "score": 0.5730833213029923
     },
     {
+      "post": "css-and-svg-input-animations",
+      "score": 0.5716494957148123
+    },
+    {
       "post": "react-rerender-in-component-did-mount",
       "score": 0.5707993284926571
     },
     {
       "post": "svg-non-scaling-circle-and-rectangle",
       "score": 0.5706157680666125
-    },
-    {
-      "post": "css-and-svg-input-animations",
-      "score": 0.5696623526557353
     },
     {
       "post": "into-2021",
@@ -8220,12 +8264,12 @@
       "score": 0.5640320405295977
     },
     {
-      "post": "javascript-animation-loop",
-      "score": 0.5621401648044605
+      "post": "webpack-babel-react-revisited",
+      "score": 0.5624940627004331
     },
     {
-      "post": "webpack-babel-react-revisited",
-      "score": 0.561701150283376
+      "post": "javascript-animation-loop",
+      "score": 0.5621401648044605
     },
     {
       "post": "into-2022",
@@ -8439,7 +8483,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5036063786620463
+      "score": 0.5035361395586171
     },
     {
       "post": "introducing-marvin",
@@ -8449,7 +8493,7 @@
   "setting-up-webpack-babel-and-react-from-scratch": [
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.9131403317195476
+      "score": 0.9134172552842439
     },
     {
       "post": "setting-up-webpack-babel-and-react-from-scratch-part-2",
@@ -8497,15 +8541,15 @@
     },
     {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.5467706545715031
-    },
-    {
-      "post": "three-js-extrude-svg-path",
-      "score": 0.5432262953618254
+      "score": 0.5442144783996177
     },
     {
       "post": "invaders",
-      "score": 0.540344991859768
+      "score": 0.5381286179446261
+    },
+    {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.5370779627789588
     },
     {
       "post": "react-decorators-and-scroll-manager",
@@ -8521,7 +8565,7 @@
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.5202751721773494
+      "score": 0.5213257599040727
     },
     {
       "post": "css-image-glitch",
@@ -8569,11 +8613,11 @@
     },
     {
       "post": "invaders",
-      "score": 0.7055909022402636
+      "score": 0.7045879825595188
     },
     {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.6781350057464695
+      "score": 0.6793246996604109
     },
     {
       "post": "custom-giraffe-caret",
@@ -8604,12 +8648,12 @@
       "score": 0.6233494318491934
     },
     {
-      "post": "three-js-extrude-svg-path",
-      "score": 0.6163212638762583
+      "post": "native-dual-range-input",
+      "score": 0.6185913827183445
     },
     {
-      "post": "native-dual-range-input",
-      "score": 0.6162417843964654
+      "post": "three-js-extrude-svg-path",
+      "score": 0.6145280430406568
     },
     {
       "post": "fake-audio-spectrum-using-perlin-noise",
@@ -8629,7 +8673,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.581201063201309
+      "score": 0.5824790962081109
     },
     {
       "post": "css-only-counter",
@@ -8713,7 +8757,7 @@
     },
     {
       "post": "css-and-svg-input-animations",
-      "score": 0.5232299448116969
+      "score": 0.5237753436773345
     },
     {
       "post": "looking-forward-to-2017",
@@ -8867,7 +8911,7 @@
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.5045022062153705
+      "score": 0.5030497784095433
     },
     {
       "post": "css-animations-instead-of-js-timers",
@@ -8949,7 +8993,7 @@
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.5555752919253804
+      "score": 0.5553627793212846
     },
     {
       "post": "all-aboard-the-monorail",
@@ -8965,7 +9009,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5357345442574035
+      "score": 0.5349313733465787
     },
     {
       "post": "webpack-2-react-redux",
@@ -9087,7 +9131,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5518610516756368
+      "score": 0.551464923498668
     },
     {
       "post": "catching-the-blur-event-on-an-element-and-its-children",
@@ -9141,235 +9185,239 @@
   "webpack-babel-react-revisited": [
     {
       "post": "setting-up-webpack-babel-and-react-from-scratch",
-      "score": 0.9131403317195476
+      "score": 0.9134172552842439
     },
     {
       "post": "setting-up-webpack-babel-and-react-from-scratch-part-2",
-      "score": 0.7958011238168455
+      "score": 0.7952141610978896
     },
     {
       "post": "setting-up-webpack-babel-and-react-from-scratch-part-3",
-      "score": 0.7737260702427344
+      "score": 0.7730752093381598
     },
     {
       "post": "webpack-2-react-redux",
-      "score": 0.7152740946437351
+      "score": 0.7161322479501673
     },
     {
       "post": "my-blog-setup",
-      "score": 0.7046845264392216
+      "score": 0.7049641602382767
     },
     {
       "post": "introducing-keen-npm-package-boilerplate",
-      "score": 0.6992455263572477
+      "score": 0.6998750044244555
     },
     {
       "post": "marvin-v1",
-      "score": 0.6854651801294738
+      "score": 0.6844337774938678
     },
     {
       "post": "react-router-subfolder-on-server",
-      "score": 0.676056466412261
+      "score": 0.6760960152427776
     },
     {
       "post": "invaders",
-      "score": 0.6612088876655999
+      "score": 0.6603780511302033
     },
     {
       "post": "introducing-marvin",
-      "score": 0.6514409235186593
+      "score": 0.6507953842499511
     },
     {
       "post": "react-rerender-in-component-did-mount",
-      "score": 0.6454341695562249
+      "score": 0.6457977661385427
     },
     {
       "post": "jekyll-gulp-workflow",
-      "score": 0.6286185593266661
+      "score": 0.6284158006468533
     },
     {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.6184810664396966
+      "score": 0.6179441465999919
     },
     {
       "post": "css-image-glitch",
-      "score": 0.6085144783780214
-    },
-    {
-      "post": "three-js-extrude-svg-path",
-      "score": 0.5999353998678472
+      "score": 0.6096623666523585
     },
     {
       "post": "plx-react-parallax-component",
-      "score": 0.5982174683799624
+      "score": 0.5994727689094173
     },
     {
       "post": "all-aboard-the-monorail",
-      "score": 0.5966087649993991
+      "score": 0.5967020082820109
     },
     {
       "post": "into-2020",
-      "score": 0.5936788061989106
+      "score": 0.5944243395394431
     },
     {
       "post": "my-programming-story",
-      "score": 0.5904487629338444
+      "score": 0.5923417268813969
+    },
+    {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.5923255869893684
     },
     {
       "post": "image-comparison-slider",
-      "score": 0.5815241629630423
+      "score": 0.5824871461395328
     },
     {
       "post": "css-blocky-people-making-waves",
-      "score": 0.581201063201309
+      "score": 0.5824790962081109
     },
     {
       "post": "breaking-down-krypton",
-      "score": 0.5794574598591735
+      "score": 0.5812076642099651
     },
     {
       "post": "js-libraries-for-generative-art",
-      "score": 0.5794542064420185
-    },
-    {
-      "post": "deprecating-marvin",
-      "score": 0.5793829734184751
+      "score": 0.5805850910984608
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.5777182190194303
+      "score": 0.5804135912832734
+    },
+    {
+      "post": "deprecating-marvin",
+      "score": 0.5793468515075634
     },
     {
       "post": "looking-forward-to-2017",
-      "score": 0.5745835128725443
+      "score": 0.5752234052798432
     },
     {
       "post": "back-to-the-basics",
-      "score": 0.5689175438394386
+      "score": 0.5700593385467827
     },
     {
       "post": "neon-generative-art-piece-made-using-2d-vector-field",
-      "score": 0.5685442505695395
+      "score": 0.5697117570008753
     },
     {
       "post": "custom-giraffe-caret",
-      "score": 0.561701150283376
+      "score": 0.5624940627004331
     },
     {
       "post": "new-design-and-features",
-      "score": 0.5615855313578594
+      "score": 0.5611876638933951
     },
     {
       "post": "talks-i-like",
-      "score": 0.558609738496208
+      "score": 0.56093098823497
     },
     {
       "post": "react-image-filter-component",
-      "score": 0.5570120520392625
+      "score": 0.5571337358106451
     },
     {
       "post": "css-only-sprite-animations",
-      "score": 0.5524660070086542
+      "score": 0.553150879076534
     },
     {
       "post": "react-decorators-and-scroll-manager",
-      "score": 0.5518610516756368
+      "score": 0.551464923498668
     },
     {
       "post": "metaballs-generative-art",
-      "score": 0.5497290841904252
-    },
-    {
-      "post": "making-2d-platformer-controls",
-      "score": 0.5480760964020363
+      "score": 0.5514169533207222
     },
     {
       "post": "into-2022",
-      "score": 0.5473159174117479
+      "score": 0.5482109226255492
+    },
+    {
+      "post": "making-2d-platformer-controls",
+      "score": 0.5479478889028349
     },
     {
       "post": "the-tiny-book-of-great-joys",
-      "score": 0.5456435624386038
-    },
-    {
-      "post": "travis-jekyll-and-github-pages",
-      "score": 0.5388149229775591
-    },
-    {
-      "post": "css-animations-instead-of-js-timers",
-      "score": 0.5381301097938633
-    },
-    {
-      "post": "blog-question-challenge",
-      "score": 0.5371917387303301
+      "score": 0.5474355971507713
     },
     {
       "post": "sneak-peek-of-rayven",
-      "score": 0.536903172746083
+      "score": 0.5395711206704201
+    },
+    {
+      "post": "travis-jekyll-and-github-pages",
+      "score": 0.5386270305033282
+    },
+    {
+      "post": "css-animations-instead-of-js-timers",
+      "score": 0.5384729019003719
+    },
+    {
+      "post": "blog-question-challenge",
+      "score": 0.537856748979823
     },
     {
       "post": "react-animate-height-slide-up-down",
-      "score": 0.5357345442574035
+      "score": 0.5349313733465787
     },
     {
       "post": "scrubbing-videos-using-javascript",
-      "score": 0.5345156250742511
+      "score": 0.5348062149415008
     },
     {
       "post": "simple-react-slider",
-      "score": 0.5338719850923753
+      "score": 0.5335963419659845
     },
     {
       "post": "into-2021",
-      "score": 0.5312049250672913
+      "score": 0.5318411192152138
     },
     {
       "post": "weekly-code-challenge-spring-2021",
-      "score": 0.527809786665695
-    },
-    {
-      "post": "node-script-to-run-multiple-commands-in-parallel",
-      "score": 0.5266219391908274
+      "score": 0.5289293379181707
     },
     {
       "post": "small-mac-apps-i-love",
-      "score": 0.5260013659613082
+      "score": 0.5279988962079538
     },
     {
-      "post": "react-simple-video-buffering-loader",
-      "score": 0.5203741856737504
+      "post": "node-script-to-run-multiple-commands-in-parallel",
+      "score": 0.5262876077346932
     },
     {
       "post": "trying-atom-for-the-third-time",
-      "score": 0.5200678028198829
+      "score": 0.5218949353077796
     },
     {
       "post": "open-source-mac-apps-i-love",
-      "score": 0.5198862444271533
+      "score": 0.5216910963598598
+    },
+    {
+      "post": "react-simple-video-buffering-loader",
+      "score": 0.5207907557150472
     },
     {
       "post": "javascript-animation-loop",
-      "score": 0.5197878347278679
-    },
-    {
-      "post": "accessible-range-slider",
-      "score": 0.511090900472703
+      "score": 0.5195115878245615
     },
     {
       "post": "it-girls-react-series",
-      "score": 0.5110372356226283
+      "score": 0.5116536711120683
+    },
+    {
+      "post": "accessible-range-slider",
+      "score": 0.5103681037429713
     },
     {
       "post": "animate-between-two-react-components",
-      "score": 0.5046712367876559
+      "score": 0.5045973628409967
     },
     {
       "post": "react-ratio-component",
-      "score": 0.5039932271748577
+      "score": 0.5040877480762229
     },
     {
       "post": "react-scroll-position-decorator",
-      "score": 0.5036063786620463
+      "score": 0.5035361395586171
+    },
+    {
+      "post": "fake-audio-spectrum-using-perlin-noise",
+      "score": 0.5001254478327695
     }
   ],
   "axidraw-lego-camera-mount": [
@@ -9545,7 +9593,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5200678028198829
+      "score": 0.5218949353077796
     },
     {
       "post": "setting-up-webpack-babel-and-react-from-scratch-part-3",
@@ -9586,16 +9634,16 @@
   ],
   "get-lines-of-text-from-html-element": [
     {
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.5277729433321026
+    },
+    {
       "post": "custom-giraffe-caret",
       "score": 0.5267073655884745
     },
     {
       "post": "css-image-glitch",
       "score": 0.5266482569813674
-    },
-    {
-      "post": "draw-svg-rope-using-javascript",
-      "score": 0.5256613881992538
     },
     {
       "post": "image-comparison-slider",
@@ -9654,20 +9702,20 @@
       "score": 0.6311941237478275
     },
     {
-      "post": "native-dual-range-input",
-      "score": 0.6147136059537094
-    },
-    {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.6144480036895439
+      "score": 0.6151019713344278
     },
     {
-      "post": "invaders",
-      "score": 0.5975804290534761
+      "post": "native-dual-range-input",
+      "score": 0.614294927705252
     },
     {
       "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
       "score": 0.5948050399192694
+    },
+    {
+      "post": "invaders",
+      "score": 0.5946686945750135
     },
     {
       "post": "scrubbing-videos-using-javascript",
@@ -9687,7 +9735,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5381301097938633
+      "score": 0.5384729019003719
     },
     {
       "post": "svg-non-scaling-circle-and-rectangle",
@@ -9703,7 +9751,7 @@
     },
     {
       "post": "three-js-extrude-svg-path",
-      "score": 0.5313988151376541
+      "score": 0.5289220252753986
     },
     {
       "post": "pwa-ios-status-bar-blur",
@@ -9742,16 +9790,16 @@
       "score": 0.5091118865567075
     },
     {
+      "post": "css-and-svg-input-animations",
+      "score": 0.5065835856221599
+    },
+    {
       "post": "javascript-keyboard-easter-egg",
       "score": 0.5062347551181918
     },
     {
       "post": "setting-up-webpack-babel-and-react-from-scratch-part-2",
       "score": 0.5036761080441872
-    },
-    {
-      "post": "css-and-svg-input-animations",
-      "score": 0.5033262924720201
     },
     {
       "post": "hiding-body-scrollbars-using-css",
@@ -9788,10 +9836,6 @@
       "score": 0.6001687480522807
     },
     {
-      "post": "draw-svg-rope-using-javascript",
-      "score": 0.5981977857808275
-    },
-    {
       "post": "react-animate-height-slide-up-down",
       "score": 0.5955762912180957
     },
@@ -9800,16 +9844,16 @@
       "score": 0.5948050399192694
     },
     {
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.5923016349209975
+    },
+    {
       "post": "css-only-sprite-animations",
       "score": 0.5900864401176453
     },
     {
       "post": "react-ratio-component",
       "score": 0.5881148328084148
-    },
-    {
-      "post": "three-js-extrude-svg-path",
-      "score": 0.585383348297143
     },
     {
       "post": "js-libraries-for-generative-art",
@@ -9828,12 +9872,16 @@
       "score": 0.5758292124840657
     },
     {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.5750990482226134
+    },
+    {
       "post": "animate-window-scroll-to",
       "score": 0.5739852682083304
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.5700445871082801
+      "score": 0.5706260214298444
     },
     {
       "post": "vertigo-svg-shaders",
@@ -9853,7 +9901,7 @@
     },
     {
       "post": "invaders",
-      "score": 0.5563264085606411
+      "score": 0.5520517705789801
     },
     {
       "post": "preserving-text-size-when-scaling-svgs",
@@ -9935,7 +9983,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.676056466412261
+      "score": 0.6760960152427776
     },
     {
       "post": "setting-up-webpack-babel-and-react-from-scratch-part-2",
@@ -9977,151 +10025,155 @@
   "three-js-extrude-svg-path": [
     {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.7459471346748331
+      "score": 0.7451634658381909
     },
     {
       "post": "invaders",
-      "score": 0.7031818326010791
+      "score": 0.695533941695849
     },
     {
       "post": "metaballs-generative-art",
-      "score": 0.6881155549637642
-    },
-    {
-      "post": "all-aboard-the-monorail",
-      "score": 0.6501888627273055
+      "score": 0.6837112248659084
     },
     {
       "post": "neon-generative-art-piece-made-using-2d-vector-field",
-      "score": 0.6485951547711677
+      "score": 0.6491658268415466
+    },
+    {
+      "post": "all-aboard-the-monorail",
+      "score": 0.6444317755395966
     },
     {
       "post": "custom-giraffe-caret",
-      "score": 0.6380681018702378
+      "score": 0.6337197534557689
     },
     {
       "post": "js-libraries-for-generative-art",
-      "score": 0.6368609354150991
+      "score": 0.6294914967300816
     },
     {
       "post": "sneak-peek-of-rayven",
-      "score": 0.6329666570496774
+      "score": 0.6278658494826733
     },
     {
       "post": "breaking-down-krypton",
-      "score": 0.6292715919776994
+      "score": 0.62399103145094
     },
     {
       "post": "css-blocky-people-making-waves",
-      "score": 0.6163212638762583
+      "score": 0.6145280430406568
     },
     {
       "post": "css-image-glitch",
-      "score": 0.6157047415597181
+      "score": 0.610374092917592
     },
     {
       "post": "image-comparison-slider",
-      "score": 0.6139103173539148
-    },
-    {
-      "post": "javascript-animation-loop",
-      "score": 0.6013545910481546
+      "score": 0.6054779145847308
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5999353998678472
+      "score": 0.5923255869893684
     },
     {
-      "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
-      "score": 0.585383348297143
-    },
-    {
-      "post": "native-dual-range-input",
-      "score": 0.5843093690625967
+      "post": "javascript-animation-loop",
+      "score": 0.5918135955685978
     },
     {
       "post": "svg-non-scaling-circle-and-rectangle",
-      "score": 0.5818079489772059
+      "score": 0.5856304349931256
+    },
+    {
+      "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
+      "score": 0.5750990482226134
+    },
+    {
+      "post": "native-dual-range-input",
+      "score": 0.5742778243056659
     },
     {
       "post": "3d-rotating-cube-effect",
-      "score": 0.5807221618256058
+      "score": 0.5736516715609181
     },
     {
       "post": "preserving-text-size-when-scaling-svgs",
-      "score": 0.5770652823028487
+      "score": 0.5698002619128182
     },
     {
       "post": "vertigo-svg-shaders",
-      "score": 0.5705502795912599
+      "score": 0.5659267559702872
     },
     {
       "post": "react-rerender-in-component-did-mount",
-      "score": 0.5588670086624865
+      "score": 0.5562586995581543
     },
     {
       "post": "fake-audio-spectrum-using-perlin-noise",
-      "score": 0.5585872641506199
+      "score": 0.5549313739350371
     },
     {
       "post": "the-tiny-book-of-great-joys",
-      "score": 0.5553156646493944
+      "score": 0.5548083322848578
     },
     {
       "post": "bunny-jumps-again",
-      "score": 0.548695727797645
+      "score": 0.5452897815002263
     },
     {
       "post": "css-only-sprite-animations",
-      "score": 0.548153289141323
+      "score": 0.5438181672602891
     },
     {
       "post": "setting-up-webpack-babel-and-react-from-scratch",
-      "score": 0.5432262953618254
+      "score": 0.5370779627789588
     },
     {
       "post": "react-image-filter-component",
-      "score": 0.5416418593998374
+      "score": 0.5363439220139178
     },
     {
       "post": "weekly-code-challenge-spring-2021",
-      "score": 0.5400643302003081
+      "score": 0.5352747397750425
     },
     {
       "post": "scrubbing-videos-using-javascript",
-      "score": 0.5367002812490651
-    },
-    {
-      "post": "visualizing-a-vector-field",
-      "score": 0.5333582000887241
-    },
-    {
-      "post": "plx-react-parallax-component",
-      "score": 0.5321849833808098
+      "score": 0.5294778661082302
     },
     {
       "post": "css-animations-instead-of-js-timers",
-      "score": 0.5313988151376541
+      "score": 0.5289220252753986
+    },
+    {
+      "post": "visualizing-a-vector-field",
+      "score": 0.5282168960139124
     },
     {
       "post": "making-2d-platformer-controls",
-      "score": 0.5278116017108614
+      "score": 0.5265583092438275
     },
     {
       "post": "into-2021",
-      "score": 0.5262692286723425
+      "score": 0.5261515971142506
+    },
+    {
+      "post": "plx-react-parallax-component",
+      "score": 0.5248662505227946
     },
     {
       "post": "javascript-keyboard-easter-egg",
-      "score": 0.523286605027523
+      "score": 0.5170618535096129
     },
     {
       "post": "my-programming-story",
-      "score": 0.5085069489896048
+      "score": 0.5035556015569661
+    },
+    {
+      "post": "my-blog-setup",
+      "score": 0.503300463641989
     },
     {
       "post": "setting-up-webpack-babel-and-react-from-scratch-part-2",
-      "score": 0.5044646180083695
+      "score": 0.50070052886213
     }
   ],
   "animate-window-scroll-to": [
@@ -10236,6 +10288,10 @@
     {
       "post": "all-aboard-the-monorail",
       "score": 0.5012187060194446
+    },
+    {
+      "post": "native-dual-range-input",
+      "score": 0.5001220590102938
     }
   ],
   "html-inert-property": [
@@ -10257,7 +10313,7 @@
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.5493827393339763
+      "score": 0.5487585447445033
     },
     {
       "post": "has-tabbed-aka-should-i-release-small-libraries",
@@ -10350,16 +10406,16 @@
       "score": 0.5918425460700858
     },
     {
-      "post": "three-js-extrude-svg-path",
-      "score": 0.5807221618256058
-    },
-    {
       "post": "css-image-glitch",
       "score": 0.5780182739624139
     },
     {
       "post": "javascript-animation-loop",
       "score": 0.5762427140222628
+    },
+    {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.5736516715609181
     },
     {
       "post": "animated-login-signup-forms",
@@ -10426,12 +10482,12 @@
       "score": 0.5189729590941456
     },
     {
-      "post": "css-and-svg-input-animations",
-      "score": 0.5170494722848712
-    },
-    {
       "post": "ios-safari-scroll-position-fixed",
       "score": 0.5166774394492555
+    },
+    {
+      "post": "css-and-svg-input-animations",
+      "score": 0.5143120698263983
     },
     {
       "post": "vertigo-svg-shaders",
@@ -10442,20 +10498,16 @@
       "score": 0.5069079984144477
     },
     {
-      "post": "draw-svg-rope-using-javascript",
-      "score": 0.5065102565748713
-    },
-    {
       "post": "mobile-chrome-vh-units-fix",
       "score": 0.505957465236019
     },
     {
-      "post": "scrubbing-videos-using-javascript",
-      "score": 0.5028158956435937
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.5049011525974735
     },
     {
-      "post": "invaders",
-      "score": 0.500574969216253
+      "post": "scrubbing-videos-using-javascript",
+      "score": 0.5028158956435937
     }
   ],
   "fix-lumpy-joy-con-using-hair-dryer": [
@@ -10518,12 +10570,12 @@
       "score": 0.5788746092940346
     },
     {
-      "post": "ios-safari-get-bounding-client-rect-bug",
-      "score": 0.5747391913191315
+      "post": "native-dual-range-input",
+      "score": 0.5749822265642187
     },
     {
-      "post": "native-dual-range-input",
-      "score": 0.5744125227660482
+      "post": "ios-safari-get-bounding-client-rect-bug",
+      "score": 0.5747391913191315
     },
     {
       "post": "ie6-hacks-ten-years-after",
@@ -10595,7 +10647,7 @@
     },
     {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.5227387238001554
+      "score": 0.523640302899192
     },
     {
       "post": "html-inert-property",
@@ -10606,12 +10658,12 @@
       "score": 0.5185805361918485
     },
     {
-      "post": "invaders",
-      "score": 0.5067670080934465
-    },
-    {
       "post": "css-fix-to-prevent-orphan-icons",
       "score": 0.5060379965872028
+    },
+    {
+      "post": "invaders",
+      "score": 0.5053068697637477
     },
     {
       "post": "vertigo-svg-shaders",
@@ -10692,12 +10744,12 @@
       "score": 0.5298462708177447
     },
     {
-      "post": "native-dual-range-input",
-      "score": 0.5241443401415913
-    },
-    {
       "post": "hack-for-ios-safari-to-display-html-video-thumbnail",
       "score": 0.523822166452631
+    },
+    {
+      "post": "native-dual-range-input",
+      "score": 0.5236319952208066
     },
     {
       "post": "css-fix-to-prevent-orphan-icons",
@@ -10861,7 +10913,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.7958011238168455
+      "score": 0.7952141610978896
     },
     {
       "post": "setting-up-webpack-babel-and-react-from-scratch-part-3",
@@ -10916,12 +10968,12 @@
       "score": 0.5137645794669949
     },
     {
-      "post": "three-js-extrude-svg-path",
-      "score": 0.5044646180083695
-    },
-    {
       "post": "css-animations-instead-of-js-timers",
       "score": 0.5036761080441872
+    },
+    {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.50070052886213
     },
     {
       "post": "react-router-v4-redirect-decorator",
@@ -10947,7 +10999,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.7152740946437351
+      "score": 0.7161322479501673
     },
     {
       "post": "setting-up-webpack-babel-and-react-from-scratch-part-2",
@@ -11065,7 +11117,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5110372356226283
+      "score": 0.5116536711120683
     }
   ],
   "nvm-updating-npm": [
@@ -11113,7 +11165,7 @@
     },
     {
       "post": "invaders",
-      "score": 0.6404370693494241
+      "score": 0.6420557477257549
     },
     {
       "post": "the-tiny-book-of-great-joys",
@@ -11153,7 +11205,7 @@
     },
     {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.5452828578479388
+      "score": 0.5460632296008686
     },
     {
       "post": "axidraw-plotter-camera-mount",
@@ -11169,7 +11221,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5312049250672913
+      "score": 0.5318411192152138
     },
     {
       "post": "open-source-mac-apps-i-love",
@@ -11177,7 +11229,7 @@
     },
     {
       "post": "three-js-extrude-svg-path",
-      "score": 0.5262692286723425
+      "score": 0.5261515971142506
     },
     {
       "post": "letters-from-sarajevo",
@@ -11189,7 +11241,7 @@
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.5167705801185799
+      "score": 0.5194017378610338
     },
     {
       "post": "vertigo-svg-shaders",
@@ -11275,11 +11327,11 @@
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.5606153058064195
+      "score": 0.56220362065324
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5570120520392625
+      "score": 0.5571337358106451
     },
     {
       "post": "animated-login-signup-forms",
@@ -11319,19 +11371,11 @@
     },
     {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.5459861217616296
-    },
-    {
-      "post": "three-js-extrude-svg-path",
-      "score": 0.5416418593998374
+      "score": 0.5445206328670491
     },
     {
       "post": "html-inert-property",
       "score": 0.537777360357146
-    },
-    {
-      "post": "invaders",
-      "score": 0.5375714070680491
     },
     {
       "post": "catching-the-blur-event-on-an-element-and-its-children",
@@ -11342,8 +11386,16 @@
       "score": 0.5363955393045952
     },
     {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.5363439220139178
+    },
+    {
       "post": "vertigo-svg-shaders",
       "score": 0.5361609676083628
+    },
+    {
+      "post": "invaders",
+      "score": 0.5342700356431688
     },
     {
       "post": "neon-generative-art-piece-made-using-2d-vector-field",
@@ -11382,16 +11434,16 @@
       "score": 0.5169555081577277
     },
     {
-      "post": "css-and-svg-input-animations",
-      "score": 0.5126896713976011
-    },
-    {
       "post": "react-scroll-position-decorator",
       "score": 0.5125285114697499
     },
     {
       "post": "html-canvas-video-player-ios",
       "score": 0.5104977600444958
+    },
+    {
+      "post": "css-and-svg-input-animations",
+      "score": 0.5091769865885177
     },
     {
       "post": "setting-up-webpack-babel-and-react-from-scratch",
@@ -11449,11 +11501,11 @@
     },
     {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.5854066534144344
+      "score": 0.5863789756343951
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.58191467358136
+      "score": 0.5826028389098539
     },
     {
       "post": "making-2d-platformer-controls",
@@ -11469,7 +11521,7 @@
     },
     {
       "post": "invaders",
-      "score": 0.570226147655541
+      "score": 0.5678163650275484
     },
     {
       "post": "fake-audio-spectrum-using-perlin-noise",
@@ -11516,20 +11568,20 @@
       "score": 0.5376349944004521
     },
     {
-      "post": "three-js-extrude-svg-path",
-      "score": 0.5367002812490651
-    },
-    {
       "post": "sneak-peek-of-rayven",
       "score": 0.536432087822681
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5345156250742511
+      "score": 0.5348062149415008
     },
     {
       "post": "js-libraries-for-generative-art",
       "score": 0.5312205687199733
+    },
+    {
+      "post": "three-js-extrude-svg-path",
+      "score": 0.5294778661082302
     },
     {
       "post": "hiding-body-scrollbars-using-css",
@@ -11627,7 +11679,7 @@
     },
     {
       "post": "invaders",
-      "score": 0.6055003901660997
+      "score": 0.6071816842859316
     },
     {
       "post": "breaking-down-krypton",
@@ -11635,7 +11687,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5936788061989106
+      "score": 0.5944243395394431
     },
     {
       "post": "metaballs-generative-art",
@@ -11711,7 +11763,7 @@
     },
     {
       "post": "draw-svg-rope-using-javascript",
-      "score": 0.5171705638706235
+      "score": 0.5185641087592644
     },
     {
       "post": "deprecating-marvin",
@@ -11719,7 +11771,7 @@
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.5057886377928802
+      "score": 0.5091534511774195
     }
   ],
   "design-articles": [
@@ -11741,7 +11793,7 @@
     },
     {
       "post": "css-and-svg-input-animations",
-      "score": 0.5155038876134153
+      "score": 0.5159817998551409
     },
     {
       "post": "breaking-down-krypton",
@@ -11763,7 +11815,7 @@
   "setting-up-webpack-babel-and-react-from-scratch-part-3": [
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.7737260702427344
+      "score": 0.7730752093381598
     },
     {
       "post": "setting-up-webpack-babel-and-react-from-scratch",
@@ -11891,7 +11943,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.6514409235186593
+      "score": 0.6507953842499511
     },
     {
       "post": "setting-up-webpack-babel-and-react-from-scratch-part-3",
@@ -12016,12 +12068,12 @@
       "score": 0.522591352807337
     },
     {
-      "post": "html-inert-property",
-      "score": 0.5203987338593467
+      "post": "webpack-babel-react-revisited",
+      "score": 0.5207907557150472
     },
     {
-      "post": "webpack-babel-react-revisited",
-      "score": 0.5203741856737504
+      "post": "html-inert-property",
+      "score": 0.5203987338593467
     },
     {
       "post": "react-decorators-and-scroll-manager",
@@ -12112,12 +12164,12 @@
       "score": 0.5238231362577123
     },
     {
-      "post": "highlight-vars-in-atom-babel-javascript",
-      "score": 0.5211522081986821
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.5217354423767215
     },
     {
-      "post": "draw-svg-rope-using-javascript",
-      "score": 0.5204128857550714
+      "post": "highlight-vars-in-atom-babel-javascript",
+      "score": 0.5211522081986821
     },
     {
       "post": "three-web-development-bookmarklets",
@@ -12162,16 +12214,12 @@
     {
       "post": "preserving-text-size-when-scaling-svgs",
       "score": 0.5015844467816643
-    },
-    {
-      "post": "invaders",
-      "score": 0.5007321868873801
     }
   ],
   "elastic-hover-effect": [
     {
       "post": "css-and-svg-input-animations",
-      "score": 0.655074102422802
+      "score": 0.6622638853269646
     },
     {
       "post": "animated-login-signup-forms",
@@ -12284,6 +12332,10 @@
     {
       "post": "custom-giraffe-caret",
       "score": 0.5079887648833067
+    },
+    {
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.5009339738335253
     }
   ],
   "react-ratio-component": [
@@ -12345,7 +12397,7 @@
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.5227899235916528
+      "score": 0.5226072282532166
     },
     {
       "post": "react-simple-video-buffering-loader",
@@ -12357,7 +12409,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5039932271748577
+      "score": 0.5040877480762229
     }
   ],
   "javascript-get-element-offset": [
@@ -12449,7 +12501,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.5793829734184751
+      "score": 0.5793468515075634
     },
     {
       "post": "webpack-2-react-redux",
@@ -12537,7 +12589,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.6454341695562249
+      "score": 0.6457977661385427
     },
     {
       "post": "all-aboard-the-monorail",
@@ -12568,12 +12620,12 @@
       "score": 0.5872809034023091
     },
     {
-      "post": "catching-the-blur-event-on-an-element-and-its-children",
-      "score": 0.5857503826620758
+      "post": "draw-svg-rope-using-javascript",
+      "score": 0.5864768919281248
     },
     {
-      "post": "draw-svg-rope-using-javascript",
-      "score": 0.5847805939504928
+      "post": "catching-the-blur-event-on-an-element-and-its-children",
+      "score": 0.5857503826620758
     },
     {
       "post": "plx-react-parallax-component",
@@ -12584,12 +12636,12 @@
       "score": 0.5805421869390573
     },
     {
-      "post": "invaders",
-      "score": 0.5770446262928584
-    },
-    {
       "post": "image-comparison-slider",
       "score": 0.5753088268926951
+    },
+    {
+      "post": "invaders",
+      "score": 0.5744465072587461
     },
     {
       "post": "react-scroll-position-decorator",
@@ -12605,7 +12657,7 @@
     },
     {
       "post": "three-js-extrude-svg-path",
-      "score": 0.5588670086624865
+      "score": 0.5562586995581543
     },
     {
       "post": "react-image-filter-component",
@@ -12621,7 +12673,7 @@
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.5429313796171795
+      "score": 0.5428402686712378
     },
     {
       "post": "html-inert-property",
@@ -12695,7 +12747,7 @@
     },
     {
       "post": "three-js-extrude-svg-path",
-      "score": 0.548695727797645
+      "score": 0.5452897815002263
     },
     {
       "post": "custom-giraffe-caret",
@@ -12707,7 +12759,7 @@
     },
     {
       "post": "invaders",
-      "score": 0.5365724662910574
+      "score": 0.5342016265998373
     },
     {
       "post": "into-2022",
@@ -12741,7 +12793,7 @@
     },
     {
       "post": "native-dual-range-input",
-      "score": 0.7325271288213844
+      "score": 0.7321347375152247
     },
     {
       "post": "image-comparison-slider",
@@ -12853,7 +12905,7 @@
     },
     {
       "post": "webpack-babel-react-revisited",
-      "score": 0.511090900472703
+      "score": 0.5103681037429713
     },
     {
       "post": "fake-audio-spectrum-using-perlin-noise",
@@ -12869,7 +12921,21 @@
     },
     {
       "post": "css-and-svg-input-animations",
-      "score": 0.5020335806066107
+      "score": 0.5013709167588536
+    }
+  ],
+  "web-workers-promises": [
+    {
+      "post": "simple-javascript-api-wrapper",
+      "score": 0.5590190793915758
+    },
+    {
+      "post": "node-script-to-run-multiple-commands-in-parallel",
+      "score": 0.5537606905028288
+    },
+    {
+      "post": "javascript-animation-loop",
+      "score": 0.5027159890978147
     }
   ]
 }

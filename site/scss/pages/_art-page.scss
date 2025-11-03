@@ -66,17 +66,17 @@
 }
 
 .art-gallery__items {
-  scrollbar-color: var(--neutral-200) transparent;
   overflow: auto;
   padding-inline: 1.25rem;
   padding-top: 1.25rem;
+  padding-bottom: 0.5rem;
   margin: 0 auto;
   width: 100%;
   display: flex;
   gap: 1.25rem;
 
   @include breakpoints.md {
-    padding-inline: max(6%, calc(50% - 20rem));
+    padding-inline: max(6%, calc(50% - 24rem));
   }
 
   img,

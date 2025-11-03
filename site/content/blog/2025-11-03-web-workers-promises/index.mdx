@@ -1,0 +1,104 @@
++++
+title = "<span>Promise based</span> Web Worker Messaging"
+
+category = ["JavaScript"]
+tags = ["js", "workers", "promises"]
+
+intro = "A simple way to make Workers feel more synchronous using Promises."
++++
+
+If you've ever used Web Workers (or any other event-based communication), you probably noticed that this kind of code can be hard to read and reason about. You also have to implement some kind of identifier for each message to recognize which worker response corresponds to which request.
+
+To simplify that, we can write a small wrapper that lets us use Promises to communicate with Workers. I'll show you an example for Web Workers, but the same pattern can be applied to Service Workers as well.
+
+The resulting API looks like this:
+
+```js
+const workerResponse = await sendToWorker(data);
+```
+
+I first used this approach in [Pulsar](https://muffinman.io/pulsar/), because I wanted to parse and execute the user's code in a Web Worker, but also wait for the worker to finish before providing data for the next frame.
+
+## Implementation
+
+The idea is fairly simple - before sending a message to the worker, we create a unique id and a promise. We store the promise in a map using the id as the key. Then we send an event to the worker, including both the data and the id, and return the promise to the caller.
+
+When the worker finishes its calculation, it sends back a message that includes the result and the same id. In the main thread, we listen for these messages. When one arrives, we use the id to find the corresponding promise in our map.
+
+Finally, based on the worker's result, we resolve or reject that promise.
+
+It might sound like a lot, but the code is actually quite straightforward:
+
+<Code title="send-to-worker.js">
+
+```js
+// Worker initialization
+const worker = new Worker("./path-to-your-worker.js");
+
+// Map of promises
+const promises = {};
+
+worker.addEventListener("message", (e) => {
+  // Listen to worker messages and find the correct promise matching the id
+  // Then resolve or reject it depending on the response
+  if (e.data.error) {
+    promises[e.data.id].reject(e.data.error);
+  } else {
+    promises[e.data.id].resolve(e.data.data);
+  }
+
+  // Remove the resolver reference
+  delete promises[e.data.id];
+});
+
+// For identifiers it is safe to use a simple integer
+// which we increment every time user sends a new message
+let id = 0;
+
+// The main method which returns a promise
+const sendToWorker = (data) => {
+  // Return a promise
+  return new Promise((resolve, reject) => {
+    // Add resolver to the map
+    promises[id] = {
+      resolve,
+      reject
+    };
+
+    // And post user data along with the generated id
+    worker.postMessage({
+      id,
+      data
+    });
+
+    // Increase the id
+    id++;
+  });
+};
+```
+</Code>
+
+As mentioned above, the worker code needs to send a message that includes not only the computation result but also the id it received from the main thread:
+
+<Code title="worker.js">
+
+```js
+self.addEventListener("message", (e) => {
+  // Do your computations here
+
+  // Send the result back along with id
+  self.postMessage({
+    id: e.data.id,
+    data: `Hello ${e.data.data}`,
+  })
+});
+```
+</Code>
+
+## Why?
+
+I think that this pattern makes it easier to write more readable code using async/await and straightforward error handling. It also handles id generation, so we don't have to manually track which worker message corresponds to which main thread message.
+
+---
+
+Hope you find it useful! The code and a basic demo are available on [CodePen](https://codepen.io/stanko/pen/PwZXajq?editors=0100).

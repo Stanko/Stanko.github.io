@@ -21,7 +21,6 @@ html:has(dialog[open]) {
 
 html {
   font-size: 16px;
-  scrollbar-color: var(--neutral-400) var(--neutral-50);
   font-variation-settings: normal;
 
   @include breakpoints.xxl {
@@ -49,9 +48,26 @@ body {
   }
 }
 
-body * {
-  scrollbar-color: var(--neutral-300) transparent;
-  scrollbar-width: thin;
+@supports (scrollbar-color: var(--neutral-300) transparent) {
+  body * {
+    scrollbar-color: var(--neutral-300) transparent;
+    scrollbar-width: thin;
+  }
+}
+
+@supports not (scrollbar-color: var(--neutral-300) transparent) {
+  body *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background: transparent;
+  }
+
+  body *::-webkit-scrollbar-thumb {
+    background: var(--neutral-300);
+    border-radius: 100px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+  }
 }
 
 // *::selection {
