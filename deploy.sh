@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 
 git fetch origin gh-pages:gh-pages
 git checkout gh-pages
