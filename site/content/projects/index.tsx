@@ -339,7 +339,7 @@ export const projects: {
       },
       {
         description:
-          'Another game built on top of the FTF idea. Combination of shoot-em-up and deck building. Made with Kaplay.',
+          'Another game that broadens the concept I started in FTF. Combination of shoot-em-up and deck building. Made with Kaplay.',
         image: './sdx.png',
         link: 'https://muffinman-io.itch.io/spacedeck-x',
         name: 'SpaceDeck X',
