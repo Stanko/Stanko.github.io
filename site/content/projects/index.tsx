@@ -1,5 +1,6 @@
 import { dirs } from '@brz';
 import Img from '@brz/components/img';
+import InlineMarkdown from '@brz/components/inline-markdown';
 import ArrowTitle from '@site/components/arrow-title';
 import Header from '@site/components/header';
 import Vertigo from '@site/components/vertigo';
@@ -331,14 +332,21 @@ export const projects: {
       },
       {
         description:
-          'Very personal project - a web adaptation of the book *Letters From Sarajevo*. Our father was stuck in Sarajevo during the war and still sent us funny, positive letters filled with drawings.',
+          'Very personal project - a web adaptation of the book **Letters From Sarajevo**. Our father was stuck in Sarajevo during the war and still sent us funny, positive letters filled with drawings.',
         image: './letters.png',
         link: 'https://lettersfromsarajevo.com/',
         name: 'Letters from Sarajevo',
       },
       {
         description:
-          'My first game. A simple shoot-em-up prototype with a twist at the end.',
+          'Another game built on top of the FTF idea. Combination of shoot-em-up and deck building. Made with Kaplay.',
+        image: './sdx.png',
+        link: 'https://muffinman-io.itch.io/spacedeck-x',
+        name: 'SpaceDeck X',
+      },
+      {
+        description:
+          'My first game. A simple shoot-em-up prototype with a twist at the end. Made in Pico-8.',
         image: './ftf.png',
         link: 'https://muffinman-io.itch.io/ftf',
         name: 'FTF',
@@ -409,7 +417,7 @@ const Projects = () => {
                           {project.name}
                         </ArrowTitle>
                         <p className="text-sm text-light">
-                          {project.description}
+                          <InlineMarkdown content={project.description} />
                         </p>
                       </div>
                     </a>

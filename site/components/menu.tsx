@@ -60,7 +60,6 @@ const Menu = ({ children, className = '', ...props }: MenuProps) => {
               type="search"
               className="menu__search-input"
               placeholder="Search"
-              autoFocus
             />
           </div>
         </div>
