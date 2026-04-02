@@ -101,3 +101,20 @@
     flex-shrink: 0;
   }
 }
+
+.art-gallery--wide {
+  @include breakpoints.lg {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'center' 'items';
+
+    .art-gallery__items {
+      flex-direction: row;
+
+      img,
+      video {
+        height: 10rem;
+        width: auto;
+      }
+    }
+  }
+}

@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import { brz } from '@brz';
 import { GalleryItem } from '@brz/components/gallery';
 import { copyAssetToDist } from '@brz/utils/copy-asset-to-dist';
@@ -35,6 +36,7 @@ type ArtPageTemplateProps = {
     paper: string;
     pens: string;
     tall?: boolean;
+    wide?: boolean;
   };
 };
 
@@ -86,6 +88,7 @@ const ArtPageTemplate = async ({
     size,
     paper,
     pens,
+    wide,
   },
 }: ArtPageTemplateProps) => {
   const assets = await getFilesFromPath(dirPath, outputDir);
@@ -157,7 +160,11 @@ const ArtPageTemplate = async ({
           {info}
         </div>
 
-        <div className="art-gallery photoswipe-gallery">
+        <div
+          className={clsx('art-gallery', 'photoswipe-gallery', {
+            'art-gallery--wide': wide,
+          })}
+        >
           <div className="art-gallery__cover">
             <GalleryItem
               src={cover.path}

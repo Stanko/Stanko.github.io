@@ -31,10 +31,10 @@ const Art = async () => {
       dirPath={join(dirs.CONTENT, 'art')}
       pathname="/art/"
       description="I use code and algorithms to make drawings, and a robot to draw them."
-      title="Algorithmic Art"
+      title="Procedural Art"
       theme="red"
     >
-      <Header title="<span>Algorithmic</span> Art">
+      <Header title="<span>Procedural</span> Art">
         I use code and algorithms to make drawings, and a robot to draw them.
       </Header>
 
