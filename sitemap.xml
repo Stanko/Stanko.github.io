@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+  <loc>https://muffinman.io/art/birds/</loc>
+  <lastmod>2025-11-15</lastmod>
+
+</url>
+  <url>
   <loc>https://muffinman.io/blog/web-workers-promises/</loc>
   <lastmod>2025-11-03</lastmod>
 
@@ -261,12 +266,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/art/pokeball/</loc>
+  <loc>https://muffinman.io/art/armadillo/</loc>
   <lastmod>2021-03-14</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/art/armadillo/</loc>
+  <loc>https://muffinman.io/art/pokeball/</loc>
   <lastmod>2021-03-14</lastmod>
 
 </url>
@@ -376,12 +381,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/art/galaxy-black/</loc>
+  <loc>https://muffinman.io/art/galaxy-white/</loc>
   <lastmod>2020-05-02</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/art/galaxy-white/</loc>
+  <loc>https://muffinman.io/art/galaxy-black/</loc>
   <lastmod>2020-05-02</lastmod>
 
 </url>
@@ -556,12 +561,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/uploading-files-using-fetch-multipart-form-data/</loc>
+  <loc>https://muffinman.io/blog/elastic-hover-effect/</loc>
   <lastmod>2018-03-19</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/elastic-hover-effect/</loc>
+  <loc>https://muffinman.io/blog/uploading-files-using-fetch-multipart-form-data/</loc>
   <lastmod>2018-03-19</lastmod>
 
 </url>
@@ -601,12 +606,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/consume-less-create-more/</loc>
+  <loc>https://muffinman.io/blog/my-programming-story/</loc>
   <lastmod>2018-01-01</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/my-programming-story/</loc>
+  <loc>https://muffinman.io/blog/consume-less-create-more/</loc>
   <lastmod>2018-01-01</lastmod>
 
 </url>
@@ -656,22 +661,22 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/trillion-ideas/</loc>
-  <lastmod>2017-09-27</lastmod>
-
-</url>
-  <url>
   <loc>https://muffinman.io/blog/my-blog-setup/</loc>
   <lastmod>2017-09-27</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/react-image-filter-component/</loc>
-  <lastmod>2017-09-02</lastmod>
+  <loc>https://muffinman.io/blog/trillion-ideas/</loc>
+  <lastmod>2017-09-27</lastmod>
 
 </url>
   <url>
   <loc>https://muffinman.io/blog/nvm-updating-npm/</loc>
+  <lastmod>2017-09-02</lastmod>
+
+</url>
+  <url>
+  <loc>https://muffinman.io/blog/react-image-filter-component/</loc>
   <lastmod>2017-09-02</lastmod>
 
 </url>
@@ -766,12 +771,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/webpack-2-react-redux/</loc>
+  <loc>https://muffinman.io/blog/setting-up-webpack-babel-and-react-from-scratch-part-3/</loc>
   <lastmod>2016-11-24</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/setting-up-webpack-babel-and-react-from-scratch-part-3/</loc>
+  <loc>https://muffinman.io/blog/webpack-2-react-redux/</loc>
   <lastmod>2016-11-24</lastmod>
 
 </url>
@@ -886,12 +891,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/jekyll-gulp-workflow/</loc>
+  <loc>https://muffinman.io/blog/jekyll-read-more-link/</loc>
   <lastmod>2016-02-27</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/jekyll-read-more-link/</loc>
+  <loc>https://muffinman.io/blog/jekyll-gulp-workflow/</loc>
   <lastmod>2016-02-27</lastmod>
 
 </url>
@@ -916,22 +921,22 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/archive/</loc>
-</url>
-  <url>
   <loc>https://muffinman.io/projects/</loc>
 </url>
   <url>
   <loc>https://muffinman.io/art/</loc>
 </url>
   <url>
-  <loc>https://muffinman.io/stats/</loc>
+  <loc>https://muffinman.io/about/</loc>
+</url>
+  <url>
+  <loc>https://muffinman.io/archive/</loc>
 </url>
   <url>
   <loc>https://muffinman.io/blog/</loc>
 </url>
   <url>
-  <loc>https://muffinman.io/about/</loc>
+  <loc>https://muffinman.io/stats/</loc>
 </url>
   <url>
   <loc>https://muffinman.io/</loc>
