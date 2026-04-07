@@ -1,5 +1,5 @@
 import { exists } from 'node:fs/promises';
-import { join, sep } from 'node:path';
+import { join, relative, sep } from 'node:path';
 import { readDirectories } from '../utils/fs';
 import { getRedirectHTML } from '../utils/get-redirect-html';
 import { log, paint } from '../utils/log';
@@ -202,13 +202,15 @@ export class Pages {
     ).getMdxComponents;
 
     await this.getPages();
-    this.writePages();
+    await this.writePages();
   }
 
-  writePages() {
-    this.pages.forEach((page) => {
-      Pages.writePage(page);
-    });
+  async writePages() {
+    const writePromises: Promise<void>[] = [];
+    for (const page of this.pages) {
+      writePromises.push(Pages.writePage(page));
+    }
+    await Promise.all(writePromises);
   }
 
   clearCache() {
@@ -262,7 +264,7 @@ export class Pages {
   static async writePage(page: Page) {
     page.html = await page.render();
 
-    Bun.write(page.outputFilepath, page.html);
+    await Bun.write(page.outputFilepath, page.html);
 
     if (page.pageData?.aliases) {
       for (const alias of page.pageData.aliases as string[]) {
@@ -283,6 +285,14 @@ export class Pages {
       collection[index] = page;
     } else {
       collection.push(page);
+    }
+  }
+
+  removePage(collection: Page[], pathname: string) {
+    const index = collection.findIndex((p) => p.pathname === pathname);
+
+    if (index > -1) {
+      collection.splice(index, 1);
     }
   }
 
@@ -333,7 +343,12 @@ export class Pages {
     const pathname = `/${collectionName}/`; // -> /blog/
 
     const index = this.pages.findIndex((p) => p.pathname === pathname);
-    this.pages.splice(index, 1);
+
+    if (index > -1) {
+      this.pages.splice(index, 1);
+    } else {
+      throw new Error(`Invalid path: ${path}`);
+    }
   }
 
   // ----- UPDATE MDX PAGES ----- //

@@ -53,6 +53,8 @@ export class HttpServer {
       async fetch(req) {
         try {
           const url = new URL(req.url);
+          // This is safe as server already prevents escaping
+          // from the output dir by using ../ by sanitizing the path
           const pathOnDisk = join(dirs.OUTPUT, url.pathname);
 
           const file = Bun.file(pathOnDisk);
