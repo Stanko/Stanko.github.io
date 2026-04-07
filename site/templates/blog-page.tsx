@@ -1,4 +1,4 @@
-import { brz } from '@brz';
+import { brz } from '@brz/runtime';
 import { formatDate } from '@brz/utils/format-date';
 import { paint } from '@brz/utils/log';
 import Comments from '@site/components/comments';

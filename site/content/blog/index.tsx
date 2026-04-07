@@ -1,7 +1,8 @@
 import { join } from 'node:path';
 
 import BaseTemplate from '@site/templates/base';
-import { type Page, brz } from '@brz';
+import { type Page } from '@brz';
+import { brz } from '@brz/runtime';
 import { dirs, IS_PROD } from '@brz/lib/constants';
 import Header from '@site/components/header';
 import Favorite from '@site/components/favorite';

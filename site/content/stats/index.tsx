@@ -1,4 +1,5 @@
-import { dirs, brz } from '@brz';
+import { dirs } from '@brz';
+import { brz } from '@brz/runtime';
 import Header from '@site/components/header';
 import BaseTemplate from '@site/templates/base';
 import { join } from 'node:path';

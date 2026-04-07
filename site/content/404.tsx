@@ -1,4 +1,5 @@
-import { brz, dirs } from '@brz';
+import { dirs } from '@brz';
+import { brz } from '@brz/runtime';
 import Arrow from '@site/components/arrow';
 import CirclePatternSymbol from '@site/components/circle-pattern-symbol';
 import Header from '@site/components/header';

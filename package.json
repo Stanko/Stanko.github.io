@@ -19,11 +19,11 @@
     "sharp": "^0.34.4"
   },
   "scripts": {
-    "build": "rm -rf ./dist/ && mkdir ./dist && bun run ./app/index.ts",
-    "start": "bun run ./app/index.ts --dev",
-    "verbose": "bun run ./app/index.ts --dev --verbose",
-    "build-brz": "bun build ./app/index.ts --target=bun-darwin-arm64 --compile --outfile ./build/brz-darwin-arm64",
-    "build-brz-linux": "bun build ./app/index.ts --target=bun-linux-x64 --compile --outfile ./build/brz-linux-x64",
+    "build": "rm -rf ./dist/ && mkdir ./dist && bun run ./app/cli.ts",
+    "start": "bun run ./app/cli.ts --dev",
+    "verbose": "bun run ./app/cli.ts --dev --verbose",
+    "build-brz": "bun build ./app/cli.ts --target=bun-darwin-arm64 --compile --outfile ./build/brz-darwin-arm64",
+    "build-brz-linux": "bun build ./app/cli.ts --target=bun-linux-x64 --compile --outfile ./build/brz-linux-x64",
     "copy-photoswipe-styles": "cp ./node_modules/photoswipe/dist/photoswipe.css ./site/scss/photoswipe.scss",
     "postinstall": "bun run copy-photoswipe-styles",
     "embeddings": "bun ./embeddings/index.ts"

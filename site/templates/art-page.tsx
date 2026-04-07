@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { brz } from '@brz';
+import { brz } from '@brz/runtime';
 import { GalleryItem } from '@brz/components/gallery';
 import { copyAssetToDist } from '@brz/utils/copy-asset-to-dist';
 import { formatDateMonthYear } from '@brz/utils/format-date';

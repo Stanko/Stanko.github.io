@@ -164,15 +164,12 @@ export class Pages {
 
   async getCollectionPages(collectionName: string): Promise<Page[]> {
     const collectionPath = join(dirs.CONTENT, collectionName);
-    const pagePromises: Promise<Page>[] = [];
 
     const pageDirs = await readDirectories(collectionPath);
 
-    for (const dirName of pageDirs) {
-      const page = this.getMdxPage(collectionName, dirName);
-
-      pagePromises.push(page);
-    }
+    const pagePromises = pageDirs.map((dirName) =>
+      this.getMdxPage(collectionName, dirName)
+    );
 
     let pages = await Promise.all(pagePromises);
 
@@ -206,10 +203,7 @@ export class Pages {
   }
 
   async writePages() {
-    const writePromises: Promise<void>[] = [];
-    for (const page of this.pages) {
-      writePromises.push(Pages.writePage(page));
-    }
+    const writePromises = this.pages.map((page) => Pages.writePage(page));
     await Promise.all(writePromises);
   }
 

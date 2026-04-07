@@ -1,5 +1,6 @@
 import { join } from 'node:path';
-import { brz, dirs } from '@brz';
+import { dirs } from '@brz';
+import { brz } from '@brz/runtime';
 import BaseTemplate from '@site/templates/base';
 import type { BlogPost } from './blog';
 import type { ArtPage } from './art';

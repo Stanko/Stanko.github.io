@@ -161,17 +161,35 @@ export class Brz {
 
     const start = Date.now();
 
-    for (const file of publicFiles) {
-      const startFile = Date.now();
+    const copyPromises = publicFiles.map((file) => {
       const from = join(dirs.PUBLIC, file);
       const to = join(dirs.OUTPUT, file);
 
-      await cp(from, to, { recursive: true });
-      log.verbose(
-        paint.blue('public:'),
-        `copied ${file} [${Date.now() - startFile}ms]`
-      );
-    }
+      const start = Date.now();
+      const promise = cp(from, to, { recursive: true });
+      promise.then(() => {
+        log.verbose(
+          paint.blue('public:'),
+          `copied ${file} [${Date.now() - start}ms]`
+        );
+      });
+
+      return promise;
+    });
+
+    await Promise.all(copyPromises);
+
+    // for (const file of publicFiles) {
+    //   const startFile = Date.now();
+    //   const from = join(dirs.PUBLIC, file);
+    //   const to = join(dirs.OUTPUT, file);
+
+    //   await cp(from, to, { recursive: true });
+    //   log.verbose(
+    //     paint.blue('public:'),
+    //     `copied ${file} [${Date.now() - startFile}ms]`
+    //   );
+    // }
     log.info(
       paint.blue('public:'),
       `copied public files [${Date.now() - start}ms]`

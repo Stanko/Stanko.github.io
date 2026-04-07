@@ -1,4 +1,4 @@
-import { brz } from '@brz';
+import { brz } from '@brz/runtime';
 import type { BlogPost } from '@site/content/blog';
 import clsx from 'clsx';
 

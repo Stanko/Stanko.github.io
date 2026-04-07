@@ -1,4 +1,5 @@
-import { brz, dirs, type Page } from '@brz';
+import { dirs, type Page } from '@brz';
+import { brz } from '@brz/runtime';
 import Sidenote from '@brz/components/sidenote';
 import CirclePatternSymbol from '@site/components/circle-pattern-symbol';
 import ArtCard from '@site/components/art-card';
