@@ -30,15 +30,13 @@ const Index = () => {
       outputDir={join(dirs.OUTPUT)}
       dirPath={join(dirs.CONTENT)}
       pathname="/"
-      description="Hello, I'm Stanko, a software engineer in Amsterdam, making digital products and generative art."
-      title="Muffin Man · FrontEnd & Creative Coding"
+      description="Hello, I'm Stanko, a programmer who makes tools, generative art, games and interactive blog posts"
+      title="Muffin Man · Making visual and interactive stuff"
     >
-      <Header
-        className="home__header"
-        title="FrontEnd & <span>Creative</span> Coding"
-      >
-        Hello, I'm Stanko, a software engineer in Amsterdam, making digital
-        products and generative art.
+      <Header className="home__header" title="Hello, I'm <span>Stanko</span>">
+        I'm a programmer who makes tools, generative art, games and interactive
+        blog posts. Some of these projects also make their way into the physical
+        world through pen plotting and hardware.
       </Header>
 
       <main className="container home__content">

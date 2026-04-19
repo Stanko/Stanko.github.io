@@ -5,8 +5,8 @@ export type WatcherOptions = {
   label: string;
   dir: string;
   endsWith: string;
-  onChange: (path: string) => void;
-  onDelete?: (path: string) => void;
+  onChange: (path: string) => Promise<void>;
+  onDelete?: (path: string) => Promise<void>;
   depth?: number;
 };
 

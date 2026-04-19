@@ -1,7 +1,5 @@
 # My personal blog
 
-Frontend development & rants.
-
 [https://muffinman.io](https://muffinman.io)
 
 ---

@@ -32,11 +32,12 @@ const Art = async () => {
       dirPath={join(dirs.CONTENT, 'art')}
       pathname="/art/"
       description="I use code and algorithms to make drawings, and a robot to draw them."
-      title="Procedural Art"
+      title="Generative Art"
       theme="red"
     >
-      <Header title="<span>Procedural</span> Art">
-        I use code and algorithms to make drawings, and a robot to draw them.
+      <Header title="<span>Generative</span> Art">
+        I use code to make drawings and a robot to draw them. All of them are
+        purely algorithmical, no AI involved.
       </Header>
 
       <main className="art page-padding">
@@ -45,7 +46,7 @@ const Art = async () => {
             In 2020 I started playing with generative art and I immediately fell
             in love with it. Soon after, I got a pen plotter. The plotter allows
             me to bring these digital drawings to the physical world.{' '}
-            <Sidenote note="If not stated otherwise">
+            <Sidenote note="With a few exceptions">
               All of the drawings below
             </Sidenote>{' '}
             are real, physical, pen plotted drawings on paper.
@@ -53,8 +54,6 @@ const Art = async () => {
 
           <p>
             I'm very proud of my drawings, so I really hope you'll like them.
-            For more experiments and work in progress check out my Instagram{' '}
-            <a href="https://www.instagram.com/muffinman_io/">profile</a>.
           </p>
         </article>
 

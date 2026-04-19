@@ -310,7 +310,7 @@ export class Pages {
     delete require.cache[path];
 
     const page = await this.getTsxPage(path);
-    this.updatePage(page);
+    await this.updatePage(page);
 
     // It is the site's index page, just return the pathname
     if (page.pathname === '/') {

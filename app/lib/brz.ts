@@ -294,7 +294,7 @@ export class Brz {
       dir: dirs.OUTPUT_CSS,
       label: 'css',
       endsWith: '.css',
-      onChange: (path) => {
+      onChange: async (path) => {
         this.socketServer?.broadcast({
           type: 'css-changed',
           path: path.replace(dirs.OUTPUT, ''),

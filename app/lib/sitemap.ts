@@ -29,7 +29,7 @@ export const getSitemap = (pages: Page[]) => {
       // TODO fix this with the switch from tsx -> mdx for index pages
 
       const titleMap: Record<string, string> = {
-        '/': 'Muffin Man · FrontEnd & Creative Coding',
+        '/': 'Muffin Man · Making visual and interactive stuff',
         '/blog/': 'Blog · Muffin Man',
         '/art/': 'Art · Muffin Man',
         '/projects/': 'Projects · Muffin Man',
