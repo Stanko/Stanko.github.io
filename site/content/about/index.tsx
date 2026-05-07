@@ -1,5 +1,4 @@
 import { dirs } from '@brz';
-import Img from '@brz/components/img';
 import Sidenote from '@brz/components/sidenote';
 import Header from '@site/components/header';
 import BaseTemplate from '@site/templates/base';
@@ -29,12 +28,10 @@ const About = () => {
               projects and playing with random technologies. That is where this
               blog comes from.
             </p>
-            <Img
+            <img
               alt="My pixel art portrait"
               className="about__myself pixel-art"
-              src="./s2.png"
-              outputDir={join(dirs.OUTPUT, 'about')}
-              pageDir={import.meta.dirname}
+              src="/img/stanko.png"
             />
             <p>
               I'm mostly a maker of a digital stuff, but I love bringing digital

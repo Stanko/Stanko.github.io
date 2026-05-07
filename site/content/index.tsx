@@ -9,6 +9,7 @@ import ArtCard from '@site/components/art-card';
 import Arrow from '@site/components/arrow';
 import PostCard from '@site/components/post-card';
 import CirclePatternSymbol from '@site/components/circle-pattern-symbol';
+import Img from '@brz/components/img';
 
 const Index = () => {
   let allPosts = brz.pages
@@ -33,7 +34,17 @@ const Index = () => {
       description="Hello, I'm Stanko, a programmer who makes tools, generative art, games and interactive blog posts"
       title="Muffin Man · Making visual and interactive stuff"
     >
-      <Header className="home__header" title="Hello, I'm <span>Stanko</span>">
+      <Header
+        className="home__header"
+        title="Hello, I'm <span>Stanko</span>"
+        eyebrow={
+          <img
+            alt="My pixel art portrait"
+            className="home__myself pixel-art"
+            src="/img/stanko.png"
+          />
+        }
+      >
         I'm a programmer who makes tools, generative art, games and interactive
         blog posts. Some of these projects also make their way into the physical
         world through pen plotting and hardware.
