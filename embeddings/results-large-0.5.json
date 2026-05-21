@@ -2250,6 +2250,10 @@
       "score": 0.5123386579686143
     },
     {
+      "post": "spacedeck-x-on-arcade-cabinet",
+      "score": 0.5091745174632591
+    },
+    {
       "post": "sektor-draw-and-animate-svg-circle-sectors-2016",
       "score": 0.5087918927326027
     },
@@ -6534,6 +6538,10 @@
     {
       "post": "letters-from-sarajevo",
       "score": 0.5034508078937446
+    },
+    {
+      "post": "spacedeck-x-on-arcade-cabinet",
+      "score": 0.5024365541792888
     }
   ],
   "catching-the-blur-event-on-an-element-and-its-children": [
@@ -8034,6 +8042,10 @@
     {
       "post": "preserving-text-size-when-scaling-svgs",
       "score": 0.5326619100505637
+    },
+    {
+      "post": "spacedeck-x-on-arcade-cabinet",
+      "score": 0.5309671951151186
     },
     {
       "post": "into-2020",
@@ -10174,6 +10186,20 @@
     {
       "post": "setting-up-webpack-babel-and-react-from-scratch-part-2",
       "score": 0.50070052886213
+    }
+  ],
+  "web-workers-promises": [
+    {
+      "post": "simple-javascript-api-wrapper",
+      "score": 0.5590190793915758
+    },
+    {
+      "post": "node-script-to-run-multiple-commands-in-parallel",
+      "score": 0.5537606905028288
+    },
+    {
+      "post": "javascript-animation-loop",
+      "score": 0.5027159890978147
     }
   ],
   "animate-window-scroll-to": [
@@ -12924,18 +12950,18 @@
       "score": 0.5013709167588536
     }
   ],
-  "web-workers-promises": [
+  "spacedeck-x-on-arcade-cabinet": [
     {
-      "post": "simple-javascript-api-wrapper",
-      "score": 0.5590190793915758
+      "post": "sneak-peek-of-rayven",
+      "score": 0.5309671951151186
     },
     {
-      "post": "node-script-to-run-multiple-commands-in-parallel",
-      "score": 0.5537606905028288
+      "post": "weekly-code-challenge-spring-2021",
+      "score": 0.5091745174632591
     },
     {
-      "post": "javascript-animation-loop",
-      "score": 0.5027159890978147
+      "post": "invaders",
+      "score": 0.5024365541792888
     }
   ]
 }

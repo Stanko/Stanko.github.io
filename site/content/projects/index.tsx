@@ -232,6 +232,25 @@ export const projects: {
     ],
   },
   {
+    title: 'Game Development',
+    projects: [
+      {
+        description:
+          'To be released on Steam and on an arcade cabinet. It broadens the concept I started in FTF. Combination of shoot-em-up and deck building. Made with Kaplay.',
+        image: './sdx.png',
+        link: 'https://muffinman-io.itch.io/spacedeck-x',
+        name: 'SpaceDeck X',
+      },
+      {
+        description:
+          'My first game. A simple shoot-em-up prototype with a twist at the end. Made in Pico-8.',
+        image: './ftf.png',
+        link: 'https://muffinman-io.itch.io/ftf',
+        name: 'FTF',
+      },
+    ],
+  },
+  {
     title: 'Hardware',
     projects: [
       {
@@ -336,20 +355,6 @@ export const projects: {
         image: './letters.png',
         link: 'https://lettersfromsarajevo.com/',
         name: 'Letters from Sarajevo',
-      },
-      {
-        description:
-          'Another game that broadens the concept I started in FTF. Combination of shoot-em-up and deck building. Made with Kaplay.',
-        image: './sdx.png',
-        link: 'https://muffinman-io.itch.io/spacedeck-x',
-        name: 'SpaceDeck X',
-      },
-      {
-        description:
-          'My first game. A simple shoot-em-up prototype with a twist at the end. Made in Pico-8.',
-        image: './ftf.png',
-        link: 'https://muffinman-io.itch.io/ftf',
-        name: 'FTF',
       },
       {
         description:
