@@ -232,9 +232,10 @@ export class Brz {
   }
 
   async writeSearchData() {
-    // TODO make this cleaner
+    const start = Date.now();
+
     const pathnameToTitle = (pathname: string) => {
-      const title = pathname.split('/').filter(Boolean)[0] || '';
+      const title = pathname.split('/').find(Boolean) || '';
       return title.charAt(0).toUpperCase() + title.slice(1);
     };
 
@@ -267,6 +268,11 @@ export class Brz {
       join(dirs.OUTPUT, 'js', 'search-data.js'),
       `window.searchData = ${JSON.stringify(searchData)};`,
       { encoding: 'utf-8' }
+    );
+
+    log.info(
+      paint.blue('search:'),
+      `generated search data in [${Date.now() - start}ms]`
     );
   }
 

@@ -1,4 +1,5 @@
 import { copyAssetToDist } from '@brz/utils/copy-asset-to-dist';
+import { isOutputFresh, resolveAssetPath } from '@brz/utils/asset';
 import { getSharpImage } from '@brz/utils/get-sharp-image';
 import { join, sep } from 'node:path';
 import type { ResizeOptions } from 'sharp';
@@ -46,9 +47,16 @@ export const useImg = async ({
       fit: 'inside',
     };
 
-    // Resize and save to disk
-    const resized = await image.resize(resizeOptions);
-    await resized.toFile(join(outputDir, fileName));
+    const sourcePath = resolveAssetPath(src, pageDir);
+    const outputPath = join(outputDir, fileName);
+
+    const isFresh = await isOutputFresh(sourcePath, outputPath);
+
+    // Resize and copy the image only if it was changed
+    if (!isFresh) {
+      const resized = image.resize(resizeOptions);
+      await resized.toFile(outputPath);
+    }
   } else {
     // Copy the original image to the output directory
     await copyAssetToDist(src, pageDir, outputDir);

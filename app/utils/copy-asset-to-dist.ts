@@ -1,26 +1,21 @@
 import { join, sep } from 'node:path';
+import { isOutputFresh, resolveAssetPath } from './asset';
 
 export const copyAssetToDist = async (
   path: string,
   pageDir: string,
   outputDir: string
 ): Promise<string> => {
-  const isRelativePath =
-    path.startsWith('.' + sep) || path.startsWith('..' + sep);
-
   const fileName = path.split(sep).pop() as string;
-
-  if (isRelativePath) {
-    path = join(pageDir, path);
-  } else {
-    // Absolute path
-  }
-
-  const file = Bun.file(path);
+  const sourcePath = resolveAssetPath(path, pageDir);
   const outputPath = join(outputDir, fileName);
 
-  // file either doesn't exist or it was changed
-  await Bun.write(outputPath, file);
+  const isFresh = await isOutputFresh(sourcePath, outputPath, true);
+
+  // Copy the asset only if it was changed
+  if (!isFresh) {
+    await Bun.write(outputPath, Bun.file(sourcePath));
+  }
 
   return fileName;
 };
