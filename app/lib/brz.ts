@@ -8,8 +8,8 @@ import { getFeed } from '@brz/lib/feed';
 import { Pages } from '@brz/lib/pages';
 import { errorToHTML } from '@brz/utils/error-to-html';
 import { log, paint } from '@brz/utils/log';
-import { cp, exists, readdir, writeFile } from 'node:fs/promises';
-import { join, sep } from 'node:path';
+import { cp, exists, mkdir, readdir, rm, writeFile } from 'node:fs/promises';
+import { dirname, join, relative, sep } from 'node:path';
 import { listenForKeyPresses } from './keypress';
 import { getSitemap } from './sitemap';
 
@@ -22,7 +22,7 @@ export class Brz {
     this.pages = new Pages(dirs.CONTENT);
     const start = Date.now();
 
-    this.build().then(async () => {
+    Promise.all([this.build(), this.copyPublicAssets()]).then(async () => {
       await compileJS();
       await compileSASS();
 
@@ -109,7 +109,11 @@ export class Brz {
         label: 'public',
         endsWith: '',
         onChange: async (path) => {
-          await this.copyPublicAssets();
+          await this.copyPublicAsset(path);
+          broadcastRefresh(path, dirs.PUBLIC);
+        },
+        onDelete: async (path) => {
+          await this.deletePublicAsset(path);
           broadcastRefresh(path, dirs.PUBLIC);
         },
       },
@@ -196,7 +200,6 @@ export class Brz {
     }
 
     await this.pages.buildPages();
-    await this.copyPublicAssets();
     await this.writeSearchData();
     await this.writeRSS();
     await this.writeSitemap();
@@ -270,42 +273,35 @@ export class Brz {
   // Copy public files to output directory
   copyPublicAssets = async () => {
     const publicFiles = await readdir(dirs.PUBLIC);
-
     const start = Date.now();
 
-    const copyPromises = publicFiles.map((file) => {
-      const from = join(dirs.PUBLIC, file);
-      const to = join(dirs.OUTPUT, file);
+    await Promise.all(
+      publicFiles.map((file) => this.copyPublicAsset(join(dirs.PUBLIC, file)))
+    );
 
-      const start = Date.now();
-      const promise = cp(from, to, { recursive: true });
-      promise.then(() => {
-        log.verbose(
-          paint.blue('public:'),
-          `copied ${file} [${Date.now() - start}ms]`
-        );
-      });
-
-      return promise;
-    });
-
-    await Promise.all(copyPromises);
-
-    // for (const file of publicFiles) {
-    //   const startFile = Date.now();
-    //   const from = join(dirs.PUBLIC, file);
-    //   const to = join(dirs.OUTPUT, file);
-
-    //   await cp(from, to, { recursive: true });
-    //   log.verbose(
-    //     paint.blue('public:'),
-    //     `copied ${file} [${Date.now() - startFile}ms]`
-    //   );
-    // }
     log.info(
       paint.blue('public:'),
       `copied public files [${Date.now() - start}ms]`
     );
+  };
+
+  copyPublicAsset = async (path: string) => {
+    const start = Date.now();
+    const relativePath = relative(dirs.PUBLIC, path);
+    const outputPath = join(dirs.OUTPUT, relativePath);
+
+    await mkdir(dirname(outputPath), { recursive: true });
+    await cp(path, outputPath, { recursive: true });
+
+    log.verbose(
+      paint.blue('public:'),
+      `copied ${relativePath} [${Date.now() - start}ms]`
+    );
+  };
+
+  deletePublicAsset = async (path: string) => {
+    const relativePath = relative(dirs.PUBLIC, path);
+    await rm(join(dirs.OUTPUT, relativePath), { force: true, recursive: true });
   };
 
   // ----- WATCHERS ----- //
