@@ -4,13 +4,10 @@ import { join } from 'node:path';
 import { DATE_MATCH_REGEX } from '../lib/constants';
 
 export const readDirectories = async (path: string) => {
-  const files = await readdir(path);
-
-  return files.filter((file) => {
-    const filePath = join(path, file);
-    const fileStat = statSync(filePath);
-    return fileStat.isDirectory();
-  });
+  const entries = await readdir(path, { withFileTypes: true });
+  return entries
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => entry.name);
 };
 
 export const getDateFromFilename = (filename: string): string | null => {
