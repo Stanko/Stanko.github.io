@@ -19,11 +19,6 @@ export class Brz {
   httpServer?: HttpServer;
 
   constructor() {
-    // const init = async () => {
-    //   await compileSASS();
-    // };
-    // init();
-
     this.pages = new Pages(dirs.CONTENT);
     const start = Date.now();
 
@@ -46,15 +41,132 @@ export class Brz {
   }
 
   startWatchers() {
-    this.watchMdx();
-    this.watchTsx();
-    this.watchJS();
-    this.watchSASS();
-    this.watchCSS();
-    this.watchPublic();
-    this.watchTemplates();
-    this.watchComponents();
-    this.watchBrzComponents();
+    const broadcastPageChanges = (pathnames: string[]) => {
+      pathnames.forEach((pathname) => {
+        this.socketServer?.broadcast({
+          type: 'page-changed',
+          pathname,
+        });
+      });
+    };
+
+    const broadcastRefresh = (path: string, dir: string) => {
+      this.socketServer?.broadcast({
+        type: 'refresh',
+        path: path.replace(dir, ''),
+      });
+    };
+
+    const watchers: Omit<WatcherOptions, 'onError'>[] = [
+      {
+        dir: dirs.CONTENT,
+        label: 'mdx',
+        endsWith: 'index.mdx',
+        onChange: async (path) => {
+          broadcastPageChanges(await this.pages.updateMdxPage(path));
+        },
+        onDelete: async (path) => {
+          await this.pages.deleteMdxPage(path);
+        },
+      },
+      {
+        dir: dirs.CONTENT,
+        label: 'tsx',
+        endsWith: 'index.tsx',
+        onChange: async (path) => {
+          broadcastPageChanges(await this.pages.updateTsxPage(path));
+        },
+        onDelete: (path) => this.pages.deleteTsxPage(path),
+      },
+      {
+        dir: dirs.JS,
+        label: 'js',
+        endsWith: '.js',
+        onChange: async () => {
+          await compileJS();
+          this.socketServer?.broadcast({ type: 'js-changed' });
+        },
+      },
+      {
+        dir: dirs.SCSS,
+        label: 'scss',
+        endsWith: '.scss',
+        onChange: compileSASS,
+      },
+      {
+        dir: dirs.OUTPUT_CSS,
+        label: 'css',
+        endsWith: '.css',
+        onChange: async (path) => {
+          this.socketServer?.broadcast({
+            type: 'css-changed',
+            path: path.replace(dirs.OUTPUT, ''),
+          });
+        },
+      },
+      {
+        dir: dirs.PUBLIC,
+        label: 'public',
+        endsWith: '',
+        onChange: async (path) => {
+          await this.copyPublicAssets();
+          broadcastRefresh(path, dirs.PUBLIC);
+        },
+      },
+      {
+        dir: dirs.TEMPLATES,
+        label: 'templates',
+        endsWith: '.tsx',
+        onChange: async (path) => {
+          delete require.cache[path];
+          await this.build();
+          broadcastRefresh(path, dirs.TEMPLATES);
+        },
+      },
+      {
+        dir: dirs.COMPONENTS,
+        label: 'components',
+        endsWith: '.tsx',
+        onChange: async (path) => {
+          delete require.cache[path];
+          delete require.cache[join(dirs.TEMPLATES, 'base.tsx')];
+          this.pages.clearCache();
+          await this.build();
+          broadcastRefresh(path, dirs.COMPONENTS);
+        },
+      },
+      {
+        dir: dirs.CONTENT,
+        label: 'page components',
+        endsWith: '.jsx',
+        onChange: async (path) => {
+          delete require.cache[path];
+
+          // JSX components usually live in a "components" folder inside the post.
+          const parts = path.split(sep);
+          const pagePath = [
+            ...parts.slice(0, parts.length - 2),
+            'index.mdx',
+          ].join(sep);
+
+          if (await exists(pagePath)) {
+            broadcastPageChanges(await this.pages.updateMdxPage(pagePath));
+          }
+        },
+      },
+      {
+        dir: dirs.BRZ_COMPONENTS,
+        label: 'components',
+        endsWith: '.tsx',
+        onChange: async (path) => {
+          delete require.cache[path];
+          await this.build();
+          broadcastRefresh(path, dirs.BRZ_COMPONENTS);
+        },
+      },
+    ];
+
+    watchers.forEach((options) => this.watch(options));
   }
 
   addKeyPressListeners() {
@@ -198,205 +310,18 @@ export class Brz {
 
   // ----- WATCHERS ----- //
 
-  watch(options: WatcherOptions) {
+  watch(options: Omit<WatcherOptions, 'onError'>) {
     new Watcher({
       ...options,
-      onChange: async (path) => {
-        try {
-          await options.onChange(path);
-        } catch (e) {
-          const error = (e as any).errors
-            ? (e as AggregateError)
-            : (e as Error);
+      onError: (path, e) => {
+        const error = (e as any).errors ? (e as AggregateError) : (e as Error);
 
-          console.log(error);
-
-          this.socketServer?.broadcast({
-            type: 'error',
-            title: `Error in ${path.replace(options.dir, '')}`,
-            error: errorToHTML(error),
-          });
-        }
-      },
-    });
-  }
-
-  watchMdx() {
-    this.watch({
-      dir: dirs.CONTENT,
-      label: 'mdx',
-      endsWith: 'index.mdx',
-      onChange: async (path) => {
-        const pathnames = await this.pages.updateMdxPage(path);
-
-        pathnames.forEach((pathname) => {
-          this.socketServer?.broadcast({
-            type: 'page-changed',
-            pathname,
-          });
-        });
-      },
-      onDelete: async (path) => {
-        await this.pages.deleteMdxPage(path);
-      },
-    });
-  }
-
-  watchTsx() {
-    this.watch({
-      dir: dirs.CONTENT,
-      label: 'tsx',
-      endsWith: 'index.tsx',
-      onChange: async (path) => {
-        const pathnames = await this.pages.updateTsxPage(path);
-
-        pathnames.forEach((pathname) => {
-          this.socketServer?.broadcast({
-            type: 'page-changed',
-            pathname,
-          });
-        });
-      },
-      onDelete: async (path) => {
-        await this.pages.deleteTsxPage(path);
-      },
-    });
-  }
-
-  watchJS() {
-    this.watch({
-      dir: dirs.JS,
-      label: 'js',
-      endsWith: '.js',
-      onChange: async (path) => {
-        await compileJS();
+        console.log(error);
 
         this.socketServer?.broadcast({
-          type: 'js-changed',
-        });
-      },
-    });
-  }
-
-  watchSASS() {
-    this.watch({
-      dir: dirs.SCSS,
-      label: 'scss',
-      endsWith: '.scss',
-      onChange: async (path) => {
-        await compileSASS();
-      },
-    });
-  }
-
-  watchCSS() {
-    this.watch({
-      dir: dirs.OUTPUT_CSS,
-      label: 'css',
-      endsWith: '.css',
-      onChange: async (path) => {
-        this.socketServer?.broadcast({
-          type: 'css-changed',
-          path: path.replace(dirs.OUTPUT, ''),
-        });
-      },
-    });
-  }
-
-  watchPublic() {
-    this.watch({
-      dir: dirs.PUBLIC,
-      label: 'public',
-      endsWith: '',
-      onChange: async (path) => {
-        await this.copyPublicAssets();
-
-        this.socketServer?.broadcast({
-          type: 'refresh',
-          path: path.replace(dirs.PUBLIC, ''),
-        });
-      },
-    });
-  }
-
-  watchTemplates() {
-    this.watch({
-      dir: dirs.TEMPLATES,
-      label: 'templates',
-      endsWith: '.tsx',
-      onChange: async (path) => {
-        delete require.cache[path];
-        await this.build();
-
-        this.socketServer?.broadcast({
-          type: 'refresh',
-          path: path.replace(dirs.TEMPLATES, ''),
-        });
-      },
-    });
-  }
-
-  watchComponents() {
-    // Site wide components
-    this.watch({
-      dir: dirs.COMPONENTS,
-      label: 'components',
-      endsWith: '.tsx',
-      onChange: async (path) => {
-        delete require.cache[path];
-        delete require.cache[join(dirs.TEMPLATES, 'base.tsx')];
-        this.pages.clearCache();
-        await this.build();
-
-        this.socketServer?.broadcast({
-          type: 'refresh',
-          path: path.replace(dirs.COMPONENTS, ''),
-        });
-      },
-    });
-
-    // Individual post components
-    this.watch({
-      dir: dirs.CONTENT,
-      label: 'page components',
-      endsWith: '.jsx',
-      onChange: async (path) => {
-        delete require.cache[path];
-
-        // JSX components usually live in "components" folder inside the post folder
-        // Trying to find the index.mdx and update it
-        const parts = path.split(sep);
-        const pagePath = [
-          ...parts.slice(0, parts.length - 2),
-          'index.mdx',
-        ].join(sep);
-
-        if (await exists(pagePath)) {
-          const pathnames = await this.pages.updateMdxPage(pagePath);
-
-          pathnames.forEach((pathname) => {
-            this.socketServer?.broadcast({
-              type: 'page-changed',
-              pathname,
-            });
-          });
-        }
-      },
-    });
-  }
-
-  watchBrzComponents() {
-    this.watch({
-      dir: dirs.BRZ_COMPONENTS,
-      label: 'components',
-      endsWith: '.tsx',
-      onChange: async (path) => {
-        delete require.cache[path];
-        await this.build();
-
-        this.socketServer?.broadcast({
-          type: 'refresh',
-          path: path.replace(dirs.BRZ_COMPONENTS, ''),
+          type: 'error',
+          title: `Error in ${path.replace(options.dir, '')}`,
+          error: errorToHTML(error),
         });
       },
     });

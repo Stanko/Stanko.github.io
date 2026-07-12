@@ -7,6 +7,7 @@ export type WatcherOptions = {
   endsWith: string;
   onChange: (path: string) => Promise<void>;
   onDelete?: (path: string) => Promise<void>;
+  onError: (path: string, error: unknown) => void | Promise<void>;
   depth?: number;
 };
 
@@ -18,6 +19,7 @@ export class Watcher {
     endsWith,
     onChange,
     onDelete,
+    onError,
     label,
     depth = 10,
   }: WatcherOptions) {
@@ -33,14 +35,18 @@ export class Watcher {
       const relativePath = path.replace(dir, '');
       const start = Date.now();
 
-      if (onDelete) {
-        if (['add', 'change'].includes(event)) {
+      try {
+        if (onDelete) {
+          if (['add', 'change'].includes(event)) {
+            await onChange(path);
+          } else if (event === 'unlink') {
+            await onDelete(path);
+          }
+        } else if (['add', 'change', 'unlink'].includes(event)) {
           await onChange(path);
-        } else if (event === 'unlink') {
-          await onDelete(path);
         }
-      } else if (['add', 'change', 'unlink'].includes(event)) {
-        await onChange(path);
+      } catch (error) {
+        await onError(path, error);
       }
 
       log.info(
