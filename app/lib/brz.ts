@@ -206,8 +206,8 @@ export class Brz {
   }
 
   async writeRSS() {
-    const data = getFeed(this.pages.pages);
     const start = Date.now();
+    const data = getFeed(this.pages.pages);
 
     await writeFile(join(dirs.OUTPUT, 'atom.xml'), data, {
       encoding: 'utf-8',
@@ -219,14 +219,14 @@ export class Brz {
   }
 
   async writeSitemap() {
-    const data = getSitemap(this.pages.pages);
     const start = Date.now();
+    const data = getSitemap(this.pages.pages);
 
     await writeFile(join(dirs.OUTPUT, 'sitemap.xml'), data, {
       encoding: 'utf-8',
     });
     log.info(
-      paint.blue('feed:'),
+      paint.blue('sitemap:'),
       `generated sitemap in [${Date.now() - start}ms]`
     );
   }
@@ -278,8 +278,8 @@ export class Brz {
 
   // Copy public files to output directory
   copyPublicAssets = async () => {
-    const publicFiles = await readdir(dirs.PUBLIC);
     const start = Date.now();
+    const publicFiles = await readdir(dirs.PUBLIC);
 
     await Promise.all(
       publicFiles.map((file) => this.copyPublicAsset(join(dirs.PUBLIC, file)))

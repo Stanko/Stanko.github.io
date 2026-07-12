@@ -203,8 +203,13 @@ export class Pages {
   }
 
   async writePages() {
+    const start = Date.now();
     const writePromises = this.pages.map((page) => Pages.writePage(page));
     await Promise.all(writePromises);
+    log.info(
+      paint.blue(`pages:`),
+      `wrote ${this.pages.length} pages [${Date.now() - start}ms]`
+    );
   }
 
   clearCache() {
@@ -245,7 +250,7 @@ export class Pages {
     this.pages = pages;
     log.info(
       paint.blue(`pages:`),
-      `${pages.length} pages [${Date.now() - start}ms]`
+      `processed ${pages.length} pages [${Date.now() - start}ms]`
     );
     return pages.sort((a: Page, b: Page) => {
       const aDate = (a.pageData.date as string) || '';
