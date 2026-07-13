@@ -386,12 +386,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/art/galaxy-white/</loc>
+  <loc>https://muffinman.io/art/galaxy-black/</loc>
   <lastmod>2020-05-02</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/art/galaxy-black/</loc>
+  <loc>https://muffinman.io/art/galaxy-white/</loc>
   <lastmod>2020-05-02</lastmod>
 
 </url>
@@ -611,12 +611,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/my-programming-story/</loc>
+  <loc>https://muffinman.io/blog/consume-less-create-more/</loc>
   <lastmod>2018-01-01</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/consume-less-create-more/</loc>
+  <loc>https://muffinman.io/blog/my-programming-story/</loc>
   <lastmod>2018-01-01</lastmod>
 
 </url>
@@ -666,22 +666,22 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/my-blog-setup/</loc>
-  <lastmod>2017-09-27</lastmod>
-
-</url>
-  <url>
   <loc>https://muffinman.io/blog/trillion-ideas/</loc>
   <lastmod>2017-09-27</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/react-image-filter-component/</loc>
-  <lastmod>2017-09-02</lastmod>
+  <loc>https://muffinman.io/blog/my-blog-setup/</loc>
+  <lastmod>2017-09-27</lastmod>
 
 </url>
   <url>
   <loc>https://muffinman.io/blog/nvm-updating-npm/</loc>
+  <lastmod>2017-09-02</lastmod>
+
+</url>
+  <url>
+  <loc>https://muffinman.io/blog/react-image-filter-component/</loc>
   <lastmod>2017-09-02</lastmod>
 
 </url>
@@ -926,19 +926,19 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/about/</loc>
+  <loc>https://muffinman.io/art/</loc>
 </url>
   <url>
-  <loc>https://muffinman.io/art/</loc>
+  <loc>https://muffinman.io/blog/</loc>
+</url>
+  <url>
+  <loc>https://muffinman.io/about/</loc>
 </url>
   <url>
   <loc>https://muffinman.io/archive/</loc>
 </url>
   <url>
   <loc>https://muffinman.io/projects/</loc>
-</url>
-  <url>
-  <loc>https://muffinman.io/blog/</loc>
 </url>
   <url>
   <loc>https://muffinman.io/stats/</loc>
