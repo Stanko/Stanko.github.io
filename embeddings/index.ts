@@ -1,18 +1,34 @@
 import cosineSimilarity from 'compute-cosine-similarity';
 import crypto from 'node:crypto';
-import fs, { statSync } from 'node:fs';
+import fs from 'node:fs';
 import path from 'node:path';
 import { OpenAI } from 'openai';
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 const DOCS_DIR = './site/content/blog';
-// const MODEL = 'small';
-const MODEL = 'large';
+const MODEL: 'small' | 'large' = 'large';
 const CACHE_DIR = `./embeddings/cache-${MODEL}`;
 const SIMILARITY_THRESHOLD = 0.5;
 const OUTPUT_FILE = `./embeddings/results-${MODEL}-${SIMILARITY_THRESHOLD}.json`;
 const DATE_REGEX = /^\d{4}-\d{2}-\d{2}-/;
+
+type SourceDocument = {
+  text: string;
+  name: string;
+  hash: string;
+};
+
+type EmbeddedDocument = {
+  name: string;
+  hash: string;
+  embedding: number[];
+};
+
+type RelatedDoc = {
+  score: number;
+  post: string;
+};
 
 function cleanMarkdown(content: string): string {
   return content
@@ -24,137 +40,151 @@ function cleanMarkdown(content: string): string {
     .trim();
 }
 
-async function getEmbeddings(texts: string[]) {
-  const response = await openai.embeddings.create({
-    model: `text-embedding-3-${MODEL}`,
-    input: texts,
-  });
+function loadCache(): Map<string, EmbeddedDocument> {
+  fs.mkdirSync(CACHE_DIR, { recursive: true });
 
-  return response.data.map((d) => d.embedding);
+  const documents = fs
+    .readdirSync(CACHE_DIR)
+    .filter((file) => file.endsWith('.json'))
+    .map(
+      (file) =>
+        JSON.parse(
+          fs.readFileSync(path.join(CACHE_DIR, file), 'utf-8')
+        ) as EmbeddedDocument
+    );
+
+  return new Map(documents.map((document) => [document.name, document]));
 }
 
-type Doc = {
-  text: string;
-  name: string;
-  embedding: number[];
-  hash: string;
-};
+function getDocumentsToEmbed(cache: Map<string, EmbeddedDocument>): {
+  documents: SourceDocument[];
+  skipped: number;
+} {
+  const documents: SourceDocument[] = [];
+  let skipped = 0;
 
-async function main() {
-  const files = fs.readdirSync(DOCS_DIR);
-  const mdxFiles = [];
-  for (const file of files) {
-    if (statSync(path.join(DOCS_DIR, file)).isDirectory()) {
-      mdxFiles.push({
-        name: file.replace(DATE_REGEX, ''),
-        path: path.join(DOCS_DIR, file, 'index.mdx'),
-      });
-    }
-  }
-
-  // Load cached embeddings
-  const cache: Record<string, Doc> = {};
-  if (!fs.existsSync(CACHE_DIR)) {
-    fs.mkdirSync(CACHE_DIR, { recursive: true });
-  }
-  const cacheFiles = fs.readdirSync(CACHE_DIR);
-
-  for (const file of cacheFiles) {
-    if (file.endsWith('.json')) {
-      const fullPath = path.join(CACHE_DIR, file);
-      const value = JSON.parse(fs.readFileSync(fullPath, 'utf-8')) as Doc;
-
-      cache[value.name] = value;
-    }
-  }
-
-  const documents: Record<string, Doc> = {};
-
-  for (const file of mdxFiles) {
-    const raw = fs.readFileSync(file.path, 'utf-8');
-    const { name } = file;
-
-    const hash = crypto.createHash('md5').update(raw).digest('hex');
-
-    if (cache[name] && cache[name].hash === hash) {
-      console.log(`Skipping ${name} (cached)`);
+  for (const entry of fs.readdirSync(DOCS_DIR, { withFileTypes: true })) {
+    if (!entry.isDirectory()) {
       continue;
     }
 
-    documents[name] = {
+    const name = entry.name.replace(DATE_REGEX, '');
+    const raw = fs.readFileSync(
+      path.join(DOCS_DIR, entry.name, 'index.mdx'),
+      'utf-8'
+    );
+    const hash = crypto.createHash('md5').update(raw).digest('hex');
+
+    if (cache.get(name)?.hash === hash) {
+      skipped++;
+      continue;
+    }
+
+    documents.push({
       text: cleanMarkdown(raw),
       name,
       hash,
-      embedding: [],
-    };
-  }
-
-  const filenames = Object.keys(documents);
-  const texts = Object.values(documents).map((doc) => doc.text);
-
-  if (filenames.length > 0) {
-    // Get embeddings from OpenAI
-    console.time('embeddings');
-    const embeddings = await getEmbeddings(texts);
-    console.timeEnd('embeddings');
-
-    // Save embeddings to cache
-    embeddings.forEach((embedding, index) => {
-      const name = filenames[index];
-      const cachePath = path.join(CACHE_DIR, `${name}.json`);
-      documents[name].embedding = embedding;
-
-      fs.writeFileSync(
-        cachePath,
-        JSON.stringify({ name, hash: documents[name].hash, embedding })
-      );
     });
   }
 
-  const relatedDocs: Record<string, { score: number; post: string }[]> = {};
+  return { documents, skipped };
+}
 
-  const data = {
-    ...cache,
-    ...documents,
-  };
-  const names = Object.keys(data);
-
-  console.time('similarity');
-  for (const name of names) {
-    relatedDocs[name] = [];
+async function embedDocuments(
+  documents: SourceDocument[]
+): Promise<EmbeddedDocument[]> {
+  if (documents.length === 0) {
+    return [];
   }
 
-  for (let i = 0; i < names.length; i++) {
-    const name1 = names[i];
-    const v1 = data[name1].embedding;
+  console.time('embeddings');
+  const response = await openai.embeddings.create({
+    model: `text-embedding-3-${MODEL}`,
+    input: documents.map((document) => document.text),
+  });
+  console.timeEnd('embeddings');
 
-    for (let j = i + 1; j < names.length; j++) {
-      const name2 = names[j];
-      const v2 = data[name2].embedding;
-      const score = cosineSimilarity(v1, v2);
+  return documents.map((document, index) => {
+    const embedding = response.data[index]?.embedding;
+
+    if (!embedding) {
+      throw new Error(`Missing embedding for ${document.name}`);
+    }
+
+    const embeddedDocument = {
+      name: document.name,
+      hash: document.hash,
+      embedding,
+    };
+
+    fs.writeFileSync(
+      path.join(CACHE_DIR, `${document.name}.json`),
+      JSON.stringify(embeddedDocument)
+    );
+
+    return embeddedDocument;
+  });
+}
+
+function findRelatedDocuments(
+  documents: EmbeddedDocument[]
+): Record<string, RelatedDoc[]> {
+  const relatedDocuments = Object.fromEntries(
+    documents.map((document) => [document.name, [] as RelatedDoc[]])
+  );
+
+  for (let i = 0; i < documents.length; i++) {
+    const document = documents[i]!;
+
+    for (let j = i + 1; j < documents.length; j++) {
+      const otherDocument = documents[j]!;
+      const score = cosineSimilarity(
+        document.embedding,
+        otherDocument.embedding
+      );
 
       if (score && score >= SIMILARITY_THRESHOLD) {
-        relatedDocs[name1].push({
-          post: name2,
+        relatedDocuments[document.name]!.push({
+          post: otherDocument.name,
           score,
         });
-        relatedDocs[name2].push({
-          post: name1,
+        relatedDocuments[otherDocument.name]!.push({
+          post: document.name,
           score,
         });
       }
     }
   }
-  for (const file of Object.keys(relatedDocs)) {
-    relatedDocs[file].sort((a, b) => b.score - a.score);
-  }
-  console.timeEnd('similarity');
 
-  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(relatedDocs, null, 2));
+  for (const related of Object.values(relatedDocuments)) {
+    related.sort((a, b) => b.score - a.score);
+  }
+
+  return relatedDocuments;
+}
+
+async function main() {
+  const documents = loadCache();
+  const { documents: documentsToEmbed, skipped } =
+    getDocumentsToEmbed(documents);
+  const newDocuments = await embedDocuments(documentsToEmbed);
 
   console.log(
-    `Done! Output saved to ${OUTPUT_FILE}, documents processed: ${names.length}`
+    `Embeddings: ${skipped} skipped, ${newDocuments.length} calculated`
+  );
+
+  for (const document of newDocuments) {
+    documents.set(document.name, document);
+  }
+
+  console.time('similarity');
+  const relatedDocuments = findRelatedDocuments([...documents.values()]);
+  console.timeEnd('similarity');
+
+  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(relatedDocuments, null, 2));
+  console.log(
+    `Done! Output saved to ${OUTPUT_FILE}, documents processed: ${documents.size}`
   );
 }
 
-main().catch((err) => console.error(err));
+main().catch(console.error);
