@@ -1,13 +1,11 @@
 import clsx from 'clsx';
 import { brz } from '@brz/runtime';
 import { GalleryItem } from '@brz/components/gallery';
-import { copyAssetToDist } from '@brz/utils/copy-asset-to-dist';
 import { formatDateMonthYear } from '@brz/utils/format-date';
 import Header from '@site/components/header';
 import RelatedArt from '@site/components/related-art';
 import type { ArtPage } from '@site/content/art';
 import { readdirSync } from 'node:fs';
-import { join } from 'node:path';
 import BaseTemplate from './base';
 
 type ArtPageTemplateProps = {
@@ -45,25 +43,20 @@ type ArtPageAsset = {
   type: 'image' | 'video';
 };
 
-const getFilesFromPath = async (
-  dirPath: string,
-  outputDir: string
-): Promise<ArtPageAsset[]> => {
+const getFilesFromPath = (dirPath: string): ArtPageAsset[] => {
   const SUPPORTED_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.gif', '.mp4'];
 
-  const allFiles = await readdirSync(dirPath);
+  const allFiles = readdirSync(dirPath);
 
   const files: ArtPageAsset[] = [];
 
   for (const file of allFiles) {
-    const filePath = join(dirPath, file);
     const fileExtension = file.split('.').pop();
 
     if (SUPPORTED_EXTENSIONS.includes(`.${fileExtension}`)) {
       const type = fileExtension === 'mp4' ? 'video' : 'image';
-      const filename = await copyAssetToDist(filePath, dirPath, outputDir);
 
-      files.push({ path: `./${filename}`, type });
+      files.push({ path: `./${file}`, type });
     }
   }
 
@@ -91,7 +84,7 @@ const ArtPageTemplate = async ({
     wide,
   },
 }: ArtPageTemplateProps) => {
-  const assets = await getFilesFromPath(dirPath, outputDir);
+  const assets = getFilesFromPath(dirPath);
   const cover = assets.shift() as ArtPageAsset;
 
   const art = brz.pages.getCollection('art') as ArtPage[];
