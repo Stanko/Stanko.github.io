@@ -363,6 +363,13 @@ export const projects: {
         link: 'https://muffinman.io/weekly-code-challenge/',
         name: 'Weekly Code Challenge',
       },
+      {
+        description:
+          "A collection of parametric 3D models I've made in JavaScript for personal projects.",
+        image: './3d-models.png',
+        link: 'https://muffinman.io/3d-models/',
+        name: '3D Models',
+      },
     ],
   },
 ];
