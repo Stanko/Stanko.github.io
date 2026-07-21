@@ -372,7 +372,7 @@ export class Pages {
     }
 
     const page = await this.getMdxPage(collectionName, dirName);
-    this.updatePage(page);
+    await this.updatePage(page);
 
     // Update collection index
     const updatedPathnames = await this.updateTsxPage(
