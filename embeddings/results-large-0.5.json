@@ -2422,6 +2422,10 @@
       "score": 0.56485480280243
     },
     {
+      "post": "spacedeck-x-july-devlog",
+      "score": 0.5591773012355999
+    },
+    {
       "post": "image-comparison-slider",
       "score": 0.5520241658054881
     },
@@ -4444,6 +4448,10 @@
     {
       "post": "css-only-sprite-animations",
       "score": 0.5416038529149858
+    },
+    {
+      "post": "spacedeck-x-july-devlog",
+      "score": 0.5152608254560341
     },
     {
       "post": "into-2021",
@@ -6524,6 +6532,10 @@
       "score": 0.5114849276157357
     },
     {
+      "post": "spacedeck-x-july-devlog",
+      "score": 0.5090443951406834
+    },
+    {
       "post": "spacedeck-x-on-arcade-cabinet",
       "score": 0.507831703153001
     },
@@ -8034,6 +8046,10 @@
     {
       "post": "webpack-babel-react-revisited",
       "score": 0.5395711206704201
+    },
+    {
+      "post": "spacedeck-x-july-devlog",
+      "score": 0.5388407610753713
     },
     {
       "post": "spacedeck-x-on-arcade-cabinet",
@@ -12602,6 +12618,10 @@
   ],
   "spacedeck-x-on-arcade-cabinet": [
     {
+      "post": "spacedeck-x-july-devlog",
+      "score": 0.6780582987969533
+    },
+    {
       "post": "sneak-peek-of-rayven",
       "score": 0.5367837008809307
     },
@@ -12962,6 +12982,28 @@
     {
       "post": "css-and-svg-input-animations",
       "score": 0.5013709167588536
+    }
+  ],
+  "spacedeck-x-july-devlog": [
+    {
+      "post": "spacedeck-x-on-arcade-cabinet",
+      "score": 0.6780582987969533
+    },
+    {
+      "post": "making-2d-platformer-controls",
+      "score": 0.5591773012355999
+    },
+    {
+      "post": "sneak-peek-of-rayven",
+      "score": 0.5388407610753713
+    },
+    {
+      "post": "minor-design-refresh",
+      "score": 0.5152608254560341
+    },
+    {
+      "post": "invaders",
+      "score": 0.5090443951406834
     }
   ]
 }

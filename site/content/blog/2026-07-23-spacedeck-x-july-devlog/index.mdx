@@ -1,0 +1,105 @@
++++
+title = "<span>SpaceDeck X</span> July devlog: upgrades, backgrounds, and more"
+
+category = ["GameDev"]
+tags = ["js", "kaplay", "gamedev"]
+
+image = "./img/upgrades-after.png"
+intro = "Bunch of updates - a new upgrades system, nicer visuals with backgrounds and shadows, redesigned UI and more."
++++
+
+I've been developing SpaceDeck X since December last year. It started as me playing with a random framework I found fun, and it grew so much that I'm now working towards releasing it on Steam. I kept [a devlog on Itch](https://muffinman-io.itch.io/spacedeck-x/devlog), but I feel like it is time to bring it to my own website. Especially considering that these updates are exclusive to the Steam version.
+
+I have a pretty clear vision for the release, and lately I've made amazing progress. Here are the major things I've made, in no particular order.
+
+## Upgrades system
+
+The new upgrades system was brewing in my head for a long time. Honestly, I thought it would take me longer to implement it, but once I started, I got in the zone and built a completely new system.
+
+This is the new upgrades selection screen:
+
+<Image
+  src="./img/upgrades-after.png"
+  alt="New select an upgrade screen"
+  size="wide"
+/>
+
+Compare it to the old one:
+
+<Image
+  src="./img/upgrades-before.png"
+  alt="Select an upgrade screen before the update"
+/>
+
+### Upgrades library
+
+<Image
+  src="./img/upgrades-lib.png"
+  alt="New upgrade library screen"
+  size="wide"
+/>
+
+In two days I managed to draw 44 upgrade icons. Some of them I just winged and now I'm retrofitting them to the actual game upgrades.
+
+<Image
+  src="./img/upgrades-icons.png"
+  alt="Upgrade icons in aseprite"
+  size="pixel-art"
+/>
+
+## Redesigned UI panels
+
+After making new upgrade cards, I got an urge to redesign some of the game's UI. I'm trying to avoid scope creep, but I had to create a way for the player to see their upgrades, so I decided to give a facelift to the deck panel as well.
+
+You can open both panels by holding `Tab` in the boss fight:
+
+<Image
+  src="./img/panels-1.png"
+  alt="New UI panels opened during a boss fight"
+  size="wide"
+/>
+
+And they show automatically in the pause menu:
+
+<Image
+  src="./img/panels-2.png"
+  alt="New UI panels automatically open in the pause menu"
+  size="wide"
+/>
+
+## Ships
+
+Ships are not brand new, but in the last few weeks I tweaked their specific weapons and characteristics. It is still a work in progress, but all ships are functional and have their own quirks.
+
+<Image
+  src="./img/ships.png"
+  alt="All three ships shooting shown in the game level"
+  size="wide"
+/>
+
+## Backgrounds and shadows
+
+These are purely decorative, but I think they elevate the experience a lot. These background objects add more visual depth. They also change every few levels, giving the player a better sense of progression.
+
+For now I created two sets of backgrounds (the gray tech-industrial one and an Aztec/Protoss-inspired one). The plan is to have four or five for the full game. These are quite time consuming, but I enjoy doing pixel art.
+
+<Image src="./img/bg-1.png" alt="New backgrounds" size="wide" />
+<Image src="./img/bg-2.png" alt="New backgrounds" size="wide" />
+
+For the gray background set, I drew a tileset and I'm using Tiled to assemble them, while the Aztec ones are all drawn by hand.
+
+<Image src="./img/bg-tiled.png" alt="New backgrounds" size="wide" transparent />
+
+## Other
+
+Run history is still in progress, but I have the base for the stats screen:
+
+<Image src="./img/stats.png" alt="Run stats screen" size="wide" />
+
+I postponed it for months, and finally I created controller button customization:
+
+<Image
+  src="./img/customize-buttons.png"
+  alt="Controller buttons customization screen"
+  size="wide"
+/>
