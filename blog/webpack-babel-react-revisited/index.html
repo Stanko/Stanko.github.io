@@ -32,8 +32,8 @@ and what I&#x27;m trying to teach you is directly based on my experience on thes
 </span><span class="code-line"><span class="token punctuation">}</span>
 </span></code></pre>
 <p>Of course you can replace &quot;webpack-babel-react-revisited&quot; with your project name.</p>
-<div class="spoiler"><div class="spoiler__content-wrapper" id="mrkm2g07-b5kqg7"><div class="spoiler__content"><pre class="language-sh"><code class="language-sh code-highlight"><span class="code-line">- package.json
-</span></code></pre></div></div><button class="spoiler__toggle btn btn--sm" aria-expanded="false" aria-controls="mrkm2g07-b5kqg7"><span class="spoiler__toggle-show">Show file structure after this step</span><span class="spoiler__toggle-hide">Hide file structure after this step</span></button></div>
+<div class="spoiler"><div class="spoiler__content-wrapper" id="mrxh1ks7-8ih9cv"><div class="spoiler__content"><pre class="language-sh"><code class="language-sh code-highlight"><span class="code-line">- package.json
+</span></code></pre></div></div><button class="spoiler__toggle btn btn--sm" aria-expanded="false" aria-controls="mrxh1ks7-8ih9cv"><span class="spoiler__toggle-show">Show file structure after this step</span><span class="spoiler__toggle-hide">Hide file structure after this step</span></button></div>
 <h2 id="webpack">Webpack <a class="anchor-link" href="#webpack">#</a></h2>
 <p>We&#x27;ll start with installing webpack for module bundling.
 It will transpile and bundle our JavaScript files, compile SASS or PostCSS,
@@ -114,7 +114,7 @@ It searches for locally installed packages in the project&#x27;s <code>node_modu
 <p>Again, it has the same result like the previous command,
 but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
 <p>Now we have our simple <code>build</code> process, so we can proceed with development setup.</p>
-<div class="spoiler"><div class="spoiler__content-wrapper" id="mrkm2g08-shvra8"><div class="spoiler__content"><pre class="language-sh"><code class="language-sh code-highlight"><span class="code-line">dist <span class="token comment"># created by webpack when we run &#x27;npm run build&#x27;</span>
+<div class="spoiler"><div class="spoiler__content-wrapper" id="mrxh1ks8-jajozz"><div class="spoiler__content"><pre class="language-sh"><code class="language-sh code-highlight"><span class="code-line">dist <span class="token comment"># created by webpack when we run &#x27;npm run build&#x27;</span>
 </span><span class="code-line">node_modules <span class="token comment"># created by npm</span>
 </span><span class="code-line">src
 </span><span class="code-line">  js
@@ -122,7 +122,7 @@ but it is cleaner as it uses npm tasks instead of bare terminal commands.</p>
 </span><span class="code-line">- package-lock.json <span class="token comment"># created by npm (for node v8 and higher)</span>
 </span><span class="code-line">- package.json
 </span><span class="code-line">- webpack.config.js
-</span></code></pre></div></div><button class="spoiler__toggle btn btn--sm" aria-expanded="false" aria-controls="mrkm2g08-shvra8"><span class="spoiler__toggle-show">Show file structure after this step</span><span class="spoiler__toggle-hide">Hide file structure after this step</span></button></div>
+</span></code></pre></div></div><button class="spoiler__toggle btn btn--sm" aria-expanded="false" aria-controls="mrxh1ks8-jajozz"><span class="spoiler__toggle-show">Show file structure after this step</span><span class="spoiler__toggle-hide">Hide file structure after this step</span></button></div>
 <h3 id="webpack-dev-server">Webpack dev server <a class="anchor-link" href="#webpack-dev-server">#</a></h3>
 <p>To be able to open our application in a browser, we&#x27;ll need a server.
 Webpack already provides us with a <a href="https://webpack.js.org/configuration/dev-server/">dev server</a>.
@@ -238,7 +238,7 @@ So we'll remove whole <code>devServer</code> configuration object for now.</span
 </span></code></pre>
 <p>When we restart <code>dev</code> task, we&#x27;ll be able to see <code>Hello world!</code> in the console.
 Now we are talking! We can start adding some modern JavaScript.</p>
-<div class="spoiler"><div class="spoiler__content-wrapper" id="mrkm2g0b-9711h9"><div class="spoiler__content"><pre class="language-sh"><code class="language-sh code-highlight"><span class="code-line">dist <span class="token comment"># created by webpack when we run &#x27;npm run build&#x27;</span>
+<div class="spoiler"><div class="spoiler__content-wrapper" id="mrxh1ksa-igvnuu"><div class="spoiler__content"><pre class="language-sh"><code class="language-sh code-highlight"><span class="code-line">dist <span class="token comment"># created by webpack when we run &#x27;npm run build&#x27;</span>
 </span><span class="code-line">node_modules <span class="token comment"># created by npm</span>
 </span><span class="code-line">src
 </span><span class="code-line">  js
@@ -247,7 +247,7 @@ Now we are talking! We can start adding some modern JavaScript.</p>
 </span><span class="code-line">- package-lock.json <span class="token comment"># created by npm (for node v8 and higher)</span>
 </span><span class="code-line">- package.json
 </span><span class="code-line">- webpack.config.js
-</span></code></pre></div></div><button class="spoiler__toggle btn btn--sm" aria-expanded="false" aria-controls="mrkm2g0b-9711h9"><span class="spoiler__toggle-show">Show file structure after this step</span><span class="spoiler__toggle-hide">Hide file structure after this step</span></button></div>
+</span></code></pre></div></div><button class="spoiler__toggle btn btn--sm" aria-expanded="false" aria-controls="mrxh1ksa-igvnuu"><span class="spoiler__toggle-show">Show file structure after this step</span><span class="spoiler__toggle-hide">Hide file structure after this step</span></button></div>
 <h3 id="babel">Babel <a class="anchor-link" href="#babel">#</a></h3>
 <p>To be able to use ES2015 and beyond we&#x27;ll need to provide a transpiler.
 Our choice is <a href="https://babeljs.io/">Babel</a>.
@@ -334,7 +334,7 @@ We also added some sugar, so you can import those files without specifying file 
 <p>Restart <code>npm run dev</code> once again. Nothing really changed, but our JavaScript is now transpiled,
 and if you used any of the modern JavaScript features, those would be transpiled to ES5 synthax.</p>
 <p>Finally let&#x27;s add React.</p>
-<div class="spoiler"><div class="spoiler__content-wrapper" id="mrkm2g0d-unm2t4"><div class="spoiler__content"><pre class="language-sh"><code class="language-sh code-highlight"><span class="code-line">dist <span class="token comment"># created by webpack when we run &#x27;npm run build&#x27;</span>
+<div class="spoiler"><div class="spoiler__content-wrapper" id="mrxh1ksc-61nffn"><div class="spoiler__content"><pre class="language-sh"><code class="language-sh code-highlight"><span class="code-line">dist <span class="token comment"># created by webpack when we run &#x27;npm run build&#x27;</span>
 </span><span class="code-line">node_modules <span class="token comment"># created by npm</span>
 </span><span class="code-line">src
 </span><span class="code-line">  js
@@ -344,7 +344,7 @@ and if you used any of the modern JavaScript features, those would be transpiled
 </span><span class="code-line">- package-lock.json <span class="token comment"># created by npm (for node v8 and higher)</span>
 </span><span class="code-line">- package.json
 </span><span class="code-line">- webpack.config.js
-</span></code></pre></div></div><button class="spoiler__toggle btn btn--sm" aria-expanded="false" aria-controls="mrkm2g0d-unm2t4"><span class="spoiler__toggle-show">Show file structure after this step</span><span class="spoiler__toggle-hide">Hide file structure after this step</span></button></div>
+</span></code></pre></div></div><button class="spoiler__toggle btn btn--sm" aria-expanded="false" aria-controls="mrxh1ksc-61nffn"><span class="spoiler__toggle-show">Show file structure after this step</span><span class="spoiler__toggle-hide">Hide file structure after this step</span></button></div>
 <h3 id="react">React <a class="anchor-link" href="#react">#</a></h3>
 <p>This is probably the main reason you are reading this,
 so I&#x27;ll assume you are already familiar with <a href="https://reactjs.org/">React</a>.</p>
@@ -505,7 +505,7 @@ and pre-processing (or post-processing).</p>
 <span class="sidenote__text" tabindex="0" role="button"><code>style.bundle.css</code></span><span class="sidenote__note"><span class="sidenote__note-inner"><span class="sidenote__note-text">I use <code>.bundle</code> postfix so you can easier differentiate webpack bundles from the source files.</span></span></span>
 created in the <code>dist</code> folder,
 next to js and html files.</p>
-<div class="spoiler"><div class="spoiler__content-wrapper" id="mrkm2g0g-dwvk0l"><div class="spoiler__content"><pre class="language-sh"><code class="language-sh code-highlight"><span class="code-line">dist <span class="token comment"># created by webpack when we run &#x27;npm run build&#x27;</span>
+<div class="spoiler"><div class="spoiler__content-wrapper" id="mrxh1ksf-twhefp"><div class="spoiler__content"><pre class="language-sh"><code class="language-sh code-highlight"><span class="code-line">dist <span class="token comment"># created by webpack when we run &#x27;npm run build&#x27;</span>
 </span><span class="code-line">node_modules <span class="token comment"># created by npm</span>
 </span><span class="code-line">src
 </span><span class="code-line">  css
@@ -517,7 +517,7 @@ next to js and html files.</p>
 </span><span class="code-line">- package-lock.json <span class="token comment"># created by npm (for node v8 and higher)</span>
 </span><span class="code-line">- package.json
 </span><span class="code-line">- webpack.config.js
-</span></code></pre></div></div><button class="spoiler__toggle btn btn--sm" aria-expanded="false" aria-controls="mrkm2g0g-dwvk0l"><span class="spoiler__toggle-show">Show file structure after this step</span><span class="spoiler__toggle-hide">Hide file structure after this step</span></button></div>
+</span></code></pre></div></div><button class="spoiler__toggle btn btn--sm" aria-expanded="false" aria-controls="mrxh1ksf-twhefp"><span class="spoiler__toggle-show">Show file structure after this step</span><span class="spoiler__toggle-hide">Hide file structure after this step</span></button></div>
 <h2 id="assets">Assets <a class="anchor-link" href="#assets">#</a></h2>
 <p>For the end, we&#x27;ll add <a href="https://github.com/webpack-contrib/file-loader">file-loader</a>.
 As it&#x27;s name suggests it handles files - images, SVGs, fonts, videos or anything else you need.</p>
@@ -630,7 +630,7 @@ in it.</p>
 </span></code></pre>
 <p>Restart <code>npm run dev</code> and refresh the browser to see the image.
 <code>npm run build</code> will create image in the <code>dist</code> folder.</p>
-<div class="spoiler"><div class="spoiler__content-wrapper" id="mrkm2g0i-e9vzoo"><div class="spoiler__content"><pre class="language-sh"><code class="language-sh code-highlight"><span class="code-line">dist <span class="token comment"># created by webpack when we run &#x27;npm run build&#x27;</span>
+<div class="spoiler"><div class="spoiler__content-wrapper" id="mrxh1ksh-zc5fom"><div class="spoiler__content"><pre class="language-sh"><code class="language-sh code-highlight"><span class="code-line">dist <span class="token comment"># created by webpack when we run &#x27;npm run build&#x27;</span>
 </span><span class="code-line">node_modules <span class="token comment"># created by npm</span>
 </span><span class="code-line">src
 </span><span class="code-line">  assets
@@ -644,7 +644,7 @@ in it.</p>
 </span><span class="code-line">- package-lock.json <span class="token comment"># created by npm (for node v8 and higher)</span>
 </span><span class="code-line">- package.json
 </span><span class="code-line">- webpack.config.js
-</span></code></pre></div></div><button class="spoiler__toggle btn btn--sm" aria-expanded="false" aria-controls="mrkm2g0i-e9vzoo"><span class="spoiler__toggle-show">Show file structure after this step</span><span class="spoiler__toggle-hide">Hide file structure after this step</span></button></div>
+</span></code></pre></div></div><button class="spoiler__toggle btn btn--sm" aria-expanded="false" aria-controls="mrxh1ksh-zc5fom"><span class="spoiler__toggle-show">Show file structure after this step</span><span class="spoiler__toggle-hide">Hide file structure after this step</span></button></div>
 <h2 id="that-was-quite-a-ride">That was quite a ride <a class="anchor-link" href="#that-was-quite-a-ride">#</a></h2>
 <p>And all that to create a very simple application, that should look something like this:</p>
 <figure link="https://github.com/Stanko/marvin" class="image__figure"><img src="./running-dev-server.png" alt="Example app running in the browser" width="1110" height="906"/></figure>

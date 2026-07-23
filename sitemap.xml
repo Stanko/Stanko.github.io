@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+  <loc>https://muffinman.io/blog/spacedeck-x-july-devlog/</loc>
+  <lastmod>2026-07-23</lastmod>
+
+</url>
+  <url>
   <loc>https://muffinman.io/blog/spacedeck-x-on-arcade-cabinet/</loc>
   <lastmod>2026-05-21</lastmod>
 
@@ -136,12 +141,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/art/ten-years-of-work-and-co/</loc>
+  <loc>https://muffinman.io/art/ten-years-of-work-and-co-v2/</loc>
   <lastmod>2023-04-30</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/art/ten-years-of-work-and-co-v2/</loc>
+  <loc>https://muffinman.io/art/ten-years-of-work-and-co/</loc>
   <lastmod>2023-04-30</lastmod>
 
 </url>
@@ -271,12 +276,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/art/pokeball/</loc>
+  <loc>https://muffinman.io/art/armadillo/</loc>
   <lastmod>2021-03-14</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/art/armadillo/</loc>
+  <loc>https://muffinman.io/art/pokeball/</loc>
   <lastmod>2021-03-14</lastmod>
 
 </url>
@@ -666,22 +671,22 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/trillion-ideas/</loc>
-  <lastmod>2017-09-27</lastmod>
-
-</url>
-  <url>
   <loc>https://muffinman.io/blog/my-blog-setup/</loc>
   <lastmod>2017-09-27</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/nvm-updating-npm/</loc>
-  <lastmod>2017-09-02</lastmod>
+  <loc>https://muffinman.io/blog/trillion-ideas/</loc>
+  <lastmod>2017-09-27</lastmod>
 
 </url>
   <url>
   <loc>https://muffinman.io/blog/react-image-filter-component/</loc>
+  <lastmod>2017-09-02</lastmod>
+
+</url>
+  <url>
+  <loc>https://muffinman.io/blog/nvm-updating-npm/</loc>
   <lastmod>2017-09-02</lastmod>
 
 </url>
@@ -776,12 +781,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/webpack-2-react-redux/</loc>
+  <loc>https://muffinman.io/blog/setting-up-webpack-babel-and-react-from-scratch-part-3/</loc>
   <lastmod>2016-11-24</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/setting-up-webpack-babel-and-react-from-scratch-part-3/</loc>
+  <loc>https://muffinman.io/blog/webpack-2-react-redux/</loc>
   <lastmod>2016-11-24</lastmod>
 
 </url>
@@ -926,6 +931,12 @@
 
 </url>
   <url>
+  <loc>https://muffinman.io/projects/</loc>
+</url>
+  <url>
+  <loc>https://muffinman.io/archive/</loc>
+</url>
+  <url>
   <loc>https://muffinman.io/art/</loc>
 </url>
   <url>
@@ -933,12 +944,6 @@
 </url>
   <url>
   <loc>https://muffinman.io/about/</loc>
-</url>
-  <url>
-  <loc>https://muffinman.io/archive/</loc>
-</url>
-  <url>
-  <loc>https://muffinman.io/projects/</loc>
 </url>
   <url>
   <loc>https://muffinman.io/stats/</loc>
