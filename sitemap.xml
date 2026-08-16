@@ -276,12 +276,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/art/armadillo/</loc>
+  <loc>https://muffinman.io/art/pokeball/</loc>
   <lastmod>2021-03-14</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/art/pokeball/</loc>
+  <loc>https://muffinman.io/art/armadillo/</loc>
   <lastmod>2021-03-14</lastmod>
 
 </url>
@@ -306,12 +306,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/art/stranded-blue-red/</loc>
+  <loc>https://muffinman.io/art/stranded-silver/</loc>
   <lastmod>2020-11-07</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/art/stranded-silver/</loc>
+  <loc>https://muffinman.io/art/stranded-blue-red/</loc>
   <lastmod>2020-11-07</lastmod>
 
 </url>
@@ -571,12 +571,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/elastic-hover-effect/</loc>
+  <loc>https://muffinman.io/blog/uploading-files-using-fetch-multipart-form-data/</loc>
   <lastmod>2018-03-19</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/uploading-files-using-fetch-multipart-form-data/</loc>
+  <loc>https://muffinman.io/blog/elastic-hover-effect/</loc>
   <lastmod>2018-03-19</lastmod>
 
 </url>
@@ -901,12 +901,12 @@
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/jekyll-read-more-link/</loc>
+  <loc>https://muffinman.io/blog/jekyll-gulp-workflow/</loc>
   <lastmod>2016-02-27</lastmod>
 
 </url>
   <url>
-  <loc>https://muffinman.io/blog/jekyll-gulp-workflow/</loc>
+  <loc>https://muffinman.io/blog/jekyll-read-more-link/</loc>
   <lastmod>2016-02-27</lastmod>
 
 </url>
@@ -931,22 +931,22 @@
 
 </url>
   <url>
+  <loc>https://muffinman.io/archive/</loc>
+</url>
+  <url>
+  <loc>https://muffinman.io/art/</loc>
+</url>
+  <url>
   <loc>https://muffinman.io/stats/</loc>
 </url>
   <url>
   <loc>https://muffinman.io/projects/</loc>
 </url>
   <url>
-  <loc>https://muffinman.io/art/</loc>
-</url>
-  <url>
   <loc>https://muffinman.io/about/</loc>
 </url>
   <url>
   <loc>https://muffinman.io/blog/</loc>
-</url>
-  <url>
-  <loc>https://muffinman.io/archive/</loc>
 </url>
   <url>
   <loc>https://muffinman.io/</loc>
