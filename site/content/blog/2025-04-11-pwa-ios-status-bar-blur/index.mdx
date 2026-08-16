@@ -8,6 +8,10 @@ intro = "When using the \"black-translucent\" status bar style on iOS, content c
 image = "./img/ios-blur.png"
 +++
 
+**Update August 2026:** This workaround no longer works on recent iOS versions. WebKit changed how standalone PWAs handle the status bar area. The fixed overlay positioned outside the viewport no longer renders under the status bar. I haven't found a workaround for this yet. If you find a solution please let me know.
+
+---
+
 On my current project, I'm making a [Progressive Web App](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) (PWA) and I was really annoyed that the status bar on iOS was <Sidenote note="Although the option is called `black-translucent`">completely transparent</Sidenote>. When the content scrolls behind it, it blends with the status bar elements, and it doesn't look great.
 
 I couldn't find a native solution, so I tried using CSS instead. To my surprise, my idea worked on the first try.
@@ -15,18 +19,18 @@ I couldn't find a native solution, so I tried using CSS instead. To my surprise,
 Here is my solution next to the default iOS status bar:
 
 <Grid>
-<Image
-  transparent
-  src="./img/ios-blur.png" 
-  alt="Blurred iOS status bar after applying the technique in this post" 
-  caption="After applying the CSS solution"
-/>
-<Image
-  transparent
-  src="./img/ios-no-blur.png" 
-  alt="Default, fully transparent iOS status bar" 
-  caption="Default"
-/>
+  <Image
+    transparent
+    src="./img/ios-blur.png"
+    alt="Blurred iOS status bar after applying the technique in this post"
+    caption="After applying the CSS solution"
+  />
+  <Image
+    transparent
+    src="./img/ios-no-blur.png"
+    alt="Default, fully transparent iOS status bar"
+    caption="Default"
+  />
 </Grid>
 
 If you are impatient, feel free to jump to [the demo](#demo).
@@ -81,7 +85,7 @@ You can check [the live demo](https://muffinman.io/ios-statusbar-blur), just rem
 If you don't want to bother, I recorded a video of the effect in action:
 
 <Video
-  src="./img/ios-blur-demo-cropped.mp4" 
+  src="./img/ios-blur-demo-cropped.mp4"
   controls
   loop
   muted
@@ -90,7 +94,7 @@ If you don't want to bother, I recorded a video of the effect in action:
     width: '100%',
     maxWidth: 375,
     borderRadius: '48px 48px 0 0',
-    border: '1px solid var(--neutral-200)'
+    border: '1px solid var(--neutral-200)',
   }}
 />
 
@@ -103,7 +107,7 @@ First, you'll have to use a solid color for native status bar background. Image 
 Second, the statusbar overlay we added needs to be the same color as the background. Technically, it doesn't have to be, but here is what happens:
 
 <Video
-  src="./img/ios-blur-mask.mp4" 
+  src="./img/ios-blur-mask.mp4"
   controls
   loop
   muted
@@ -112,7 +116,7 @@ Second, the statusbar overlay we added needs to be the same color as the backgro
     width: '100%',
     maxWidth: 375,
     borderRadius: '48px 48px 0 0',
-    border: '1px solid var(--neutral-300)'
+    border: '1px solid var(--neutral-300)',
   }}
 />
 
