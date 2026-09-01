@@ -47,6 +47,14 @@ type BaseTemplateProps = {
   url?: string;
 };
 
+const colors: Record<string, string> = {
+  blue: 'oklch(56.16% 0.198 258.79)',
+  red: 'oklch(59.7% 0.207 10)',
+  orange: 'oklch(0.7215 0.1767 52.2691)',
+  purple: 'oklch(56.44% 0.185 299.82)',
+  gray: 'oklch(51% 0.026 256.8)',
+};
+
 const BaseTemplate = async ({
   pathname,
   baseUrl = IS_DEV ? `http://${os.hostname()}:1234` : config.baseUrl,
@@ -96,6 +104,7 @@ const BaseTemplate = async ({
           title="RSS Feed"
           href="/atom.xml"
         />
+        <meta name="theme-color" content={colors[theme] || colors.blue} />
         <meta property="og:site_name" content={config.siteName} />
         <meta property="og:title" content={titleString} />
         <meta property="og:description" content={description} />

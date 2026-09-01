@@ -49,6 +49,10 @@ body {
 }
 
 @supports (scrollbar-color: var(--neutral-300) transparent) {
+  html {
+    scrollbar-color: var(--neutral-300) transparent;
+  }
+
   body * {
     scrollbar-color: var(--neutral-300) transparent;
     scrollbar-width: thin;
@@ -56,17 +60,35 @@ body {
 }
 
 @supports not (scrollbar-color: var(--neutral-300) transparent) {
+  // To match the nav strip
+  html::-webkit-scrollbar-track {
+    border-top: 3px solid var(--theme-color);
+  }
+
+  html::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    background: var(--bg-color);
+  }
+
   body *::-webkit-scrollbar {
     width: 10px;
     height: 10px;
-    background: transparent;
+    background: var(--bg-color);
   }
 
+  html::-webkit-scrollbar-thumb,
   body *::-webkit-scrollbar-thumb {
     background: var(--neutral-300);
     border-radius: 100px;
     background-clip: padding-box;
     border: 2px solid transparent;
+  }
+
+  html::-webkit-scrollbar-thumb:hover,
+  body *::-webkit-scrollbar-thumb:hover {
+    background: var(--neutral-400);
+    background-clip: padding-box;
   }
 }
 
