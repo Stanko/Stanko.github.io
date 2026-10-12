@@ -421,6 +421,10 @@
       "score": 0.5253272050551642
     },
     {
+      "post": "stacked-vertical-pinned-tabs-in-firefox",
+      "score": 0.5237690018835324
+    },
+    {
       "post": "3d-rotating-cube-effect",
       "score": 0.5227879500728136
     },
@@ -3607,6 +3611,10 @@
     {
       "post": "fix-for-chrome-not-rendering-borders",
       "score": 0.5036666825464732
+    },
+    {
+      "post": "stacked-vertical-pinned-tabs-in-firefox",
+      "score": 0.5021383816751469
     }
   ],
   "visualizing-a-vector-field": [
@@ -3883,6 +3891,10 @@
     {
       "post": "js-libraries-for-generative-art",
       "score": 0.5113633687420677
+    },
+    {
+      "post": "stacked-vertical-pinned-tabs-in-firefox",
+      "score": 0.5105490113071274
     },
     {
       "post": "scrubbing-videos-using-javascript",
@@ -4209,6 +4221,10 @@
     {
       "post": "disable-cmd-mouse-wheel-zoom-in-firefox",
       "score": 0.5672351954097293
+    },
+    {
+      "post": "stacked-vertical-pinned-tabs-in-firefox",
+      "score": 0.5415105939947573
     },
     {
       "post": "trying-atom-for-the-third-time",
@@ -5061,6 +5077,10 @@
     {
       "post": "back-to-firefox",
       "score": 0.5672351954097293
+    },
+    {
+      "post": "stacked-vertical-pinned-tabs-in-firefox",
+      "score": 0.564260174035224
     },
     {
       "post": "ios-safari-scroll-position-fixed",
@@ -9582,6 +9602,10 @@
       "score": 0.5307699489866823
     },
     {
+      "post": "stacked-vertical-pinned-tabs-in-firefox",
+      "score": 0.527688012793111
+    },
+    {
       "post": "my-two-cents-on-the-new-macbook-pro",
       "score": 0.5271406415880876
     },
@@ -10752,6 +10776,10 @@
     {
       "post": "flex-justify-content-equally-distanced-items",
       "score": 0.5168546739982851
+    },
+    {
+      "post": "stacked-vertical-pinned-tabs-in-firefox",
+      "score": 0.5168163965219956
     },
     {
       "post": "invaders",
@@ -12834,6 +12862,28 @@
       "score": 0.5014250755851188
     }
   ],
+  "gameboy-pixel-art-jam-2026-spacedeck-trio": [
+    {
+      "post": "spacedeck-x-on-arcade-cabinet",
+      "score": 0.5677970952618633
+    },
+    {
+      "post": "weekly-code-challenge-spring-2021",
+      "score": 0.5520639839639337
+    },
+    {
+      "post": "spacedeck-x-july-devlog",
+      "score": 0.5501722783849354
+    },
+    {
+      "post": "css-only-sprite-animations",
+      "score": 0.5447094711350194
+    },
+    {
+      "post": "invaders",
+      "score": 0.5195476159504853
+    }
+  ],
   "bunny-jumps-again": [
     {
       "post": "the-tiny-book-of-great-joys",
@@ -13034,26 +13084,34 @@
       "score": 0.5013709167588536
     }
   ],
-  "gameboy-pixel-art-jam-2026-spacedeck-trio": [
+  "stacked-vertical-pinned-tabs-in-firefox": [
     {
-      "post": "spacedeck-x-on-arcade-cabinet",
-      "score": 0.5677970952618633
+      "post": "disable-cmd-mouse-wheel-zoom-in-firefox",
+      "score": 0.564260174035224
     },
     {
-      "post": "weekly-code-challenge-spring-2021",
-      "score": 0.5520639839639337
+      "post": "back-to-firefox",
+      "score": 0.5415105939947573
     },
     {
-      "post": "spacedeck-x-july-devlog",
-      "score": 0.5501722783849354
+      "post": "firefox-57-cpu-usage-is-insane",
+      "score": 0.527688012793111
+    },
+    {
+      "post": "custom-scroll-bars",
+      "score": 0.5237690018835324
+    },
+    {
+      "post": "pwa-ios-status-bar-blur",
+      "score": 0.5168163965219956
+    },
+    {
+      "post": "three-web-development-bookmarklets",
+      "score": 0.5105490113071274
     },
     {
       "post": "css-only-sprite-animations",
-      "score": 0.5447094711350194
-    },
-    {
-      "post": "invaders",
-      "score": 0.5195476159504853
+      "score": 0.5021383816751469
     }
   ]
 }
