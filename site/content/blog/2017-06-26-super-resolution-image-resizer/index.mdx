@@ -6,7 +6,6 @@ tags = ["random"]
 
 +++
 
-
 I use the same wallpaper for a long time now.
 But with high resolution displays, wallpaper started to look blurry and noisy, so I stopped using it.
 
@@ -16,7 +15,11 @@ The best thing, website is free to use and project is opensource. Code is availa
 
 It supports max scaling of 2x, so if you need more you'll need to process image multiple times. Or you can dig in the code and add option for arbitrary scaling.
 
-<small><sup>1</sup> This is the resized image using waifu2x.</small>
+<Image
+  style={{ maxWidth: 500 }}
+  src="./img/odin-2x.jpg"
+  caption="This is the mentioned wallpaper upscaled using waifu2x"
+/>
 
 ### Example
 
@@ -24,7 +27,7 @@ Original, 250x250px jpeg <sup>2</sup>
 
 <Image
   style={{ maxWidth: 500 }}
-  src='./img/rickmorty-250x250.jpg'
+  src="./img/rickmorty-250x250.jpg"
   alt="Original 250x250px image"
 />
 
@@ -32,7 +35,7 @@ Result, 500x500px png
 
 <Image
   style={{ maxWidth: 500 }}
-  src='./img/rickmorty-500x500.png'
+  src="./img/rickmorty-500x500.png"
   alt="Resized 2x 500x500px image"
 />
 
