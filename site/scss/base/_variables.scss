@@ -149,6 +149,22 @@
   --theme-color: var(--theme-color-500);
 }
 
+.green {
+  --theme-color-950: oklch(0.197 0.025 167.366);
+  --theme-color-900: oklch(0.251 0.033 163.81);
+  --theme-color-800: oklch(0.343 0.045 161.47);
+  --theme-color-700: oklch(0.423 0.056 160.994);
+  --theme-color-600: oklch(0.499 0.067 160.374);
+  --theme-color-500: oklch(0.588 0.088 157.731);
+  --theme-color-400: oklch(0.683 0.104 156.935);
+  --theme-color-300: oklch(0.759 0.106 158.795);
+  --theme-color-200: oklch(0.838 0.097 159.714);
+  --theme-color-100: oklch(0.919 0.071 161.061);
+  --theme-color-50: oklch(0.962 0.034 160.359);
+
+  --theme-color: var(--theme-color-500);
+}
+
 // ----- DARK MODE ----- //
 
 // @media (prefers-color-scheme: dark) {
