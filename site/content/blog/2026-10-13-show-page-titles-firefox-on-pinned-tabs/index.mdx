@@ -1,5 +1,5 @@
 +++
-title = "Stacked Pinned Tabs in Firefox"
+title = "Show <span>page titles</span> on Firefox's pinned tabs"
 
 category = ["Random"]
 tags = ["firefox", "tabs"]
@@ -8,17 +8,17 @@ image = "./img/vertical.png"
 intro = "I love vertical tabs, but I couldn't find a way to stack Firefox's pinned tabs vertically and show their titles. After some trial and error, I styled them the way I wanted using some custom CSS."
 +++
 
-I love vertical tabs. I used Tree Style Tab for years, then switched to Sidebery and recently to Firefox's native vertical tabs. I like them, but I was annoyed by the pinned tabs appearance. By default they are collapsed with only their favicon visible:
+I love vertical tabs. I used Tree Style Tab for years, then switched to Sidebery and recently to Firefox's native [vertical tabs](https://support.mozilla.org/en-US/kb/use-sidebar-access-tools-and-vertical-tabs). I like them, but I was annoyed how pinned tabs looked. By default they are collapsed, side by side, with only their favicon visible:
 
-![](./img/pills.png)
+![Firefox's pinned tabs displayed side by side without titles](./img/pills.png)
 
-Luckily, there is a way to change that by adding some custom CSS. After applyin it, my tabs looked like this:
+Luckily, there is a way to change that by adding some custom CSS. After applying it, my tabs looked like this:
 
-![](./img/vertical.png)
+![Firefox's pinned tabs stacked vertically with titles](./img/vertical.png)
 
 ## CSS
 
-I couldn't find an existing snippet anywhere, and it took me some trial and error to get it right. Here is the CSS code, I hope you find it useful:
+I couldn't find an existing snippet anywhere, and it took me some trial and error to get it right. Here is the CSS. I hope you find it useful.
 
 ```css
 /* Show title */
@@ -52,13 +52,15 @@ slot[part~='items-wrapper'] {
 }
 ```
 
+Tested on Firefox 157 on macOS.
+
 ## How to use userChrome.css
 
 To customize Firefox's UI via CSS, you'll need the following:
 
-- In Firefox, open the `about:support` page and open your profile's Root Directory in your file manager.
-- Inside your profile folder, create a folder named chrome.
-- Inside it, create `userChrome.css`.
+- In Firefox, open the `about:profiles` page and open your profile's Root Directory in your file manager.
+- Inside your profile folder, create a folder named `chrome`.
+- Inside it, create `userChrome.css` (if it doesn't already exist).
 - Add your custom CSS to it.
 - Open `about:config`, find `toolkit.legacyUserProfileCustomizations.stylesheets` and set it to `true`.
 - Restart Firefox.
